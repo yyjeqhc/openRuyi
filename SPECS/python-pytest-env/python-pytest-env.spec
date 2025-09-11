@@ -1,0 +1,37 @@
+# SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
+# SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
+%global srcname pytest_env
+
+Name:           python-pytest-env
+Version:        0.5.2
+Release:        1
+License:        MIT
+URL:            https://github.com/MobileDynasty/pytest-env
+Summary:        Pytest plugin that allows you to add environment variables
+Provides:       python3-pytest-env
+%python_provide python3-pytest-env
+#!RemoteAsset
+Source0:        https://files.pythonhosted.org/packages/source/p/%{srcname}/%{srcname}-%{version}.tar.gz
+BuildArch:      noarch
+
+BuildRequires:  pyproject-rpm-macros
+BuildRequires:  python3-devel
+BuildSystem:    pyproject
+BuildOption(install): %{srcname} +auto
+%description
+This is a @code{py.test} plugin that enables you to set environment
+variables in the @file{pytest.ini} file.
+
+%generate_buildrequires
+%pyproject_buildrequires
+
+%files -f %{pyproject_files}
+%license LICENSE
+%doc README.md
+
+%changelog
+%{?autochangelog}
