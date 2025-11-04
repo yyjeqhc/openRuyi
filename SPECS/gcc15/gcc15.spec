@@ -5,7 +5,9 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
+%ifarch riscv64
 #!BuildConstraint: hardware:jobs 32
+%endif
 
 %define _slibdir  %{_libdir}
 %define slibdir   %{_prefix}/lib
