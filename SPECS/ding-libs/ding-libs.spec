@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
+# SPDX-FileContributor: Jingkun Zheng <zhengjingkun@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -39,7 +40,7 @@ autoreconf -fiv
 
 %files
 %defattr(-,root,root)
-%doc COPYING COPYING.LESSER
+%doc COPYING COPYING.LESSER README* dhash/* refarray/README.ref_array path_utils/README.path_utils
 %{_libdir}/lib*.so.*
 
 %files devel
