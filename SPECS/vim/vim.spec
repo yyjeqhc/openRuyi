@@ -6,7 +6,7 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 %define package_version 9.1
-%define patchlevel 1629
+%define patchlevel 1927
 
 %define vimdir vim91
 
