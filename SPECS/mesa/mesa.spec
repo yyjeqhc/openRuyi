@@ -18,14 +18,45 @@ VCS:            git:https://gitlab.freedesktop.org/mesa/mesa
 Source:         https://archive.mesa3d.org/mesa-%{version}.tar.xz
 BuildSystem:    meson
 
-# TODO: enable real drivers / window systems support - Icenowy
-BuildOption(conf):  -Degl=disabled
-BuildOption(conf):  -Dglx=disabled
-BuildOption(conf):  -Dgbm=enabled
-BuildOption(conf):  -Dgallium-drivers=
+# FIXME:  enable more drivers/platforms(window systems)
+# All vulkan drivers and zink are blocked by lack of Vulkan packages
+# iris, anv, nvk, powervr is blocked by lack of libclc
+BuildOption(conf):  -Dgallium-drivers=llvmpipe,softpipe,r300,r600,radeonsi,nouveau,virgl
 BuildOption(conf):  -Dvulkan-drivers=
-BuildOption(conf):  -Dplatforms=
-BuildOption(conf):  -Dxmlconfig=disabled
+BuildOption(conf):  -Dplatforms=x11
+
+BuildOption(conf):  -Degl=enabled
+BuildOption(conf):  -Dglx=dri
+BuildOption(conf):  -Dgles1=enabled
+BuildOption(conf):  -Dgles2=enabled
+BuildOption(conf):  -Dopengl=true
+BuildOption(conf):  -Dgbm=enabled
+BuildOption(conf):  -Dglvnd=enabled
+
+BuildOption(conf):  -Dllvm=enabled
+BuildOption(conf):  -Dshared-llvm=enabled
+BuildOption(conf):  -Ddraw-use-llvm=true
+BuildOption(conf):  -Damd-use-llvm=true
+BuildOption(conf):  -Dllvm-orcjit=true
+
+BuildOption(conf):  -Dxmlconfig=enabled
+BuildOption(conf):  -Dexpat=enabled
+BuildOption(conf):  -Dshader-cache=enabled
+BuildOption(conf):  -Dvalgrind=disabled
+BuildOption(conf):  -Dlibunwind=enabled
+BuildOption(conf):  -Dlmsensors=enabled
+BuildOption(conf):  -Dzlib=enabled
+BuildOption(conf):  -Dzstd=enabled
+BuildOption(conf):  -Dallow-kcmp=enabled
+
+# FIXME:  enable it when Rust dependency packaging is ready
+BuildOption(conf):  -Dgallium-rusticl=false
+# FIXME:  enable it when libva is packaged
+BuildOption(conf):  -Dgallium-va=disabled
+
+# BuildOption(conf):  -Dvulkan-manifest-per-architecture=false
+# BuildOption(conf):  -Dvulkan-layers=device-select,overlay,screenshot,anti-lag,vram-report-limit
+# BuildOption(conf):  -Dxlib-lease=enabled
 
 BuildRequires:  meson
 BuildRequires:  python3-devel
@@ -35,6 +66,21 @@ BuildRequires:  flex
 BuildRequires:  bison
 BuildRequires:  pkgconfig(zlib)
 BuildRequires:  pkgconfig(libdrm)
+BuildRequires:  pkgconfig(expat)
+BuildRequires:  pkgconfig(libelf)
+BuildRequires:  pkgconfig(libunwind)
+BuildRequires:  pkgconfig(libglvnd)
+BuildRequires:  pkgconfig(x11) >= 1.6
+BuildRequires:  pkgconfig(xcb) >= 1.13
+BuildRequires:  pkgconfig(xrandr) >= 1.3
+BuildRequires:  pkgconfig(glproto) >= 1.4.14
+BuildRequires:  pkgconfig(xshmfence) >= 1.1
+BuildRequires:  pkgconfig(xext)
+BuildRequires:  pkgconfig(xcb-keysyms)
+BuildRequires:  pkgconfig(xxf86vm)
+BuildRequires:  lm_sensors-devel
+BuildRequires:  zstd-devel
+BuildRequires:  llvm-devel
 
 %description
 Mesa is a 3D graphics library containing implementation of OpenGL (along with
@@ -61,6 +107,58 @@ Requires:       libgbm = %{version}-%{release}
 This package contains development files for libgbm, for either calling it or
 implementing backends for it.
 
+%package        drirc
+Summary:        The default drirc configuration files
+BuildArch:      noarch
+
+%description    drirc
+This package contains the default drirc configuration files for Mesa, which
+behave as an application quirk database.
+
+%package        gallium
+Summary:        The core gallium driver file
+# Open code to allow any version of drirc, for mixing gallium part and
+# vulkan part from different Mesa releases if needed
+Requires:       %{name}-drirc
+
+%description    gallium
+This package contains a shared library that holds all core code for gallium
+drivers (GL/DRI loader/others).
+
+%package        gl
+Summary:        The gallium-based GL driver
+Requires:       %{name}-gallium = %{version}-%{release}
+
+%description    gl
+This package contains the implementation of GL-related APIs (Desktop OpenGL,
+OpenGL ES, EGL and GLX) based on Gallium, along with the dri gbm backend,
+which is coupled with the EGL implementation.
+
+%package        gl-ext-headers
+Summary:        Extra headers for Mesa EGL extensions
+BuildArch:      noarch
+
+%description    gl-ext-headers
+This package contains extra headers with definitions for some EGL extensions
+implemented by Mesa, which are not available from Khronos.
+
+%package        dril
+Summary:        The gallium DRI loader entry libraries
+Requires:       %{name}-gl = %{version}-%{release}
+
+%description    dril
+This package contains DRI loader entry libraries, which are available for
+X.org server to implement AIGLX.
+
+%package        dril-devel
+Summary:        The gallium DRI loader development files
+Requires:       %{name}-dril = %{version}-%{release}
+BuildArch:      noarch
+
+%description    dril-devel
+This package contains development-related files for the DRI loader interface,
+including a header file describing the interface and a pkgconfig file.
+
 %files -n libgbm
 %{_libdir}/libgbm.so.1*
 
@@ -69,6 +167,29 @@ implementing backends for it.
 %{_includedir}/gbm.h
 %{_includedir}/gbm_backend_abi.h
 %{_libdir}/pkgconfig/gbm.pc
+
+%files drirc
+%{_datadir}/drirc.d/00-mesa-defaults.conf
+
+%files gallium
+%{_libdir}/libgallium-%{version}.so
+
+%files gl
+%{_libdir}/libEGL_mesa.so*
+%{_libdir}/libGLX_mesa.so*
+%{_libdir}/gbm/dri_gbm.so
+%{_datadir}/glvnd/egl_vendor.d/50_mesa.json
+
+%files gl-ext-headers
+%{_includedir}/EGL/eglext_angle.h
+%{_includedir}/EGL/eglmesaext.h
+
+%files dril
+%{_libdir}/dri/*_dri.so
+
+%files dril-devel
+%{_includedir}/GL/internal/dri_interface.h
+%{_libdir}/pkgconfig/dri.pc
 
 %changelog
 %{?autochangelog}
