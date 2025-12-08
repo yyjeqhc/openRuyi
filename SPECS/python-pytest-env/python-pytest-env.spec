@@ -7,7 +7,7 @@
 %global srcname pytest_env
 
 Name:           python-pytest-env
-Version:        0.5.2
+Version:        1.1.5
 Release:        %autorelease
 License:        MIT
 URL:            https://github.com/MobileDynasty/pytest-env
