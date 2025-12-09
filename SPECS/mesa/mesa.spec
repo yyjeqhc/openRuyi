@@ -18,12 +18,13 @@ VCS:            git:https://gitlab.freedesktop.org/mesa/mesa
 Source:         https://archive.mesa3d.org/mesa-%{version}.tar.xz
 BuildSystem:    meson
 
-# FIXME:  enable more drivers/platforms(window systems)
+# FIXME:  enable more drivers
 # All vulkan drivers and zink are blocked by lack of Vulkan packages
 # iris, anv, nvk, powervr is blocked by lack of libclc
+# nvk is blocked by Rust packaging
 BuildOption(conf):  -Dgallium-drivers=llvmpipe,softpipe,r300,r600,radeonsi,nouveau,virgl
 BuildOption(conf):  -Dvulkan-drivers=
-BuildOption(conf):  -Dplatforms=x11
+BuildOption(conf):  -Dplatforms=x11,wayland
 
 BuildOption(conf):  -Degl=enabled
 BuildOption(conf):  -Dglx=dri
@@ -78,6 +79,9 @@ BuildRequires:  pkgconfig(xshmfence) >= 1.1
 BuildRequires:  pkgconfig(xext)
 BuildRequires:  pkgconfig(xcb-keysyms)
 BuildRequires:  pkgconfig(xxf86vm)
+BuildRequires:  pkgconfig(wayland-protocols)
+BuildRequires:  pkgconfig(wayland-client)
+BuildRequires:  pkgconfig(wayland-egl-backend)
 BuildRequires:  lm_sensors-devel
 BuildRequires:  zstd-devel
 BuildRequires:  llvm-devel
