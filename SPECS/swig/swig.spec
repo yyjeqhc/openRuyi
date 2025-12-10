@@ -6,7 +6,7 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 Name:           swig
-Version:        4.3.1
+Version:        4.4.1
 Release:        %autorelease
 Summary:        Connects C/C++/Objective C to some high-level programming languages
 License:        GPL-3.0-or-later AND BSD-3-Clause
@@ -14,13 +14,6 @@ License:        GPL-3.0-or-later AND BSD-3-Clause
 Source0:        http://downloads.sourceforge.net/project/swig/swig/swig-%{version}/swig-%{version}.tar.gz
 Source1:        ccache-swig.sh
 Source2:        ccache-swig.csh
-# patch for adding support for python 3.14
-# should be removed once updated to 4.4.0
-# the original patch from github, however, cannot be directly applied to
-# stable version v4.3.1
-Patch0:         0001-swig-python-Python-3.14-support.patch
-# Python DeprecationWarning fixes - in upstream after 4.4.0
-Patch1:         0002-swig-4.4.0-Python-DeprecationWarning-fixes.patch
 BuildSystem:    autotools
 # disable OCaml,php,tcl,java,octave
 BuildOption(conf): --without-ocaml
