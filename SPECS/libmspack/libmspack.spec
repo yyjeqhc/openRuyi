@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
-# SPDX-FileContributor: yyjeqhc <1772413353@qq.com>
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -15,12 +15,17 @@ URL:            http://www.cabextract.org.uk/libmspack/
 Source0:        https://github.com/kyz/libmspack/archive/v%{version}alpha/libmspack-%{version}alpha.tar.gz
 BuildSystem:    autotools
 
-BuildOption(conf): --disable-silent-rules
-BuildOption(conf): --disable-static
+BuildOption(conf):  --disable-silent-rules
+BuildOption(conf):  --disable-static
 
-BuildOption(build): CFLAGS="%{optflags} -fno-strict-aliasing" -C libmspack
-BuildOption(install): -C libmspack
-BuildRequires:  doxygen gcc autoconf automake libtool
+BuildOption(build):  CFLAGS="%{optflags} -fno-strict-aliasing" -C libmspack
+BuildOption(install):  -C libmspack
+
+BuildRequires:  doxygen
+BuildRequires:  gcc
+BuildRequires:  autoconf
+BuildRequires:  automake
+BuildRequires:  libtool
 
 %description
 libmspack is a library for compressing and decompressing Microsoft cabinet
