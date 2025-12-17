@@ -1,21 +1,22 @@
 # SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <1772413353@qq.com>
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-Name:             mksh
-Version:          59
-Release:          %autorelease
-Summary:          A fast, modern, and secure Korn Shell implementation
-License:          MirOS and ISC and BSD-3-Clause
-URL:              https://www.mirbsd.org/mksh.htm
+Name:           mksh
+Version:        59
+Release:        %autorelease
+Summary:        A fast, modern, and secure Korn Shell implementation
+License:        MirOS and ISC and BSD-3-Clause
+URL:            https://www.mirbsd.org/mksh.htm
 #!RemoteAsset
-Source0:          https://github.com/MirBSD/mksh/archive/refs/tags/%{name}-R%{version}.tar.gz
-Source1:          dot-mkshrc
-BuildSystem:      autotools
+Source0:        https://github.com/MirBSD/mksh/archive/refs/tags/%{name}-R%{version}.tar.gz
+Source1:        dot-mkshrc
+BuildSystem:    autotools
 
-BuildRequires:    gcc ed
+BuildRequires:  gcc
+BuildRequires:  ed
 
 Requires(post):   grep
 Requires(postun): sed
