@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
-# SPDX-FileContributor: yyjeqhc <1772413353@qq.com>
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -15,15 +15,19 @@ URL:            https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS
 Source:         https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_115_RTM/src/nss-3.115-with-nspr-4.37.tar.gz
 BuildSystem:    autotools
 
-BuildOption(build): -C nss
-BuildOption(build): nss_build_all
-BuildOption(build): BUILD_OPT=1
-BuildOption(build): NSS_USE_SYSTEM_SQLITE=1
-BuildOption(build): NSS_ENABLE_WERROR=0
-BuildOption(build): USE_64=1
+BuildOption(build):  -C nss
+BuildOption(build):  nss_build_all
+BuildOption(build):  BUILD_OPT=1
+BuildOption(build):  NSS_USE_SYSTEM_SQLITE=1
+BuildOption(build):  NSS_ENABLE_WERROR=0
+BuildOption(build):  USE_64=1
 
-BuildRequires:  gcc-c++ make sqlite-devel
-BuildRequires:  zlib-devel perl which
+BuildRequires:  gcc-c++
+BuildRequires:  make
+BuildRequires:  pkgconfig(sqlite3)
+BuildRequires:  pkgconfig(zlib)
+BuildRequires:  perl
+BuildRequires:  which
 
 %description
 Network Security Services (NSS) is a set of libraries for developing
