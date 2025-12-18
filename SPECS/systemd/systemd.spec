@@ -44,10 +44,10 @@
 # We don't want eBPF support yet
 %bcond bpf 0
 
-%global base_version 258
+%global base_version 259
 
 Name:           systemd
-Version:        %{base_version}.2
+Version:        %{base_version}
 Release:        %autorelease
 Summary:        System and service manager
 License:        LGPL-2.1-or-later AND MIT AND GPL-2.0-or-later
@@ -110,7 +110,7 @@ BuildOption(conf):  -Dstandalone-binaries=false
 BuildOption(conf):  -Ddefault-kill-user-processes=false
 BuildOption(conf):  -Dfirst-boot-full-preset=true
 # No Tests
-BuildOption(conf):  -Dtests=false
+BuildOption(conf):  -Dtests=true
 BuildOption(conf):  -Dinstall-tests=false
 BuildOption(conf):  -Dnobody-user=nobody
 BuildOption(conf):  -Dnobody-group=nobody
@@ -817,7 +817,7 @@ fi
 
 %files
 %license LICENSE.GPL2 LICENSES/*.txt
-%doc README README.md NEWS
+%doc README.md
 %exclude %{_docdir}/systemd/LICENSE*
 %doc %{_prefix}/lib/modprobe.d/README
 %doc %{_prefix}/lib/sysctl.d/README
@@ -877,6 +877,7 @@ fi
 %{_datadir}/bash-completion/completions/systemd-run
 %{_datadir}/bash-completion/completions/systemd-sysext
 %{_datadir}/bash-completion/completions/userdbctl
+%{_datadir}/bash-completion/completions/varlinkctl
 %{_datadir}/factory/etc/issue
 %{_datadir}/factory/etc/locale.conf
 %{_datadir}/factory/etc/nsswitch.conf
@@ -907,6 +908,7 @@ fi
 %{_bindir}/systemd-inhibit
 %{_bindir}/systemd-machine-id-setup
 %{_bindir}/systemd-mount
+%{_bindir}/systemd-mute-console
 %{_bindir}/systemd-notify
 %{_bindir}/systemd-path
 %{_bindir}/systemd-pty-forward
@@ -955,6 +957,7 @@ fi
 %{_datadir}/polkit-1/actions/io.systemd.namespace-resource.policy
 %if %{without bootstrap}
 %{_datadir}/polkit-1/rules.d/10-systemd-logind-root-ignore-inhibitors.rules.example
+%{_datadir}/polkit-1/rules.d/empower.rules
 %endif
 %dir %{_datadir}/dbus-1/services
 %{_datadir}/dbus-1/services/org.freedesktop.systemd1.service
@@ -1072,7 +1075,6 @@ fi
 %{_bindir}/resolvconf
 %{_sysconfdir}/systemd/resolved.conf
 %{_prefix}/lib/tmpfiles.d/systemd-resolve.conf
-%{_datadir}/bash-completion/completions/resolvectl
 %{_datadir}/bash-completion/completions/systemd-resolve
 %if %{with docs}
 %{_mandir}/man1/resolvectl.1.gz
@@ -1198,10 +1200,12 @@ fi
 %{_prefix}/lib/tmpfiles.d/systemd-nspawn.conf
 %{_datadir}/bash-completion/completions/systemd-nspawn
 %if %{without bootstrap}
-%{_bindir}/systemd-vmspawn
 %{_bindir}/importctl
-%{_datadir}/bash-completion/completions/systemd-vmspawn
+%{_bindir}/systemd-vmspawn
 %{_datadir}/bash-completion/completions/importctl
+%{_datadir}/bash-completion/completions/systemd-vmspawn
+%{_datadir}/dbus-1/services/org.freedesktop.import1.service
+%{_datadir}/dbus-1/services/org.freedesktop.machine1.service
 %{_datadir}/dbus-1/system-services/org.freedesktop.import1.service
 %{_datadir}/dbus-1/system.d/org.freedesktop.import1.conf
 %{_datadir}/polkit-1/actions/org.freedesktop.import1.policy
@@ -1259,7 +1263,6 @@ fi
 %{_mandir}/man5/journal-upload.conf.5.gz
 %{_mandir}/man5/journal-upload.conf.d.5.gz
 %endif
-%{pkgdir}/systemd-journal-upload
 %{_sharedstatedir}/systemd/journal-upload
 %ghost %{_localstatedir}/lib/systemd/journal-upload/state
 %{_localstatedir}/lib/private/systemd/journal-upload/state
@@ -1271,7 +1274,6 @@ fi
 %{_bindir}/networkctl
 %{_sysconfdir}/systemd/networkd.conf
 %{_prefix}/lib/tmpfiles.d/systemd-network.conf
-%{_datadir}/bash-completion/completions/networkctl
 %if %{with docs}
 %{_mandir}/man1/networkctl.1.gz
 %{_mandir}/man5/networkd.conf.5.gz
