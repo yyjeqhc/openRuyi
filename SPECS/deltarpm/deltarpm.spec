@@ -59,6 +59,9 @@ Python 3 bindings for deltarpm.
 # No configure.
 %conf
 
+%check
+# No tests here.
+
 %files
 %license LICENSE.BSD
 %doc README NEWS
