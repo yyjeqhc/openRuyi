@@ -82,11 +82,11 @@ local function main()
         else
             outputStr = string.format("cmake(%s)", cmakeModule)
         end
+        print(outputStr)
+        print("\\n")
         if outputStr == outputStr:lower() then
-            print(outputStr)
-        else
-            print(outputStr)
-            print(outputStr:lower())
+             print(outputStr:lower())
+             print("\\n")
         end
 
 end
