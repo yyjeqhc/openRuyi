@@ -112,6 +112,15 @@ cd ..
 
 %find_lang %{name} --all-name --generate-subpackages
 
+%check
+# Delete upsteam known failure. https://sourceware.org/bugzilla//show_bug.cgi?id=32983
+sed -i '/"pr19719/d' ld/testsuite/ld-elf/shared.exp
+
+cd build-dir
+
+# Increase timeout to fit slow qemu-system builder.
+make RUNTESTFLAGS='TEST_TIMEOUT=600' check
+
 %post
 %if ! %{with libalternatives}
 "%_sbindir/update-alternatives" --install \
