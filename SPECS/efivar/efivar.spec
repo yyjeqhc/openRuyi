@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: Suyun114 <ziyu.oerv@isrc.iscas.ac.cn>
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -15,7 +16,10 @@ URL:            https://github.com/rhboot/efivar
 Source:         https://github.com/rhboot/%{name}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildSystem:    autotools
 
-BuildOption(install): libdir=%{_libdir}
+# skip some tests need grub2 as we have no grub2 yet.
+Patch0:         0001-skip-some-tests.patch
+
+BuildOption(install):  libdir=%{_libdir}
 BuildRequires:  mandoc
 
 %description
@@ -30,6 +34,9 @@ Development headers required to use libefivar.
 
 %conf
 # efivar has no configuration script
+
+%check
+make -j1 V=1 test
 
 %files
 %license COPYING
