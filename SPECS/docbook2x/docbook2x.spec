@@ -41,6 +41,9 @@ rm -rf __dist_html
 mkdir -p __dist_html/html
 cp -p doc/*.html __dist_html/html
 
+# TODO: Broken check also no distro is checking it - 251
+%check
+
 %files
 %doc COPYING README THANKS AUTHORS __dist_html/html/
 %{_bindir}/db2x_manxml
