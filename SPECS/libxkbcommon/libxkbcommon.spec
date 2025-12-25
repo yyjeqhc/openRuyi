@@ -17,6 +17,9 @@ VCS:            git:https://github.com/xkbcommon/libxkbcommon
 Source0:        https://github.com/xkbcommon/libxkbcommon/archive/refs/tags/xkbcommon-%{version}.tar.gz
 BuildSystem:    meson
 
+# Mask X11 tests now because they require Xvfb
+Patch1:         libxkbcommon-1.13.1-mask-x11-test.patch
+
 BuildOption(conf):  -Denable-docs=false
 BuildOption(conf):  -Denable-wayland=true
 %if %{with x11}
