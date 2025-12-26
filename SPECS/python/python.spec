@@ -208,6 +208,7 @@ Documentation for Python is provided in the %{pkgname}-docs package.
 Packages containing additional libraries for Python are generally named with
 the "%{pkgname}-" prefix.
 
+%if %{without bootstrap}
 %package        -n python-unversioned-command
 Summary:        The "python" command that runs Python 3
 BuildArch:      noarch
@@ -218,6 +219,7 @@ Provides:       python-is-python3 = %{version}-%{release}
 
 %description    -n python-unversioned-command
 This package contains /usr/bin/python - the "python" command that runs Python 3.
+%endif
 
 %package        -n %{pkgname}-libs
 Summary:        Python runtime libraries
@@ -498,9 +500,14 @@ EXCLUDES="-x test_ensurepip -x test_ctypes -x test_tools"
 %{_bindir}/python%{pybasever}
 %{_mandir}/*/*3*
 
+%if %{without bootstrap}
 %files -n python-unversioned-command
 %{_bindir}/python
 %{_mandir}/*/python.1*
+%else
+%exclude %{_bindir}/python
+%exclude %{_mandir}/*/python.1*
+%endif
 
 %files -n %{pkgname}-libs
 %doc README.rst
