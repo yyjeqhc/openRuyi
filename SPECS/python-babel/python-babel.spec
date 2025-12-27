@@ -1,0 +1,55 @@
+# SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
+%global srcname babel
+
+Name:           python-%{srcname}
+Version:        2.17.0
+Release:        %autorelease
+Summary:        Tools for internationalizing Python applications
+License:        BSD-3-Clause
+URL:            https://babel.pocoo.org/
+#!RemoteAsset
+Source:         https://files.pythonhosted.org/packages/source/b/%{srcname}/%{srcname}-%{version}.tar.gz
+BuildSystem:    pyproject
+
+BuildOption(install):  -l %{srcname}
+
+BuildRequires:  pyproject-rpm-macros
+BuildRequires:  pkgconfig(python3)
+BuildRequires:  python3-setuptools
+BuildRequires:  python3-pip
+BuildRequires:  python3-wheel
+# for tests
+BuildRequires:  python3-pytest
+BuildRequires:  python3-freezegun
+BuildRequires:  python3-pytz
+
+Provides:       python3-%{srcname}
+%python_provide python3-%{srcname}
+
+%description
+Babel is composed of two major parts:
+* tools to build and work with gettext message catalogs
+* a Python interface to the CLDR (Common Locale Data Repository),
+  providing access to various locale display names, localized number
+  and date formatting, etc.
+
+%generate_buildrequires
+%pyproject_buildrequires
+
+%check
+export TZ=UTC
+%pyproject_check_import
+%pytest
+
+%files -f %{pyproject_files}
+%doc CHANGES.rst AUTHORS
+%license LICENSE
+%{_bindir}/pybabel
+
+%changelog
+%{?autochangelog}
