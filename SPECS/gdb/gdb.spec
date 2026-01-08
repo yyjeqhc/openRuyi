@@ -10,16 +10,13 @@
 %define _lto_cflags %{nil}
 
 Name:           gdb
-Version:        16.3
+Version:        17.1
 Release:        %autorelease
 Summary:        A GNU source-level debugger for C, C++, Fortran, Go and other languages
 License:        GPL-3.0-only WITH GCC-exception-3.1 AND GPL-3.0-or-later AND LGPL-2.1-or-later AND LGPL-3.0-or-later AND MIT
 URL:            https://www.gnu.org/software/gdb/
-#!RemoteAsset
-Source0:        https://ftpmirror.gnu.org/gnu/%{name}/%{name}-%{version}.tar.gz
-#!RemoteAsset
-Source1:        https://ftpmirror.gnu.org/gnu/%{name}/%{name}-%{version}.tar.gz.sig
-# /etc/gdbinit (from Debian but with openRuyi compliant location).
+#!RemoteAsset:  sha256:2b93c4c9726a4b8cfe771036e155377405dfa41c483d90945481319c5663c120
+Source0:        https://ftpmirror.gnu.org/gnu/gdb/gdb-%{version}.tar.gz
 Source2:        gdbinit
 BuildSystem:    autotools
 
