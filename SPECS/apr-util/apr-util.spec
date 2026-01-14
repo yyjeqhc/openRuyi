@@ -1,6 +1,7 @@
-# SPDX-FileCopyrightText: (C) 2025, 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2025, 2026 openRuyi Project Contributors
+# SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: yyjeqhc <1772413353@qq.com>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -16,58 +17,64 @@ Release:        %autorelease
 Summary:        Apache Portable Runtime Utility library
 License:        Apache-2.0 AND (Beerware AND LicenseRef-openRuyi-Public-Domain AND OLDAP-2.7 AND BSD-4.3RENO)
 URL:            https://apr.apache.org/
+VCS:            git:https://github.com/apache/apr-util
 #!RemoteAsset
 Source:         https://www.apache.org/dist/apr/apr-util-%{version}.tar.bz2
 BuildSystem:    autotools
 
-BuildOption(conf): --with-apr=%{_prefix}
-BuildOption(conf): --includedir=%{_includedir}/apr-1
+BuildOption(conf):  --with-apr=%{_prefix}
+BuildOption(conf):  --includedir=%{_includedir}/apr-1
 %if %{with ldap}
-BuildOption(conf): --with-ldap
+BuildOption(conf):  --with-ldap
 %else
-BuildOption(conf): --without-ldap
+BuildOption(conf):  --without-ldap
 %endif
-BuildOption(conf): --without-gdbm
+BuildOption(conf):  --without-gdbm
 %if %{with sqlite}
-BuildOption(conf): --with-sqlite3
+BuildOption(conf):  --with-sqlite3
 %else
-BuildOption(conf): --without-sqlite3
+BuildOption(conf):  --without-sqlite3
 %endif
 %if %{with odbc}
-BuildOption(conf): --with-odbc
+BuildOption(conf):  --with-odbc
 %else
-BuildOption(conf): --without-odbc
+BuildOption(conf):  --without-odbc
 %endif
-BuildOption(conf): --without-sqlite2
+BuildOption(conf):  --without-sqlite2
 %if %{with openssl}
-BuildOption(conf): --with-crypto --with-openssl
+BuildOption(conf):  --with-crypto --with-openssl
 %else
-BuildOption(conf): --without-crypto --without-openssl
+BuildOption(conf):  --without-crypto --without-openssl
 %endif
 %if %{with nss}
-BuildOption(conf): --with-nss
+BuildOption(conf):  --with-nss
 %else
-BuildOption(conf): --without-nss
+BuildOption(conf):  --without-nss
 %endif
 # The tests might fail under multi jobs.
-BuildOption(check): -j1
+BuildOption(check):  -j1
 
-BuildRequires:  gcc autoconf apr-devel expat-devel libuuid libxcrypt-devel
+BuildRequires:  gcc
+BuildRequires:  autoconf
+BuildRequires:  pkgconfig(apr-1)
+BuildRequires:  pkgconfig(expat)
+BuildRequires:  pkgconfig(uuid)
+BuildRequires:  pkgconfig(libxcrypt)
 
 %if %{with ldap}
-BuildRequires:  openldap-devel
+BuildRequires:  pkgconfig(ldap)
 %endif
 %if %{with openssl}
-BuildRequires:  openssl-devel
+BuildRequires:  pkgconfig(openssl)
 %endif
 %if %{with nss}
 BuildRequires:  nss
 %endif
 %if %{with sqlite}
-BuildRequires:  sqlite-devel
+BuildRequires:  pkgconfig(sqlite3)
 %endif
 %if %{with odbc}
-BuildRequires:  unixODBC-devel
+BuildRequires:  pkgconfig(odbc)
 %endif
 
 %description
@@ -76,12 +83,12 @@ LDAP, database interfaces, URI parsing, and more.
 
 %package        devel
 Summary:        APR utility library development kit
-Requires:       %{name} = %{version}
-Requires:       apr-devel pkgconfig
+Requires:       %{name}%{?_isa} = %{version}-%{release}
+Requires:       pkgconfig(apr-1)
 %if %{with ldap}
-Requires:       openldap-devel
+Requires:       pkgconfig(ldap)
 %endif
-Requires:       expat-devel
+Requires:       pkgconfig(expat)
 
 %description    devel
 This package provides the support files for building applications that use
@@ -89,37 +96,38 @@ the APR utility library.
 
 %package        sqlite
 Summary:        APR utility library SQLite DBD driver
-Requires:       %{name} = %{version}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 %description    sqlite
 This package provides the SQLite driver for the apr-util DBD interface.
 
 %package        odbc
 Summary:        APR utility library ODBC DBD driver
-Requires:       %{name} = %{version}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 %description    odbc
 This package provides the ODBC driver for the apr-util DBD interface.
 
 %package        ldap
 Summary:        APR utility library LDAP support
-Requires:       %{name} = %{version}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 %description    ldap
 This package provides LDAP support for apr-util.
 
 %package        openssl
 Summary:        APR utility library OpenSSL crypto support
-Requires:       %{name} = %{version}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 %description    openssl
 This package provides OpenSSL crypto support for apr-util.
 
 %if %{with nss}
-%package nss
+%package        nss
 Summary:        APR utility library NSS crypto support
-Requires:       %{name} = %{version}
-%description nss
+Requires:       %{name}%{?_isa} = %{version}-%{release}
+
+%description    nss
 This package provides NSS crypto support for apr-util.
 %endif
 
