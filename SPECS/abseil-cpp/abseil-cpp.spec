@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: (C) 2025, 2026 openRuyi Project Contributors
 # SPDX-FileContributor: Xuhai Chang <xuhai.oerv@isrc.iscas.ac.cn>
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -13,13 +14,13 @@ License:        Apache-2.0 AND LicenseRef-openRuyi-Public-Domain
 URL:            https://abseil.io
 #!RemoteAsset
 Source:         https://github.com/abseil/abseil-cpp/archive/%{version}/%{name}-%{version}.tar.gz
-# didn't bring i386 specific patch along with this spec
-# we didn't add support for s390x and ppc64 either
+BuildSystem:    cmake
+
 BuildRequires:  cmake
 BuildRequires:  ninja
 BuildRequires:  gcc-c++
-BuildRequires:  gmock-devel gtest-devel
-BuildSystem:    cmake
+BuildRequires:  pkgconfig(gmock)
+BuildRequires:  pkgconfig(gtest)
 
 BuildOption(conf):  -GNinja
 BuildOption(conf):  -DABSL_USE_EXTERNAL_GOOGLETEST:BOOL=ON
@@ -59,25 +60,25 @@ Abseil is not meant to be a competitor to the standard library; we've just
 found that many of these utilities serve a purpose within our code base,
 and we now want to provide those resources to the C++ community as a whole.
 
-%package testing
+%package        testing
 Summary:        Libraries needed for running tests on the installed %{name}
 Requires:       %{name} = %{version}-%{release}
 
 Provides:       bundled(cctz)
 
-%description testing
+%description    testing
 %{summary}.
 
-%package devel
+%package        devel
 Summary:        Development files for %{name}
-Requires:       %{name} = %{version}-%{release}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 Requires:       %{name}-testing = %{version}-%{release}
 
 # Some of the headers from CCTZ are part of the -devel subpackage. See the
 # corresponding virtual Provides in the base package for full details.
 Provides:       bundled(cctz)
 
-%description devel
+%description    devel
 Development headers for %{name}
 
 %files
