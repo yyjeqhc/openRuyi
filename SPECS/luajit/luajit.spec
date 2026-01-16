@@ -12,7 +12,7 @@
 # This also avoids having to package both vanilla LuaJIT and OR LuaJIT.
 %global major 2.1
 # The commit that could be patched
-%global minor 20251229
+%global minor 20260114
 
 Name:           luajit
 Version:        %{major}+openresty%{minor}

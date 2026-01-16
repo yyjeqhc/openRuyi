@@ -1,4 +1,4 @@
-From b6c4a8546d08cec0f8fa09da727bd95d45e5e380 Mon Sep 17 00:00:00 2001
+From cab5d57d8249daa01bb4f98928dbdfb270153c66 Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 01/23] riscv(support): add RISC-V 64 arch base definition
@@ -8,7 +8,7 @@ Subject: [PATCH 01/23] riscv(support): add RISC-V 64 arch base definition
  1 file changed, 22 insertions(+)
 
 diff --git a/src/lj_arch.h b/src/lj_arch.h
-index f61053931..127d0fe8d 100644
+index add90dd18..19f9fe71e 100644
 --- a/src/lj_arch.h
 +++ b/src/lj_arch.h
 @@ -33,6 +33,8 @@
@@ -62,17 +62,17 @@ index f61053931..127d0fe8d 100644
  #endif
  
 
-From 9067a3c153efcda9bcfcc88f42a02da8a69fd4fe Mon Sep 17 00:00:00 2001
+From 2ac65409e06f6744bb7b1a9e353b7ef036a9ea54 Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 02/23] riscv(dynasm): add RISC-V support
 
 ---
- dynasm/dasm_riscv.h     | 435 ++++++++++++++++++
+ dynasm/dasm_riscv.h     | 433 ++++++++++++++++++
  dynasm/dasm_riscv.lua   | 979 ++++++++++++++++++++++++++++++++++++++++
  dynasm/dasm_riscv32.lua |  12 +
  dynasm/dasm_riscv64.lua |  12 +
- 4 files changed, 1438 insertions(+)
+ 4 files changed, 1436 insertions(+)
  create mode 100644 dynasm/dasm_riscv.h
  create mode 100644 dynasm/dasm_riscv.lua
  create mode 100644 dynasm/dasm_riscv32.lua
@@ -80,16 +80,14 @@ Subject: [PATCH 02/23] riscv(dynasm): add RISC-V support
 
 diff --git a/dynasm/dasm_riscv.h b/dynasm/dasm_riscv.h
 new file mode 100644
-index 000000000..b2739fdbb
+index 000000000..9687e6dfb
 --- /dev/null
 +++ b/dynasm/dasm_riscv.h
-@@ -0,0 +1,435 @@
+@@ -0,0 +1,433 @@
 +/*
 +** DynASM RISC-V encoding engine.
-+** Copyright (C) 2005-2025 Mike Pall. All rights reserved.
++** Copyright (C) 2022-2026 ISRC, ISCAS. All rights reserved.
 +** Released under the MIT license. See dynasm.lua for full copyright notice.
-+**
-+** Contributed by gns from PLCT Lab, ISCAS.
 +*/
 +
 +#include <stddef.h>
@@ -521,17 +519,17 @@ index 000000000..b2739fdbb
 +
 diff --git a/dynasm/dasm_riscv.lua b/dynasm/dasm_riscv.lua
 new file mode 100644
-index 000000000..4c8518f16
+index 000000000..6aff31ba9
 --- /dev/null
 +++ b/dynasm/dasm_riscv.lua
 @@ -0,0 +1,979 @@
 +------------------------------------------------------------------------------
 +-- DynASM RISC-V module.
 +--
-+-- Copyright (C) 2005-2025 Mike Pall. All rights reserved.
++-- Copyright (C) 2022-2026 ISRC, ISCAS.
 +-- See dynasm.lua for full copyright notice.
 +--
-+-- Contributed by gns from PLCT Lab, ISCAS.
++-- Contributed by gns from PLCT Lab, ISRC, ISCAS.
 +------------------------------------------------------------------------------
 +
 +local riscv32 = riscv32
@@ -544,7 +542,7 @@ index 000000000..4c8518f16
 +  version =	"1.5.0",
 +  vernum =	 10500,
 +  release =	"2022-07-12",
-+  author =	"Mike Pall",
++  author =	"gns",
 +  license =	"MIT",
 +}
 +
@@ -1506,14 +1504,14 @@ index 000000000..4c8518f16
 +
 diff --git a/dynasm/dasm_riscv32.lua b/dynasm/dasm_riscv32.lua
 new file mode 100644
-index 000000000..f194ce1dc
+index 000000000..7892c88de
 --- /dev/null
 +++ b/dynasm/dasm_riscv32.lua
 @@ -0,0 +1,12 @@
 +------------------------------------------------------------------------------
 +-- DynASM RISC-V 32 module.
 +--
-+-- Copyright (C) 2005-2025 Mike Pall. All rights reserved.
++-- Copyright (C) 2022-2026 ISRC, ISCAS. All rights reserved.
 +-- See dynasm.lua for full copyright notice.
 +------------------------------------------------------------------------------
 +-- This module just sets 32 bit mode for the combined RISC-V module.
@@ -1524,14 +1522,14 @@ index 000000000..f194ce1dc
 +return require("dasm_riscv")
 diff --git a/dynasm/dasm_riscv64.lua b/dynasm/dasm_riscv64.lua
 new file mode 100644
-index 000000000..25274395d
+index 000000000..49f6b2250
 --- /dev/null
 +++ b/dynasm/dasm_riscv64.lua
 @@ -0,0 +1,12 @@
 +------------------------------------------------------------------------------
 +-- DynASM RISC-V 64 module.
 +--
-+-- Copyright (C) 2005-2025 Mike Pall. All rights reserved.
++-- Copyright (C) 2022-2026 ISRC, ISCAS. All rights reserved.
 +-- See dynasm.lua for full copyright notice.
 +------------------------------------------------------------------------------
 +-- This module just sets 64 bit mode for the combined RISC-V module.
@@ -1541,7 +1539,7 @@ index 000000000..25274395d
 +riscv64 = true -- Using a global is an ugly, but effective solution.
 +return require("dasm_riscv")
 
-From 8fd04c642f6d0289f3c1be7abdab4308d8155eb2 Mon Sep 17 00:00:00 2001
+From 105f50a33bc6ec308bc16b3291992446b00a0934 Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 03/23] riscv(interp): add register definition
@@ -1553,15 +1551,15 @@ Subject: [PATCH 03/23] riscv(interp): add register definition
 
 diff --git a/src/vm_riscv64.dasc b/src/vm_riscv64.dasc
 new file mode 100644
-index 000000000..41c14eebb
+index 000000000..946fc414c
 --- /dev/null
 +++ b/src/vm_riscv64.dasc
 @@ -0,0 +1,81 @@
 +|// Low-level VM code for RISC-V 64 CPUs.
 +|// Bytecode interpreter, fast functions and helper functions.
-+|// Copyright (C) 2005-2025 Mike Pall. See Copyright Notice in luajit.h
++|// Copyright (C) 2022-2026 ISRC, ISCAS. See Copyright Notice in luajit.h
 +|//
-+|// Contributed by gns from PLCT Lab, ISCAS.
++|// Contributed by gns from PLCT Lab, ISRC, ISCAS.
 +|
 +|.arch riscv64
 +|.section code_op, code_sub
@@ -1639,7 +1637,7 @@ index 000000000..41c14eebb
 +|.define FTMP3,		f3
 +|.define FTMP4,		f4
 
-From d67c9590bfdb5d5182b19d852172fe28ed938331 Mon Sep 17 00:00:00 2001
+From c780af78a703c922a9066f0f518c96d2042e2f45 Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 04/23] riscv(interp): add frame definition
@@ -1650,7 +1648,7 @@ Subject: [PATCH 04/23] riscv(interp): add frame definition
  2 files changed, 92 insertions(+)
 
 diff --git a/src/lj_frame.h b/src/lj_frame.h
-index bcc14fadd..ff04d0df9 100644
+index 4f8e886e3..4c5669537 100644
 --- a/src/lj_frame.h
 +++ b/src/lj_frame.h
 @@ -287,6 +287,15 @@ enum { LJ_CONT_TAILCALL, LJ_CONT_FFI_CALLBACK };  /* Special continuations. */
@@ -1670,7 +1668,7 @@ index bcc14fadd..ff04d0df9 100644
  #error "Missing CFRAME_* definitions for this architecture"
  #endif
 diff --git a/src/vm_riscv64.dasc b/src/vm_riscv64.dasc
-index 41c14eebb..63977f5f6 100644
+index 946fc414c..124040794 100644
 --- a/src/vm_riscv64.dasc
 +++ b/src/vm_riscv64.dasc
 @@ -79,3 +79,86 @@
@@ -1761,7 +1759,7 @@ index 41c14eebb..63977f5f6 100644
 +|  ret
 +|.endmacro
 
-From f67b7b0a8a1b8c2f37aca3f5911bfda36189f391 Mon Sep 17 00:00:00 2001
+From 504766b9e3f6f454e0a532c684b8fed6472063e9 Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 05/23] riscv(interp): add helper macros and typedefs
@@ -1771,7 +1769,7 @@ Subject: [PATCH 05/23] riscv(interp): add helper macros and typedefs
  1 file changed, 353 insertions(+)
 
 diff --git a/src/vm_riscv64.dasc b/src/vm_riscv64.dasc
-index 63977f5f6..562d610dd 100644
+index 124040794..60e835a8d 100644
 --- a/src/vm_riscv64.dasc
 +++ b/src/vm_riscv64.dasc
 @@ -162,3 +162,356 @@
@@ -2132,7 +2130,7 @@ index 63977f5f6..562d610dd 100644
 +|
 +|//-----------------------------------------------------------------------
 
-From 3b0eba767b2a11e6a6607763533094910684083a Mon Sep 17 00:00:00 2001
+From f36b3564223bc95f5f369422df865ca3d45b67ec Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 06/23] riscv(interp): add base assembly interpreter VM
@@ -2140,11 +2138,11 @@ Subject: [PATCH 06/23] riscv(interp): add base assembly interpreter VM
 ---
  src/lj_vm.h         |    3 +
  src/lj_vmmath.c     |    3 +-
- src/vm_riscv64.dasc | 3624 ++++++++++++++++++++++++++++++++++++++++++-
- 3 files changed, 3626 insertions(+), 4 deletions(-)
+ src/vm_riscv64.dasc | 3629 ++++++++++++++++++++++++++++++++++++++++++-
+ 3 files changed, 3631 insertions(+), 4 deletions(-)
 
 diff --git a/src/lj_vm.h b/src/lj_vm.h
-index 01da1bd44..a4e26dab0 100644
+index b8ac3db6f..b176d8700 100644
 --- a/src/lj_vm.h
 +++ b/src/lj_vm.h
 @@ -37,6 +37,9 @@ LJ_ASMF int lj_vm_cpuid(uint32_t f, uint32_t res[4]);
@@ -2158,7 +2156,7 @@ index 01da1bd44..a4e26dab0 100644
  #if LJ_HASJIT
  LJ_ASMF LJ_CONSTF double lj_vm_foldfpm(double x, int op);
 diff --git a/src/lj_vmmath.c b/src/lj_vmmath.c
-index 1495102fb..14893d773 100644
+index 5aca72071..62f1cb81f 100644
 --- a/src/lj_vmmath.c
 +++ b/src/lj_vmmath.c
 @@ -69,7 +69,8 @@ double lj_vm_foldarith(double x, double y, int op)
@@ -2172,7 +2170,7 @@ index 1495102fb..14893d773 100644
  {
    uint32_t y, ua, ub;
 diff --git a/src/vm_riscv64.dasc b/src/vm_riscv64.dasc
-index 562d610dd..dc3fa493e 100644
+index 60e835a8d..5eb1d82e7 100644
 --- a/src/vm_riscv64.dasc
 +++ b/src/vm_riscv64.dasc
 @@ -437,9 +437,11 @@
@@ -2190,7 +2188,7 @@ index 562d610dd..dc3fa493e 100644
  |.endmacro
  |
  |// Set current VM state. Uses TMP0.
-@@ -515,3 +517,3619 @@
+@@ -515,3 +517,3624 @@
  |.endmacro
  |
  |//-----------------------------------------------------------------------
@@ -4295,21 +4293,26 @@ index 562d610dd..dc3fa493e 100644
 +    |  ld TMP0, 0(RB)
 +    |  lui TMP1, 0x80000
 +    |  gettp CARG3, TMP0
-+    |  bne CARG3, TISNUM, >1
++    |  bne CARG3, TISNUM, >2
 +    |  sext.w TMP0, TMP0
 +    |  bxeq TMP0, TMP1, ->vmeta_unm      // Meta handler deals with -2^31.
 +    |  negw TMP0, TMP0
++    |  beqz TMP0, >3
 +    |  zext.w TMP0, TMP0
 +    |  settp_b TMP0, TISNUM
-+    |  j >2
 +    |1:
++    |  ins_next1
++    |   sd TMP0, 0(RA)
++    |  ins_next2
++    |2:
 +    |  sltiu TMP3, CARG3, LJ_TISNUM
 +    |   slli TMP1, TMP1, 32
 +    |  bxeqz TMP3, ->vmeta_unm
 +    |   xor TMP0, TMP0, TMP1     // sign => ~sign
-+    |2:
-+    |   sd TMP0, 0(RA)
-+    |  ins_next
++    |  j <1
++    |3:
++    |  slli TMP0, TMP1, 32
++    |  j <1
 +    break;
 +  case BC_LEN:
 +    |  // RA = dst*8, RD = src*8
@@ -5811,7 +5814,7 @@ index 562d610dd..dc3fa493e 100644
 +
 +}
 
-From 01663d4112bfe8677fb0a667657c9d53f66ce676 Mon Sep 17 00:00:00 2001
+From eb03f5f9ddb074d596ad74e009336b8f517c1023 Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 07/23] riscv(support): add target definition
@@ -5823,7 +5826,7 @@ Subject: [PATCH 07/23] riscv(support): add target definition
  create mode 100644 src/lj_target_riscv.h
 
 diff --git a/src/lj_target.h b/src/lj_target.h
-index 6548816a6..160be2a78 100644
+index 3606618ea..55fdb5efa 100644
 --- a/src/lj_target.h
 +++ b/src/lj_target.h
 @@ -55,7 +55,7 @@ typedef uint32_t RegSP;
@@ -5846,13 +5849,13 @@ index 6548816a6..160be2a78 100644
  #endif
 diff --git a/src/lj_target_riscv.h b/src/lj_target_riscv.h
 new file mode 100644
-index 000000000..22948dc5a
+index 000000000..668511b55
 --- /dev/null
 +++ b/src/lj_target_riscv.h
 @@ -0,0 +1,542 @@
 +/*
 +** Definitions for RISC-V CPUs.
-+** Copyright (C) 2005-2025 Mike Pall. See Copyright Notice in luajit.h
++** Copyright (C) 2022-2026 ISRC, ISCAS. See Copyright Notice in luajit.h
 +*/
 +
 +#ifndef _LJ_TARGET_RISCV_H
@@ -6393,7 +6396,7 @@ index 000000000..22948dc5a
 +
 +#endif
 
-From 982221cf0fba25f5a099f957b0b01b9ef631b207 Mon Sep 17 00:00:00 2001
+From 5e929308209ef3907bec1d6b065834b72e60d797 Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 08/23] riscv(ffi): add call convention and support framework
@@ -6406,7 +6409,7 @@ Subject: [PATCH 08/23] riscv(ffi): add call convention and support framework
  4 files changed, 695 insertions(+), 3 deletions(-)
 
 diff --git a/src/lj_ccall.c b/src/lj_ccall.c
-index ed1a291e1..6eb1d9c0b 100644
+index efaff5b04..4b39a4f28 100644
 --- a/src/lj_ccall.c
 +++ b/src/lj_ccall.c
 @@ -687,6 +687,146 @@
@@ -6884,7 +6887,7 @@ index ed1a291e1..6eb1d9c0b 100644
      UNUSED(isfp);
  #endif
 diff --git a/src/lj_ccall.h b/src/lj_ccall.h
-index c830e300a..2f30383af 100644
+index e1f6c230b..804073776 100644
 --- a/src/lj_ccall.h
 +++ b/src/lj_ccall.h
 @@ -157,6 +157,23 @@ typedef union FPRArg {
@@ -6912,7 +6915,7 @@ index c830e300a..2f30383af 100644
  #error "Missing calling convention definitions for this architecture"
  #endif
 diff --git a/src/lj_ccallback.c b/src/lj_ccallback.c
-index b0a159e22..2052a570f 100644
+index dc01ef47f..7a49b3fff 100644
 --- a/src/lj_ccallback.c
 +++ b/src/lj_ccallback.c
 @@ -102,6 +102,10 @@ static MSize CALLBACK_OFS2SLOT(MSize ofs)
@@ -7008,7 +7011,7 @@ index b0a159e22..2052a570f 100644
      if (ctr->size <= 4 &&
  	(LJ_ABI_SOFTFP || ctype_isinteger_or_bool(ctr->info)))
 diff --git a/src/vm_riscv64.dasc b/src/vm_riscv64.dasc
-index dc3fa493e..ea6545972 100644
+index 5eb1d82e7..8ba93d019 100644
 --- a/src/vm_riscv64.dasc
 +++ b/src/vm_riscv64.dasc
 @@ -811,14 +811,29 @@ static void build_subroutines(BuildCtx *ctx)
@@ -7281,7 +7284,7 @@ index dc3fa493e..ea6545972 100644
      |  decode_BC4b TMP2
      |  lui TMP3, (-(BCBIAS_J*4 >> 12)) & 0xfffff		// -BCBIAS_J*4
      |  addw TMP2, TMP2, TMP3		// TMP2=(jump-0x8000)<<2
-@@ -2863,6 +3050,16 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
+@@ -2868,6 +3055,16 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
      |  ins_next
      break;
    case BC_KCDATA:
@@ -7299,7 +7302,7 @@ index dc3fa493e..ea6545972 100644
    case BC_KSHORT:
      |  // RA = dst*8, RD = int16_literal*8
 
-From 839f1ed422223a587ae101c19090611afb105ad0 Mon Sep 17 00:00:00 2001
+From 0de514bfd0a57ea499a9637eda2b2c8d71eed4b3 Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 09/23] riscv(support): add extension detection
@@ -7310,7 +7313,7 @@ Subject: [PATCH 09/23] riscv(support): add extension detection
  2 files changed, 135 insertions(+)
 
 diff --git a/src/lib_jit.c b/src/lib_jit.c
-index e487305f4..cbe298ecf 100644
+index 1e14514c3..ec2250f2f 100644
 --- a/src/lib_jit.c
 +++ b/src/lib_jit.c
 @@ -706,6 +706,111 @@ JIT_PARAMDEF(JIT_PARAMINIT)
@@ -7452,7 +7455,7 @@ index e487305f4..cbe298ecf 100644
  #error "Missing CPU detection for this architecture"
  #endif
 diff --git a/src/lj_jit.h b/src/lj_jit.h
-index 700c9f6de..df72c1969 100644
+index 74a88ad86..985c311fb 100644
 --- a/src/lj_jit.h
 +++ b/src/lj_jit.h
 @@ -68,6 +68,17 @@
@@ -7474,7 +7477,7 @@ index 700c9f6de..df72c1969 100644
  
  #define JIT_F_CPUSTRING		""
 
-From cef4a610e619fc5c9604807687c876f8e6e6c350 Mon Sep 17 00:00:00 2001
+From 3669029b57f62846bb522b3024dd338c029fea02 Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Wed, 26 Nov 2025 16:25:31 +0800
 Subject: [PATCH 10/23] riscv(jit): add mandatory constants
@@ -7485,7 +7488,7 @@ Subject: [PATCH 10/23] riscv(jit): add mandatory constants
  2 files changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/src/lj_jit.h b/src/lj_jit.h
-index df72c1969..3bef0842f 100644
+index 985c311fb..f299c5381 100644
 --- a/src/lj_jit.h
 +++ b/src/lj_jit.h
 @@ -375,13 +375,13 @@ enum {
@@ -7505,7 +7508,7 @@ index df72c1969..3bef0842f 100644
  enum {
  #if LJ_TARGET_X86ORX64 || LJ_TARGET_MIPS64
 diff --git a/src/lj_trace.c b/src/lj_trace.c
-index e9e4668a7..ca512e4dd 100644
+index 4b3c50662..ef96606d1 100644
 --- a/src/lj_trace.c
 +++ b/src/lj_trace.c
 @@ -351,7 +351,7 @@ void lj_trace_initstate(global_State *g)
@@ -7518,7 +7521,7 @@ index e9e4668a7..ca512e4dd 100644
    J->k64[LJ_K64_VM_EXIT_INTERP].u64 = (uintptr_t)lj_ptr_sign((void *)lj_vm_exit_interp, 0);
  #endif
 
-From d5d6a9c859e43d637e3ba607a43e9de30f3193a5 Mon Sep 17 00:00:00 2001
+From 484e820087ecebfceba4f4fbefdc5006c3e7d2cb Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 11/23] riscv(jit): add insn emitter
@@ -7530,15 +7533,15 @@ Subject: [PATCH 11/23] riscv(jit): add insn emitter
 
 diff --git a/src/lj_emit_riscv.h b/src/lj_emit_riscv.h
 new file mode 100644
-index 000000000..ab27c24e4
+index 000000000..1907d8f76
 --- /dev/null
 +++ b/src/lj_emit_riscv.h
 @@ -0,0 +1,576 @@
 +/*
 +** RISC-V instruction emitter.
-+** Copyright (C) 2005-2025 Mike Pall. See Copyright Notice in luajit.h
++** Copyright (C) 2022-2026 ISRC, ISCAS. See Copyright Notice in luajit.h
 +**
-+** Contributed by gns from PLCT Lab, ISCAS.
++** Contributed by gns from PLCT Lab, ISRC, ISCAS.
 +*/
 +
 +static intptr_t get_k64val(ASMState *as, IRRef ref)
@@ -8111,7 +8114,7 @@ index 000000000..ab27c24e4
 +
 +#define emit_spsub(as, ofs)	emit_addptr(as, RID_SP, -(ofs))
 
-From ff8686e2d39e4dd017678b4b74c3666fd95d8d93 Mon Sep 17 00:00:00 2001
+From 32e5f11ccbc802865465775e238266653412f3f5 Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 12/23] riscv(jit): add IR assembler
@@ -8123,7 +8126,7 @@ Subject: [PATCH 12/23] riscv(jit): add IR assembler
  create mode 100644 src/lj_asm_riscv64.h
 
 diff --git a/src/lj_asm.c b/src/lj_asm.c
-index ecb8d2949..7bdbcb0fd 100644
+index fd4e71162..f7b986cc4 100644
 --- a/src/lj_asm.c
 +++ b/src/lj_asm.c
 @@ -231,6 +231,8 @@ static Reg rset_pickrandom(ASMState *as, RegSet rs)
@@ -8146,15 +8149,15 @@ index ecb8d2949..7bdbcb0fd 100644
  #endif
 diff --git a/src/lj_asm_riscv64.h b/src/lj_asm_riscv64.h
 new file mode 100644
-index 000000000..a199b85fb
+index 000000000..5961c888d
 --- /dev/null
 +++ b/src/lj_asm_riscv64.h
 @@ -0,0 +1,2048 @@
 +/*
 +** RISC-V IR assembler (SSA IR -> machine code).
-+** Copyright (C) 2005-2025 Mike Pall. See Copyright Notice in luajit.h
++** Copyright (C) 2022-2026 ISRC, ISCAS. See Copyright Notice in luajit.h
 +**
-+** Contributed by gns from PLCT Lab, ISCAS.
++** Contributed by gns from PLCT Lab, ISRC, ISCAS.
 +*/
 +
 +/* -- Register allocator extensions --------------------------------------- */
@@ -10199,7 +10202,7 @@ index 000000000..a199b85fb
 +  lj_mcode_patch(J, mcarea, 1);
 +}
 
-From b3126f6d374114522978cd0fc98bf1353d48aa0b Mon Sep 17 00:00:00 2001
+From df4581bb8224193366d16b66c61c537fd965eca5 Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 13/23] riscv(interp): add VM builder support
@@ -10211,7 +10214,7 @@ Co-authored-by: Heinrich Schuchardt <heinrich.schuchardt@canonical.com>
  2 files changed, 33 insertions(+)
 
 diff --git a/src/host/buildvm.c b/src/host/buildvm.c
-index 3bfa039a7..6c45c4b93 100644
+index 4216e2e1e..2c395a1ae 100644
 --- a/src/host/buildvm.c
 +++ b/src/host/buildvm.c
 @@ -69,6 +69,8 @@ static int collect_reloc(BuildCtx *ctx, uint8_t *addr, int idx, int type);
@@ -10224,7 +10227,7 @@ index 3bfa039a7..6c45c4b93 100644
  #error "No support for this architecture (yet)"
  #endif
 diff --git a/src/host/buildvm_asm.c b/src/host/buildvm_asm.c
-index 4affc153b..7ecec51d0 100644
+index b2aa948ee..bdde6b3bc 100644
 --- a/src/host/buildvm_asm.c
 +++ b/src/host/buildvm_asm.c
 @@ -208,6 +208,34 @@ static void emit_asm_wordreloc(BuildCtx *ctx, uint8_t *p, int n,
@@ -10273,7 +10276,7 @@ index 4affc153b..7ecec51d0 100644
    emit_asm_align(ctx, 4);
  
 
-From 577eb1a82e198f38458eae7dfa143bd1b921d30d Mon Sep 17 00:00:00 2001
+From 95b93755918287d29b664e56c372b4d26d752d49 Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 14/23] riscv(misc): add bytecode listing support
@@ -10283,7 +10286,7 @@ Subject: [PATCH 14/23] riscv(misc): add bytecode listing support
  1 file changed, 1 insertion(+)
 
 diff --git a/src/jit/bcsave.lua b/src/jit/bcsave.lua
-index 11ccc2ce6..6d94dc0c1 100644
+index 149f46d18..99952a7c7 100644
 --- a/src/jit/bcsave.lua
 +++ b/src/jit/bcsave.lua
 @@ -103,6 +103,7 @@ local map_arch = {
@@ -10295,7 +10298,7 @@ index 11ccc2ce6..6d94dc0c1 100644
  
  local map_os = {
 
-From c9910b7499f558d822fb8a2f73aafd6aabf9b580 Mon Sep 17 00:00:00 2001
+From 8bb00b4211dfc8cbe2410e74fbb27bfd1c0203b0 Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 15/23] riscv(jit): add hooks in interpreter
@@ -10305,7 +10308,7 @@ Subject: [PATCH 15/23] riscv(jit): add hooks in interpreter
  1 file changed, 388 insertions(+)
 
 diff --git a/src/vm_riscv64.dasc b/src/vm_riscv64.dasc
-index ea6545972..8e11830bd 100644
+index 8ba93d019..38eb5f049 100644
 --- a/src/vm_riscv64.dasc
 +++ b/src/vm_riscv64.dasc
 @@ -448,6 +448,24 @@
@@ -10703,7 +10706,7 @@ index ea6545972..8e11830bd 100644
    |//-----------------------------------------------------------------------
    |//-- FFI helper functions -----------------------------------------------
    |//-----------------------------------------------------------------------
-@@ -3770,6 +4110,9 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
+@@ -3775,6 +4115,9 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
  
    case BC_ITERN:
      |  // RA = base*8, (RB = (nresults+1)*8, RC = (nargs+1)*8 (2+1)*8)
@@ -10713,7 +10716,7 @@ index ea6545972..8e11830bd 100644
      |->vm_IITERN:
      |  add RA, BASE, RA
      |  ld TAB:RB, -16(RA)
-@@ -3854,8 +4197,26 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
+@@ -3859,8 +4202,26 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
      |   li TMP1, BC_ITERC
      |  sb TMP3, -4+OFS_OP(PC)
      |   add PC, TMP0, TMP2
@@ -10740,7 +10743,7 @@ index ea6545972..8e11830bd 100644
      break;
  
    case BC_VARG:
-@@ -4021,6 +4382,9 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
+@@ -4026,6 +4387,9 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
    /* -- Loops and branches ------------------------------------------------ */
  
    case BC_FORL:
@@ -10750,7 +10753,7 @@ index ea6545972..8e11830bd 100644
      |  // Fall through. Assumes BC_IFORL follows.
      break;
  
-@@ -4141,6 +4505,9 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
+@@ -4146,6 +4510,9 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
      break;
  
    case BC_ITERL:
@@ -10760,7 +10763,7 @@ index ea6545972..8e11830bd 100644
      |  // Fall through. Assumes BC_IITERL follows.
      break;
  
-@@ -4165,6 +4532,12 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
+@@ -4170,6 +4537,12 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
      break;
  
    case BC_LOOP:
@@ -10773,7 +10776,7 @@ index ea6545972..8e11830bd 100644
      |  // Fall through. Assumes BC_ILOOP follows.
      break;
  
-@@ -4174,6 +4547,18 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
+@@ -4179,6 +4552,18 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
      break;
  
    case BC_JLOOP:
@@ -10792,7 +10795,7 @@ index ea6545972..8e11830bd 100644
      break;
  
    case BC_JMP:
-@@ -4185,6 +4570,9 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
+@@ -4190,6 +4575,9 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
    /* -- Function headers -------------------------------------------------- */
  
    case BC_FUNCF:
@@ -10803,7 +10806,7 @@ index ea6545972..8e11830bd 100644
      |  // Fall through. Assumes BC_IFUNCF/BC_IFUNCV follow.
      break;
 
-From 46b73271ffd7163ebb5b108cbf3476551ae19b63 Mon Sep 17 00:00:00 2001
+From 0451d7bda8b689a180ee8b6c926df97749a234cc Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 16/23] riscv(interp): add DWARF info
@@ -10813,10 +10816,10 @@ Subject: [PATCH 16/23] riscv(interp): add DWARF info
  1 file changed, 131 insertions(+), 1 deletion(-)
 
 diff --git a/src/vm_riscv64.dasc b/src/vm_riscv64.dasc
-index 8e11830bd..fe3ed4173 100644
+index 38eb5f049..117d89b74 100644
 --- a/src/vm_riscv64.dasc
 +++ b/src/vm_riscv64.dasc
-@@ -4716,5 +4716,135 @@ static int build_backend(BuildCtx *ctx)
+@@ -4721,5 +4721,135 @@ static int build_backend(BuildCtx *ctx)
  /* Emit pseudo frame-info for all assembler functions. */
  static void emit_asm_debug(BuildCtx *ctx)
  {
@@ -10954,7 +10957,7 @@ index 8e11830bd..fe3ed4173 100644
 +  }
  }
 
-From 9bf0c3f5b0de551eeb8970245d743ec7b5920f29 Mon Sep 17 00:00:00 2001
+From 9de7a973099cf41bffdbe6dfe5aec562d1fc6337 Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 17/23] riscv(jit): add GDBJIT support
@@ -10964,7 +10967,7 @@ Subject: [PATCH 17/23] riscv(jit): add GDBJIT support
  1 file changed, 15 insertions(+)
 
 diff --git a/src/lj_gdbjit.c b/src/lj_gdbjit.c
-index 9e68932a8..7d677c7c7 100644
+index 4cea4fabd..acb3b6449 100644
 --- a/src/lj_gdbjit.c
 +++ b/src/lj_gdbjit.c
 @@ -306,6 +306,9 @@ enum {
@@ -11004,7 +11007,7 @@ index 9e68932a8..7d677c7c7 100644
  #error "Unsupported target architecture"
  #endif
 
-From e8a687f6f4dbce576f2d6ea2d552178b3940497d Mon Sep 17 00:00:00 2001
+From de878da0d9946c074e5742ba006ae24b238889ec Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 18/23] riscv(support,linux): add Linux specfic icache sync
@@ -11015,7 +11018,7 @@ Subject: [PATCH 18/23] riscv(support,linux): add Linux specfic icache sync
  1 file changed, 17 insertions(+)
 
 diff --git a/src/lj_mcode.c b/src/lj_mcode.c
-index c3032f4e2..cd54dee29 100644
+index edcc4bd9d..25b11ccfc 100644
 --- a/src/lj_mcode.c
 +++ b/src/lj_mcode.c
 @@ -38,6 +38,12 @@
@@ -11050,7 +11053,7 @@ index c3032f4e2..cd54dee29 100644
    __clear_cache(start, end);
  #else
 
-From 89b2d89832bd95bee436561c7d8b2a58fd45127c Mon Sep 17 00:00:00 2001
+From 6c7308cd310af6763e29a65be078b3ed4e190cd8 Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 19/23] riscv(support,linux): make mremap() non-moving due to
@@ -11074,7 +11077,7 @@ index cb704f7b3..9039d8053 100644
  #else
  #define CALL_MREMAP_MV		CALL_MREMAP_MAYMOVE
 
-From 8656e3d9ed5e806894aa677e1d7da3597d1980d9 Mon Sep 17 00:00:00 2001
+From e24681cacec9a3f420a8634ad5d00617e21c0934 Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 20/23] riscv(misc): add disassmbler support
@@ -11088,18 +11091,18 @@ Subject: [PATCH 20/23] riscv(misc): add disassmbler support
 
 diff --git a/src/jit/dis_riscv.lua b/src/jit/dis_riscv.lua
 new file mode 100644
-index 000000000..8de563a72
+index 000000000..db7a06524
 --- /dev/null
 +++ b/src/jit/dis_riscv.lua
 @@ -0,0 +1,979 @@
 +------------------------------------------------------------------------------
 +-- LuaJIT RISC-V disassembler module.
 +--
-+-- Copyright (C) 2005-2025 Mike Pall. All rights reserved.
++-- Copyright (C) 2022-2026 ISRC, ISCAS. All rights reserved.
 +-- Released under the MIT license. See Copyright Notice in luajit.h
 +--
 +-- Contributed by Milos Poletanovic from Syrmia.com.
-+-- Contributed by gns from PLCT Lab, ISCAS.
++-- Contributed by gns from PLCT Lab, ISRC, ISCAS.
 +------------------------------------------------------------------------------
 +-- This is a helper module used by the LuaJIT machine code dumper module.
 +--
@@ -12073,14 +12076,14 @@ index 000000000..8de563a72
 +}
 diff --git a/src/jit/dis_riscv64.lua b/src/jit/dis_riscv64.lua
 new file mode 100644
-index 000000000..fd6ce2768
+index 000000000..cc867342c
 --- /dev/null
 +++ b/src/jit/dis_riscv64.lua
 @@ -0,0 +1,16 @@
 +----------------------------------------------------------------------------
 +-- LuaJIT RISC-V 64 disassembler wrapper module.
 +--
-+-- Copyright (C) 2005-2025 Mike Pall. All rights reserved.
++-- Copyright (C) 2022-2026 ISRC, ISCAS. All rights reserved.
 +-- Released under the MIT license. See Copyright Notice in luajit.h
 +----------------------------------------------------------------------------
 +-- This module just exports the default riscv little-endian functions from the
@@ -12093,9 +12096,8 @@ index 000000000..fd6ce2768
 +  disass = dis_riscv.disass,
 +  regname = dis_riscv.regname
 +}
-\ No newline at end of file
 
-From 56d9248e64133ef23e95f132ce28ff7cd92918e9 Mon Sep 17 00:00:00 2001
+From b3fdfdf983598d97315e4da91b7fc2cf453621d1 Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 21/23] riscv(misc): add support in Makefile
@@ -12106,7 +12108,7 @@ Subject: [PATCH 21/23] riscv(misc): add support in Makefile
  2 files changed, 9 insertions(+)
 
 diff --git a/Makefile b/Makefile
-index c41b3345d..dd33fedcb 100644
+index 2e97ed6aa..e0ce98857 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -101,6 +101,7 @@ FILES_JITLIB= bc.lua bcsave.lua dump.lua p.lua v.lua zone.lua \
@@ -12118,7 +12120,7 @@ index c41b3345d..dd33fedcb 100644
  
  ifeq (,$(findstring Windows,$(OS)))
 diff --git a/src/Makefile b/src/Makefile
-index b1570e42e..6594eecd8 100644
+index 7cde88f9a..6770dcade 100644
 --- a/src/Makefile
 +++ b/src/Makefile
 @@ -52,6 +52,7 @@ CCOPT_arm=
@@ -12158,7 +12160,7 @@ index b1570e42e..6594eecd8 100644
  endif
  
 
-From 437aa2a0bc2b1ba6c88f01163bea0abdc62c20ed Mon Sep 17 00:00:00 2001
+From c7f27837e66dc0352910db23177ac524cdc0be8b Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 22/23] riscv(support,linux): use HWPROBE for ISE detection
@@ -12172,7 +12174,7 @@ to HWPROBE for better compatibility.
  2 files changed, 67 insertions(+), 41 deletions(-)
 
 diff --git a/src/lib_jit.c b/src/lib_jit.c
-index cbe298ecf..138a38e0d 100644
+index ec2250f2f..4e1267b43 100644
 --- a/src/lib_jit.c
 +++ b/src/lib_jit.c
 @@ -707,23 +707,26 @@ JIT_PARAMDEF(JIT_PARAMINIT)
@@ -12322,7 +12324,7 @@ index cbe298ecf..138a38e0d 100644
    /* Detect V/P? */
    /* V have no hardware available, P not ratified yet. */
 diff --git a/src/lj_jit.h b/src/lj_jit.h
-index 3bef0842f..aadf16431 100644
+index f299c5381..137f03739 100644
 --- a/src/lj_jit.h
 +++ b/src/lj_jit.h
 @@ -79,6 +79,35 @@
@@ -12362,7 +12364,7 @@ index 3bef0842f..aadf16431 100644
  
  #define JIT_F_CPUSTRING		""
 
-From 34a1d1c5673991cef9bf42f16119823a1a0549e3 Mon Sep 17 00:00:00 2001
+From 4d8cf882a3a4ed3259407ad78614a60b02dd553f Mon Sep 17 00:00:00 2001
 From: gns <wangbingzhen.riscv@isrc.iscas.ac.cn>
 Date: Thu, 27 Nov 2025 20:48:19 +0800
 Subject: [PATCH 23/23] riscv(interp): strip excessive extended branch (^B+J)
@@ -12372,7 +12374,7 @@ Subject: [PATCH 23/23] riscv(interp): strip excessive extended branch (^B+J)
  1 file changed, 52 insertions(+), 52 deletions(-)
 
 diff --git a/src/vm_riscv64.dasc b/src/vm_riscv64.dasc
-index fe3ed4173..b5c1dd7ad 100644
+index 117d89b74..8ba54b500 100644
 --- a/src/vm_riscv64.dasc
 +++ b/src/vm_riscv64.dasc
 @@ -552,7 +552,7 @@ static void build_subroutines(BuildCtx *ctx)
@@ -12759,7 +12761,7 @@ index fe3ed4173..b5c1dd7ad 100644
    |  ins_callt				// Returned 0: retry fast path.
    |
    |// Reconstruct previous base for vmeta_call during tailcall.
-@@ -4333,7 +4333,7 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
+@@ -4338,7 +4338,7 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
      |
      |->BC_RETV_Z:  // Non-standard return case.
      |  andi TMP2, TMP1, FRAME_TYPEP
@@ -12768,7 +12770,7 @@ index fe3ed4173..b5c1dd7ad 100644
      |  // Return from vararg function: relocate BASE down.
      |  sub BASE, BASE, TMP1
      |   ld PC, FRAME_PC(BASE)
-@@ -4586,7 +4586,7 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
+@@ -4591,7 +4591,7 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
      |  ld TMP2, L->maxstack
      |   lbu TMP1, -4+PC2PROTO(numparams)(PC)
      |    ld KBASE, -4+PC2PROTO(k)(PC)
@@ -12777,7 +12779,7 @@ index fe3ed4173..b5c1dd7ad 100644
      |   slliw TMP1, TMP1, 3			// numparams*8
      |2:
      |  bltu NARGS8:RC, TMP1, >3		// Check for missing parameters.
-@@ -4623,7 +4623,7 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
+@@ -4628,7 +4628,7 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
      |   addi TMP3, RC, 16+FRAME_VARG
      |    ld KBASE, -4+PC2PROTO(k)(PC)
      |   sd TMP3, 8(TMP1)                // Store delta + FRAME_VARG.
@@ -12786,7 +12788,7 @@ index fe3ed4173..b5c1dd7ad 100644
      |  lbu TMP2, -4+PC2PROTO(numparams)(PC)
      |   mv RA, BASE
      |   mv RC, TMP1
-@@ -4669,7 +4669,7 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
+@@ -4674,7 +4674,7 @@ static void build_ins(BuildCtx *ctx, BCOp op, int defop)
      |   add RC, BASE, NARGS8:RC
      |  sd BASE, L->base		// base of currently excuting function
      |   sd RC, L->top
