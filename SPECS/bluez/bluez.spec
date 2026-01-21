@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
 # SPDX-FileContributor: yyjeqhc <1772413353@qq.com>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -13,76 +14,100 @@ Release:        %autorelease
 Summary:        Bluetooth tools and daemons
 License:        GPL-2.0-or-later
 URL:            http://www.bluez.org/
+VCS:            git:https://git.kernel.org/pub/scm/bluetooth/bluez.git
 #!RemoteAsset
 Source:         https://www.kernel.org/pub/linux/bluetooth/%{name}-%{version}.tar.xz
 BuildSystem:    autotools
 
-BuildOption(conf): --enable-tools --enable-library --enable-external-ell
-BuildOption(conf): --disable-optimization
+BuildOption(conf):  --enable-tools
+BuildOption(conf):  --enable-library
+BuildOption(conf):  --enable-external-ell
+BuildOption(conf):  --disable-optimization
 %if %{with deprecated}
-BuildOption(conf): --enable-deprecated
+BuildOption(conf):  --enable-deprecated
 %endif
-BuildOption(conf): --enable-sixaxis --enable-cups --enable-nfc --enable-mesh
-BuildOption(conf): --enable-hid2hci --enable-testing --enable-experimental
-BuildOption(conf): --enable-bap --enable-bass --enable-mcp --enable-micp
-BuildOption(conf): --enable-csip --enable-vcp
-BuildOption(conf): --with-systemdsystemunitdir=%{_unitdir}
-BuildOption(conf): --with-systemduserunitdir=%{_userunitdir}
-BuildOption(conf): --disable-manpages
+BuildOption(conf):  --enable-sixaxis
+BuildOption(conf):  --enable-cups
+BuildOption(conf):  --enable-nfc
+BuildOption(conf):  --enable-mesh
+BuildOption(conf):  --enable-hid2hci
+BuildOption(conf):  --enable-testing
+BuildOption(conf):  --enable-experimental
+BuildOption(conf):  --enable-bap
+BuildOption(conf):  --enable-bass
+BuildOption(conf):  --enable-mcp
+BuildOption(conf):  --enable-micp
+BuildOption(conf):  --enable-csip
+BuildOption(conf):  --enable-vcp
+BuildOption(conf):  --with-systemdsystemunitdir=%{_unitdir}
+BuildOption(conf):  --with-systemduserunitdir=%{_userunitdir}
+BuildOption(conf):  --disable-manpages
 
-BuildRequires: dbus-devel >= 1.6 glib-devel  libical-devel
-BuildRequires: make readline-devel json-c-devel systemd-devel systemd
-BuildRequires: cups-devel libtool automake autoconf pkgconfig
-BuildRequires: pkgconfig(ell)
-BuildRequires: systemd-rpm-macros
+BuildRequires:  pkgconfig(dbus-1)
+BuildRequires:  pkgconfig(glib-2.0)
+BuildRequires:  pkgconfig(libical)
+BuildRequires:  make
+BuildRequires:  pkgconfig(readline)
+BuildRequires:  pkgconfig(json-c)
+BuildRequires:  pkgconfig(libsystemd)
+BuildRequires:  systemd
+BuildRequires:  cups-devel
+BuildRequires:  libtool
+BuildRequires:  automake
+BuildRequires:  autoconf
+BuildRequires:  pkgconfig
+BuildRequires:  pkgconfig(ell)
+BuildRequires:  systemd-rpm-macros
 
-Requires: dbus >= 1.6
+Requires:       dbus
 %systemd_requires
 
 %description
 Utilities for use in Bluetooth applications. This is the main package containing
 the core daemon and utilities.
 
-%package      cups
-Summary:      CUPS printer backend for Bluetooth printers
-Requires:     %{name} = %{version}
-%description  cups
+%package        cups
+Summary:        CUPS printer backend for Bluetooth printers
+Requires:       %{name}%{?_isa} = %{version}-%{release}
+
+%description    cups
 This package contains the CUPS backend for Bluetooth printers.
 
 %if %{with deprecated}
-%package     deprecated
-Summary: Deprecated Bluetooth applications
-Requires:    %{name} = %{version}
-%description deprecated
+%package        deprecated
+Summary:        Deprecated Bluetooth applications
+Requires:       %{name}%{?_isa} = %{version}-%{release}
+
+%description    deprecated
 Deprecated Bluetooth utilities like hciconfig, hcitool, etc.
 %endif
 
-%package      devel
-Summary: Development libraries for Bluetooth applications
-Requires:     %{name} = %{version}
+%package        devel
+Summary:        Development libraries for Bluetooth applications
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
-%description  devel
+%description    devel
 Development libraries and headers for use in Bluetooth applications.
 
-%package      hid2hci
-Summary: Put HID proxying bluetooth HCI's into HCI mode
-Requires:     %{name} = %{version}
+%package        hid2hci
+Summary:        Put HID proxying bluetooth HCI's into HCI mode
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
-%description  hid2hci
+%description    hid2hci
 Utility to switch supported Bluetooth devices into regular HCI mode.
 
-%package      mesh
-Summary: Bluetooth mesh services
-Requires:    %{name} = %{version}
+%package        mesh
+Summary:        Bluetooth mesh services
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
-%description mesh
+%description    mesh
 Services for Bluetooth mesh networking.
 
-%package     obexd
-Summary: Object Exchange daemon for sharing content
-Requires:    %{name} = %{version}
+%package        obexd
+Summary:        Object Exchange daemon for sharing content
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
-%description obexd
+%description    obexd
 Object Exchange daemon for sharing files, contacts etc over Bluetooth.
 
 %conf -p
@@ -187,7 +212,6 @@ install emulator/btvirt %{buildroot}/%{_libexecdir}/bluetooth/
 %{_bindir}/rfcomm
 %{_bindir}/sdptool
 %endif
-
 
 %files devel
 %doc doc/*txt
