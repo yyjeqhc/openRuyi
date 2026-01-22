@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: (C) 2025, 2026 openRuyi Project Contributors
 # SPDX-FileContributor: Jingwiw <wangjingwei@iscas.ac.cn>
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -27,47 +28,47 @@ Version:        2.87.1
 Release:        %autorelease
 Summary:        A core application building block and utility library
 License:        LGPL-2.1-or-later
-URL:            https://www.gtk.org
+URL:            https://docs.gtk.org/glib/
+VCS:            git:https://gitlab.gnome.org/GNOME/glib.git
 #!RemoteAsset
 Source0:        https://download.gnome.org/sources/glib/2.87/glib-%{version}.tar.xz
+BuildSystem:    meson
 
 Patch0:         meson.build-Avoid-linking-with-libatomic-when-unneed.patch
 
-BuildSystem: meson
-
 # --- Declarative Build Options ---
 # These options are derived directly from analyzing the meson.build files.
-BuildOption(conf): --default-library=%{?with_static:both}%{!?with_static:shared}
+BuildOption(conf):  --default-library=%{?with_static:both}%{!?with_static:shared}
 # Upstream recommendation: distros should disable glib_debug for production.
-BuildOption(conf): -Dglib_debug=disabled
+BuildOption(conf):  -Dglib_debug=disabled
 # Use the upstream-provided multiarch support for helper binaries.
-BuildOption(conf): -Dmultiarch=true
-BuildOption(conf): -Dselinux=%{?with_bootstrap:disabled}%{!?with_bootstrap:enabled}
-BuildOption(conf): -Dlibmount=enabled
+BuildOption(conf):  -Dmultiarch=true
+BuildOption(conf):  -Dselinux=%{?with_bootstrap:disabled}%{!?with_bootstrap:enabled}
+BuildOption(conf):  -Dlibmount=enabled
 # Handle bootstrap mode by disabling features with circular/heavy dependencies.
-BuildOption(conf): -Dintrospection=%{?with_bootstrap:disabled}%{!?with_bootstrap:enabled}
-BuildOption(conf): -Dinstalled_tests=%{?with_tests:true}%{!?with_tests:false}
-BuildOption(conf): -Ddocumentation=%{?with_doc:true}%{!?with_doc:false}
-BuildOption(conf): -Ddtrace=disabled
-BuildOption(conf): -Dsystemtap=disabled
-BuildOption(conf): -Dsysprof=disabled
-BuildOption(conf): -Dman-pages=%{?with_man:enabled}%{!?with_man:disabled}
-BuildOption(conf): -Dxattr=true
+BuildOption(conf):  -Dintrospection=%{?with_bootstrap:disabled}%{!?with_bootstrap:enabled}
+BuildOption(conf):  -Dinstalled_tests=%{?with_tests:true}%{!?with_tests:false}
+BuildOption(conf):  -Ddocumentation=%{?with_doc:true}%{!?with_doc:false}
+BuildOption(conf):  -Ddtrace=disabled
+BuildOption(conf):  -Dsystemtap=disabled
+BuildOption(conf):  -Dsysprof=disabled
+BuildOption(conf):  -Dman-pages=%{?with_man:enabled}%{!?with_man:disabled}
+BuildOption(conf):  -Dxattr=true
 
 BuildRequires:  gcc-c++
 BuildRequires:  gettext
 BuildRequires:  meson
-BuildRequires:  libelf-devel
-BuildRequires:  libffi-devel
-BuildRequires:  pcre2-devel
+BuildRequires:  pkgconfig(libelf)
+BuildRequires:  pkgconfig(libffi)
+BuildRequires:  pkgconfig(libpcre2-8)
 BuildRequires:  pkgconfig(mount)
-BuildRequires:  zlib-devel
-BuildRequires:  python3-devel
-BuildRequires:  libattr-devel
+BuildRequires:  pkgconfig(zlib)
+BuildRequires:  pkgconfig(python3)
+BuildRequires:  pkgconfig(libattr)
 # Conditional dependencies, disabled during bootstrap
 %if %{without bootstrap}
-BuildRequires:  gobject-introspection-devel
-BuildRequires:  libselinux-devel
+BuildRequires:  pkgconfig(gobject-introspection)
+BuildRequires:  pkgconfig(libselinux)
 %endif
 # Conditional dependencies for documentation
 %if %{with doc}
@@ -90,26 +91,28 @@ It provides data structure handling for C, portability wrappers, and interfaces
 for an event loop, threads, dynamic loading, and an object system.
 This package contains the essential runtime libraries and tools.
 
-%package devel
+%package        devel
 Summary:        Development files for the GLib library
 Requires:       %{name}%{?_isa} = %{version}-%{release}
-%description devel
+
+%description    devel
 This package contains the header files, libraries, and developer tools
 needed to build applications that use GLib.
 
 %if %{with doc}
-%package doc
+%package        doc
 Summary:        Documentation for the GLib library
 BuildArch:      noarch
-%description doc
+
+%description    doc
 This package contains the API documentation for the GLib library.
 %endif
 
 %if %{with tests}
-%package tests
+%package        tests
 Summary:        Tests for the GLib library
 Requires:       %{name}%{?_isa} = %{version}-%{release}
-%description tests
+%description    tests
 Contains installed tests that can be used to verify the functionality
 of the installed GLib package.
 %endif
