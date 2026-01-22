@@ -17,10 +17,10 @@ VCS:            git:https://gitlab.com/gnutls/gnutls
 Source0:        https://www.gnupg.org/ftp/gcrypt/%{name}/v3.8/%{name}-%{version}.tar.xz
 BuildSystem:    autotools
 
-BuildOption(conf): --disable-static
-BuildOption(conf): --disable-openssl-compatibility
-BuildOption(conf): --with-default-trust-store-pkcs11="pkcs11:"
-BuildOption(conf): --disable-gtk-doc
+BuildOption(conf):  --disable-static
+BuildOption(conf):  --disable-openssl-compatibility
+BuildOption(conf):  --with-default-trust-store-pkcs11="pkcs11:"
+BuildOption(conf):  --disable-gtk-doc
 
 BuildRequires:  bison
 BuildRequires:  cmocka-cmake
