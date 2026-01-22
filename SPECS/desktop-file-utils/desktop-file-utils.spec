@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
 # SPDX-FileContributor: yyjeqhc <1772413353@qq.com>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -11,13 +12,15 @@ Release:        %autorelease
 Summary:        Utilities for manipulating .desktop files
 License:        GPL-2.0-or-later
 URL:            https://www.freedesktop.org/software/desktop-file-utils
+VCS:            git:https://gitlab.freedesktop.org/xdg/desktop-file-utils.git
 #!RemoteAsset
 Source:         https://www.freedesktop.org/software/desktop-file-utils/releases/desktop-file-utils-%{version}.tar.xz
-Patch:          0001-validate-Add-Phosh-to-list-of-valid-OnlyShowIn-envir.patch
 BuildSystem:    meson
 
+Patch:          0001-validate-Add-Phosh-to-list-of-valid-OnlyShowIn-envir.patch
+
 BuildRequires:  gcc
-BuildRequires:  glib-devel
+BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  meson
 
 %description
