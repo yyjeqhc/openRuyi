@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: Jingwiw <wangjingwei@iscas.ac.cn>
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -11,17 +12,23 @@ Release:        %autorelease
 Summary:        Higher-level library to access ELF files
 License:        GPL-3.0-or-later
 URL:            https://sourceware.org/elfutils/
+VCS:            git:https://sourceware.org/git/elfutils.git
 #!RemoteAsset
 Source0:        https://sourceware.org/elfutils/ftp/%{version}/%{name}-%{version}.tar.bz2
+BuildSystem:    autotools
 
-BuildSystem:       autotools
-BuildOption(conf): --program-prefix=eu-
-BuildOption(conf): --disable-debuginfod
-BuildOption(conf): --enable-libdebuginfod=dummy
-BuildOption(conf): --enable-deterministic-archives
+BuildOption(conf):  --program-prefix=eu-
+BuildOption(conf):  --disable-debuginfod
+BuildOption(conf):  --enable-libdebuginfod=dummy
+BuildOption(conf):  --enable-deterministic-archives
 
-
-BuildRequires:  autoconf, automake, bison, flex, gcc-c++, make, pkgconfig
+BuildRequires:  autoconf
+BuildRequires:  automake
+BuildRequires:  bison
+BuildRequires:  flex
+BuildRequires:  gcc-c++
+BuildRequires:  make
+BuildRequires:  pkgconfig
 BuildRequires:  rpm-devel
 BuildRequires:  pkgconfig(json-c)
 BuildRequires:  pkgconfig(bzip2)
@@ -33,86 +40,59 @@ elfutils is a collection of utilities and libraries to read, create
 and modify ELF binary files, find and handle DWARF debug data,
 symbols, thread state and stacktraces for processes and core files.
 
-%package -n libasm1
-Summary:        A collection of utilities and DSOs to handle compiled objects
+%package        devel
+Summary:        Development files for libasm and libdw
 License:        GPL-2.0-or-later OR LGPL-3.0-or-later
+Requires:       pkgconfig(libelf)
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
-%description -n libasm1
-libasm contains the "asm" and "disasm" functions to assemble and
-disassamble instructions. (There is only partial support for i686 and
-BPF instructions.) This is part of the elfutils package.
-
-%package -n libasm-devel
-Summary:        A collection of utilities and DSOs to handle compiled objects
-Requires:       libasm1 = %{version}
-License:        GPL-2.0-or-later OR LGPL-3.0-or-later
-
-%description -n libasm-devel
+%description    devel
 This package contains the headers and libraries needed to build
-applications that require libasm.
+applications that require libasm and libdw.
 
-%package -n libelf1
+%package     -n libelf
 Summary:        Library to read and write ELF files
 License:        GPL-2.0-or-later OR LGPL-3.0-or-later
 
-%description -n libelf1
+%description -n libelf
 This package provides a high-level library to read and write ELF files.
 This is part of the elfutils package.
 
-%package -n libelf-devel
+%package     -n libelf-devel
 Summary:        Development files for libelf
-Requires:       libelf1 = %{version}
-Conflicts:      libelf0-devel
+Requires:       libelf%{?_isa} = %{version}-%{release}
 License:        GPL-2.0-or-later OR LGPL-3.0-or-later
 
 %description -n libelf-devel
 This package contains the headers and libraries needed to build
 applications that require libelf.
 
-%package -n libdw1
-Summary:        Library to access DWARF debugging information
-License:        GPL-2.0-or-later OR LGPL-3.0-or-later
-
-%description -n libdw1
-This package provides a high-level library to access the DWARF debugging
-information. This is part of the elfutils package.
-
-%package -n libdw-devel
-Summary:        Development files for libdw
-Requires:       libdw1 = %{version}
-Requires:       libelf-devel = %{version}
-License:        GPL-2.0-or-later OR LGPL-3.0-or-later
-
-%description -n libdw-devel
-This package contains the headers and libraries needed to build
-applications that require libdw.
-
-%package -n libdebuginfod1-dummy
+%package     -n libdebuginfod-dummy
 Summary:        Library for build-id HTTP ELF/DWARF server
-Provides:       libdebuginfod1 = %{version}
+Provides:       libdebuginfod = %{version}-%{release}
 License:        GPL-2.0-or-later OR LGPL-3.0-or-later
 
-%description -n libdebuginfod1-dummy
-The libdebuginfod1 package contains shared libraries
+%description -n libdebuginfod-dummy
+The libdebuginfod package contains shared libraries
 dynamically loaded from -ldw, which use a debuginfod service
 to look up debuginfo and associated data. Also includes a
 command-line frontend.
 The package is dummy.
 
-%package -n libdebuginfod-dummy-devel
+%package     -n libdebuginfod-dummy-devel
 Summary:        Libraries and headers to build debuginfod client applications
-Provides:       libdebuginfod-devel = %{version}
 License:        GPL-2.0-or-later OR LGPL-3.0-or-later
-Requires:       libdebuginfod1-dummy = %{version}
+Provides:       libdebuginfod-devel = %{version}-%{release}
+Requires:       libdebuginfod-dummy = %{version}-%{release}
 
 %description -n libdebuginfod-dummy-devel
 The libdebuginfod-devel package contains the libraries
 to create applications to use the debuginfod service.
 The package is dummy.
 
-%package -n debuginfod-dummy-client
+%package     -n debuginfod-dummy-client
 Summary:        Command line client for build-id HTTP ELF/DWARF server
-Provides:       debuginfod-client = %{version}
+Provides:       debuginfod-client = %{version}-%{release}
 
 %description -n debuginfod-dummy-client
 The elfutils-debuginfod-client package contains a command-line frontend.
@@ -155,19 +135,34 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/*@*
 %{_bindir}/eu-strip
 %{_bindir}/eu-unstrip
 %{_bindir}/eu-srcfiles
-%{_mandir}/man1/*.1*
-
-%files -n libasm1
+# libasm
 %{_libdir}/libasm.so.*
 %{_libdir}/libasm-%{version}.so
+# libdw
+%{_libdir}/libdw.so.*
+%{_libdir}/libdw-%{version}.so
+# man
+%{_mandir}/man1/*.1*
 
-%files -n libasm-devel
+%files devel
+# libasm
 %{_libdir}/libasm.so
 %{_libdir}/libasm.a
 %dir %{_includedir}/elfutils
 %{_includedir}/elfutils/libasm.h
+# libdw
+%{_libdir}/libdw.a
+%{_libdir}/libdw.so
+%{_includedir}/dwarf.h
+%dir %{_includedir}/elfutils
+%{_includedir}/elfutils/libdw.h
+%{_includedir}/elfutils/libdwelf.h
+%{_includedir}/elfutils/libdwfl.h
+%{_includedir}/elfutils/libdwfl_stacktrace.h
+%{_includedir}/elfutils/known-dwarf.h
+%{_libdir}/pkgconfig/libdw.pc
 
-%files -n libelf1
+%files -n libelf
 %{_libdir}/libelf.so.*
 %{_libdir}/libelf-%{version}.so
 
@@ -186,23 +181,7 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/*@*
 %{_mandir}/man3/elf64_*.3*
 %{_mandir}/man3/libelf.3.gz
 
-%files -n libdw1
-%{_libdir}/libdw.so.*
-%{_libdir}/libdw-%{version}.so
-
-%files -n libdw-devel
-%{_libdir}/libdw.a
-%{_libdir}/libdw.so
-%{_includedir}/dwarf.h
-%dir %{_includedir}/elfutils
-%{_includedir}/elfutils/libdw.h
-%{_includedir}/elfutils/libdwelf.h
-%{_includedir}/elfutils/libdwfl.h
-%{_includedir}/elfutils/libdwfl_stacktrace.h
-%{_includedir}/elfutils/known-dwarf.h
-%{_libdir}/pkgconfig/libdw.pc
-
-%files -n libdebuginfod1-dummy
+%files -n libdebuginfod-dummy
 %{_libdir}/libdebuginfod.so.*
 %{_libdir}/libdebuginfod-%{version}.so
 
