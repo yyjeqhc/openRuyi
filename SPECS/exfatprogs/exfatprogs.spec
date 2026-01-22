@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
 # SPDX-FileContributor: yyjeqhc <1772413353@qq.com>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -15,10 +16,14 @@ URL:            https://github.com/exfatprogs/exfatprogs
 Source:         https://github.com/exfatprogs/exfatprogs/archive/refs/tags/%{version}.tar.gz
 BuildSystem:    autotools
 
-BuildOption(conf): --enable-shared=yes
-BuildOption(conf): --enable-static=no
+BuildOption(conf):  --enable-shared=yes
+BuildOption(conf):  --enable-static=no
 
-BuildRequires:  autoconf automake gcc libtool make
+BuildRequires:  autoconf
+BuildRequires:  automake
+BuildRequires:  gcc
+BuildRequires:  libtool
+BuildRequires:  make
 
 %description
 Utilities for creating, checking, and repairing exFAT filesystems.
