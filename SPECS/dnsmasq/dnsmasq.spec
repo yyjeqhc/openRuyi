@@ -2,8 +2,10 @@
 # SPDX-FileCopyrightText: (C) 2025, 2026 openRuyi Project Contributors
 # SPDX-FileContributor: Yafen Fang <yafen@iscas.ac.cn>
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
+
 %global _copts -DHAVE_DBUS -DHAVE_LIBIDN2 -DHAVE_DNSSEC -DHAVE_CONNTRACK -DHAVE_NFTSET
 
 Name:           dnsmasq
@@ -36,9 +38,10 @@ BuildRequires:  pkgconfig(libnetfilter_conntrack)
 BuildRequires:  pkgconfig(nettle)
 BuildRequires:  pkgconfig(libnftables)
 BuildRequires:  pkgconfig(systemd)
-Requires:       nettle
+
 Provides:       dnsmasq-utils
-Obsoletes:      dnsmasq-utils < %{version}-%{release}
+
+Requires:       nettle
 
 %{?systemd_requires}
 
@@ -92,7 +95,6 @@ install -p -Dpm 644 %{SOURCE3} %{buildroot}%{_sysusersdir}/%{name}.conf
 
 # no tests.
 %check
-
 
 %pre
 %sysusers_create_package %{name} %{SOURCE3}
