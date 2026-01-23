@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
 # SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -11,11 +12,13 @@ Release:        %autorelease
 Summary:        International Components for Unicode
 License:        Unicode-3.0
 URL:            https://icu.unicode.org/
+VCS:            git:https://github.com/unicode-org/icu
 #!RemoteAsset
 Source0:        https://github.com/unicode-org/icu/releases/download/release-77-1/%{name}-77_1-src.tgz
 #!RemoteAsset
 Source1:        https://github.com/unicode-org/icu/releases/download/release-77-1/%{name}-77_1-docs.zip
 BuildSystem:    autotools
+
 Patch0:         0001-icu-fix-install-mode-files.patch
 Patch1:         0002-icu-error-reporting.patch
 Patch2:         0003-icu-avoid-x87-excess-precision.patch
@@ -26,7 +29,6 @@ BuildOption(conf):  --disable-static
 BuildOption(conf):  --enable-shared
 BuildOption(conf):  --disable-samples
 BuildOption(conf):  --with-data-packaging=archive
-
 BuildOption(build):  -C source
 BuildOption(install):  -C source
 BuildOption(check):  -C source
@@ -35,8 +37,11 @@ BuildRequires:  gcc-c++
 BuildRequires:  pkg-config
 BuildRequires:  python3
 BuildRequires:  unzip
+
+# TODO: keep this information sync or delete it? - 251
 Provides:       bundled(tzdata) = 2024b
 Provides:       icu
+
 Requires:       tzdata
 
 %description
@@ -46,7 +51,7 @@ tools for ICU.
 
 %package        devel
 Summary:        Development files for the ICU library
-Requires:       %{name} = %{version}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 %description    devel
 This package contains the headers, symbolic links, and other files needed to
