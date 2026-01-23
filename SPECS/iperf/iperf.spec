@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: Yafen Fang <yafen@iscas.ac.cn>
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -11,16 +12,17 @@ Release:        %autorelease
 Summary:        A TCP, UDP, and SCTP network bandwidth measurement tool
 License:        BSD-3-Clause
 URL:            https://software.es.net/iperf/
+VCS:            git:https://github.com/esnet/iperf
 #!RemoteAsset
 Source0:        https://github.com/esnet/iperf/archive/%{version}/iperf-%{version}.tar.gz
-
 BuildSystem:    autotools
+
 BuildOption(conf): --disable-static
 
 BuildRequires:  util-linux-devel
 BuildRequires:  gcc
-BuildRequires:  lksctp-tools-devel
-BuildRequires:  openssl-devel
+BuildRequires:  pkgconfig(libsctp)
+BuildRequires:  pkgconfig(openssl)
 BuildRequires:  make
 
 %description
