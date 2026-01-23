@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -10,18 +11,20 @@ Release:        %autorelease
 Summary:        Print lines matching a pattern
 License:        GPL-3.0-or-later
 URL:            https://www.gnu.org/software/grep/
+VCS:            git:https://https.git.savannah.gnu.org/git/grep.git
 #!RemoteAsset
 Source0:        https://ftpmirror.gnu.org/gnu/%{name}/%{name}-%{version}.tar.xz
 #!RemoteAsset
 Source2:        https://ftpmirror.gnu.org/gnu/%{name}/%{name}-%{version}.tar.xz.sig
+Buildsystem:    autotools
 
-Buildsystem: autotools
-BuildOption(conf): --disable-silent-rules
-BuildOption(conf): CONFIG_SHELL=/bin/sh
+BuildOption(conf):  --disable-silent-rules
+BuildOption(conf):  CONFIG_SHELL=/bin/sh
 
 BuildRequires:  glibc-locale
 BuildRequires:  texinfo
 BuildRequires:  pkgconfig(libpcre2-8)
+
 Provides:       base:%{_bindir}/grep
 
 %install -a
