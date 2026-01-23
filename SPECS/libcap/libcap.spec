@@ -2,10 +2,12 @@
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
 # SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
 %global _test_target test
+%global buildvariables RAISE_SETFCAP=no prefix=%{_prefix} lib=%{_lib} SHARED=yes LIBDIR=%{_libdir} SBINDIR=%{_sbindir} PKGCONFIGDIR=%{_libdir}/pkgconfig/ INCDIR=%{_includedir} MANDIR=%{_mandir} SHARED=yes COPTS="%{optflags} %{_lto_cflags} -ffat-lto-objects"
 
 Name:           libcap
 Version:        2.76
@@ -13,23 +15,22 @@ Release:        %autorelease
 Summary:        Library for Capabilities (linux-privs) Support
 License:        BSD-3-Clause OR GPL-2.0-only
 URL:            https://sites.google.com/site/fullycapable/
+VCS:            git:https://git.kernel.org/pub/scm/libs/libcap/libcap.git
 #!RemoteAsset
 Source:         https://mirrors.edge.kernel.org/pub/linux/libs/security/linux-privs/libcap2/%{name}-%{version}.tar.xz
 #!RemoteAsset
 Source1:        https://mirrors.edge.kernel.org/pub/linux/libs/security/linux-privs/libcap2/%{name}-%{version}.tar.sign
 #!RemoteAsset
 Source2:        https://git.kernel.org/pub/scm/libs/libcap/libcap.git/plain/pgp.keys.asc#/%{name}.keyring
-
 BuildSystem:    autotools
+
+BuildOption(build):  %{buildvariables}
+BuildOption(install):  %{buildvariables}
+
 BuildRequires:  glibc-static
 BuildRequires:  pkgconfig
 BuildRequires:  binutils
 BuildRequires:  pkgconfig(pam)
-
-%global buildvariables RAISE_SETFCAP=no prefix=%{_prefix} lib=%{_lib} SHARED=yes LIBDIR=%{_libdir} SBINDIR=%{_sbindir} PKGCONFIGDIR=%{_libdir}/pkgconfig/ INCDIR=%{_includedir} MANDIR=%{_mandir} SHARED=yes COPTS="%{optflags} %{_lto_cflags} -ffat-lto-objects"
-
-BuildOption(build):  %{buildvariables}
-BuildOption(install):  %{buildvariables}
 
 %description
 Capabilities are a measure to limit the omnipotence of the superuser.
@@ -39,11 +40,10 @@ control. Without kernel patches, you can use this library to drop
 capabilities within setuid binaries. If you use patches, this can be
 done automatically by the kernel.
 
-
 %package        devel
 Summary:        Development files for libcap
 Requires:       glibc-devel
-Requires:       %{name} = %{version}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 %description    devel
 Development files (Headers, libraries for static linking, etc) for
@@ -57,7 +57,7 @@ using libcap.
 
 %package        progs
 Summary:        Libcap utility programs
-Requires:       %{name} = %{version}
+Requires:       %{name} = %{version}-%{release}
 
 %description    progs
 This package contains utility programs handling capabilities via
