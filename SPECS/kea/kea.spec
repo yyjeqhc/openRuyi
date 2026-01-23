@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: Yafen Fang <yafen@iscas.ac.cn>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 %bcond doc 0
@@ -56,7 +57,6 @@ BuildRequires:  python3-sphinx
 BuildRequires:  python3-sphinx_rtd_theme
 %endif
 
-Requires:       %{name}-libs%{?_isa} = %{version}-%{release}
 Requires:       coreutils
 Requires:       util-linux
 %{?systemd_requires}
@@ -68,9 +68,9 @@ RADIUS and NETCONF interfaces and related utilities.
 
 %package        devel
 Summary:        Development headers and libraries for Kea DHCP server
-Requires:       %{name}-libs%{?_isa} = %{version}-%{release}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 Requires:       boost-devel
-Requires:       openssl-devel
+Requires:       pkgconfig(openssl)
 Requires:       pkgconfig
 
 %description    devel
@@ -78,19 +78,13 @@ Header files and API documentation.
 
 %package        hooks
 Summary:        Hooks libraries for kea
-Requires:       %{name}-libs%{?_isa} = %{version}-%{release}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 %description    hooks
 Hooking mechanism allow Kea to load one or more dynamically-linked libraries
 (known as "hooks libraries") and, at various points in its processing
 ("hook points"), call functions in them. Those functions perform whatever
 custom processing is required.
-
-%package        libs
-Summary:        Shared libraries used by Kea DHCP server
-
-%description    libs
-This package contains shared libraries used by Kea DHCP server.
 
 %build -a
 %if %{with doc}
@@ -151,6 +145,7 @@ fi
 %doc %{_pkgdocdir}/examples
 %{_sbindir}/kea*
 %{_sbindir}/perfdhcp
+%{_libdir}/libkea-*.so.*
 %{_unitdir}/kea*.service
 %{_datarootdir}/kea
 %dir %attr(0750,root,kea) %{_sysconfdir}/kea/
@@ -176,10 +171,6 @@ fi
 %dir %{_libdir}/kea
 %dir %{_libdir}/kea/hooks
 %{_libdir}/kea/hooks/lib*.so
-
-%files libs
-%license COPYING
-%{_libdir}/libkea-*.so.*
 
 %changelog
 %{?autochangelog}
