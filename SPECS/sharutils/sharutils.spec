@@ -1,5 +1,5 @@
-# SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
+# SPDX-FileCopyrightText: (C) 2025, 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2025, 2026 openRuyi Project Contributors
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
 # SPDX-FileContributor: yyjeqhc <1772413353@qq.com>
 # SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
@@ -34,7 +34,8 @@ to unpack shell archives after reception. uuencode and uudecode are also include
 
 %conf -p
 # note: 'false' is a keyword with '-std=c23' onwards
-export CFLAGS="%{optflags} -std=gnu99"
+# Let compiler protect against -Wformat-security.
+export CFLAGS="%{optflags} -std=gnu99 -DATTRIBUTE_FORMAT_ARG\(_a\)=__attribute__\(\(format_arg\(_a\)\)\)"
 autoreconf -fiv
 
 %install -a
