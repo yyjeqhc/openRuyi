@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: yyjeqhc <1772413353@qq.com>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -14,11 +15,13 @@ URL:            https://code.videolan.org/videolan/libdvdread
 Source:         https://download.videolan.org/videolan/libdvdread/%{version}/libdvdread-%{version}.tar.xz
 BuildSystem:    meson
 
+BuildOption(conf):  -Ddefault_library=shared
+
 BuildRequires:  meson
 BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(openssl)
 BuildRequires:  pkgconfig(libdvdcss)
-BuildOption(conf): -Ddefault_library=shared
+
 %description
 This package contains shared libraries for accessing DVD images.
 This is a metapackage that requires the runtime library.
@@ -26,9 +29,9 @@ This is a metapackage that requires the runtime library.
 %package        devel
 Summary:        Development files for libdvdread
 Requires:       glibc-devel
-Requires:       %{name}%{?_isa} = %{version}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
-%description   devel
+%description    devel
 This package contains the header files and libraries for developing
 applications that use the libdvdread library.
 
