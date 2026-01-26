@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -10,10 +11,13 @@ Release:        %autorelease
 Summary:        Lossless file compressor based on the LZMA algorithm
 License:        GPL-3.0-or-later
 URL:            https://www.nongnu.org/lzip/lzip.html
+# VCS: TODO: cvs -z3 -d:pserver:anonymous@cvs.savannah.nongnu.org:/sources/lzip co lzip
 #!RemoteAsset
 Source:         https://download.savannah.nongnu.org/releases/lzip/lzip-%{version}.tar.gz
+Buildsystem:    autotools
+
 BuildRequires:  gcc-c++
-Buildsystem: autotools
+
 %description
 Lzip is a lossless file compressor based on the LZMA (Lempel-Ziv-Markov
 chain-Algorithm) algorithm.
@@ -39,7 +43,6 @@ distribution and data archival.
 %{_bindir}/%{name}
 %{_infodir}/%{name}.info%{?ext_info}
 %{_mandir}/man1/%{name}.1%{?ext_man}
-
 
 %changelog
 %{?autochangelog}
