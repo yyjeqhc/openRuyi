@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: gns <wangbingzhen.riscv@iscas.ac.cn>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -10,9 +11,9 @@ Release:        %autorelease
 Summary:        Userspace Tracing (profiling) library
 License:        LGPL-2.1-only AND MIT AND GPL-2.0-only AND BSD-3-Clause AND BSD-2-Clause
 URL:            https://lttng.org/
+VCS:            git:https://github.com/lttng/lttng-ust.git
 #!RemoteAsset
 Source:         https://lttng.org/files/lttng-ust/%{name}-%{version}.tar.bz2
-
 BuildSystem:    autotools
 
 BuildRequires:  autoconf
