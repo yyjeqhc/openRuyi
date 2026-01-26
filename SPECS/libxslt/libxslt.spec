@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
 # SPDX-FileContributor: yyjeqhc <1772413353@qq.com>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -14,15 +15,17 @@ URL:            https://gitlab.gnome.org/GNOME/libxslt
 #!RemoteAsset
 Source0:        https://download.gnome.org/sources/libxslt/1.1/libxslt-%{version}.tar.xz
 Source1:        xslt-config.1
-
 BuildSystem:    autotools
 
-BuildOption(conf): --disable-static
-BuildOption(conf): --without-python
-BuildOption(conf): --disable-silent-rules
+BuildOption(conf):  --disable-static
+BuildOption(conf):  --without-python
+BuildOption(conf):  --disable-silent-rules
 
-BuildRequires:  fdupes gcc libgcrypt-devel pkgconfig
-BuildRequires:  pkgconfig(libxml-2.0) >= 2.9.12
+BuildRequires:  fdupes
+BuildRequires:  gcc
+BuildRequires:  pkgconfig(libgcrypt)
+BuildRequires:  pkgconfig
+BuildRequires:  pkgconfig(libxml-2.0)
 
 %description
 This C library allows you to transform XML files into other XML files
@@ -30,13 +33,13 @@ This C library allows you to transform XML files into other XML files
 transformation mechanism. This package contains the runtime libraries and
 command-line tools.
 
-%package devel
+%package        devel
 Summary:        Development files for libxslt
-Requires:       %{name} = %{version}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 Requires:       glibc-devel
-Requires:       libgcrypt-devel
+Requires:       pkgconfig(libgcrypt)
 
-%description devel
+%description    devel
 This package contains the header files, pkg-config files, and documentation
 needed to develop applications that use the libxslt libraries.
 
