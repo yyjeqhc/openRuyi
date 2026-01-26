@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -22,7 +23,6 @@ Patch:          0001-libvpx-configure-add-arch.patch
 BuildRequires:  gcc-c++
 BuildRequires:  make
 BuildRequires:  pkgconfig
-
 %ifarch x86_64
 BuildRequires:  nasm
 %endif
@@ -33,7 +33,7 @@ This package contains the documentation.
 
 %package        devel
 Summary:        Development files for libvpx
-Requires:       %{name} = %{version}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 %description    devel
 Development headers and library for libvpx.
