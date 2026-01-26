@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
 # SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -11,6 +12,7 @@ Release:        %autorelease
 Summary:        Simple, modern libpng alternative
 License:        BSD-2-Clause
 URL:            https://libspng.org/
+VCS:            git:https://github.com/randy408/libspng
 #!RemoteAsset
 Source0:        https://github.com/randy408/libspng/archive/v%{version}/libspng-%{version}.tar.gz
 BuildSystem:    meson
@@ -37,7 +39,7 @@ not compatible. This package contains the runtime shared library.
 
 %package        devel
 Summary:        Development files for %{name}
-Requires:       %{name} = %{version}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 %description    devel
 The %{name}-devel package contains libraries and header files for
