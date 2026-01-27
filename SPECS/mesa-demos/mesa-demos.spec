@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: Icenowy Zheng <zhengxingda@iscas.ac.cn>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -16,9 +17,9 @@ BuildSystem:    meson
 
 # Patch pointblast/spriteblast/dinoshade out for legal reasons
 # (unclear license specification)
-Patch0: mesa-demos-8.5.0-legal.patch
+Patch0:         mesa-demos-8.5.0-legal.patch
 # Install glsl demos data to the system data directory
-Patch1: mesa-demos-system-data.patch
+Patch1:         mesa-demos-system-data.patch
 
 BuildOption(conf):  -Dwith-system-data-files=true
 # OSMesa is deprecated in favor of EGL_MESA_platform_surfaceless and not
