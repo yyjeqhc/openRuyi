@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: sunyuechi <sunyuechi@iscas.ac.cn>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -8,7 +9,6 @@
 %bcond docs 0
 
 %global majorversion 18
-%global precise_version %{version}-%{release}
 %global service_name postgresql.service
 
 Name:           postgresql
@@ -19,6 +19,7 @@ Summary:        PostgreSQL client programs
 # recognizes it as an independent license, so we do as well.
 License:        PostgreSQL
 Url:            http://www.postgresql.org/
+VCS:            git:https://git.postgresql.org/git/postgresql.git
 #!RemoteAsset
 Source0:        https://ftp.postgresql.org/pub/source/v%{version}/postgresql-%{version}.tar.bz2
 Source1:        Makefile.regress
@@ -33,24 +34,24 @@ Patch0:         rpm-pgsql.patch
 Patch1:         postgresql-var-run-socket.patch
 Patch2:         postgresql-no-libecpg.patch
 
-BuildOption(conf): --disable-rpath
-BuildOption(conf): --with-ldap
-BuildOption(conf): --with-openssl
-BuildOption(conf): --with-pam
-BuildOption(conf): --with-gssapi
-BuildOption(conf): --with-ossp-uuid
-BuildOption(conf): --with-libxml
-BuildOption(conf): --with-libxslt
-BuildOption(conf): --enable-nls
-BuildOption(conf): --enable-dtrace
-BuildOption(conf): --with-selinux
-BuildOption(conf): --with-system-tzdata=/usr/share/zoneinfo
-BuildOption(conf): --datadir=%_datadir/pgsql
-BuildOption(conf): --with-systemd
-BuildOption(conf): --with-lz4
-BuildOption(conf): --with-zstd
-BuildOption(conf): --with-icu
-BuildOption(conf): --with-python
+BuildOption(conf):  --disable-rpath
+BuildOption(conf):  --with-ldap
+BuildOption(conf):  --with-openssl
+BuildOption(conf):  --with-pam
+BuildOption(conf):  --with-gssapi
+BuildOption(conf):  --with-ossp-uuid
+BuildOption(conf):  --with-libxml
+BuildOption(conf):  --with-libxslt
+BuildOption(conf):  --enable-nls
+BuildOption(conf):  --enable-dtrace
+BuildOption(conf):  --with-selinux
+BuildOption(conf):  --with-system-tzdata=/usr/share/zoneinfo
+BuildOption(conf):  --datadir=%_datadir/pgsql
+BuildOption(conf):  --with-systemd
+BuildOption(conf):  --with-lz4
+BuildOption(conf):  --with-zstd
+BuildOption(conf):  --with-icu
+BuildOption(conf):  --with-python
 
 BuildRequires:  make
 BuildRequires:  pkgconfig(liblz4)
@@ -70,7 +71,7 @@ BuildRequires:  pkgconfig(openssl)
 BuildRequires:  pkgconfig(krb5)
 BuildRequires:  pkgconfig(ldap)
 BuildRequires:  gettext
-BuildRequires:  uuid-devel
+BuildRequires:  pkgconfig(ossp-uuid)
 BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:  pkgconfig(libxslt)
 BuildRequires:  pkgconfig(pam)
@@ -83,7 +84,7 @@ BuildRequires:  pkgconfig(icu-uc)
 BuildRequires:  docbook-xsl
 %endif
 
-Provides:       %{name}-libs = %precise_version
+Provides:       %{name}-libs = %{version}-%{release}
 
 %description
 PostgreSQL is an advanced Object-Relational database management system (DBMS).
@@ -96,7 +97,7 @@ postgresql-server sub-package.
 
 %package        devel
 Summary:        PostgreSQL development header files and libraries
-Requires:       %{name}%{?_isa} = %precise_version
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 %description    devel
 The postgresql-devel package contains the header files and libraries
@@ -107,7 +108,7 @@ will interact with a PostgreSQL server.
 
 %package        server
 Summary:        The programs needed to create and run a PostgreSQL server
-Requires:       %{name}%{?_isa} = %precise_version
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 # We require this to be present for %%{_prefix}/lib/tmpfiles.d
 Requires:       systemd
 # We require this to be present for /usr/sbin/runuser when using --initdb (rhbz#2071437)
@@ -134,7 +135,7 @@ and source files for the PostgreSQL tutorial.
 
 %package        contrib
 Summary:        Extension modules distributed with PostgreSQL
-Requires:       %{name}%{?_isa} = %precise_version
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 %description    contrib
 The postgresql-contrib package contains various extension modules that are
@@ -144,7 +145,7 @@ included in the PostgreSQL distribution.
 Summary:        PostgreSQL development header files and libraries
 Requires:       pkgconfig(icu-uc)
 Requires:       pkgconfig(krb5)
-Requires:       %{name}-devel%{?_isa} = %precise_version
+Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
 
 %description    server-devel
 The postgresql-server-devel package contains the header files and configuration
@@ -152,7 +153,7 @@ needed to compile PostgreSQL server extension.
 
 %package        plpython3
 Summary:        The Python3 procedural language for PostgreSQL
-Requires:       %{name}-server%{?_isa} = %precise_version
+Requires:       %{name}-server%{?_isa} = %{version}-%{release}
 
 %description    plpython3
 The postgresql-plpython3 package contains the PL/Python3 procedural language,
@@ -162,9 +163,9 @@ Install this if you want to write database functions in Python 3.
 %if %{with test}
 %package        test
 Summary:        The test suite distributed with PostgreSQL
-Requires:       %{name}-server%{?_isa} = %precise_version
-Requires:       %{name}-server-devel%{?_isa} = %precise_version
-Requires:       %{name}-contrib%{?_isa} = %precise_version
+Requires:       %{name}-server%{?_isa} = %{version}-%{release}
+Requires:       %{name}-server-devel%{?_isa} = %{version}-%{release}
+Requires:       %{name}-contrib%{?_isa} = %{version}-%{release}
 
 %description    test
 The postgresql-test package contains files needed for various tests for the
@@ -179,7 +180,7 @@ benchmarks.
 %make_build -C contrib
 
 %if %{with test}
-	make all -C src/test/regress
+    make all -C src/test/regress
 %endif
 
 %install -a
@@ -202,27 +203,27 @@ install -d -m 700 $RPM_BUILD_ROOT%{?_localstatedir}/lib/pgsql/backups
 install -m 644 %{SOURCE3} $RPM_BUILD_ROOT%{?_localstatedir}/lib/pgsql/.bash_profile
 
 %if %{with test}
-	# tests. There are many files included here that are unnecessary,
-	# but include them anyway for completeness.  We replace the original
-	# Makefiles, however.
-	mkdir -p $RPM_BUILD_ROOT%{_libdir}/pgsql/test
-	cp -a src/test/regress $RPM_BUILD_ROOT%{_libdir}/pgsql/test
-	# pg_regress binary should be only in one subpackage,
-	# there will be a symlink from -test to -devel
-	rm -f $RPM_BUILD_ROOT%{_libdir}/pgsql/test/regress/pg_regress
-	rm -f $RPM_BUILD_ROOT%{_libdir}/pgsql/test/regress/refint.so
-	rm -f $RPM_BUILD_ROOT%{_libdir}/pgsql/test/regress/autoinc.so
-	ln -sf ../../pgxs/src/test/regress/pg_regress $RPM_BUILD_ROOT%{_libdir}/pgsql/test/regress/pg_regress
-	ln -sf ../../autoinc.so $RPM_BUILD_ROOT%{_libdir}/pgsql/test/regress/autoinc.so
-	ln -sf ../../refint.so $RPM_BUILD_ROOT%{_libdir}/pgsql/test/regress/refint.so
-	pushd  $RPM_BUILD_ROOT%{_libdir}/pgsql/test/regress
-	rm -f GNUmakefile Makefile *.o
-	chmod 0755 pg_regress regress.so
-	popd
-	sed 's|@bindir@|%{_bindir}|g' \
-		< %{SOURCE1} \
-		> $RPM_BUILD_ROOT%{_libdir}/pgsql/test/regress/Makefile
-	chmod 0644 $RPM_BUILD_ROOT%{_libdir}/pgsql/test/regress/Makefile
+    # tests. There are many files included here that are unnecessary,
+    # but include them anyway for completeness.  We replace the original
+    # Makefiles, however.
+    mkdir -p $RPM_BUILD_ROOT%{_libdir}/pgsql/test
+    cp -a src/test/regress $RPM_BUILD_ROOT%{_libdir}/pgsql/test
+    # pg_regress binary should be only in one subpackage,
+    # there will be a symlink from -test to -devel
+    rm -f $RPM_BUILD_ROOT%{_libdir}/pgsql/test/regress/pg_regress
+    rm -f $RPM_BUILD_ROOT%{_libdir}/pgsql/test/regress/refint.so
+    rm -f $RPM_BUILD_ROOT%{_libdir}/pgsql/test/regress/autoinc.so
+    ln -sf ../../pgxs/src/test/regress/pg_regress $RPM_BUILD_ROOT%{_libdir}/pgsql/test/regress/pg_regress
+    ln -sf ../../autoinc.so $RPM_BUILD_ROOT%{_libdir}/pgsql/test/regress/autoinc.so
+    ln -sf ../../refint.so $RPM_BUILD_ROOT%{_libdir}/pgsql/test/regress/refint.so
+    pushd  $RPM_BUILD_ROOT%{_libdir}/pgsql/test/regress
+    rm -f GNUmakefile Makefile *.o
+    chmod 0755 pg_regress regress.so
+    popd
+    sed 's|@bindir@|%{_bindir}|g' \
+        < %{SOURCE1} \
+        > $RPM_BUILD_ROOT%{_libdir}/pgsql/test/regress/Makefile
+    chmod 0644 $RPM_BUILD_ROOT%{_libdir}/pgsql/test/regress/Makefile
 %endif
 
 # remove files not to be packaged
@@ -233,22 +234,22 @@ rm -f $RPM_BUILD_ROOT%{_docdir}/%{name}/pgsql/extension/*.example
 
 find_lang_bins ()
 {
-	lstfile=$1 ; shift
-	cp /dev/null "$lstfile"
-	for binary; do
-		%find_lang "$binary"-%{majorversion}
-		cat "$binary"-%{majorversion}.lang >>"$lstfile"
-	done
+    lstfile=$1 ; shift
+    cp /dev/null "$lstfile"
+    for binary; do
+        %find_lang "$binary"-%{majorversion}
+        cat "$binary"-%{majorversion}.lang >>"$lstfile"
+    done
 }
 find_lang_bins devel.lst pg_config
 find_lang_bins server.lst \
-	initdb pg_basebackup pg_controldata pg_ctl pg_resetwal pg_rewind plpgsql \
-	postgres pg_checksums pg_verifybackup pg_combinebackup \
+    initdb pg_basebackup pg_controldata pg_ctl pg_resetwal pg_rewind plpgsql \
+    postgres pg_checksums pg_verifybackup pg_combinebackup \
     pg_walsummary
 find_lang_bins contrib.lst \
-	pg_amcheck pg_archivecleanup pg_test_fsync pg_test_timing pg_waldump
+    pg_amcheck pg_archivecleanup pg_test_fsync pg_test_timing pg_waldump
 find_lang_bins main.lst \
-	pg_dump pg_upgrade pgscripts psql \
+    pg_dump pg_upgrade pgscripts psql \
 libpq5
 
 find_lang_bins plpython3.lst plpython
