@@ -72,10 +72,10 @@ This package contains common NFS utilities which are needed for an NFS client.
 
 %package     -n nfs-kernel-server
 Summary:        Support Utilities for Kernel NFS Server
-Requires:       nfs-client = %{version}
+Requires:       nfs-client = %{version}-%{release}
 Requires:       rpcbind
 Requires:       (kmod(nfsd.ko) if kernel)
-Provides:       nfs-utils = %{version}
+Provides:       nfs-utils = %{version}-%{release}
 
 %description -n nfs-kernel-server
 This package contains support for the kernel-based NFS server.
@@ -88,7 +88,7 @@ This library provides NFSv4 user/group name to ID mapping functionality.
 
 %package     -n nfsidmap-devel
 Summary:        Development files for the NFSv4 ID Mapping Library
-Requires:       nfsidmap = %{version}
+Requires:       nfsidmap = %{version}-%{release}
 
 %description -n nfsidmap-devel
 This package contains header files for the NFSv4 ID Mapping Library.
