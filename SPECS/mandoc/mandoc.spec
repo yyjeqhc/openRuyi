@@ -3,6 +3,7 @@
 # SPDX-FileContributor: Suyun114 <ziyu.oerv@isrc.iscas.ac.cn>
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
 # SPDX-FileContributor: yyjeqhc <1772413353@qq.com>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -14,12 +15,15 @@ Release:        %autorelease
 Summary:        UNIX manpage compiler
 License:        ISC
 URL:            https://mandoc.bsd.lv/
+# VCS: TODO: This project use CVS
 #!RemoteAsset
 Source:         https://mandoc.bsd.lv/snapshots/%{name}-%{version}.tar.gz
 BuildSystem:    autotools
 
-BuildRequires:  zlib-devel
-BuildOption(check): -C %{name}-%{version}
+BuildOption(check):  -C %{name}-%{version}
+
+BuildRequires:  pkgconfig(zlib)
+
 %description
 The mandoc manpage compiler toolset (formerly called "mdocml")
 is a suite of tools compiling mdoc(7), the roff(7) macro language
