@@ -21,60 +21,56 @@ Release:        %autorelease
 Summary:        Commands to control the kernel modules and libraries
 License:        CDDL
 URL:            https://github.com/openzfs/zfs
-VCS:            git:https://github.com/openzfs/zfs
 #!RemoteAsset
 Source0:        https://github.com/openzfs/zfs/releases/download/zfs-%{version}-rc3/zfs-%{version}-rc3.tar.gz
 BuildSystem:    autotools
 
-BuildOption(prep): -n zfs-%{version}-rc3
-
-BuildOption(conf): --with-config=user
-BuildOption(conf): --with-udevdir=%{_udevdir}
-BuildOption(conf): --with-udevruledir=%{_udevruledir}
-BuildOption(conf): --with-dracutdir=%{_dracutdir}
-BuildOption(conf): --with-pamconfigsdir=%{_datadir}/pam-configs
-BuildOption(conf): --with-pammoduledir=%{_libdir}/security
-BuildOption(conf): --with-python=python3
-BuildOption(conf): --with-pkgconfigdir=%{_pkgconfigdir}
-BuildOption(conf): --disable-static
-BuildOption(conf): --disable-debug
-BuildOption(conf): --disable-debuginfo
-BuildOption(conf): --disable-asan
-BuildOption(conf): --disable-ubsan
-BuildOption(conf): --disable-pam
-BuildOption(conf): --enable-systemd
-BuildOption(conf): --with-systemdunitdir=%{_unitdir}
-BuildOption(conf): --with-systemdpresetdir=%{_presetdir}
-BuildOption(conf): --with-systemdmodulesloaddir=%{_modulesloaddir}
-BuildOption(conf): --with-systemdgeneratordir=%{_systemdgeneratordir}
-BuildOption(conf): --disable-sysvinit
-
-Requires:       zfs-libs%{?_isa} = %{version}-%{release}
-Requires:       %{name}-kmod = %{version}
+BuildOption(prep):  -n zfs-%{version}-rc3
+BuildOption(conf):  --with-config=user
+BuildOption(conf):  --with-udevdir=%{_udevdir}
+BuildOption(conf):  --with-udevruledir=%{_udevruledir}
+BuildOption(conf):  --with-dracutdir=%{_dracutdir}
+BuildOption(conf):  --with-pamconfigsdir=%{_datadir}/pam-configs
+BuildOption(conf):  --with-pammoduledir=%{_libdir}/security
+BuildOption(conf):  --with-python=python3
+BuildOption(conf):  --with-pkgconfigdir=%{_pkgconfigdir}
+BuildOption(conf):  --disable-static
+BuildOption(conf):  --disable-debug
+BuildOption(conf):  --disable-debuginfo
+BuildOption(conf):  --disable-asan
+BuildOption(conf):  --disable-ubsan
+BuildOption(conf):  --disable-pam
+BuildOption(conf):  --enable-systemd
+BuildOption(conf):  --with-systemdunitdir=%{_unitdir}
+BuildOption(conf):  --with-systemdpresetdir=%{_presetdir}
+BuildOption(conf):  --with-systemdmodulesloaddir=%{_modulesloaddir}
+BuildOption(conf):  --with-systemdgeneratordir=%{_systemdgeneratordir}
+BuildOption(conf):  --disable-sysvinit
 
 BuildRequires:  make
 BuildRequires:  python3
-BuildRequires:  zlib-devel
+BuildRequires:  pkgconfig(zlib)
 BuildRequires:  util-linux-devel
-BuildRequires:  libudev-devel
-BuildRequires:  libattr-devel
-BuildRequires:  openssl-devel
-BuildRequires:  libtirpc-devel
-
-Requires:       openssl
+BuildRequires:  pkgconfig(libudev)
+BuildRequires:  pkgconfig(libattr)
+BuildRequires:  pkgconfig(openssl)
+BuildRequires:  pkgconfig(libtirpc)
 BuildRequires:  systemd
 
+Requires:       openssl
 # The zpool iostat/status -c scripts call some utilities like lsblk and iostat
 Requires:       util-linux
 Requires:       sysstat
+Requires:       zfs-libs%{?_isa} = %{version}-%{release}
+Requires:       %{name}-kmod = %{version}-%{release}
 
 %description
 This package contains the core ZFS command line utilities.
 
-%package        -n zfs-libs
+%package     -n zfs-libs
 Summary:        ZFS libraries for Linux
 
-%description    -n zfs-libs
+%description -n zfs-libs
 This package contains the core ZFS libraries:
  * libzpool: Native ZFS pool library for managing zpools
  * libnvpair: Solaris name-value library for packing and unpacking data
@@ -83,16 +79,17 @@ This package contains the core ZFS libraries:
 
 %ldconfig_scriptlets -n zfs-libs
 
-%package        -n zfs-devel
+%package     -n zfs-devel
 Summary:        Development headers
 Requires:       zfs-libs%{?_isa} = %{version}-%{release}
 
-%description    -n zfs-devel
+%description -n zfs-devel
 This package contains the header files needed for building additional
 applications against the ZFS libraries.
 
 %package        test
 Summary:        Test infrastructure
+BuildRequires:  libaio-devel
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 Requires:       parted
 Requires:       lsscsi
@@ -105,7 +102,6 @@ Requires:       sudo
 Requires:       sysstat
 Requires:       libaio
 Requires:       python3
-BuildRequires:  libaio-devel
 AutoReqProv:    no
 
 %description    test
