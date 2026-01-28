@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: yyjeqhc <1772413353@qq.com>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -16,30 +17,29 @@ URL:            https://github.com/libsdl-org/SDL
 Source:         https://github.com/libsdl-org/SDL/archive/refs/tags/release-%{version}.tar.gz
 BuildSystem:    cmake
 
-BuildOption(conf): -DSDL_DLOPEN=ON
-BuildOption(conf): -DSDL_VIDEO_KMSDRM=OFF
-BuildOption(conf): -DSDL_ARTS=OFF
-BuildOption(conf): -DSDL_ESD=OFF
-BuildOption(conf): -DSDL_NAS=OFF
-BuildOption(conf): -DSDL_PULSEAUDIO=OFF
-BuildOption(conf): -DSDL_PULSEAUDIO_SHARED=ON
-BuildOption(conf): -DSDL_JACK=OFF
-BuildOption(conf): -DSDL_JACK_SHARED=ON
-BuildOption(conf): -DSDL_PIPEWIRE=OFF
-BuildOption(conf): -DSDL_PIPEWIRE_SHARED=ON
-BuildOption(conf): -DSDL_ALSA=ON
-BuildOption(conf): -DSDL_VIDEO_WAYLAND=OFF
-BuildOption(conf): -DSDL_LIBDECOR_SHARED=ON
-BuildOption(conf): -DSDL_VIDEO_VULKAN=OFF
-BuildOption(conf): -DSDL_SSE3=OFF
-BuildOption(conf): -DSDL_RPATH=OFF
-BuildOption(conf): -DSDL_UNIX_CONSOLE_BUILD=ON
-
+BuildOption(conf):  -DSDL_DLOPEN=ON
+BuildOption(conf):  -DSDL_VIDEO_KMSDRM=OFF
+BuildOption(conf):  -DSDL_ARTS=OFF
+BuildOption(conf):  -DSDL_ESD=OFF
+BuildOption(conf):  -DSDL_NAS=OFF
+BuildOption(conf):  -DSDL_PULSEAUDIO=OFF
+BuildOption(conf):  -DSDL_PULSEAUDIO_SHARED=ON
+BuildOption(conf):  -DSDL_JACK=OFF
+BuildOption(conf):  -DSDL_JACK_SHARED=ON
+BuildOption(conf):  -DSDL_PIPEWIRE=OFF
+BuildOption(conf):  -DSDL_PIPEWIRE_SHARED=ON
+BuildOption(conf):  -DSDL_ALSA=ON
+BuildOption(conf):  -DSDL_VIDEO_WAYLAND=OFF
+BuildOption(conf):  -DSDL_LIBDECOR_SHARED=ON
+BuildOption(conf):  -DSDL_VIDEO_VULKAN=OFF
+BuildOption(conf):  -DSDL_SSE3=OFF
+BuildOption(conf):  -DSDL_RPATH=OFF
+BuildOption(conf):  -DSDL_UNIX_CONSOLE_BUILD=ON
 %if %{with static}
-BuildOption(conf): -DSDL_STATIC=ON
-BuildOption(conf): -DSDL_STATIC_PIC=ON
+BuildOption(conf):  -DSDL_STATIC=ON
+BuildOption(conf):  -DSDL_STATIC_PIC=ON
 %else
-BuildOption(conf): -DSDL_STATIC=OFF
+BuildOption(conf):  -DSDL_STATIC=OFF
 %endif
 
 BuildRequires:  cmake
@@ -54,7 +54,7 @@ to provide fast access to the graphics frame buffer and audio device.
 
 %package        devel
 Summary:        Development files for SDL2
-Requires:       %{name} = %{version}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 %description    devel
 This package provides the libraries, include files, and other resources needed for
@@ -63,7 +63,7 @@ developing SDL applications.
 %if %{with static}
 %package        static
 Summary:        Static libraries for SDL2
-Requires:       %{name}-devel = %{version}
+Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
 
 %description    static
 Static libraries for SDL2.
