@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: jingyupu <pujingyu@iscas.ac.cn>
 # SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -11,7 +12,7 @@ Release:        %autorelease
 Summary:        XCB cursor library (libxcursor port)
 License:        MIT
 URL:            http://xcb.freedesktop.org/
-VCS:            git:git://anongit.freedesktop.org/xcb/util-cursor
+VCS:            git:https://gitlab.freedesktop.org/xorg/lib/libxcb-cursor.git
 #!RemoteAsset
 Source0:        http://xcb.freedesktop.org/dist/xcb-util-cursor-%{version}.tar.xz
 BuildSystem:    autotools
