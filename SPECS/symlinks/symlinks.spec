@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
 # SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -9,11 +10,13 @@ Name:           symlinks
 Version:        1.4
 Release:        %autorelease
 Summary:        Scan or change symbolic links
-License:        Copyright-Only
+License:        Symlinks
 URL:            http://ibiblio.org/pub/Linux/utils/file/
+# VCS: No VCS link available
 #!RemoteAsset
 Source0:        http://ibiblio.org/pub/Linux/utils/file/%{name}-%{version}.tar.gz
 BuildSystem:    autotools
+
 Patch0:         0001-fix-makefile.patch
 
 BuildOption(build):  CFLAGS="%{optflags} %{build_ldflags}"
