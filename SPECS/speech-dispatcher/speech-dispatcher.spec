@@ -43,7 +43,7 @@ BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  libtool-ltdl-devel
 BuildRequires:  pkgconfig(sndfile)
 BuildRequires:  pulseaudio-devel
-BuildRequires:  alsa-lib-devel
+BuildRequires:  pkgconfig(alsa)
 BuildRequires:  pkgconfig(python3)
 BuildRequires:  python3-setuptools
 BuildRequires:  pkgconfig(libsystemd)
