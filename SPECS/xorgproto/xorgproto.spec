@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: Dingli Zhang <dingli@iscas.ac.cn>
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
+# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -11,10 +12,11 @@ Release:        %autorelease
 Summary:        X.Org X11 Protocol headers
 License:        BSD-2-Clause AND HPND AND HPND-sell-variant AND ICU AND MIT AND MIT-open-group AND SGI-B-2.0 AND SMLNJ AND X11 AND X11-distribute-modifications-variant
 URL:            https://www.x.org
+VCS:            git:https://gitlab.freedesktop.org/xorg/proto/xorgproto.git
 #!RemoteAsset
 Source0:        https://www.x.org/pub/individual/proto/xorgproto-%{version}.tar.xz
-BuildSystem:    meson
 BuildArch:      noarch
+BuildSystem:    meson
 
 BuildRequires:  pkgconfig
 BuildRequires:  meson
