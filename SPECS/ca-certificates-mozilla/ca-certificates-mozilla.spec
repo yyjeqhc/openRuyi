@@ -8,17 +8,17 @@
 Name:           ca-certificates-mozilla
 # Version number is NSS_BUILTINS_LIBRARY_VERSION in this file:
 # http://hg.mozilla.org/projects/nss/file/default/lib/ckfw/builtins/nssckbi.h
-Version:        2.82
+Version:        2.84
 Release:        %autorelease
 Summary:        CA certificates for OpenSSL
 License:        MPL-2.0
 URL:            https://www.mozilla.org
-#!RemoteAsset
-Source0:        https://hg.mozilla.org/projects/nss/raw-file/default/lib/ckfw/builtins/certdata.txt
-#!RemoteAsset
-Source1:        https://hg.mozilla.org/projects/nss/raw-file/default/lib/ckfw/builtins/nssckbi.h
-#!RemoteAsset
-Source2:        https://src.fedoraproject.org/rpms/ca-certificates/raw/rawhide/f/certdata2pem.py
+# https://hg.mozilla.org/projects/nss/raw-file/default/lib/ckfw/builtins/certdata.txt
+Source0:        certdata.txt
+# https://hg.mozilla.org/projects/nss/raw-file/default/lib/ckfw/builtins/nssckbi.h
+Source1:        nssckbi.h
+# https://src.fedoraproject.org/rpms/ca-certificates/raw/rawhide/f/certdata2pem.py
+Source2:        certdata2pem.py
 Source3:        COPYING
 BuildRequires:  ca-certificates
 BuildRequires:  openssl
