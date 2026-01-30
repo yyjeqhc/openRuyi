@@ -16,6 +16,7 @@ Release:        %autorelease
 Summary:        An implementation of the Lightweight Directory Access Protocol
 License:        OLDAP-2.8
 URL:            https://www.openldap.org
+VCS:            git:https://git.openldap.org/openldap/openldap.git
 #!RemoteAsset
 Source0:        https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-%{version}.tgz
 #!RemoteAsset
@@ -69,7 +70,6 @@ BuildOption(conf):  --enable-syncprov=mod
 BuildOption(conf):  --enable-ppolicy=mod
 BuildOption(conf):  --with-yielding-select
 BuildOption(conf):  --with-argon2=libargon2
-
 BuildOption(install):  STRIP="" "sysconfdir=%{_sysconfdir}/openldap" "libexecdir=%{_libexecdir}"
 
 BuildRequires:  libargon2-devel
@@ -92,7 +92,7 @@ The server provides several database backends and overlays.
 
 %package        back-perl
 Summary:        OpenLDAP Perl backend
-Requires:       %{name} = %{version}
+Requires:       %{name} = %{version}-%{release}
 Requires:       perl
 
 %description    back-perl
@@ -101,7 +101,7 @@ different LDAP operations.
 
 %package        back-sock
 Summary:        OpenLDAP Socket backend
-Requires:       %{name} = %{version}
+Requires:       %{name} = %{version}-%{release}
 Provides:       %{name}:/usr/share/man/man5/slapd-sock.5.gz
 
 %description    back-sock
@@ -110,7 +110,7 @@ results with an external process listening on a Unix domain socket.
 
 %package        back-meta
 Summary:        OpenLDAP Meta backend
-Requires:       %{name} = %{version}
+Requires:       %{name} = %{version}-%{release}
 Provides:       %{name}:/usr/share/man/man5/slapd-meta.5.gz
 
 %description    back-meta
@@ -121,7 +121,7 @@ Information Tree (DIT).
 
 %package        back-sql
 Summary:        OpenLDAP SQL backend
-Requires:       %{name} = %{version}
+Requires:       %{name} = %{version}-%{release}
 
 %description    back-sql
 The primary purpose of this OpenLDAP backend is to present information
@@ -138,7 +138,7 @@ to be applied with all usages of libldap.
 
 %package        contrib
 Summary:        OpenLDAP Contrib Modules
-Requires:       %{name} = %{version}
+Requires:       %{name} = %{version}-%{release}
 
 %description    contrib
 Various overlays found in contrib/:
@@ -179,7 +179,7 @@ documentation.
 Summary:        Static libraries for the OpenLDAP libraries
 Requires:       cyrus-sasl-devel
 Requires:       pkgconfig(openssl)
-Requires:       %{name}-devel = %version
+Requires:       %{name}-devel = %{version}-%{release}
 
 %description    static
 This package provides the static versions of the OpenLDAP libraries
