@@ -15,13 +15,13 @@
 %endif
 
 Name:           linux-headers
-Version:        6.18.7
+Version:        6.18.8
 Release:        %autorelease
 Summary:        Header files for the Linux kernel for use by userspace
 License:        GPL-2.0-only AND LGPL-2.1-only AND MIT AND BSD-2-Clause AND BSD-3-Clause
 URL:            https://www.kernel.org/
 VCS:            git:https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
-#!RemoteAsset:  sha256:b726a4d15cf9ae06219b56d87820776e34d89fbc137e55fb54a9b9c3015b8f1e
+#!RemoteAsset:  sha256:37f0c5d5c242c1d604e87d48f08795e861a5a85f725b4ca11d0a538f12ff8cff
 Source0:        https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-%{version}.tar.xz
 
 BuildRequires:  rsync
