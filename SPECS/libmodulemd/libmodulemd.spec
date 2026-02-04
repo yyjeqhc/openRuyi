@@ -1,5 +1,5 @@
-# SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
+# SPDX-FileCopyrightText: (C) 2025, 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2025, 2026 openRuyi Project Contributors
 # SPDX-FileContributor: Mahno <bestwow2014@gmail.com>
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
 #
@@ -25,6 +25,7 @@ Source0:        %{url}/releases/download/%{version}/modulemd-%{version}.tar.xz
 Source1:        %{url}/releases/download/%{version}/modulemd-%{version}.tar.xz.asc
 # Key exported from Petr Pisar's keyring
 #Source2:        gpgkey-E3F42FCE156830A80358E6E94FD1AEC3365AF7BF.gpg
+Patch0:         0001-tests-Adapt-to-glib-2.87.0.patch
 BuildSystem:    meson
 BuildOption(conf): -Drpmio=enabled
 BuildOption(conf): -Dskip_introspection=false
