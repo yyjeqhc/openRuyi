@@ -11,15 +11,17 @@ Release:        %autorelease
 Summary:        High productivity build system
 License:        Apache-2.0
 URL:            https://mesonbuild.com/
+VCS:            git:https://github.com/mesonbuild/meson.git
 #!RemoteAsset
 Source0:        https://github.com/mesonbuild/%{name}/releases/download/%{version}/%{name}-%{version}.tar.gz
 #!RemoteAsset
 Source1:        https://github.com/mesonbuild/%{name}/releases/download/%{version}/%{name}-%{version}.tar.gz.asc
 BuildArch:      noarch
 
-BuildRequires:  python3-devel
+BuildRequires:  pkgconfig(python3)
 BuildRequires:  python3-setuptools
 BuildRequires:  expat
+
 Requires:       python%{python3_version}dist(setuptools)
 Requires:       ninja
 Requires:       python3
