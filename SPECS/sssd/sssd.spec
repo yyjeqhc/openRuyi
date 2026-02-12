@@ -82,7 +82,7 @@ BuildRequires:  pkgconfig(talloc)
 BuildRequires:  pkgconfig(tdb)
 BuildRequires:  pkgconfig(tevent)
 BuildRequires:  pkgconfig(uuid)
-BuildRequires:  shadow-devel
+BuildRequires:  subid-devel
 # Tests
 BuildRequires:  softhsm
 BuildRequires:  openssh
