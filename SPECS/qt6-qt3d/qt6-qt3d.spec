@@ -11,7 +11,7 @@
 
 %bcond system_assimp 0
 
-Name:           qt6-3d
+Name:           qt6-qt3d
 Version:        6.10.1
 Release:        %autorelease
 Summary:        Qt6 - Qt3D QML bindings and C++ APIs
