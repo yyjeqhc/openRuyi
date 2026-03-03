@@ -49,6 +49,7 @@ Provides:       python3-firewall
 %{?python_provide:%python_provide python3-firewall}
 Requires:       python3-dbus
 Requires:       python3-pygobject
+Requires:       python3-nftables
 
 %description -n python-firewall
 Python3 bindings for firewalld.
