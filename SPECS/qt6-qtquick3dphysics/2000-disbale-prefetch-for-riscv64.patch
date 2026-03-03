@@ -1,0 +1,31 @@
+From d7dd52a64167c82d4beade6f8d39906609c60a68 Mon Sep 17 00:00:00 2001
+From: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+Date: Mon, 15 Dec 2025 22:13:51 +0800
+Subject: [PATCH 2/2] disbale prefetch for riscv64.
+
+---
+ .../source/foundation/include/unix/PsUnixIntrinsics.h      | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/src/3rdparty/PhysX/source/foundation/include/unix/PsUnixIntrinsics.h b/src/3rdparty/PhysX/source/foundation/include/unix/PsUnixIntrinsics.h
+index e6165e8..9968b3c 100644
+--- a/src/3rdparty/PhysX/source/foundation/include/unix/PsUnixIntrinsics.h
++++ b/src/3rdparty/PhysX/source/foundation/include/unix/PsUnixIntrinsics.h
+@@ -92,7 +92,14 @@ Prefetch aligned 64B x86, 32b ARM around \c ptr+offset.
+ */
+ PX_FORCE_INLINE void prefetchLine(const void* ptr, uint32_t offset = 0)
+ {
++#if PX_RV64
++	// RISC-V: Disable prefetch due to compiler constraints issues
++	// Prefetch is only a performance hint, not required for correctness
++	(void)ptr;
++	(void)offset;
++#else
+ 	__builtin_prefetch(reinterpret_cast<const char* PX_RESTRICT>(ptr) + offset, 0, 3);
++#endif
+ }
+ 
+ /*!
+-- 
+2.43.0
+
