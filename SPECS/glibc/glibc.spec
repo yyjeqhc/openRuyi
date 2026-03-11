@@ -1,142 +1,64 @@
-# SPDX-FileCopyrightText: (C) 2025, 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2025, 2026 openRuyi Project Contributors
+# SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
 # SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
 # SPDX-FileContributor: laokz <zhangkai@iscas.ac.cn>
 # SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-# Run with --with=fast_build to have a shorter turnaround
-# It will avoid building some parts of glibc
-%bcond_with    fast_build
+# Originally extracted from openSUSE
+# Authors: SUSE LLC and contributors
 
-%define flavor @BUILD_FLAVOR@%{nil}
-
-%bcond build_all 0
-%define build_main 1
-%define build_utils %{with build_all}
-%define build_testsuite %{with build_all}
-%if "%flavor" == "utils"
-%define build_main 0
-%define build_utils 1
-%define build_testsuite 0
-%endif
-%if "%flavor" == "testsuite"
-%define build_main 0
-%define build_utils 0
-%define build_testsuite 1
-%endif
-%define host_arch %{_target_cpu}
-
-%if %{build_main}
-%define name_suffix %{nil}
-%else
-%define name_suffix -%{flavor}-src
-%endif
+# Disable LTO due to a usage of top-level assembler that causes LTO issues
+%global _lto_cflags %{nil}
 
 %define __filter_GLIBC_PRIVATE 1
-%if %{with fast_build} || %{build_utils} && %{without build_all}
-%else
-%endif
 
-%define build_variants %{build_main}
-
-%define disable_assert 0
 %define enable_stackguard_randomization 1
 
-%global glibc_post_funcs %{expand:
--- We use lua because there may be no shell that we can run during
--- glibc upgrade. We used to implement much of %%post as a C program,
--- but from an overall maintenance perspective the lua in the spec
--- file was simpler and safer given the operations required.
--- All lua code will be ignored by rpm-ostree; see:
--- https://github.com/projectatomic/rpm-ostree/pull/1869
--- If we add new lua actions to the %%post code we should coordinate
--- with rpm-ostree and ensure that their glibc install is functional.
--- We must not use rpm.execute because this is a RPM 4.15 features and
--- we must still support downstream bootstrap with RPM 4.14 and missing
--- containerized boostrap.
+# We need to consider the nscd subpackage, or not.
+%bcond nscd 1
+# This is libnsl1, we already have newer libnsl - 251
+%bcond libnsl 0
 
--- Open-code rpm.execute with error message handling.
-function post_exec (msg, program, ...)
-  if rpm.spawn ~= nil then
-    local status = rpm.spawn ({program, ...})
-    if status == nil then
-      io.stdout:write (msg)
-      assert (nil)
-    end
-  else
-    local pid = posix.fork ()
-    if pid == 0 then
-      posix.exec (program, ...)
-      io.stdout:write (msg)
-      assert (nil)
-    elseif pid > 0 then
-      posix.wait (pid)
-    end
-  end
-end
-
-function call_ldconfig ()
-  post_exec("Error: call to ldconfig failed.\\n",
-	    "ldconfig")
-end
-}
-
-Name:           glibc%{name_suffix}
+Name:           glibc
 Summary:        Standard Shared Libraries (from the GNU C Library)
-License:        GPL-2.0-or-later AND LGPL-2.1-or-later AND LGPL-2.1-or-later WITH GCC-exception-2.0
+License:        GPL-2.0-or-later AND LGPL-2.1-or-later AND LGPL-2.1-or-later WITH GCC-exception-2.0 AND GPL-3.0-or-later
 Version:        2.42
 Release:        %autorelease
 URL:            https://www.gnu.org/software/libc/libc.html
-#!RemoteAsset
-Source:         https://ftpmirror.gnu.org/gnu/glibc/glibc-%{version}.tar.xz
-#!RemoteAsset
-Source1:        https://ftpmirror.gnu.org/gnu/glibc/glibc-%{version}.tar.xz.sig
-Source5:        nsswitch.conf
-# For systemd
-Source20:       nscd.conf
-Source21:       nscd.service
-Source22:       nscd.sysusers
+#!RemoteAsset:  sha256:d1775e32e4628e64ef930f435b67bb63af7599acb6be2b335b9f19f16509f17f
+Source0:        https://ftpmirror.gnu.org/gnu/glibc/glibc-%{version}.tar.xz
+Source1:        nsswitch.conf
+%if %{with nscd}
+Source2:        nscd.tmpfiles
+Source3:        nscd.service
+Source4:        nscd.sysusers
+%endif
 
-%if %{build_main}
-Requires(pre):  filesystem
-Recommends:     glibc-extra
-Recommends:     glibc-gconv-modules-extra
-Provides:       rtld(GNU_HASH)
-Provides:       /sbin/ldconfig
-%endif
-%if %{build_utils}
-Requires:       glibc = %{version}
-%endif
-BuildRequires:  audit-devel
+# For obvious reasons.
+Patch2000:      glibc-2.4-china.diff
+
+BuildRequires:  pkgconfig(audit)
 BuildRequires:  bison
-BuildRequires:  libcap-devel
-BuildRequires:  libselinux-devel
+BuildRequires:  pkgconfig(libcap)
+BuildRequires:  pkgconfig(libselinux)
 BuildRequires:  texinfo
 BuildRequires:  python3
 BuildRequires:  systemd-rpm-macros
 BuildRequires:  systemtap-sdt-devel
 BuildRequires:  xz
-%if 0%{?with_gcc:1}
-BuildRequires:  gcc%{with_gcc}
-%endif
-%if %{build_testsuite}
-BuildRequires:  gcc%{?with_gcc}-c++
-BuildRequires:  gdb
-BuildRequires:  glibc-static
-BuildRequires:  libidn2-0
-BuildRequires:  libstdc++-devel
-BuildRequires:  python3-pexpect
-%endif
-%if %{build_utils}
-BuildRequires:  gdb-devel
-BuildRequires:  zlib-devel
-%endif
+BuildRequires:  pkgconfig(zlib)
 # Provide Scrt1.o for _FORTIFY_SOURCE configure.
+# TODO: how about bootstrap build? - 251
 BuildRequires:  glibc-devel
 
-Patch100:       glibc-2.4-china.diff
+Provides:       rtld(GNU_HASH)
+
+Requires(pre):  filesystem
+
+Recommends:     glibc-extra
+Recommends:     glibc-gconv-modules-extra
 
 %description
 The GNU C Library provides the most important standard libraries used
@@ -144,162 +66,128 @@ by nearly all programs: the standard C library, the standard math
 library, and the POSIX thread library. A system is not functional
 without these libraries.
 
-%package -n glibc-utils
+%package        devel
+Summary:        Include Files and Libraries Mandatory for Development
+License:        BSD-3-Clause AND LGPL-2.1-or-later AND LGPL-2.1-or-later WITH GCC-exception-2.0 AND GPL-2.0-or-later
+Requires:       %{name}%{?_isa} = %{version}-%{release}
+Requires:       pkgconfig(libxcrypt)
+Requires:       linux-headers
+
+%description    devel
+These libraries are needed to develop programs which use the standard C
+library.
+
+%package        utils
 Summary:        Development utilities from the GNU C Library
 License:        LGPL-2.1-or-later
-Requires:       glibc = %{version}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
-%description -n glibc-utils
+%description    utils
 The glibc-utils package contains mtrace, a memory leak tracer and
 xtrace, a function call tracer which can be helpful during program
 debugging.
 
 If you are unsure if you need this, do not install this package.
 
-%package -n glibc-testsuite
-Summary:        Testsuite results from the GNU C Library
-License:        LGPL-2.1-or-later
-
-%description -n glibc-testsuite
-This package contains the testsuite results from the GNU C Library.
-
-%if %{build_main}
-
-%package info
-Summary:        Info Files for the GNU C Library
-License:        GFDL-1.1-only
+%package        doc
+Summary:        Documentation for the GNU C Library
 BuildArch:      noarch
 
-%description info
+%description    doc
 This package contains the documentation for the GNU C library stored as
-info files. Due to a lack of resources, this documentation is not
-complete and is partially out of date.
+info files.
 
-
-%package i18ndata
-Summary:        Database Sources for 'locale'
-License:        GPL-2.0-or-later AND MIT
-BuildArch:      noarch
-
-%description i18ndata
-This package contains the data needed to build the locale data files to
-use the internationalization features of the GNU libc. It is normally
-not necessary to install this packages, the data files are already
-created.
-
-%package locale-base
-Summary:        en_US Locale Data for Localized Programs
+%package        locale-base
+Summary:        en_US and zh_CN Locale Data for Localized Programs
 License:        GPL-2.0-or-later AND MIT AND LGPL-2.1-or-later
-Requires:       glibc = %{version}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
-%description locale-base
+%description    locale-base
 Locale data for the internationalisation features of the GNU C library.
-This package contains only the U.S. English locale.
+This package contains the U.S. English and Simplified Chinese locales.
 
-%package locale
+%package        locale
 Summary:        Locale Data for Localized Programs
 License:        GPL-2.0-or-later AND MIT AND LGPL-2.1-or-later
-Requires:       glibc-locale-base = %{version}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
-%description locale
+%description    locale
 Locale data for the internationalisation features of the GNU C library.
 
-%package -n nscd
+%package        gconv-modules-extra
+Summary:        Non-essential gconv modules
+License:        LGPL-2.1-or-later
+Requires:       %{name}%{?_isa} = %{version}-%{release}
+Provides:       glibc-locale-base:%{_libdir}/gconv/BIG5.so
+
+%description    gconv-modules-extra
+Modules for use by the iconv facility, to support encodings other than
+Latin-1 and UTF based.
+
+%package        static
+Summary:        C library static libraries for -static linking
+License:        BSD-3-Clause AND LGPL-2.1-or-later AND LGPL-2.1-or-later WITH GCC-exception-2.0 AND GPL-2.0-or-later
+Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
+Requires:       pkgconfig(libxcrypt)
+
+%description    static
+The glibc-static package contains the C library static libraries
+for -static linking.  You don't need these, unless you link statically,
+which is highly discouraged.
+
+%package        extra
+# makedb requires libselinux. We add this program in a separate
+# package so that glibc does not require libselinux.
+Summary:        Extra binaries from GNU C Library
+License:        LGPL-2.1-or-later
+Requires:       %{name}%{?_isa} = %{version}-%{release}
+
+%description    extra
+The glibc-extra package contains some extra binaries for glibc that
+are not essential but recommend for use.
+
+makedb: A program to create a database for nss
+
+%if %{with libnsl}
+%package     -n libnsl
+Summary:        Legacy Network Support Library (NIS)
+License:        LGPL-2.1-or-later
+
+%description -n libnsl
+Network Support Library for legacy architectures.  This library does not
+have support for IPv6.
+%endif
+
+%if %{with nscd}
+%package     -n nscd
 Summary:        Name Service Caching Daemon
 License:        GPL-2.0-or-later
-Provides:       glibc:/usr/sbin/nscd
-Requires:       glibc = %{version}
-Obsoletes:      unscd <= 0.48
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 Requires(pre):  systemd-sysusers
 %{?systemd_requires}
 
 %description -n nscd
 Nscd caches name service lookups and can dramatically improve
 performance with NIS, NIS+, and LDAP.
-
-%package gconv-modules-extra
-Summary:        Non-essential gconv modules
-License:        LGPL-2.1-or-later
-Requires:       glibc = %{version}
-Provides:       glibc-locale-base:%{_libdir}/gconv/BIG5.so
-
-%description gconv-modules-extra
-Modules for use by the iconv facility, to support encodings other than
-Latin-1 and UTF based.
-
-%package devel
-Summary:        Include Files and Libraries Mandatory for Development
-License:        BSD-3-Clause AND LGPL-2.1-or-later AND LGPL-2.1-or-later WITH GCC-exception-2.0 AND GPL-2.0-or-later
-Obsoletes:      epoll = 1.0
-Provides:       epoll < 1.0
-Requires:       glibc = %{version}
-Requires:       libxcrypt-devel
-Requires:       linux-headers
-
-%description devel
-These libraries are needed to develop programs which use the standard C
-library.
-
-%package static
-Summary:        C library static libraries for -static linking
-License:        BSD-3-Clause AND LGPL-2.1-or-later AND LGPL-2.1-or-later WITH GCC-exception-2.0 AND GPL-2.0-or-later
-Requires:       %{name}-devel = %{version}
-Requires:       libxcrypt-static
-Provides:       %{name}-static = %{version}
-
-%description static
-The glibc-static package contains the C library static libraries
-for -static linking.  You don't need these, unless you link statically,
-which is highly discouraged.
-
-%package extra
-# makedb requires libselinux. We add this program in a separate
-# package so that glibc does not require libselinux.
-Summary:        Extra binaries from GNU C Library
-License:        LGPL-2.1-or-later
-Requires:       glibc = %{version}
-
-%description extra
-The glibc-extra package contains some extra binaries for glibc that
-are not essential but recommend for use.
-
-makedb: A program to create a database for nss
-
 %endif
-
-%package -n libnsl1
-Summary:        Legacy Network Support Library (NIS)
-License:        LGPL-2.1-or-later
-
-%description -n libnsl1
-Network Support Library for legacy architectures.  This library does not
-have support for IPv6.
-
-%define make_output_sync -Oline
 
 %prep
 %autosetup -n glibc-%{version} -p1
 
 %build
-# Disable LTO due to a usage of top-level assembler that causes LTO issues
-%define _lto_cflags %{nil}
-if [ -x /bin/uname.bin ]; then
-   /bin/uname.bin -a
-else
-   uname -a
-fi
+uname -a
 uptime || :
 ulimit -a
 nice
 # We do not want configure to figure out the system its building one
 # to support a common ground and thus set build and host ourself.
-target="%{host_arch}-openruyi-linux"
+target="%{_target_cpu}-openruyi-linux"
 %define build %{_target_cpu}-openruyi-linux
 # Default CFLAGS and Compiler
 #
 enable_stack_protector=
 BuildFlags=
-tmp="%{optflags}"
+tmp="%{build_cflags}"
 for opt in $tmp; do
   case $opt in
     -fstack-protector-*) enable_stack_protector=${opt#-fstack-protector-} ;;
@@ -309,46 +197,37 @@ for opt in $tmp; do
     *) BuildFlags+=" $opt" ;;
   esac
 done
-%if 0%{?with_gcc:1}
-BuildCC="gcc-%{with_gcc}"
-BuildCCplus="g++-%{with_gcc}"
-%else
-BuildCC="%__cc"
-BuildCCplus="%__cxx"
-%endif
-
-#
-#now overwrite for some architectures
-#
-%if %{disable_assert}
-   BuildFlags="$BuildFlags -DNDEBUG=1"
-%endif
 
 #
 # Build base glibc
 #
-mkdir cc-base
-cd cc-base
+mkdir build-%{_target_cpu}
+cd build-%{_target_cpu}
 
 ../configure \
-   CFLAGS="$BuildFlags" BUILD_CFLAGS="$BuildFlags" \
-   CC="$BuildCC" CXX="$BuildCCplus" \
-   --prefix=%{_prefix} \
-   --libexecdir=%{_libexecdir} --infodir=%{_infodir} \
-        $profile \
-   --build=%{build} --host=${target} \
-   --enable-systemtap \
+    CFLAGS="$BuildFlags" BUILD_CFLAGS="$BuildFlags" \
+    CC="%__cc" CXX="%__cxx" \
+    --prefix=%{_prefix} \
+    --libexecdir=%{_libexecdir} \
+    --infodir=%{_infodir} \
+    --build=%{build} \
+    --host=${target} \
+    --enable-systemtap \
 %if %{enable_stackguard_randomization}
-   --enable-stackguard-randomization \
+    --enable-stackguard-randomization \
 %endif
-   ${enable_stack_protector:+--enable-stack-protector=$enable_stack_protector} \
-   ${enable_fortify_source:+--enable-fortify-source=$enable_fortify_source} \
-   --enable-tunables \
-   --enable-kernel=4.15 \
-   --with-bugurl=%{_vendor_bug_url} \
-   --enable-bind-now \
-   --disable-timezone-tools \
-   --disable-crypt || \
+    ${enable_stack_protector:+--enable-stack-protector=$enable_stack_protector} \
+    ${enable_fortify_source:+--enable-fortify-source=$enable_fortify_source} \
+    --enable-tunables \
+    --enable-kernel=4.15 \
+    --with-bugurl=%{_vendor_bug_url} \
+    --enable-bind-now \
+    --disable-timezone-tools \
+%if %{without nscd}
+    --disable-build-nscd \
+    --disable-nscd \
+%endif
+    --disable-crypt || \
   {
     rc=$?;
     echo "------- BEGIN config.log ------";
@@ -360,40 +239,9 @@ cd cc-base
 %make_build
 cd ..
 
-install -D %{SOURCE22} %{buildroot}%{_sysusersdir}/nscd.conf
-
 %check
-%if %{build_testsuite}
-export TIMEOUTFACTOR=16
-unset MALLOC_CHECK_ MALLOC_PERTURB_
-make %{?_smp_mflags} %{?make_output_sync} -C cc-base -k check || {
-  cd cc-base
-  o=$-
-  set +x
-  for sum in subdir-tests.sum */subdir-tests.sum; do
-    while read s t; do
-      case $s in
-   XPASS:|PASS:)
-     echo ++++++ $s $t ++++++
-     ;;
-   *) # X?FAIL:
-     echo ------ $s $t ------
-     test ! -f $t.out || cat $t.out
-     ;;
-   esac
-    done < $sum
-  done
-  set -$o
-  # Fail build if there where compilation errors during testsuite run
-  test -f tests.sum
-}
-%else
-# This has to pass on all platforms!
-# Exceptions:
-# None!
-make %{?_smp_mflags} %{?make_output_sync} -C cc-base check-abi
-make %{?_smp_mflags} %{?make_output_sync} -C cc-base test t=elf/check-localplt
-%endif
+make %{?_smp_mflags} %{?make_output_sync} -C build-%{_target_cpu} check-abi
+make %{?_smp_mflags} %{?make_output_sync} -C build-%{_target_cpu} test t=elf/check-localplt
 
 %define rtldlib %{_lib}
 # Each architecture has a different name for the dynamic linker:
@@ -406,14 +254,9 @@ make %{?_smp_mflags} %{?make_output_sync} -C cc-base test t=elf/check-localplt
 %define rtld_name ld-linux-x86-64.so.2
 %endif
 
-
-%define rootsbindir %{_sbindir}
-%define slibdir %{_libdir}
 %define rtlddir %{_prefix}/%{rtldlib}
 
 %install
-%if !%{build_testsuite}
-
 mkdir -p %{buildroot}%{_libdir}
 ln -s %{buildroot}%{_libdir} %{buildroot}/%{_lib}
 %if "%{rtldlib}" != "%{_lib}"
@@ -430,33 +273,23 @@ ln -s bin %{buildroot}/%{_prefix}/sbin
 %ifarch riscv64
 mkdir -p %{buildroot}%{_libdir}
 ln -s . %{buildroot}%{_libdir}/lp64d
-%if "%{slibdir}" != "%{_libdir}"
-mkdir -p %{buildroot}%{slibdir}
-ln -s . %{buildroot}%{slibdir}/lp64d
 %endif
-%endif
-
-%if %{build_main}
 
 # Install base glibc
-%make_install install_root=%{buildroot} -C cc-base
-
-cd cc-base
+%make_install install_root=%{buildroot} -C build-%{_target_cpu}
+cd build-%{_target_cpu}
 make %{?_smp_mflags} %{?make_output_sync} install_root=%{buildroot} localedata/install-locale-files
 cd ..
 
 %find_lang libc --generate-subpackages
 
-install -m 644 %{SOURCE5} %{buildroot}/etc/nsswitch.conf
+install -m 644 %{SOURCE1} %{buildroot}/etc/nsswitch.conf
 
-
-# nscd tools:
-
+%if %{with nscd}
 cp nscd/nscd.conf %{buildroot}/etc
-mkdir -p %{buildroot}/etc/init.d
-ln -sf %{rootsbindir}/service %{buildroot}%{_sbindir}/rcnscd
 mkdir -p %{buildroot}/run/nscd
 mkdir -p %{buildroot}/var/lib/nscd
+%endif
 
 #
 # Create ld.so.conf
@@ -473,71 +306,24 @@ include /etc/ld.so.conf.d/*.conf
 EOF
 # Add ldconfig cache directory for directory ownership
 mkdir -p %{buildroot}/var/cache/ldconfig
-# Empty the ld.so.cache:
-rm -f %{buildroot}/etc/ld.so.cache
-touch %{buildroot}/etc/ld.so.cache
 
 # Don't look at ldd! We don't wish a /bin/sh requires
 chmod 644 %{buildroot}%{_bindir}/ldd
 
-rm -f %{buildroot}%{rootsbindir}/sln
+rm -f %{buildroot}%{_sbindir}/sln
 
-mkdir -p %{buildroot}/usr/lib/tmpfiles.d/
-install -m 644 %{SOURCE20} %{buildroot}/usr/lib/tmpfiles.d/
-mkdir -p %{buildroot}/usr/lib/systemd/system
-install -m 644 %{SOURCE21} %{buildroot}/usr/lib/systemd/system
-mkdir -p %{buildroot}/usr/lib/sysusers.d/
-install -m 644 %{SOURCE22} %{buildroot}/usr/lib/sysusers.d/nscd.conf
-
-%if 0%{?rtld_oldname:1}
-# Provide compatibility link
-ln -s %{rtlddir}/%{rtld_name} %{buildroot}%{rtlddir}/%{rtld_oldname}
+%if %{with nscd}
+mkdir -p %{buildroot}%{_tmpfilesdir}
+install -m 644 %{SOURCE2} %{buildroot}%{_tmpfilesdir}/nscd.conf
+mkdir -p %{buildroot}%{_unitdir}
+install -m 644 %{SOURCE3} %{buildroot}%{_unitdir}
+mkdir -p %{buildroot}%{_sysusersdir}
+install -m 644 %{SOURCE4} %{buildroot}%{_sysusersdir}/nscd.conf
 %endif
 
 # Move getconf to %{_libexecdir}/getconf/ to avoid cross device link
 mv %{buildroot}%{_bindir}/getconf %{buildroot}%{_libexecdir}/getconf/getconf
 ln -s %{_libexecdir}/getconf/getconf %{buildroot}%{_bindir}/getconf
-
-%if !%{build_utils}
-# Remove unwanted files (packaged in glibc-utils)
-rm -f %{buildroot}%{slibdir}/libmemusage*
-rm -f %{buildroot}%{slibdir}/libpcprofile*
-rm -f %{buildroot}%{_bindir}/mtrace
-rm -f %{buildroot}%{_bindir}/pcprofiledump
-rm -f %{buildroot}%{_bindir}/sotruss
-rm -f %{buildroot}%{_bindir}/xtrace
-rm -f %{buildroot}%{_bindir}/pldd
-rm -rf %{buildroot}%{_libdir}/audit
-
-%endif
-
-%else
-
-%if %{build_utils}
-
-%make_install install_root=%{buildroot} -C cc-base \
-  subdirs='malloc debug elf'
-cd manpages; make install_root=%{buildroot} install; cd ..
-# Remove unwanted files
-rm -f %{buildroot}%{rtlddir}/ld*.so* %{buildroot}%{slibdir}/lib[!mp]*
-%if "%{_libdir}" != "%{slibdir}"
-rm -f %{buildroot}%{_libdir}/lib*
-%else
-rm -f %{buildroot}%{_libdir}/lib*.a
-%endif
-rm -f %{buildroot}%{_bindir}/{ld.so,ldd,sprof}
-rm -rf %{buildroot}%{_mandir}/man*
-rm -rf %{buildroot}%{rootsbindir} %{buildroot}%{_includedir}
-%ifarch riscv64
-rm %{buildroot}%{_libdir}/lp64d
-%if "%{slibdir}" != "%{_libdir}"
-rm %{buildroot}%{slibdir}/lp64d
-%endif
-%endif
-
-%endif
-
-%endif
 
 rm %{buildroot}/%{_lib}
 %if "%{rtldlib}" != "%{_lib}"
@@ -548,48 +334,46 @@ rm %{buildroot}/sbin
 rm %{buildroot}/%{_prefix}/sbin
 %endif
 
+%if %{without libnsl}
+rm -f %{buildroot}%{_libdir}/libnsl.so.1
 %endif
 
-%if %{build_main}
-
 %post -p <lua>
-
--- First, get rid of platform-optimized libraries. We remove any we have
--- ever built, since otherwise we might end up using some old leftover
--- libraries when new ones aren't installed in their place anymore.
-libraries = { "libc.so.6", "libc.so.6.1", "libm.so.6", "libm.so.6.1",
-         "librt.so.1", "libpthread.so.0", "libthread_db.so.1" }
-remove_dirs = {
-  "%{slibdir}/tls/"
-}
-for i, remove_dir in ipairs(remove_dirs) do
-  for j, library in ipairs(libraries) do
-    local file = remove_dir .. library
-    -- This file could be a symlink to library-%{version}.so, so check
-    -- this and don't remove only the link, but also the library itself.
-    local link = posix.readlink(file)
-    if link then
-      if link:sub(1, 1) ~= "/" then link = remove_dir .. link end
-      os.remove(link)
-    end
-    os.remove(file)
-  end
-end
-if posix.access("%{rootsbindir}/ldconfig", "x") then
-  rpm.execute("%{rootsbindir}/ldconfig", "-X")
-end
-if posix.utime("%{_libdir}/gconv/gconv-modules.cache") then
-  rpm.execute("%{_sbindir}/iconvconfig", "-o", "%{_libdir}/gconv/gconv-modules.cache",
-       "--nostdlib", "%{_libdir}/gconv")
+if posix.access("%{_sbindir}/ldconfig", "x") then
+  rpm.spawn({ "%{_sbindir}/ldconfig", "-X" })
 end
 
-%postun -p %{rootsbindir}/ldconfig
+if posix.access("%{_sbindir}/iconvconfig", "x") and posix.access("%{_libdir}/gconv", "r") then
+  rpm.spawn({
+    "%{_sbindir}/iconvconfig",
+    "-o", "%{_libdir}/gconv/gconv-modules.cache",
+    "--nostdlib", "%{_libdir}/gconv"
+  })
+end
 
-%post gconv-modules-extra -p %{_sbindir}/iconvconfig
-%postun gconv-modules-extra -p %{_sbindir}/iconvconfig
+%postun -p %{_sbindir}/ldconfig
 
+%post gconv-modules-extra -p <lua>
+if posix.access("%{_sbindir}/iconvconfig", "x") and posix.access("%{_libdir}/gconv", "r") then
+  rpm.spawn({
+    "%{_sbindir}/iconvconfig",
+    "-o", "%{_libdir}/gconv/gconv-modules.cache",
+    "--nostdlib", "%{_libdir}/gconv"
+  })
+end
+
+%postun gconv-modules-extra -p <lua>
+if posix.access("%{_sbindir}/iconvconfig", "x") and posix.access("%{_libdir}/gconv", "r") then
+  rpm.spawn({
+    "%{_sbindir}/iconvconfig",
+    "-o", "%{_libdir}/gconv/gconv-modules.cache",
+    "--nostdlib", "%{_libdir}/gconv"
+  })
+end
+
+%if %{with nscd}
 %pre -n nscd
-%sysusers_create_package nscd %{SOURCE22}
+%sysusers_create_package nscd %{SOURCE4}
 
 %preun -n nscd
 %systemd_preun nscd.service
@@ -599,66 +383,58 @@ end
 
 %postun -n nscd
 %systemd_postun nscd.service
-exit 0
+%endif
 
-# File triggers for when libraries are added or removed in standard
-# paths.
+# Run ldconfig once per transaction when files are added to or removed from
+# standard library paths or ld.so.conf.d.
 
-%transfiletriggerin -P 2000000 -p <lua> -- /lib /usr/lib /lib64 /usr/lib64
-%glibc_post_funcs
-call_ldconfig()
+%transfiletriggerin -P 2000000 -p <lua> -- /lib /usr/lib /lib64 /usr/lib64 /etc/ld.so.conf.d
+rpm.spawn({"%{_sbindir}/ldconfig"})
 %end
 
-%transfiletriggerpostun -P 2000000 -p <lua> -- /lib /usr/lib /lib64 /usr/lib64
-%glibc_post_funcs
-call_ldconfig()
+%transfiletriggerpostun -P 2000000 -p <lua> -- /lib /usr/lib /lib64 /usr/lib64 /etc/ld.so.conf.d
+rpm.spawn({"%{_sbindir}/ldconfig"})
 %end
 
 %files -f libc.lang
 # glibc
 %defattr(-,root,root)
 %license LICENSES
-%config /etc/ld.so.conf
+%config(noreplace) /etc/ld.so.conf
 %attr(0644,root,root) %verify(not md5 size mtime) %ghost %config(missingok,noreplace) /etc/ld.so.cache
 %config(noreplace) /etc/rpc
 %verify(not md5 size mtime) %config(noreplace) /etc/nsswitch.conf
 %attr(0644,root,root) %verify(not md5 size mtime) %ghost %config(missingok,noreplace) /etc/gai.conf
 %doc posix/gai.conf
-
 %{_bindir}/ld.so
 %attr(755,root,root) %{rtlddir}/%{rtld_name}
 %if 0%{?rtld_oldname:1}
 %attr(755,root,root) %{rtlddir}/%{rtld_oldname}
 %endif
-
 %ifarch riscv64
 %{_libdir}/lp64d
-%if "%{slibdir}" != "%{_libdir}"
-%{slibdir}/lp64d
 %endif
-%endif
-
-%{slibdir}/libBrokenLocale.so.1
-%{slibdir}/libanl.so.1
-%{slibdir}/libc.so.6*
-%{slibdir}/libc_malloc_debug.so.0
-%{slibdir}/libdl.so.2*
-%{slibdir}/libm.so.6*
-%{slibdir}/libnss_compat.so.2
-%{slibdir}/libnss_db.so.2
-%{slibdir}/libnss_dns.so.2
-%{slibdir}/libnss_files.so.2
-%{slibdir}/libnss_hesiod.so.2
-%{slibdir}/libpthread.so.0
-%{slibdir}/libresolv.so.2
-%{slibdir}/librt.so.1
-%{slibdir}/libthread_db.so.1
-%{slibdir}/libutil.so.1
+%{_libdir}/libBrokenLocale.so.1
+%{_libdir}/libanl.so.1
+%{_libdir}/libc.so.6*
+%{_libdir}/libc_malloc_debug.so.0
+%{_libdir}/libdl.so.2*
+%{_libdir}/libm.so.6*
+%{_libdir}/libnss_compat.so.2
+%{_libdir}/libnss_db.so.2
+%{_libdir}/libnss_dns.so.2
+%{_libdir}/libnss_files.so.2
+%{_libdir}/libnss_hesiod.so.2
+%{_libdir}/libpthread.so.0
+%{_libdir}/libresolv.so.2
+%{_libdir}/librt.so.1
+%{_libdir}/libthread_db.so.1
+%{_libdir}/libutil.so.1
 %ifarch x86_64
 %{_libdir}/libmvec.so.1
 %endif
 %dir %attr(0700,root,root) /var/cache/ldconfig
-%{rootsbindir}/ldconfig
+%{_sbindir}/ldconfig
 %{_bindir}/gencat
 %{_bindir}/getconf
 %{_bindir}/getent
@@ -682,38 +458,9 @@ call_ldconfig()
 %dir %{_libdir}/gconv/gconv-modules.d
 %attr(0644,root,root) %verify(not md5 size mtime) %ghost %{_libdir}/gconv/gconv-modules.cache
 
-%files gconv-modules-extra
-%dir %{_libdir}/gconv
-%dir %{_libdir}/gconv/gconv-modules.d
-%{_libdir}/gconv/gconv-modules.d/*.conf
-%{_libdir}/gconv/*.so
-%exclude %{_libdir}/gconv/ANSI_X3.110.so
-%exclude %{_libdir}/gconv/CP1252.so
-%exclude %{_libdir}/gconv/ISO8859-1.so
-%exclude %{_libdir}/gconv/ISO8859-15.so
-%exclude %{_libdir}/gconv/UNICODE.so
-%exclude %{_libdir}/gconv/UTF-16.so
-%exclude %{_libdir}/gconv/UTF-32.so
-%exclude %{_libdir}/gconv/UTF-7.so
-
-%files locale-base
-%defattr(-,root,root)
-%{_datadir}/locale/locale.alias
-%dir %{_prefix}/lib/locale
-%{_prefix}/lib/locale/C.utf8
-%{_prefix}/lib/locale/en_US.utf8
-%{_prefix}/lib/locale/zh_CN.utf8
-
-%files locale
-%defattr(-,root,root)
-%{_prefix}/lib/locale
-%exclude %{_prefix}/lib/locale/C.utf8
-%exclude %{_prefix}/lib/locale/en_US.utf8
-%exclude %{_prefix}/lib/locale/zh_CN.utf8
-
 %files devel
 %defattr(-,root,root)
-%license COPYING COPYING.LIB
+%license COPYING.LIB
 %doc NEWS README
 %{_bindir}/sprof
 %{_includedir}/*
@@ -729,7 +476,7 @@ call_ldconfig()
 %{_libdir}/libresolv.so
 %{_libdir}/libthread_db.so
 %ifarch x86_64
-/usr/lib64/libmvec.so
+%{_libdir}/libmvec.so
 %endif
 # These static libraries are needed even for shared builds
 %{_libdir}/libc_nonshared.a
@@ -739,6 +486,54 @@ call_ldconfig()
 %{_libdir}/libpthread.a
 %{_libdir}/librt.a
 %{_libdir}/libutil.a
+
+%files utils
+%defattr(-,root,root)
+%{_libdir}/libmemusage.so
+%{_libdir}/libpcprofile.so
+%dir %{_libdir}/audit
+%{_libdir}/audit/sotruss-lib.so
+%{_bindir}/mtrace
+%{_bindir}/pcprofiledump
+%{_bindir}/sotruss
+%{_bindir}/xtrace
+%{_bindir}/pldd
+
+%files doc
+%defattr(-,root,root)
+%doc %{_infodir}/libc.info.gz
+%doc %{_infodir}/libc.info-?.gz
+%doc %{_infodir}/libc.info-??.gz
+
+%files locale-base
+%defattr(-,root,root)
+%{_datadir}/locale/locale.alias
+%dir %{_prefix}/lib/locale
+%{_prefix}/lib/locale/C.utf8
+%{_prefix}/lib/locale/en_US.utf8
+%{_prefix}/lib/locale/zh_CN.utf8
+
+%files locale
+%defattr(-,root,root)
+%{_prefix}/lib/locale
+%{_prefix}/share/i18n
+%exclude %{_prefix}/lib/locale/C.utf8
+%exclude %{_prefix}/lib/locale/en_US.utf8
+%exclude %{_prefix}/lib/locale/zh_CN.utf8
+
+%files gconv-modules-extra
+%dir %{_libdir}/gconv
+%dir %{_libdir}/gconv/gconv-modules.d
+%{_libdir}/gconv/gconv-modules.d/*.conf
+%{_libdir}/gconv/*.so
+%exclude %{_libdir}/gconv/ANSI_X3.110.so
+%exclude %{_libdir}/gconv/CP1252.so
+%exclude %{_libdir}/gconv/ISO8859-1.so
+%exclude %{_libdir}/gconv/ISO8859-15.so
+%exclude %{_libdir}/gconv/UNICODE.so
+%exclude %{_libdir}/gconv/UTF-16.so
+%exclude %{_libdir}/gconv/UTF-32.so
+%exclude %{_libdir}/gconv/UTF-7.so
 
 %files static
 %defattr(-,root,root)
@@ -752,27 +547,26 @@ call_ldconfig()
 %{_libdir}/libmvec.a
 %endif
 
-%files info
+%files extra
 %defattr(-,root,root)
-%doc %{_infodir}/libc.info.gz
-%doc %{_infodir}/libc.info-?.gz
-%doc %{_infodir}/libc.info-??.gz
+%{_bindir}/makedb
+/var/db/Makefile
 
+%if %{with libnsl}
+%files -n libnsl
+%{_libdir}/libnsl.so.1
+%endif
 
-%files i18ndata
-%defattr(-,root,root)
-%{_prefix}/share/i18n
-
+%if %{with nscd}
 %files -n nscd
 %defattr(-,root,root)
 %config(noreplace) /etc/nscd.conf
 %{_sbindir}/nscd
-%{_sbindir}/rcnscd
-/usr/lib/systemd/system/nscd.service
-%dir /usr/lib/tmpfiles.d
-/usr/lib/tmpfiles.d/nscd.conf
-%dir /usr/lib/sysusers.d
-/usr/lib/sysusers.d/nscd.conf
+%{_prefix}/lib/systemd/system/nscd.service
+%dir %{_prefix}/lib/tmpfiles.d
+%{_prefix}/lib/tmpfiles.d/nscd.conf
+%dir %{_prefix}/lib/sysusers.d
+%{_prefix}/lib/sysusers.d/nscd.conf
 %dir %attr(0755,root,root) %ghost /run/nscd
 %attr(0644,root,root) %verify(not md5 size mtime) %ghost %config(missingok,noreplace) /run/nscd/nscd.pid
 %attr(0666,root,root) %verify(not md5 size mtime) %ghost %config(missingok,noreplace) /run/nscd/socket
@@ -782,32 +576,6 @@ call_ldconfig()
 %attr(0600,root,root) %verify(not md5 size mtime) %ghost %config(missingok,noreplace) /var/lib/nscd/hosts
 %attr(0600,root,root) %verify(not md5 size mtime) %ghost %config(missingok,noreplace) /var/lib/nscd/services
 %attr(0600,root,root) %verify(not md5 size mtime) %ghost %config(missingok,noreplace) /var/lib/nscd/netgroup
-
-
-%files extra
-%defattr(-,root,root)
-%{_bindir}/makedb
-/var/db/Makefile
-
-%files -n libnsl1
-%{slibdir}/libnsl.so.1
-
-%endif
-
-%if %{build_utils}
-%files -n glibc-utils
-%defattr(-,root,root)
-%{slibdir}/libmemusage.so
-%{slibdir}/libpcprofile.so
-%dir %{_libdir}/audit
-%{_libdir}/audit/sotruss-lib.so
-%{_bindir}/memusage
-%{_bindir}/memusagestat
-%{_bindir}/mtrace
-%{_bindir}/pcprofiledump
-%{_bindir}/sotruss
-%{_bindir}/xtrace
-%{_bindir}/pldd
 %endif
 
 %changelog
