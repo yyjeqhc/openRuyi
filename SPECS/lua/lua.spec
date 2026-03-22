@@ -101,7 +101,7 @@ rm -rf %{buildroot}%{_libdir}/*.a
 %defattr(-,root,root)
 %{_includedir}/l*.h
 %{_includedir}/l*.hpp
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/lua.pc
 %{_rpmmacrodir}/macros.lua
 
 %files help
