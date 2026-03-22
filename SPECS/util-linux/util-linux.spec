@@ -349,7 +349,12 @@ export TS_OPT_script_options_show_diff=yes
 %{_includedir}/*
 %{_libdir}/*.so
 %{_libdir}/*.a
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/blkid.pc
+%{_libdir}/pkgconfig/fdisk.pc
+%{_libdir}/pkgconfig/lastlog2.pc
+%{_libdir}/pkgconfig/mount.pc
+%{_libdir}/pkgconfig/smartcols.pc
+%{_libdir}/pkgconfig/uuid.pc
 %{_mandir}/man3/*
 
 
