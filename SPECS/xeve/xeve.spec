@@ -50,7 +50,7 @@ rm -rfv %{buildroot}%{_libdir}/xeve*
 %files devel
 %{_libdir}/libxeve*.so
 %{_includedir}/xeve*/
-%{_libdir}/pkgconfig/xeve*.pc
+%{_libdir}/pkgconfig/xeveb.pc
 
 %changelog
 %{?autochangelog}
