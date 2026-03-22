@@ -49,7 +49,7 @@ find . -type f -name CMakeLists.txt -print0 | xargs -0 sed -i -e "s/-march=nativ
 %license license.txt
 %doc %{_docdir}/RapidJSON/
 %{_libdir}/cmake/RapidJSON/
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/RapidJSON.pc
 %{_includedir}/rapidjson/
 
 %changelog
