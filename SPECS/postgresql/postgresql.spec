@@ -480,7 +480,7 @@ install -m0644 -D %{SOURCE6} %{buildroot}%{_unitdir}/postgresql.service
 %{_includedir}/pgsql/internal/libpq/protocol.h
 
 %{_includedir}/libpq/*.h
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/libpq.pc
 %{_libdir}/libpq.so
 %{_includedir}/pg_config*.h
 
