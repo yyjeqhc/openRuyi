@@ -67,7 +67,9 @@ rm -fr %{buildroot}%{_datadir}/doc
 %{_includedir}/tbb/
 %{_libdir}/*.so
 %{_libdir}/cmake/TBB/
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/tbb.pc
+%{_libdir}/pkgconfig/tbbmalloc.pc
+%{_libdir}/pkgconfig/tbbmalloc_proxy.pc
 
 %changelog
 %{?autochangelog}
