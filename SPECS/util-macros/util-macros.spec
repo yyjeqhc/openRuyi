@@ -35,7 +35,7 @@ rm -f %{buildroot}%{_datadir}/util-macros/INSTALL
 %license COPYING
 %dir %{_datadir}/aclocal
 %{_datadir}/aclocal/*.m4
-%{_datadir}/pkgconfig/*.pc
+%{_datadir}/pkgconfig/xorg-macros.pc
 
 %changelog
 %{?autochangelog}
