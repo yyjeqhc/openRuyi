@@ -64,7 +64,8 @@ cp -R doc/html "%{buildroot}%{_docdir}/%{name}/"
 %files  devel
 %{_libdir}/libjson-c.so
 %{_includedir}/json-c
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/json-c.pc
+%{_libdir}/pkgconfig/json.pc
 %dir %{_libdir}/cmake/json-c
 %{_libdir}/cmake/json-c/json-c-config.cmake
 %{_libdir}/cmake/json-c/json-c-targets-*.cmake
