@@ -99,7 +99,10 @@ Programming examples for %{name}.
 %{_qt6_archdatadir}/mkspecs/modules/*.pri
 %{_qt6_datadir}/modules/*.json
 %{_qt6_libdir}/qt6/metatypes/qt6*_metatypes.json
-%{_qt6_libdir}/pkgconfig/*.pc
+%{_qt6_libdir}/pkgconfig/Qt6Scxml.pc
+%{_qt6_libdir}/pkgconfig/Qt6ScxmlQml.pc
+%{_qt6_libdir}/pkgconfig/Qt6StateMachine.pc
+%{_qt6_libdir}/pkgconfig/Qt6StateMachineQml.pc
 
 %files examples
 %{_qt6_examplesdir}/
