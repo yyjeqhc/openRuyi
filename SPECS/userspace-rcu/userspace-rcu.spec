@@ -49,7 +49,12 @@ autoreconf -vif
 %{_includedir}/urcu*
 %{_libdir}/lib*.so
 %{_libdir}/lib*.a
-%{_libdir}/pkgconfig/liburcu*.pc
+%{_libdir}/pkgconfig/liburcu-bp.pc
+%{_libdir}/pkgconfig/liburcu-cds.pc
+%{_libdir}/pkgconfig/liburcu-mb.pc
+%{_libdir}/pkgconfig/liburcu-memb.pc
+%{_libdir}/pkgconfig/liburcu-qsbr.pc
+%{_libdir}/pkgconfig/liburcu.pc
 
 %changelog
 %{?autochangelog}
