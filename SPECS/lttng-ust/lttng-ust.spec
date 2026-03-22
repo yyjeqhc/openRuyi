@@ -59,7 +59,8 @@ autoreconf -vif
 %dir %{_includedir}/lttng
 %{_includedir}/lttng/*
 %{_libdir}/*.so
-%{_libdir}/pkgconfig/lttng-ust*.pc
+%{_libdir}/pkgconfig/lttng-ust-ctl.pc
+%{_libdir}/pkgconfig/lttng-ust.pc
 
 %dir %{_docdir}/lttng-ust/examples
 %{_docdir}/lttng-ust/examples/*
