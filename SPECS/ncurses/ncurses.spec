@@ -100,7 +100,17 @@ xz NEWS
 %files devel
 %{_bindir}/ncurses*-config
 %{_libdir}/lib*.so
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/form.pc
+%{_libdir}/pkgconfig/formw.pc
+%{_libdir}/pkgconfig/menu.pc
+%{_libdir}/pkgconfig/menuw.pc
+%{_libdir}/pkgconfig/ncurses++.pc
+%{_libdir}/pkgconfig/ncurses++w.pc
+%{_libdir}/pkgconfig/ncurses.pc
+%{_libdir}/pkgconfig/ncursesw.pc
+%{_libdir}/pkgconfig/panel.pc
+%{_libdir}/pkgconfig/panelw.pc
+%{_libdir}/pkgconfig/tinfo.pc
 %{_includedir}/*.h
 %{_mandir}/man1/ncurses*-config*
 %{_mandir}/man3/*
