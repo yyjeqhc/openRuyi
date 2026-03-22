@@ -65,7 +65,7 @@ Static library for the %{name} library
 %files devel
 %{_includedir}/lz4*.h
 %{_libdir}/liblz4.so
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/liblz4.pc
 
 %files static
 %{_libdir}/liblz4.a
