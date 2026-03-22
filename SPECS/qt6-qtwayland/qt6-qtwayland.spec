@@ -145,7 +145,11 @@ popd
 %{_qt6_libdir}/cmake/Qt6WaylandClient/*.cmake
 %{_qt6_libdir}/qt6/metatypes/qt6*_metatypes.json
 %{_qt6_datadir}/modules/*.json
-%{_qt6_libdir}/pkgconfig/*.pc
+%{_qt6_libdir}/pkgconfig/Qt6WaylandCompositor.pc
+%{_qt6_libdir}/pkgconfig/Qt6WaylandCompositorIviapplication.pc
+%{_qt6_libdir}/pkgconfig/Qt6WaylandCompositorPresentationTime.pc
+%{_qt6_libdir}/pkgconfig/Qt6WaylandCompositorWLShell.pc
+%{_qt6_libdir}/pkgconfig/Qt6WaylandCompositorXdgShell.pc
 %exclude %{_qt6_libdir}/cmake/Qt6WaylandClient/Qt6QWaylandAdwaitaDecoration*.cmake
 
 %files adwaita-decoration
