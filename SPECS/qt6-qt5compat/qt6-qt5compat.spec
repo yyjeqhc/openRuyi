@@ -85,7 +85,7 @@ popd
 %{_qt6_archdatadir}/mkspecs/modules/*.pri
 %{_qt6_datadir}/modules/*.json
 %{_qt6_libdir}/qt6/metatypes/qt6*_metatypes.json
-%{_qt6_libdir}/pkgconfig/*.pc
+%{_qt6_libdir}/pkgconfig/Qt6Core5Compat.pc
 
 %files examples
 %{_qt6_examplesdir}/
