@@ -99,7 +99,10 @@ fi
 %{_bindir}/*
 %{_sbindir}/*
 %{_libdir}/*.a
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/libofproto.pc
+%{_libdir}/pkgconfig/libopenvswitch.pc
+%{_libdir}/pkgconfig/libovsdb.pc
+%{_libdir}/pkgconfig/libsflow.pc
 %{_includedir}/openvswitch/
 %{_includedir}/openflow/
 %{_datadir}/openvswitch/
