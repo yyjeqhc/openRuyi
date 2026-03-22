@@ -79,7 +79,34 @@ rm -f %{buildroot}%{_docdir}/*/*.{html,svg}
 %{_includedir}/X11/fonts/*
 %{_includedir}/X11/keysym.h
 %{_includedir}/X11/keysymdef.h
-%{_datadir}/pkgconfig/*.pc
+%{_datadir}/pkgconfig/bigreqsproto.pc
+%{_datadir}/pkgconfig/compositeproto.pc
+%{_datadir}/pkgconfig/damageproto.pc
+%{_datadir}/pkgconfig/dmxproto.pc
+%{_datadir}/pkgconfig/dpmsproto.pc
+%{_datadir}/pkgconfig/dri2proto.pc
+%{_datadir}/pkgconfig/dri3proto.pc
+%{_datadir}/pkgconfig/fixesproto.pc
+%{_datadir}/pkgconfig/fontsproto.pc
+%{_datadir}/pkgconfig/glproto.pc
+%{_datadir}/pkgconfig/inputproto.pc
+%{_datadir}/pkgconfig/kbproto.pc
+%{_datadir}/pkgconfig/presentproto.pc
+%{_datadir}/pkgconfig/randrproto.pc
+%{_datadir}/pkgconfig/recordproto.pc
+%{_datadir}/pkgconfig/renderproto.pc
+%{_datadir}/pkgconfig/resourceproto.pc
+%{_datadir}/pkgconfig/scrnsaverproto.pc
+%{_datadir}/pkgconfig/videoproto.pc
+%{_datadir}/pkgconfig/xcmiscproto.pc
+%{_datadir}/pkgconfig/xextproto.pc
+%{_datadir}/pkgconfig/xf86bigfontproto.pc
+%{_datadir}/pkgconfig/xf86dgaproto.pc
+%{_datadir}/pkgconfig/xf86driproto.pc
+%{_datadir}/pkgconfig/xf86vidmodeproto.pc
+%{_datadir}/pkgconfig/xineramaproto.pc
+%{_datadir}/pkgconfig/xproto.pc
+%{_datadir}/pkgconfig/xwaylandproto.pc
 %{_docdir}/xorgproto/*
 %dir %{_docdir}/xorgproto/
 
