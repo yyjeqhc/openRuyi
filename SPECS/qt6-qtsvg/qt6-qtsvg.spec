@@ -88,7 +88,8 @@ popd
 %{_qt6_libdir}/cmake/Qt6SvgWidgets/
 %{_qt6_descriptionsdir}/*.json
 %{_qt6_metatypesdir}/*.json
-%{_qt6_libdir}/pkgconfig/*.pc
+%{_qt6_libdir}/pkgconfig/Qt6Svg.pc
+%{_qt6_libdir}/pkgconfig/Qt6SvgWidgets.pc
 %{_qt6_archdatadir}/sbom/%{qt_module}-%{real_version}.spdx
 
 %files examples
