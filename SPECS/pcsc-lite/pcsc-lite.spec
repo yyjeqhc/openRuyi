@@ -94,7 +94,7 @@ install -d %{buildroot}%{_sysconfdir}/reader.conf.d
 %{_includedir}/PCSC/
 %{_libdir}/lib*.a
 %{_libdir}/lib*.so
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/libpcsclite.pc
 %{_mandir}/man1/*
 
 %changelog
