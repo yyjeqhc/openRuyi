@@ -61,7 +61,7 @@ This package contains the development headers and libraries for OpenBLAS.
 %files devel
 %{_includedir}/*
 %{_libdir}/libopenblas*.so
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/openblas64.pc
 %{_libdir}/cmake/openblas/
 
 %changelog
