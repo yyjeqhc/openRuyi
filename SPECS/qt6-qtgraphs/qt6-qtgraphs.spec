@@ -86,7 +86,8 @@ popd
 %{_qt6_libdir}/cmake/Qt6GraphsWidgets/
 %{_qt6_libdir}/cmake/Qt6GraphsWidgetsPrivate/
 %{_qt6_libdir}/cmake/Qt6Qml/QmlPlugins/Qt6Graphsplugin*.cmake
-%{_qt6_libdir}/pkgconfig/Qt6Graphs*.pc
+%{_qt6_libdir}/pkgconfig/Qt6Graphs.pc
+%{_qt6_libdir}/pkgconfig/Qt6GraphsWidgets.pc
 %{_qt6_archdatadir}/mkspecs/modules/qt_lib_graphs*.pri
 %{_qt6_libdir}/qt6/metatypes/qt6*_metatypes.json
 %{_qt6_datadir}/modules/*.json
