@@ -40,7 +40,7 @@ Requires:       pkgconfig
 
 %files devel
 %{_includedir}/xcb/xcb_keysyms.h
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/xcb-keysyms.pc
 %{_libdir}/libxcb-keysyms.so
 
 %changelog
