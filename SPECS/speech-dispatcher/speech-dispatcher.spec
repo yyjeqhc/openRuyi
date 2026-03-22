@@ -147,7 +147,7 @@ desktop-file-validate %{buildroot}%{_datadir}/speech-dispatcher/conf/desktop/spe
 %files devel
 %{_includedir}/*
 %{_libdir}/lib*.so
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/speech-dispatcher.pc
 
 %files -n python-speechd
 %{python3_sitearch}/speechd*
