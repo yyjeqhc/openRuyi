@@ -66,7 +66,10 @@ autoreconf -fiv
 %{_includedir}/*.h
 %{_libdir}/*.so
 %{_libdir}/*.a
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/libpcre2-16.pc
+%{_libdir}/pkgconfig/libpcre2-32.pc
+%{_libdir}/pkgconfig/libpcre2-8.pc
+%{_libdir}/pkgconfig/libpcre2-posix.pc
 %{_mandir}/man1/pcre2-config.1.gz
 %{_mandir}/man3/*
 %{_bindir}/pcre2-config
