@@ -133,7 +133,7 @@ fi
 %{_includedir}/libopeniscsiusr*.h
 %{_mandir}/man3/*.3*
 %{_libdir}/libopeniscsiusr.so
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/libopeniscsiusr.pc
 
 %changelog
 %{?autochangelog}
