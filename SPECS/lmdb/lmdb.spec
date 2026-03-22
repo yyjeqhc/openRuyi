@@ -85,7 +85,7 @@ install -Dpm 0644 -t %{buildroot}%{_libdir}/pkgconfig lmdb.pc
 %files devel
 %{_includedir}/*
 %{_libdir}/*.so
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/lmdb.pc
 
 %changelog
 %{?autochangelog}
