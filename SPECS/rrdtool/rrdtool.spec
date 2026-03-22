@@ -229,7 +229,7 @@ rm -rf %{buildroot}%{perl_vendorlib}/leaktest.pl \
 %files devel
 %{_includedir}/*.h
 %{_libdir}/lib*.so
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/librrd.pc
 
 %files tcl
 %doc bindings/tcl/README
