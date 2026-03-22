@@ -79,7 +79,7 @@ Development files for %{name}.
 
 %files devel
 %{_includedir}/wlroots-*/
-%{_libdir}/pkgconfig/wlroots-*.pc
+%{_libdir}/pkgconfig/wlroots-0.19.pc
 
 %changelog
 %{?autochangelog}
