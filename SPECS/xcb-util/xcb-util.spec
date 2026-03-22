@@ -62,7 +62,10 @@ in %{name}.
 %doc README.md
 %{_includedir}/xcb
 %{_libdir}/libxcb-util.so
-%{_libdir}/pkgconfig/xcb-*.pc
+%{_libdir}/pkgconfig/xcb-atom.pc
+%{_libdir}/pkgconfig/xcb-aux.pc
+%{_libdir}/pkgconfig/xcb-event.pc
+%{_libdir}/pkgconfig/xcb-util.pc
 
 %changelog
 %{?autochangelog}
