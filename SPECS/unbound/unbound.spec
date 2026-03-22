@@ -279,7 +279,7 @@ echo ".so man8/unbound-control.8" > %{buildroot}/%{_mandir}/man8/unbound-control
 %{_libdir}/libunbound.so
 %{_includedir}/unbound.h
 %{_mandir}/man3/*
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/libunbound.pc
 
 %files libs
 %doc doc/README
