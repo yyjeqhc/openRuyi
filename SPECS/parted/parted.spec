@@ -71,7 +71,8 @@ autoreconf -fiv
 %files devel
 %{_includedir}/parted
 %{_libdir}/libparted*.so
-%{_libdir}/pkgconfig/libparted*.pc
+%{_libdir}/pkgconfig/libparted-fs-resize.pc
+%{_libdir}/pkgconfig/libparted.pc
 
 %changelog
 %{?autochangelog}
