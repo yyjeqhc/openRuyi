@@ -51,7 +51,7 @@ rm -rfv %{buildroot}%{_libdir}/xevd*
 %files devel
 %{_libdir}/libxevd*.so
 %{_includedir}/xevd*/
-%{_libdir}/pkgconfig/xevd*.pc
+%{_libdir}/pkgconfig/xevdb.pc
 
 %changelog
 %{?autochangelog}
