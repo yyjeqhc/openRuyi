@@ -671,7 +671,11 @@ EXCLUDES="-x test_ensurepip -x test_ctypes -x test_tools"
 %{_bindir}/msgfmt%{pybasever}.py
 
 %{_bindir}/python*-config
-%{_libdir}/pkgconfig/python*.pc
+%{_libdir}/pkgconfig/python-3.13-embed.pc
+%{_libdir}/pkgconfig/python-3.13.pc
+%{_libdir}/pkgconfig/python.pc
+%{_libdir}/pkgconfig/python3-embed.pc
+%{_libdir}/pkgconfig/python3.pc
 
 %files -n %{pkgname}-idle
 %{_bindir}/idle*
