@@ -189,7 +189,9 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/*@*
 %{_libdir}/libpulse.so
 %{_libdir}/libpulse-mainloop-glib.so
 %{_libdir}/libpulse-simple.so
-%{_libdir}/pkgconfig/libpulse*.pc
+%{_libdir}/pkgconfig/libpulse-mainloop-glib.pc
+%{_libdir}/pkgconfig/libpulse-simple.pc
+%{_libdir}/pkgconfig/libpulse.pc
 %dir %{_datadir}/vala
 %dir %{_datadir}/vala/vapi
 %{_datadir}/vala/vapi/libpulse*.vapi
