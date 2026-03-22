@@ -356,7 +356,16 @@ rm -rf %{buildroot}/%{_sbindir}/srp_daemon.sh
 %{_includedir}/infiniband/*
 %{_includedir}/rdma/*
 %{_libdir}/lib*.so
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/libefa.pc
+%{_libdir}/pkgconfig/libhns.pc
+%{_libdir}/pkgconfig/libibmad.pc
+%{_libdir}/pkgconfig/libibnetdisc.pc
+%{_libdir}/pkgconfig/libibumad.pc
+%{_libdir}/pkgconfig/libibverbs.pc
+%{_libdir}/pkgconfig/libmana.pc
+%{_libdir}/pkgconfig/libmlx4.pc
+%{_libdir}/pkgconfig/libmlx5.pc
+%{_libdir}/pkgconfig/librdmacm.pc
 
 %files -n libibverbs-utils
 %{_bindir}/ibv_*
