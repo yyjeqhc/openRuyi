@@ -256,7 +256,10 @@ sed -i -e "s|%{version} \${_Qt6WebEngine|%{real_version} \${_Qt6WebEngine|" \
 %{_qt6_libdir}/cmake/Qt6WebEngine*/
 %{_qt6_libdir}/cmake/Qt6/*.cmake
 %{_qt6_libdir}/cmake/Qt6BuildInternals/StandaloneTests/QtWebEngine*
-%{_qt6_libdir}/pkgconfig/Qt6WebEngine*.pc
+%{_qt6_libdir}/pkgconfig/Qt6WebEngineCore.pc
+%{_qt6_libdir}/pkgconfig/Qt6WebEngineQuick.pc
+%{_qt6_libdir}/pkgconfig/Qt6WebEngineQuickDelegatesQml.pc
+%{_qt6_libdir}/pkgconfig/Qt6WebEngineWidgets.pc
 %{_qt6_archdatadir}/mkspecs/modules/qt_lib_webengine*.pri
 %{_qt6_pluginsdir}/designer/libqwebengineview.so
 %{_qt6_includedir}/QtPdf*/
@@ -267,7 +270,9 @@ sed -i -e "s|%{version} \${_Qt6WebEngine|%{real_version} \${_Qt6WebEngine|" \
 %{_qt6_libdir}/cmake/Qt6Gui/Qt6QPdf*.cmake
 %{_qt6_libdir}/cmake/Qt6Pdf*/
 %{_qt6_libdir}/cmake/Qt6Qml/QmlPlugins/Qt6Pdf*.cmake
-%{_qt6_libdir}/pkgconfig/Qt6Pdf*.pc
+%{_qt6_libdir}/pkgconfig/Qt6Pdf.pc
+%{_qt6_libdir}/pkgconfig/Qt6PdfQuick.pc
+%{_qt6_libdir}/pkgconfig/Qt6PdfWidgets.pc
 %{_qt6_archdatadir}/mkspecs/modules/qt_lib_pdf*.pri
 
 %files examples
