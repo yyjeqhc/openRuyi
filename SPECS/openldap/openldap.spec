@@ -405,7 +405,8 @@ ln -fs libldap.so "%{buildroot}%{_libdir}/libldap_r.so"
 %{_includedir}/*.h
 %{_libdir}/liblber.so
 %{_libdir}/libldap*.so
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/lber.pc
+%{_libdir}/pkgconfig/ldap.pc
 
 %files static
 %_libdir/liblber.a
