@@ -78,7 +78,9 @@ rm -rf %{buildroot}%{_datadir}/libtool
 
 %files devel
 %{_includedir}/*
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/odbc.pc
+%{_libdir}/pkgconfig/odbccr.pc
+%{_libdir}/pkgconfig/odbcinst.pc
 %{_libdir}/*.so
 
 %changelog
