@@ -45,7 +45,7 @@ that use the libnfnetlink library.
 
 %files          devel
 %{_libdir}/*.so
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/libnfnetlink.pc
 %{_includedir}/%{name}/*.h
 
 %changelog
