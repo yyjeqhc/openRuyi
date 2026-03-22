@@ -49,7 +49,8 @@ done
 
 %files devel
 %{_libdir}/libspirv-cross-*.so
-%{_libdir}/pkgconfig/*.pc
+%{_libdir}/pkgconfig/spirv-cross-c-shared.pc
+%{_libdir}/pkgconfig/spirv-cross-c.pc
 %{_includedir}/spirv_cross/
 %dir %_datadir/spirv*
 %_datadir/spirv*/cmake/
