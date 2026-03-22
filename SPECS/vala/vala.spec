@@ -121,7 +121,8 @@ autoreconf -fiv
 %{_bindir}/vala-gen-introspect-%{release_version}*
 %{_bindir}/vapigen
 %{_bindir}/vapigen-%{release_version}
-%{_libdir}/pkgconfig/vapigen*.pc
+%{_libdir}/pkgconfig/vapigen-0.56.pc
+%{_libdir}/pkgconfig/vapigen.pc
 %{_libdir}/vala-%{release_version}/
 %{_datadir}/aclocal/vala.m4
 %{_datadir}/aclocal/vapigen.m4
