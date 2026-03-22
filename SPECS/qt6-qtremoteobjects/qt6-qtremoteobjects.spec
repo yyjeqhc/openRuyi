@@ -82,7 +82,9 @@ Programming examples for %{name}.
 %{_qt6_archdatadir}/mkspecs/modules/*
 %{_qt6_libdir}/qt6/metatypes/qt6*_metatypes.json
 %{_qt6_datadir}/modules/*.json
-%{_qt6_libdir}/pkgconfig/*.pc
+%{_qt6_libdir}/pkgconfig/Qt6RemoteObjects.pc
+%{_qt6_libdir}/pkgconfig/Qt6RemoteObjectsQml.pc
+%{_qt6_libdir}/pkgconfig/Qt6RepParser.pc
 
 %files examples
 %{_qt6_examplesdir}/
