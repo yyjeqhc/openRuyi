@@ -26,7 +26,7 @@ BuildRequires:  gcc-c++
 BuildRequires:  python3dist(pip)
 BuildRequires:  python3dist(wheel)
 BuildRequires:  python3dist(meson-python) >= 0.15.0
-BuildRequires:  python3dist(Cython) >= 3.0.6
+BuildRequires:  python3dist(cython) >= 3.0.6
 BuildRequires:  pkgconfig
 BuildRequires:  openblas-devel
 BuildRequires:  python3dist(pytest)
