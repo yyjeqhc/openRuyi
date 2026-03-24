@@ -4,16 +4,17 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-Name:           openRuyi-release
+Name:           openruyi-release
 Version:        2
 Release:        %autorelease
 Summary:        openRuyi release files
 License:        MulanPSL-2.0
-URL:            https://www.openruyi.org
+URL:            https://www.openruyi.cn
 Source0:        issue.conf
 Source1:        os-release.conf
 
 Provides:       system-release
+Provides:       openRuyi-release
 
 %description
 This package contains the release files for openRuyi.
