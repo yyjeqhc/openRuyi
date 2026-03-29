@@ -11,7 +11,7 @@ permissions:
   pull-requests: read
 on:
   pull_request:
-    branches: [main]
+    branches: [main, ci-test]
 
 jobs:
   pre-commit:
