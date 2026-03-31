@@ -47,7 +47,7 @@ to be created.
 
 %package     -n python-%{name}
 Summary:        Python interface for VapourSynth
-Requires:       %{name}%{?isa} = %{version}-%{release}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 Provides:       python3-%{name}
 %python_provide python3-%{name}
 
@@ -56,7 +56,7 @@ Python interface for VapourSynth/VSScript.
 
 %package        devel
 Summary:        Development files for %{name}
-Requires:       %{name}%{?isa} = %{version}-%{release}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 %description    devel
 Development files for %{name}.
