@@ -112,7 +112,10 @@ done
 %doc %{_infodir}/fftw3.info*
 %{_includedir}/fftw3*
 %{_libdir}/cmake/fftw3/
-%{_libdir}/pkgconfig/fftw3*.pc
+%{_libdir}/pkgconfig/fftw3.pc
+%{_libdir}/pkgconfig/fftw3f.pc
+%{_libdir}/pkgconfig/fftw3l.pc
+%{_libdir}/pkgconfig/fftw3q.pc
 %{_libdir}/libfftw3*.so
 
 %changelog
