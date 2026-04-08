@@ -15,7 +15,7 @@ License:        MPL-2.0
 URL:            https://github.com/mozilla/cbindgen
 #!RemoteAsset:  sha256:befbfd072a8e81c02f8c507aefce431fe5e7d051f83d48a23ffc9b9fe5a11799
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
-BuildSystem:    rustcrates
+BuildSystem:    rust
 
 BuildRequires:  rust-rpm-macros
 BuildRequires:  rust
@@ -44,21 +44,6 @@ BuildRequires:  crate(clap-4.0/default) >= 4.3
 %description
 binary file of Rust crate "cbindgen".
 
-%prep -a
-mkdir -p ~/.cargo
-cat > ~/.cargo/config.toml <<EOF
-[source.crates-io]
-replace-with = "system-registry"
-
-[source.system-registry]
-directory = "/usr/share/cargo/registry"
-EOF
-
-rm -rf Cargo.lock
-
-%build
-cargo build --release
-
 %install -a
 install -Dm0755 target/release/cbindgen %{buildroot}%{_bindir}/cbindgen
 
@@ -67,4 +52,4 @@ install -Dm0755 target/release/cbindgen %{buildroot}%{_bindir}/cbindgen
 %exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

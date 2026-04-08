@@ -12,7 +12,7 @@ License:        MIT
 # TODO: Update the URL when there is a proper project page
 URL:            https://git.openruyi.cn/openRuyi/rust-rpm-macros
 #!RemoteAsset:  sha256:5659e8ee57a1669b23a64bf9ae580908f04257d069d1b5c924279682a4feae17
-Source0:        https://git.openruyi.cn/yyjeqhc/rust-rpm-macros/archive/dd731d9d19c775a7f84884935477278fefee271b.tar.gz
+Source0:        https://git.openruyi.cn/yyjeqhc/rust-rpm-macros/archive/f88de4d95214405ae623b6d4161f1454f13352af.tar.gz
 BuildArch:      noarch
 BuildSystem:    autotools
 
