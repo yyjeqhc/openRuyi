@@ -4,9 +4,9 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global crate_name crypto-common
-%global full_version 0.1.7
-%global pkgname crypto-common-0.1
+%global crate_name winapi-x86_64-pc-windows-gnu
+%global full_version 0.4.0
+%global pkgname winapi-x86-64-pc-windows-gnu-0.4
 
 %define _source_payload w9.xzdio
 %define _binary_payload w9.xzdio
@@ -16,13 +16,13 @@
 %global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
 %global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
 
-Name:           rust-crypto-common-0.1
-Version:        0.1.7
+Name:           rust-winapi-x86-64-pc-windows-gnu-0.4
+Version:        0.4.0
 Release:        %autorelease
-Summary:        Rust crate "crypto-common"
-License:        MIT OR Apache-2.0
-URL:            https://github.com/RustCrypto/traits
-#!RemoteAsset:  sha256:78c8292055d1c1df0cce5d180393dc8cce0abec0a7102adb6c7b1eef6016d60a
+Summary:        Rust crate "winapi-x86_64-pc-windows-gnu"
+License:        MIT/Apache-2.0
+URL:            https://github.com/retep998/winapi-rs
+#!RemoteAsset:  sha256:712e227841d057c1ee1cd2fb22fa7e5a5461ae8e48fa2ca79ec42cfc1931183f
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -30,15 +30,12 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 BuildRequires:  takopack
 
-Requires:       crate(generic-array-0.14/default) >= 0.14.7
-Requires:       crate(generic-array-0.14/more-lengths) >= 0.14.7
-Requires:       crate(typenum-1.0/default) >= 1.19.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/std)
 
 %description
-Source code for takopackized Rust crate "crypto-common"
+Please don't use this crate directly, depend on winapi instead.
+Source code for takopackized Rust crate "winapi-x86_64-pc-windows-gnu"
 
 %files
 %exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps

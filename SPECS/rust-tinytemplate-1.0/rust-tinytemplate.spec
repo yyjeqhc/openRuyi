@@ -4,9 +4,9 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global crate_name crypto-common
-%global full_version 0.1.7
-%global pkgname crypto-common-0.1
+%global crate_name tinytemplate
+%global full_version 1.2.1
+%global pkgname tinytemplate-1.0
 
 %define _source_payload w9.xzdio
 %define _binary_payload w9.xzdio
@@ -16,13 +16,13 @@
 %global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
 %global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
 
-Name:           rust-crypto-common-0.1
-Version:        0.1.7
+Name:           rust-tinytemplate-1.0
+Version:        1.2.1
 Release:        %autorelease
-Summary:        Rust crate "crypto-common"
-License:        MIT OR Apache-2.0
-URL:            https://github.com/RustCrypto/traits
-#!RemoteAsset:  sha256:78c8292055d1c1df0cce5d180393dc8cce0abec0a7102adb6c7b1eef6016d60a
+Summary:        Rust crate "tinytemplate"
+License:        Apache-2.0 OR MIT
+URL:            https://github.com/bheisler/TinyTemplate
+#!RemoteAsset:  sha256:be4d6b5f19ff7664e8c98d03e2139cb510db9b0a60b55f8e8709b689d939b6bc
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -30,15 +30,13 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 BuildRequires:  takopack
 
-Requires:       crate(generic-array-0.14/default) >= 0.14.7
-Requires:       crate(generic-array-0.14/more-lengths) >= 0.14.7
-Requires:       crate(typenum-1.0/default) >= 1.19.0
+Requires:       crate(serde-1.0/default) >= 1.0.228
+Requires:       crate(serde-json-1.0/default) >= 1.0.149
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/std)
 
 %description
-Source code for takopackized Rust crate "crypto-common"
+Source code for takopackized Rust crate "tinytemplate"
 
 %files
 %exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps

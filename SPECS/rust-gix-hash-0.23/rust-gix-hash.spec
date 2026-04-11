@@ -4,9 +4,9 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global crate_name crypto-common
-%global full_version 0.1.7
-%global pkgname crypto-common-0.1
+%global crate_name gix-hash
+%global full_version 0.23.0
+%global pkgname gix-hash-0.23
 
 %define _source_payload w9.xzdio
 %define _binary_payload w9.xzdio
@@ -16,13 +16,13 @@
 %global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
 %global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
 
-Name:           rust-crypto-common-0.1
-Version:        0.1.7
+Name:           rust-gix-hash-0.23
+Version:        0.23.0
 Release:        %autorelease
-Summary:        Rust crate "crypto-common"
+Summary:        Rust crate "gix-hash"
 License:        MIT OR Apache-2.0
-URL:            https://github.com/RustCrypto/traits
-#!RemoteAsset:  sha256:78c8292055d1c1df0cce5d180393dc8cce0abec0a7102adb6c7b1eef6016d60a
+URL:            https://github.com/GitoxideLabs/gitoxide
+#!RemoteAsset:  sha256:0fb896a02d9ab96fa518475a5f30ad3952010f801a8de5840f633f4a6b985dfb
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -30,15 +30,15 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 BuildRequires:  takopack
 
-Requires:       crate(generic-array-0.14/default) >= 0.14.7
-Requires:       crate(generic-array-0.14/more-lengths) >= 0.14.7
-Requires:       crate(typenum-1.0/default) >= 1.19.0
+Requires:       crate(faster-hex-0.10/std) >= 0.10.0
+Requires:       crate(gix-features-0.46/default) >= 0.46.2
+Requires:       crate(gix-features-0.46/progress) >= 0.46.2
+Requires:       crate(thiserror-2.0/default) >= 2.0.18
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/std)
 
 %description
-Source code for takopackized Rust crate "crypto-common"
+Source code for takopackized Rust crate "gix-hash"
 
 %files
 %exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps

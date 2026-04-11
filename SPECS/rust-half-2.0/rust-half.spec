@@ -4,9 +4,9 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global crate_name crypto-common
-%global full_version 0.1.7
-%global pkgname crypto-common-0.1
+%global crate_name half
+%global full_version 2.7.1
+%global pkgname half-2.0
 
 %define _source_payload w9.xzdio
 %define _binary_payload w9.xzdio
@@ -16,13 +16,13 @@
 %global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
 %global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
 
-Name:           rust-crypto-common-0.1
-Version:        0.1.7
+Name:           rust-half-2.0
+Version:        2.7.1
 Release:        %autorelease
-Summary:        Rust crate "crypto-common"
+Summary:        Rust crate "half"
 License:        MIT OR Apache-2.0
-URL:            https://github.com/RustCrypto/traits
-#!RemoteAsset:  sha256:78c8292055d1c1df0cce5d180393dc8cce0abec0a7102adb6c7b1eef6016d60a
+URL:            https://github.com/VoidStarKat/half-rs
+#!RemoteAsset:  sha256:6ea2d84b969582b4b1864a92dc5d27cd2b77b622a8d79306834f1be5ba20d84b
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -30,15 +30,20 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 BuildRequires:  takopack
 
-Requires:       crate(generic-array-0.14/default) >= 0.14.7
-Requires:       crate(generic-array-0.14/more-lengths) >= 0.14.7
-Requires:       crate(typenum-1.0/default) >= 1.19.0
+Requires:       crate(cfg-if-1.0/default) >= 1.0.4
+Requires:       crate(crunchy-0.2/default) >= 0.2.4
+Requires:       crate(zerocopy-0.8/derive) >= 0.8.48
+Requires:       crate(zerocopy-0.8/simd) >= 0.8.48
 Provides:       crate(%{pkgname})
+Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/default)
+Provides:       crate(%{pkgname}/nightly)
 Provides:       crate(%{pkgname}/std)
+Provides:       crate(%{pkgname}/use-intrinsics)
+Provides:       crate(%{pkgname}/zerocopy)
 
 %description
-Source code for takopackized Rust crate "crypto-common"
+Source code for takopackized Rust crate "half"
 
 %files
 %exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps

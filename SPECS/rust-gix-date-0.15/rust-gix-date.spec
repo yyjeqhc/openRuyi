@@ -4,9 +4,9 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global crate_name crypto-common
-%global full_version 0.1.7
-%global pkgname crypto-common-0.1
+%global crate_name gix-date
+%global full_version 0.15.1
+%global pkgname gix-date-0.15
 
 %define _source_payload w9.xzdio
 %define _binary_payload w9.xzdio
@@ -16,13 +16,13 @@
 %global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
 %global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
 
-Name:           rust-crypto-common-0.1
-Version:        0.1.7
+Name:           rust-gix-date-0.15
+Version:        0.15.1
 Release:        %autorelease
-Summary:        Rust crate "crypto-common"
+Summary:        Rust crate "gix-date"
 License:        MIT OR Apache-2.0
-URL:            https://github.com/RustCrypto/traits
-#!RemoteAsset:  sha256:78c8292055d1c1df0cce5d180393dc8cce0abec0a7102adb6c7b1eef6016d60a
+URL:            https://github.com/GitoxideLabs/gitoxide
+#!RemoteAsset:  sha256:39acf819aa9fee65e4838a2eec5cb2506e47ebb89e02a5ab9918196e491571ea
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -30,15 +30,17 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 BuildRequires:  takopack
 
-Requires:       crate(generic-array-0.14/default) >= 0.14.7
-Requires:       crate(generic-array-0.14/more-lengths) >= 0.14.7
-Requires:       crate(typenum-1.0/default) >= 1.19.0
+Requires:       crate(bstr-1.0/std) >= 1.12.1
+Requires:       crate(gix-error-0.2/default) >= 0.2.1
+Requires:       crate(itoa-1.0/default) >= 1.0.18
+Requires:       crate(jiff-0.2/default) >= 0.2.23
+Requires:       crate(smallvec-1.0/default) >= 1.15.1
+Requires:       crate(smallvec-1.0/write) >= 1.15.1
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/std)
 
 %description
-Source code for takopackized Rust crate "crypto-common"
+Source code for takopackized Rust crate "gix-date"
 
 %files
 %exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps
