@@ -5,20 +5,30 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 %global crate_name fastrand
-%global full_version 2.3.0
+%global full_version 2.4.1
 %global pkgname fastrand-2.0
 
+%define _source_payload w9.xzdio
+%define _binary_payload w9.xzdio
+%global _local_file_attrs rustcrates_feature
+%global __rustcrates_feature_path ^%{_datadir}/cargo/registry/%{crate_name}-%{version}/\.rpm/features/[^/]+\.rpmdeps$
+%global __rustcrates_feature_protocol singlefile
+%global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
+%global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
+
 Name:           rust-fastrand-2.0
-Version:        2.3.0
+Version:        2.4.1
 Release:        %autorelease
 Summary:        Rust crate "fastrand"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/smol-rs/fastrand
-#!RemoteAsset:  sha256:37909eebbb50d72f9059c3b6d82c0463f2ff062c9e95845c43a6c9c0355411be
+#!RemoteAsset:  sha256:9f1f227452a390804cdb637b74a86990f2a7d7ba4b7d5693aac9b4dd6defd8d6
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
+BuildRequires:  takopack
 
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/alloc)
@@ -28,28 +38,9 @@ Provides:       crate(%{pkgname}/std)
 %description
 Source code for takopackized Rust crate "fastrand"
 
-%package     -n %{name}+getrandom
-Summary:        Simple and fast random number generator - feature "getrandom"
-Requires:       crate(%{pkgname})
-Requires:       crate(getrandom-0.2/default) >= 0.2.0
-Requires:       crate(getrandom-0.2/js) >= 0.2.0
-Provides:       crate(%{pkgname}/getrandom)
-
-%description -n %{name}+getrandom
-This metapackage enables feature "getrandom" for the Rust fastrand crate, by pulling in any additional dependencies needed by that feature.
-
-%package     -n %{name}+js
-Summary:        Simple and fast random number generator - feature "js"
-Requires:       crate(%{pkgname})
-Requires:       crate(%{pkgname}/getrandom)
-Requires:       crate(%{pkgname}/std)
-Provides:       crate(%{pkgname}/js)
-
-%description -n %{name}+js
-This metapackage enables feature "js" for the Rust fastrand crate, by pulling in any additional dependencies needed by that feature.
-
 %files
+%exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

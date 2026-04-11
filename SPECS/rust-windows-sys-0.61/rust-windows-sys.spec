@@ -8,6 +8,14 @@
 %global full_version 0.61.2
 %global pkgname windows-sys-0.61
 
+%define _source_payload w9.xzdio
+%define _binary_payload w9.xzdio
+%global _local_file_attrs rustcrates_feature
+%global __rustcrates_feature_path ^%{_datadir}/cargo/registry/%{crate_name}-%{version}/\.rpm/features/[^/]+\.rpmdeps$
+%global __rustcrates_feature_protocol singlefile
+%global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
+%global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
+
 Name:           rust-windows-sys-0.61
 Version:        0.61.2
 Release:        %autorelease
@@ -16,9 +24,11 @@ License:        MIT OR Apache-2.0
 URL:            https://github.com/microsoft/windows-rs
 #!RemoteAsset:  sha256:ae137229bcbd6cdf0f7b80a31df61766145077ddf49416a728b02cb3921ff3fc
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
+BuildRequires:  takopack
 
 Requires:       crate(windows-link-0.2) >= 0.2.1
 Provides:       crate(%{pkgname})
@@ -274,7 +284,8 @@ Provides:       crate(%{pkgname}/docs)
 Source code for takopackized Rust crate "windows-sys"
 
 %files
+%exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

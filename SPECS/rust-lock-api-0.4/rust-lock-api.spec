@@ -8,6 +8,14 @@
 %global full_version 0.4.14
 %global pkgname lock-api-0.4
 
+%define _source_payload w9.xzdio
+%define _binary_payload w9.xzdio
+%global _local_file_attrs rustcrates_feature
+%global __rustcrates_feature_path ^%{_datadir}/cargo/registry/%{crate_name}-%{version}/\.rpm/features/[^/]+\.rpmdeps$
+%global __rustcrates_feature_protocol singlefile
+%global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
+%global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
+
 Name:           rust-lock-api-0.4
 Version:        0.4.14
 Release:        %autorelease
@@ -16,9 +24,11 @@ License:        MIT OR Apache-2.0
 URL:            https://github.com/Amanieu/parking_lot
 #!RemoteAsset:  sha256:224399e74b87b5f3557511d98dff8b14089b3dadafcab6bb93eab67d3aace965
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
+BuildRequires:  takopack
 
 Requires:       crate(scopeguard-1.0) >= 1.2.0
 Provides:       crate(%{pkgname})
@@ -31,28 +41,9 @@ Provides:       crate(%{pkgname}/nightly)
 Compatible with no_std.
 Source code for takopackized Rust crate "lock_api"
 
-%package     -n %{name}+owning-ref
-Summary:        Wrappers to create fully-featured Mutex and RwLock types - feature "owning_ref"
-Requires:       crate(%{pkgname})
-Requires:       crate(owning-ref-0.4/default) >= 0.4.1
-Provides:       crate(%{pkgname}/owning-ref)
-
-%description -n %{name}+owning-ref
-Compatible with no_std.
-This metapackage enables feature "owning_ref" for the Rust lock_api crate, by pulling in any additional dependencies needed by that feature.
-
-%package     -n %{name}+serde
-Summary:        Wrappers to create fully-featured Mutex and RwLock types - feature "serde"
-Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.126
-Provides:       crate(%{pkgname}/serde)
-
-%description -n %{name}+serde
-Compatible with no_std.
-This metapackage enables feature "serde" for the Rust lock_api crate, by pulling in any additional dependencies needed by that feature.
-
 %files
+%exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

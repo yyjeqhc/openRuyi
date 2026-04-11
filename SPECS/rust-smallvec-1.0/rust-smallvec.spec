@@ -8,6 +8,14 @@
 %global full_version 1.15.1
 %global pkgname smallvec-1.0
 
+%define _source_payload w9.xzdio
+%define _binary_payload w9.xzdio
+%global _local_file_attrs rustcrates_feature
+%global __rustcrates_feature_path ^%{_datadir}/cargo/registry/%{crate_name}-%{version}/\.rpm/features/[^/]+\.rpmdeps$
+%global __rustcrates_feature_protocol singlefile
+%global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
+%global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
+
 Name:           rust-smallvec-1.0
 Version:        1.15.1
 Release:        %autorelease
@@ -16,9 +24,11 @@ License:        MIT OR Apache-2.0
 URL:            https://github.com/servo/rust-smallvec
 #!RemoteAsset:  sha256:67b1b7a3b5fe4f1376887184045fcf45c69e92af734b7aaddc05fb777b6fbd03
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
+BuildRequires:  takopack
 
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/const-generics)
@@ -35,63 +45,9 @@ Provides:       crate(%{pkgname}/write)
 %description
 Source code for takopackized Rust crate "smallvec"
 
-%package     -n %{name}+arbitrary
-Summary:        'Small vector' optimization: store up to a small number of items on the stack - feature "arbitrary"
-Requires:       crate(%{pkgname})
-Requires:       crate(arbitrary-1.0/default) >= 1.0.0
-Provides:       crate(%{pkgname}/arbitrary)
-
-%description -n %{name}+arbitrary
-This metapackage enables feature "arbitrary" for the Rust smallvec crate, by pulling in any additional dependencies needed by that feature.
-
-%package     -n %{name}+bincode
-Summary:        'Small vector' optimization: store up to a small number of items on the stack - feature "bincode"
-Requires:       crate(%{pkgname})
-Requires:       crate(bincode-2.0) >= 2.0.0
-Provides:       crate(%{pkgname}/bincode)
-
-%description -n %{name}+bincode
-This metapackage enables feature "bincode" for the Rust smallvec crate, by pulling in any additional dependencies needed by that feature.
-
-%package     -n %{name}+impl-bincode
-Summary:        'Small vector' optimization: store up to a small number of items on the stack - feature "impl_bincode"
-Requires:       crate(%{pkgname})
-Requires:       crate(%{pkgname}/bincode)
-Requires:       crate(%{pkgname}/unty)
-Provides:       crate(%{pkgname}/impl-bincode)
-
-%description -n %{name}+impl-bincode
-This metapackage enables feature "impl_bincode" for the Rust smallvec crate, by pulling in any additional dependencies needed by that feature.
-
-%package     -n %{name}+malloc-size-of
-Summary:        'Small vector' optimization: store up to a small number of items on the stack - feature "malloc_size_of"
-Requires:       crate(%{pkgname})
-Requires:       crate(malloc-size-of-0.1) >= 0.1.0
-Provides:       crate(%{pkgname}/malloc-size-of)
-
-%description -n %{name}+malloc-size-of
-This metapackage enables feature "malloc_size_of" for the Rust smallvec crate, by pulling in any additional dependencies needed by that feature.
-
-%package     -n %{name}+serde
-Summary:        'Small vector' optimization: store up to a small number of items on the stack - feature "serde"
-Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.0
-Provides:       crate(%{pkgname}/serde)
-
-%description -n %{name}+serde
-This metapackage enables feature "serde" for the Rust smallvec crate, by pulling in any additional dependencies needed by that feature.
-
-%package     -n %{name}+unty
-Summary:        'Small vector' optimization: store up to a small number of items on the stack - feature "unty"
-Requires:       crate(%{pkgname})
-Requires:       crate(unty-0.0.4) >= 0.0.4
-Provides:       crate(%{pkgname}/unty)
-
-%description -n %{name}+unty
-This metapackage enables feature "unty" for the Rust smallvec crate, by pulling in any additional dependencies needed by that feature.
-
 %files
+%exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

@@ -5,20 +5,30 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 %global crate_name toml_writer
-%global full_version 1.0.7+spec-1.1.0
+%global full_version 1.1.1+spec-1.1.0
 %global pkgname toml-writer-1.0
 
+%define _source_payload w9.xzdio
+%define _binary_payload w9.xzdio
+%global _local_file_attrs rustcrates_feature
+%global __rustcrates_feature_path ^%{_datadir}/cargo/registry/%{crate_name}-%{version}/\.rpm/features/[^/]+\.rpmdeps$
+%global __rustcrates_feature_protocol singlefile
+%global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
+%global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
+
 Name:           rust-toml-writer-1.0
-Version:        1.0.7
+Version:        1.1.1
 Release:        %autorelease
 Summary:        Rust crate "toml_writer"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/toml-rs/toml
-#!RemoteAsset:  sha256:f17aaa1c6e3dc22b1da4b6bba97d066e354c7945cac2f7852d4e4e7ca7a6b56d
+#!RemoteAsset:  sha256:756daf9b1013ebe47a8776667b466417e2d4c5679d441c26230efd9ef78692db
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
+BuildRequires:  takopack
 
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/alloc)
@@ -29,7 +39,8 @@ Provides:       crate(%{pkgname}/std)
 Source code for takopackized Rust crate "toml_writer"
 
 %files
+%exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog
