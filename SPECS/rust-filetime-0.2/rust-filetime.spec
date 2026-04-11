@@ -4,9 +4,9 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global crate_name hashbrown
-%global full_version 0.16.1
-%global pkgname hashbrown-0.16
+%global crate_name filetime
+%global full_version 0.2.27
+%global pkgname filetime-0.2
 
 %define _source_payload w9.xzdio
 %define _binary_payload w9.xzdio
@@ -16,13 +16,13 @@
 %global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
 %global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
 
-Name:           rust-hashbrown-0.16
-Version:        0.16.1
+Name:           rust-filetime-0.2
+Version:        0.2.27
 Release:        %autorelease
-Summary:        Rust crate "hashbrown"
-License:        MIT OR Apache-2.0
-URL:            https://github.com/rust-lang/hashbrown
-#!RemoteAsset:  sha256:841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100
+Summary:        Rust crate "filetime"
+License:        MIT/Apache-2.0
+URL:            https://github.com/alexcrichton/filetime
+#!RemoteAsset:  sha256:f98844151eee8917efc50bd9e8318cb963ae8b297431495d3f758616ea5c57db
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -30,13 +30,14 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 BuildRequires:  takopack
 
+Requires:       crate(cfg-if-1.0/default) >= 1.0.4
+Requires:       crate(libc-0.2/default) >= 0.2.184
+Requires:       crate(libredox-0.1/default) >= 0.1.16
 Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/inline-more)
-Provides:       crate(%{pkgname}/raw-entry)
-Provides:       crate(%{pkgname}/rustc-internal-api)
+Provides:       crate(%{pkgname}/default)
 
 %description
-Source code for takopackized Rust crate "hashbrown"
+Source code for takopackized Rust crate "filetime"
 
 %files
 %exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps

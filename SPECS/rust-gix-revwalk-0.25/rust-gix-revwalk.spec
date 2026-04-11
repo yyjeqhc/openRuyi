@@ -4,9 +4,9 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global crate_name hashbrown
-%global full_version 0.16.1
-%global pkgname hashbrown-0.16
+%global crate_name gix-revwalk
+%global full_version 0.25.0
+%global pkgname gix-revwalk-0.25
 
 %define _source_payload w9.xzdio
 %define _binary_payload w9.xzdio
@@ -16,13 +16,13 @@
 %global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
 %global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
 
-Name:           rust-hashbrown-0.16
-Version:        0.16.1
+Name:           rust-gix-revwalk-0.25
+Version:        0.25.0
 Release:        %autorelease
-Summary:        Rust crate "hashbrown"
+Summary:        Rust crate "gix-revwalk"
 License:        MIT OR Apache-2.0
-URL:            https://github.com/rust-lang/hashbrown
-#!RemoteAsset:  sha256:841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100
+URL:            https://github.com/GitoxideLabs/gitoxide
+#!RemoteAsset:  sha256:0d063699278485016863d0d2bb0db7609fd2e8ba9a89379717bf06fd96949eb2
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -30,13 +30,18 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 BuildRequires:  takopack
 
+Requires:       crate(gix-commitgraph-0.31/default) >= 0.31.0
+Requires:       crate(gix-date-0.12/default) >= 0.12.1
+Requires:       crate(gix-hash-0.21/default) >= 0.21.2
+Requires:       crate(gix-hashtable-0.11/default) >= 0.11.0
+Requires:       crate(gix-object-0.54/default) >= 0.54.1
+Requires:       crate(smallvec-1.0/default) >= 1.15.1
+Requires:       crate(thiserror-2.0/default) >= 2.0.18
 Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/inline-more)
-Provides:       crate(%{pkgname}/raw-entry)
-Provides:       crate(%{pkgname}/rustc-internal-api)
+Provides:       crate(%{pkgname}/default)
 
 %description
-Source code for takopackized Rust crate "hashbrown"
+Source code for takopackized Rust crate "gix-revwalk"
 
 %files
 %exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps

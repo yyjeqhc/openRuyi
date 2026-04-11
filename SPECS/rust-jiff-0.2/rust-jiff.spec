@@ -4,9 +4,9 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global crate_name hashbrown
-%global full_version 0.16.1
-%global pkgname hashbrown-0.16
+%global crate_name jiff
+%global full_version 0.2.23
+%global pkgname jiff-0.2
 
 %define _source_payload w9.xzdio
 %define _binary_payload w9.xzdio
@@ -16,13 +16,13 @@
 %global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
 %global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
 
-Name:           rust-hashbrown-0.16
-Version:        0.16.1
+Name:           rust-jiff-0.2
+Version:        0.2.23
 Release:        %autorelease
-Summary:        Rust crate "hashbrown"
-License:        MIT OR Apache-2.0
-URL:            https://github.com/rust-lang/hashbrown
-#!RemoteAsset:  sha256:841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100
+Summary:        Rust crate "jiff"
+License:        Unlicense OR MIT
+URL:            https://github.com/BurntSushi/jiff
+#!RemoteAsset:  sha256:1a3546dc96b6d42c5f24902af9e2538e82e39ad350b0c766eb3fbf2d8f3d8359
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -30,13 +30,15 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 BuildRequires:  takopack
 
+Requires:       crate(jiff-static-0.2/default) >= 0.2.23
+Requires:       crate(portable-atomic-1.0) >= 1.13.1
+Requires:       crate(portable-atomic-util-0.2) >= 0.2.6
 Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/inline-more)
-Provides:       crate(%{pkgname}/raw-entry)
-Provides:       crate(%{pkgname}/rustc-internal-api)
+Provides:       crate(%{pkgname}/perf-inline)
 
 %description
-Source code for takopackized Rust crate "hashbrown"
+This library is heavily inspired by the Temporal project.
+Source code for takopackized Rust crate "jiff"
 
 %files
 %exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps

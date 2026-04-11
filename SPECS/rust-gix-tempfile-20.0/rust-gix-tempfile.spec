@@ -4,9 +4,9 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global crate_name hashbrown
-%global full_version 0.16.1
-%global pkgname hashbrown-0.16
+%global crate_name gix-tempfile
+%global full_version 20.0.1
+%global pkgname gix-tempfile-20.0
 
 %define _source_payload w9.xzdio
 %define _binary_payload w9.xzdio
@@ -16,13 +16,13 @@
 %global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
 %global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
 
-Name:           rust-hashbrown-0.16
-Version:        0.16.1
+Name:           rust-gix-tempfile-20.0
+Version:        20.0.1
 Release:        %autorelease
-Summary:        Rust crate "hashbrown"
+Summary:        Rust crate "gix-tempfile"
 License:        MIT OR Apache-2.0
-URL:            https://github.com/rust-lang/hashbrown
-#!RemoteAsset:  sha256:841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100
+URL:            https://github.com/GitoxideLabs/gitoxide
+#!RemoteAsset:  sha256:ad89218e74850f42d364ed3877c7291f0474c8533502df91bb877ecc5cb0dd40
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -30,13 +30,14 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 BuildRequires:  takopack
 
+Requires:       crate(gix-fs-0.18/default) >= 0.18.2
+Requires:       crate(libc-0.2) >= 0.2.184
+Requires:       crate(parking-lot-0.12/default) >= 0.12.5
+Requires:       crate(tempfile-3.0/default) >= 3.27.0
 Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/inline-more)
-Provides:       crate(%{pkgname}/raw-entry)
-Provides:       crate(%{pkgname}/rustc-internal-api)
 
 %description
-Source code for takopackized Rust crate "hashbrown"
+Source code for takopackized Rust crate "gix-tempfile"
 
 %files
 %exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps

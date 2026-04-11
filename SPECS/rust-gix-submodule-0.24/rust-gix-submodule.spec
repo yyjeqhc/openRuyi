@@ -4,9 +4,9 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global crate_name hashbrown
-%global full_version 0.16.1
-%global pkgname hashbrown-0.16
+%global crate_name gix-submodule
+%global full_version 0.24.0
+%global pkgname gix-submodule-0.24
 
 %define _source_payload w9.xzdio
 %define _binary_payload w9.xzdio
@@ -16,13 +16,13 @@
 %global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
 %global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
 
-Name:           rust-hashbrown-0.16
-Version:        0.16.1
+Name:           rust-gix-submodule-0.24
+Version:        0.24.0
 Release:        %autorelease
-Summary:        Rust crate "hashbrown"
+Summary:        Rust crate "gix-submodule"
 License:        MIT OR Apache-2.0
-URL:            https://github.com/rust-lang/hashbrown
-#!RemoteAsset:  sha256:841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100
+URL:            https://github.com/GitoxideLabs/gitoxide
+#!RemoteAsset:  sha256:efee2a61198413d80de10028aa507344537827d776ade781760130721bec2419
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -30,13 +30,18 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 BuildRequires:  takopack
 
+Requires:       crate(bstr-1.0) >= 1.12.1
+Requires:       crate(gix-config-0.50/default) >= 0.50.0
+Requires:       crate(gix-path-0.10/default) >= 0.10.22
+Requires:       crate(gix-pathspec-0.14/default) >= 0.14.0
+Requires:       crate(gix-refspec-0.35/default) >= 0.35.0
+Requires:       crate(gix-url-0.34/default) >= 0.34.0
+Requires:       crate(thiserror-2.0/default) >= 2.0.18
 Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/inline-more)
-Provides:       crate(%{pkgname}/raw-entry)
-Provides:       crate(%{pkgname}/rustc-internal-api)
+Provides:       crate(%{pkgname}/default)
 
 %description
-Source code for takopackized Rust crate "hashbrown"
+Source code for takopackized Rust crate "gix-submodule"
 
 %files
 %exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps

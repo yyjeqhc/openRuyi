@@ -4,9 +4,9 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global crate_name hashbrown
-%global full_version 0.16.1
-%global pkgname hashbrown-0.16
+%global crate_name color-print-proc-macro
+%global full_version 0.3.7
+%global pkgname color-print-proc-macro-0.3
 
 %define _source_payload w9.xzdio
 %define _binary_payload w9.xzdio
@@ -16,13 +16,13 @@
 %global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
 %global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
 
-Name:           rust-hashbrown-0.16
-Version:        0.16.1
+Name:           rust-color-print-proc-macro-0.3
+Version:        0.3.7
 Release:        %autorelease
-Summary:        Rust crate "hashbrown"
+Summary:        Rust crate "color-print-proc-macro"
 License:        MIT OR Apache-2.0
-URL:            https://github.com/rust-lang/hashbrown
-#!RemoteAsset:  sha256:841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100
+URL:            https://gitlab.com/dajoha/color-print
+#!RemoteAsset:  sha256:692186b5ebe54007e45a59aea47ece9eb4108e141326c304cdc91699a7118a22
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -30,13 +30,17 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 BuildRequires:  takopack
 
+Requires:       crate(nom-7.0/default) >= 7.1.3
+Requires:       crate(proc-macro2-1.0/default) >= 1.0.106
+Requires:       crate(quote-1.0/default) >= 1.0.45
+Requires:       crate(syn-2.0/default) >= 2.0.117
+Requires:       crate(syn-2.0/full) >= 2.0.117
 Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/inline-more)
-Provides:       crate(%{pkgname}/raw-entry)
-Provides:       crate(%{pkgname}/rustc-internal-api)
+Provides:       crate(%{pkgname}/default)
+Provides:       crate(%{pkgname}/terminfo)
 
 %description
-Source code for takopackized Rust crate "hashbrown"
+Source code for takopackized Rust crate "color-print-proc-macro"
 
 %files
 %exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps

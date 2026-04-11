@@ -4,9 +4,9 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global crate_name hashbrown
-%global full_version 0.16.1
-%global pkgname hashbrown-0.16
+%global crate_name url
+%global full_version 2.5.8
+%global pkgname url-2.0
 
 %define _source_payload w9.xzdio
 %define _binary_payload w9.xzdio
@@ -16,13 +16,13 @@
 %global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
 %global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
 
-Name:           rust-hashbrown-0.16
-Version:        0.16.1
+Name:           rust-url-2.0
+Version:        2.5.8
 Release:        %autorelease
-Summary:        Rust crate "hashbrown"
+Summary:        Rust crate "url"
 License:        MIT OR Apache-2.0
-URL:            https://github.com/rust-lang/hashbrown
-#!RemoteAsset:  sha256:841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100
+URL:            https://github.com/servo/rust-url
+#!RemoteAsset:  sha256:ff67a8a4397373c3ef660812acab3268222035010ab8680ec4215f38ba3d0eed
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -30,13 +30,16 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 BuildRequires:  takopack
 
+Requires:       crate(form-urlencoded-1.0/alloc) >= 1.2.2
+Requires:       crate(idna-1.0/alloc) >= 1.1.0
+Requires:       crate(idna-1.0/compiled-data) >= 1.1.0
+Requires:       crate(percent-encoding-2.0/alloc) >= 2.3.2
 Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/inline-more)
-Provides:       crate(%{pkgname}/raw-entry)
-Provides:       crate(%{pkgname}/rustc-internal-api)
+Provides:       crate(%{pkgname}/debugger-visualizer)
+Provides:       crate(%{pkgname}/expose-internals)
 
 %description
-Source code for takopackized Rust crate "hashbrown"
+Source code for takopackized Rust crate "url"
 
 %files
 %exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps

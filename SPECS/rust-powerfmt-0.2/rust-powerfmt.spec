@@ -4,9 +4,9 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global crate_name hashbrown
-%global full_version 0.16.1
-%global pkgname hashbrown-0.16
+%global crate_name powerfmt
+%global full_version 0.2.0
+%global pkgname powerfmt-0.2
 
 %define _source_payload w9.xzdio
 %define _binary_payload w9.xzdio
@@ -16,13 +16,13 @@
 %global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
 %global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
 
-Name:           rust-hashbrown-0.16
-Version:        0.16.1
+Name:           rust-powerfmt-0.2
+Version:        0.2.0
 Release:        %autorelease
-Summary:        Rust crate "hashbrown"
+Summary:        Rust crate "powerfmt"
 License:        MIT OR Apache-2.0
-URL:            https://github.com/rust-lang/hashbrown
-#!RemoteAsset:  sha256:841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100
+URL:            https://github.com/jhpratt/powerfmt
+#!RemoteAsset:  sha256:439ee305def115ba05938db6eb1644ff94165c5ab5e9420d1c1bcedbba909391
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -31,12 +31,12 @@ BuildRequires:  rust-rpm-macros
 BuildRequires:  takopack
 
 Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/inline-more)
-Provides:       crate(%{pkgname}/raw-entry)
-Provides:       crate(%{pkgname}/rustc-internal-api)
+Provides:       crate(%{pkgname}/alloc)
+Provides:       crate(%{pkgname}/std)
 
 %description
-Source code for takopackized Rust crate "hashbrown"
+This crate makes it     significantly easier to support filling to a minimum width with alignment, avoid heap     allocation, and avoid repetitive calculations.
+Source code for takopackized Rust crate "powerfmt"
 
 %files
 %exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps

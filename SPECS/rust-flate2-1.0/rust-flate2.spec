@@ -4,9 +4,9 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global crate_name hashbrown
-%global full_version 0.16.1
-%global pkgname hashbrown-0.16
+%global crate_name flate2
+%global full_version 1.1.9
+%global pkgname flate2-1.0
 
 %define _source_payload w9.xzdio
 %define _binary_payload w9.xzdio
@@ -16,13 +16,13 @@
 %global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
 %global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
 
-Name:           rust-hashbrown-0.16
-Version:        0.16.1
+Name:           rust-flate2-1.0
+Version:        1.1.9
 Release:        %autorelease
-Summary:        Rust crate "hashbrown"
+Summary:        Rust crate "flate2"
 License:        MIT OR Apache-2.0
-URL:            https://github.com/rust-lang/hashbrown
-#!RemoteAsset:  sha256:841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100
+URL:            https://github.com/rust-lang/flate2-rs
+#!RemoteAsset:  sha256:843fba2746e448b37e26a819579957415c8cef339bf08564fe8b7ddbd959573c
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -30,13 +30,16 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 BuildRequires:  takopack
 
+Requires:       crate(miniz-oxide-0.8/simd) >= 0.8.9
+Requires:       crate(miniz-oxide-0.8/with-alloc) >= 0.8.9
 Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/inline-more)
-Provides:       crate(%{pkgname}/raw-entry)
-Provides:       crate(%{pkgname}/rustc-internal-api)
+Provides:       crate(%{pkgname}/any-c-zlib)
+Provides:       crate(%{pkgname}/any-impl)
+Provides:       crate(%{pkgname}/any-zlib)
 
 %description
-Source code for takopackized Rust crate "hashbrown"
+Supports miniz_oxide and multiple zlib implementations. Supports zlib, gzip, and raw deflate streams.
+Source code for takopackized Rust crate "flate2"
 
 %files
 %exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps

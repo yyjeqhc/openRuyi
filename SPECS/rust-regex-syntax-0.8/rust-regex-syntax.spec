@@ -4,9 +4,9 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global crate_name hashbrown
-%global full_version 0.16.1
-%global pkgname hashbrown-0.16
+%global crate_name regex-syntax
+%global full_version 0.8.10
+%global pkgname regex-syntax-0.8
 
 %define _source_payload w9.xzdio
 %define _binary_payload w9.xzdio
@@ -16,13 +16,13 @@
 %global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
 %global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
 
-Name:           rust-hashbrown-0.16
-Version:        0.16.1
+Name:           rust-regex-syntax-0.8
+Version:        0.8.10
 Release:        %autorelease
-Summary:        Rust crate "hashbrown"
+Summary:        Rust crate "regex-syntax"
 License:        MIT OR Apache-2.0
-URL:            https://github.com/rust-lang/hashbrown
-#!RemoteAsset:  sha256:841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100
+URL:            https://github.com/rust-lang/regex/tree/master/regex-syntax
+#!RemoteAsset:  sha256:dc897dd8d9e8bd1ed8cdad82b5966c3e0ecae09fb1907d58efaa013543185d0a
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -31,12 +31,17 @@ BuildRequires:  rust-rpm-macros
 BuildRequires:  takopack
 
 Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/inline-more)
-Provides:       crate(%{pkgname}/raw-entry)
-Provides:       crate(%{pkgname}/rustc-internal-api)
+Provides:       crate(%{pkgname}/std)
+Provides:       crate(%{pkgname}/unicode-age)
+Provides:       crate(%{pkgname}/unicode-bool)
+Provides:       crate(%{pkgname}/unicode-case)
+Provides:       crate(%{pkgname}/unicode-gencat)
+Provides:       crate(%{pkgname}/unicode-perl)
+Provides:       crate(%{pkgname}/unicode-script)
+Provides:       crate(%{pkgname}/unicode-segment)
 
 %description
-Source code for takopackized Rust crate "hashbrown"
+Source code for takopackized Rust crate "regex-syntax"
 
 %files
 %exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps

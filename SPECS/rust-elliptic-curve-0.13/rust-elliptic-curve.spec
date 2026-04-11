@@ -4,9 +4,9 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global crate_name hashbrown
-%global full_version 0.16.1
-%global pkgname hashbrown-0.16
+%global crate_name elliptic-curve
+%global full_version 0.13.8
+%global pkgname elliptic-curve-0.13
 
 %define _source_payload w9.xzdio
 %define _binary_payload w9.xzdio
@@ -16,13 +16,13 @@
 %global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
 %global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
 
-Name:           rust-hashbrown-0.16
-Version:        0.16.1
+Name:           rust-elliptic-curve-0.13
+Version:        0.13.8
 Release:        %autorelease
-Summary:        Rust crate "hashbrown"
-License:        MIT OR Apache-2.0
-URL:            https://github.com/rust-lang/hashbrown
-#!RemoteAsset:  sha256:841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100
+Summary:        Rust crate "elliptic-curve"
+License:        Apache-2.0 OR MIT
+URL:            https://github.com/RustCrypto/traits/tree/master/elliptic-curve
+#!RemoteAsset:  sha256:b5e6043086bf7973472e0c7dff2142ea0b680d30e18d9cc40f267efbf222bd47
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -30,13 +30,19 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 BuildRequires:  takopack
 
+Requires:       crate(base16ct-0.2/default) >= 0.2.0
+Requires:       crate(crypto-bigint-0.5/generic-array) >= 0.5.5
+Requires:       crate(crypto-bigint-0.5/rand-core) >= 0.5.5
+Requires:       crate(crypto-bigint-0.5/zeroize) >= 0.5.5
+Requires:       crate(generic-array-0.14/zeroize) >= 0.14.9
+Requires:       crate(rand-core-0.6) >= 0.6.4
+Requires:       crate(subtle-2.0) >= 2.6.1
+Requires:       crate(zeroize-1.0) >= 1.8.2
 Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/inline-more)
-Provides:       crate(%{pkgname}/raw-entry)
-Provides:       crate(%{pkgname}/rustc-internal-api)
+Provides:       crate(%{pkgname}/hazmat)
 
 %description
-Source code for takopackized Rust crate "hashbrown"
+Source code for takopackized Rust crate "elliptic-curve"
 
 %files
 %exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps

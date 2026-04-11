@@ -4,9 +4,9 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global crate_name hashbrown
-%global full_version 0.16.1
-%global pkgname hashbrown-0.16
+%global crate_name cargo-credential-wincred
+%global full_version 0.4.20
+%global pkgname cargo-credential-wincred-0.4
 
 %define _source_payload w9.xzdio
 %define _binary_payload w9.xzdio
@@ -16,13 +16,13 @@
 %global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
 %global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
 
-Name:           rust-hashbrown-0.16
-Version:        0.16.1
+Name:           rust-cargo-credential-wincred-0.4
+Version:        0.4.20
 Release:        %autorelease
-Summary:        Rust crate "hashbrown"
+Summary:        Rust crate "cargo-credential-wincred"
 License:        MIT OR Apache-2.0
-URL:            https://github.com/rust-lang/hashbrown
-#!RemoteAsset:  sha256:841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100
+URL:            https://github.com/rust-lang/cargo
+#!RemoteAsset:  sha256:9be5164881738c558a89fd0fd25cdda82a587dab6d2616e4a3ba0c9069a29c35
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -30,13 +30,15 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 BuildRequires:  takopack
 
+Requires:       crate(cargo-credential-0.4/default) >= 0.4.9
+Requires:       crate(windows-sys-0.61/default) >= 0.61.2
+Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.2
+Requires:       crate(windows-sys-0.61/win32-security-credentials) >= 0.61.2
 Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/inline-more)
-Provides:       crate(%{pkgname}/raw-entry)
-Provides:       crate(%{pkgname}/rustc-internal-api)
+Provides:       crate(%{pkgname}/default)
 
 %description
-Source code for takopackized Rust crate "hashbrown"
+Source code for takopackized Rust crate "cargo-credential-wincred"
 
 %files
 %exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps

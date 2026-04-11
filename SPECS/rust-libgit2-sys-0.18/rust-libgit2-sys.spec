@@ -4,9 +4,9 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global crate_name hashbrown
-%global full_version 0.16.1
-%global pkgname hashbrown-0.16
+%global crate_name libgit2-sys
+%global full_version 0.18.3+1.9.2
+%global pkgname libgit2-sys-0.18
 
 %define _source_payload w9.xzdio
 %define _binary_payload w9.xzdio
@@ -16,13 +16,13 @@
 %global __rustcrates_feature_requires %rustcrates_depgen_helper --requires
 %global __rustcrates_feature_provides %rustcrates_depgen_helper --provides
 
-Name:           rust-hashbrown-0.16
-Version:        0.16.1
+Name:           rust-libgit2-sys-0.18
+Version:        0.18.3
 Release:        %autorelease
-Summary:        Rust crate "hashbrown"
+Summary:        Rust crate "libgit2-sys"
 License:        MIT OR Apache-2.0
-URL:            https://github.com/rust-lang/hashbrown
-#!RemoteAsset:  sha256:841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100
+URL:            https://github.com/rust-lang/git2-rs
+#!RemoteAsset:  sha256:c9b3acc4b91781bb0b3386669d325163746af5f6e4f73e6d2d630e09a35f3487
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -30,13 +30,17 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 BuildRequires:  takopack
 
+Requires:       crate(cc-1.0/default) >= 1.2.60
+Requires:       crate(cc-1.0/parallel) >= 1.2.60
+Requires:       crate(libc-0.2/default) >= 0.2.184
+Requires:       crate(libz-sys-1.0/libc) >= 1.1.28
+Requires:       crate(pkg-config-0.3/default) >= 0.3.32
 Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/inline-more)
-Provides:       crate(%{pkgname}/raw-entry)
-Provides:       crate(%{pkgname}/rustc-internal-api)
+Provides:       crate(%{pkgname}/default)
+Provides:       crate(%{pkgname}/vendored)
 
 %description
-Source code for takopackized Rust crate "hashbrown"
+Source code for takopackized Rust crate "libgit2-sys"
 
 %files
 %exclude %{_datadir}/cargo/registry/%{crate_name}-%{version}/.rpm/features/*.rpmdeps
