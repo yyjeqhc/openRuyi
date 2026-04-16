@@ -1,20 +1,24 @@
-# SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
-# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
 Name:           perl-ExtUtils-ParseXS
-Version:        3.60
+Version:        3.63
 Release:        %autorelease
 Summary:        Converts Perl XS code into C code
 License:        GPL-1.0-or-later OR Artistic-1.0-Perl
 URL:            https://metacpan.org/dist/ExtUtils-ParseXS
-#!RemoteAsset
+#!RemoteAsset:  sha256:d19a3f29288f0950ef8f1838db99270284ba475758246f0e5ab1113a9d9a7548
 Source0:        http://www.cpan.org/authors/id/L/LE/LEONT/ExtUtils-ParseXS-%{version}.tar.gz
+BuildSystem:    perlmaker
+
+BuildOption(build):  INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
 
 BuildRequires:  make
 BuildRequires:  perl-rpm-packaging
+BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
 BuildRequires:  perl(Carp)
 BuildRequires:  perl(Cwd)
@@ -38,21 +42,8 @@ the glue necessary to let Perl access those functions. The compiler uses
 typemaps to determine how to map C function parameters and variables to
 Perl values.
 
-%prep
-%setup -q -n ExtUtils-ParseXS-%{version}
-
-%build
-perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
-%{make_build}
-
-%install
-%perl_make_install
-find %{buildroot} -type f -name '*.bs' -size 0 -exec rm -f {} \;
-%perl_process_packlist
-%perl_gen_filelist
-
 %files -f %{name}.files
 %doc Changes README
 
 %changelog
-%{?autochangelog}
+%autochangelog
