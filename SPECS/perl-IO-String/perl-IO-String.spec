@@ -14,9 +14,11 @@ URL:            https://metacpan.org/dist/IO-String
 #!RemoteAsset
 Source0:        http://www.cpan.org/authors/id/G/GA/GAAS/IO-String-%{version}.tar.gz
 BuildArch:      noarch
+BuildSystem:    perlmaker
 
 BuildRequires:  make
 BuildRequires:  perl-rpm-packaging
+BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
 BuildRequires:  perl(ExtUtils::MakeMaker)
 
@@ -27,18 +29,6 @@ use the normal file operations for reading or writing data, as well as for
 seeking to various locations of the string. This is useful when you want to
 use a library module that only provides an interface to file handles on
 data that you have in a string variable.
-
-%prep
-%setup -q -n IO-String-%{version}
-
-%build
-perl Makefile.PL INSTALLDIRS=vendor
-%{make_build}
-
-%install
-%perl_make_install
-%perl_process_packlist
-%perl_gen_filelist
 
 %files -f %{name}.files
 %doc Changes README
