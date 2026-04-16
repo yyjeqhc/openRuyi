@@ -23,6 +23,7 @@ BuildRequires:  perl-macros
 BuildRequires:  perl(common::sense)
 BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(Types::Serialiser)
+BuildRequires:  perl(Canary::Stability)
 
 %description
 This module converts Perl data structures to JSON and vice versa. Its
