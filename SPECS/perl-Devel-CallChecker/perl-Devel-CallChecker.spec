@@ -13,8 +13,10 @@ License:        GPL-1.0-or-later OR Artistic-1.0-Perl
 URL:            https://metacpan.org/dist/Devel-CallChecker
 #!RemoteAsset
 Source0:        http://www.cpan.org/authors/id/Z/ZE/ZEFRAM/Devel-CallChecker-%{version}.tar.gz
+BuildSystem:    perlbuild
 
 BuildRequires:  perl-rpm-packaging
+BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
 BuildRequires:  perl >= 5.6.0
 BuildRequires:  perl(DynaLoader)
@@ -29,6 +31,7 @@ BuildRequires:  perl(parent)
 BuildRequires:  perl(strict)
 BuildRequires:  perl(Test::More)
 BuildRequires:  perl(warnings)
+BuildRequires:  vim
 
 Requires:       perl(DynaLoader::Functions) >= 0.001
 
@@ -43,21 +46,8 @@ available. (It is possible to achieve the effect of cv_set_call_checker
 from XS code on much earlier Perl versions, but it is painful to achieve
 without the centralised facility.)
 
-%prep
-%setup -q -n Devel-CallChecker-%{version}
-
-%build
-perl Build.PL --installdirs=vendor optimize="%{optflags}"
-./Build
-
-%install
-./Build install destdir=%{buildroot} create_packlist=0
-find %{buildroot} -type f -name '*.bs' -size 0 -exec rm -f {} \;
-%perl_process_packlist
-%perl_gen_filelist
-
 %files -f %{name}.files
 %doc Changes README
 
 %changelog
-%{?autochangelog}
+%autochangelog
