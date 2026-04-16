@@ -1,7 +1,6 @@
-# SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
-# SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
-# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -9,14 +8,18 @@ Name:           perl-Data-Compare
 Version:        1.29
 Release:        %autorelease
 Summary:        Compare perl data structures
-License:        Artistic-1.0 OR GPL-1.0-or-later
+License:        GPL-1.0-or-later OR Artistic-1.0-Perl
 URL:            https://metacpan.org/dist/Data-Compare
-#!RemoteAsset
+#!RemoteAsset:  sha256:53c9db3b93263c88aaa3c4072d819eaded024d7a36b38c0c37737d288d5afa8c
 Source0:        http://www.cpan.org/authors/id/D/DC/DCANTRELL/Data-Compare-%{version}.tar.gz
 BuildArch:      noarch
+BuildSystem:    perlmaker
+
+BuildOption(build):  INSTALLDIRS=vendor
 
 BuildRequires:  make
 BuildRequires:  perl-rpm-packaging
+BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
 BuildRequires:  perl >= 5.6.0
 BuildRequires:  perl(Clone) >= 0.43
@@ -33,20 +36,8 @@ Requires:       perl(Test::More) >= 0.88
 Compare two perl data structures recursively. Returns 0 if the structures
 differ, else returns 1.
 
-%prep
-%setup -q -n Data-Compare-%{version}
-
-%build
-perl Makefile.PL INSTALLDIRS=vendor
-%{make_build}
-
-%install
-%perl_make_install
-%perl_process_packlist
-%perl_gen_filelist
-
 %files -f %{name}.files
 %doc CHANGELOG MAINTAINERS-NOTE NOTES README
 
 %changelog
-%{?autochangelog}
+%autochangelog

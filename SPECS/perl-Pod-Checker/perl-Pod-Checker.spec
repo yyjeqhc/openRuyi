@@ -1,6 +1,6 @@
-# SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
-# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -10,12 +10,16 @@ Release:        %autorelease
 Summary:        Check pod documents for syntax errors
 License:        GPL-1.0-or-later OR Artistic-1.0-Perl
 URL:            https://metacpan.org/dist/Pod-Checker
-#!RemoteAsset
+#!RemoteAsset:  sha256:131a7c049bed758cab29901792c999ca315d4e881c630d3f93bf6aae69e9e242
 Source0:        http://www.cpan.org/authors/id/M/MA/MAREKR/Pod-Checker-%{version}.tar.gz
 BuildArch:      noarch
+BuildSystem:    perlmaker
+
+BuildOption(build):  INSTALLDIRS=vendor
 
 BuildRequires:  make
 BuildRequires:  perl-rpm-packaging
+BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
 BuildRequires:  perl(Cwd)
 BuildRequires:  perl(ExtUtils::MakeMaker)
@@ -27,23 +31,10 @@ Requires:       perl(Pod::Simple) >= 3.4
 Requires:       perl(Test::More) >= 0.6
 
 %description
-Module and tools to verify POD documentation contents for compliance with the
-Plain Old Documentation format specifications.
-
-%prep
-%setup -q -n Pod-Checker-%{version}
-
-%build
-perl Makefile.PL INSTALLDIRS=vendor
-%{make_build}
-
-%install
-%perl_make_install
-%perl_process_packlist
-%perl_gen_filelist
+podchecker will perform syntax checking of Perl5 POD format documentation.
 
 %files -f %{name}.files
 %doc CHANGES README
 
 %changelog
-%{?autochangelog}
+%autochangelog
