@@ -5,16 +5,16 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 %global crate_name hashbrown
-%global full_version 0.15.5
-%global pkgname hashbrown-0.15
+%global full_version 0.17.0
+%global pkgname hashbrown-0.17
 
-Name:           rust-hashbrown-0.15
-Version:        0.15.5
+Name:           rust-hashbrown-0.17
+Version:        0.17.0
 Release:        %autorelease
 Summary:        Rust crate "hashbrown"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-lang/hashbrown
-#!RemoteAsset:  sha256:9229cfe53dfd69f0609a49f65461bd93001ea1ef889cd5529dd176593f5338a1
+#!RemoteAsset:  sha256:4f467dd6dccf739c208452f8014c75c18bb8301b050ad1cfb27153803edb0f51
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -24,7 +24,6 @@ BuildRequires:  rust-rpm-macros
 Provides:       crate(hashbrown) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/inline-more)
-Provides:       crate(%{pkgname}/nightly)
 Provides:       crate(%{pkgname}/raw-entry)
 Provides:       crate(%{pkgname}/rustc-internal-api)
 
@@ -78,7 +77,7 @@ This metapackage enables feature "default" for the Rust hashbrown crate, by pull
 %package     -n %{name}+default-hasher
 Summary:        Rust port of Google's SwissTable hash map - feature "default-hasher"
 Requires:       crate(%{pkgname})
-Requires:       crate(foldhash-0.1) >= 0.1.5
+Requires:       crate(foldhash-0.2) >= 0.2.0
 Provides:       crate(hashbrown) = %{version}
 Provides:       crate(%{pkgname}/default-hasher)
 
@@ -95,10 +94,20 @@ Provides:       crate(%{pkgname}/equivalent)
 %description -n %{name}+equivalent
 This metapackage enables feature "equivalent" for the Rust hashbrown crate, by pulling in any additional dependencies needed by that feature.
 
+%package     -n %{name}+nightly
+Summary:        Rust port of Google's SwissTable hash map - feature "nightly"
+Requires:       crate(%{pkgname})
+Requires:       crate(foldhash-0.2/nightly) >= 0.2.0
+Provides:       crate(hashbrown) = %{version}
+Provides:       crate(%{pkgname}/nightly)
+
+%description -n %{name}+nightly
+This metapackage enables feature "nightly" for the Rust hashbrown crate, by pulling in any additional dependencies needed by that feature.
+
 %package     -n %{name}+rayon
 Summary:        Rust port of Google's SwissTable hash map - feature "rayon"
 Requires:       crate(%{pkgname})
-Requires:       crate(rayon-1.0/default) >= 1.2
+Requires:       crate(rayon-1.0/default) >= 1.9.0
 Provides:       crate(hashbrown) = %{version}
 Provides:       crate(%{pkgname}/rayon)
 
@@ -121,7 +130,8 @@ This metapackage enables feature "rustc-dep-of-std" for the Rust hashbrown crate
 %package     -n %{name}+serde
 Summary:        Rust port of Google's SwissTable hash map - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.25
+Requires:       crate(serde-1.0) >= 1.0.220
+Requires:       crate(serde-core-1.0) >= 1.0.221
 Provides:       crate(hashbrown) = %{version}
 Provides:       crate(%{pkgname}/serde)
 

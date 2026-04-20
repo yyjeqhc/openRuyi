@@ -16,11 +16,13 @@ License:        MIT OR Apache-2.0
 URL:            https://serde.rs
 #!RemoteAsset:  sha256:41d385c7d4ca58e59fc732af25c3983b67ac852c1a25000afe1175de458b67ad
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(serde-derive-1.0/default) >= 1.0.228
+Provides:       crate(serde-core) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/rc)
@@ -36,6 +38,7 @@ Summary:        Serde traits only, with no support for derive -- use the `serde`
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/result)
 Requires:       crate(%{pkgname}/std)
+Provides:       crate(serde-core) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -45,4 +48,4 @@ This metapackage enables feature "default" for the Rust serde_core crate, by pul
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

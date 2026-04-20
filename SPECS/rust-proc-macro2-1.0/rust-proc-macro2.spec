@@ -16,11 +16,13 @@ License:        MIT OR Apache-2.0
 URL:            https://github.com/dtolnay/proc-macro2
 #!RemoteAsset:  sha256:8fd00f0bb2e90d81d1044c2b32617f68fcb9fa3bb7640c23e9c748e53fb30934
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(unicode-ident-1.0/default) >= 1.0.24
+Provides:       crate(proc-macro2) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/nightly)
@@ -34,4 +36,4 @@ Source code for takopackized Rust crate "proc-macro2"
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

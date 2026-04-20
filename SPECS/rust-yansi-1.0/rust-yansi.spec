@@ -16,10 +16,12 @@ License:        MIT OR Apache-2.0
 URL:            https://github.com/SergioBenitez/yansi
 #!RemoteAsset:  sha256:cfe53a6657fd280eaa890a3bc59152892ffa3e30101319d168b781ed6529b049
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Provides:       crate(yansi) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/nightly)
 Provides:       crate(%{pkgname}/alloc)
@@ -36,6 +38,7 @@ Summary:        Dead simple ANSI terminal color painting library - feature "dete
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/is-terminal)
 Requires:       crate(%{pkgname}/std)
+Provides:       crate(yansi) = %{version}
 Provides:       crate(%{pkgname}/detect-tty)
 
 %description -n %{name}+detect-tty
@@ -45,6 +48,7 @@ This metapackage enables feature "detect-tty" for the Rust yansi crate, by pulli
 Summary:        Dead simple ANSI terminal color painting library - feature "is-terminal"
 Requires:       crate(%{pkgname})
 Requires:       crate(is-terminal-0.4/default) >= 0.4.11
+Provides:       crate(yansi) = %{version}
 Provides:       crate(%{pkgname}/is-terminal)
 
 %description -n %{name}+is-terminal
@@ -54,4 +58,4 @@ This metapackage enables feature "is-terminal" for the Rust yansi crate, by pull
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

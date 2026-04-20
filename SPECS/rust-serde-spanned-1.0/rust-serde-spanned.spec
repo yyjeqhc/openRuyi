@@ -5,21 +5,23 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 %global crate_name serde_spanned
-%global full_version 1.0.4
+%global full_version 1.1.1
 %global pkgname serde-spanned-1.0
 
 Name:           rust-serde-spanned-1.0
-Version:        1.0.4
+Version:        1.1.1
 Release:        %autorelease
 Summary:        Rust crate "serde_spanned"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/toml-rs/toml
-#!RemoteAsset:  sha256:f8bbf91e5a4d6315eee45e704372590b30e260ee83af6639d64557f51b067776
+#!RemoteAsset:  sha256:6662b5879511e06e8999a8a235d848113e942c9124f211511b16466ee2995f26
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Provides:       crate(serde-spanned) = %{version}
 Provides:       crate(%{pkgname})
 
 %description
@@ -29,6 +31,7 @@ Source code for takopackized Rust crate "serde_spanned"
 Summary:        Serde-compatible spanned Value - feature "alloc"
 Requires:       crate(%{pkgname})
 Requires:       crate(serde-core-1.0/alloc) >= 1.0.228
+Provides:       crate(serde-spanned) = %{version}
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -39,6 +42,7 @@ Summary:        Serde-compatible spanned Value - feature "default"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/serde)
 Requires:       crate(%{pkgname}/std)
+Provides:       crate(serde-spanned) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -48,6 +52,7 @@ This metapackage enables feature "default" for the Rust serde_spanned crate, by 
 Summary:        Serde-compatible spanned Value - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(serde-core-1.0) >= 1.0.228
+Provides:       crate(serde-spanned) = %{version}
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -58,6 +63,7 @@ Summary:        Serde-compatible spanned Value - feature "std"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(serde-core-1.0/std) >= 1.0.228
+Provides:       crate(serde-spanned) = %{version}
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std
@@ -67,4 +73,4 @@ This metapackage enables feature "std" for the Rust serde_spanned crate, by pull
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

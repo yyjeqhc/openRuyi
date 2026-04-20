@@ -16,19 +16,21 @@ License:        Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT
 URL:            https://github.com/bytecodealliance/wit-bindgen
 #!RemoteAsset:  sha256:b7c566e0f4b284dd6561c786d9cb0142da491f46a9fbed79ea69cdad5db17f21
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(anyhow-1.0/default) >= 1.0.102
 Requires:       crate(heck-0.5/default) >= 0.5.0
-Requires:       crate(indexmap-2.0/default) >= 2.13.0
+Requires:       crate(indexmap-2.0/default) >= 2.14.0
 Requires:       crate(prettyplease-0.2/default) >= 0.2.37
 Requires:       crate(syn-2.0/default) >= 2.0.117
 Requires:       crate(syn-2.0/printing) >= 2.0.117
 Requires:       crate(wasm-metadata-0.244) >= 0.244.0
 Requires:       crate(wit-bindgen-core-0.51/default) >= 0.51.0
 Requires:       crate(wit-component-0.244/default) >= 0.244.0
+Provides:       crate(wit-bindgen-rust) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 
@@ -41,6 +43,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(clap-4.0/default) >= 4.3.19
 Requires:       crate(clap-4.0/derive) >= 4.3.19
 Requires:       crate(wit-bindgen-core-0.51/clap) >= 0.51.0
+Provides:       crate(wit-bindgen-rust) = %{version}
 Provides:       crate(%{pkgname}/clap)
 
 %description -n %{name}+clap
@@ -52,6 +55,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(serde-1.0/default) >= 1.0.218
 Requires:       crate(serde-1.0/derive) >= 1.0.218
 Requires:       crate(wit-bindgen-core-0.51/serde) >= 0.51.0
+Provides:       crate(wit-bindgen-rust) = %{version}
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -61,4 +65,4 @@ This metapackage enables feature "serde" for the Rust wit-bindgen-rust crate, by
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

@@ -16,11 +16,13 @@ License:        Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT
 URL:            https://github.com/bytecodealliance/wasm-tools/tree/main/crates/wasm-encoder
 #!RemoteAsset:  sha256:990065f2fe63003fe337b932cfb5e3b80e0b4d0f5ff650e6985b1048f62c8319
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(leb128fmt-0.1) >= 0.1.0
+Provides:       crate(wasm-encoder) = %{version}
 Provides:       crate(%{pkgname})
 
 %description
@@ -31,6 +33,7 @@ Summary:        Low-level WebAssembly encoder - feature "component-model"
 Requires:       crate(%{pkgname})
 Requires:       crate(wasmparser-0.244/component-model) >= 0.244.0
 Requires:       crate(wasmparser-0.244/simd) >= 0.244.0
+Provides:       crate(wasm-encoder) = %{version}
 Provides:       crate(%{pkgname}/component-model)
 
 %description -n %{name}+component-model
@@ -41,6 +44,7 @@ Summary:        Low-level WebAssembly encoder - feature "default"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/component-model)
 Requires:       crate(%{pkgname}/std)
+Provides:       crate(wasm-encoder) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -51,6 +55,7 @@ Summary:        Low-level WebAssembly encoder - feature "std"
 Requires:       crate(%{pkgname})
 Requires:       crate(wasmparser-0.244/simd) >= 0.244.0
 Requires:       crate(wasmparser-0.244/std) >= 0.244.0
+Provides:       crate(wasm-encoder) = %{version}
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std
@@ -60,6 +65,7 @@ This metapackage enables feature "std" for the Rust wasm-encoder crate, by pulli
 Summary:        Low-level WebAssembly encoder - feature "wasmparser"
 Requires:       crate(%{pkgname})
 Requires:       crate(wasmparser-0.244/simd) >= 0.244.0
+Provides:       crate(wasm-encoder) = %{version}
 Provides:       crate(%{pkgname}/wasmparser)
 
 %description -n %{name}+wasmparser
@@ -69,4 +75,4 @@ This metapackage enables feature "wasmparser" for the Rust wasm-encoder crate, b
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

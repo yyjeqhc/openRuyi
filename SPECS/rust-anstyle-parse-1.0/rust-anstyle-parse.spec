@@ -16,10 +16,12 @@ License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-cli/anstyle.git
 #!RemoteAsset:  sha256:52ce7f38b242319f7cabaa6813055467063ecdc9d355bbb4ce0c68908cd8130e
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Provides:       crate(anstyle-parse) = %{version}
 Provides:       crate(%{pkgname})
 
 %description
@@ -29,6 +31,7 @@ Source code for takopackized Rust crate "anstyle-parse"
 Summary:        Parse ANSI Style Escapes - feature "core"
 Requires:       crate(%{pkgname})
 Requires:       crate(arrayvec-0.7) >= 0.7.6
+Provides:       crate(anstyle-parse) = %{version}
 Provides:       crate(%{pkgname}/core)
 
 %description -n %{name}+core
@@ -38,6 +41,7 @@ This metapackage enables feature "core" for the Rust anstyle-parse crate, by pul
 Summary:        Parse ANSI Style Escapes - feature "utf8" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(utf8parse-0.2/default) >= 0.2.2
+Provides:       crate(anstyle-parse) = %{version}
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/utf8)
 
@@ -50,4 +54,4 @@ Additionally, this package also provides the "default" feature.
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

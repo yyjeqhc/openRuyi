@@ -16,12 +16,14 @@ License:        MIT OR Apache-2.0
 URL:            https://github.com/toml-rs/toml
 #!RemoteAsset:  sha256:cf92845e79fc2e2def6a5d828f0801e29a2f8acc037becc5ab08595c7d5e9863
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(serde-spanned-1.0/alloc) >= 1.0.4
+Requires:       crate(serde-spanned-1.0/alloc) >= 1.1.1
 Requires:       crate(toml-datetime-0.7/alloc) >= 0.7.5
+Provides:       crate(toml) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/unbounded)
 
@@ -35,8 +37,9 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/std)
 Requires:       crate(anstream-0.6/default) >= 0.6.20
 Requires:       crate(anstyle-1.0/default) >= 1.0.11
-Requires:       crate(toml-parser-1.0/alloc) >= 1.0.10
-Requires:       crate(toml-parser-1.0/debug) >= 1.0.10
+Requires:       crate(toml-parser-1.0/alloc) >= 1.1.2
+Requires:       crate(toml-parser-1.0/debug) >= 1.1.2
+Provides:       crate(toml) = %{version}
 Provides:       crate(%{pkgname}/debug)
 
 %description -n %{name}+debug
@@ -50,6 +53,7 @@ Requires:       crate(%{pkgname}/display)
 Requires:       crate(%{pkgname}/parse)
 Requires:       crate(%{pkgname}/serde)
 Requires:       crate(%{pkgname}/std)
+Provides:       crate(toml) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -59,7 +63,8 @@ This metapackage enables feature "default" for the Rust toml crate, by pulling i
 %package     -n %{name}+display
 Summary:        Native Rust encoder and decoder of TOML-formatted files and streams - feature "display"
 Requires:       crate(%{pkgname})
-Requires:       crate(toml-writer-1.0/alloc) >= 1.0.7
+Requires:       crate(toml-writer-1.0/alloc) >= 1.1.1
+Provides:       crate(toml) = %{version}
 Provides:       crate(%{pkgname}/display)
 
 %description -n %{name}+display
@@ -71,6 +76,7 @@ Summary:        Native Rust encoder and decoder of TOML-formatted files and stre
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/preserve-order)
 Requires:       crate(foldhash-0.2) >= 0.2.0
+Provides:       crate(toml) = %{version}
 Provides:       crate(%{pkgname}/fast-hash)
 
 %description -n %{name}+fast-hash
@@ -80,8 +86,9 @@ This metapackage enables feature "fast_hash" for the Rust toml crate, by pulling
 %package     -n %{name}+parse
 Summary:        Native Rust encoder and decoder of TOML-formatted files and streams - feature "parse"
 Requires:       crate(%{pkgname})
-Requires:       crate(toml-parser-1.0/alloc) >= 1.0.10
+Requires:       crate(toml-parser-1.0/alloc) >= 1.1.2
 Requires:       crate(winnow-0.7) >= 0.7.15
+Provides:       crate(toml) = %{version}
 Provides:       crate(%{pkgname}/parse)
 
 %description -n %{name}+parse
@@ -92,7 +99,8 @@ This metapackage enables feature "parse" for the Rust toml crate, by pulling in 
 Summary:        Native Rust encoder and decoder of TOML-formatted files and streams - feature "preserve_order"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/std)
-Requires:       crate(indexmap-2.0) >= 2.13.0
+Requires:       crate(indexmap-2.0) >= 2.14.0
+Provides:       crate(toml) = %{version}
 Provides:       crate(%{pkgname}/preserve-order)
 
 %description -n %{name}+preserve-order
@@ -103,10 +111,11 @@ This metapackage enables feature "preserve_order" for the Rust toml crate, by pu
 Summary:        Native Rust encoder and decoder of TOML-formatted files and streams - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(serde-core-1.0/alloc) >= 1.0.228
-Requires:       crate(serde-spanned-1.0/alloc) >= 1.0.4
-Requires:       crate(serde-spanned-1.0/serde) >= 1.0.4
+Requires:       crate(serde-spanned-1.0/alloc) >= 1.1.1
+Requires:       crate(serde-spanned-1.0/serde) >= 1.1.1
 Requires:       crate(toml-datetime-0.7/alloc) >= 0.7.5
 Requires:       crate(toml-datetime-0.7/serde) >= 0.7.5
+Provides:       crate(toml) = %{version}
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -116,17 +125,18 @@ This metapackage enables feature "serde" for the Rust toml crate, by pulling in 
 %package     -n %{name}+std
 Summary:        Native Rust encoder and decoder of TOML-formatted files and streams - feature "std"
 Requires:       crate(%{pkgname})
-Requires:       crate(indexmap-2.0/std) >= 2.13.0
+Requires:       crate(indexmap-2.0/std) >= 2.14.0
 Requires:       crate(serde-core-1.0/alloc) >= 1.0.228
 Requires:       crate(serde-core-1.0/std) >= 1.0.228
-Requires:       crate(serde-spanned-1.0/alloc) >= 1.0.4
-Requires:       crate(serde-spanned-1.0/std) >= 1.0.4
+Requires:       crate(serde-spanned-1.0/alloc) >= 1.1.1
+Requires:       crate(serde-spanned-1.0/std) >= 1.1.1
 Requires:       crate(toml-datetime-0.7/alloc) >= 0.7.5
 Requires:       crate(toml-datetime-0.7/std) >= 0.7.5
-Requires:       crate(toml-parser-1.0/alloc) >= 1.0.10
-Requires:       crate(toml-parser-1.0/std) >= 1.0.10
-Requires:       crate(toml-writer-1.0/alloc) >= 1.0.7
-Requires:       crate(toml-writer-1.0/std) >= 1.0.7
+Requires:       crate(toml-parser-1.0/alloc) >= 1.1.2
+Requires:       crate(toml-parser-1.0/std) >= 1.1.2
+Requires:       crate(toml-writer-1.0/alloc) >= 1.1.1
+Requires:       crate(toml-writer-1.0/std) >= 1.1.1
+Provides:       crate(toml) = %{version}
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std
@@ -137,4 +147,4 @@ This metapackage enables feature "std" for the Rust toml crate, by pulling in an
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

@@ -16,6 +16,7 @@ License:        Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT
 URL:            https://github.com/bytecodealliance/wit-bindgen
 #!RemoteAsset:  sha256:ea61de684c3ea68cb082b7a88508a8b27fcc8b797d738bfc99a82facf1d752dc
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
@@ -23,6 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(anyhow-1.0/default) >= 1.0.102
 Requires:       crate(heck-0.5/default) >= 0.5.0
 Requires:       crate(wit-parser-0.244/default) >= 0.244.0
+Provides:       crate(wit-bindgen-core) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 
@@ -34,6 +36,7 @@ Summary:        Low-level support for bindings generation based on WIT files for
 Requires:       crate(%{pkgname})
 Requires:       crate(clap-4.0/default) >= 4.3.19
 Requires:       crate(clap-4.0/derive) >= 4.3.19
+Provides:       crate(wit-bindgen-core) = %{version}
 Provides:       crate(%{pkgname}/clap)
 
 %description -n %{name}+clap
@@ -44,6 +47,7 @@ Summary:        Low-level support for bindings generation based on WIT files for
 Requires:       crate(%{pkgname})
 Requires:       crate(serde-1.0/default) >= 1.0.218
 Requires:       crate(serde-1.0/derive) >= 1.0.218
+Provides:       crate(wit-bindgen-core) = %{version}
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -53,4 +57,4 @@ This metapackage enables feature "serde" for the Rust wit-bindgen-core crate, by
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

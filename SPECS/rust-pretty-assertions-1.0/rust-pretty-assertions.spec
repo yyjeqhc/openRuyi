@@ -16,12 +16,14 @@ License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-pretty-assertions/rust-pretty-assertions
 #!RemoteAsset:  sha256:3ae130e2f271fbc2ac3a40fb1d07180839cdbbe443c7a27e1e3c13c5cac0116d
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(diff-0.1/default) >= 0.1.13
 Requires:       crate(yansi-1.0/default) >= 1.0.1
+Provides:       crate(pretty-assertions) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/default)
@@ -35,4 +37,4 @@ Source code for takopackized Rust crate "pretty_assertions"
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

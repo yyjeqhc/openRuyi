@@ -16,10 +16,12 @@ License:        Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT
 URL:            https://github.com/sunfishcode/linux-raw-sys
 #!RemoteAsset:  sha256:32a66949e030da00e8c7d4434b251670a91556f4144941d37452769c25d58a53
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Provides:       crate(linux-raw-sys) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/auxvec)
 Provides:       crate(%{pkgname}/bootparam)
@@ -55,6 +57,7 @@ Source code for takopackized Rust crate "linux-raw-sys"
 Summary:        Generated bindings for Linux's userspace API - feature "core"
 Requires:       crate(%{pkgname})
 Requires:       crate(rustc-std-workspace-core-1.0/default) >= 1.0.0
+Provides:       crate(linux-raw-sys) = %{version}
 Provides:       crate(%{pkgname}/core)
 
 %description -n %{name}+core
@@ -66,6 +69,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/errno)
 Requires:       crate(%{pkgname}/general)
 Requires:       crate(%{pkgname}/std)
+Provides:       crate(linux-raw-sys) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -76,6 +80,7 @@ Summary:        Generated bindings for Linux's userspace API - feature "rustc-de
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/core)
 Requires:       crate(%{pkgname}/no-std)
+Provides:       crate(linux-raw-sys) = %{version}
 Provides:       crate(%{pkgname}/rustc-dep-of-std)
 
 %description -n %{name}+rustc-dep-of-std
@@ -85,4 +90,4 @@ This metapackage enables feature "rustc-dep-of-std" for the Rust linux-raw-sys c
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

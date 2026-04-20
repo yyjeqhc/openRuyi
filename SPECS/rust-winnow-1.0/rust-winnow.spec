@@ -5,21 +5,23 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 %global crate_name winnow
-%global full_version 1.0.0
+%global full_version 1.0.1
 %global pkgname winnow-1.0
 
 Name:           rust-winnow-1.0
-Version:        1.0.0
+Version:        1.0.1
 Release:        %autorelease
 Summary:        Rust crate "winnow"
 License:        MIT
 URL:            https://github.com/winnow-rs/winnow
-#!RemoteAsset:  sha256:a90e88e4667264a994d34e6d1ab2d26d398dcdca8b7f52bec8668957517fc7d8
+#!RemoteAsset:  sha256:09dac053f1cd375980747450bfc7250c264eaae0583872e845c0c7cd578872b5
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Provides:       crate(winnow) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/ascii)
@@ -38,6 +40,7 @@ Requires:       crate(anstream-0.6/default) >= 0.6.15
 Requires:       crate(anstyle-1.0/default) >= 1.0.8
 Requires:       crate(is-terminal-polyfill-1.0/default) >= 1.48.1
 Requires:       crate(terminal-size-0.4/default) >= 0.4.3
+Provides:       crate(winnow) = %{version}
 Provides:       crate(%{pkgname}/debug)
 
 %description -n %{name}+debug
@@ -49,6 +52,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/ascii)
 Requires:       crate(%{pkgname}/binary)
 Requires:       crate(%{pkgname}/std)
+Provides:       crate(winnow) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -58,6 +62,7 @@ This metapackage enables feature "default" for the Rust winnow crate, by pulling
 Summary:        Byte-oriented, zero-copy, parser combinators library - feature "simd"
 Requires:       crate(%{pkgname})
 Requires:       crate(memchr-2.0) >= 2.7
+Provides:       crate(winnow) = %{version}
 Provides:       crate(%{pkgname}/simd)
 
 %description -n %{name}+simd
@@ -68,6 +73,7 @@ Summary:        Byte-oriented, zero-copy, parser combinators library - feature "
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(memchr-2.0/std) >= 2.7
+Provides:       crate(winnow) = %{version}
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std
@@ -82,6 +88,7 @@ Requires:       crate(%{pkgname}/binary)
 Requires:       crate(%{pkgname}/simd)
 Requires:       crate(%{pkgname}/std)
 Requires:       crate(%{pkgname}/unstable-recover)
+Provides:       crate(winnow) = %{version}
 Provides:       crate(%{pkgname}/unstable-doc)
 
 %description -n %{name}+unstable-doc
@@ -91,4 +98,4 @@ This metapackage enables feature "unstable-doc" for the Rust winnow crate, by pu
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

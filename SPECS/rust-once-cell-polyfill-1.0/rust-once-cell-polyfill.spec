@@ -16,10 +16,12 @@ License:        MIT OR Apache-2.0
 URL:            https://github.com/polyfill-rs/once_cell_polyfill
 #!RemoteAsset:  sha256:384b8ab6d37215f3c5301a95a4accb5d64aa607f1fcb26a11b5303878451b4fe
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Provides:       crate(once-cell-polyfill) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 
@@ -30,4 +32,4 @@ Source code for takopackized Rust crate "once_cell_polyfill"
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

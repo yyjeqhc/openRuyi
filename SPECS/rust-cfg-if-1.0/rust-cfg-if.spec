@@ -16,10 +16,12 @@ License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-lang/cfg-if
 #!RemoteAsset:  sha256:9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Provides:       crate(cfg-if) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 
@@ -31,6 +33,7 @@ Source code for takopackized Rust crate "cfg-if"
 Summary:        Macro to ergonomically define an item depending on a large number of #[cfg] parameters - feature "core" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(rustc-std-workspace-core-1.0/default) >= 1.0.0
+Provides:       crate(cfg-if) = %{version}
 Provides:       crate(%{pkgname}/core)
 Provides:       crate(%{pkgname}/rustc-dep-of-std)
 
@@ -44,4 +47,4 @@ Additionally, this package also provides the "rustc-dep-of-std" feature.
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

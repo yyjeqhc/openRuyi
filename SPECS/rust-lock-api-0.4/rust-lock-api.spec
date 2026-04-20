@@ -16,11 +16,13 @@ License:        MIT OR Apache-2.0
 URL:            https://github.com/Amanieu/parking_lot
 #!RemoteAsset:  sha256:224399e74b87b5f3557511d98dff8b14089b3dadafcab6bb93eab67d3aace965
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(scopeguard-1.0) >= 1.2.0
+Provides:       crate(lock-api) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/arc-lock)
 Provides:       crate(%{pkgname}/atomic-usize)
@@ -35,6 +37,7 @@ Source code for takopackized Rust crate "lock_api"
 Summary:        Wrappers to create fully-featured Mutex and RwLock types - feature "owning_ref"
 Requires:       crate(%{pkgname})
 Requires:       crate(owning-ref-0.4/default) >= 0.4.1
+Provides:       crate(lock-api) = %{version}
 Provides:       crate(%{pkgname}/owning-ref)
 
 %description -n %{name}+owning-ref
@@ -45,6 +48,7 @@ This metapackage enables feature "owning_ref" for the Rust lock_api crate, by pu
 Summary:        Wrappers to create fully-featured Mutex and RwLock types - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(serde-1.0) >= 1.0.126
+Provides:       crate(lock-api) = %{version}
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -55,4 +59,4 @@ This metapackage enables feature "serde" for the Rust lock_api crate, by pulling
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog
