@@ -48,7 +48,6 @@ Source code for takopackized Rust crate "wit-component"
 Summary:        Tooling for working with `*.wit` and component files together - feature "dummy-module" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(wat-1.0) >= 1.244.0
-Provides:       crate(wit-component) = %{version}
 Provides:       crate(%{pkgname}/dummy-module)
 Provides:       crate(%{pkgname}/semver-check)
 
@@ -62,7 +61,6 @@ Summary:        Tooling for working with `*.wit` and component files together - 
 Requires:       crate(%{pkgname})
 Requires:       crate(wast-244.0) >= 244.0.0
 Requires:       crate(wat-1.0) >= 1.244.0
-Provides:       crate(wit-component) = %{version}
 Provides:       crate(%{pkgname}/wat)
 
 %description -n %{name}+wat

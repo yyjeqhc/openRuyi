@@ -33,7 +33,6 @@ Source code for takopackized Rust crate "r-efi"
 Summary:        UEFI Reference Specification Protocol Constants and Definitions - feature "core" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(rustc-std-workspace-core-1.0/default) >= 1.0.0
-Provides:       crate(r-efi) = %{version}
 Provides:       crate(%{pkgname}/core)
 Provides:       crate(%{pkgname}/rustc-dep-of-std)
 

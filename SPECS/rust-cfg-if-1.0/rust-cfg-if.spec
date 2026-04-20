@@ -33,7 +33,6 @@ Source code for takopackized Rust crate "cfg-if"
 Summary:        Macro to ergonomically define an item depending on a large number of #[cfg] parameters - feature "core" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(rustc-std-workspace-core-1.0/default) >= 1.0.0
-Provides:       crate(cfg-if) = %{version}
 Provides:       crate(%{pkgname}/core)
 Provides:       crate(%{pkgname}/rustc-dep-of-std)
 

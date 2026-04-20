@@ -38,7 +38,6 @@ Summary:        Serde traits only, with no support for derive -- use the `serde`
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/result)
 Requires:       crate(%{pkgname}/std)
-Provides:       crate(serde-core) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default

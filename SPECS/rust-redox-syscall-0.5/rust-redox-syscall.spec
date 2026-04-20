@@ -35,7 +35,6 @@ Source code for takopackized Rust crate "redox_syscall"
 Summary:        Access raw Redox system calls - feature "core"
 Requires:       crate(%{pkgname})
 Requires:       crate(rustc-std-workspace-core-1.0/default) >= 1.0.0
-Provides:       crate(redox-syscall) = %{version}
 Provides:       crate(%{pkgname}/core)
 
 %description -n %{name}+core
@@ -46,7 +45,6 @@ Summary:        Access raw Redox system calls - feature "rustc-dep-of-std"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/core)
 Requires:       crate(bitflags-2.0/rustc-dep-of-std) >= 2.11.1
-Provides:       crate(redox-syscall) = %{version}
 Provides:       crate(%{pkgname}/rustc-dep-of-std)
 
 %description -n %{name}+rustc-dep-of-std

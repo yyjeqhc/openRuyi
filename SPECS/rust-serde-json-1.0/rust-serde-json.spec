@@ -40,7 +40,6 @@ Source code for takopackized Rust crate "serde_json"
 Summary:        JSON serialization file format - feature "alloc"
 Requires:       crate(%{pkgname})
 Requires:       crate(serde-core-1.0/alloc) >= 1.0.228
-Provides:       crate(serde-json) = %{version}
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -50,7 +49,6 @@ This metapackage enables feature "alloc" for the Rust serde_json crate, by pulli
 Summary:        JSON serialization file format - feature "indexmap"
 Requires:       crate(%{pkgname})
 Requires:       crate(indexmap-2.0/default) >= 2.2.3
-Provides:       crate(serde-json) = %{version}
 Provides:       crate(%{pkgname}/indexmap)
 
 %description -n %{name}+indexmap
@@ -61,7 +59,6 @@ Summary:        JSON serialization file format - feature "preserve_order"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/indexmap)
 Requires:       crate(%{pkgname}/std)
-Provides:       crate(serde-json) = %{version}
 Provides:       crate(%{pkgname}/preserve-order)
 
 %description -n %{name}+preserve-order
@@ -72,7 +69,6 @@ Summary:        JSON serialization file format - feature "std" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(memchr-2.0/std) >= 2.8.0
 Requires:       crate(serde-core-1.0/std) >= 1.0.228
-Provides:       crate(serde-json) = %{version}
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
 

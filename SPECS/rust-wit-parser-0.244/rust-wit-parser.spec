@@ -41,7 +41,6 @@ Requires:       crate(wasmparser-0.244/features) >= 0.244.0
 Requires:       crate(wasmparser-0.244/simd) >= 0.244.0
 Requires:       crate(wasmparser-0.244/std) >= 0.244.0
 Requires:       crate(wasmparser-0.244/validate) >= 0.244.0
-Provides:       crate(wit-parser) = %{version}
 Provides:       crate(%{pkgname}/decoding)
 
 %description -n %{name}+decoding
@@ -52,7 +51,6 @@ Summary:        Tooling for parsing `*.wit` files and working with their content
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/decoding)
 Requires:       crate(%{pkgname}/serde)
-Provides:       crate(wit-parser) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -66,7 +64,6 @@ Requires:       crate(indexmap-2.0/serde) >= 2.14.0
 Requires:       crate(indexmap-2.0/std) >= 2.14.0
 Requires:       crate(serde-1.0/alloc) >= 1.0.228
 Requires:       crate(serde-derive-1.0/default) >= 1.0.228
-Provides:       crate(wit-parser) = %{version}
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -76,7 +73,6 @@ This metapackage enables feature "serde" for the Rust wit-parser crate, by pulli
 Summary:        Tooling for parsing `*.wit` files and working with their contents - feature "serde_json"
 Requires:       crate(%{pkgname})
 Requires:       crate(serde-json-1.0/default) >= 1.0.149
-Provides:       crate(wit-parser) = %{version}
 Provides:       crate(%{pkgname}/serde-json)
 
 %description -n %{name}+serde-json
@@ -87,7 +83,6 @@ Summary:        Tooling for parsing `*.wit` files and working with their content
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/decoding)
 Requires:       crate(wat-1.0/component-model) >= 1.244.0
-Provides:       crate(wit-parser) = %{version}
 Provides:       crate(%{pkgname}/wat)
 
 %description -n %{name}+wat

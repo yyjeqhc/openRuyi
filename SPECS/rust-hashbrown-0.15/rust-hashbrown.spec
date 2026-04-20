@@ -35,7 +35,6 @@ Source code for takopackized Rust crate "hashbrown"
 Summary:        Rust port of Google's SwissTable hash map - feature "alloc"
 Requires:       crate(%{pkgname})
 Requires:       crate(rustc-std-workspace-alloc-1.0/default) >= 1.0.0
-Provides:       crate(hashbrown) = %{version}
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -45,7 +44,6 @@ This metapackage enables feature "alloc" for the Rust hashbrown crate, by pullin
 Summary:        Rust port of Google's SwissTable hash map - feature "allocator-api2"
 Requires:       crate(%{pkgname})
 Requires:       crate(allocator-api2-0.2/alloc) >= 0.2.9
-Provides:       crate(hashbrown) = %{version}
 Provides:       crate(%{pkgname}/allocator-api2)
 
 %description -n %{name}+allocator-api2
@@ -55,7 +53,6 @@ This metapackage enables feature "allocator-api2" for the Rust hashbrown crate, 
 Summary:        Rust port of Google's SwissTable hash map - feature "core"
 Requires:       crate(%{pkgname})
 Requires:       crate(rustc-std-workspace-core-1.0/default) >= 1.0.0
-Provides:       crate(hashbrown) = %{version}
 Provides:       crate(%{pkgname}/core)
 
 %description -n %{name}+core
@@ -69,7 +66,6 @@ Requires:       crate(%{pkgname}/default-hasher)
 Requires:       crate(%{pkgname}/equivalent)
 Requires:       crate(%{pkgname}/inline-more)
 Requires:       crate(%{pkgname}/raw-entry)
-Provides:       crate(hashbrown) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -79,7 +75,6 @@ This metapackage enables feature "default" for the Rust hashbrown crate, by pull
 Summary:        Rust port of Google's SwissTable hash map - feature "default-hasher"
 Requires:       crate(%{pkgname})
 Requires:       crate(foldhash-0.1) >= 0.1.5
-Provides:       crate(hashbrown) = %{version}
 Provides:       crate(%{pkgname}/default-hasher)
 
 %description -n %{name}+default-hasher
@@ -89,7 +84,6 @@ This metapackage enables feature "default-hasher" for the Rust hashbrown crate, 
 Summary:        Rust port of Google's SwissTable hash map - feature "equivalent"
 Requires:       crate(%{pkgname})
 Requires:       crate(equivalent-1.0) >= 1.0.0
-Provides:       crate(hashbrown) = %{version}
 Provides:       crate(%{pkgname}/equivalent)
 
 %description -n %{name}+equivalent
@@ -99,7 +93,6 @@ This metapackage enables feature "equivalent" for the Rust hashbrown crate, by p
 Summary:        Rust port of Google's SwissTable hash map - feature "rayon"
 Requires:       crate(%{pkgname})
 Requires:       crate(rayon-1.0/default) >= 1.2
-Provides:       crate(hashbrown) = %{version}
 Provides:       crate(%{pkgname}/rayon)
 
 %description -n %{name}+rayon
@@ -112,7 +105,6 @@ Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(%{pkgname}/core)
 Requires:       crate(%{pkgname}/nightly)
 Requires:       crate(%{pkgname}/rustc-internal-api)
-Provides:       crate(hashbrown) = %{version}
 Provides:       crate(%{pkgname}/rustc-dep-of-std)
 
 %description -n %{name}+rustc-dep-of-std
@@ -122,7 +114,6 @@ This metapackage enables feature "rustc-dep-of-std" for the Rust hashbrown crate
 Summary:        Rust port of Google's SwissTable hash map - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(serde-1.0) >= 1.0.25
-Provides:       crate(hashbrown) = %{version}
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

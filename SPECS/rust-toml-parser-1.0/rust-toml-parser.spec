@@ -38,7 +38,6 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/std)
 Requires:       crate(anstream-1.0/default) >= 1.0.0
 Requires:       crate(anstyle-1.0/default) >= 1.0.14
-Provides:       crate(toml-parser) = %{version}
 Provides:       crate(%{pkgname}/debug)
 
 %description -n %{name}+debug
@@ -48,7 +47,6 @@ This metapackage enables feature "debug" for the Rust toml_parser crate, by pull
 Summary:        Yet another format-preserving TOML parser - feature "simd"
 Requires:       crate(%{pkgname})
 Requires:       crate(winnow-1.0/simd) >= 1.0.1
-Provides:       crate(toml-parser) = %{version}
 Provides:       crate(%{pkgname}/simd)
 
 %description -n %{name}+simd

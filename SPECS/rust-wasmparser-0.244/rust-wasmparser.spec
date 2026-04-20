@@ -36,7 +36,6 @@ Source code for takopackized Rust crate "wasmparser"
 Summary:        Simple event-driven library for parsing WebAssembly binary files - feature "component-model"
 Requires:       crate(%{pkgname})
 Requires:       crate(semver-1.0) >= 1.0.28
-Provides:       crate(wasmparser) = %{version}
 Provides:       crate(%{pkgname}/component-model)
 
 %description -n %{name}+component-model
@@ -52,7 +51,6 @@ Requires:       crate(%{pkgname}/serde)
 Requires:       crate(%{pkgname}/simd)
 Requires:       crate(%{pkgname}/std)
 Requires:       crate(%{pkgname}/validate)
-Provides:       crate(wasmparser) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -63,7 +61,6 @@ Summary:        Simple event-driven library for parsing WebAssembly binary files
 Requires:       crate(%{pkgname})
 Requires:       crate(hashbrown-0.15/default-hasher) >= 0.15.5
 Requires:       crate(indexmap-2.0) >= 2.14.0
-Provides:       crate(wasmparser) = %{version}
 Provides:       crate(%{pkgname}/hash-collections)
 
 %description -n %{name}+hash-collections
@@ -76,7 +73,6 @@ Requires:       crate(hashbrown-0.15/default-hasher) >= 0.15.5
 Requires:       crate(hashbrown-0.15/serde) >= 0.15.5
 Requires:       crate(indexmap-2.0/serde) >= 2.14.0
 Requires:       crate(serde-1.0/alloc) >= 1.0.166
-Provides:       crate(wasmparser) = %{version}
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -86,7 +82,6 @@ This metapackage enables feature "serde" for the Rust wasmparser crate, by pulli
 Summary:        Simple event-driven library for parsing WebAssembly binary files - feature "std"
 Requires:       crate(%{pkgname})
 Requires:       crate(indexmap-2.0/std) >= 2.14.0
-Provides:       crate(wasmparser) = %{version}
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std

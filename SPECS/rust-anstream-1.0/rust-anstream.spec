@@ -37,7 +37,6 @@ Source code for takopackized Rust crate "anstream"
 Summary:        IO stream adapters for writing colored text that will gracefully degrade according to your terminal's capabilities - feature "auto"
 Requires:       crate(%{pkgname})
 Requires:       crate(anstyle-query-1.0/default) >= 1.1.5
-Provides:       crate(anstream) = %{version}
 Provides:       crate(%{pkgname}/auto)
 
 %description -n %{name}+auto
@@ -48,7 +47,6 @@ Summary:        IO stream adapters for writing colored text that will gracefully
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/auto)
 Requires:       crate(%{pkgname}/wincon)
-Provides:       crate(anstream) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -58,7 +56,6 @@ This metapackage enables feature "default" for the Rust anstream crate, by pulli
 Summary:        IO stream adapters for writing colored text that will gracefully degrade according to your terminal's capabilities - feature "wincon"
 Requires:       crate(%{pkgname})
 Requires:       crate(anstyle-wincon-3.0/default) >= 3.0.11
-Provides:       crate(anstream) = %{version}
 Provides:       crate(%{pkgname}/wincon)
 
 %description -n %{name}+wincon

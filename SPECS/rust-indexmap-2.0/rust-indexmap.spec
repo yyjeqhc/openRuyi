@@ -36,7 +36,6 @@ Source code for takopackized Rust crate "indexmap"
 Summary:        Hash table with consistent order and fast iteration - feature "arbitrary"
 Requires:       crate(%{pkgname})
 Requires:       crate(arbitrary-1.0) >= 1.0.0
-Provides:       crate(indexmap) = %{version}
 Provides:       crate(%{pkgname}/arbitrary)
 
 %description -n %{name}+arbitrary
@@ -46,7 +45,6 @@ This metapackage enables feature "arbitrary" for the Rust indexmap crate, by pul
 Summary:        Hash table with consistent order and fast iteration - feature "borsh"
 Requires:       crate(%{pkgname})
 Requires:       crate(borsh-1.0) >= 1.2
-Provides:       crate(indexmap) = %{version}
 Provides:       crate(%{pkgname}/borsh)
 
 %description -n %{name}+borsh
@@ -56,7 +54,6 @@ This metapackage enables feature "borsh" for the Rust indexmap crate, by pulling
 Summary:        Hash table with consistent order and fast iteration - feature "quickcheck"
 Requires:       crate(%{pkgname})
 Requires:       crate(quickcheck-1.0) >= 1.0.0
-Provides:       crate(indexmap) = %{version}
 Provides:       crate(%{pkgname}/quickcheck)
 
 %description -n %{name}+quickcheck
@@ -66,7 +63,6 @@ This metapackage enables feature "quickcheck" for the Rust indexmap crate, by pu
 Summary:        Hash table with consistent order and fast iteration - feature "rayon"
 Requires:       crate(%{pkgname})
 Requires:       crate(rayon-1.0/default) >= 1.9
-Provides:       crate(indexmap) = %{version}
 Provides:       crate(%{pkgname}/rayon)
 
 %description -n %{name}+rayon
@@ -77,7 +73,6 @@ Summary:        Hash table with consistent order and fast iteration - feature "s
 Requires:       crate(%{pkgname})
 Requires:       crate(serde-1.0) >= 1.0.228
 Requires:       crate(serde-core-1.0) >= 1.0.228
-Provides:       crate(indexmap) = %{version}
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -87,7 +82,6 @@ This metapackage enables feature "serde" for the Rust indexmap crate, by pulling
 Summary:        Hash table with consistent order and fast iteration - feature "sval"
 Requires:       crate(%{pkgname})
 Requires:       crate(sval-2.0) >= 2.0.0
-Provides:       crate(indexmap) = %{version}
 Provides:       crate(%{pkgname}/sval)
 
 %description -n %{name}+sval

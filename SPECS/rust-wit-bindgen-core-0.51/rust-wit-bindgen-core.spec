@@ -36,7 +36,6 @@ Summary:        Low-level support for bindings generation based on WIT files for
 Requires:       crate(%{pkgname})
 Requires:       crate(clap-4.0/default) >= 4.3.19
 Requires:       crate(clap-4.0/derive) >= 4.3.19
-Provides:       crate(wit-bindgen-core) = %{version}
 Provides:       crate(%{pkgname}/clap)
 
 %description -n %{name}+clap
@@ -47,7 +46,6 @@ Summary:        Low-level support for bindings generation based on WIT files for
 Requires:       crate(%{pkgname})
 Requires:       crate(serde-1.0/default) >= 1.0.218
 Requires:       crate(serde-1.0/derive) >= 1.0.218
-Provides:       crate(wit-bindgen-core) = %{version}
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

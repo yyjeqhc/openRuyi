@@ -37,7 +37,6 @@ Source code for takopackized Rust crate "lock_api"
 Summary:        Wrappers to create fully-featured Mutex and RwLock types - feature "owning_ref"
 Requires:       crate(%{pkgname})
 Requires:       crate(owning-ref-0.4/default) >= 0.4.1
-Provides:       crate(lock-api) = %{version}
 Provides:       crate(%{pkgname}/owning-ref)
 
 %description -n %{name}+owning-ref
@@ -48,7 +47,6 @@ This metapackage enables feature "owning_ref" for the Rust lock_api crate, by pu
 Summary:        Wrappers to create fully-featured Mutex and RwLock types - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(serde-1.0) >= 1.0.126
-Provides:       crate(lock-api) = %{version}
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

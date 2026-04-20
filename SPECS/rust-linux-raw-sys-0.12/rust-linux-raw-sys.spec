@@ -57,7 +57,6 @@ Source code for takopackized Rust crate "linux-raw-sys"
 Summary:        Generated bindings for Linux's userspace API - feature "core"
 Requires:       crate(%{pkgname})
 Requires:       crate(rustc-std-workspace-core-1.0/default) >= 1.0.0
-Provides:       crate(linux-raw-sys) = %{version}
 Provides:       crate(%{pkgname}/core)
 
 %description -n %{name}+core
@@ -69,7 +68,6 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/errno)
 Requires:       crate(%{pkgname}/general)
 Requires:       crate(%{pkgname}/std)
-Provides:       crate(linux-raw-sys) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -80,7 +78,6 @@ Summary:        Generated bindings for Linux's userspace API - feature "rustc-de
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/core)
 Requires:       crate(%{pkgname}/no-std)
-Provides:       crate(linux-raw-sys) = %{version}
 Provides:       crate(%{pkgname}/rustc-dep-of-std)
 
 %description -n %{name}+rustc-dep-of-std

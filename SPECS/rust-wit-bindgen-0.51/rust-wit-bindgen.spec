@@ -35,7 +35,6 @@ Summary:        Rust bindings generator and runtime support for WIT and the comp
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/std)
 Requires:       crate(wit-bindgen-rust-macro-0.51/async) >= 0.51.0
-Provides:       crate(wit-bindgen) = %{version}
 Provides:       crate(%{pkgname}/async)
 Provides:       crate(%{pkgname}/inter-task-wakeup)
 
@@ -50,7 +49,6 @@ Summary:        Rust bindings generator and runtime support for WIT and the comp
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/async)
 Requires:       crate(futures-0.3/default) >= 0.3.30
-Provides:       crate(wit-bindgen) = %{version}
 Provides:       crate(%{pkgname}/async-spawn)
 
 %description -n %{name}+async-spawn
@@ -61,7 +59,6 @@ This metapackage enables feature "async-spawn" for the Rust wit-bindgen crate, b
 Summary:        Rust bindings generator and runtime support for WIT and the component model - feature "bitflags"
 Requires:       crate(%{pkgname})
 Requires:       crate(bitflags-2.0/default) >= 2.3.3
-Provides:       crate(wit-bindgen) = %{version}
 Provides:       crate(%{pkgname}/bitflags)
 
 %description -n %{name}+bitflags
@@ -76,7 +73,6 @@ Requires:       crate(%{pkgname}/bitflags)
 Requires:       crate(%{pkgname}/macros)
 Requires:       crate(%{pkgname}/realloc)
 Requires:       crate(%{pkgname}/std)
-Provides:       crate(wit-bindgen) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -87,7 +83,6 @@ This metapackage enables feature "default" for the Rust wit-bindgen crate, by pu
 Summary:        Rust bindings generator and runtime support for WIT and the component model - feature "macros"
 Requires:       crate(%{pkgname})
 Requires:       crate(wit-bindgen-rust-macro-0.51/default) >= 0.51.0
-Provides:       crate(wit-bindgen) = %{version}
 Provides:       crate(%{pkgname}/macros)
 
 %description -n %{name}+macros
@@ -99,7 +94,6 @@ Summary:        Rust bindings generator and runtime support for WIT and the comp
 Requires:       crate(%{pkgname})
 Requires:       crate(rustc-std-workspace-alloc-1.0/default) >= 1.0.0
 Requires:       crate(rustc-std-workspace-core-1.0/default) >= 1.0.0
-Provides:       crate(wit-bindgen) = %{version}
 Provides:       crate(%{pkgname}/rustc-dep-of-std)
 
 %description -n %{name}+rustc-dep-of-std

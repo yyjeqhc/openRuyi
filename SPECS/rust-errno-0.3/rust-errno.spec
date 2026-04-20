@@ -35,7 +35,6 @@ Source code for takopackized Rust crate "errno"
 Summary:        Cross-platform interface to the `errno` variable - feature "std" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(libc-0.2/std) >= 0.2.185
-Provides:       crate(errno) = %{version}
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
 

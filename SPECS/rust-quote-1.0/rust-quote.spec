@@ -32,7 +32,6 @@ Source code for takopackized Rust crate "quote"
 Summary:        Quasi-quoting macro quote!(...) - feature "proc-macro" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(proc-macro2-1.0/proc-macro) >= 1.0.106
-Provides:       crate(quote) = %{version}
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/proc-macro)
 

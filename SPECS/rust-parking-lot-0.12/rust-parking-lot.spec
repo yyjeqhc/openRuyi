@@ -36,7 +36,6 @@ Source code for takopackized Rust crate "parking_lot"
 Summary:        More compact and efficient implementations of the standard synchronization primitives - feature "arc_lock"
 Requires:       crate(%{pkgname})
 Requires:       crate(lock-api-0.4/arc-lock) >= 0.4.14
-Provides:       crate(parking-lot) = %{version}
 Provides:       crate(%{pkgname}/arc-lock)
 
 %description -n %{name}+arc-lock
@@ -46,7 +45,6 @@ This metapackage enables feature "arc_lock" for the Rust parking_lot crate, by p
 Summary:        More compact and efficient implementations of the standard synchronization primitives - feature "deadlock_detection"
 Requires:       crate(%{pkgname})
 Requires:       crate(parking-lot-core-0.9/deadlock-detection) >= 0.9.12
-Provides:       crate(parking-lot) = %{version}
 Provides:       crate(%{pkgname}/deadlock-detection)
 
 %description -n %{name}+deadlock-detection
@@ -57,7 +55,6 @@ Summary:        More compact and efficient implementations of the standard synch
 Requires:       crate(%{pkgname})
 Requires:       crate(lock-api-0.4/nightly) >= 0.4.14
 Requires:       crate(parking-lot-core-0.9/nightly) >= 0.9.12
-Provides:       crate(parking-lot) = %{version}
 Provides:       crate(%{pkgname}/nightly)
 
 %description -n %{name}+nightly
@@ -67,7 +64,6 @@ This metapackage enables feature "nightly" for the Rust parking_lot crate, by pu
 Summary:        More compact and efficient implementations of the standard synchronization primitives - feature "owning_ref"
 Requires:       crate(%{pkgname})
 Requires:       crate(lock-api-0.4/owning-ref) >= 0.4.14
-Provides:       crate(parking-lot) = %{version}
 Provides:       crate(%{pkgname}/owning-ref)
 
 %description -n %{name}+owning-ref
@@ -77,7 +73,6 @@ This metapackage enables feature "owning_ref" for the Rust parking_lot crate, by
 Summary:        More compact and efficient implementations of the standard synchronization primitives - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(lock-api-0.4/serde) >= 0.4.14
-Provides:       crate(parking-lot) = %{version}
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

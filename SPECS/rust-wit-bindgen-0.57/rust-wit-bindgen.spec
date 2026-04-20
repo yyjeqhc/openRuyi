@@ -38,7 +38,6 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/async)
 Requires:       crate(%{pkgname}/std)
 Requires:       crate(futures-0.3/default) >= 0.3.30
-Provides:       crate(wit-bindgen) = %{version}
 Provides:       crate(%{pkgname}/async-spawn)
 
 %description -n %{name}+async-spawn
@@ -49,7 +48,6 @@ This metapackage enables feature "async-spawn" for the Rust wit-bindgen crate, b
 Summary:        Rust bindings generator and runtime support for WIT and the component model - feature "bitflags"
 Requires:       crate(%{pkgname})
 Requires:       crate(bitflags-2.0/default) >= 2.11.1
-Provides:       crate(wit-bindgen) = %{version}
 Provides:       crate(%{pkgname}/bitflags)
 
 %description -n %{name}+bitflags
@@ -65,7 +63,6 @@ Requires:       crate(%{pkgname}/macro-string)
 Requires:       crate(%{pkgname}/macros)
 Requires:       crate(%{pkgname}/realloc)
 Requires:       crate(%{pkgname}/std)
-Provides:       crate(wit-bindgen) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -77,7 +74,6 @@ Summary:        Rust bindings generator and runtime support for WIT and the comp
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/async)
 Requires:       crate(futures-0.3/default) >= 0.3.30
-Provides:       crate(wit-bindgen) = %{version}
 Provides:       crate(%{pkgname}/futures-stream)
 
 %description -n %{name}+futures-stream
@@ -88,7 +84,6 @@ This metapackage enables feature "futures-stream" for the Rust wit-bindgen crate
 Summary:        Rust bindings generator and runtime support for WIT and the component model - feature "macro-string"
 Requires:       crate(%{pkgname})
 Requires:       crate(wit-bindgen-rust-macro-0.57/macro-string) >= 0.57.1
-Provides:       crate(wit-bindgen) = %{version}
 Provides:       crate(%{pkgname}/macro-string)
 
 %description -n %{name}+macro-string
@@ -99,7 +94,6 @@ This metapackage enables feature "macro-string" for the Rust wit-bindgen crate, 
 Summary:        Rust bindings generator and runtime support for WIT and the component model - feature "macros"
 Requires:       crate(%{pkgname})
 Requires:       crate(wit-bindgen-rust-macro-0.57) >= 0.57.1
-Provides:       crate(wit-bindgen) = %{version}
 Provides:       crate(%{pkgname}/macros)
 
 %description -n %{name}+macros
@@ -111,7 +105,6 @@ Summary:        Rust bindings generator and runtime support for WIT and the comp
 Requires:       crate(%{pkgname})
 Requires:       crate(rustc-std-workspace-alloc-1.0/default) >= 1.0.0
 Requires:       crate(rustc-std-workspace-core-1.0/default) >= 1.0.0
-Provides:       crate(wit-bindgen) = %{version}
 Provides:       crate(%{pkgname}/rustc-dep-of-std)
 
 %description -n %{name}+rustc-dep-of-std

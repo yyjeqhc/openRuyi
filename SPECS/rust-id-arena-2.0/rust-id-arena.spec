@@ -33,7 +33,6 @@ Source code for takopackized Rust crate "id-arena"
 Summary:        Simple, id-based arena - feature "rayon"
 Requires:       crate(%{pkgname})
 Requires:       crate(rayon-1.0/default) >= 1.0.3
-Provides:       crate(id-arena) = %{version}
 Provides:       crate(%{pkgname}/rayon)
 
 %description -n %{name}+rayon

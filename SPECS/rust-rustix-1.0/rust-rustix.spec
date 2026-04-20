@@ -80,7 +80,6 @@ Requires:       crate(%{pkgname}/system)
 Requires:       crate(%{pkgname}/termios)
 Requires:       crate(%{pkgname}/thread)
 Requires:       crate(%{pkgname}/time)
-Provides:       crate(rustix) = %{version}
 Provides:       crate(%{pkgname}/all-apis)
 
 %description -n %{name}+all-apis
@@ -90,7 +89,6 @@ This metapackage enables feature "all-apis" for the Rust rustix crate, by pullin
 Summary:        Safe Rust bindings to POSIX/Unix/Linux/Winsock-like syscalls - feature "core"
 Requires:       crate(%{pkgname})
 Requires:       crate(rustc-std-workspace-core-1.0/default) >= 1.0.0
-Provides:       crate(rustix) = %{version}
 Provides:       crate(%{pkgname}/core)
 
 %description -n %{name}+core
@@ -110,7 +108,6 @@ Requires:       crate(linux-raw-sys-0.12/general) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/io-uring) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/ioctl) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/no-std) >= 0.12.1
-Provides:       crate(rustix) = %{version}
 Provides:       crate(%{pkgname}/io-uring)
 
 %description -n %{name}+io-uring
@@ -120,7 +117,6 @@ This metapackage enables feature "io_uring" for the Rust rustix crate, by pullin
 Summary:        Safe Rust bindings to POSIX/Unix/Linux/Winsock-like syscalls - feature "libc"
 Requires:       crate(%{pkgname})
 Requires:       crate(libc-0.2) >= 0.2.185
-Provides:       crate(rustix) = %{version}
 Provides:       crate(%{pkgname}/libc)
 
 %description -n %{name}+libc
@@ -130,7 +126,6 @@ This metapackage enables feature "libc" for the Rust rustix crate, by pulling in
 Summary:        Safe Rust bindings to POSIX/Unix/Linux/Winsock-like syscalls - feature "libc_errno"
 Requires:       crate(%{pkgname})
 Requires:       crate(errno-0.3) >= 0.3.14
-Provides:       crate(rustix) = %{version}
 Provides:       crate(%{pkgname}/libc-errno)
 
 %description -n %{name}+libc-errno
@@ -149,7 +144,6 @@ Requires:       crate(linux-raw-sys-0.12/net) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/netlink) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/no-std) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/xdp) >= 0.12.1
-Provides:       crate(rustix) = %{version}
 Provides:       crate(%{pkgname}/net)
 
 %description -n %{name}+net
@@ -165,7 +159,6 @@ Requires:       crate(linux-raw-sys-0.12/general) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/ioctl) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/no-std) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/prctl) >= 0.12.1
-Provides:       crate(rustix) = %{version}
 Provides:       crate(%{pkgname}/process)
 Provides:       crate(%{pkgname}/runtime)
 Provides:       crate(%{pkgname}/thread)
@@ -188,7 +181,6 @@ Requires:       crate(linux-raw-sys-0.12/general) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/ioctl) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/no-std) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/rustc-dep-of-std) >= 0.12.1
-Provides:       crate(rustix) = %{version}
 Provides:       crate(%{pkgname}/rustc-dep-of-std)
 
 %description -n %{name}+rustc-dep-of-std
@@ -198,7 +190,6 @@ This metapackage enables feature "rustc-dep-of-std" for the Rust rustix crate, b
 Summary:        Safe Rust bindings to POSIX/Unix/Linux/Winsock-like syscalls - feature "rustc-std-workspace-alloc"
 Requires:       crate(%{pkgname})
 Requires:       crate(rustc-std-workspace-alloc-1.0/default) >= 1.0.0
-Provides:       crate(rustix) = %{version}
 Provides:       crate(%{pkgname}/rustc-std-workspace-alloc)
 
 %description -n %{name}+rustc-std-workspace-alloc
@@ -211,7 +202,6 @@ Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(bitflags-2.0/std) >= 2.11.1
 Requires:       crate(errno-0.3/std) >= 0.3.14
 Requires:       crate(libc-0.2/std) >= 0.2.185
-Provides:       crate(rustix) = %{version}
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
 
@@ -230,7 +220,6 @@ Requires:       crate(linux-raw-sys-0.12/general) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/ioctl) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/no-std) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/system) >= 0.12.1
-Provides:       crate(rustix) = %{version}
 Provides:       crate(%{pkgname}/system)
 
 %description -n %{name}+system
@@ -241,7 +230,6 @@ Summary:        Safe Rust bindings to POSIX/Unix/Linux/Winsock-like syscalls - f
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/libc)
 Requires:       crate(%{pkgname}/libc-errno)
-Provides:       crate(rustix) = %{version}
 Provides:       crate(%{pkgname}/use-libc)
 
 %description -n %{name}+use-libc

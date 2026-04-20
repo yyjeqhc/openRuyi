@@ -33,7 +33,6 @@ Summary:        Low-level WebAssembly encoder - feature "component-model"
 Requires:       crate(%{pkgname})
 Requires:       crate(wasmparser-0.244/component-model) >= 0.244.0
 Requires:       crate(wasmparser-0.244/simd) >= 0.244.0
-Provides:       crate(wasm-encoder) = %{version}
 Provides:       crate(%{pkgname}/component-model)
 
 %description -n %{name}+component-model
@@ -44,7 +43,6 @@ Summary:        Low-level WebAssembly encoder - feature "default"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/component-model)
 Requires:       crate(%{pkgname}/std)
-Provides:       crate(wasm-encoder) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -55,7 +53,6 @@ Summary:        Low-level WebAssembly encoder - feature "std"
 Requires:       crate(%{pkgname})
 Requires:       crate(wasmparser-0.244/simd) >= 0.244.0
 Requires:       crate(wasmparser-0.244/std) >= 0.244.0
-Provides:       crate(wasm-encoder) = %{version}
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std
@@ -65,7 +62,6 @@ This metapackage enables feature "std" for the Rust wasm-encoder crate, by pulli
 Summary:        Low-level WebAssembly encoder - feature "wasmparser"
 Requires:       crate(%{pkgname})
 Requires:       crate(wasmparser-0.244/simd) >= 0.244.0
-Provides:       crate(wasm-encoder) = %{version}
 Provides:       crate(%{pkgname}/wasmparser)
 
 %description -n %{name}+wasmparser
