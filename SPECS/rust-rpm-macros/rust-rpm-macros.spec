@@ -11,7 +11,7 @@ Summary:        Rust macros for openRuyi packaging
 License:        MIT
 URL:            https://github.com/openRuyi-Project/rust-rpm-macros
 #!RemoteAsset:  sha256:3c6949fc6f5c94c47f35cc31fd76a07bd5712c52bf9b6d11544465f83908ae94
-Source0:        https://github.com/openRuyi-Project/rust-rpm-macros/archive/refs/tags/v%{version}.tar.gz
+Source0:        rust-rpm-macros.tar.gz
 BuildArch:      noarch
 BuildSystem:    autotools
 
@@ -33,6 +33,7 @@ This package provides RPM macros for packaging Rust software in openRuyi.
 %{_rpmmacrodir}/macros.buildsystem.rust
 %{_rpmmacrodir}/macros.rust
 %{_rpmconfigdir}/rust-rpm-macros/rustcrates-gen-feature-specparts.sh
+%{_rpmconfigdir}/cargo_buildrequires.py
 
 %changelog
 %autochangelog
