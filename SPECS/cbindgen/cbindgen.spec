@@ -15,7 +15,7 @@ License:        MPL-2.0
 URL:            https://github.com/mozilla/cbindgen
 #!RemoteAsset:  sha256:befbfd072a8e81c02f8c507aefce431fe5e7d051f83d48a23ffc9b9fe5a11799
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
-BuildSystem:    rustcrates
+BuildSystem:    rust
 
 Patch:          1.patch
 
