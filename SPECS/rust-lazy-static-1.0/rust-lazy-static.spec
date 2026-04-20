@@ -32,7 +32,6 @@ Source code for takopackized Rust crate "lazy_static"
 Summary:        Macro for declaring lazily evaluated statics in Rust - feature "spin" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(spin-0.9/once) >= 0.9.8
-Provides:       crate(lazy-static) = %{version}
 Provides:       crate(%{pkgname}/spin)
 Provides:       crate(%{pkgname}/spin-no-std)
 

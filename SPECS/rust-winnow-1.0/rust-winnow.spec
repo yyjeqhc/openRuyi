@@ -40,7 +40,6 @@ Requires:       crate(anstream-0.6/default) >= 0.6.15
 Requires:       crate(anstyle-1.0/default) >= 1.0.8
 Requires:       crate(is-terminal-polyfill-1.0/default) >= 1.48.1
 Requires:       crate(terminal-size-0.4/default) >= 0.4.3
-Provides:       crate(winnow) = %{version}
 Provides:       crate(%{pkgname}/debug)
 
 %description -n %{name}+debug
@@ -52,7 +51,6 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/ascii)
 Requires:       crate(%{pkgname}/binary)
 Requires:       crate(%{pkgname}/std)
-Provides:       crate(winnow) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -62,7 +60,6 @@ This metapackage enables feature "default" for the Rust winnow crate, by pulling
 Summary:        Byte-oriented, zero-copy, parser combinators library - feature "simd"
 Requires:       crate(%{pkgname})
 Requires:       crate(memchr-2.0) >= 2.7
-Provides:       crate(winnow) = %{version}
 Provides:       crate(%{pkgname}/simd)
 
 %description -n %{name}+simd
@@ -73,7 +70,6 @@ Summary:        Byte-oriented, zero-copy, parser combinators library - feature "
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(memchr-2.0/std) >= 2.7
-Provides:       crate(winnow) = %{version}
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std
@@ -88,7 +84,6 @@ Requires:       crate(%{pkgname}/binary)
 Requires:       crate(%{pkgname}/simd)
 Requires:       crate(%{pkgname}/std)
 Requires:       crate(%{pkgname}/unstable-recover)
-Provides:       crate(winnow) = %{version}
 Provides:       crate(%{pkgname}/unstable-doc)
 
 %description -n %{name}+unstable-doc

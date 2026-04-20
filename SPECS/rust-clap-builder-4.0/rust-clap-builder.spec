@@ -42,7 +42,6 @@ Source code for takopackized Rust crate "clap_builder"
 Summary:        Simple to use, efficient, and full-featured Command Line Argument Parser - feature "color" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(anstream-1.0/default) >= 1.0.0
-Provides:       crate(clap-builder) = %{version}
 Provides:       crate(%{pkgname}/color)
 Provides:       crate(%{pkgname}/unstable-styles)
 
@@ -55,7 +54,6 @@ Additionally, this package also provides the "unstable-styles" feature.
 Summary:        Simple to use, efficient, and full-featured Command Line Argument Parser - feature "debug"
 Requires:       crate(%{pkgname})
 Requires:       crate(backtrace-0.3/default) >= 0.3.76
-Provides:       crate(clap-builder) = %{version}
 Provides:       crate(%{pkgname}/debug)
 
 %description -n %{name}+debug
@@ -70,7 +68,6 @@ Requires:       crate(%{pkgname}/help)
 Requires:       crate(%{pkgname}/std)
 Requires:       crate(%{pkgname}/suggestions)
 Requires:       crate(%{pkgname}/usage)
-Provides:       crate(clap-builder) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -80,7 +77,6 @@ This metapackage enables feature "default" for the Rust clap_builder crate, by p
 Summary:        Simple to use, efficient, and full-featured Command Line Argument Parser - feature "std"
 Requires:       crate(%{pkgname})
 Requires:       crate(anstyle-1.0/std) >= 1.0.14
-Provides:       crate(clap-builder) = %{version}
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std
@@ -91,7 +87,6 @@ Summary:        Simple to use, efficient, and full-featured Command Line Argumen
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/error-context)
 Requires:       crate(strsim-0.11/default) >= 0.11.1
-Provides:       crate(clap-builder) = %{version}
 Provides:       crate(%{pkgname}/suggestions)
 
 %description -n %{name}+suggestions
@@ -102,7 +97,6 @@ Summary:        Simple to use, efficient, and full-featured Command Line Argumen
 Requires:       crate(%{pkgname})
 Requires:       crate(unicase-2.0/default) >= 2.9.0
 Requires:       crate(unicode-width-0.2/default) >= 0.2.2
-Provides:       crate(clap-builder) = %{version}
 Provides:       crate(%{pkgname}/unicode)
 
 %description -n %{name}+unicode
@@ -117,7 +111,6 @@ Requires:       crate(%{pkgname}/string)
 Requires:       crate(%{pkgname}/unicode)
 Requires:       crate(%{pkgname}/unstable-ext)
 Requires:       crate(%{pkgname}/wrap-help)
-Provides:       crate(clap-builder) = %{version}
 Provides:       crate(%{pkgname}/unstable-doc)
 
 %description -n %{name}+unstable-doc
@@ -128,7 +121,6 @@ Summary:        Simple to use, efficient, and full-featured Command Line Argumen
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/help)
 Requires:       crate(terminal-size-0.4/default) >= 0.4.3
-Provides:       crate(clap-builder) = %{version}
 Provides:       crate(%{pkgname}/wrap-help)
 
 %description -n %{name}+wrap-help

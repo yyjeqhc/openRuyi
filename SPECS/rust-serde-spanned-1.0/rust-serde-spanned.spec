@@ -31,7 +31,6 @@ Source code for takopackized Rust crate "serde_spanned"
 Summary:        Serde-compatible spanned Value - feature "alloc"
 Requires:       crate(%{pkgname})
 Requires:       crate(serde-core-1.0/alloc) >= 1.0.228
-Provides:       crate(serde-spanned) = %{version}
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -42,7 +41,6 @@ Summary:        Serde-compatible spanned Value - feature "default"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/serde)
 Requires:       crate(%{pkgname}/std)
-Provides:       crate(serde-spanned) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -52,7 +50,6 @@ This metapackage enables feature "default" for the Rust serde_spanned crate, by 
 Summary:        Serde-compatible spanned Value - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(serde-core-1.0) >= 1.0.228
-Provides:       crate(serde-spanned) = %{version}
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -63,7 +60,6 @@ Summary:        Serde-compatible spanned Value - feature "std"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(serde-core-1.0/std) >= 1.0.228
-Provides:       crate(serde-spanned) = %{version}
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std

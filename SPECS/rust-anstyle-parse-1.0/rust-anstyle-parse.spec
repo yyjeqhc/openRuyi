@@ -31,7 +31,6 @@ Source code for takopackized Rust crate "anstyle-parse"
 Summary:        Parse ANSI Style Escapes - feature "core"
 Requires:       crate(%{pkgname})
 Requires:       crate(arrayvec-0.7) >= 0.7.6
-Provides:       crate(anstyle-parse) = %{version}
 Provides:       crate(%{pkgname}/core)
 
 %description -n %{name}+core
@@ -41,7 +40,6 @@ This metapackage enables feature "core" for the Rust anstyle-parse crate, by pul
 Summary:        Parse ANSI Style Escapes - feature "utf8" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(utf8parse-0.2/default) >= 0.2.2
-Provides:       crate(anstyle-parse) = %{version}
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/utf8)
 

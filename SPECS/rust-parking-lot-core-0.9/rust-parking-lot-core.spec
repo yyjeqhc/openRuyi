@@ -38,7 +38,6 @@ Source code for takopackized Rust crate "parking_lot_core"
 Summary:        Advanced API for creating custom synchronization primitives - feature "backtrace"
 Requires:       crate(%{pkgname})
 Requires:       crate(backtrace-0.3/default) >= 0.3.60
-Provides:       crate(parking-lot-core) = %{version}
 Provides:       crate(%{pkgname}/backtrace)
 
 %description -n %{name}+backtrace
@@ -49,7 +48,6 @@ Summary:        Advanced API for creating custom synchronization primitives - fe
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/backtrace)
 Requires:       crate(%{pkgname}/petgraph)
-Provides:       crate(parking-lot-core) = %{version}
 Provides:       crate(%{pkgname}/deadlock-detection)
 
 %description -n %{name}+deadlock-detection
@@ -59,7 +57,6 @@ This metapackage enables feature "deadlock_detection" for the Rust parking_lot_c
 Summary:        Advanced API for creating custom synchronization primitives - feature "petgraph"
 Requires:       crate(%{pkgname})
 Requires:       crate(petgraph-0.6/default) >= 0.6.0
-Provides:       crate(parking-lot-core) = %{version}
 Provides:       crate(%{pkgname}/petgraph)
 
 %description -n %{name}+petgraph

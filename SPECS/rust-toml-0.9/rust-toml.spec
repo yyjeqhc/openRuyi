@@ -39,7 +39,6 @@ Requires:       crate(anstream-0.6/default) >= 0.6.20
 Requires:       crate(anstyle-1.0/default) >= 1.0.11
 Requires:       crate(toml-parser-1.0/alloc) >= 1.1.2
 Requires:       crate(toml-parser-1.0/debug) >= 1.1.2
-Provides:       crate(toml) = %{version}
 Provides:       crate(%{pkgname}/debug)
 
 %description -n %{name}+debug
@@ -53,7 +52,6 @@ Requires:       crate(%{pkgname}/display)
 Requires:       crate(%{pkgname}/parse)
 Requires:       crate(%{pkgname}/serde)
 Requires:       crate(%{pkgname}/std)
-Provides:       crate(toml) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -64,7 +62,6 @@ This metapackage enables feature "default" for the Rust toml crate, by pulling i
 Summary:        Native Rust encoder and decoder of TOML-formatted files and streams - feature "display"
 Requires:       crate(%{pkgname})
 Requires:       crate(toml-writer-1.0/alloc) >= 1.1.1
-Provides:       crate(toml) = %{version}
 Provides:       crate(%{pkgname}/display)
 
 %description -n %{name}+display
@@ -76,7 +73,6 @@ Summary:        Native Rust encoder and decoder of TOML-formatted files and stre
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/preserve-order)
 Requires:       crate(foldhash-0.2) >= 0.2.0
-Provides:       crate(toml) = %{version}
 Provides:       crate(%{pkgname}/fast-hash)
 
 %description -n %{name}+fast-hash
@@ -88,7 +84,6 @@ Summary:        Native Rust encoder and decoder of TOML-formatted files and stre
 Requires:       crate(%{pkgname})
 Requires:       crate(toml-parser-1.0/alloc) >= 1.1.2
 Requires:       crate(winnow-0.7) >= 0.7.15
-Provides:       crate(toml) = %{version}
 Provides:       crate(%{pkgname}/parse)
 
 %description -n %{name}+parse
@@ -100,7 +95,6 @@ Summary:        Native Rust encoder and decoder of TOML-formatted files and stre
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/std)
 Requires:       crate(indexmap-2.0) >= 2.14.0
-Provides:       crate(toml) = %{version}
 Provides:       crate(%{pkgname}/preserve-order)
 
 %description -n %{name}+preserve-order
@@ -115,7 +109,6 @@ Requires:       crate(serde-spanned-1.0/alloc) >= 1.1.1
 Requires:       crate(serde-spanned-1.0/serde) >= 1.1.1
 Requires:       crate(toml-datetime-0.7/alloc) >= 0.7.5
 Requires:       crate(toml-datetime-0.7/serde) >= 0.7.5
-Provides:       crate(toml) = %{version}
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -136,7 +129,6 @@ Requires:       crate(toml-parser-1.0/alloc) >= 1.1.2
 Requires:       crate(toml-parser-1.0/std) >= 1.1.2
 Requires:       crate(toml-writer-1.0/alloc) >= 1.1.1
 Requires:       crate(toml-writer-1.0/std) >= 1.1.1
-Provides:       crate(toml) = %{version}
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std

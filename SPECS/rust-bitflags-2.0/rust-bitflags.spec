@@ -34,7 +34,6 @@ Source code for takopackized Rust crate "bitflags"
 Summary:        Macro to generate structures which behave like bitflags - feature "arbitrary"
 Requires:       crate(%{pkgname})
 Requires:       crate(arbitrary-1.0/default) >= 1.0.0
-Provides:       crate(bitflags) = %{version}
 Provides:       crate(%{pkgname}/arbitrary)
 
 %description -n %{name}+arbitrary
@@ -44,7 +43,6 @@ This metapackage enables feature "arbitrary" for the Rust bitflags crate, by pul
 Summary:        Macro to generate structures which behave like bitflags - feature "bytemuck"
 Requires:       crate(%{pkgname})
 Requires:       crate(bytemuck-1.0/default) >= 1.12
-Provides:       crate(bitflags) = %{version}
 Provides:       crate(%{pkgname}/bytemuck)
 
 %description -n %{name}+bytemuck
@@ -54,7 +52,6 @@ This metapackage enables feature "bytemuck" for the Rust bitflags crate, by pull
 Summary:        Macro to generate structures which behave like bitflags - feature "serde_core" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(serde-core-1.0) >= 1.0.228
-Provides:       crate(bitflags) = %{version}
 Provides:       crate(%{pkgname}/serde)
 Provides:       crate(%{pkgname}/serde-core)
 

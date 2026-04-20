@@ -38,7 +38,6 @@ Summary:        Raw FFI bindings to platform libraries like libc - feature "rust
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/align)
 Requires:       crate(%{pkgname}/rustc-std-workspace-core)
-Provides:       crate(libc) = %{version}
 Provides:       crate(%{pkgname}/rustc-dep-of-std)
 
 %description -n %{name}+rustc-dep-of-std
@@ -48,7 +47,6 @@ This metapackage enables feature "rustc-dep-of-std" for the Rust libc crate, by 
 Summary:        Raw FFI bindings to platform libraries like libc - feature "rustc-std-workspace-core"
 Requires:       crate(%{pkgname})
 Requires:       crate(rustc-std-workspace-core-1.0/default) >= 1.0.1
-Provides:       crate(libc) = %{version}
 Provides:       crate(%{pkgname}/rustc-std-workspace-core)
 
 %description -n %{name}+rustc-std-workspace-core

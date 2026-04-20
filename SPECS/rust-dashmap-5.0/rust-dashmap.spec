@@ -38,7 +38,6 @@ Source code for takopackized Rust crate "dashmap"
 Summary:        Blazing fast concurrent HashMap for Rust - feature "arbitrary"
 Requires:       crate(%{pkgname})
 Requires:       crate(arbitrary-1.0/default) >= 1.3.0
-Provides:       crate(dashmap) = %{version}
 Provides:       crate(%{pkgname}/arbitrary)
 
 %description -n %{name}+arbitrary
@@ -48,7 +47,6 @@ This metapackage enables feature "arbitrary" for the Rust dashmap crate, by pull
 Summary:        Blazing fast concurrent HashMap for Rust - feature "inline"
 Requires:       crate(%{pkgname})
 Requires:       crate(hashbrown-0.14/inline-more) >= 0.14.5
-Provides:       crate(dashmap) = %{version}
 Provides:       crate(%{pkgname}/inline)
 
 %description -n %{name}+inline
@@ -58,7 +56,6 @@ This metapackage enables feature "inline" for the Rust dashmap crate, by pulling
 Summary:        Blazing fast concurrent HashMap for Rust - feature "rayon"
 Requires:       crate(%{pkgname})
 Requires:       crate(rayon-1.0/default) >= 1.7.0
-Provides:       crate(dashmap) = %{version}
 Provides:       crate(%{pkgname}/rayon)
 
 %description -n %{name}+rayon
@@ -69,7 +66,6 @@ Summary:        Blazing fast concurrent HashMap for Rust - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(serde-1.0/default) >= 1.0.188
 Requires:       crate(serde-1.0/derive) >= 1.0.188
-Provides:       crate(dashmap) = %{version}
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

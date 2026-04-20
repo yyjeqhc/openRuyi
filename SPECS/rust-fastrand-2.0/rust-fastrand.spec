@@ -35,7 +35,6 @@ Summary:        Simple and fast random number generator - feature "getrandom"
 Requires:       crate(%{pkgname})
 Requires:       crate(getrandom-0.3/default) >= 0.3.4
 Requires:       crate(getrandom-0.3/wasm-js) >= 0.3.4
-Provides:       crate(fastrand) = %{version}
 Provides:       crate(%{pkgname}/getrandom)
 
 %description -n %{name}+getrandom
@@ -46,7 +45,6 @@ Summary:        Simple and fast random number generator - feature "js"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/getrandom)
 Requires:       crate(%{pkgname}/std)
-Provides:       crate(fastrand) = %{version}
 Provides:       crate(%{pkgname}/js)
 
 %description -n %{name}+js

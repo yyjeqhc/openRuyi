@@ -41,7 +41,6 @@ Source code for takopackized Rust crate "smallvec"
 Summary:        'Small vector' optimization: store up to a small number of items on the stack - feature "arbitrary"
 Requires:       crate(%{pkgname})
 Requires:       crate(arbitrary-1.0/default) >= 1.0.0
-Provides:       crate(smallvec) = %{version}
 Provides:       crate(%{pkgname}/arbitrary)
 
 %description -n %{name}+arbitrary
@@ -51,7 +50,6 @@ This metapackage enables feature "arbitrary" for the Rust smallvec crate, by pul
 Summary:        'Small vector' optimization: store up to a small number of items on the stack - feature "bincode"
 Requires:       crate(%{pkgname})
 Requires:       crate(bincode-2.0) >= 2.0.0
-Provides:       crate(smallvec) = %{version}
 Provides:       crate(%{pkgname}/bincode)
 
 %description -n %{name}+bincode
@@ -62,7 +60,6 @@ Summary:        'Small vector' optimization: store up to a small number of items
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/bincode)
 Requires:       crate(%{pkgname}/unty)
-Provides:       crate(smallvec) = %{version}
 Provides:       crate(%{pkgname}/impl-bincode)
 
 %description -n %{name}+impl-bincode
@@ -72,7 +69,6 @@ This metapackage enables feature "impl_bincode" for the Rust smallvec crate, by 
 Summary:        'Small vector' optimization: store up to a small number of items on the stack - feature "malloc_size_of"
 Requires:       crate(%{pkgname})
 Requires:       crate(malloc-size-of-0.1) >= 0.1.0
-Provides:       crate(smallvec) = %{version}
 Provides:       crate(%{pkgname}/malloc-size-of)
 
 %description -n %{name}+malloc-size-of
@@ -82,7 +78,6 @@ This metapackage enables feature "malloc_size_of" for the Rust smallvec crate, b
 Summary:        'Small vector' optimization: store up to a small number of items on the stack - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(serde-1.0) >= 1.0.0
-Provides:       crate(smallvec) = %{version}
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -92,7 +87,6 @@ This metapackage enables feature "serde" for the Rust smallvec crate, by pulling
 Summary:        'Small vector' optimization: store up to a small number of items on the stack - feature "unty"
 Requires:       crate(%{pkgname})
 Requires:       crate(unty-0.0.4) >= 0.0.4
-Provides:       crate(smallvec) = %{version}
 Provides:       crate(%{pkgname}/unty)
 
 %description -n %{name}+unty

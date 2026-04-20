@@ -38,7 +38,6 @@ Summary:        Dead simple ANSI terminal color painting library - feature "dete
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/is-terminal)
 Requires:       crate(%{pkgname}/std)
-Provides:       crate(yansi) = %{version}
 Provides:       crate(%{pkgname}/detect-tty)
 
 %description -n %{name}+detect-tty
@@ -48,7 +47,6 @@ This metapackage enables feature "detect-tty" for the Rust yansi crate, by pulli
 Summary:        Dead simple ANSI terminal color painting library - feature "is-terminal"
 Requires:       crate(%{pkgname})
 Requires:       crate(is-terminal-0.4/default) >= 0.4.11
-Provides:       crate(yansi) = %{version}
 Provides:       crate(%{pkgname}/is-terminal)
 
 %description -n %{name}+is-terminal

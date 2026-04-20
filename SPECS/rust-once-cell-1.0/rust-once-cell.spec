@@ -37,7 +37,6 @@ Summary:        Single assignment cells and lazy values - feature "critical-sect
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/portable-atomic)
 Requires:       crate(critical-section-1.0/default) >= 1.1.3
-Provides:       crate(once-cell) = %{version}
 Provides:       crate(%{pkgname}/atomic-polyfill)
 Provides:       crate(%{pkgname}/critical-section)
 
@@ -50,7 +49,6 @@ Additionally, this package also provides the "atomic-polyfill" feature.
 Summary:        Single assignment cells and lazy values - feature "parking_lot"
 Requires:       crate(%{pkgname})
 Requires:       crate(parking-lot-core-0.9) >= 0.9.10
-Provides:       crate(once-cell) = %{version}
 Provides:       crate(%{pkgname}/parking-lot)
 
 %description -n %{name}+parking-lot
@@ -60,7 +58,6 @@ This metapackage enables feature "parking_lot" for the Rust once_cell crate, by 
 Summary:        Single assignment cells and lazy values - feature "portable-atomic"
 Requires:       crate(%{pkgname})
 Requires:       crate(portable-atomic-1.0) >= 1.8
-Provides:       crate(once-cell) = %{version}
 Provides:       crate(%{pkgname}/portable-atomic)
 
 %description -n %{name}+portable-atomic

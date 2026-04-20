@@ -35,7 +35,6 @@ Summary:        Minimal `syn` syntax tree pretty-printer - feature "verbatim"
 Requires:       crate(%{pkgname})
 Requires:       crate(syn-2.0/full) >= 2.0.117
 Requires:       crate(syn-2.0/parsing) >= 2.0.117
-Provides:       crate(prettyplease) = %{version}
 Provides:       crate(%{pkgname}/verbatim)
 
 %description -n %{name}+verbatim

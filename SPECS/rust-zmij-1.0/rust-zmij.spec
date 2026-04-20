@@ -32,7 +32,6 @@ Source code for takopackized Rust crate "zmij"
 Summary:        Double-to-string conversion algorithm based on Schubfach and yy - feature "no-panic"
 Requires:       crate(%{pkgname})
 Requires:       crate(no-panic-0.1/default) >= 0.1.36
-Provides:       crate(zmij) = %{version}
 Provides:       crate(%{pkgname}/no-panic)
 
 %description -n %{name}+no-panic

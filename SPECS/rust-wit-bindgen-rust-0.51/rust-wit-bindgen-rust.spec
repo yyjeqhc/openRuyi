@@ -43,7 +43,6 @@ Requires:       crate(%{pkgname})
 Requires:       crate(clap-4.0/default) >= 4.3.19
 Requires:       crate(clap-4.0/derive) >= 4.3.19
 Requires:       crate(wit-bindgen-core-0.51/clap) >= 0.51.0
-Provides:       crate(wit-bindgen-rust) = %{version}
 Provides:       crate(%{pkgname}/clap)
 
 %description -n %{name}+clap
@@ -55,7 +54,6 @@ Requires:       crate(%{pkgname})
 Requires:       crate(serde-1.0/default) >= 1.0.218
 Requires:       crate(serde-1.0/derive) >= 1.0.218
 Requires:       crate(wit-bindgen-core-0.51/serde) >= 0.51.0
-Provides:       crate(wit-bindgen-rust) = %{version}
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

@@ -34,7 +34,6 @@ Summary:        Parser and evaluator for Cargo's flavor of Semantic Versioning -
 Requires:       crate(%{pkgname})
 Requires:       crate(serde-1.0) >= 1.0.220
 Requires:       crate(serde-core-1.0) >= 1.0.220
-Provides:       crate(semver) = %{version}
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

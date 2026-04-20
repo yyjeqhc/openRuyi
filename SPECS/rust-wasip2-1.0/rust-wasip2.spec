@@ -33,7 +33,6 @@ Source code for takopackized Rust crate "wasip2"
 Summary:        WASIp2 API bindings for Rust - feature "alloc"
 Requires:       crate(%{pkgname})
 Requires:       crate(rustc-std-workspace-alloc-1.0/default) >= 1.0.0
-Provides:       crate(wasip2) = %{version}
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -43,7 +42,6 @@ This metapackage enables feature "alloc" for the Rust wasip2 crate, by pulling i
 Summary:        WASIp2 API bindings for Rust - feature "bitflags"
 Requires:       crate(%{pkgname})
 Requires:       crate(wit-bindgen-0.57/bitflags) >= 0.57.1
-Provides:       crate(wasip2) = %{version}
 Provides:       crate(%{pkgname}/bitflags)
 
 %description -n %{name}+bitflags
@@ -53,7 +51,6 @@ This metapackage enables feature "bitflags" for the Rust wasip2 crate, by pullin
 Summary:        WASIp2 API bindings for Rust - feature "core"
 Requires:       crate(%{pkgname})
 Requires:       crate(rustc-std-workspace-core-1.0/default) >= 1.0.0
-Provides:       crate(wasip2) = %{version}
 Provides:       crate(%{pkgname}/core)
 
 %description -n %{name}+core
@@ -64,7 +61,6 @@ Summary:        WASIp2 API bindings for Rust - feature "default"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/bitflags)
 Requires:       crate(%{pkgname}/std)
-Provides:       crate(wasip2) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -76,7 +72,6 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(%{pkgname}/core)
 Requires:       crate(wit-bindgen-0.57/rustc-dep-of-std) >= 0.57.1
-Provides:       crate(wasip2) = %{version}
 Provides:       crate(%{pkgname}/rustc-dep-of-std)
 
 %description -n %{name}+rustc-dep-of-std

@@ -40,7 +40,6 @@ Summary:        Read and manipulate WebAssembly metadata - feature "clap"
 Requires:       crate(%{pkgname})
 Requires:       crate(clap-4.0/default) >= 4.0.0
 Requires:       crate(clap-4.0/derive) >= 4.0.0
-Provides:       crate(wasm-metadata) = %{version}
 Provides:       crate(%{pkgname}/clap)
 
 %description -n %{name}+clap
@@ -51,7 +50,6 @@ Summary:        Read and manipulate WebAssembly metadata - feature "default"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/oci)
 Requires:       crate(%{pkgname}/serde)
-Provides:       crate(wasm-metadata) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -66,7 +64,6 @@ Requires:       crate(flate2-1.0/default) >= 1.1.0
 Requires:       crate(serde-json-1.0/default) >= 1.0.0
 Requires:       crate(spdx-0.10/default) >= 0.10.1
 Requires:       crate(url-2.0/default) >= 2.0.0
-Provides:       crate(wasm-metadata) = %{version}
 Provides:       crate(%{pkgname}/oci)
 
 %description -n %{name}+oci
@@ -77,7 +74,6 @@ Summary:        Read and manipulate WebAssembly metadata - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(serde-1.0/alloc) >= 1.0.166
 Requires:       crate(serde-derive-1.0/default) >= 1.0.166
-Provides:       crate(wasm-metadata) = %{version}
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

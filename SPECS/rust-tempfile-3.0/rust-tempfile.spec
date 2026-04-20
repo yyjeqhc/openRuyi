@@ -39,7 +39,6 @@ Source code for takopackized Rust crate "tempfile"
 Summary:        Managing temporary files and directories - feature "getrandom" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(getrandom-0.4) >= 0.4.2
-Provides:       crate(tempfile) = %{version}
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/getrandom)
 

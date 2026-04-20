@@ -32,7 +32,6 @@ Source code for takopackized Rust crate "itoa"
 Summary:        Fast integer primitive to string conversion - feature "no-panic"
 Requires:       crate(%{pkgname})
 Requires:       crate(no-panic-0.1/default) >= 0.1.0
-Provides:       crate(itoa) = %{version}
 Provides:       crate(%{pkgname}/no-panic)
 
 %description -n %{name}+no-panic

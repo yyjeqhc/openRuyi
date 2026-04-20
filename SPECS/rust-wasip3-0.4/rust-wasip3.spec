@@ -38,7 +38,6 @@ Requires:       crate(http-body-1.0/default) >= 1.0.1
 Requires:       crate(thiserror-2.0/default) >= 2.0.17
 Requires:       crate(wit-bindgen-0.51/async) >= 0.51.0
 Requires:       crate(wit-bindgen-0.51/async-spawn) >= 0.51.0
-Provides:       crate(wasip3) = %{version}
 Provides:       crate(%{pkgname}/http-compat)
 
 %description -n %{name}+http-compat

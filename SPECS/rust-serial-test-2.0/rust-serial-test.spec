@@ -36,7 +36,6 @@ Summary:        Allows for the creation of serialised Rust tests - feature "asyn
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/futures)
 Requires:       crate(serial-test-derive-2.0/async) >= 2.0.0
-Provides:       crate(serial-test) = %{version}
 Provides:       crate(%{pkgname}/async)
 
 %description -n %{name}+async
@@ -47,7 +46,6 @@ Summary:        Allows for the creation of serialised Rust tests - feature "defa
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/async)
 Requires:       crate(%{pkgname}/logging)
-Provides:       crate(serial-test) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -57,7 +55,6 @@ This metapackage enables feature "default" for the Rust serial_test crate, by pu
 Summary:        Allows for the creation of serialised Rust tests - feature "document-features" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(document-features-0.2/default) >= 0.2.0
-Provides:       crate(serial-test) = %{version}
 Provides:       crate(%{pkgname}/docsrs)
 Provides:       crate(%{pkgname}/document-features)
 
@@ -70,7 +67,6 @@ Additionally, this package also provides the "docsrs" feature.
 Summary:        Allows for the creation of serialised Rust tests - feature "fslock" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(fslock-0.2/default) >= 0.2.0
-Provides:       crate(serial-test) = %{version}
 Provides:       crate(%{pkgname}/file-locks)
 Provides:       crate(%{pkgname}/fslock)
 
@@ -83,7 +79,6 @@ Additionally, this package also provides the "file_locks" feature.
 Summary:        Allows for the creation of serialised Rust tests - feature "futures"
 Requires:       crate(%{pkgname})
 Requires:       crate(futures-0.3/executor) >= 0.3.0
-Provides:       crate(serial-test) = %{version}
 Provides:       crate(%{pkgname}/futures)
 
 %description -n %{name}+futures
@@ -93,7 +88,6 @@ This metapackage enables feature "futures" for the Rust serial_test crate, by pu
 Summary:        Allows for the creation of serialised Rust tests - feature "log" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(log-0.4/default) >= 0.4.0
-Provides:       crate(serial-test) = %{version}
 Provides:       crate(%{pkgname}/log)
 Provides:       crate(%{pkgname}/logging)
 

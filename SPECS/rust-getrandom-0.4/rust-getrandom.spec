@@ -38,7 +38,6 @@ Source code for takopackized Rust crate "getrandom"
 Summary:        Small cross-platform library for retrieving random data from system source - feature "sys_rng"
 Requires:       crate(%{pkgname})
 Requires:       crate(rand-core-0.10/default) >= 0.10.0
-Provides:       crate(getrandom) = %{version}
 Provides:       crate(%{pkgname}/sys-rng)
 
 %description -n %{name}+sys-rng
@@ -49,7 +48,6 @@ Summary:        Small cross-platform library for retrieving random data from sys
 Requires:       crate(%{pkgname})
 Requires:       crate(js-sys-0.3) >= 0.3.77
 Requires:       crate(wasm-bindgen-0.2) >= 0.2.98
-Provides:       crate(getrandom) = %{version}
 Provides:       crate(%{pkgname}/wasm-js)
 
 %description -n %{name}+wasm-js
