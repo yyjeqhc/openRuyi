@@ -16,6 +16,7 @@ License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-cli/anstyle.git
 #!RemoteAsset:  sha256:291e6a250ff86cd4a820112fb8898808a366d8f9f58ce16d1f538353ad55747d
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
@@ -25,6 +26,7 @@ Requires:       crate(once-cell-polyfill-1.0/default) >= 1.70.2
 Requires:       crate(windows-sys-0.61/default) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-system-console) >= 0.61.2
+Provides:       crate(anstyle-wincon) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 
@@ -35,4 +37,4 @@ Source code for takopackized Rust crate "anstyle-wincon"
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

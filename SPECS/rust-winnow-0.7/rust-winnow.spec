@@ -16,10 +16,12 @@ License:        MIT
 URL:            https://github.com/winnow-rs/winnow
 #!RemoteAsset:  sha256:df79d97927682d2fd8adb29682d1140b343be4ac0f08fd68b7765d9c059d3945
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Provides:       crate(winnow) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/unstable-recover)
@@ -35,6 +37,7 @@ Requires:       crate(anstream-0.6/default) >= 0.6.15
 Requires:       crate(anstyle-1.0/default) >= 1.0.8
 Requires:       crate(is-terminal-polyfill-1.0/default) >= 1.48.1
 Requires:       crate(terminal-size-0.4/default) >= 0.4.3
+Provides:       crate(winnow) = %{version}
 Provides:       crate(%{pkgname}/debug)
 
 %description -n %{name}+debug
@@ -44,6 +47,7 @@ This metapackage enables feature "debug" for the Rust winnow crate, by pulling i
 Summary:        Byte-oriented, zero-copy, parser combinators library - feature "simd"
 Requires:       crate(%{pkgname})
 Requires:       crate(memchr-2.0) >= 2.7
+Provides:       crate(winnow) = %{version}
 Provides:       crate(%{pkgname}/simd)
 
 %description -n %{name}+simd
@@ -54,6 +58,7 @@ Summary:        Byte-oriented, zero-copy, parser combinators library - feature "
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(memchr-2.0/std) >= 2.7
+Provides:       crate(winnow) = %{version}
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
 
@@ -69,6 +74,7 @@ Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(%{pkgname}/simd)
 Requires:       crate(%{pkgname}/std)
 Requires:       crate(%{pkgname}/unstable-recover)
+Provides:       crate(winnow) = %{version}
 Provides:       crate(%{pkgname}/unstable-doc)
 
 %description -n %{name}+unstable-doc
@@ -78,4 +84,4 @@ This metapackage enables feature "unstable-doc" for the Rust winnow crate, by pu
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

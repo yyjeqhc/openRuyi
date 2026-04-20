@@ -16,10 +16,12 @@ License:        Unlicense OR MIT
 URL:            https://github.com/BurntSushi/memchr
 #!RemoteAsset:  sha256:f8ca58f447f06ed17d5fc4043ce1b10dd205e060fb3ce5b979b8ed8e59ff3f79
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Provides:       crate(memchr) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/default)
@@ -34,6 +36,7 @@ Source code for takopackized Rust crate "memchr"
 Summary:        Provides extremely fast (uses SIMD on x86_64, aarch64 and wasm32) routines for 1, 2 or 3 byte search and single substring search - feature "core" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(rustc-std-workspace-core-1.0/default) >= 1.0.0
+Provides:       crate(memchr) = %{version}
 Provides:       crate(%{pkgname}/core)
 Provides:       crate(%{pkgname}/rustc-dep-of-std)
 
@@ -46,6 +49,7 @@ Additionally, this package also provides the "rustc-dep-of-std" feature.
 Summary:        Provides extremely fast (uses SIMD on x86_64, aarch64 and wasm32) routines for 1, 2 or 3 byte search and single substring search - feature "logging"
 Requires:       crate(%{pkgname})
 Requires:       crate(log-0.4/default) >= 0.4.20
+Provides:       crate(memchr) = %{version}
 Provides:       crate(%{pkgname}/logging)
 
 %description -n %{name}+logging
@@ -55,4 +59,4 @@ This metapackage enables feature "logging" for the Rust memchr crate, by pulling
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

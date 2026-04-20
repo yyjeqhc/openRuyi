@@ -16,12 +16,14 @@ License:        MIT OR Apache-2.0
 URL:            https://github.com/Amanieu/parking_lot
 #!RemoteAsset:  sha256:93857453250e3077bd71ff98b6a65ea6621a19bb0f559a85248955ac12c45a1a
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(lock-api-0.4/default) >= 0.4.14
 Requires:       crate(parking-lot-core-0.9/default) >= 0.9.12
+Provides:       crate(parking-lot) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/hardware-lock-elision)
@@ -34,6 +36,7 @@ Source code for takopackized Rust crate "parking_lot"
 Summary:        More compact and efficient implementations of the standard synchronization primitives - feature "arc_lock"
 Requires:       crate(%{pkgname})
 Requires:       crate(lock-api-0.4/arc-lock) >= 0.4.14
+Provides:       crate(parking-lot) = %{version}
 Provides:       crate(%{pkgname}/arc-lock)
 
 %description -n %{name}+arc-lock
@@ -43,6 +46,7 @@ This metapackage enables feature "arc_lock" for the Rust parking_lot crate, by p
 Summary:        More compact and efficient implementations of the standard synchronization primitives - feature "deadlock_detection"
 Requires:       crate(%{pkgname})
 Requires:       crate(parking-lot-core-0.9/deadlock-detection) >= 0.9.12
+Provides:       crate(parking-lot) = %{version}
 Provides:       crate(%{pkgname}/deadlock-detection)
 
 %description -n %{name}+deadlock-detection
@@ -53,6 +57,7 @@ Summary:        More compact and efficient implementations of the standard synch
 Requires:       crate(%{pkgname})
 Requires:       crate(lock-api-0.4/nightly) >= 0.4.14
 Requires:       crate(parking-lot-core-0.9/nightly) >= 0.9.12
+Provides:       crate(parking-lot) = %{version}
 Provides:       crate(%{pkgname}/nightly)
 
 %description -n %{name}+nightly
@@ -62,6 +67,7 @@ This metapackage enables feature "nightly" for the Rust parking_lot crate, by pu
 Summary:        More compact and efficient implementations of the standard synchronization primitives - feature "owning_ref"
 Requires:       crate(%{pkgname})
 Requires:       crate(lock-api-0.4/owning-ref) >= 0.4.14
+Provides:       crate(parking-lot) = %{version}
 Provides:       crate(%{pkgname}/owning-ref)
 
 %description -n %{name}+owning-ref
@@ -71,6 +77,7 @@ This metapackage enables feature "owning_ref" for the Rust parking_lot crate, by
 Summary:        More compact and efficient implementations of the standard synchronization primitives - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(lock-api-0.4/serde) >= 0.4.14
+Provides:       crate(parking-lot) = %{version}
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -80,4 +87,4 @@ This metapackage enables feature "serde" for the Rust parking_lot crate, by pull
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

@@ -5,21 +5,23 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 %global crate_name bitflags
-%global full_version 2.11.0
+%global full_version 2.11.1
 %global pkgname bitflags-2.0
 
 Name:           rust-bitflags-2.0
-Version:        2.11.0
+Version:        2.11.1
 Release:        %autorelease
 Summary:        Rust crate "bitflags"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/bitflags/bitflags
-#!RemoteAsset:  sha256:843867be96c8daad0d758b57df9392b6d8d271134fce549de6ce169ff98a92af
+#!RemoteAsset:  sha256:c4512299f36f043ab09a583e57bceb5a5aab7a73db1805848e8fef3c9e8c78b3
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Provides:       crate(bitflags) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/example-generated)
@@ -32,6 +34,7 @@ Source code for takopackized Rust crate "bitflags"
 Summary:        Macro to generate structures which behave like bitflags - feature "arbitrary"
 Requires:       crate(%{pkgname})
 Requires:       crate(arbitrary-1.0/default) >= 1.0.0
+Provides:       crate(bitflags) = %{version}
 Provides:       crate(%{pkgname}/arbitrary)
 
 %description -n %{name}+arbitrary
@@ -41,6 +44,7 @@ This metapackage enables feature "arbitrary" for the Rust bitflags crate, by pul
 Summary:        Macro to generate structures which behave like bitflags - feature "bytemuck"
 Requires:       crate(%{pkgname})
 Requires:       crate(bytemuck-1.0/default) >= 1.12
+Provides:       crate(bitflags) = %{version}
 Provides:       crate(%{pkgname}/bytemuck)
 
 %description -n %{name}+bytemuck
@@ -50,6 +54,7 @@ This metapackage enables feature "bytemuck" for the Rust bitflags crate, by pull
 Summary:        Macro to generate structures which behave like bitflags - feature "serde_core" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(serde-core-1.0) >= 1.0.228
+Provides:       crate(bitflags) = %{version}
 Provides:       crate(%{pkgname}/serde)
 Provides:       crate(%{pkgname}/serde-core)
 
@@ -62,4 +67,4 @@ Additionally, this package also provides the "serde" feature.
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog
