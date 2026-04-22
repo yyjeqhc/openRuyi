@@ -14,8 +14,7 @@ License:        MIT
 URL:            https://github.com/samuelcolvin/watchfiles
 #!RemoteAsset:  sha256:a173cb5c16c4f40ab19cecf48a534c409f7ea983ab8fed0741304a1c0a31b3f2
 Source0:        https://files.pythonhosted.org/packages/source/w/watchfiles/watchfiles-1.1.1.tar.gz
-BuildArch:      noarch
-BuildSystem:    rust
+BuildSystem:    pyproject
 
 BuildOption(install):  -l %{srcname}
 
@@ -33,10 +32,18 @@ Provides:       python3-%{srcname} = %{version}-%{release}
 %description
 Simple, modern and high performance file watching and code reload in python.
 
+%prep
+%buildsystem_rust_prep
+
 %generate_buildrequires
 %cargo_buildrequires
 
+%build -p
+rm -rf Cargo.lock
+cargo build --release
+
 %files -f %{pyproject_files}
+%{_bindir}/watchfiles
 
 %changelog
 %autochangelog
