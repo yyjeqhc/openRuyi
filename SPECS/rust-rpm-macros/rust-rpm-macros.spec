@@ -33,7 +33,7 @@ This package provides RPM macros for packaging Rust software in openRuyi.
 %{_rpmmacrodir}/macros.buildsystem.rust
 %{_rpmmacrodir}/macros.rust
 %{_rpmconfigdir}/rust-rpm-macros/rustcrates-gen-feature-specparts.sh
-%{_rpmconfigdir}/rust-rpm-macros/cargo_buildrequires.py
+%{_rpmconfigdir}/rust-rpm-macros/cargo_buildrequires.sh
 
 %changelog
 %autochangelog

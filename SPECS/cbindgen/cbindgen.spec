@@ -21,8 +21,6 @@ Patch:          1.patch
 
 BuildRequires:  rust-rpm-macros
 BuildRequires:  rust
-BuildRequires:  python3
-BuildRequires:  vim
 BuildRequires:  crate(winnow-0.7)
 BuildRequires:  crate(winnow-1.0)
 
