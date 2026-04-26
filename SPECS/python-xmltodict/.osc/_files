@@ -1,0 +1,8 @@
+<directory name="python-xmltodict" rev="69a6a41e775b19c641558b5a842fb94a" srcmd5="69a6a41e775b19c641558b5a842fb94a">
+  <serviceinfo lsrcmd5="6d6f3dfac6c4b6c45b7f204d480d6be1" />
+  <entry name="_service" md5="578b398298b94fcf2cf8854ce139ab37" size="323" mtime="1777180994" />
+  <entry name="_service:download_files:xmltodict-1.0.4.tar.gz" md5="f0a83032fc31c918a8cd9e60cdb46cb1" size="26124" mtime="1771726883" skipped="true" />
+  <entry name="_service:obs_scm:openruyi-1777180983.1db8b44.obscpio" md5="1f9759b57ad8aa657ec1ed4901db8bf9" size="19574285" mtime="1777181004" skipped="true" />
+  <entry name="_service:obs_scm:openruyi.obsinfo" md5="1937cf18980a7db8fe9082c38391e286" size="110" mtime="1777181004" skipped="true" />
+  <entry name="_service:obs_scm:python-xmltodict.spec" md5="0e51d922197ec3d8c24c263d00ced5cc" size="948" mtime="1777181003" skipped="true" />
+</directory>

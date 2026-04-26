@@ -1,0 +1,9 @@
+<services>
+    <service name="obs_scm">
+      <param name="scm">git</param>
+      <param name="url">https://github.com/yyjeqhc/openruyi/</param>
+      <param name="revision">python-xmltodict</param>
+      <param name="extract">SPECS/python-xmltodict/*</param>
+    </service>
+    <service name="download_files"/>
+</services>
