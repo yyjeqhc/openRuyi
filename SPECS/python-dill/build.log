@@ -1,0 +1,780 @@
+Building python-dill.spec for x64/x86_64
+Using local file: python-dill.spec
+Getting buildconfig from server and store to /root/ov/home:yyjeqhc:gen/python-dill/.osc/_buildconfig-x64-x86_64
+Getting buildinfo from server and store to /root/ov/home:yyjeqhc:gen/python-dill/.osc/_buildinfo-x64-x86_64.xml
+Updating cache of required packages
+0.0% cache miss. 157/157 dependencies cached.
+
+Skipping verification of package signatures
+Writing build configuration
+Running build
+logging output to /var/tmp/build-root/x64-x86_64/.build.log...
+[    0s] Memory limit set to 13681900KB
+[    0s] Using BUILD_ROOT=/var/tmp/build-root/x64-x86_64
+[    0s] Using BUILD_ARCH=x86_64:i686:i586:i486:i386
+[    0s] 
+[    1s] 
+[    1s] oe started "build python-dill.spec" at Sun Apr 26 06:32:49 UTC 2026.
+[    1s] 
+[    1s] 
+[    1s] processing recipe /root/ov/home:yyjeqhc:gen/python-dill/python-dill.spec ...
+[    1s] running changelog2spec --target rpm --file /root/ov/home:yyjeqhc:gen/python-dill/python-dill.spec
+[    1s] init_buildsystem --configdir /usr/lib/build/configs --cachedir /var/cache/build --rpmlist /tmp/rpmlist._zvp7ztl /root/ov/home:yyjeqhc:gen/python-dill/python-dill.spec ...
+[    1s] reordering...cycle: ca-certificates -> ca-certificates-mozilla
+[    1s]   breaking dependency ca-certificates -> ca-certificates-mozilla
+[    1s] cycle: rpm-config-openruyi -> rpm
+[    1s]   breaking dependency rpm-config-openruyi -> rpm
+[    1s] cycle: pam -> openruyi-authselect-profiles -> libpwquality
+[    1s]   breaking dependency openruyi-authselect-profiles -> libpwquality
+[    1s] cycle: systemd-pam -> pam -> openruyi-authselect-profiles
+[    1s]   breaking dependency systemd-pam -> pam
+[    1s] cycle: dbus-common -> dbus
+[    1s]   breaking dependency dbus-common -> dbus
+[    1s] cycle: dbus-common -> systemd -> dbus
+[    1s]   breaking dependency systemd -> dbus
+[    1s] cycle: device-mapper-libs -> device-mapper
+[    1s]   breaking dependency device-mapper -> device-mapper-libs
+[    1s] cycle: systemd -> cryptsetup-libs -> device-mapper-libs -> device-mapper
+[    1s]   breaking dependency systemd -> cryptsetup-libs
+[    1s] cycle: dbus-tools -> dbus
+[    1s]   breaking dependency dbus -> dbus-tools
+[    1s] done
+[    1s] querying package ids...
+[    3s] [1/157] keeping openruyi-release-2-2.6.or
+[    3s] [2/157] keeping publicsuffix-list-20251008-4.3.or
+[    3s] [3/157] keeping setup-2.15-11.6.or
+[    3s] [4/157] keeping filesystem-3.18-13.5.or
+[    3s] [5/157] keeping glibc-2.43-14.10.or
+[    3s] [6/157] keeping linux-headers-6.18.18-9.7.or
+[    3s] [7/157] keeping pkgconf-m4-2.2.0-6.1.or
+[    3s] [8/157] keeping systemd-rpm-macros-259-10.5.or
+[    3s] [9/157] keeping cpio-2.15-3.5.or
+[    3s] [10/157] keeping diffutils-3.12-4.4.or
+[    3s] [11/157] keeping envsubst-1.0-5.6.or
+[    3s] [12/157] keeping expat-2.7.1-5.4.or
+[    3s] [13/157] keeping gcc15-lib-15.2.0-12.2.or
+[    3s] [14/157] keeping gdbm-libs-1.26-4.9.or
+[    3s] [15/157] keeping glibc-gconv-modules-extra-2.43-14.10.or
+[    3s] [16/157] keeping glibc-locale-base-2.43-14.10.or
+[    3s] [17/157] keeping jitterentropy-3.6.3-3.9.or
+[    3s] [18/157] keeping json-c-0.18-4.1.or
+[    3s] [19/157] keeping libatomic-gcc15-15.2.0-12.2.or
+[    3s] [20/157] keeping libcap-2.76-5.12.or
+[    3s] [21/157] keeping libcap-ng-0.8.5-4.5.or
+[    3s] [22/157] keeping libdebuginfod-dummy-0.194-5.13.or
+[    3s] [23/157] keeping libeconf-0.7.8-4.13.or
+[    3s] [24/157] keeping libffi-3.5.2-4.5.or
+[    3s] [25/157] keeping libgomp-gcc15-15.2.0-12.2.or
+[    3s] [26/157] keeping libgpg-error-1.58-4.7.or
+[    3s] [27/157] keeping libitm-gcc15-15.2.0-12.2.or
+[    3s] [28/157] keeping libpkgconf5-2.2.0-6.1.or
+[    3s] [29/157] keeping libsepol-3.10-5.5.or
+[    3s] [30/157] keeping libsmartcols-2.41.3-11.3.or
+[    3s] [31/157] keeping libtasn1-4.20.0-3.5.or
+[    3s] [32/157] keeping libunistring-1.4.2-4.2.or
+[    3s] [33/157] keeping libuuid-2.41.3-11.3.or
+[    3s] [34/157] keeping libxcrypt-4.5.2-5.3.or
+[    3s] [35/157] keeping lz4-1.10.0-4.2.or
+[    3s] [36/157] keeping m4-1.4.21-6.6.or
+[    3s] [37/157] keeping make-4.4.1-3.8.or
+[    3s] [38/157] keeping mpdecimal-4.0.1-3.7.or
+[    3s] [39/157] keeping nghttp2-1.66.0-5.9.or
+[    3s] [40/157] keeping patch-2.8-3.2.or
+[    3s] [41/157] keeping popt-1.19-3.5.or
+[    3s] [42/157] keeping systemd-libs-259-10.5.or
+[    3s] [43/157] keeping which-2.23-3.4.or
+[    3s] [44/157] keeping zlib-ng-compat-2.3.3-8.10.or
+[    3s] [45/157] keeping attr-2.5.2-3.6.or
+[    3s] [46/157] keeping libgomp-15-4.12.or
+[    3s] [47/157] keeping file-5.46-3.6.or
+[    3s] [48/157] keeping libgcrypt-1.11.2-3.8.or
+[    3s] [49/157] keeping libidn2-2.3.8-4.6.or
+[    3s] [50/157] keeping libpng-1.6.55-6.2.or
+[    3s] [51/157] keeping libstdc++-gcc15-15.2.0-12.2.or
+[    3s] [52/157] keeping mimalloc-3.1.5-4.8.or
+[    3s] [53/157] keeping pkgconf-2.2.0-6.1.or
+[    3s] [54/157] keeping sqlite-3.50.4-7.2.or
+[    3s] [55/157] keeping acl-2.3.2-6.10.or
+[    3s] [56/157] keeping libblkid-2.41.3-11.3.or
+[    3s] [57/157] keeping tar-1.35-4.8.or
+[    3s] [58/157] keeping gmp-6.3.0-3.12.or
+[    3s] [59/157] keeping libasan-gcc15-15.2.0-12.2.or
+[    3s] [60/157] keeping libhwasan-gcc15-15.2.0-12.2.or
+[    3s] [61/157] keeping liblsan-gcc15-15.2.0-12.2.or
+[    3s] [62/157] keeping libtsan-gcc15-15.2.0-12.2.or
+[    3s] [63/157] keeping libubsan-gcc15-15.2.0-12.2.or
+[    3s] [64/157] keeping tbb-2022.3.0-9.1.or
+[    3s] [65/157] keeping libfdisk-2.41.3-11.3.or
+[    3s] [66/157] keeping libpsl-0.21.5-4.18.or
+[    3s] [67/157] keeping ncurses-6.5-5.2.or
+[    3s] [68/157] keeping isl-0.27-3.5.or
+[    3s] [69/157] keeping mpfr-4.2.2-3.4.or
+[    3s] [70/157] keeping nettle-3.10.2-3.4.or
+[    3s] [71/157] keeping readline-8.3-3.5.or
+[    3s] [72/157] keeping bash-5.3.3-3.11.or
+[    3s] [73/157] keeping blake3-1.8.4-7.1.or
+[    3s] [74/157] keeping coreutils-9.10-7.4.or
+[    3s] [75/157] keeping gzip-1.14-4.4.or
+[    3s] [76/157] keeping tzdata-2026a-6.8.or
+[    3s] [77/157] keeping xz-5.8.1-3.4.or
+[    3s] [78/157] keeping bzip2-1.0.8-3.7.or
+[    3s] [79/157] keeping liblastlog2-2.41.3-11.3.or
+[    3s] [80/157] keeping libxml2-2.14.5-5.4.or
+[    3s] [81/157] keeping mpc-1.3.1-3.4.or
+[    3s] [82/157] keeping pkgconf-pkg-config-2.2.0-6.1.or
+[    3s] [83/157] keeping unzip-6.0-3.5.or
+[    3s] [84/157] keeping gawk-5.3.2-4.4.or
+[    3s] [85/157] keeping lua-5.4.8-4.2.or
+[    3s] [86/157] keeping openssl-3.5.2-5.2.or
+[    3s] [87/157] keeping slang-2.3.3-4.9.or
+[    3s] [88/157] keeping gettext-runtime-1.0-5.6.or
+[    3s] [89/157] keeping p11-kit-0.25.5-4.13.or
+[    3s] [90/157] keeping libevent-2.1.12-3.10.or
+[    3s] [91/157] keeping libxcrypt-devel-4.5.2-5.3.or
+[    3s] [92/157] keeping newt-0.52.25-4.7.or
+[    3s] [93/157] keeping systemd-shared-259-10.5.or
+[    3s] [94/157] keeping audit-4.1.4-5.3.or
+[    3s] [95/157] keeping cracklib-2.10.3-3.6.or
+[    3s] [96/157] keeping pcre2-10.45-5.2.or
+[    3s] [97/157] keeping perl-5.42.0-6.5.or
+[    3s] [98/157] keeping zstd-1.5.7-3.11.or
+[    3s] [99/157] keeping gettext-tools-1.0-5.6.or
+[    3s] [100/157] keeping libselinux-3.10-5.14.or
+[    3s] [101/157] keeping perl-rpm-packaging-1.2-2.4.or
+[    3s] [102/157] keeping systemd-sysusers-259-10.5.or
+[    3s] [103/157] keeping glibc-devel-2.43-14.10.or
+[    3s] [104/157] keeping grep-3.12-3.6.or
+[    3s] [105/157] keeping libelf-0.194-5.13.or
+[    3s] [106/157] keeping cpp15-15.2.0-12.2.or
+[    3s] [107/157] keeping libarchive-3.8.1-4.14.or
+[    3s] [108/157] keeping cpp-15-4.12.or
+[    3s] [109/157] keeping dwz-0.16-4.20.or
+[    3s] [110/157] keeping findutils-4.10.0-3.10.or
+[    3s] [111/157] keeping libstdc++-devel-gcc15-15.2.0-12.2.or
+[    3s] [112/157] keeping sed-4.9-3.7.or
+[    3s] [113/157] keeping libmount-2.41.3-11.3.or
+[    3s] [114/157] keeping chkconfig-1.33-6.8.or
+[    3s] [115/157] keeping elfutils-0.194-5.13.or
+[    3s] [116/157] keeping authselect-1.6.1-8.7.or
+[    3s] [117/157] keeping mold-2.40.4-5.9.or
+[    3s] [118/157] keeping binutils-2.45-9.1.or
+[    3s] [119/157] keeping debugedit-5.2-4.18.or
+[    3s] [120/157] keeping gcc15-15.2.0-12.2.or
+[    3s] [121/157] keeping gcc-15-4.12.or
+[    3s] [122/157] keeping gcc15-c++-15.2.0-12.2.or
+[    3s] [123/157] keeping gcc-c++-15-4.12.or
+[    3s] [124/157] keeping rpm-config-openruyi-20251216-17.2.or
+[    3s] [125/157] keeping systemd-pam-259-10.5.or
+[    3s] [126/157] keeping ca-certificates-20251015-3.10.or
+[    3s] [127/157] keeping python-pip-wheel-25.3-3.19.or
+[    3s] [128/157] keeping ca-certificates-mozilla-2.84-4.15.or
+[    3s] [129/157] keeping python-srpm-macros-3.13-2.4.or
+[    3s] [130/157] keeping openruyi-authselect-profiles-1.6.1-8.7.or
+[    3s] [131/157] keeping rpm-4.20.1-7.8.or
+[    3s] [132/157] keeping python-rpm-macros-3.13-2.4.or
+[    3s] [133/157] keeping pam-1.7.1-7.13.or
+[    3s] [134/157] keeping python3-libs-3.13.8-8.4.or
+[    3s] [135/157] keeping python3-3.13.8-8.4.or
+[    3s] [136/157] keeping python3-rpm-macros-3.13-2.4.or
+[    3s] [137/157] keeping kbd-2.8.0-5.5.or
+[    3s] [138/157] keeping libpwquality-1.4.5-5.6.or
+[    3s] [139/157] keeping unbound-libs-1.24.2-7.2.or
+[    3s] [140/157] keeping python3-packaging-25.0-2.18.or
+[    3s] [141/157] keeping python3-setuptools-80.9.0-3.17.or
+[    3s] [142/157] keeping python3-pip-25.3-3.19.or
+[    3s] [143/157] keeping pyproject-rpm-macros-1.18.3-2.28.or
+[    3s] [144/157] keeping gnutls-3.8.10-4.24.or
+[    3s] [145/157] keeping python3-rpm-generators-14-3.4.or
+[    3s] [146/157] keeping curl-8.15.0-7.20.or
+[    3s] [147/157] keeping python3-devel-3.13.8-8.4.or
+[    3s] [148/157] keeping systemd-259-10.5.or
+[    3s] [149/157] keeping dbus-common-1.16.2-10.12.or
+[    3s] [150/157] keeping systemd-udev-259-10.5.or
+[    3s] [151/157] keeping dbus-1.16.2-10.12.or
+[    3s] [152/157] keeping util-linux-2.41.3-11.3.or
+[    3s] [153/157] keeping device-mapper-1.02.209-3.24.or
+[    3s] [154/157] keeping dbus-tools-1.16.2-10.12.or
+[    3s] [155/157] keeping rpm-build-4.20.1-7.8.or
+[    3s] [156/157] keeping device-mapper-libs-1.02.209-3.24.or
+[    3s] [157/157] keeping cryptsetup-libs-2.8.2-4.25.or
+[    3s] now finalizing build dir...
+[    3s] Unpacking openruyi-1777182268.ad1421a.obscpio ...
+[    4s] 76271 blocks
+[    5s] -----------------------------------------------------------------
+[    5s] ----- building python-dill.spec (user abuild)
+[    5s] -----------------------------------------------------------------
+[    5s] -----------------------------------------------------------------
+[    5s] + exec rpmbuild --nodeps -br --define '_srcdefattr (-,root,root)' --nosignature --define '_build_create_debug 1' /home/abuild/rpmbuild/SOURCES/python-dill.spec
+[    5s] Reading /var/tmp/rpm-tmp.Vd9MD3
+[    5s] Building target platforms: noarch
+[    5s] Building for target noarch
+[    5s] Reading /var/tmp/rpm-tmp.Etd804
+[    5s] Executing(%mkbuilddir): /usr/bin/bash -e /var/tmp/rpm-tmp.sgyCSk
+[    5s] Executing(%prep): /usr/bin/bash -e /var/tmp/rpm-tmp.S12tLM
+[    5s] + umask 022
+[    5s] + cd /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build
+[    5s] + cd /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build
+[    5s] + rm -rf python-dill-0.4.1
+[    5s] + /usr/lib/rpm/rpmuncompress -x -C python-dill-0.4.1 /home/abuild/rpmbuild/SOURCES/dill-0.4.1.tar.gz
+[    5s] + STATUS=0
+[    5s] + '[' 0 -ne 0 ']'
+[    5s] + cd python-dill-0.4.1
+[    5s] + /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
+[    5s] + RPM_EC=0
+[    5s] ++ jobs -p
+[    5s] + exit 0
+[    5s] Executing(%generate_buildrequires): /usr/bin/bash -e /var/tmp/rpm-tmp.ftwSZW
+[    5s] + umask 022
+[    5s] + cd /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build
+[    5s] + cd python-dill-0.4.1
+[    5s] + echo pyproject-rpm-macros
+[    5s] + echo python3-devel
+[    5s] + echo 'python3dist(packaging)'
+[    5s] + echo 'python3dist(pip) >= 19'
+[    5s] + '[' -f pyproject.toml ']'
+[    5s] + echo '(python3dist(tomli) if python3-devel < 3.11)'
+[    5s] + rm -rfv '*.dist-info/'
+[    5s] + '[' -f /usr/bin/python3 ']'
+[    5s] + mkdir -p /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/.pyproject-builddir
+[    5s] + echo -n
+[    5s] + CONFIG_SHELL=/usr/bin/bash
+[    5s] + CFLAGS=
+[    5s] + CXXFLAGS=' -D_GLIBCXX_ASSERTIONS'
+[    5s] + FFLAGS='-O2 -g -fno-omit-frame-pointer -pipe -flto=auto -ffat-lto-objects -funwind-tables -fasynchronous-unwind-tables -fstack-protector-strong -D_FORTIFY_SOURCE=3 -fstack-clash-protection -Wformat -Werror=format-security '
+[    5s] + FCFLAGS='-O2 -g -fno-omit-frame-pointer -pipe -flto=auto -ffat-lto-objects -funwind-tables -fasynchronous-unwind-tables -fstack-protector-strong -D_FORTIFY_SOURCE=3 -fstack-clash-protection -Wformat -Werror=format-security '
+[    5s] + LDFLAGS=-Wl,-z,relro,-z,now,-z,noexecstack
+[    5s] + CC=gcc
+[    5s] + CXX=g++
+[    5s] + TMPDIR=/home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/.pyproject-builddir
+[    5s] + RPM_TOXENV=py313
+[    5s] + HOSTNAME=rpmbuild
+[    5s] + /usr/bin/python3 -Bs /usr/lib/rpm/openruyi/pyproject_buildrequires.py --generate-extras --python3_pkgversion 3 --wheeldir /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/pyproject-wheeldir --output /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1-1.or.noarch-pyproject-buildrequires
+[    5s] Handling setuptools>=42 from build-system.requires
+[    5s] Requirement satisfied: setuptools>=42
+[    5s]    (installed: setuptools 80.9.0)
+[    5s] /usr/lib/python3.13/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+[    5s] !!
+[    5s] 
+[    5s]         ********************************************************************************
+[    5s]         Please consider removing the following classifiers in favor of a SPDX license expression:
+[    5s] 
+[    5s]         License :: OSI Approved :: BSD License
+[    5s] 
+[    5s]         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+[    5s]         ********************************************************************************
+[    5s] 
+[    5s] !!
+[    5s]   self._finalize_license_expression()
+[    5s] running egg_info
+[    5s] writing dill.egg-info/PKG-INFO
+[    5s] writing dependency_links to dill.egg-info/dependency_links.txt
+[    5s] writing requirements to dill.egg-info/requires.txt
+[    5s] writing top-level names to dill.egg-info/top_level.txt
+[    5s] reading manifest file 'dill.egg-info/SOURCES.txt'
+[    5s] reading manifest template 'MANIFEST.in'
+[    5s] no previously-included directories found matching '.git'
+[    5s] no previously-included directories found matching '.coverage'
+[    5s] no previously-included directories found matching '.eggs'
+[    5s] adding license file 'LICENSE'
+[    5s] writing manifest file 'dill.egg-info/SOURCES.txt'
+[    5s] running dist_info
+[    5s] writing dill.egg-info/PKG-INFO
+[    5s] writing dependency_links to dill.egg-info/dependency_links.txt
+[    5s] writing requirements to dill.egg-info/requires.txt
+[    5s] writing top-level names to dill.egg-info/top_level.txt
+[    5s] reading manifest file 'dill.egg-info/SOURCES.txt'
+[    5s] reading manifest template 'MANIFEST.in'
+[    5s] no previously-included directories found matching '.git'
+[    5s] no previously-included directories found matching '.coverage'
+[    5s] no previously-included directories found matching '.eggs'
+[    5s] adding license file 'LICENSE'
+[    5s] writing manifest file 'dill.egg-info/SOURCES.txt'
+[    5s] creating '/home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1/dill-0.4.1.dist-info'
+[    5s] Handling objgraph>=1.7.2; extra == "graph" from hook generated metadata: Requires-Dist (dill)
+[    5s] Ignoring alien requirement: objgraph>=1.7.2; extra == "graph"
+[    5s] Handling gprof2dot>=2022.7.29; extra == "profile" from hook generated metadata: Requires-Dist (dill)
+[    5s] Ignoring alien requirement: gprof2dot>=2022.7.29; extra == "profile"
+[    5s] + cat /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1-1.or.noarch-pyproject-buildrequires
+[    5s] + rm -rfv dill-0.4.1.dist-info/
+[    5s] removed 'dill-0.4.1.dist-info/top_level.txt'
+[    5s] removed 'dill-0.4.1.dist-info/METADATA'
+[    5s] removed 'dill-0.4.1.dist-info/licenses/LICENSE'
+[    5s] removed directory 'dill-0.4.1.dist-info/licenses'
+[    5s] removed directory 'dill-0.4.1.dist-info/'
+[    5s] + RPM_EC=0
+[    5s] ++ jobs -p
+[    5s] + exit 0
+[    5s] Wrote: /home/abuild/rpmbuild/SRPMS/python-dill-0.4.1-1.or.buildreqs.nosrc.rpm
+[    5s] + exec rpmbuild -ba --define '_srcdefattr (-,root,root)' --nosignature --define '_build_create_debug 1' /home/abuild/rpmbuild/SOURCES/python-dill.spec
+[    5s] Reading /var/tmp/rpm-tmp.CQKAkv
+[    6s] Building target platforms: noarch
+[    6s] Building for target noarch
+[    6s] Reading /var/tmp/rpm-tmp.mDysoj
+[    6s] Executing(%mkbuilddir): /usr/bin/bash -e /var/tmp/rpm-tmp.YjrS1e
+[    6s] Executing(%prep): /usr/bin/bash -e /var/tmp/rpm-tmp.v1H8O4
+[    6s] + umask 022
+[    6s] + cd /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build
+[    6s] + cd /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build
+[    6s] + rm -rf python-dill-0.4.1
+[    6s] + /usr/lib/rpm/rpmuncompress -x -C python-dill-0.4.1 /home/abuild/rpmbuild/SOURCES/dill-0.4.1.tar.gz
+[    6s] + STATUS=0
+[    6s] + '[' 0 -ne 0 ']'
+[    6s] + cd python-dill-0.4.1
+[    6s] + /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
+[    6s] + RPM_EC=0
+[    6s] ++ jobs -p
+[    6s] + exit 0
+[    6s] Executing(%generate_buildrequires): /usr/bin/bash -e /var/tmp/rpm-tmp.ktSgJt
+[    6s] + umask 022
+[    6s] + cd /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build
+[    6s] + cd python-dill-0.4.1
+[    6s] + echo pyproject-rpm-macros
+[    6s] + echo python3-devel
+[    6s] + echo 'python3dist(packaging)'
+[    6s] + echo 'python3dist(pip) >= 19'
+[    6s] + '[' -f pyproject.toml ']'
+[    6s] + echo '(python3dist(tomli) if python3-devel < 3.11)'
+[    6s] + rm -rfv '*.dist-info/'
+[    6s] + '[' -f /usr/bin/python3 ']'
+[    6s] + mkdir -p /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/.pyproject-builddir
+[    6s] + echo -n
+[    6s] + CONFIG_SHELL=/usr/bin/bash
+[    6s] + CFLAGS=
+[    6s] + CXXFLAGS=' -D_GLIBCXX_ASSERTIONS'
+[    6s] + FFLAGS='-O2 -g -fno-omit-frame-pointer -pipe -flto=auto -ffat-lto-objects -funwind-tables -fasynchronous-unwind-tables -fstack-protector-strong -D_FORTIFY_SOURCE=3 -fstack-clash-protection -Wformat -Werror=format-security '
+[    6s] + FCFLAGS='-O2 -g -fno-omit-frame-pointer -pipe -flto=auto -ffat-lto-objects -funwind-tables -fasynchronous-unwind-tables -fstack-protector-strong -D_FORTIFY_SOURCE=3 -fstack-clash-protection -Wformat -Werror=format-security '
+[    6s] + LDFLAGS=-Wl,-z,relro,-z,now,-z,noexecstack
+[    6s] + CC=gcc
+[    6s] + CXX=g++
+[    6s] + TMPDIR=/home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/.pyproject-builddir
+[    6s] + RPM_TOXENV=py313
+[    6s] + HOSTNAME=rpmbuild
+[    6s] + /usr/bin/python3 -Bs /usr/lib/rpm/openruyi/pyproject_buildrequires.py --generate-extras --python3_pkgversion 3 --wheeldir /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/pyproject-wheeldir --output /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1-1.or.noarch-pyproject-buildrequires
+[    6s] Handling setuptools>=42 from build-system.requires
+[    6s] Requirement satisfied: setuptools>=42
+[    6s]    (installed: setuptools 80.9.0)
+[    6s] /usr/lib/python3.13/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+[    6s] !!
+[    6s] 
+[    6s]         ********************************************************************************
+[    6s]         Please consider removing the following classifiers in favor of a SPDX license expression:
+[    6s] 
+[    6s]         License :: OSI Approved :: BSD License
+[    6s] 
+[    6s]         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+[    6s]         ********************************************************************************
+[    6s] 
+[    6s] !!
+[    6s]   self._finalize_license_expression()
+[    6s] running egg_info
+[    6s] writing dill.egg-info/PKG-INFO
+[    6s] writing dependency_links to dill.egg-info/dependency_links.txt
+[    6s] writing requirements to dill.egg-info/requires.txt
+[    6s] writing top-level names to dill.egg-info/top_level.txt
+[    6s] reading manifest file 'dill.egg-info/SOURCES.txt'
+[    6s] reading manifest template 'MANIFEST.in'
+[    6s] no previously-included directories found matching '.git'
+[    6s] no previously-included directories found matching '.coverage'
+[    6s] no previously-included directories found matching '.eggs'
+[    6s] adding license file 'LICENSE'
+[    6s] writing manifest file 'dill.egg-info/SOURCES.txt'
+[    6s] running dist_info
+[    6s] writing dill.egg-info/PKG-INFO
+[    6s] writing dependency_links to dill.egg-info/dependency_links.txt
+[    6s] writing requirements to dill.egg-info/requires.txt
+[    6s] writing top-level names to dill.egg-info/top_level.txt
+[    6s] reading manifest file 'dill.egg-info/SOURCES.txt'
+[    6s] reading manifest template 'MANIFEST.in'
+[    6s] no previously-included directories found matching '.git'
+[    6s] no previously-included directories found matching '.coverage'
+[    6s] no previously-included directories found matching '.eggs'
+[    6s] adding license file 'LICENSE'
+[    6s] writing manifest file 'dill.egg-info/SOURCES.txt'
+[    6s] creating '/home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1/dill-0.4.1.dist-info'
+[    6s] Handling objgraph>=1.7.2; extra == "graph" from hook generated metadata: Requires-Dist (dill)
+[    6s] Ignoring alien requirement: objgraph>=1.7.2; extra == "graph"
+[    6s] Handling gprof2dot>=2022.7.29; extra == "profile" from hook generated metadata: Requires-Dist (dill)
+[    6s] Ignoring alien requirement: gprof2dot>=2022.7.29; extra == "profile"
+[    6s] + cat /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1-1.or.noarch-pyproject-buildrequires
+[    6s] + rm -rfv dill-0.4.1.dist-info/
+[    6s] removed 'dill-0.4.1.dist-info/top_level.txt'
+[    6s] removed 'dill-0.4.1.dist-info/METADATA'
+[    6s] removed 'dill-0.4.1.dist-info/licenses/LICENSE'
+[    6s] removed directory 'dill-0.4.1.dist-info/licenses'
+[    6s] removed directory 'dill-0.4.1.dist-info/'
+[    6s] + RPM_EC=0
+[    6s] ++ jobs -p
+[    6s] + exit 0
+[    6s] Executing(%conf): /usr/bin/bash -e /var/tmp/rpm-tmp.wZF23H
+[    6s] + umask 022
+[    6s] + cd /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build
+[    6s] + cd python-dill-0.4.1
+[    6s] + RPM_EC=0
+[    6s] ++ jobs -p
+[    6s] + exit 0
+[    6s] Executing(%build): /usr/bin/bash -e /var/tmp/rpm-tmp.XaqVsP
+[    6s] + umask 022
+[    6s] + cd /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build
+[    6s] + cd python-dill-0.4.1
+[    6s] + mkdir -p /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1/.pyproject-builddir
+[    6s] + CONFIG_SHELL=/usr/bin/bash
+[    6s] + CFLAGS=
+[    6s] + CXXFLAGS=' -D_GLIBCXX_ASSERTIONS'
+[    6s] + FFLAGS='-O2 -g -fno-omit-frame-pointer -pipe -flto=auto -ffat-lto-objects -funwind-tables -fasynchronous-unwind-tables -fstack-protector-strong -D_FORTIFY_SOURCE=3 -fstack-clash-protection -Wformat -Werror=format-security '
+[    6s] + FCFLAGS='-O2 -g -fno-omit-frame-pointer -pipe -flto=auto -ffat-lto-objects -funwind-tables -fasynchronous-unwind-tables -fstack-protector-strong -D_FORTIFY_SOURCE=3 -fstack-clash-protection -Wformat -Werror=format-security '
+[    6s] + LDFLAGS=-Wl,-z,relro,-z,now,-z,noexecstack
+[    6s] + CC=gcc
+[    6s] + CXX=g++
+[    6s] + TMPDIR=/home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1/.pyproject-builddir
+[    6s] + /usr/bin/python3 -Bs /usr/lib/rpm/openruyi/pyproject_wheel.py /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1/pyproject-wheeldir
+[    6s] Processing /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1
+[    6s]   Preparing metadata (pyproject.toml): started
+[    6s]   Running command Preparing metadata (pyproject.toml)
+[    6s]   /usr/lib/python3.13/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+[    6s]   !!
+[    6s] 
+[    6s]           ********************************************************************************
+[    6s]           Please consider removing the following classifiers in favor of a SPDX license expression:
+[    6s] 
+[    6s]           License :: OSI Approved :: BSD License
+[    6s] 
+[    6s]           See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+[    6s]           ********************************************************************************
+[    6s] 
+[    6s]   !!
+[    6s]     self._finalize_license_expression()
+[    6s]   running dist_info
+[    6s]   creating /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1/.pyproject-builddir/pip-modern-metadata-59gxlxrj/dill.egg-info
+[    6s]   writing /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1/.pyproject-builddir/pip-modern-metadata-59gxlxrj/dill.egg-info/PKG-INFO
+[    6s]   writing dependency_links to /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1/.pyproject-builddir/pip-modern-metadata-59gxlxrj/dill.egg-info/dependency_links.txt
+[    6s]   writing requirements to /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1/.pyproject-builddir/pip-modern-metadata-59gxlxrj/dill.egg-info/requires.txt
+[    6s]   writing top-level names to /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1/.pyproject-builddir/pip-modern-metadata-59gxlxrj/dill.egg-info/top_level.txt
+[    6s]   writing manifest file '/home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1/.pyproject-builddir/pip-modern-metadata-59gxlxrj/dill.egg-info/SOURCES.txt'
+[    6s]   reading manifest file '/home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1/.pyproject-builddir/pip-modern-metadata-59gxlxrj/dill.egg-info/SOURCES.txt'
+[    6s]   reading manifest template 'MANIFEST.in'
+[    6s]   no previously-included directories found matching '.git'
+[    6s]   no previously-included directories found matching '.coverage'
+[    6s]   no previously-included directories found matching '.eggs'
+[    6s]   adding license file 'LICENSE'
+[    6s]   writing manifest file '/home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1/.pyproject-builddir/pip-modern-metadata-59gxlxrj/dill.egg-info/SOURCES.txt'
+[    6s]   creating '/home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1/.pyproject-builddir/pip-modern-metadata-59gxlxrj/dill-0.4.1.dist-info'
+[    6s]   Preparing metadata (pyproject.toml): finished with status 'done'
+[    6s] Building wheels for collected packages: dill
+[    6s]   Building wheel for dill (pyproject.toml): started
+[    6s]   Running command Building wheel for dill (pyproject.toml)
+[    7s]   /usr/lib/python3.13/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+[    7s]   !!
+[    7s] 
+[    7s]           ********************************************************************************
+[    7s]           Please consider removing the following classifiers in favor of a SPDX license expression:
+[    7s] 
+[    7s]           License :: OSI Approved :: BSD License
+[    7s] 
+[    7s]           See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+[    7s]           ********************************************************************************
+[    7s] 
+[    7s]   !!
+[    7s]     self._finalize_license_expression()
+[    7s]   running bdist_wheel
+[    7s]   running build
+[    7s]   running build_py
+[    7s]   creating build/lib/dill
+[    7s]   copying dill/_dill.py -> build/lib/dill
+[    7s]   copying dill/temp.py -> build/lib/dill
+[    7s]   copying dill/_shims.py -> build/lib/dill
+[    7s]   copying dill/logger.py -> build/lib/dill
+[    7s]   copying dill/__info__.py -> build/lib/dill
+[    7s]   copying dill/detect.py -> build/lib/dill
+[    7s]   copying dill/__diff.py -> build/lib/dill
+[    7s]   copying dill/settings.py -> build/lib/dill
+[    7s]   copying dill/__init__.py -> build/lib/dill
+[    7s]   copying dill/objtypes.py -> build/lib/dill
+[    7s]   copying dill/session.py -> build/lib/dill
+[    7s]   copying dill/source.py -> build/lib/dill
+[    7s]   copying dill/pointers.py -> build/lib/dill
+[    7s]   copying dill/_objects.py -> build/lib/dill
+[    7s]   creating build/lib/dill/tests
+[    7s]   copying dill/tests/test_session.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_properties.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_functors.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_recursive.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_nested.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_module.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_objects.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_mixins.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_diff.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_fglobals.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_temp.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_logger.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_selected.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_functions.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_moduledict.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_dataclasses.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_source.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_weakref.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/__init__.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_sources.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_detect.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_restricted.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_classdef.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_threads.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_dictviews.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_registered.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_file.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_abc.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_check.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/__main__.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_pycapsule.py -> build/lib/dill/tests
+[    7s]   copying dill/tests/test_extendpickle.py -> build/lib/dill/tests
+[    7s]   running build_scripts
+[    7s]   creating build/scripts-3.13
+[    7s]   copying and adjusting scripts/undill -> build/scripts-3.13
+[    7s]   copying and adjusting scripts/get_objgraph -> build/scripts-3.13
+[    7s]   copying and adjusting scripts/get_gprof -> build/scripts-3.13
+[    7s]   changing mode of build/scripts-3.13/undill from 644 to 755
+[    7s]   changing mode of build/scripts-3.13/get_objgraph from 644 to 755
+[    7s]   changing mode of build/scripts-3.13/get_gprof from 644 to 755
+[    7s]   installing to build/bdist.linux-x86_64/wheel
+[    7s]   running install
+[    7s]   running install_lib
+[    7s]   creating build/bdist.linux-x86_64/wheel
+[    7s]   creating build/bdist.linux-x86_64/wheel/dill
+[    7s]   copying build/lib/dill/_dill.py -> build/bdist.linux-x86_64/wheel/./dill
+[    7s]   copying build/lib/dill/temp.py -> build/bdist.linux-x86_64/wheel/./dill
+[    7s]   copying build/lib/dill/_shims.py -> build/bdist.linux-x86_64/wheel/./dill
+[    7s]   copying build/lib/dill/logger.py -> build/bdist.linux-x86_64/wheel/./dill
+[    7s]   copying build/lib/dill/__info__.py -> build/bdist.linux-x86_64/wheel/./dill
+[    7s]   copying build/lib/dill/detect.py -> build/bdist.linux-x86_64/wheel/./dill
+[    7s]   copying build/lib/dill/__diff.py -> build/bdist.linux-x86_64/wheel/./dill
+[    7s]   copying build/lib/dill/settings.py -> build/bdist.linux-x86_64/wheel/./dill
+[    7s]   copying build/lib/dill/__init__.py -> build/bdist.linux-x86_64/wheel/./dill
+[    7s]   creating build/bdist.linux-x86_64/wheel/dill/tests
+[    7s]   copying build/lib/dill/tests/test_session.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_properties.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_functors.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_recursive.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_nested.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_module.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_objects.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_mixins.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_diff.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_fglobals.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_temp.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_logger.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_selected.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_functions.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_moduledict.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_dataclasses.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_source.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_weakref.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/__init__.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_sources.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_detect.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_restricted.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_classdef.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_threads.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_dictviews.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_registered.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_file.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_abc.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_check.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/__main__.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_pycapsule.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/tests/test_extendpickle.py -> build/bdist.linux-x86_64/wheel/./dill/tests
+[    7s]   copying build/lib/dill/objtypes.py -> build/bdist.linux-x86_64/wheel/./dill
+[    7s]   copying build/lib/dill/session.py -> build/bdist.linux-x86_64/wheel/./dill
+[    7s]   copying build/lib/dill/source.py -> build/bdist.linux-x86_64/wheel/./dill
+[    7s]   copying build/lib/dill/pointers.py -> build/bdist.linux-x86_64/wheel/./dill
+[    7s]   copying build/lib/dill/_objects.py -> build/bdist.linux-x86_64/wheel/./dill
+[    7s]   running install_egg_info
+[    7s]   running egg_info
+[    7s]   writing dill.egg-info/PKG-INFO
+[    7s]   writing dependency_links to dill.egg-info/dependency_links.txt
+[    7s]   writing requirements to dill.egg-info/requires.txt
+[    7s]   writing top-level names to dill.egg-info/top_level.txt
+[    7s]   reading manifest file 'dill.egg-info/SOURCES.txt'
+[    7s]   reading manifest template 'MANIFEST.in'
+[    7s]   no previously-included directories found matching '.git'
+[    7s]   no previously-included directories found matching '.coverage'
+[    7s]   no previously-included directories found matching '.eggs'
+[    7s]   adding license file 'LICENSE'
+[    7s]   writing manifest file 'dill.egg-info/SOURCES.txt'
+[    7s]   Copying dill.egg-info to build/bdist.linux-x86_64/wheel/./dill-0.4.1-py3.13.egg-info
+[    7s]   running install_scripts
+[    7s]   creating build/bdist.linux-x86_64/wheel/dill-0.4.1.data/scripts
+[    7s]   copying build/scripts-3.13/undill -> build/bdist.linux-x86_64/wheel/dill-0.4.1.data/scripts
+[    7s]   copying build/scripts-3.13/get_gprof -> build/bdist.linux-x86_64/wheel/dill-0.4.1.data/scripts
+[    7s]   copying build/scripts-3.13/get_objgraph -> build/bdist.linux-x86_64/wheel/dill-0.4.1.data/scripts
+[    7s]   changing mode of build/bdist.linux-x86_64/wheel/dill-0.4.1.data/scripts/undill to 755
+[    7s]   changing mode of build/bdist.linux-x86_64/wheel/dill-0.4.1.data/scripts/get_gprof to 755
+[    7s]   changing mode of build/bdist.linux-x86_64/wheel/dill-0.4.1.data/scripts/get_objgraph to 755
+[    7s]   creating build/bdist.linux-x86_64/wheel/dill-0.4.1.dist-info/WHEEL
+[    7s]   creating '/home/abuild/.cache/pip/wheels/49/f9/bc/0c6695b6b47dab67466a413b178df18103047557da7eb4142d/tmpornwlhej/.tmp-nhjbjkai/dill-0.4.1-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+[    7s]   adding 'dill/__diff.py'
+[    7s]   adding 'dill/__info__.py'
+[    7s]   adding 'dill/__init__.py'
+[    7s]   adding 'dill/_dill.py'
+[    7s]   adding 'dill/_objects.py'
+[    7s]   adding 'dill/_shims.py'
+[    7s]   adding 'dill/detect.py'
+[    7s]   adding 'dill/logger.py'
+[    7s]   adding 'dill/objtypes.py'
+[    7s]   adding 'dill/pointers.py'
+[    7s]   adding 'dill/session.py'
+[    7s]   adding 'dill/settings.py'
+[    7s]   adding 'dill/source.py'
+[    7s]   adding 'dill/temp.py'
+[    7s]   adding 'dill/tests/__init__.py'
+[    7s]   adding 'dill/tests/__main__.py'
+[    7s]   adding 'dill/tests/test_abc.py'
+[    7s]   adding 'dill/tests/test_check.py'
+[    7s]   adding 'dill/tests/test_classdef.py'
+[    7s]   adding 'dill/tests/test_dataclasses.py'
+[    7s]   adding 'dill/tests/test_detect.py'
+[    7s]   adding 'dill/tests/test_dictviews.py'
+[    7s]   adding 'dill/tests/test_diff.py'
+[    7s]   adding 'dill/tests/test_extendpickle.py'
+[    7s]   adding 'dill/tests/test_fglobals.py'
+[    7s]   adding 'dill/tests/test_file.py'
+[    7s]   adding 'dill/tests/test_functions.py'
+[    7s]   adding 'dill/tests/test_functors.py'
+[    7s]   adding 'dill/tests/test_logger.py'
+[    7s]   adding 'dill/tests/test_mixins.py'
+[    7s]   adding 'dill/tests/test_module.py'
+[    7s]   adding 'dill/tests/test_moduledict.py'
+[    7s]   adding 'dill/tests/test_nested.py'
+[    7s]   adding 'dill/tests/test_objects.py'
+[    7s]   adding 'dill/tests/test_properties.py'
+[    7s]   adding 'dill/tests/test_pycapsule.py'
+[    7s]   adding 'dill/tests/test_recursive.py'
+[    7s]   adding 'dill/tests/test_registered.py'
+[    7s]   adding 'dill/tests/test_restricted.py'
+[    7s]   adding 'dill/tests/test_selected.py'
+[    7s]   adding 'dill/tests/test_session.py'
+[    7s]   adding 'dill/tests/test_source.py'
+[    7s]   adding 'dill/tests/test_sources.py'
+[    7s]   adding 'dill/tests/test_temp.py'
+[    7s]   adding 'dill/tests/test_threads.py'
+[    7s]   adding 'dill/tests/test_weakref.py'
+[    7s]   adding 'dill-0.4.1.data/scripts/get_gprof'
+[    7s]   adding 'dill-0.4.1.data/scripts/get_objgraph'
+[    7s]   adding 'dill-0.4.1.data/scripts/undill'
+[    7s]   adding 'dill-0.4.1.dist-info/licenses/LICENSE'
+[    7s]   adding 'dill-0.4.1.dist-info/METADATA'
+[    7s]   adding 'dill-0.4.1.dist-info/WHEEL'
+[    7s]   adding 'dill-0.4.1.dist-info/top_level.txt'
+[    7s]   adding 'dill-0.4.1.dist-info/RECORD'
+[    7s]   removing build/bdist.linux-x86_64/wheel
+[    7s]   Building wheel for dill (pyproject.toml): finished with status 'done'
+[    7s]   Created wheel for dill: filename=dill-0.4.1-py3-none-any.whl size=119864 sha256=bb964d4f8c444213ac198d2c8c58b46d24a55a7323a9abd2fad85954d0066a9b
+[    7s]   Stored in directory: /home/abuild/.cache/pip/wheels/49/f9/bc/0c6695b6b47dab67466a413b178df18103047557da7eb4142d
+[    7s] Successfully built dill
+[    7s] + RPM_EC=0
+[    7s] ++ jobs -p
+[    7s] + exit 0
+[    7s] Executing(%install): /usr/bin/bash -e /var/tmp/rpm-tmp.Yz8cW1
+[    7s] + umask 022
+[    7s] + cd /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build
+[    7s] + /usr/bin/rm -rf /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT
+[    7s] + /usr/bin/mkdir -p /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build
+[    7s] + /usr/bin/mkdir /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT
+[    7s] + cd python-dill-0.4.1
+[    7s] ++ ls /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1/pyproject-wheeldir/dill-0.4.1-py3-none-any.whl
+[    7s] ++ xargs basename --multiple
+[    7s] ++ sed -E 's/([^-]+)-([^-]+)-.+\.whl/\1==\2/'
+[    7s] + specifier=dill==0.4.1
+[    7s] + '[' -z dill==0.4.1 ']'
+[    7s] + TMPDIR=/home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1/.pyproject-builddir
+[    7s] + /usr/bin/python3 -m pip install --root /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT --prefix /usr --no-deps --disable-pip-version-check --progress-bar off --verbose --ignore-installed --no-warn-script-location --no-index --no-cache-dir --find-links /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1/pyproject-wheeldir dill==0.4.1
+[    7s] Using pip 25.3 from /usr/lib/python3.13/site-packages/pip (python 3.13)
+[    7s] Looking in links: /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1/pyproject-wheeldir
+[    7s] Processing ./pyproject-wheeldir/dill-0.4.1-py3-none-any.whl
+[    7s] Installing collected packages: dill
+[    7s] Successfully installed dill-0.4.1
+[    7s] + '[' -d /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/bin ']'
+[    7s] + '[' -z sP ']'
+[    7s] + shebang_flags=-kasP
+[    7s] + /usr/bin/python3 -B /usr/lib/rpm/openruyi/pathfix.py -pni /usr/bin/python3 -kasP /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/bin/get_gprof /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/bin/get_objgraph /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/bin/undill
+[    7s] /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/bin/get_gprof: updating
+[    7s] /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/bin/get_objgraph: updating
+[    7s] /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/bin/undill: updating
+[    7s] + rm -rfv /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/bin/__pycache__
+[    7s] + rm -f /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1-1.or.noarch-pyproject-ghost-distinfo
+[    7s] + site_dirs=()
+[    7s] + '[' -d /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/lib/python3.13/site-packages ']'
+[    7s] + site_dirs+=("/usr/lib/python3.13/site-packages")
+[    7s] + '[' /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/lib64/python3.13/site-packages '!=' /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/lib/python3.13/site-packages ']'
+[    7s] + '[' -d /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/lib64/python3.13/site-packages ']'
+[    7s] + for site_dir in ${site_dirs[@]}
+[    7s] + for distinfo in /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT$site_dir/*.dist-info
+[    7s] + echo '%ghost /usr/lib/python3.13/site-packages/dill-0.4.1.dist-info'
+[    7s] + sed -i s/pip/rpm/ /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/lib/python3.13/site-packages/dill-0.4.1.dist-info/INSTALLER
+[    7s] + PYTHONPATH=/usr/lib/rpm/openruyi
+[    7s] + /usr/bin/python3 -B /usr/lib/rpm/openruyi/pyproject_preprocess_record.py --buildroot /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT --record /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/lib/python3.13/site-packages/dill-0.4.1.dist-info/RECORD --output /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1-1.or.noarch-pyproject-record
+[    7s] + rm -fv /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/lib/python3.13/site-packages/dill-0.4.1.dist-info/RECORD
+[    7s] removed '/home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/lib/python3.13/site-packages/dill-0.4.1.dist-info/RECORD'
+[    7s] + rm -fv /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/lib/python3.13/site-packages/dill-0.4.1.dist-info/REQUESTED
+[    7s] removed '/home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/lib/python3.13/site-packages/dill-0.4.1.dist-info/REQUESTED'
+[    7s] ++ wc -l /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1-1.or.noarch-pyproject-ghost-distinfo
+[    7s] ++ cut -f1 '-d '
+[    7s] + lines=1
+[    7s] + '[' 1 -ne 1 ']'
+[    7s] + RPM_FILES_ESCAPE=4.19
+[    7s] + /usr/bin/python3 /usr/lib/rpm/openruyi/pyproject_save_files.py --output-files /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1-1.or.noarch-pyproject-files --output-modules /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1-1.or.noarch-pyproject-modules --buildroot /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT --sitelib /usr/lib/python3.13/site-packages --sitearch /usr/lib64/python3.13/site-packages --python-version 3.13 --pyproject-record /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1-1.or.noarch-pyproject-record --prefix /usr -l dill
+[    7s] + /usr/lib/rpm/find-debuginfo -j16 --build-id-seed 0.4.1-1.or --unique-debug-suffix -0.4.1-1.or.noarch --unique-debug-src-base python-dill-0.4.1-1.or.noarch --no-ar-files /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1
+[    7s] find-debuginfo: starting
+[    7s] Extracting debug info from 0 files
+[    7s] Creating .debug symlinks for symlinks to ELF files
+[    7s] find: ‘debug’: No such file or directory
+[    7s] find-debuginfo: done
+[    7s] + /usr/lib/rpm/brp-compress
+[    8s] + /usr/lib/rpm/brp-remove-la-files
+[    8s] + /usr/lib/rpm/brp-openruyi
+[    8s] Executing(%check): /usr/bin/bash -e /var/tmp/rpm-tmp.vLFNI9
+[    8s] + umask 022
+[    8s] + cd /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build
+[    8s] + cd python-dill-0.4.1
+[    8s] + '[' '!' -f /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1-1.or.noarch-pyproject-modules ']'
+[    8s] + PATH=/home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/bin:/usr/local/bin:/bin:/usr/bin
+[    8s] + PYTHONPATH=/home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/lib64/python3.13/site-packages:/home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/lib/python3.13/site-packages
+[    8s] + _PYTHONSITE=/home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/lib64/python3.13/site-packages:/home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT/usr/lib/python3.13/site-packages
+[    8s] + PYTHONDONTWRITEBYTECODE=1
+[    8s] + /usr/bin/python3 -sP /usr/lib/rpm/openruyi/import_all_modules.py -f /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/python-dill-0.4.1-1.or.noarch-pyproject-modules -e 'dill.tests.*'
+[    8s] Check import: dill
+[    8s] Check import: dill.detect
+[    8s] Check import: dill.logger
+[    8s] Check import: dill.objtypes
+[    8s] Check import: dill.pointers
+[    8s] Check import: dill.session
+[    8s] Check import: dill.settings
+[    8s] Check import: dill.source
+[    8s] Check import: dill.temp
+[    8s] Check import: dill.tests
+[    8s] + RPM_EC=0
+[    8s] ++ jobs -p
+[    8s] + exit 0
+[    8s] Processing files: python-dill-0.4.1-1.or.noarch
+[    8s] Provides: python-dill = 0.4.1-1.or python3-dill = 0.4.1-1.or python3.13-dill = 0.4.1-1.or python3.13dist(dill) = 0.4.1 python3dist(dill) = 0.4.1
+[    8s] Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+[    8s] Requires: /usr/bin/python3 python(abi) = 3.13
+[    8s] Obsoletes: python-dill < 0.4.1-1.or
+[    8s] Checking for unpackaged file(s): /usr/lib/rpm/check-files /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build/BUILDROOT
+[    8s] Wrote: /home/abuild/rpmbuild/SRPMS/python-dill-0.4.1-1.or.src.rpm
+[    8s] Wrote: /home/abuild/rpmbuild/RPMS/noarch/python-dill-0.4.1-1.or.noarch.rpm
+[    8s] Executing(rmbuild): /usr/bin/bash -e /var/tmp/rpm-tmp.k76cfh
+[    8s] + umask 022
+[    8s] + cd /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build
+[    8s] + test -d /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build
+[    8s] + /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build
+[    8s] + rm -rf /home/abuild/rpmbuild/BUILD/python-dill-0.4.1-build
+[    8s] + RPM_EC=0
+[    8s] ++ jobs -p
+[    8s] + exit 0
+[    8s] ... checking for files with abuild user/group
+[    8s] 
+[    8s] oe finished "build python-dill.spec" at Sun Apr 26 06:32:56 UTC 2026.
+[    8s] 
+
+/var/tmp/build-root/x64-x86_64/home/abuild/rpmbuild/SRPMS/python-dill-0.4.1-1.or.src.rpm
+
+/var/tmp/build-root/x64-x86_64/home/abuild/rpmbuild/RPMS/noarch/python-dill-0.4.1-1.or.noarch.rpm

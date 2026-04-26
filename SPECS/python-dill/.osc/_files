@@ -1,0 +1,8 @@
+<directory name="python-dill" rev="69424b8a04872ed3793b17deb06750c4" srcmd5="69424b8a04872ed3793b17deb06750c4">
+  <serviceinfo lsrcmd5="eae286ef9ab9cfb9a593caea39b42c6d" />
+  <entry name="_service" md5="ab5c2219ce053272c32c99bd61c1a4a4" size="313" mtime="1777182277" />
+  <entry name="_service:download_files:dill-0.4.1.tar.gz" md5="599349a2723bf2dccf7ad4adae771142" size="187315" mtime="1768790218" skipped="true" />
+  <entry name="_service:obs_scm:openruyi-1777182268.ad1421a.obscpio" md5="49087669bd8b1d2dade3a58e8e149fea" size="39050765" mtime="1777182288" skipped="true" />
+  <entry name="_service:obs_scm:openruyi.obsinfo" md5="f16ce85731a396f62258b04837d406ea" size="110" mtime="1777182288" skipped="true" />
+  <entry name="_service:obs_scm:python-dill.spec" md5="17e728cb1ea1b35100158b603471dd3d" size="828" mtime="1777182286" skipped="true" />
+</directory>

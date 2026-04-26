@@ -1,0 +1,9 @@
+<services>
+    <service name="obs_scm">
+      <param name="scm">git</param>
+      <param name="url">https://github.com/yyjeqhc/openruyi/</param>
+      <param name="revision">python-dill</param>
+      <param name="extract">SPECS/python-dill/*</param>
+    </service>
+    <service name="download_files"/>
+</services>
