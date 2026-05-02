@@ -12,7 +12,7 @@ Source0:        https://files.pythonhosted.org/packages/source/n/%{srcname}/%{py
 BuildArch:      noarch
 BuildSystem:    pyproject
 
-BuildOption(install):  -l %{pypi_name}
+BuildOption(install):  -l nvidia_ml_py
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
