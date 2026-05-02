@@ -12,9 +12,12 @@ BuildArch:      noarch
 BuildSystem:    pyproject
 
 BuildOption(install):  -l %{srcname} -L
+BuildOption(check):  -e "pycountry.tests.test_general"
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
+BuildRequires:  python3dist(pip)
+BuildRequires:  python3dist(poetry-core)
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
