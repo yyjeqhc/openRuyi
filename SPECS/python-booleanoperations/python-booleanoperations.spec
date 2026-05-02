@@ -17,7 +17,7 @@ Source0:        https://files.pythonhosted.org/packages/source/b/%{srcname}/%{sr
 BuildArch:      noarch
 BuildSystem:    pyproject
 
-BuildOption(install):  -l %{srcname}
+BuildOption(install):  -l booleanoperations
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
