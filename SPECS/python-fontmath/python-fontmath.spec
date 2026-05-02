@@ -17,10 +17,16 @@ Source0:        https://files.pythonhosted.org/packages/source/f/%{srcname}/%{sr
 BuildArch:      noarch
 BuildSystem:    pyproject
 
-BuildOption(install):  -l fontmath
+BuildOption(install):  -l fontMath
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
+BuildRequires:  python3dist(pip)
+BuildRequires:  python3dist(setuptools)
+BuildRequires:  python3dist(setuptools-scm)
+BuildRequires:  python3dist(setuptools-scm[toml])
+BuildRequires:  python3dist(wheel)
+BuildRequires:  python3dist(fonttools)
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
