@@ -28,6 +28,9 @@ BuildRequires:  python3dist(packaging)
 BuildRequires:  python3dist(pip)
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(wheel) >= 0.32
+BuildRequires:  python3dist(hatch-fancy-pypi-readme)
+BuildRequires:  python3dist(hatch-vcs)
+BuildRequires:  python3dist(hatchling)
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
