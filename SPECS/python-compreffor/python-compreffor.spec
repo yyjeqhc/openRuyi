@@ -14,7 +14,9 @@ License:        Apache-2.0
 URL:            https://pypi.org/project/compreffor/
 #!RemoteAsset:  sha256:7ea034a50c59cc78732f1480040eac2bb36f826ce2eb607c3029b5d38ab11ba8
 Source0:        https://files.pythonhosted.org/packages/source/c/%{srcname}/%{srcname}-%{version}.tar.gz
-BuildArch:      noarch
+Provides:       python3-%{srcname} = %{version}-%{release}
+Provides:       python3-%{srcname}%{?_isa} = %{version}-%{release}
+%python_provide python3-%{srcname}
 BuildSystem:    pyproject
 
 BuildOption(install):  -l %{srcname}
@@ -22,8 +24,6 @@ BuildOption(install):  -l %{srcname}
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
 
-Provides:       python3-%{srcname} = %{version}-%{release}
-%python_provide python3-%{srcname}
 
 %description
 A CFF table subroutinizer for FontTools.
