@@ -14,7 +14,9 @@ License:        MIT
 URL:            https://github.com/fonttools/pyclipper
 #!RemoteAsset:  sha256:9882bd889f27da78add4dd6f881d25697efc740bf840274e749988d25496c8e1
 Source0:        https://files.pythonhosted.org/packages/source/p/%{srcname}/%{srcname}-%{version}.tar.gz
-BuildArch:      noarch
+Provides:       python3-%{srcname} = %{version}-%{release}
+Provides:       python3-%{srcname}%{?_isa} = %{version}-%{release}
+%python_provide python3-%{srcname}
 BuildSystem:    pyproject
 
 BuildOption(install):  -l %{srcname}
@@ -22,8 +24,6 @@ BuildOption(install):  -l %{srcname}
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
 
-Provides:       python3-%{srcname} = %{version}-%{release}
-%python_provide python3-%{srcname}
 
 %description
 .. image:: https://badge.fury.io/py/pyclipper.svg
