@@ -17,10 +17,16 @@ Source0:        https://files.pythonhosted.org/packages/source/b/%{srcname}/%{sr
 BuildArch:      noarch
 BuildSystem:    pyproject
 
-BuildOption(install):  -l booleanoperations
+BuildOption(install):  -l booleanOperations
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
+BuildRequires:  python3dist(pip)
+BuildRequires:  python3dist(setuptools)
+BuildRequires:  python3dist(setuptools-scm)
+BuildRequires:  python3dist(wheel)
+BuildRequires:  python3dist(fonttools)
+BuildRequires:  python3dist(pyclipper)
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
