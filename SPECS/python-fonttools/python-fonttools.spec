@@ -17,10 +17,19 @@ Source0:        https://files.pythonhosted.org/packages/source/f/%{srcname}/%{sr
 BuildArch:      noarch
 BuildSystem:    pyproject
 
-BuildOption(install):  -l fonttools
+BuildOption(install):  -l fontTools
+BuildOption(check):  -e "fontTools.misc.symfont"
+BuildOption(check):  -e "fontTools.pens.freetypePen"
+BuildOption(check):  -e "fontTools.pens.quartzPen"
+BuildOption(check):  -e "fontTools.pens.reportLabPen"
+BuildOption(check):  -e "fontTools.ttLib.removeOverlaps"
+BuildOption(check):  -e "fontTools.varLib.interpolatablePlot"
+BuildOption(check):  -e "fontTools.varLib.plot"
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
+BuildRequires:  python3dist(pip)
+BuildRequires:  python3dist(setuptools)
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
@@ -36,6 +45,11 @@ Provides:       python3-%{srcname} = %{version}-%{release}
 %pyproject_buildrequires
 
 %files -f %{pyproject_files}
+%{_bindir}/fonttools
+%{_bindir}/pyftmerge
+%{_bindir}/pyftsubset
+%{_bindir}/ttx
+%{_mandir}/man1/ttx.1.gz
 
 %changelog
 %autochangelog
