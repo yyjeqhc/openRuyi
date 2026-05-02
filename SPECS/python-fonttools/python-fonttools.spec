@@ -35,7 +35,10 @@ Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
 
 %description
-|CI Build Status| |Coverage Status| |PyPI| |Gitter Chat|
+
+%pyproject_extras_subpkg -n python-%{srcname} lxml
+%pyproject_extras_subpkg -n python-%{srcname} ufo
+%pyproject_extras_subpkg -n python-%{srcname} unicode
 
 %generate_buildrequires
 %pyproject_buildrequires
