@@ -32,6 +32,7 @@ A CFF table subroutinizer for FontTools.
 %pyproject_buildrequires
 
 %files -f %{pyproject_files}
+%{_bindir}/compreffor
 
 %changelog
 %autochangelog
