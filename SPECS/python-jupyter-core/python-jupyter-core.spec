@@ -27,6 +27,11 @@ Jupyter core package. A base package on which Jupyter projects rely.
 %pyproject_buildrequires
 
 %files -f %{pyproject_files}
+%{_bindir}/jupyter
+%{_bindir}/jupyter-migrate
+%{_bindir}/jupyter-troubleshoot
+%{_prefix}/lib/python3.13/site-packages/__pycache__/jupyter.cpython-313.pyc
+%{_prefix}/lib/python3.13/site-packages/jupyter.py
 
 %changelog
 %autochangelog
