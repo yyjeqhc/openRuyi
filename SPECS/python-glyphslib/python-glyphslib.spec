@@ -17,10 +17,23 @@ Source0:        https://files.pythonhosted.org/packages/source/g/%{srcname}/%{sr
 BuildArch:      noarch
 BuildSystem:    pyproject
 
-BuildOption(install):  -l glyphslib
+BuildOption(install):  -l glyphsLib
+BuildOption(check):  -e "glyphsLib.featureWriters.markFeatureWriter"
+BuildOption(check):  -e "glyphsLib.filters.cornerComponents"
+BuildOption(check):  -e "glyphsLib.filters.eraseOpenCorners"
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
+BuildRequires:  python3dist(pip)
+BuildRequires:  python3dist(setuptools)
+BuildRequires:  python3dist(setuptools-scm)
+BuildRequires:  python3dist(setuptools-scm[toml])
+BuildRequires:  python3dist(wheel)
+BuildRequires:  python3dist(fonttools)
+BuildRequires:  python3dist(fonttools[ufo])
+BuildRequires:  python3dist(fonttools[unicode])
+BuildRequires:  python3dist(openstep-plist)
+BuildRequires:  python3dist(ufolib2)
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
@@ -32,6 +45,8 @@ Provides:       python3-%{srcname} = %{version}-%{release}
 %pyproject_buildrequires
 
 %files -f %{pyproject_files}
+%{_bindir}/glyphs2ufo
+%{_bindir}/ufo2glyphs
 
 %changelog
 %autochangelog
