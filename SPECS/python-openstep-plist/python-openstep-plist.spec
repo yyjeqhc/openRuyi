@@ -15,7 +15,9 @@ License:        MIT
 URL:            https://github.com/fonttools/openstep-plist
 #!RemoteAsset:  sha256:2a0d70ff7a03cce64a727062b64bb2f5c9af9fd4a636aaa4339b6aaa2cf65195
 Source0:        https://files.pythonhosted.org/packages/source/o/%{srcname}/%{pypi_name}-%{version}.tar.gz
-BuildArch:      noarch
+Provides:       python3-%{srcname} = %{version}-%{release}
+Provides:       python3-%{srcname}%{?_isa} = %{version}-%{release}
+%python_provide python3-%{srcname}
 BuildSystem:    pyproject
 
 BuildOption(install):  -l %{pypi_name}
@@ -23,8 +25,6 @@ BuildOption(install):  -l %{pypi_name}
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
 
-Provides:       python3-%{srcname} = %{version}-%{release}
-%python_provide python3-%{srcname}
 
 %description
 A parser for the "old style" OpenStep property list format (also known as ASCII
