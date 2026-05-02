@@ -18,10 +18,16 @@ Source0:        https://files.pythonhosted.org/packages/source/s/%{srcname}/%{py
 BuildArch:      noarch
 BuildSystem:    pyproject
 
-BuildOption(install):  -l %{pypi_name}
+BuildOption(install):  -l skbuild
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
+BuildRequires:  python3dist(hatch-fancy-pypi-readme)
+BuildRequires:  python3dist(hatch-vcs)
+BuildRequires:  python3dist(hatchling)
+BuildRequires:  python3dist(pip)
+BuildRequires:  python3dist(distro)
+BuildRequires:  python3dist(wheel)
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
