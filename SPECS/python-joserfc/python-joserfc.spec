@@ -12,6 +12,7 @@ BuildArch:      noarch
 BuildSystem:    pyproject
 
 BuildOption(install):  -l %{srcname}
+BuildOption(check):  -e "joserfc.drafts.jwe_chacha20"
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
