@@ -11,7 +11,7 @@ Source0:        https://files.pythonhosted.org/packages/source/u/%{srcname}/%{sr
 BuildArch:      noarch
 BuildSystem:    pyproject
 
-BuildOption(install):  -l %{srcname}
+BuildOption(install):  -l unidic-lite
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
