@@ -12,16 +12,20 @@ Source0:        https://files.pythonhosted.org/packages/source/a/%{srcname}/%{py
 BuildArch:      noarch
 BuildSystem:    pyproject
 
-BuildOption(install):  -l absl_py
+BuildOption(install):  -l absl
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
+BuildRequires:  python3dist(hatchling)
+BuildRequires:  python3dist(pip)
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
 
 %description
-Abseil Python Common Libraries
+Provides the Abseil Python library for C++ utilities.
+Includes modules for logging, flags, and common utilities.
+Designed to simplify C++ code porting to Python.
 
 %generate_buildrequires
 %pyproject_buildrequires
