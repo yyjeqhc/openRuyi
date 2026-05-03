@@ -26,6 +26,7 @@ SacreBLEU (Post, 2018) provides hassle-free computation of shareable, comparable
 %pyproject_buildrequires
 
 %files -f %{pyproject_files}
+%{_bindir}/sacrebleu
 
 %changelog
 %autochangelog
