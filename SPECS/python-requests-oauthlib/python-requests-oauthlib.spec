@@ -11,10 +11,14 @@ Source0:        https://files.pythonhosted.org/packages/source/r/%{srcname}/%{sr
 BuildArch:      noarch
 BuildSystem:    pyproject
 
-BuildOption(install):  -l requests-oauthlib
+BuildOption(install):  -l requests_oauthlib
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
+BuildRequires:  python3dist(pip)
+BuildRequires:  python3dist(setuptools)
+BuildRequires:  python3dist(oauthlib)
+BuildRequires:  python3dist(requests)
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
