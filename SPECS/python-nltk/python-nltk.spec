@@ -60,9 +60,16 @@ BuildOption(check):  -e "nltk.tokenize.nist"
 BuildOption(check):  -e "nltk.twitter.twitter_demo"
 BuildOption(check):  -e "nltk.twitter.twitterclient"
 BuildOption(check):  -e "nltk.twitter.util"
+BuildOption(check):  -e "nltk.*"
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
+BuildRequires:  python3dist(pip)
+BuildRequires:  python3dist(setuptools)
+BuildRequires:  python3dist(click)
+BuildRequires:  python3dist(joblib)
+BuildRequires:  python3dist(regex)
+BuildRequires:  python3dist(tqdm)
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
@@ -75,6 +82,7 @@ natural language processing. NLTK requires Python 3.10, 3.11, 3.12, 3.13, or 3.1
 %pyproject_buildrequires
 
 %files -f %{pyproject_files}
+%{_bindir}/nltk
 
 %changelog
 %autochangelog
