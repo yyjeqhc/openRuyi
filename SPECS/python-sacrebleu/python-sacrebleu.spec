@@ -15,6 +15,15 @@ BuildOption(install):  -l %{srcname}
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
+BuildRequires:  python3dist(pip)
+BuildRequires:  python3dist(setuptools)
+BuildRequires:  python3dist(setuptools-scm)
+BuildRequires:  python3dist(colorama)
+BuildRequires:  python3dist(lxml)
+BuildRequires:  python3dist(numpy)
+BuildRequires:  python3dist(portalocker)
+BuildRequires:  python3dist(regex)
+BuildRequires:  python3dist(tabulate)
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
