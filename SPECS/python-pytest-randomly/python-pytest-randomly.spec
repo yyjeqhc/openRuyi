@@ -11,12 +11,12 @@
 %bcond tests 0
 
 Name:           python-%{srcname}
-Version:        4.0.1
+Version:        4.1.0
 Release:        %autorelease
 Summary:        Pytest plugin to randomly order tests and control random.seed
 License:        MIT
 URL:            https://github.com/pytest-dev/pytest-randomly
-#!RemoteAsset
+#!RemoteAsset:  sha256:47f1d9746c3bc3efabd53ae1ebfb8bb385cf3d4df4b505b6d58d9c97a3dfe70f
 Source0:        https://files.pythonhosted.org/packages/source/p/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    pyproject
@@ -35,7 +35,7 @@ BuildRequires:  python3dist(numpy)
 BuildRequires:  python3dist(pytest-xdist)
 %endif
 
-Provides:       python3-%{srcname}
+Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
 
 %description
