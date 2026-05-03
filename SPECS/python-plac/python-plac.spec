@@ -26,6 +26,13 @@ Plac: parsing the command line the easy way
 %pyproject_buildrequires
 
 %files -f %{pyproject_files}
+%{_bindir}/plac_runner.py
+%{_prefix}/lib/python3.13/site-packages/__pycache__/plac_core.cpython-313.pyc
+%{_prefix}/lib/python3.13/site-packages/__pycache__/plac_ext.cpython-313.pyc
+%{_prefix}/lib/python3.13/site-packages/__pycache__/plac_tk.cpython-313.pyc
+%{_prefix}/lib/python3.13/site-packages/plac_core.py
+%{_prefix}/lib/python3.13/site-packages/plac_ext.py
+%{_prefix}/lib/python3.13/site-packages/plac_tk.py
 
 %changelog
 %autochangelog
