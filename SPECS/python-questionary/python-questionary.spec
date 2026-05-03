@@ -11,16 +11,21 @@ Source0:        https://files.pythonhosted.org/packages/source/q/%{srcname}/%{sr
 BuildArch:      noarch
 BuildSystem:    pyproject
 
-BuildOption(install):  -l %{srcname}
+BuildOption(install):  -l %{srcname} -L
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
+BuildRequires:  python3dist(pip)
+BuildRequires:  python3dist(poetry-core)
+BuildRequires:  python3dist(prompt-toolkit)
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
 
 %description
-✨ Questionary is a Python library for effortlessly building pretty command line interfaces ✨
+Provides a command-line prompt library for interactive user input. Supports rich text formatting
+and customizable prompts. Enables creation of guided user interfaces. Offers validation and
+confirmation features. Simplifies terminal interaction in applications.
 
 %generate_buildrequires
 %pyproject_buildrequires
