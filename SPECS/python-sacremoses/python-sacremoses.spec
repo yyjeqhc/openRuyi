@@ -27,6 +27,7 @@ pip install -U sacremoses
 %pyproject_buildrequires
 
 %files -f %{pyproject_files}
+%{_bindir}/sacremoses
 
 %changelog
 %autochangelog
