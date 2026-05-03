@@ -12,10 +12,12 @@ Source0:        https://files.pythonhosted.org/packages/source/n/%{srcname}/%{py
 BuildArch:      noarch
 BuildSystem:    pyproject
 
-BuildOption(install):  -l nvidia_ml_py
+BuildOption(install):  -l pynvml -L
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
+BuildRequires:  python3dist(pip)
+BuildRequires:  python3dist(setuptools)
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
@@ -27,6 +29,8 @@ Python bindings to the NVIDIA Management Library
 %pyproject_buildrequires
 
 %files -f %{pyproject_files}
+%{_prefix}/lib/python3.13/site-packages/__pycache__/example.cpython-313.pyc
+%{_prefix}/lib/python3.13/site-packages/example.py
 
 %changelog
 %autochangelog
