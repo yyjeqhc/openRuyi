@@ -12,6 +12,9 @@ BuildArch:      noarch
 BuildSystem:    pyproject
 
 BuildOption(install):  -l %{srcname}
+BuildOption(check):  -e "schedulefree.algoperf.external_tuning.schedule_free_adamw.submission"
+BuildOption(check):  -e "schedulefree.algoperf.external_tuning.schedule_free_prodigy.submission"
+BuildOption(check):  -e "schedulefree.algoperf.self_tuning.schedule_free_adamw.submission"
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
