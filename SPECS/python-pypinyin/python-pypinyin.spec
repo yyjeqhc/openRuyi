@@ -26,6 +26,7 @@ Provides:       python3-%{srcname} = %{version}-%{release}
 %pyproject_buildrequires
 
 %files -f %{pyproject_files}
+%{_bindir}/pypinyin
 
 %changelog
 %autochangelog
