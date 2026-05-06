@@ -4,15 +4,16 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
+BuildArch:      noarch
 %global srcname spacy
 
 Name:           python-%{srcname}
-Version:        3.8.11
+Version:        3.8.14
 Release:        %autorelease
 Summary:        Industrial-strength Natural Language Processing (NLP) in Python
 License:        MIT
 URL:            https://github.com/explosion/spaCy
-#!RemoteAsset:  sha256:54e1e87b74a2f9ea807ffd606166bf29ac45e2bd81ff7f608eadc7b05787d90d
+#!RemoteAsset:  sha256:
 Source0:        https://files.pythonhosted.org/packages/source/s/%{srcname}/%{srcname}-%{version}.tar.gz
 BuildSystem:    pyproject
 
@@ -39,7 +40,7 @@ BuildRequires:  python3dist(typer-slim)
 BuildRequires:  python3dist(weasel)
 BuildRequires:  python3dist(wheel)
 
-Provides:       python3-%{srcname}
+Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
 
 %description
@@ -56,4 +57,4 @@ and was designed from day one to be used in real products.
 %{_bindir}/spacy
 
 %changelog
-%{?autochangelog}
+%autochangelog
