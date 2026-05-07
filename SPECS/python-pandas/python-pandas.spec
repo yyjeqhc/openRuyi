@@ -4,15 +4,16 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
+BuildArch:      noarch
 %global srcname pandas
 
 Name:           python-%{srcname}
-Version:        3.0.1
+Version:        3.0.2
 Release:        %autorelease
 Summary:        Python data structures for data analysis, time series, and statistics
 License:        BSD-3-Clause
 URL:            https://pandas.pydata.org/
-#!RemoteAsset
+#!RemoteAsset:  sha256:f4753e73e34c8d83221ba58f232433fca2748be8b18dbca02d242ed153945043
 Source0:        https://files.pythonhosted.org/packages/source/p/%{srcname}/%{srcname}-%{version}.tar.gz
 BuildSystem:    pyproject
 
@@ -31,7 +32,7 @@ BuildRequires:  python3dist(pytest)
 BuildRequires:  python3dist(hypothesis)
 BuildRequires:  python3dist(jinja2)
 
-Provides:       python3-%{srcname}
+Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
 
 %description
@@ -48,4 +49,4 @@ block for doing data analysis in Python.
 %license LICENSE
 
 %changelog
-%{?autochangelog}
+%autochangelog
