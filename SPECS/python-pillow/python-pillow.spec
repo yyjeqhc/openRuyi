@@ -4,15 +4,16 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
+BuildArch:      noarch
 %global srcname pillow
 
 Name:           python-%{srcname}
-Version:        12.0.0
+Version:        12.2.0
 Release:        %autorelease
 Summary:        Python image processing library
 License:        MIT
 URL:            http://python-pillow.github.io/
-#!RemoteAsset
+#!RemoteAsset:  sha256:a830b1a40919539d07806aa58e1b114df53ddd43213d9c8b75847eee6c0182b5
 Source0:        https://files.pythonhosted.org/packages/source/p/%{srcname}/%{srcname}-%{version}.tar.gz
 BuildSystem:    pyproject
 
@@ -33,10 +34,8 @@ BuildRequires:  python3dist(pytest)
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(wheel)
 
-Provides:       python3-%{srcname}
+Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
-Provides:       python3-imaging
-%python_provide python3-imaging
 
 %description
 Python image processing library, fork of the Python Imaging Library (PIL).
@@ -57,4 +56,4 @@ install -m 644 src/libImaging/*.h %{buildroot}/%{_includedir}/python%{python3_ve
 %{_includedir}/python%{python3_version}/Imaging/
 
 %changelog
-%{?autochangelog}
+%autochangelog
