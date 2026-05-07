@@ -12,7 +12,7 @@ Release:        %autorelease
 Summary:        Tools for using a Web Server Gateway Interface stack
 License:        MIT
 URL:            https://github.com/pasteorg/paste
-#!RemoteAsset
+#!RemoteAsset:  sha256:1c3d12065a5e8a7a18c0c7be1653a97cf38cc3e9a5a0c8334a9dd992d3a05e4a
 Source0:        https://files.pythonhosted.org/packages/source/p/%{srcname}/%{srcname}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    pyproject
@@ -24,7 +24,7 @@ BuildRequires:  pkgconfig(python3)
 # Tests
 BuildRequires:  python3dist(pytest)
 
-Provides:       python3-%{srcname}
+Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
 
 %description
@@ -52,4 +52,4 @@ interfaces.
 %{python3_sitelib}/Paste-%{version}-py*-nspkg.pth
 
 %changelog
-%{?autochangelog}
+%autochangelog
