@@ -33,6 +33,7 @@ Requires:       crate(web-sys-0.3/htmlcanvaselement) >= 0.3.95
 Requires:       crate(web-sys-0.3/htmlelement) >= 0.3.95
 Requires:       crate(web-sys-0.3/node) >= 0.3.95
 Requires:       crate(web-sys-0.3/window) >= 0.3.95
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/area-series)
 Provides:       crate(%{pkgname}/boxplot)

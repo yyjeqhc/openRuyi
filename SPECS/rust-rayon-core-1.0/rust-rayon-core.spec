@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(crossbeam-deque-0.8/default) >= 0.8.6
 Requires:       crate(crossbeam-utils-0.8/default) >= 0.8.21
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

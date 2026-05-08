@@ -25,6 +25,7 @@ Requires:       crate(cc-1.0/default) >= 1.2.58
 Requires:       crate(libc-0.2/default) >= 0.2.184
 Requires:       crate(pkg-config-0.3/default) >= 0.3.32
 Requires:       crate(vcpkg-0.2/default) >= 0.2.15
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

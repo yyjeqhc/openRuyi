@@ -26,6 +26,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(once-cell-1.0) >= 1.21.4
 Requires:       crate(wasm-bindgen-0.2) >= 0.2.118
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/unsafe-eval)
 

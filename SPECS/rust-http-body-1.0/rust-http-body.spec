@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bytes-1.0/default) >= 1.11.1
 Requires:       crate(http-1.0/default) >= 1.4.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

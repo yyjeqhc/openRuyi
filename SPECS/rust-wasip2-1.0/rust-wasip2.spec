@@ -21,6 +21,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(wit-bindgen-0.51) >= 0.51.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/std)
 
@@ -79,4 +80,4 @@ This metapackage enables feature "rustc-dep-of-std" for the Rust wasip2 crate, b
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

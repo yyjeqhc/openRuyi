@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(cast-0.3/default) >= 0.3.0
 Requires:       crate(itertools-0.10/default) >= 0.10.5
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

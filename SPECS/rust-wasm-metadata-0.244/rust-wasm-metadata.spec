@@ -28,6 +28,7 @@ Requires:       crate(wasmparser-0.244/component-model) >= 0.244.0
 Requires:       crate(wasmparser-0.244/hash-collections) >= 0.244.0
 Requires:       crate(wasmparser-0.244/simd) >= 0.244.0
 Requires:       crate(wasmparser-0.244/std) >= 0.244.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description
@@ -81,4 +82,4 @@ This metapackage enables feature "serde" for the Rust wasm-metadata crate, by pu
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

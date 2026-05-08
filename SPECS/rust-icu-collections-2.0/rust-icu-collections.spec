@@ -28,6 +28,7 @@ Requires:       crate(yoke-0.8/derive) >= 0.8.2
 Requires:       crate(zerofrom-0.1/derive) >= 0.1.7
 Requires:       crate(zerovec-0.11/derive) >= 0.11.6
 Requires:       crate(zerovec-0.11/yoke) >= 0.11.6
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

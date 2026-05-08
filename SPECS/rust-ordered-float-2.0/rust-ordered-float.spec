@@ -22,6 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(num-traits-0.2) >= 0.2.19
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

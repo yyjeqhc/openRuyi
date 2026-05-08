@@ -22,6 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(objc2-core-foundation-0.3) >= 0.3.2
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/cgbase)
 Provides:       crate(%{pkgname}/cgdirectdisplaymetal)

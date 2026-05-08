@@ -22,6 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bit-vec-0.6) >= 0.6.1
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

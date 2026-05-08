@@ -21,6 +21,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(windows-link-0.2) >= 0.2.1
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/wdk)
 Provides:       crate(%{pkgname}/wdk-devices)
@@ -277,4 +278,4 @@ Source code for takopackized Rust crate "windows-sys"
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

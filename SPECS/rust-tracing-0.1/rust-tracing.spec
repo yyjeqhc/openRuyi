@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(pin-project-lite-0.2/default) >= 0.2.17
 Requires:       crate(tracing-core-0.1) >= 0.1.36
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/async-await)
 Provides:       crate(%{pkgname}/max-level-debug)

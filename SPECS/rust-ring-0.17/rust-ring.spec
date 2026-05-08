@@ -29,6 +29,7 @@ Requires:       crate(untrusted-0.9/default) >= 0.9.0
 Requires:       crate(windows-sys-0.52/default) >= 0.52.0
 Requires:       crate(windows-sys-0.52/win32-foundation) >= 0.52.0
 Requires:       crate(windows-sys-0.52/win32-system-threading) >= 0.52.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/dev-urandom-fallback)

@@ -20,6 +20,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/auxvec)
 Provides:       crate(%{pkgname}/bootparam)
@@ -85,4 +86,4 @@ This metapackage enables feature "rustc-dep-of-std" for the Rust linux-raw-sys c
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

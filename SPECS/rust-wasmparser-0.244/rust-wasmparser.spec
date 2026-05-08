@@ -21,6 +21,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bitflags-2.0/default) >= 2.11.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/features)
 Provides:       crate(%{pkgname}/prefer-btree-collections)
@@ -89,4 +90,4 @@ This metapackage enables feature "std" for the Rust wasmparser crate, by pulling
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

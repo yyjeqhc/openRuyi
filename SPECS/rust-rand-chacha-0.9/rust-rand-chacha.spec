@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(ppv-lite86-0.2/simd) >= 0.2.21
 Requires:       crate(rand-core-0.9/default) >= 0.9.5
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

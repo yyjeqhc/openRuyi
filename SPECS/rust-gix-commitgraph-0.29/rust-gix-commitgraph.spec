@@ -26,6 +26,7 @@ Requires:       crate(gix-chunk-0.4/default) >= 0.4.12
 Requires:       crate(gix-hash-0.19/default) >= 0.19.0
 Requires:       crate(memmap2-0.9/default) >= 0.9.10
 Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

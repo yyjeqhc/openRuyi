@@ -22,6 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(objc2-encode-4.0) >= 4.1.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/disable-encoding-assertions)
 Provides:       crate(%{pkgname}/objc2-proc-macros)

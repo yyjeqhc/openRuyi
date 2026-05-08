@@ -30,6 +30,7 @@ Requires:       crate(gix-quote-0.6/default) >= 0.6.2
 Requires:       crate(gix-sec-0.12/default) >= 0.12.2
 Requires:       crate(gix-url-0.32/default) >= 0.32.0
 Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/http-client-insecure-credentials)

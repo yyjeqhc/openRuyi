@@ -24,6 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(getrandom-0.3/default) >= 0.3.4
 Requires:       crate(getrandom-0.3/std) >= 0.3.4
 Requires:       crate(libc-0.2/default) >= 0.2.184
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

@@ -24,6 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(anstyle-1.0/default) >= 1.0.14
 Requires:       crate(normalize-line-endings-0.3/default) >= 0.3.0
 Requires:       crate(snapbox-macros-0.4/default) >= 0.4.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

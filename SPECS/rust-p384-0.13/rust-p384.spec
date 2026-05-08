@@ -24,6 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(elliptic-curve-0.13/hazmat) >= 0.13.8
 Requires:       crate(elliptic-curve-0.13/sec1) >= 0.13.8
 Requires:       crate(primeorder-0.13/default) >= 0.13.6
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

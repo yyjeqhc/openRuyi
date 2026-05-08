@@ -22,6 +22,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(lock-api-0.4/default) >= 0.4.14
 Requires:       crate(parking-lot-core-0.9/default) >= 0.9.12
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/hardware-lock-elision)
@@ -80,4 +81,4 @@ This metapackage enables feature "serde" for the Rust parking_lot crate, by pull
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

@@ -30,6 +30,7 @@ Requires:       crate(windows-link-0.2) >= 0.2.1
 Requires:       crate(windows-x86-64-gnu-0.53/default) >= 0.53.1
 Requires:       crate(windows-x86-64-gnullvm-0.53/default) >= 0.53.1
 Requires:       crate(windows-x86-64-msvc-0.53/default) >= 0.53.1
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

@@ -72,6 +72,7 @@ Requires:       crate(web-sys-0.3/requestmode) >= 0.3.94
 Requires:       crate(web-sys-0.3/response) >= 0.3.94
 Requires:       crate(web-sys-0.3/serviceworkerglobalscope) >= 0.3.94
 Requires:       crate(web-sys-0.3/window) >= 0.3.94
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/socks)
 Provides:       crate(%{pkgname}/trust-dns)

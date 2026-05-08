@@ -36,6 +36,7 @@ Requires:       crate(serde-1.0/derive) >= 1.0.228
 Requires:       crate(serde-json-1.0/default) >= 1.0.149
 Requires:       crate(tinytemplate-1.0/default) >= 1.2.1
 Requires:       crate(walkdir-2.0/default) >= 2.5.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/async)
 Provides:       crate(%{pkgname}/cargo-bench-support)

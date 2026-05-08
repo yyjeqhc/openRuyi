@@ -27,6 +27,7 @@ Requires:       crate(gix-path-0.10/default) >= 0.10.22
 Requires:       crate(gix-quote-0.6/default) >= 0.6.2
 Requires:       crate(gix-trace-0.1/default) >= 0.1.18
 Requires:       crate(shell-words-1.0/default) >= 1.1.1
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

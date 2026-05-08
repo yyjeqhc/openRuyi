@@ -39,6 +39,7 @@ Requires:       crate(tempfile-3.0/default) >= 3.0.0
 Requires:       crate(toml-0.9/parse) >= 0.9.0
 Requires:       crate(toml-0.9/serde) >= 0.9.0
 Requires:       crate(toml-0.9/std) >= 0.9.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/unstable-ir)
 

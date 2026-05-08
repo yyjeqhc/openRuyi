@@ -24,6 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(gix-hash-0.19/default) >= 0.19.0
 Requires:       crate(hashbrown-0.15/inline-more) >= 0.15.5
 Requires:       crate(parking-lot-0.12/default) >= 0.12.5
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

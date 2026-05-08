@@ -24,6 +24,7 @@ Requires:       crate(libc-0.2) >= 0.2.183
 Requires:       crate(windows-sys-0.61/default) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-system-diagnostics-debug) >= 0.61.2
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description
@@ -45,4 +46,4 @@ Additionally, this package also provides the "default" feature.
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

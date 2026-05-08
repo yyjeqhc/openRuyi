@@ -29,6 +29,7 @@ Requires:       crate(windows-sys-0.61/win32-storage-filesystem) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-system-io) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-system-pipes) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-system-threading) >= 0.61.2
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

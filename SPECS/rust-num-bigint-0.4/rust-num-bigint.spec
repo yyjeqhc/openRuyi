@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(num-integer-0.1/i128) >= 0.1.46
 Requires:       crate(num-traits-0.2/i128) >= 0.2.19
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

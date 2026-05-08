@@ -32,6 +32,7 @@ Requires:       crate(syn-2.0/extra-traits) >= 2.0.59
 Requires:       crate(syn-2.0/full) >= 2.0.59
 Requires:       crate(syn-2.0/parsing) >= 2.0.59
 Requires:       crate(syn-2.0/printing) >= 2.0.59
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/experimental-async)

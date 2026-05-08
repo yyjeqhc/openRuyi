@@ -28,6 +28,7 @@ Requires:       crate(syn-2.0/default) >= 2.0.117
 Requires:       crate(syn-2.0/printing) >= 2.0.117
 Requires:       crate(wit-bindgen-core-0.51/default) >= 0.51.0
 Requires:       crate(wit-bindgen-rust-0.51/default) >= 0.51.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/async)
 Provides:       crate(%{pkgname}/default)
@@ -39,4 +40,4 @@ Source code for takopackized Rust crate "wit-bindgen-rust-macro"
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

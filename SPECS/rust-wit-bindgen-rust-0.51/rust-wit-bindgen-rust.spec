@@ -29,6 +29,7 @@ Requires:       crate(syn-2.0/printing) >= 2.0.117
 Requires:       crate(wasm-metadata-0.244) >= 0.244.0
 Requires:       crate(wit-bindgen-core-0.51/default) >= 0.51.0
 Requires:       crate(wit-component-0.244/default) >= 0.244.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 
@@ -61,4 +62,4 @@ This metapackage enables feature "serde" for the Rust wit-bindgen-rust crate, by
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

@@ -25,6 +25,7 @@ Requires:       crate(libc-0.2) >= 0.2.183
 Requires:       crate(r-efi-6.0) >= 6.0.0
 Requires:       crate(wasip2-1.0) >= 1.0.2
 Requires:       crate(wasip3-0.4/default) >= 0.4.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
@@ -55,4 +56,4 @@ This metapackage enables feature "wasm_js" for the Rust getrandom crate, by pull
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

@@ -27,6 +27,7 @@ Requires:       crate(cc-1.0/default) >= 1.2.58
 Requires:       crate(cfg-if-1.0/default) >= 1.0.4
 Requires:       crate(constant-time-eq-0.4) >= 0.4.2
 Requires:       crate(cpufeatures-0.3/default) >= 0.3.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/neon)
 Provides:       crate(%{pkgname}/no-avx2)

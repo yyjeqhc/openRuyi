@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(digest-0.10/default) >= 0.10.7
 Requires:       crate(sha1-0.10/compress) >= 0.10.6
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

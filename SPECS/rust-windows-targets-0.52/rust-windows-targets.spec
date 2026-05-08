@@ -32,6 +32,7 @@ Requires:       crate(windows-i686-msvc-0.52/default) >= 0.52.6
 Requires:       crate(windows-x86-64-gnu-0.52/default) >= 0.52.6
 Requires:       crate(windows-x86-64-gnullvm-0.52/default) >= 0.52.6
 Requires:       crate(windows-x86-64-msvc-0.52/default) >= 0.52.6
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

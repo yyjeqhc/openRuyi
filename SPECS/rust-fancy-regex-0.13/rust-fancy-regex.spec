@@ -29,6 +29,7 @@ Requires:       crate(regex-automata-0.4/meta) >= 0.4.0
 Requires:       crate(regex-automata-0.4/nfa) >= 0.4.0
 Requires:       crate(regex-automata-0.4/syntax) >= 0.4.0
 Requires:       crate(regex-syntax-0.8) >= 0.8.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/track-caller)
 

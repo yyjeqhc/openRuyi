@@ -29,6 +29,7 @@ Requires:       crate(syn-2.0/extra-traits) >= 2.0.117
 Requires:       crate(syn-2.0/parsing) >= 2.0.117
 Requires:       crate(syn-2.0/printing) >= 2.0.117
 Requires:       crate(syn-2.0/visit) >= 2.0.117
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

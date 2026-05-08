@@ -22,6 +22,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(anstyle-1.0/default) >= 1.0.14
 Requires:       crate(clap-lex-1.0/default) >= 1.1.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/cargo)
 Provides:       crate(%{pkgname}/deprecated)
@@ -128,4 +129,4 @@ This metapackage enables feature "wrap_help" for the Rust clap_builder crate, by
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

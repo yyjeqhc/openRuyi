@@ -25,6 +25,7 @@ Requires:       crate(form-urlencoded-1.0/alloc) >= 1.2.2
 Requires:       crate(idna-1.0/alloc) >= 1.1.0
 Requires:       crate(idna-1.0/compiled-data) >= 1.1.0
 Requires:       crate(percent-encoding-2.0/alloc) >= 2.3.2
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/debugger-visualizer)
 Provides:       crate(%{pkgname}/expose-internals)

@@ -26,6 +26,7 @@ Requires:       crate(indexmap-2.0/std) >= 2.13.0
 Requires:       crate(log-0.4/default) >= 0.4.29
 Requires:       crate(semver-1.0) >= 1.0.27
 Requires:       crate(unicode-xid-0.2/default) >= 0.2.6
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description
@@ -90,4 +91,4 @@ This metapackage enables feature "wat" for the Rust wit-parser crate, by pulling
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

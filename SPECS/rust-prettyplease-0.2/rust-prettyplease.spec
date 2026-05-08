@@ -22,6 +22,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(proc-macro2-1.0) >= 1.0.106
 Requires:       crate(syn-2.0/full) >= 2.0.117
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 
@@ -42,4 +43,4 @@ This metapackage enables feature "verbatim" for the Rust prettyplease crate, by 
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

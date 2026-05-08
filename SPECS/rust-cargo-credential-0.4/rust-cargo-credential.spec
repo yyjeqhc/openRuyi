@@ -34,6 +34,7 @@ Requires:       crate(time-0.3/serde) >= 0.3.47
 Requires:       crate(windows-sys-0.60/default) >= 0.60.2
 Requires:       crate(windows-sys-0.60/win32-foundation) >= 0.60.2
 Requires:       crate(windows-sys-0.60/win32-system-console) >= 0.60.2
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

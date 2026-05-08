@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(crossbeam-epoch-0.9) >= 0.9.18
 Requires:       crate(crossbeam-utils-0.8) >= 0.8.21
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

@@ -126,6 +126,7 @@ Requires:       crate(windows-sys-0.60/win32-system-console) >= 0.60.0
 Requires:       crate(windows-sys-0.60/win32-system-io) >= 0.60.0
 Requires:       crate(windows-sys-0.60/win32-system-jobobjects) >= 0.60.0
 Requires:       crate(windows-sys-0.60/win32-system-threading) >= 0.60.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

@@ -36,6 +36,7 @@ Requires:       crate(tokio-util-0.7/codec) >= 0.7.18
 Requires:       crate(tokio-util-0.7/default) >= 0.7.18
 Requires:       crate(tokio-util-0.7/io) >= 0.7.18
 Requires:       crate(tracing-0.1/std) >= 0.1.44
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/stream)

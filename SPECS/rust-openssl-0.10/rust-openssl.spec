@@ -28,6 +28,7 @@ Requires:       crate(libc-0.2/default) >= 0.2.184
 Requires:       crate(once-cell-1.0/default) >= 1.21.4
 Requires:       crate(openssl-macros-0.1/default) >= 0.1.1
 Requires:       crate(openssl-sys-0.9/default) >= 0.9.112
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/v101)

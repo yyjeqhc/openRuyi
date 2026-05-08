@@ -27,6 +27,7 @@ Requires:       crate(gix-path-0.10/default) >= 0.10.22
 Requires:       crate(percent-encoding-2.0/default) >= 2.3.2
 Requires:       crate(thiserror-2.0/default) >= 2.0.18
 Requires:       crate(url-2.0/default) >= 2.5.8
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

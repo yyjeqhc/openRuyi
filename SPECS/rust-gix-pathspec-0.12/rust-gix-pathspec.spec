@@ -28,6 +28,7 @@ Requires:       crate(gix-config-value-0.15/default) >= 0.15.3
 Requires:       crate(gix-glob-0.21/default) >= 0.21.0
 Requires:       crate(gix-path-0.10/default) >= 0.10.22
 Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

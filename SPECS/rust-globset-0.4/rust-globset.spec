@@ -30,6 +30,7 @@ Requires:       crate(regex-automata-0.4/perf) >= 0.4.14
 Requires:       crate(regex-automata-0.4/std) >= 0.4.14
 Requires:       crate(regex-automata-0.4/syntax) >= 0.4.14
 Requires:       crate(regex-syntax-0.8/std) >= 0.8.10
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/simd-accel)
 

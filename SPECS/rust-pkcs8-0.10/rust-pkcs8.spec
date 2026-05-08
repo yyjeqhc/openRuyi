@@ -24,6 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(der-0.7/default) >= 0.7.10
 Requires:       crate(der-0.7/oid) >= 0.7.10
 Requires:       crate(spki-0.7/default) >= 0.7.3
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

@@ -26,6 +26,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(js-sys-0.3) >= 0.3.95
 Requires:       crate(wasm-bindgen-0.2) >= 0.2.118
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/abortcontroller)
 Provides:       crate(%{pkgname}/abortsignal)

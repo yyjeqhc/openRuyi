@@ -25,6 +25,7 @@ Requires:       crate(displaydoc-0.2) >= 0.2.5
 Requires:       crate(litemap-0.8) >= 0.8.2
 Requires:       crate(tinystr-0.8) >= 0.8.3
 Requires:       crate(writeable-0.6) >= 0.6.2
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

@@ -26,6 +26,7 @@ Requires:       crate(ciborium-io-0.2/default) >= 0.2.2
 Requires:       crate(ciborium-ll-0.2/default) >= 0.2.2
 Requires:       crate(serde-1.0/alloc) >= 1.0.228
 Requires:       crate(serde-1.0/derive) >= 1.0.228
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

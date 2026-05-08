@@ -27,6 +27,7 @@ Requires:       crate(futures-sink-0.3/default) >= 0.3.32
 Requires:       crate(pin-project-lite-0.2/default) >= 0.2.17
 Requires:       crate(tokio-1.0/default) >= 1.50.0
 Requires:       crate(tokio-1.0/sync) >= 1.50.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/codec)
 Provides:       crate(%{pkgname}/default)

@@ -25,6 +25,7 @@ Requires:       crate(bitflags-2.0/default) >= 2.11.0
 Requires:       crate(bstr-1.0/std) >= 1.12.1
 Requires:       crate(gix-features-0.43/default) >= 0.43.1
 Requires:       crate(gix-path-0.10/default) >= 0.10.22
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

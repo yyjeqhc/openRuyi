@@ -25,6 +25,7 @@ Requires:       crate(lazy-static-1.0/default) >= 1.5.0
 Requires:       crate(windows-sys-0.59/default) >= 0.59.0
 Requires:       crate(windows-sys-0.59/win32-foundation) >= 0.59.0
 Requires:       crate(windows-sys-0.59/win32-system-console) >= 0.59.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/no-color)

@@ -28,6 +28,7 @@ Requires:       crate(windows-sys-0.61/win32-networking-winsock) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-system-io) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-system-threading) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-system-windowsprogramming) >= 0.61.2
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/all)
 Provides:       crate(%{pkgname}/default)

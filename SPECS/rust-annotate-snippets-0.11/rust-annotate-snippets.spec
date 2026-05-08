@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(anstyle-1.0/default) >= 1.0.14
 Requires:       crate(unicode-width-0.2/default) >= 0.2.2
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/testing-colors)

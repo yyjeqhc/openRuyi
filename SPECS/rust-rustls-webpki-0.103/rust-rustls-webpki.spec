@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(rustls-pki-types-1.0) >= 1.14.0
 Requires:       crate(untrusted-0.9/default) >= 0.9.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

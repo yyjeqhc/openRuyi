@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(memoffset-0.9/default) >= 0.9.0
 Requires:       crate(object-0.37/pe) >= 0.37.1
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/msvc)
 

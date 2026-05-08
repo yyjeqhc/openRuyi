@@ -25,6 +25,7 @@ Requires:       crate(cfg-if-1.0/default) >= 1.0.4
 Requires:       crate(libc-0.2) >= 0.2.185
 Requires:       crate(r-efi-5.0) >= 5.3.0
 Requires:       crate(wasip2-1.0) >= 1.0.3
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)

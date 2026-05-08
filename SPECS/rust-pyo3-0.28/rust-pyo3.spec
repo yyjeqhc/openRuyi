@@ -27,6 +27,7 @@ Requires:       crate(portable-atomic-1.0/default) >= 1.13.1
 Requires:       crate(pyo3-build-config-0.28/default) >= 0.28.3
 Requires:       crate(pyo3-build-config-0.28/resolve-config) >= 0.28.3
 Requires:       crate(pyo3-ffi-0.28/default) >= 0.28.3
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/auto-initialize)
 Provides:       crate(%{pkgname}/nightly)

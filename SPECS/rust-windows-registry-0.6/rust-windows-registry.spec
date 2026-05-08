@@ -24,6 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(windows-link-0.2) >= 0.2.1
 Requires:       crate(windows-result-0.4) >= 0.4.1
 Requires:       crate(windows-strings-0.5) >= 0.5.1
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

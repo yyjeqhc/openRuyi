@@ -32,6 +32,7 @@ Requires:       crate(linux-raw-sys-0.12/no-std) >= 0.12.1
 Requires:       crate(windows-sys-0.61/default) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-networking-winsock) >= 0.61.2
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/event)
@@ -237,4 +238,4 @@ This metapackage enables feature "use-libc" for the Rust rustix crate, by pullin
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

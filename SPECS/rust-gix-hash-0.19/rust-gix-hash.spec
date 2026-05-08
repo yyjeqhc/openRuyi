@@ -26,6 +26,7 @@ Requires:       crate(gix-features-0.43/default) >= 0.43.1
 Requires:       crate(gix-features-0.43/progress) >= 0.43.1
 Requires:       crate(sha1-checked-0.10) >= 0.10.0
 Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

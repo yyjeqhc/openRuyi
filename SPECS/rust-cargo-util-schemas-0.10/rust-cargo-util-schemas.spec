@@ -31,6 +31,7 @@ Requires:       crate(thiserror-2.0/default) >= 2.0.18
 Requires:       crate(toml-0.9/serde) >= 0.9.12
 Requires:       crate(unicode-xid-0.2/default) >= 0.2.6
 Requires:       crate(url-2.0/default) >= 2.5.8
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

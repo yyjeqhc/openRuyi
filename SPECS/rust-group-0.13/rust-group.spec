@@ -24,6 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(ff-0.13) >= 0.13.1
 Requires:       crate(rand-core-0.6) >= 0.6.4
 Requires:       crate(subtle-2.0) >= 2.6.1
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/default)

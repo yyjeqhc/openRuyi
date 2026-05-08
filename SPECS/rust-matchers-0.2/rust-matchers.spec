@@ -24,6 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(regex-automata-0.4/dfa-build) >= 0.4.14
 Requires:       crate(regex-automata-0.4/dfa-search) >= 0.4.14
 Requires:       crate(regex-automata-0.4/syntax) >= 0.4.14
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

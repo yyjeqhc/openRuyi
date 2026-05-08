@@ -26,6 +26,7 @@ Requires:       crate(anstyle-lossy-1.0/default) >= 1.1.5
 Requires:       crate(anstyle-parse-0.2/default) >= 0.2.7
 Requires:       crate(html-escape-0.2/default) >= 0.2.13
 Requires:       crate(unicode-width-0.2/default) >= 0.2.2
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

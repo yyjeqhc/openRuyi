@@ -27,6 +27,7 @@ Requires:       crate(syn-2.0/derive) >= 2.0.117
 Requires:       crate(syn-2.0/parsing) >= 2.0.117
 Requires:       crate(syn-2.0/printing) >= 2.0.117
 Requires:       crate(syn-2.0/proc-macro) >= 2.0.117
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/deserialize-in-place)
@@ -38,4 +39,4 @@ Source code for takopackized Rust crate "serde_derive"
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

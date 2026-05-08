@@ -32,6 +32,7 @@ Requires:       crate(gix-path-0.10/default) >= 0.10.22
 Requires:       crate(memmap2-0.9/default) >= 0.9.10
 Requires:       crate(smallvec-1.0/default) >= 1.15.1
 Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

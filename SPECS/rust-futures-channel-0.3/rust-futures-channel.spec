@@ -22,6 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(futures-core-0.3) >= 0.3.32
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/cfg-target-has-atomic)
 Provides:       crate(%{pkgname}/unstable)

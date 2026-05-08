@@ -25,6 +25,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(windows-targets-0.52/default) >= 0.52.6
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/wdk)
 Provides:       crate(%{pkgname}/wdk-devices)

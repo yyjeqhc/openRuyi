@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(anyhow-1.0/default) >= 1.0.102
 Requires:       crate(heck-0.5/default) >= 0.5.0
 Requires:       crate(wit-parser-0.244/default) >= 0.244.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 
@@ -53,4 +54,4 @@ This metapackage enables feature "serde" for the Rust wit-bindgen-core crate, by
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

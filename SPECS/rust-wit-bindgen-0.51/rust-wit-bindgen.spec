@@ -20,6 +20,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/realloc)
 Provides:       crate(%{pkgname}/std)
@@ -102,4 +103,4 @@ This metapackage enables feature "rustc-dep-of-std" for the Rust wit-bindgen cra
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

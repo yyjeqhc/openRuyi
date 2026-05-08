@@ -26,6 +26,7 @@ Requires:       crate(http-1.0/default) >= 1.4.0
 Requires:       crate(http-body-1.0/default) >= 1.0.1
 Requires:       crate(hyper-1.0/default) >= 1.9.0
 Requires:       crate(pin-project-lite-0.2/default) >= 0.2.17
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/internal-happy-eyeballs-tests)
 Provides:       crate(%{pkgname}/default)

@@ -36,6 +36,7 @@ Requires:       crate(wasmparser-0.244/std) >= 0.244.0
 Requires:       crate(wit-parser-0.244/decoding) >= 0.244.0
 Requires:       crate(wit-parser-0.244/default) >= 0.244.0
 Requires:       crate(wit-parser-0.244/serde) >= 0.244.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 
@@ -68,4 +69,4 @@ This metapackage enables feature "wat" for the Rust wit-component crate, by pull
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

@@ -27,6 +27,7 @@ Requires:       crate(once-cell-1.0/race) >= 1.21.4
 Requires:       crate(once-cell-1.0/std) >= 1.21.4
 Requires:       crate(parking-lot-0.12/default) >= 0.12.5
 Requires:       crate(tempfile-3.0/default) >= 3.27.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

@@ -27,6 +27,7 @@ Requires:       crate(parking-lot-0.12/default) >= 0.12.5
 Requires:       crate(rustix-1.0/default) >= 1.1.4
 Requires:       crate(rustix-1.0/termios) >= 1.1.4
 Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

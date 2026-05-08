@@ -24,6 +24,7 @@ Requires:       crate(proc-macro2-1.0/default) >= 1.0.106
 Requires:       crate(quote-1.0/default) >= 1.0.45
 Requires:       crate(syn-2.0/default) >= 2.0.117
 Requires:       crate(syn-2.0/full) >= 2.0.117
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/async)
 Provides:       crate(%{pkgname}/default)
@@ -35,4 +36,4 @@ Source code for takopackized Rust crate "serial_test_derive"
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

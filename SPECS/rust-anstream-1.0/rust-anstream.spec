@@ -25,6 +25,7 @@ Requires:       crate(anstyle-parse-1.0/default) >= 1.0.0
 Requires:       crate(colorchoice-1.0/default) >= 1.0.5
 Requires:       crate(is-terminal-polyfill-1.0/default) >= 1.70.2
 Requires:       crate(utf8parse-0.2/default) >= 0.2.2
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/test)
 
@@ -63,4 +64,4 @@ This metapackage enables feature "wincon" for the Rust anstream crate, by pullin
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

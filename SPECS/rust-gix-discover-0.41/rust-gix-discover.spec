@@ -30,6 +30,7 @@ Requires:       crate(gix-path-0.10/default) >= 0.10.22
 Requires:       crate(gix-ref-0.53/default) >= 0.53.1
 Requires:       crate(gix-sec-0.12/default) >= 0.12.2
 Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

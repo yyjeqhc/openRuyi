@@ -28,6 +28,7 @@ Requires:       crate(pkg-config-0.3/default) >= 0.3.32
 Requires:       crate(vcpkg-0.2/default) >= 0.2.15
 Requires:       crate(windows-sys-0.59/default) >= 0.59.0
 Requires:       crate(windows-sys-0.59/win32-networking-winsock) >= 0.59.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/force-system-lib-on-osx)
 Provides:       crate(%{pkgname}/mesalink)

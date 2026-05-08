@@ -24,6 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(futures-core-0.3) >= 0.3.32
 Requires:       crate(futures-task-0.3) >= 0.3.32
 Requires:       crate(pin-project-lite-0.2/default) >= 0.2.17
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/async-await)
 Provides:       crate(%{pkgname}/bilock)

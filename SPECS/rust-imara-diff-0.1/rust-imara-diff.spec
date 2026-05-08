@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(hashbrown-0.15/default-hasher) >= 0.15.5
 Requires:       crate(hashbrown-0.15/inline-more) >= 0.15.5
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/unified-diff)

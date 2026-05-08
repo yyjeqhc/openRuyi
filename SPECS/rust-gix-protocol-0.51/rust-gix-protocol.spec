@@ -35,6 +35,7 @@ Requires:       crate(maybe-async-0.2/default) >= 0.2.10
 Requires:       crate(thiserror-2.0/default) >= 2.0.18
 Requires:       crate(winnow-0.7/default) >= 0.7.15
 Requires:       crate(winnow-0.7/simd) >= 0.7.15
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(filetime-0.2/default) >= 0.2.27
 Requires:       crate(libc-0.2/default) >= 0.2.184
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

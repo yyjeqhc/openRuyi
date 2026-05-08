@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(objc2-0.6/std) >= 0.6.4
 Requires:       crate(objc2-foundation-0.3/alloc) >= 0.3.2
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/ckdefines)
 Provides:       crate(%{pkgname}/alloc)

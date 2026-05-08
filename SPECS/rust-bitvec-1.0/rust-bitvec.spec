@@ -25,6 +25,7 @@ Requires:       crate(funty-2.0) >= 2.0.0
 Requires:       crate(radium-0.7/default) >= 0.7.0
 Requires:       crate(tap-1.0/default) >= 1.0.1
 Requires:       crate(wyz-0.5) >= 0.5.1
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/atomic)

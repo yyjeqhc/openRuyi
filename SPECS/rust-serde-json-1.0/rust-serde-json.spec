@@ -25,6 +25,7 @@ Requires:       crate(memchr-2.0) >= 2.8.0
 Requires:       crate(serde-1.0) >= 1.0.228
 Requires:       crate(serde-core-1.0) >= 1.0.228
 Requires:       crate(zmij-1.0/default) >= 1.0.21
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/arbitrary-precision)
 Provides:       crate(%{pkgname}/float-roundtrip)
@@ -79,4 +80,4 @@ Additionally, this package also provides the "default" feature.
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

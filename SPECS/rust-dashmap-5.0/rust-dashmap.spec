@@ -25,6 +25,7 @@ Requires:       crate(hashbrown-0.14) >= 0.14.5
 Requires:       crate(lock-api-0.4/default) >= 0.4.14
 Requires:       crate(once-cell-1.0/default) >= 1.21.4
 Requires:       crate(parking-lot-core-0.9/default) >= 0.9.12
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/raw-api)
@@ -73,4 +74,4 @@ This metapackage enables feature "serde" for the Rust dashmap crate, by pulling 
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

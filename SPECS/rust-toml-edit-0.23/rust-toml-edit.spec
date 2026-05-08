@@ -24,6 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(indexmap-2.0/default) >= 2.13.0
 Requires:       crate(indexmap-2.0/std) >= 2.13.0
 Requires:       crate(toml-datetime-0.7/default) >= 0.7.5
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/unbounded)
 

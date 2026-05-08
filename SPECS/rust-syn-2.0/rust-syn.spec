@@ -22,6 +22,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(proc-macro2-1.0) >= 1.0.106
 Requires:       crate(unicode-ident-1.0/default) >= 1.0.24
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/clone-impls)
 Provides:       crate(%{pkgname}/derive)
@@ -72,4 +73,4 @@ This metapackage enables feature "proc-macro" for the Rust syn crate, by pulling
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

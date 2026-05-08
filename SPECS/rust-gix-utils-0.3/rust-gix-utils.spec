@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(fastrand-2.0/default) >= 2.3.0
 Requires:       crate(unicode-normalization-0.1) >= 0.1.25
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

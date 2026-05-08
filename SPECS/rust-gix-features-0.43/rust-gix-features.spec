@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(gix-trace-0.1/default) >= 0.1.18
 Requires:       crate(libc-0.2/default) >= 0.2.184
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/cache-efficiency-debug)
 Provides:       crate(%{pkgname}/default)

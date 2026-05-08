@@ -24,6 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(libc-0.2/default) >= 0.2.62
 Requires:       crate(pyo3-build-config-0.23/default) >= 0.23.5
 Requires:       crate(pyo3-build-config-0.23/resolve-config) >= 0.23.5
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

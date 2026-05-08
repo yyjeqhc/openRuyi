@@ -29,6 +29,7 @@ Requires:       crate(windows-sys-0.61/win32-security-cryptography) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-system-libraryloader) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-system-memory) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-system-systeminformation) >= 0.61.2
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

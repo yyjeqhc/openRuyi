@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(elliptic-curve-0.13/arithmetic) >= 0.13.8
 Requires:       crate(elliptic-curve-0.13/sec1) >= 0.13.8
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/dev)

@@ -28,6 +28,7 @@ Requires:       crate(serde-1.0/derive) >= 1.0.228
 Requires:       crate(serde-json-1.0/default) >= 1.0.149
 Requires:       crate(thiserror-2.0/default) >= 2.0.18
 Requires:       crate(url-2.0/default) >= 2.5.8
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

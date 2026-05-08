@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(cargo-credential-0.4/default) >= 0.4.9
 Requires:       crate(security-framework-3.0/default) >= 3.7.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

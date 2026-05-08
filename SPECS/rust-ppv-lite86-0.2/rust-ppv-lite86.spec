@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(zerocopy-0.8/default) >= 0.8.48
 Requires:       crate(zerocopy-0.8/simd) >= 0.8.48
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/no-simd)

@@ -25,6 +25,7 @@ Requires:       crate(libc-0.2/default) >= 0.2.183
 Requires:       crate(redox-syscall-0.5/default) >= 0.5.18
 Requires:       crate(smallvec-1.0/default) >= 1.15.1
 Requires:       crate(windows-link-0.2/default) >= 0.2.1
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/nightly)
@@ -64,4 +65,4 @@ This metapackage enables feature "petgraph" for the Rust parking_lot_core crate,
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

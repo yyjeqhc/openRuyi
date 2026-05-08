@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(lexical-parse-integer-1.0) >= 1.0.6
 Requires:       crate(lexical-util-1.0/parse-floats) >= 1.0.7
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

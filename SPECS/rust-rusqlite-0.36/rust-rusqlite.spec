@@ -27,6 +27,7 @@ Requires:       crate(fallible-streaming-iterator-0.1/default) >= 0.1.9
 Requires:       crate(hashlink-0.10/default) >= 0.10.0
 Requires:       crate(libsqlite3-sys-0.34/default) >= 0.34.0
 Requires:       crate(smallvec-1.0/default) >= 1.15.1
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/backup)
 Provides:       crate(%{pkgname}/blob)

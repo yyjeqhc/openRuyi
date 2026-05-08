@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(rustls-0.23/std) >= 0.23.37
 Requires:       crate(tokio-1.0/default) >= 1.50.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/early-data)
 

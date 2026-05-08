@@ -25,6 +25,7 @@ Requires:       crate(idna-adapter-1.0/default) >= 1.2.1
 Requires:       crate(smallvec-1.0/const-generics) >= 1.15.1
 Requires:       crate(smallvec-1.0/default) >= 1.15.1
 Requires:       crate(utf8-iter-1.0/default) >= 1.0.4
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/std)

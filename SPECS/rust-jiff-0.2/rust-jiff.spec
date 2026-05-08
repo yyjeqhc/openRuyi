@@ -24,6 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(jiff-static-0.2/default) >= 0.2.23
 Requires:       crate(portable-atomic-1.0) >= 1.13.1
 Requires:       crate(portable-atomic-util-0.2) >= 0.2.6
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/perf-inline)
 

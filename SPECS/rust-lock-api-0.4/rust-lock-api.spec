@@ -21,6 +21,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(scopeguard-1.0) >= 1.2.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/arc-lock)
 Provides:       crate(%{pkgname}/atomic-usize)
@@ -55,4 +56,4 @@ This metapackage enables feature "serde" for the Rust lock_api crate, by pulling
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

@@ -25,6 +25,7 @@ Requires:       crate(bstr-1.0) >= 1.12.1
 Requires:       crate(gix-hash-0.19/default) >= 0.19.0
 Requires:       crate(gix-object-0.50/default) >= 0.50.2
 Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

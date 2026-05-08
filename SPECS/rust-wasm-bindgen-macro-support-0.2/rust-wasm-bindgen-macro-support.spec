@@ -33,6 +33,7 @@ Requires:       crate(syn-2.0/full) >= 2.0.117
 Requires:       crate(syn-2.0/visit) >= 2.0.117
 Requires:       crate(syn-2.0/visit-mut) >= 2.0.117
 Requires:       crate(wasm-bindgen-shared-0.2/default) >= 0.2.118
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/strict-macro)

@@ -24,6 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(anyhow-1.0/default) >= 1.0.102
 Requires:       crate(cargo-credential-0.4/default) >= 0.4.9
 Requires:       crate(libloading-0.8/default) >= 0.8.9
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

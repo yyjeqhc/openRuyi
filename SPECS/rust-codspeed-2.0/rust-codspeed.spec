@@ -28,6 +28,7 @@ Requires:       crate(serde-1.0/derive) >= 1.0.228
 Requires:       crate(serde-json-1.0/default) >= 1.0.149
 Requires:       crate(uuid-1.0/default) >= 1.23.1
 Requires:       crate(uuid-1.0/v4) >= 1.23.1
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

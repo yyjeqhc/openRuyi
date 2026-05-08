@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(core-foundation-sys-0.8/default) >= 0.8.7
 Requires:       crate(libc-0.2/default) >= 0.2.184
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

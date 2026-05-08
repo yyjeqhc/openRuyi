@@ -30,6 +30,7 @@ Requires:       crate(syn-2.0/parsing) >= 2.0.117
 Requires:       crate(syn-2.0/printing) >= 2.0.117
 Requires:       crate(syn-2.0/proc-macro) >= 2.0.117
 Requires:       crate(syn-2.0/visit-mut) >= 2.0.117
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/async-await)
 Provides:       crate(%{pkgname}/default)

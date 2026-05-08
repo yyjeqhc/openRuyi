@@ -25,6 +25,7 @@ Requires:       crate(form-urlencoded-1.0/default) >= 1.2.2
 Requires:       crate(itoa-1.0/default) >= 1.0.18
 Requires:       crate(ryu-1.0/default) >= 1.0.23
 Requires:       crate(serde-1.0/default) >= 1.0.228
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(js-sys-0.3/futures) >= 0.3.94
 Requires:       crate(wasm-bindgen-0.2) >= 0.2.117
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

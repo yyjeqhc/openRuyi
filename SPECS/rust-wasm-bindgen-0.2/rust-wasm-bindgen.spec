@@ -29,6 +29,7 @@ Requires:       crate(once-cell-1.0) >= 1.21.4
 Requires:       crate(rustversion-1.0/default) >= 1.0.22
 Requires:       crate(wasm-bindgen-macro-0.2/default) >= 0.2.118
 Requires:       crate(wasm-bindgen-shared-0.2/default) >= 0.2.118
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/enable-interning)

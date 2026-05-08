@@ -22,6 +22,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(serde-spanned-1.0/alloc) >= 1.0.4
 Requires:       crate(toml-datetime-0.7/alloc) >= 0.7.5
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/unbounded)
 
@@ -137,4 +138,4 @@ This metapackage enables feature "std" for the Rust toml crate, by pulling in an
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

@@ -25,6 +25,7 @@ Requires:       crate(curl-0.4/default) >= 0.4.49
 Requires:       crate(git2-0.20) >= 0.20.4
 Requires:       crate(log-0.4/default) >= 0.4.29
 Requires:       crate(url-2.0/default) >= 2.5.8
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

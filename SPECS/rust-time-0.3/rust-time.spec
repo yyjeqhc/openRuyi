@@ -26,6 +26,7 @@ Requires:       crate(deranged-0.5/powerfmt) >= 0.5.8
 Requires:       crate(num-conv-0.2/default) >= 0.2.1
 Requires:       crate(powerfmt-0.2) >= 0.2.0
 Requires:       crate(time-core-0.1/default) >= 0.1.8
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

@@ -27,6 +27,7 @@ Requires:       crate(quote-1.0/default) >= 1.0.0
 Requires:       crate(syn-2.0/default) >= 2.0.0
 Requires:       crate(syn-2.0/extra-traits) >= 2.0.0
 Requires:       crate(syn-2.0/full) >= 2.0.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/multiple-pymethods)

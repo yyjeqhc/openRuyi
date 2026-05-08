@@ -23,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(miniz-oxide-0.8/simd) >= 0.8.9
 Requires:       crate(miniz-oxide-0.8/with-alloc) >= 0.8.9
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/any-c-zlib)
 Provides:       crate(%{pkgname}/any-impl)

@@ -30,6 +30,7 @@ Requires:       crate(rustls-pki-types-1.0/default) >= 1.14.0
 Requires:       crate(tokio-1.0/default) >= 1.50.0
 Requires:       crate(tokio-rustls-0.26) >= 0.26.4
 Requires:       crate(tower-service-0.3/default) >= 0.3.3
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

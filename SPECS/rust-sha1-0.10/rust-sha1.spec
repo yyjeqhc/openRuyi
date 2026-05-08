@@ -24,6 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(cfg-if-1.0/default) >= 1.0.4
 Requires:       crate(cpufeatures-0.2/default) >= 0.2.17
 Requires:       crate(digest-0.10/default) >= 0.10.7
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/compress)
 Provides:       crate(%{pkgname}/force-soft)

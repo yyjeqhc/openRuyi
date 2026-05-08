@@ -20,6 +20,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/align)
 Provides:       crate(%{pkgname}/const-extern-fn)
@@ -54,4 +55,4 @@ This metapackage enables feature "rustc-std-workspace-core" for the Rust libc cr
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

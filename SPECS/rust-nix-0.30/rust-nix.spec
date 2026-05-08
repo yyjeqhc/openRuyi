@@ -26,6 +26,7 @@ Requires:       crate(cfg-aliases-0.2/default) >= 0.2.1
 Requires:       crate(cfg-if-1.0/default) >= 1.0.4
 Requires:       crate(libc-0.2/default) >= 0.2.184
 Requires:       crate(libc-0.2/extra-traits) >= 0.2.184
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/acct)
 Provides:       crate(%{pkgname}/default)
