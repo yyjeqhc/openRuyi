@@ -1,12 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: Xuhai Chang <xuhai.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
-%global debug_package %{nil}
-%global __debug_install_post %{nil}
-
 %global crate_name windows_x86_64_gnullvm
 %global full_version 0.52.6
 %global pkgname windows-x86-64-gnullvm-0.52
@@ -24,6 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 
@@ -34,4 +26,4 @@ Source code for takopackized Rust crate "windows_x86_64_gnullvm"
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%autochangelog
+%{?autochangelog}

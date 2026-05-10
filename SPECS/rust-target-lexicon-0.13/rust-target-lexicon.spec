@@ -1,28 +1,22 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: Xuhai Chang <xuhai.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name target-lexicon
-%global full_version 0.13.5
+%global full_version 0.13.2
 %global pkgname target-lexicon-0.13
 
 Name:           rust-target-lexicon-0.13
-Version:        0.13.5
+Version:        0.13.2
 Release:        %autorelease
 Summary:        Rust crate "target-lexicon"
 License:        Apache-2.0 WITH LLVM-exception
 URL:            https://github.com/bytecodealliance/target-lexicon
-#!RemoteAsset:  sha256:adb6935a6f5c20170eeceb1a3835a49e12e19d792f6dd344ccc76a985ca5a6ca
+#!RemoteAsset:  sha256:e502f78cdbb8ba4718f566c418c52bc729126ffd16baee5baa718cf25dd5a69a
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/arch-z80)
 Provides:       crate(%{pkgname}/arch-zkasm)
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
@@ -53,4 +47,4 @@ This metapackage enables feature "serde_support" for the Rust target-lexicon cra
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%autochangelog
+%{?autochangelog}

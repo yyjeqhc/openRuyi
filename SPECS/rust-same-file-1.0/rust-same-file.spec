@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: Xuhai Chang <xuhai.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name same-file
 %global full_version 1.0.6
 %global pkgname same-file-1.0
@@ -21,7 +15,8 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(winapi-util-0.1/default) >= 0.1.11
+Requires:       crate(winapi-util-0.1/default) >= 0.1.9
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 
@@ -32,4 +27,4 @@ Source code for takopackized Rust crate "same-file"
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%autochangelog
+%{?autochangelog}

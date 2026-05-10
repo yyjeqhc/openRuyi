@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: Li Guan <guanli.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name memoffset
 %global full_version 0.9.1
 %global pkgname memoffset-0.9
@@ -21,7 +15,8 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(autocfg-1.0/default) >= 1.0.0
+Requires:       crate(autocfg-1.0/default) >= 1.3.0
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/unstable-const)
@@ -34,4 +29,4 @@ Source code for takopackized Rust crate "memoffset"
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%autochangelog
+%{?autochangelog}
