@@ -26,6 +26,8 @@ BuildRequires:  perl(LWP::UserAgent)
 BuildRequires:  perl(XML::Parser) >= 2.30
 BuildRequires:  perl(XML::Parser::PerlSAX) >= 0.07
 BuildRequires:  perl(XML::RegExp)
+BuildRequires:  perl(Try::Tiny)
+BuildRequires:  perl(Number::Compare)
 
 Requires:       perl(XML::Parser) >= 2.30
 Requires:       perl(XML::Parser::PerlSAX) >= 0.07
