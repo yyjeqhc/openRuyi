@@ -47,6 +47,9 @@ available. (It is possible to achieve the effect of cv_set_call_checker
 from XS code on much earlier Perl versions, but it is painful to achieve
 without the centralised facility.)
 
+%check
+# skip tests as there are no tests
+
 %files -f %{name}.files
 %doc Changes README
 
