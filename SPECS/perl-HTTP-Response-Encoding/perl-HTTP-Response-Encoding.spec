@@ -25,6 +25,9 @@ BuildRequires:  perl(Encode) >= 2
 BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(HTTP::Response)
 BuildRequires:  perl(Test::More)
+BuildRequires:  perl(LWP::UserAgent)
+BuildRequires:  perl(Try::Tiny)
+BuildRequires:  perl(IO::HTML)
 
 Requires:       perl(Encode) >= 2
 
