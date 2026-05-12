@@ -1,21 +1,16 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name once_cell
-%global full_version 1.21.4
+%global full_version 1.21.3
 %global pkgname once-cell-1.0
 
 Name:           rust-once-cell-1.0
-Version:        1.21.4
+Version:        1.21.3
 Release:        %autorelease
 Summary:        Rust crate "once_cell"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/matklad/once_cell
-#!RemoteAsset:  sha256:9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50
+#!RemoteAsset:  sha256:42f5e15c9953c5e4ccceeb2e7382a716482c34515315f7b03532b8b4e8393d2d
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
@@ -65,4 +60,4 @@ This metapackage enables feature "portable-atomic" for the Rust once_cell crate,
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

@@ -1,21 +1,16 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name libc
-%global full_version 0.2.183
+%global full_version 0.2.169
 %global pkgname libc-0.2
 
 Name:           rust-libc-0.2
-Version:        0.2.183
+Version:        0.2.169
 Release:        %autorelease
 Summary:        Rust crate "libc"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-lang/libc
-#!RemoteAsset:  sha256:b5b646652bf6661599e1da8901b3b9522896f01e736bad5f723fe7a3a27f899d
+#!RemoteAsset:  sha256:b5aba8db14291edd000dfcc4d620c7ebfb122c613afb886ca8803fa4e128a20a
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
@@ -44,7 +39,7 @@ This metapackage enables feature "rustc-dep-of-std" for the Rust libc crate, by 
 %package     -n %{name}+rustc-std-workspace-core
 Summary:        Raw FFI bindings to platform libraries like libc - feature "rustc-std-workspace-core"
 Requires:       crate(%{pkgname})
-Requires:       crate(rustc-std-workspace-core-1.0/default) >= 1.0.1
+Requires:       crate(rustc-std-workspace-core-1.0/default) >= 1.0.0
 Provides:       crate(%{pkgname}/rustc-std-workspace-core)
 
 %description -n %{name}+rustc-std-workspace-core
@@ -54,4 +49,4 @@ This metapackage enables feature "rustc-std-workspace-core" for the Rust libc cr
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

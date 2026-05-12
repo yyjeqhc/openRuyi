@@ -1,30 +1,24 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name redox_syscall
-%global full_version 0.5.18
+%global full_version 0.5.3
 %global pkgname redox-syscall-0.5
 
 Name:           rust-redox-syscall-0.5
-Version:        0.5.18
+Version:        0.5.3
 Release:        %autorelease
 Summary:        Rust crate "redox_syscall"
 License:        MIT
 URL:            https://gitlab.redox-os.org/redox-os/syscall
-#!RemoteAsset:  sha256:ed2bf2547551a7053d6fdfafda3f938979645c44812fbfcda098faae3f1a362d
+#!RemoteAsset:  sha256:2a908a6e00f1fdd0dfd9c0eb08ce85126f6d8bbda50017e74bc4a4b7d4a926a4
 Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitflags-2.0/default) >= 2.11.0
+Requires:       crate(bitflags-2.0/default) >= 2.7.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
-Provides:       crate(%{pkgname}/userspace)
 
 %description
 Source code for takopackized Rust crate "redox_syscall"
@@ -42,7 +36,7 @@ This metapackage enables feature "core" for the Rust redox_syscall crate, by pul
 Summary:        Access raw Redox system calls - feature "rustc-dep-of-std"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/core)
-Requires:       crate(bitflags-2.0/rustc-dep-of-std) >= 2.11.0
+Requires:       crate(bitflags-2.0/rustc-dep-of-std) >= 2.7.0
 Provides:       crate(%{pkgname}/rustc-dep-of-std)
 
 %description -n %{name}+rustc-dep-of-std
@@ -52,4 +46,4 @@ This metapackage enables feature "rustc-dep-of-std" for the Rust redox_syscall c
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
-%{?autochangelog}
+%autochangelog

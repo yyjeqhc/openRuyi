@@ -1,12 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: Xuhai Chang <xuhai.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
-%global debug_package %{nil}
-%global __debug_install_post %{nil}
-
 %global crate_name windows-sys
 %global full_version 0.59.0
 %global pkgname windows-sys-0.59

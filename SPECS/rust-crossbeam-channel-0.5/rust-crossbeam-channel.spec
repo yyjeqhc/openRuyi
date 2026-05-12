@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: purofle <yuguo.or@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name crossbeam-channel
 %global full_version 0.5.15
 %global pkgname crossbeam-channel-0.5
@@ -21,7 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(crossbeam-utils-0.8) >= 0.8.21
+Requires:       crate(crossbeam-utils-0.8) >= 0.8.19
 Provides:       crate(%{pkgname})
 
 %description
@@ -30,7 +24,7 @@ Source code for takopackized Rust crate "crossbeam-channel"
 %package     -n %{name}+std
 Summary:        Multi-producer multi-consumer channels for message passing - feature "std" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(crossbeam-utils-0.8/std) >= 0.8.21
+Requires:       crate(crossbeam-utils-0.8/std) >= 0.8.19
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
 
