@@ -71,6 +71,9 @@ gdk-pixbuf-query-loaders --update-cache
 %transfiletriggerpostun -- %{_libdir}/gdk-pixbuf-2.0/2.10.0/loaders
 gdk-pixbuf-query-loaders --update-cache
 
+%check
+echo "hello"
+
 %files -f %{name}.lang
 %license COPYING
 %doc NEWS README.md
