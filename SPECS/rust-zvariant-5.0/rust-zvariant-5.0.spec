@@ -1,0 +1,141 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
+%global crate_name zvariant
+%global full_version 5.12.0
+%global pkgname zvariant-5.0
+
+Name:           rust-zvariant-5.0
+Version:        5.12.0
+Release:        %autorelease
+Summary:        Rust crate "zvariant"
+License:        MIT
+URL:            https://github.com/z-galaxy/zbus/
+#!RemoteAsset:  sha256:a192a0bde63360d77a7523c833d4b4ce6070a927e2c53246e4c540b1a3e27be0
+Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
+BuildSystem:    rustcrates
+
+BuildRequires:  rust-rpm-macros
+
+Requires:       crate(endi-1.0/default) >= 1.1.1
+Requires:       crate(serde-1.0/default) >= 1.0.228
+Requires:       crate(serde-1.0/derive) >= 1.0.228
+Requires:       crate(winnow-1.0/default) >= 1.0.3
+Requires:       crate(zvariant-derive-5.0/default) >= 5.12.0
+Requires:       crate(zvariant-utils-3.0/default) >= 3.4.0
+Provides:       crate(%{pkgname})
+Provides:       crate(%{pkgname}/default)
+Provides:       crate(%{pkgname}/option-as-array)
+
+%description
+Source code for takopackized Rust crate "zvariant"
+
+%package     -n %{name}+arrayvec
+Summary:        D-Bus & GVariant encoding & decoding - feature "arrayvec"
+Requires:       crate(%{pkgname})
+Requires:       crate(arrayvec-0.7/default) >= 0.7.4
+Requires:       crate(arrayvec-0.7/serde) >= 0.7.4
+Provides:       crate(%{pkgname}/arrayvec)
+
+%description -n %{name}+arrayvec
+This metapackage enables feature "arrayvec" for the Rust zvariant crate, by pulling in any additional dependencies needed by that feature.
+
+%package     -n %{name}+camino
+Summary:        D-Bus & GVariant encoding & decoding - feature "camino"
+Requires:       crate(%{pkgname})
+Requires:       crate(camino-1.0/default) >= 1.1.9
+Provides:       crate(%{pkgname}/camino)
+
+%description -n %{name}+camino
+This metapackage enables feature "camino" for the Rust zvariant crate, by pulling in any additional dependencies needed by that feature.
+
+%package     -n %{name}+chrono
+Summary:        D-Bus & GVariant encoding & decoding - feature "chrono"
+Requires:       crate(%{pkgname})
+Requires:       crate(chrono-0.4/serde) >= 0.4.38
+Provides:       crate(%{pkgname}/chrono)
+
+%description -n %{name}+chrono
+This metapackage enables feature "chrono" for the Rust zvariant crate, by pulling in any additional dependencies needed by that feature.
+
+%package     -n %{name}+enumflags2
+Summary:        D-Bus & GVariant encoding & decoding - feature "enumflags2"
+Requires:       crate(%{pkgname})
+Requires:       crate(enumflags2-0.7/default) >= 0.7.12
+Requires:       crate(enumflags2-0.7/serde) >= 0.7.12
+Provides:       crate(%{pkgname}/enumflags2)
+
+%description -n %{name}+enumflags2
+This metapackage enables feature "enumflags2" for the Rust zvariant crate, by pulling in any additional dependencies needed by that feature.
+
+%package     -n %{name}+gvariant
+Summary:        D-Bus & GVariant encoding & decoding - feature "gvariant" and 1 more
+Requires:       crate(%{pkgname})
+Requires:       crate(zvariant-derive-5.0/gvariant) >= 5.12.0
+Requires:       crate(zvariant-utils-3.0/gvariant) >= 3.4.0
+Provides:       crate(%{pkgname}/gvariant)
+Provides:       crate(%{pkgname}/ostree-tests)
+
+%description -n %{name}+gvariant
+This metapackage enables feature "gvariant" for the Rust zvariant crate, by pulling in any additional dependencies needed by that feature.
+
+Additionally, this package also provides the "ostree-tests" feature.
+
+%package     -n %{name}+heapless
+Summary:        D-Bus & GVariant encoding & decoding - feature "heapless"
+Requires:       crate(%{pkgname})
+Requires:       crate(heapless-0.9/default) >= 0.9.0
+Requires:       crate(heapless-0.9/serde) >= 0.9.0
+Provides:       crate(%{pkgname}/heapless)
+
+%description -n %{name}+heapless
+This metapackage enables feature "heapless" for the Rust zvariant crate, by pulling in any additional dependencies needed by that feature.
+
+%package     -n %{name}+serde-bytes
+Summary:        D-Bus & GVariant encoding & decoding - feature "serde_bytes"
+Requires:       crate(%{pkgname})
+Requires:       crate(serde-bytes-0.11/default) >= 0.11.14
+Provides:       crate(%{pkgname}/serde-bytes)
+
+%description -n %{name}+serde-bytes
+This metapackage enables feature "serde_bytes" for the Rust zvariant crate, by pulling in any additional dependencies needed by that feature.
+
+%package     -n %{name}+time
+Summary:        D-Bus & GVariant encoding & decoding - feature "time"
+Requires:       crate(%{pkgname})
+Requires:       crate(time-0.3/default) >= 0.3.36
+Requires:       crate(time-0.3/serde) >= 0.3.36
+Provides:       crate(%{pkgname}/time)
+
+%description -n %{name}+time
+This metapackage enables feature "time" for the Rust zvariant crate, by pulling in any additional dependencies needed by that feature.
+
+%package     -n %{name}+url
+Summary:        D-Bus & GVariant encoding & decoding - feature "url"
+Requires:       crate(%{pkgname})
+Requires:       crate(url-2.0/default) >= 2.5.0
+Requires:       crate(url-2.0/serde) >= 2.5.0
+Provides:       crate(%{pkgname}/url)
+
+%description -n %{name}+url
+This metapackage enables feature "url" for the Rust zvariant crate, by pulling in any additional dependencies needed by that feature.
+
+%package     -n %{name}+uuid
+Summary:        D-Bus & GVariant encoding & decoding - feature "uuid"
+Requires:       crate(%{pkgname})
+Requires:       crate(uuid-1.0/default) >= 1.8.0
+Requires:       crate(uuid-1.0/serde) >= 1.8.0
+Provides:       crate(%{pkgname}/uuid)
+
+%description -n %{name}+uuid
+This metapackage enables feature "uuid" for the Rust zvariant crate, by pulling in any additional dependencies needed by that feature.
+
+%files
+%{_datadir}/cargo/registry/%{crate_name}-%{version}/
+
+%changelog
+%autochangelog
