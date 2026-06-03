@@ -29,6 +29,8 @@ BuildRequires:  perl(IO::Handle)
 BuildRequires:  perl(IPC::Open3)
 BuildRequires:  perl(List::MoreUtils)
 BuildRequires:  perl(Module::Build)
+BuildRequires:  perl(Import::Into)
+BuildRequires:  perl(Data::OptList)
 BuildRequires:  perl(MooX)
 BuildRequires:  perl(MooX::late) >= 0.010
 BuildRequires:  perl(Test::Differences)
