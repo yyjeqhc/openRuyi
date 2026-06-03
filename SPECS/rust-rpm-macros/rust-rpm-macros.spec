@@ -10,8 +10,8 @@ Release:        %autorelease
 Summary:        Rust macros for openRuyi packaging
 License:        MIT
 URL:            https://github.com/openRuyi-Project/rust-rpm-macros
-#!RemoteAsset:  sha256:3a57fc92361d19303bdaa7de3bf5c81c55d10cf0fd61100e35c5c61528d8be26
-Source0:        https://github.com/openRuyi-Project/rust-rpm-macros/archive/refs/tags/v%{version}.tar.gz
+#!RemoteAsset:  sha256:aff6dfa5954b55d80f2a7874d20692b7cd4b6486ab8e943106261241db8b2e03
+Source0:        https://github.com/yyjeqhc/rust-rpm-macros/archive/refs/heads/add-crates-source-url-macro.tar.gz#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    autotools
 

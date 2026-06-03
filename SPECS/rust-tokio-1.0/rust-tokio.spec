@@ -4,6 +4,8 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
+%global crate tokio
+%global crate_version 1.50.0
 %global crate_name tokio
 %global full_version 1.50.0
 %global pkgname tokio-1.0
@@ -15,7 +17,7 @@ Summary:        Rust crate "tokio"
 License:        MIT
 URL:            https://tokio.rs
 #!RemoteAsset:  sha256:27ad5e34374e03cfffefc301becb44e9dc3c17584f414349ebe29ed26661822d
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         %{crates_source}
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
