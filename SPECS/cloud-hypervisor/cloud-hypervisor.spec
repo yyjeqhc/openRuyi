@@ -23,9 +23,6 @@ Source0:        %{name}-%{version}.tar.gz
 #!CreateArchive
 Source1:        micro-http-%{micro_http_commit}.tar.gz
 
-# Updated Cargo.lock with latest dependency versions
-Patch1000:      cargo-lock-update.patch
-
 BuildSystem:    rust
 
 BuildRequires:  rust-rpm-macros
@@ -60,15 +57,12 @@ provider. For our purposes this means modern Linux* distributions with most I/O
 handled by paravirtualised devices (i.e. virtio), no requirement for legacy
 devices and recent CPUs and KVM.
 
-%generate_buildrequires
-%cargo_buildrequires
-
 %prep -a
 # Set up micro-http as a local crate dependency
 mkdir -p vendor/micro-http
 tar xf %{SOURCE1} -C vendor/micro-http --strip-components=1
 
-# Create .cargo/config.toml for offline build
+# Create .cargo/config.toml for offline build with git dependency override
 mkdir -p .cargo
 cat > .cargo/config.toml << 'EOF'
 [source.crates-io]
@@ -85,9 +79,9 @@ EOF
 
 %build
 export OPENSSL_NO_VENDOR=1
-cargo build --release --target=%{rust_def_target} %{cargo_pkg_feature_opts} --offline
-cargo build --release --target=%{rust_def_target} --package vhost_user_net --offline
-cargo build --release --target=%{rust_def_target} --package vhost_user_block --offline
+cargo build --release --locked --offline --target=%{rust_def_target} %{cargo_pkg_feature_opts}
+cargo build --release --locked --offline --target=%{rust_def_target} --package vhost_user_net
+cargo build --release --locked --offline --target=%{rust_def_target} --package vhost_user_block
 
 %install
 install -d %{buildroot}%{_bindir}
