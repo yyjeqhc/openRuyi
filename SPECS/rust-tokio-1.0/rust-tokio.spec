@@ -17,7 +17,7 @@ Summary:        Rust crate "tokio"
 License:        MIT
 URL:            https://tokio.rs
 #!RemoteAsset:  sha256:27ad5e34374e03cfffefc301becb44e9dc3c17584f414349ebe29ed26661822d
-Source:         %{crates_source}
+Source0:        %{crates_source}/%{crate_name}/%{crate_version}/download#/rust-%{pkgname}-%{crate_version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
