@@ -62,6 +62,9 @@ devices and recent CPUs and KVM.
 mkdir -p vendor/micro-http
 tar xf %{SOURCE1} -C vendor/micro-http --strip-components=1
 
+# Create .cargo-checksum.json for git dependency (required by cargo offline build)
+echo '{"files":{},"package":null}' > vendor/micro-http/.cargo-checksum.json
+
 # Create .cargo/config.toml for offline build with git dependency override
 mkdir -p .cargo
 cat > .cargo/config.toml << 'EOF'
