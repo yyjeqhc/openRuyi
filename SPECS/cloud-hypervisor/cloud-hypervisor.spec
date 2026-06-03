@@ -18,10 +18,8 @@ License:        Apache-2.0 OR BSD-3-Clause
 #!CreateArchive
 Source0:        %{name}-%{version}.tar.gz
 
-%global micro_http_commit 876f3feccc30e09225f2c77bf95a6b2d46a9259e
-#!RemoteAsset:  git+https://github.com/firecracker-microvm/micro-http.git#%{micro_http_commit}
-#!CreateArchive
-Source1:        micro-http-%{micro_http_commit}.tar.gz
+#!RemoteAsset:  sha256:f30387fdb4521277ec24071ee115d53f8988b85ec55131acc70f34ceb0695b48
+Source1:        %{name}-%{version}-vendored-dependencies.tar.xz
 
 BuildSystem:    rust
 
@@ -58,14 +56,10 @@ handled by paravirtualised devices (i.e. virtio), no requirement for legacy
 devices and recent CPUs and KVM.
 
 %prep -a
-# Set up micro-http as a local crate dependency
-mkdir -p vendor/micro-http
-tar xf %{SOURCE1} -C vendor/micro-http --strip-components=1
+# Extract vendored dependencies (includes micro_http git dep + 266 crates.io deps)
+tar xf %{SOURCE1}
 
-# Create .cargo-checksum.json for git dependency (required by cargo offline build)
-echo '{"files":{},"package":null}' > vendor/micro-http/.cargo-checksum.json
-
-# Create .cargo/config.toml for offline build with git dependency override
+# Create .cargo/config.toml pointing to vendored sources
 mkdir -p .cargo
 cat > .cargo/config.toml << 'EOF'
 [source.crates-io]
@@ -77,7 +71,7 @@ branch = "main"
 replace-with = "vendored-sources"
 
 [source.vendored-sources]
-directory = "vendor"
+directory = "."
 EOF
 
 %build
