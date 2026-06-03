@@ -18,8 +18,10 @@ License:        Apache-2.0 OR BSD-3-Clause
 #!CreateArchive
 Source0:        %{name}-%{version}.tar.gz
 
-#!RemoteAsset:  sha256:f30387fdb4521277ec24071ee115d53f8988b85ec55131acc70f34ceb0695b48
-Source1:        %{name}-%{version}-vendored-dependencies.tar.xz
+%global micro_http_commit 876f3feccc30e09225f2c77bf95a6b2d46a9259e
+#!RemoteAsset:  git+https://github.com/firecracker-microvm/micro-http.git#%{micro_http_commit}
+#!CreateArchive
+Source1:        micro-http-%{micro_http_commit}.tar.gz
 
 BuildSystem:    rust
 
@@ -56,14 +58,23 @@ handled by paravirtualised devices (i.e. virtio), no requirement for legacy
 devices and recent CPUs and KVM.
 
 %prep -a
-# Extract vendored dependencies (includes micro_http git dep + 266 crates.io deps)
-tar xf %{SOURCE1}
+# Set up micro-http as a local crate dependency (git dep, not on crates.io)
+mkdir -p vendor/micro-http
+tar xf %{SOURCE1} -C vendor/micro-http --strip-components=1
 
-# Create .cargo/config.toml pointing to vendored sources
+# Create .cargo-checksum.json for git dependency (required by cargo)
+echo '{"files":{},"package":null}' > vendor/micro-http/.cargo-checksum.json
+
+# Create .cargo/config.toml:
+# - crates-io deps use system registry (/usr/share/cargo/registry)
+# - micro-http (git dep) is vendored locally
 mkdir -p .cargo
 cat > .cargo/config.toml << 'EOF'
 [source.crates-io]
-replace-with = "vendored-sources"
+replace-with = "system-registry"
+
+[source.system-registry]
+directory = "/usr/share/cargo/registry"
 
 [source."git+https://github.com/firecracker-microvm/micro-http?branch=main"]
 git = "https://github.com/firecracker-microvm/micro-http"
@@ -71,14 +82,17 @@ branch = "main"
 replace-with = "vendored-sources"
 
 [source.vendored-sources]
-directory = "."
+directory = "vendor"
 EOF
+
+%generate_buildrequires
+%cargo_buildrequires
 
 %build
 export OPENSSL_NO_VENDOR=1
-cargo build --release --locked --offline --target=%{rust_def_target} %{cargo_pkg_feature_opts}
-cargo build --release --locked --offline --target=%{rust_def_target} --package vhost_user_net
-cargo build --release --locked --offline --target=%{rust_def_target} --package vhost_user_block
+cargo build --release --locked --target=%{rust_def_target} %{cargo_pkg_feature_opts}
+cargo build --release --locked --target=%{rust_def_target} --package vhost_user_net
+cargo build --release --locked --target=%{rust_def_target} --package vhost_user_block
 
 %install
 install -d %{buildroot}%{_bindir}
