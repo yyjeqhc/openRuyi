@@ -5,35 +5,35 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global gitver 51.0
-%global gitnum 0
-
-%global obs_packaging_commit 29a097e3e793e0f88053fa9b090a15c1333aa2cc
+%global gitver 52.0
 
 Name:           cloud-hypervisor
 Url:            https://github.com/cloud-hypervisor/cloud-hypervisor
 Summary:        Cloud Hypervisor is a Virtual Machine Monitor (VMM) that runs on top of KVM
-Version:        %{gitver}.%{gitnum}
+Version:        %{gitver}
 Release:        %autorelease
 License:        ASL 2.0 or BSD-3-clause
-#!RemoteAsset:  sha256:66e2a1b45d1463aab22d763c02bbf8fff5a4c9833c4612a0b717867cd1ebdbbc
-Source0:        https://github.com/cloud-hypervisor/obs-packaging/raw/%{obs_packaging_commit}/cloud-hypervisor/src/%{name}-%{version}.tar.gz
-#!RemoteAsset:  sha256:47e97b583ab92503cd588c38ecc92d4fd217012a97ab0748709e16b791bdee65
-Source1:        https://github.com/cloud-hypervisor/obs-packaging/raw/%{obs_packaging_commit}/cloud-hypervisor/src/%{name}-%{version}-vendor.tar.gz
-#!RemoteAsset:  sha256:9ffccf72f43efaa6e6434be68da53e7ad6ffbe332149f44a4d99405d58da1dc2
-Source2:        https://github.com/cloud-hypervisor/obs-packaging/raw/%{obs_packaging_commit}/cloud-hypervisor/src/config.toml
+
+#!RemoteAsset:  git+https://github.com/cloud-hypervisor/cloud-hypervisor.git#v%{version}
+#!CreateArchive
+Source0:        %{name}-%{version}.tar.gz
+
+%global micro_http_commit 5c2254d6cf4f32a668d0d8e57ba20bebad9d4fba
+#!RemoteAsset:  git+https://github.com/firecracker-microvm/micro-http.git#%{micro_http_commit}
+#!CreateArchive
+Source1:        micro-http-%{micro_http_commit}.tar.gz
 
 BuildRequires:  gcc
 BuildRequires:  glibc-devel
 BuildRequires:  binutils
-BuildRequires:  openssl-devel
+BuildRequires:  pkgconfig(openssl)
 
-BuildRequires:  rust >= 1.88.0
-BuildRequires:  cargo >= 1.88.0
+BuildRequires:  rust >= 1.89.0
+BuildRequires:  cargo >= 1.89.0
 
-Requires: bash
-Requires: glibc
-Requires: libcap
+Requires:       bash
+Requires:       glibc
+Requires:       libcap
 
 # TODO: Use rva23 rust toolchain to compile
 %ifarch x86_64
@@ -58,11 +58,27 @@ handled by paravirtualised devices (i.e. virtio), no requirement for legacy
 devices and recent CPUs and KVM.
 
 %prep
+%setup -q -n %{name}-%{version}
+%setup -q -T -D -a 1 -n %{name}-%{version}
 
-%setup -q
-tar xf %{SOURCE1}
+# Create .cargo/config.toml for offline build
 mkdir -p .cargo
-cp %{SOURCE2} .cargo/
+cat > .cargo/config.toml << 'EOF'
+[source.crates-io]
+replace-with = "vendored-sources"
+
+[source."git+https://github.com/firecracker-microvm/micro-http?branch=main"]
+git = "https://github.com/firecracker-microvm/micro-http"
+branch = "main"
+replace-with = "vendored-sources"
+
+[source.vendored-sources]
+directory = "vendor"
+EOF
+
+# Move micro-http to vendor directory
+mkdir -p vendor
+mv micro-http-* vendor/micro-http
 
 %build
 cargo_version=$(cargo --version)
