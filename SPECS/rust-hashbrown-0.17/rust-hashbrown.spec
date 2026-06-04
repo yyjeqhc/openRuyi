@@ -15,7 +15,7 @@ Summary:        Rust crate "hashbrown"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-lang/hashbrown
 #!RemoteAsset:  sha256:4f467dd6dccf739c208452f8014c75c18bb8301b050ad1cfb27153803edb0f51
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

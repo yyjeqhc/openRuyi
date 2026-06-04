@@ -15,7 +15,7 @@ Summary:        Rust crate "enumflags2_derive"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/meithecatte/enumflags2
 #!RemoteAsset:  sha256:67c78a4d8fdf9953a5c9d458f9efe940fd97a0cab0941c075a813ac594733827
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

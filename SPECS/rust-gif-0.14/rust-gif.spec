@@ -15,7 +15,7 @@ Summary:        Rust crate "gif"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/image-rs/image-gif
 #!RemoteAsset:  sha256:ee8cfcc411d9adbbaba82fb72661cc1bcca13e8bba98b364e62b2dba8f960159
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

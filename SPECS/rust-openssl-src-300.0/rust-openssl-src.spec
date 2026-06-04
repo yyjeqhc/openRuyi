@@ -15,7 +15,7 @@ Summary:        Rust crate "openssl-src"
 License:        MIT/Apache-2.0
 URL:            https://github.com/alexcrichton/openssl-src-rs
 #!RemoteAsset:  sha256:3f1787d533e03597a7934fd0a765f0d28e94ecc5fb7789f8053b1e699a56f709
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

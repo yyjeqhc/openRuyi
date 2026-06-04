@@ -15,7 +15,7 @@ Summary:        Rust crate "async-channel"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/smol-rs/async-channel
 #!RemoteAsset:  sha256:924ed96dd52d1b75e9c1a3e6275715fd320f5f9439fb5a4a11fa51f4221158d2
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "async-broadcast"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/smol-rs/async-broadcast
 #!RemoteAsset:  sha256:435a87a52755b8f27fcf321ac4f04b2802e337c8c4872923137471ec39c37532
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

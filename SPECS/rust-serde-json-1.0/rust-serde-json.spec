@@ -15,7 +15,7 @@ Summary:        Rust crate "serde_json"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/serde-rs/json
 #!RemoteAsset:  sha256:83fc039473c5595ace860d8c4fafa220ff474b3fc6bfdb4293327f1a37e94d86
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

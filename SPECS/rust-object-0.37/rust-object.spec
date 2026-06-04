@@ -15,7 +15,7 @@ Summary:        Rust crate "object"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/gimli-rs/object
 #!RemoteAsset:  sha256:ff76201f031d8863c38aa7f905eca4f53abbfa15f609db4277d44cd8938f33fe
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "pnet_macros_support"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/libpnet/libpnet
 #!RemoteAsset:  sha256:eed67a952585d509dd0003049b1fc56b982ac665c8299b124b90ea2bdb3134ab
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

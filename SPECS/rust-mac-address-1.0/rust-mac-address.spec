@@ -15,7 +15,7 @@ Summary:        Rust crate "mac_address"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rep-nop/mac_address
 #!RemoteAsset:  sha256:c0aeb26bf5e836cc1c341c8106051b573f1766dfa05aa87f0b98be5e51b02303
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

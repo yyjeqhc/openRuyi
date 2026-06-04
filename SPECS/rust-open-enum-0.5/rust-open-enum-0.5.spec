@@ -15,7 +15,7 @@ Summary:        Rust crate "open-enum"
 License:        Apache-2.0
 URL:            https://github.com/kupiakos/open-enum
 #!RemoteAsset:  sha256:2eb2508143a400b3361812094d987dd5adc81f0f5294a46491be648d6c94cab5
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

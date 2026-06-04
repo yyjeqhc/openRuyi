@@ -15,7 +15,7 @@ Summary:        Rust crate "lru"
 License:        MIT
 URL:            https://github.com/jeromefroe/lru-rs
 #!RemoteAsset:  sha256:7f66e8d5d03f609abc3a39e6f08e4164ebf1447a732906d39eb9b99b7919ef39
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

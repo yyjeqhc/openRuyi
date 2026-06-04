@@ -15,7 +15,7 @@ Summary:        Rust crate "nom"
 License:        MIT
 URL:            https://github.com/rust-bakery/nom
 #!RemoteAsset:  sha256:df9761775871bdef83bee530e60050f7e54b1105350d6884eb0fb4f46c2f9405
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

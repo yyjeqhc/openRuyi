@@ -15,7 +15,7 @@ Summary:        Rust crate "getrandom"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-random/getrandom
 #!RemoteAsset:  sha256:ff2abc00be7fca6ebc474524697ae276ad847ad0a6b3faa4bcb027e9a4614ad0
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

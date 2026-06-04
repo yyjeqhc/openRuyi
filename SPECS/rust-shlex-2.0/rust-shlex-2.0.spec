@@ -15,7 +15,7 @@ Summary:        Rust crate "shlex"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/comex/rust-shlex
 #!RemoteAsset:  sha256:f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

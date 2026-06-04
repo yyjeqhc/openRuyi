@@ -15,7 +15,7 @@ Summary:        Rust crate "libredox"
 License:        MIT
 URL:            https://gitlab.redox-os.org/redox-os/libredox.git
 #!RemoteAsset:  sha256:e02f3bb43d335493c96bf3fd3a321600bf6bd07ed34bc64118e9293bdffea46c
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "pageant"
 License:        Apache-2.0
 URL:            https://github.com/warp-tech/russh
 #!RemoteAsset:  sha256:1b537f975f6d8dcf48db368d7ec209d583b015713b5df0f5d92d2631e4ff5595
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

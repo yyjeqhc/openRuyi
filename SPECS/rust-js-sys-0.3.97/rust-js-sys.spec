@@ -15,7 +15,7 @@ Summary:        Rust crate "js-sys"
 License:        MIT OR Apache-2.0
 URL:            https://wasm-bindgen.github.io/wasm-bindgen/
 #!RemoteAsset:  sha256:a1840c94c045fbcf8ba2812c95db44499f7c64910a912551aaaa541decebcacf
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "winapi"
 License:        MIT/Apache-2.0
 URL:            https://github.com/retep998/winapi-rs
 #!RemoteAsset:  sha256:5c839a674fcd7a98952e593242ea400abe93992746761e38641405d28b00f419
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

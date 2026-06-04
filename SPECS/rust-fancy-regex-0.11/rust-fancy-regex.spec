@@ -15,7 +15,7 @@ Summary:        Rust crate "fancy-regex"
 License:        MIT
 URL:            https://github.com/fancy-regex/fancy-regex
 #!RemoteAsset:  sha256:b95f7c0680e4142284cf8b22c14a476e87d61b004a3a0861872b32ef7ead40a2
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

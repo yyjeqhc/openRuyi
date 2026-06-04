@@ -15,7 +15,7 @@ Summary:        Rust crate "interpolate_name"
 License:        MIT
 URL:            https://github.com/lu-zero/interpolate_name
 #!RemoteAsset:  sha256:c34819042dc3d3971c46c2190835914dfbe0c3c13f61449b2997f4e9722dfa60
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

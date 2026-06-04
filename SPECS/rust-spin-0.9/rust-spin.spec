@@ -15,7 +15,7 @@ Summary:        Rust crate "spin"
 License:        MIT
 URL:            https://github.com/mvdnes/spin-rs.git
 #!RemoteAsset:  sha256:6980e8d7511241f8acf4aebddbb1ff938df5eebe98691418c4468d0b72a96a67
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

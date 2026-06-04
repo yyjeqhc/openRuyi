@@ -15,7 +15,7 @@ Summary:        Rust crate "epoll"
 License:        MPL-2.0
 URL:            https://github.com/nathansizemore/epoll
 #!RemoteAsset:  sha256:e74d68fe2927dbf47aa976d14d93db9b23dced457c7bb2bdc6925a16d31b736e
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

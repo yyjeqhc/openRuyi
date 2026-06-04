@@ -15,7 +15,7 @@ Summary:        Rust crate "rustversion"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/dtolnay/rustversion
 #!RemoteAsset:  sha256:b39cdef0fa800fc44525c84ccb54a029961a8215f9619753635a9c0d2538d46d
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "zstd"
 License:        MIT
 URL:            https://github.com/gyscos/zstd-rs
 #!RemoteAsset:  sha256:e91ee311a569c327171651566e07972200e76fcfe2242a4fa446149a3881c08a
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

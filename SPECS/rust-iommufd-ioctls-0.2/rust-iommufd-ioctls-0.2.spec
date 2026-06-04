@@ -15,7 +15,7 @@ Summary:        Rust crate "iommufd-ioctls"
 License:        Apache-2.0
 URL:            https://github.com/cloud-hypervisor/iommufd
 #!RemoteAsset:  sha256:8050f03ef0c6979597140b6d20da076931fb7a06389b8b0eb971b8f65b271748
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

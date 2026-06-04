@@ -15,7 +15,7 @@ Summary:        Rust crate "hmac"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/RustCrypto/MACs
 #!RemoteAsset:  sha256:6303bc9732ae41b04cb554b844a762b4115a61bfaa81e3e83050991eeb56863f
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

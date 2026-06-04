@@ -15,7 +15,7 @@ Summary:        Rust crate "no_std_io2"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/wcampbell0x2a/no-std-io2
 #!RemoteAsset:  sha256:b51ed7824b6e07d354605f4abb3d9d300350701299da96642ee084f5ce631550
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

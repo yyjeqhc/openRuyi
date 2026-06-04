@@ -15,7 +15,7 @@ Summary:        Rust crate "pnet_transport"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/libpnet/libpnet
 #!RemoteAsset:  sha256:5f604d98bc2a6591cf719b58d3203fd882bdd6bf1db696c4ac97978e9f4776bf
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

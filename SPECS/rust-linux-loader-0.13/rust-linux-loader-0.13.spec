@@ -15,7 +15,7 @@ Summary:        Rust crate "linux-loader"
 License:        Apache-2.0 AND BSD-3-Clause
 URL:            https://github.com/rust-vmm/linux-loader
 #!RemoteAsset:  sha256:de72cb02c55ecffcf75fe78295926f872eb6eb0a58d629c58a8c324dc26380f6
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

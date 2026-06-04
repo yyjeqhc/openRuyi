@@ -15,7 +15,7 @@ Summary:        Rust crate "vfio-bindings"
 License:        Apache-2.0 OR BSD-3-Clause
 URL:            https://github.com/rust-vmm/vfio
 #!RemoteAsset:  sha256:188dac3057a0cbc94470085204c84b82ff7ec5dac629a514323cd133d1f9abe0
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "serde_with_macros"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/jonasbb/serde_with/
 #!RemoteAsset:  sha256:cf2ebbe86054f9b45bc3881e865683ccfaccce97b9b4cb53f3039d67f355a334
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

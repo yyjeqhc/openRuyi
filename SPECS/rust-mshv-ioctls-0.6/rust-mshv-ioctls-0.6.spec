@@ -15,7 +15,7 @@ Summary:        Rust crate "mshv-ioctls"
 License:        Apache-2.0 OR BSD-3-Clause
 URL:            https://github.com/rust-vmm/mshv
 #!RemoteAsset:  sha256:1db4449ac7012237b133da366f5b32ce4af1f8caf770486e5a9d54f7f6b73c4c
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

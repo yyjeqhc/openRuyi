@@ -15,7 +15,7 @@ Summary:        Rust crate "futures-channel"
 License:        MIT OR Apache-2.0
 URL:            https://rust-lang.github.io/futures-rs
 #!RemoteAsset:  sha256:07bbe89c50d7a535e539b8c17bc0b49bdb77747034daa8087407d655f3f7cc1d
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "futures-core"
 License:        MIT OR Apache-2.0
 URL:            https://rust-lang.github.io/futures-rs
 #!RemoteAsset:  sha256:7e3450815272ef58cec6d564423f6e755e25379b217b0bc688e295ba24df6b1d
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

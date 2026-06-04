@@ -15,7 +15,7 @@ Summary:        Rust crate "jiff-static"
 License:        Unlicense OR MIT
 URL:            https://github.com/BurntSushi/jiff/tree/master/crates/jiff-static
 #!RemoteAsset:  sha256:2a8c8b344124222efd714b73bb41f8b5120b27a7cc1c75593a6ff768d9d05aa4
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

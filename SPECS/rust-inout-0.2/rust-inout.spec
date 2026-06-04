@@ -15,7 +15,7 @@ Summary:        Rust crate "inout"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/RustCrypto/utils
 #!RemoteAsset:  sha256:4250ce6452e92010fdf7268ccc5d14faa80bb12fc741938534c58f16804e03c7
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "atomic-waker"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/smol-rs/atomic-waker
 #!RemoteAsset:  sha256:1505bd5d3d116872e7271a6d4e16d81d0c8570876c8de68093a09ac269d8aac0
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

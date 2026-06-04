@@ -15,7 +15,7 @@ Summary:        Rust crate "lazy_static"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-lang-nursery/lazy-static.rs
 #!RemoteAsset:  sha256:bbd2bcb4c963f2ddae06a2efc7e9f3591312473c50c6685e1f298068316e66fe
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "terminal_size"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/eminence/terminal-size
 #!RemoteAsset:  sha256:230a1b821ccbd75b185820a1f1ff7b14d21da1e442e22c0863ea5f08771a8874
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

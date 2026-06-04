@@ -15,7 +15,7 @@ Summary:        Rust crate "async-trait"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/dtolnay/async-trait
 #!RemoteAsset:  sha256:9035ad2d096bed7955a320ee7e2230574d28fd3c3a0f186cbea1ff3c7eed5dbb
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

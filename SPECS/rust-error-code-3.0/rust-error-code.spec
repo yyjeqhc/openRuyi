@@ -15,7 +15,7 @@ Summary:        Rust crate "error-code"
 License:        BSL-1.0
 URL:            https://github.com/DoumanAsh/error-code
 #!RemoteAsset:  sha256:dea2df4cf52843e0452895c455a1a2cfbb842a1e7329671acf418fdc53ed4c59
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "vfio-ioctls"
 License:        Apache-2.0 OR BSD-3-Clause
 URL:            https://github.com/rust-vmm/vfio
 #!RemoteAsset:  sha256:4e5ea6ba374c4ca77ee8cde0b927a40083dd2388dc0fb464fed6fef62edc3566
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "indexmap"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/bluss/indexmap
 #!RemoteAsset:  sha256:bd070e393353796e801d209ad339e89596eb4c8d430d18ede6a1cced8fafbd99
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

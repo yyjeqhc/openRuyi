@@ -15,7 +15,7 @@ Summary:        Rust crate "adler2"
 License:        0BSD OR MIT OR Apache-2.0
 URL:            https://github.com/oyvindln/adler2
 #!RemoteAsset:  sha256:320119579fcad9c21884f5c4861d16174d0e06250625266f50fe6898340abefa
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

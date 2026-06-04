@@ -15,7 +15,7 @@ Summary:        Rust crate "thiserror"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/dtolnay/thiserror
 #!RemoteAsset:  sha256:4288b5bcbc7920c07a1149a35cf9590a2aa808e0bc1eafaade0b80947865fbc4
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

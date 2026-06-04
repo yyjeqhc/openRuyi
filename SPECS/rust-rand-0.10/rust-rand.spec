@@ -15,7 +15,7 @@ Summary:        Rust crate "rand"
 License:        MIT OR Apache-2.0
 URL:            https://rust-random.github.io/book
 #!RemoteAsset:  sha256:d2e8e8bcc7961af1fdac401278c6a831614941f6164ee3bf4ce61b7edb162207
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

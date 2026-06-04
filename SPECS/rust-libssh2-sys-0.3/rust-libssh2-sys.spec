@@ -15,7 +15,7 @@ Summary:        Rust crate "libssh2-sys"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/alexcrichton/ssh2-rs
 #!RemoteAsset:  sha256:220e4f05ad4a218192533b300327f5150e809b54c4ec83b5a1d91833601811b9
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

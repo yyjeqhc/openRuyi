@@ -15,7 +15,7 @@ Summary:        Rust crate "sha2"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/RustCrypto/hashes
 #!RemoteAsset:  sha256:446ba717509524cb3f22f17ecc096f10f4822d76ab5c0b9822c5f9c284e825f4
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

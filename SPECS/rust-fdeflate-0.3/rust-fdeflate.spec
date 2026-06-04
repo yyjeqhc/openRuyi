@@ -15,7 +15,7 @@ Summary:        Rust crate "fdeflate"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/image-rs/fdeflate
 #!RemoteAsset:  sha256:1e6853b52649d4ac5c0bd02320cddc5ba956bdb407c4b75a2c6b75bf51500f8c
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

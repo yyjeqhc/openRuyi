@@ -15,7 +15,7 @@ Summary:        Rust crate "opaque-debug"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/RustCrypto/utils
 #!RemoteAsset:  sha256:c08d65885ee38876c4f86fa503fb49d7b507c2b62552df7c70b2fce627e06381
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

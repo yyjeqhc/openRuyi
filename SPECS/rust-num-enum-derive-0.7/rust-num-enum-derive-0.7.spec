@@ -15,7 +15,7 @@ Summary:        Rust crate "num_enum_derive"
 License:        BSD-3-Clause OR MIT OR Apache-2.0
 URL:            https://github.com/illicitonion/num_enum
 #!RemoteAsset:  sha256:680998035259dcfcafe653688bf2aa6d3e2dc05e98be6ab46afb089dc84f1df8
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

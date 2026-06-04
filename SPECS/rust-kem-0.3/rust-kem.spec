@@ -15,7 +15,7 @@ Summary:        Rust crate "kem"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/RustCrypto/traits
 #!RemoteAsset:  sha256:01737161ba802849cfd486b5bd209d38ba4943494c249a8126005170c7621edd
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

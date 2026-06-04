@@ -15,7 +15,7 @@ Summary:        Rust crate "exr"
 License:        BSD-3-Clause
 URL:            https://github.com/johannesvollmer/exrs
 #!RemoteAsset:  sha256:4300e043a56aa2cb633c01af81ca8f699a321879a7854d3896a0ba89056363be
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

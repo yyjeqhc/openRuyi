@@ -15,7 +15,7 @@ Summary:        Rust crate "ident_case"
 License:        MIT/Apache-2.0
 URL:            https://github.com/TedDriggs/ident_case
 #!RemoteAsset:  sha256:b9e0384b61958566e926dc50660321d12159025e767c18e043daf26b70104c39
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "regex-automata"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-lang/regex/tree/master/regex-automata
 #!RemoteAsset:  sha256:6e1dd4122fc1595e8162618945476892eefca7b88c52820e74af6262213cae8f
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

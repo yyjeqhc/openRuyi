@@ -15,7 +15,7 @@ Summary:        Rust crate "mshv-bindings"
 License:        Apache-2.0 OR BSD-3-Clause
 URL:            https://github.com/rust-vmm/mshv
 #!RemoteAsset:  sha256:83303108160c2b7a7bdd25000ee679384e19471386d23e501ed832574c9229ef
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

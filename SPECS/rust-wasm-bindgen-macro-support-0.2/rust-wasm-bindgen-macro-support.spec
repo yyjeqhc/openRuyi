@@ -15,7 +15,7 @@ Summary:        Rust crate "wasm-bindgen-macro-support"
 License:        MIT OR Apache-2.0
 URL:            https://wasm-bindgen.github.io/wasm-bindgen/
 #!RemoteAsset:  sha256:d95a9ec35c64b2a7cb35d3fead40c4238d0940c86d107136999567a4703259f2
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

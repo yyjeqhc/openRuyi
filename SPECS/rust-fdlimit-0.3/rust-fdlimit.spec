@@ -15,7 +15,7 @@ Summary:        Rust crate "fdlimit"
 License:        Apache-2.0
 URL:            https://github.com/paritytech/fdlimit
 #!RemoteAsset:  sha256:e182f7dbc2ef73d9ef67351c5fbbea084729c48362d3ce9dd44c28e32e277fe5
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "async-task"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/smol-rs/async-task
 #!RemoteAsset:  sha256:8b75356056920673b02621b35afd0f7dda9306d03c79a30f5c56c44cf256e3de
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

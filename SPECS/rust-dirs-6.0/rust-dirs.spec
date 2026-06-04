@@ -15,7 +15,7 @@ Summary:        Rust crate "dirs"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/soc/dirs-rs
 #!RemoteAsset:  sha256:c3e8aa94d75141228480295a7d0e7feb620b1a5ad9f12bc40be62411e38cce4e
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

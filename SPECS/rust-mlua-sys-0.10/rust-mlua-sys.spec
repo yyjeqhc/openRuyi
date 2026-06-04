@@ -15,7 +15,7 @@ Summary:        Rust crate "mlua-sys"
 License:        MIT
 URL:            https://github.com/mlua-rs/mlua
 #!RemoteAsset:  sha256:0f1c3a7fc7580227ece249fd90aa2fa3b39eb2b49d3aec5e103b3e85f2c3dfc8
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

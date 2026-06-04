@@ -15,7 +15,7 @@ Summary:        Rust crate "portable-atomic-util"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/taiki-e/portable-atomic-util
 #!RemoteAsset:  sha256:091397be61a01d4be58e7841595bd4bfedb15f1cd54977d79b8271e94ed799a3
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

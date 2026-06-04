@@ -15,7 +15,7 @@ Summary:        Rust crate "miniz_oxide"
 License:        MIT OR Zlib OR Apache-2.0
 URL:            https://github.com/Frommi/miniz_oxide/tree/master/miniz_oxide
 #!RemoteAsset:  sha256:1fa76a2c86f704bdb222d66965fb3d63269ce38518b83cb0575fca855ebb6316
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "num-rational"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-num/num-rational
 #!RemoteAsset:  sha256:f83d14da390562dca69fc84082e73e548e1ad308d24accdedd2720017cb37824
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

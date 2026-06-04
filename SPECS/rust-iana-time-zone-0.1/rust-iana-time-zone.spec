@@ -15,7 +15,7 @@ Summary:        Rust crate "iana-time-zone"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/strawlab/iana-time-zone
 #!RemoteAsset:  sha256:e31bc9ad994ba00e440a8aa5c9ef0ec67d5cb5e5cb0cc7f8b744a35b389cc470
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "internal-russh-forked-ssh-key"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/Eugeny/RustCrypto-SSH/
 #!RemoteAsset:  sha256:25f8a978272e3cbdf4768f7363eb1c8e1e6ba63c52a3ed05e29e222da4aec7cb
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

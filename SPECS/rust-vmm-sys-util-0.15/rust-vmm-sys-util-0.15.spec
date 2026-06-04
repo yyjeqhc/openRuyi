@@ -15,7 +15,7 @@ Summary:        Rust crate "vmm-sys-util"
 License:        BSD-3-Clause
 URL:            https://github.com/rust-vmm/vmm-sys-util
 #!RemoteAsset:  sha256:506c62fdf617a5176827c2f9afbcf1be155b03a9b4bf9617a60dbc07e3a1642f
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

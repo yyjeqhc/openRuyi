@@ -15,7 +15,7 @@ Summary:        Rust crate "md5"
 License:        Apache-2.0/MIT
 URL:            https://github.com/stainless-steel/md5
 #!RemoteAsset:  sha256:490cc448043f947bae3cbee9c203358d62dbee0db12107a74be5c30ccfd09771
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

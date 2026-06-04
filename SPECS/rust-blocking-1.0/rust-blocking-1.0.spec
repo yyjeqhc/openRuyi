@@ -15,7 +15,7 @@ Summary:        Rust crate "blocking"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/smol-rs/blocking
 #!RemoteAsset:  sha256:e83f8d02be6967315521be875afa792a316e28d57b5a2d401897e2a7921b7f21
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "maybe-rayon"
 License:        MIT
 URL:            https://github.com/shssoichiro/maybe-rayon
 #!RemoteAsset:  sha256:8ea1f30cedd69f0a2954655f7188c6a834246d2bcf1e315e2ac40c4b24dc9519
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

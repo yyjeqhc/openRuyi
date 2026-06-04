@@ -15,7 +15,7 @@ Summary:        Rust crate "ordered-float"
 License:        MIT
 URL:            https://github.com/reem/rust-ordered-float
 #!RemoteAsset:  sha256:7bb71e1b3fa6ca1c61f383464aaf2bb0e2f8e772a1f01d486832464de363b951
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

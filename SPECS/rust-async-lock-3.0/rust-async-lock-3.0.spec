@@ -15,7 +15,7 @@ Summary:        Rust crate "async-lock"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/smol-rs/async-lock
 #!RemoteAsset:  sha256:290f7f2596bd5b78a9fec8088ccd89180d7f9f55b94b0576823bbbdc72ee8311
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

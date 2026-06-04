@@ -15,7 +15,7 @@ Summary:        Rust crate "memmem"
 License:        MIT/Apache-2.0
 URL:            http://github.com/jneem/memmem
 #!RemoteAsset:  sha256:a64a92489e2744ce060c349162be1c5f33c6969234104dbd99ddb5feb08b8c15
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

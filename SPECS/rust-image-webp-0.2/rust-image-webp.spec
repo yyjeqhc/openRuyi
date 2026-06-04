@@ -15,7 +15,7 @@ Summary:        Rust crate "image-webp"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/image-rs/image-webp
 #!RemoteAsset:  sha256:525e9ff3e1a4be2fbea1fdf0e98686a6d98b4d8f937e1bf7402245af1909e8c3
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

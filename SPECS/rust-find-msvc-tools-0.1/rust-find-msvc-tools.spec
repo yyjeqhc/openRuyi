@@ -15,7 +15,7 @@ Summary:        Rust crate "find-msvc-tools"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-lang/cc-rs
 #!RemoteAsset:  sha256:5baebc0774151f905a1a2cc41989300b1e6fbb29aff0ceffa1064fdd3088d582
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

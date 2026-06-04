@@ -15,7 +15,7 @@ Summary:        Rust crate "jobserver"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-lang/jobserver-rs
 #!RemoteAsset:  sha256:9afb3de4395d6b3e67a780b6de64b51c978ecf11cb9a462c66be7d4ca9039d33
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

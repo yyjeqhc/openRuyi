@@ -15,7 +15,7 @@ Summary:        Rust crate "zerocopy-derive"
 License:        BSD-2-Clause OR Apache-2.0 OR MIT
 URL:            https://github.com/google/zerocopy
 #!RemoteAsset:  sha256:70e3cd084b1788766f53af483dd21f93881ff30d7320490ec3ef7526d203bad4
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

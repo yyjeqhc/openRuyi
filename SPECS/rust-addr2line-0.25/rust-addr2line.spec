@@ -15,7 +15,7 @@ Summary:        Rust crate "addr2line"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/gimli-rs/addr2line
 #!RemoteAsset:  sha256:1b5d307320b3181d6d7954e663bd7c774a838b8220fe0593c86d9fb09f498b4b
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "futures-lite"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/smol-rs/futures-lite
 #!RemoteAsset:  sha256:f78e10609fe0e0b3f4157ffab1876319b5b0db102a2c60dc4626306dc46b44ad
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

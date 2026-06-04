@@ -15,7 +15,7 @@ Summary:        Rust crate "async-signal"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/smol-rs/async-signal
 #!RemoteAsset:  sha256:52b5aaafa020cf5053a01f2a60e8ff5dccf550f0f77ec54a4e47285ac2bab485
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

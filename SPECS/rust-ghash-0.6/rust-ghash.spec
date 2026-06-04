@@ -15,7 +15,7 @@ Summary:        Rust crate "ghash"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/RustCrypto/universal-hashes
 #!RemoteAsset:  sha256:2eecf2d5dc9b66b732b97707a0210906b1d30523eb773193ab777c0c84b3e8d5
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

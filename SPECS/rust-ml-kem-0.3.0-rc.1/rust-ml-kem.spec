@@ -15,7 +15,7 @@ Summary:        Rust crate "ml-kem"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/RustCrypto/KEMs/tree/master/ml-kem
 #!RemoteAsset:  sha256:8198b5db27ac9773534c371751a59dc18aec8b80aa141e69abfdd1dec2e3f78c
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "luajit-src"
 License:        MIT
 URL:            https://github.com/mlua-rs/luajit-src-rs
 #!RemoteAsset:  sha256:a86cc925d4053d0526ae7f5bc765dbd0d7a5d1a63d43974f4966cb349ca63295
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

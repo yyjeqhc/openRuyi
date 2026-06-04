@@ -15,7 +15,7 @@ Summary:        Rust crate "kasuari"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/ratatui/kasuari
 #!RemoteAsset:  sha256:bde5057d6143cc94e861d90f591b9303d6716c6b9602309150bd068853c10899
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

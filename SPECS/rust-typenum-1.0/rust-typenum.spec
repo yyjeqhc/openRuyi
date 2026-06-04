@@ -15,7 +15,7 @@ Summary:        Rust crate "typenum"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/paholg/typenum
 #!RemoteAsset:  sha256:40ce102ab67701b8526c123c1bab5cbe42d7040ccfd0f64af1a385808d2f43de
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

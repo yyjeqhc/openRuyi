@@ -15,7 +15,7 @@ Summary:        Rust crate "winapi-i686-pc-windows-gnu"
 License:        MIT/Apache-2.0
 URL:            https://github.com/retep998/winapi-rs
 #!RemoteAsset:  sha256:ac3b87c63620426dd9b991e5ce0329eff545bccbbb34f3be09ff6fb6ab51b7b6
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

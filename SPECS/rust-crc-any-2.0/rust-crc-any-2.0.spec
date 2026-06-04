@@ -15,7 +15,7 @@ Summary:        Rust crate "crc-any"
 License:        MIT
 URL:            https://magiclen.org/crc-any
 #!RemoteAsset:  sha256:a62ec9ff5f7965e4d7280bd5482acd20aadb50d632cf6c1d74493856b011fa73
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "debug-helper"
 License:        MIT
 URL:            https://magiclen.org/debug-helper
 #!RemoteAsset:  sha256:f578e8e2c440e7297e008bb5486a3a8a194775224bbc23729b0dbdfaeebf162e
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

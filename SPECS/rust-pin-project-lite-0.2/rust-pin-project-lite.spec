@@ -15,7 +15,7 @@ Summary:        Rust crate "pin-project-lite"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/taiki-e/pin-project-lite
 #!RemoteAsset:  sha256:a89322df9ebe1c1578d689c92318e070967d1042b512afbe49518723f4e6d5cd
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

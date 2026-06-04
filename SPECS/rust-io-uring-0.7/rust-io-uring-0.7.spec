@@ -15,7 +15,7 @@ Summary:        Rust crate "io-uring"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/tokio-rs/io-uring
 #!RemoteAsset:  sha256:4d09b98f7eace8982db770e4408e7470b028ce513ac28fecdc6bf4c30fe92b62
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

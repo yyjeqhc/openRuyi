@@ -15,7 +15,7 @@ Summary:        Rust crate "redox_users"
 License:        MIT
 URL:            https://gitlab.redox-os.org/redox-os/users
 #!RemoteAsset:  sha256:a4e608c6638b9c18977b00b475ac1f28d14e84b27d8d42f70e0bf1e3dec127ac
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

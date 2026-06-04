@@ -15,7 +15,7 @@ Summary:        Rust crate "vm-fdt"
 License:        Apache-2.0 OR BSD-3-Clause
 URL:            https://github.com/rust-vmm/vm-fdt
 #!RemoteAsset:  sha256:7e21282841a059bb62627ce8441c491f09603622cd5a21c43bfedc85a2952f23
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

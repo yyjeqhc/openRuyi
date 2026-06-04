@@ -15,7 +15,7 @@ Summary:        Rust crate "block-buffer"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/RustCrypto/utils
 #!RemoteAsset:  sha256:cdd35008169921d80bc60d3d0ab416eecb028c4cd653352907921d95084790be
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

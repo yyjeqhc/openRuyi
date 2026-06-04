@@ -15,7 +15,7 @@ Summary:        Rust crate "concat-idents"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/DzenanJupic/concat-idents
 #!RemoteAsset:  sha256:f76990911f2267d837d9d0ad060aa63aaad170af40904b29461734c339030d4d
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

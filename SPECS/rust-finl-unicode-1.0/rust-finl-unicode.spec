@@ -15,7 +15,7 @@ Summary:        Rust crate "finl_unicode"
 License:        (MIT OR Apache-2.0) AND Unicode-DFS-2016
 URL:            https://finl.xyz
 #!RemoteAsset:  sha256:9844ddc3a6e533d62bba727eb6c28b5d360921d5175e9ff0f1e621a5c590a4d5
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

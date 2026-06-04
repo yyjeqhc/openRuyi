@@ -15,7 +15,7 @@ Summary:        Rust crate "ordered-stream"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/danieldg/ordered-stream
 #!RemoteAsset:  sha256:9aa2b01e1d916879f73a53d01d1d6cee68adbb31d6d9177a8cfce093cced1d50
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

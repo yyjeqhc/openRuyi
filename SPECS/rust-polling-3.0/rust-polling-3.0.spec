@@ -15,7 +15,7 @@ Summary:        Rust crate "polling"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/smol-rs/polling
 #!RemoteAsset:  sha256:5d0e4f59085d47d8241c88ead0f274e8a0cb551f3625263c05eb8dd897c34218
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

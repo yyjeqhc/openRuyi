@@ -15,7 +15,7 @@ Summary:        Rust crate "byteorder"
 License:        Unlicense OR MIT
 URL:            https://github.com/BurntSushi/byteorder
 #!RemoteAsset:  sha256:1fd0f2584146f6f2ef48085050886acf353beff7305ebd1ae69500e27c67f64b
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

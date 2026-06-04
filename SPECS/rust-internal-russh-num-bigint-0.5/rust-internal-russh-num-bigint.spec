@@ -15,7 +15,7 @@ Summary:        Rust crate "internal-russh-num-bigint"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-num/num-bigint
 #!RemoteAsset:  sha256:ae8e22120c32fb4d19ec55fba35015f57095cd95a2e3b732e44457f5915b2ee8
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

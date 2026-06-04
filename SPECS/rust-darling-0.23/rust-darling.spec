@@ -15,7 +15,7 @@ Summary:        Rust crate "darling"
 License:        MIT
 URL:            https://github.com/TedDriggs/darling
 #!RemoteAsset:  sha256:25ae13da2f202d56bd7f91c25fba009e7717a1e4a1cc98a76d844b65ae912e9d
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

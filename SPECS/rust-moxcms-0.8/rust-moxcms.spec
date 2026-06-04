@@ -15,7 +15,7 @@ Summary:        Rust crate "moxcms"
 License:        BSD-3-Clause OR Apache-2.0
 URL:            https://github.com/awxkee/moxcms
 #!RemoteAsset:  sha256:bb85c154ba489f01b25c0d36ae69a87e4a1c73a72631fc6c0eb6dde34a73e44b
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

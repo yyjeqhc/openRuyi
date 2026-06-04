@@ -15,7 +15,7 @@ Summary:        Rust crate "flume"
 License:        Apache-2.0/MIT
 URL:            https://github.com/zesterer/flume
 #!RemoteAsset:  sha256:5e139bc46ca777eb5efaf62df0ab8cc5fd400866427e56c68b22e414e53bd3be
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

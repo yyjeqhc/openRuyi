@@ -15,7 +15,7 @@ Summary:        Rust crate "num-iter"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-num/num-iter
 #!RemoteAsset:  sha256:1429034a0490724d0075ebb2bc9e875d6503c3cf69e235a8941aa757d83ef5bf
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "equator-macro"
 License:        MIT
 URL:            https://github.com/sarah-ek/equator/
 #!RemoteAsset:  sha256:44f23cf4b44bfce11a86ace86f8a73ffdec849c9fd00a386a53d278bd9e81fb3
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

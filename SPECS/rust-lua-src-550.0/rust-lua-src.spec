@@ -15,7 +15,7 @@ Summary:        Rust crate "lua-src"
 License:        MIT
 URL:            https://github.com/mlua-rs/lua-src-rs
 #!RemoteAsset:  sha256:e836dc8ae16806c9bdcf42003a88da27d163433e3f9684c52f0301258004a4fb
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

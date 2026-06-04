@@ -15,7 +15,7 @@ Summary:        Rust crate "async-io"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/smol-rs/async-io
 #!RemoteAsset:  sha256:456b8a8feb6f42d237746d4b3e9a178494627745c3c56c6ea55d92ba50d026fc
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

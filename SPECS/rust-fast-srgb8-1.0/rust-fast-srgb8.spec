@@ -15,7 +15,7 @@ Summary:        Rust crate "fast-srgb8"
 License:        MIT OR Apache-2.0 OR CC0-1.0
 URL:            https://github.com/thomcc/fast-srgb8
 #!RemoteAsset:  sha256:dd2e7510819d6fbf51a5545c8f922716ecfb14df168a3242f7d33e0239efe6a1
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "async-process"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/smol-rs/async-process
 #!RemoteAsset:  sha256:fc50921ec0055cdd8a16de48773bfeec5c972598674347252c0399676be7da75
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

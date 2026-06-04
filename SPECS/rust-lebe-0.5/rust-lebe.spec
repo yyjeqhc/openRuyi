@@ -15,7 +15,7 @@ Summary:        Rust crate "lebe"
 License:        BSD-3-Clause
 URL:            https://github.com/johannesvollmer/lebe
 #!RemoteAsset:  sha256:7a79a3332a6609480d7d0c9eab957bca6b455b91bb84e66d19f5ff66294b85b8
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

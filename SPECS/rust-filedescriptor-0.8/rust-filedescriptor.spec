@@ -15,7 +15,7 @@ Summary:        Rust crate "filedescriptor"
 License:        MIT
 URL:            https://github.com/wezterm/wezterm
 #!RemoteAsset:  sha256:e40758ed24c9b2eeb76c35fb0aebc66c626084edd827e07e1552279814c6682d
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

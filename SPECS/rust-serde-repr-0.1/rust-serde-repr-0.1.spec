@@ -15,7 +15,7 @@ Summary:        Rust crate "serde_repr"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/dtolnay/serde-repr
 #!RemoteAsset:  sha256:175ee3e80ae9982737ca543e96133087cbd9a485eecc3bc4de9c1a37b47ea59c
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

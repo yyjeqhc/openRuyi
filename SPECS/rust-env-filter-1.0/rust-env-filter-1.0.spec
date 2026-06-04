@@ -15,7 +15,7 @@ Summary:        Rust crate "env_filter"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-cli/env_logger
 #!RemoteAsset:  sha256:32e90c2accc4b07a8456ea0debdc2e7587bdd890680d71173a15d4ae604f6eef
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "iommufd-bindings"
 License:        Apache-2.0
 URL:            https://github.com/cloud-hypervisor/iommufd
 #!RemoteAsset:  sha256:fd7de3a04f6fd55f171a6682852f7aa360bb848a85e0c610513349e006b3c139
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "static_assertions"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/nvzqz/static-assertions-rs
 #!RemoteAsset:  sha256:a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

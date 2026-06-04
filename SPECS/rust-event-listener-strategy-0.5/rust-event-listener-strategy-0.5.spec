@@ -15,7 +15,7 @@ Summary:        Rust crate "event-listener-strategy"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/smol-rs/event-listener-strategy
 #!RemoteAsset:  sha256:8be9f3dfaaffdae2972880079a491a1a8bb7cbed0b8dd7a347f668b4150a3b93
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "dhat"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/nnethercote/dhat-rs
 #!RemoteAsset:  sha256:98cd11d84628e233de0ce467de10b8633f4ddaecafadefc86e13b84b8739b827
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "kqueue"
 License:        MIT
 URL:            https://gitlab.com/rust-kqueue/rust-kqueue
 #!RemoteAsset:  sha256:eac30106d7dce88daf4a3fcb4879ea939476d5074a9b7ddd0fb97fa4bed5596a
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

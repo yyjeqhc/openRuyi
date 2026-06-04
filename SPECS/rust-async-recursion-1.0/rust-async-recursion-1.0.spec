@@ -15,7 +15,7 @@ Summary:        Rust crate "async-recursion"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/dcchut/async-recursion
 #!RemoteAsset:  sha256:3b43422f69d8ff38f95f1b2bb76517c91589a924d1559a0e935d7c8ce0274c11
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

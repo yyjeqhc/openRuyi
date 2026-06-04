@@ -15,7 +15,7 @@ Summary:        Rust crate "zvariant"
 License:        MIT
 URL:            https://github.com/z-galaxy/zbus/
 #!RemoteAsset:  sha256:a192a0bde63360d77a7523c833d4b4ce6070a927e2c53246e4c540b1a3e27be0
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "num_cpus"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/seanmonstar/num_cpus
 #!RemoteAsset:  sha256:91df4bbde75afed763b708b7eee1e8e7651e02d97f6d5dd763e89367e957b23b
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

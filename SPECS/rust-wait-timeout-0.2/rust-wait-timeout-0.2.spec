@@ -15,7 +15,7 @@ Summary:        Rust crate "wait-timeout"
 License:        MIT/Apache-2.0
 URL:            https://github.com/alexcrichton/wait-timeout
 #!RemoteAsset:  sha256:09ac3b126d3914f9849036f826e054cbabdc8519970b8998ddaf3b5bd3c65f11
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

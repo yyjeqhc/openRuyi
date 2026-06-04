@@ -15,7 +15,7 @@ Summary:        Rust crate "wasip2"
 License:        Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT
 URL:            https://github.com/bytecodealliance/wasi-rs
 #!RemoteAsset:  sha256:20064672db26d7cdc89c7798c48a0fdfac8213434a1186e5ef29fd560ae223d6
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

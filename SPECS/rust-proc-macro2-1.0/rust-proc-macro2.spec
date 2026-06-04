@@ -15,7 +15,7 @@ Summary:        Rust crate "proc-macro2"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/dtolnay/proc-macro2
 #!RemoteAsset:  sha256:8fd00f0bb2e90d81d1044c2b32617f68fcb9fa3bb7640c23e9c748e53fb30934
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

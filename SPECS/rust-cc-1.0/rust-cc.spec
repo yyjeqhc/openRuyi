@@ -15,7 +15,7 @@ Summary:        Rust crate "cc"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-lang/cc-rs
 #!RemoteAsset:  sha256:a1dce859f0832a7d088c4f1119888ab94ef4b5d6795d1ce05afb7fe159d79f98
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "gdbstub"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/daniel5151/gdbstub
 #!RemoteAsset:  sha256:5bafc7e33650ab9f05dcc16325f05d56b8d10393114e31a19a353b86fa60cfe7
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

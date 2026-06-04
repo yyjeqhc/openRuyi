@@ -15,7 +15,7 @@ Summary:        Rust crate "zbus_names"
 License:        MIT
 URL:            https://github.com/z-galaxy/zbus/
 #!RemoteAsset:  sha256:7074f3e50b894eac91750142016d30d0a89be8e67dbfd9704fb875825760e52d
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

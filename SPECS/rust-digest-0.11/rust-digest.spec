@@ -15,7 +15,7 @@ Summary:        Rust crate "digest"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/RustCrypto/traits
 #!RemoteAsset:  sha256:f1dd6dbb5841937940781866fa1281a1ff7bd3bf827091440879f9994983d5c2
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

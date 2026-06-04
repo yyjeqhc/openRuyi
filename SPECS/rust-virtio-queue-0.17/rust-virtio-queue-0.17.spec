@@ -15,7 +15,7 @@ Summary:        Rust crate "virtio-queue"
 License:        Apache-2.0 AND BSD-3-Clause
 URL:            https://github.com/rust-vmm/vm-virtio
 #!RemoteAsset:  sha256:e358084f32ed165fddb41d98ff1b7ff3c08b9611d8d6114a1b422e2e85688baf
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

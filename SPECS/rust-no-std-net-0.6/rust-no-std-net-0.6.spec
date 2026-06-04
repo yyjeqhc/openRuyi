@@ -15,7 +15,7 @@ Summary:        Rust crate "no-std-net"
 License:        MIT
 URL:            https://github.com/dunmatt/no-std-net
 #!RemoteAsset:  sha256:43794a0ace135be66a25d3ae77d41b91615fb68ae937f904090203e81f755b65
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

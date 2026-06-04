@@ -15,7 +15,7 @@ Summary:        Rust crate "igvm_defs"
 License:        MIT
 URL:            https://github.com/microsoft/igvm
 #!RemoteAsset:  sha256:eedd8c64460676101062f9f2ecdeb52d8f43e622da6a6c5bf5158f4ef08b0906
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

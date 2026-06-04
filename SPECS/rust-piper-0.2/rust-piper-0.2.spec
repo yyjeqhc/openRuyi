@@ -15,7 +15,7 @@ Summary:        Rust crate "piper"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/smol-rs/piper
 #!RemoteAsset:  sha256:c835479a4443ded371d6c535cbfd8d31ad92c5d23ae9770a61bc155e4992a3c1
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "fax"
 License:        MIT
 URL:            https://github.com/pdf-rs/fax
 #!RemoteAsset:  sha256:caf1079563223d5d59d83c85886a56e586cfd5c1a26292e971a0fa266531ac5a
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

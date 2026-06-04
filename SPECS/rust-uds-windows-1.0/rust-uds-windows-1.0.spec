@@ -15,7 +15,7 @@ Summary:        Rust crate "uds_windows"
 License:        MIT
 URL:            https://github.com/haraldh/rust_uds_windows
 #!RemoteAsset:  sha256:f2f6fb2847f6742cd76af783a2a2c49e9375d0a111c7bef6f71cd9e738c72d6e
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

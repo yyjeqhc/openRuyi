@@ -15,7 +15,7 @@ Summary:        Rust crate "p384"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/RustCrypto/elliptic-curves/tree/master/p384
 #!RemoteAsset:  sha256:8c91df688211f5957dbe2ab599dcbcaade8d6d3cdc15c5b350d350d7d07ce423
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

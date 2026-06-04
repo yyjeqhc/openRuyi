@@ -18,7 +18,7 @@ Summary:        Rust crate "hermit-abi"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/hermit-os/hermit-rs
 #!RemoteAsset:  sha256:fc0fef456e4baa96da950455cd02c081ca953b141298e41db3fc7e36b1da849c
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

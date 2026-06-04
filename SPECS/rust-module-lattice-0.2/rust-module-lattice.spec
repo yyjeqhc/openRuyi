@@ -15,7 +15,7 @@ Summary:        Rust crate "module-lattice"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/RustCrypto/KEMs/tree/master/module-lattice
 #!RemoteAsset:  sha256:dc7c90d33a0dac244570c26461d761ffaeadb3bfc2b17cc625ae2185cafdffae
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

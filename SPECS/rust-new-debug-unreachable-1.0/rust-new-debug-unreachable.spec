@@ -15,7 +15,7 @@ Summary:        Rust crate "new_debug_unreachable"
 License:        MIT
 URL:            https://github.com/mbrubeck/rust-debug-unreachable
 #!RemoteAsset:  sha256:650eef8c711430f1a879fdd01d4745a7deea475becfb90269c06775983bbf086
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

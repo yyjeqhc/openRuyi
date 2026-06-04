@@ -15,7 +15,7 @@ Summary:        Rust crate "managed"
 License:        0BSD
 URL:            https://github.com/m-labs/rust-managed
 #!RemoteAsset:  sha256:0ca88d725a0a943b096803bd34e73a4437208b6077654cc4ecb2947a5f91618d
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

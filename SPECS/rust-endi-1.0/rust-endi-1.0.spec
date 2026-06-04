@@ -15,7 +15,7 @@ Summary:        Rust crate "endi"
 License:        MIT
 URL:            https://github.com/zeenix/endi
 #!RemoteAsset:  sha256:66b7e2430c6dff6a955451e2cfc438f09cea1965a9d6f87f7e3b90decc014099
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

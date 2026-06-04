@@ -15,7 +15,7 @@ Summary:        Rust crate "landlock"
 License:        MIT OR Apache-2.0
 URL:            https://landlock.io
 #!RemoteAsset:  sha256:635839550ae8b90d9fd2571460a6645dc0aec070225956ca7a2831ed31d2795d
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

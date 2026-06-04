@@ -15,7 +15,7 @@ Summary:        Rust crate "async-executor"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/smol-rs/async-executor
 #!RemoteAsset:  sha256:c96bf972d85afc50bf5ab8fe2d54d1586b4e0b46c97c50a0c9e71e2f7bcd812a
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

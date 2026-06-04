@@ -15,7 +15,7 @@ Summary:        Rust crate "openssl-sys"
 License:        MIT
 URL:            https://github.com/rust-openssl/rust-openssl
 #!RemoteAsset:  sha256:57d55af3b3e226502be1526dfdba67ab0e9c96fc293004e79576b2b9edb0dbdb
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

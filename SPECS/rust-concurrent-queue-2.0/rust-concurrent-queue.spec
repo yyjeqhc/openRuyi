@@ -15,7 +15,7 @@ Summary:        Rust crate "concurrent-queue"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/smol-rs/concurrent-queue
 #!RemoteAsset:  sha256:4ca0197aee26d1ae37445ee532fefce43251d24cc7c166799f4d46817f1d3973
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

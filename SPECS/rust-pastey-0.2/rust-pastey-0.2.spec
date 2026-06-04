@@ -15,7 +15,7 @@ Summary:        Rust crate "pastey"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/as1100k/pastey
 #!RemoteAsset:  sha256:2ee67f1008b1ba2321834326597b8e186293b049a023cdef258527550b9935b4
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

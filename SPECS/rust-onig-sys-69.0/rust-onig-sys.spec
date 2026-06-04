@@ -15,7 +15,7 @@ Summary:        Rust crate "onig_sys"
 License:        MIT
 URL:            https://github.com/rust-onig/rust-onig
 #!RemoteAsset:  sha256:1e68317604e77e53b85896388e1a803c1d21b74c899ec9e5e1112db90735edd7
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

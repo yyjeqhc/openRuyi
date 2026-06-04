@@ -15,7 +15,7 @@ Summary:        Rust crate "hex-literal"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/RustCrypto/utils
 #!RemoteAsset:  sha256:e712f64ec3850b98572bffac52e2c6f282b29fe6c5fa6d42334b30be438d95c1
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "bitfield-struct"
 License:        MIT
 URL:            https://github.com/wrenger/bitfield-struct-rs.git
 #!RemoteAsset:  sha256:3ca6739863c590881f038d033a146c51ddae239186a4327014839fd864f44ed5
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

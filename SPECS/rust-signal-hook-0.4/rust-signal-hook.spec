@@ -15,7 +15,7 @@ Summary:        Rust crate "signal-hook"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/vorner/signal-hook
 #!RemoteAsset:  sha256:b2a0c28ca5908dbdbcd52e6fdaa00358ab88637f8ab33e1f188dd510eb44b53d
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

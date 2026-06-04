@@ -15,7 +15,7 @@ Summary:        Rust crate "litrs"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/LukasKalbertodt/litrs
 #!RemoteAsset:  sha256:11d3d7f243d5c5a8b9bb5d6dd2b1602c0cb0b9db1621bafc7ed66e35ff9fe092
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

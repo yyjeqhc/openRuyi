@@ -15,7 +15,7 @@ Summary:        Rust crate "image"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/image-rs/image
 #!RemoteAsset:  sha256:85ab80394333c02fe689eaf900ab500fbd0c2213da414687ebf995a65d5a6104
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

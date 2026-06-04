@@ -15,7 +15,7 @@ Summary:        Rust crate "winnow"
 License:        MIT
 URL:            https://github.com/winnow-rs/winnow
 #!RemoteAsset:  sha256:2ee1708bef14716a11bae175f579062d4554d95be2c6829f518df847b7b3fdd0
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

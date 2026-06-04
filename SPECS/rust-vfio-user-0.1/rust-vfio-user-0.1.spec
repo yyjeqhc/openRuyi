@@ -15,7 +15,7 @@ Summary:        Rust crate "vfio_user"
 License:        Apache-2.0
 URL:            https://github.com/rust-vmm/vfio-user
 #!RemoteAsset:  sha256:731c2582dd43f4f174ab47b4c933a1a9bb872d9d1b7f54c5867e12dbc1491b75
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

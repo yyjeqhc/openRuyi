@@ -15,7 +15,7 @@ Summary:        Rust crate "itertools"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-itertools/itertools
 #!RemoteAsset:  sha256:2b192c782037fadd9cfa75548310488aabdbf3d2da73885b31bd0abd03351285
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "quote"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/dtolnay/quote
 #!RemoteAsset:  sha256:41f2619966050689382d2b44f664f4bc593e129785a36d6ee376ddf37259b924
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

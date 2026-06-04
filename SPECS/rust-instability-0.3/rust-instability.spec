@@ -15,7 +15,7 @@ Summary:        Rust crate "instability"
 License:        MIT
 URL:            https://github.com/ratatui/instability
 #!RemoteAsset:  sha256:5eb2d60ef19920a3a9193c3e371f726ec1dafc045dac788d0fb3704272458971
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

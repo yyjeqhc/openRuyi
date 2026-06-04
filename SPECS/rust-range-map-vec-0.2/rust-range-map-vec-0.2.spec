@@ -15,7 +15,7 @@ Summary:        Rust crate "range_map_vec"
 License:        MIT
 URL:            https://github.com/microsoft/range_map_vec
 #!RemoteAsset:  sha256:7cc2191ec1fd850e3ede4cf09ccfd40a33df561111f73e96e1b7c3f9eee31328
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

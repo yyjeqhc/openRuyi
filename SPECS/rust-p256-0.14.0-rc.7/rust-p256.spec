@@ -15,7 +15,7 @@ Summary:        Rust crate "p256"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/RustCrypto/elliptic-curves/tree/master/p256
 #!RemoteAsset:  sha256:018bfbb86e05fd70a83e985921241035ee09fcd369c4a2c3680b389a01d2ad28
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "vcpkg"
 License:        MIT/Apache-2.0
 URL:            https://github.com/mcgoo/vcpkg-rs
 #!RemoteAsset:  sha256:accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

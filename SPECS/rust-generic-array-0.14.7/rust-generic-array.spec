@@ -15,7 +15,7 @@ Summary:        Rust crate "generic-array"
 License:        MIT
 URL:            https://github.com/fizyk20/generic-array.git
 #!RemoteAsset:  sha256:85649ca51fd72272d7821adaf274ad91c288277713d9c18820d8499a7ff69e9a
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "chacha20"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/RustCrypto/stream-ciphers
 #!RemoteAsset:  sha256:6f8d983286843e49675a4b7a2d174efe136dc93a18d69130dd18198a6c167601
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

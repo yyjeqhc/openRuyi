@@ -15,7 +15,7 @@ Summary:        Rust crate "mintex"
 License:        Apache-2.0
 URL:            https://github.com/garypen/mintex
 #!RemoteAsset:  sha256:c505b3e17ed6b70a7ed2e67fbb2c560ee327353556120d6e72f5232b6880d536
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

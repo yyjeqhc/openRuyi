@@ -15,7 +15,7 @@ Summary:        Rust crate "proc-macro-crate"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/bkchr/proc-macro-crate
 #!RemoteAsset:  sha256:e67ba7e9b2b56446f1d419b1d807906278ffa1a658a8a5d8a39dcb1f5a78614f
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

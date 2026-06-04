@@ -15,7 +15,7 @@ Summary:        Rust crate "hybrid-array"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/RustCrypto/hybrid-array
 #!RemoteAsset:  sha256:08d46837a0ed51fe95bd3b05de33cd64a1ee88fc797477ca48446872504507c5
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

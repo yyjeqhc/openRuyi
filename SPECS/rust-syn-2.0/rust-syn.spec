@@ -15,7 +15,7 @@ Summary:        Rust crate "syn"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/dtolnay/syn
 #!RemoteAsset:  sha256:e665b8803e7b1d2a727f4023456bbbbe74da67099c585258af0ad9c5013b9b99
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

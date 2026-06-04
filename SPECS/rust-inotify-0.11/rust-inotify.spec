@@ -15,7 +15,7 @@ Summary:        Rust crate "inotify"
 License:        ISC
 URL:            https://github.com/hannobraun/inotify
 #!RemoteAsset:  sha256:bd5b3eaf1a28b758ac0faa5a4254e8ab2705605496f1b1f3fbbc3988ad73d199
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

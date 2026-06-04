@@ -15,7 +15,7 @@ Summary:        Rust crate "rustc-hash"
 License:        Apache-2.0/MIT
 URL:            https://github.com/rust-lang-nursery/rustc-hash
 #!RemoteAsset:  sha256:08d43f7aa6b08d49f382cde6a7982047c3426db949b1424bc4b7ec9ae12c6ce2
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

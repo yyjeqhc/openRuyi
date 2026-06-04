@@ -15,7 +15,7 @@ Summary:        Rust crate "thousands"
 License:        MIT/Apache-2.0
 URL:            https://github.com/tov/thousands-rs
 #!RemoteAsset:  sha256:3bf63baf9f5039dadc247375c29eb13706706cfde997d0330d05aa63a77d8820
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

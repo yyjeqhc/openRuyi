@@ -15,7 +15,7 @@ Summary:        Rust crate "simd-adler32"
 License:        MIT
 URL:            https://github.com/mcountryman/simd-adler32
 #!RemoteAsset:  sha256:703d5c7ef118737c72f1af64ad2f6f8c5e1921f818cdcb97b8fe6fc69bf66214
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

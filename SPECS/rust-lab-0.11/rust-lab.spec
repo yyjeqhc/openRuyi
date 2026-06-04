@@ -15,7 +15,7 @@ Summary:        Rust crate "lab"
 License:        MIT
 URL:            https://github.com/TooManyBees/lab
 #!RemoteAsset:  sha256:bf36173d4167ed999940f804952e6b08197cae5ad5d572eb4db150ce8ad5d58f
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

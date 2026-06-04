@@ -15,7 +15,7 @@ Summary:        Rust crate "line-clipping"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/ratatui/line-clipping
 #!RemoteAsset:  sha256:3f50e8f47623268b5407192d26876c4d7f89d686ca130fdc53bced4814cd29f8
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

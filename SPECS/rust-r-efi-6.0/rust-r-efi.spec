@@ -15,7 +15,7 @@ Summary:        Rust crate "r-efi"
 License:        MIT OR Apache-2.0 OR LGPL-2.1-or-later
 URL:            https://github.com/r-efi/r-efi/wiki
 #!RemoteAsset:  sha256:f8dcc9c7d52a811697d2151c701e0d08956f92b0e24136cf4cf27b57a6a0d9bf
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

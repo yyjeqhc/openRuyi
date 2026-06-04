@@ -15,7 +15,7 @@ Summary:        Rust crate "num-bigint-dig"
 License:        MIT/Apache-2.0
 URL:            https://github.com/dignifiedquire/num-bigint
 #!RemoteAsset:  sha256:e661dda6640fad38e827a6d4a310ff4763082116fe217f279885c97f511bb0b7
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

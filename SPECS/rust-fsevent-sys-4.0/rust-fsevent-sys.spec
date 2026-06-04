@@ -15,7 +15,7 @@ Summary:        Rust crate "fsevent-sys"
 License:        MIT
 URL:            https://github.com/octplane/fsevent-rust/tree/master/fsevent-sys
 #!RemoteAsset:  sha256:76ee7a02da4d231650c7cea31349b889be2f45ddb3ef3032d2ec8185f6313fd2
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

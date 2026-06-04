@@ -15,7 +15,7 @@ Summary:        Rust crate "hkdf"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/RustCrypto/KDFs/
 #!RemoteAsset:  sha256:4aaa26c720c68b866f2c96ef5c1264b3e6f473fe5d4ce61cd44bbe913e553018
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

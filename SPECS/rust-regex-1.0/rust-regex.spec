@@ -15,7 +15,7 @@ Summary:        Rust crate "regex"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-lang/regex
 #!RemoteAsset:  sha256:e10754a14b9137dd7b1e3e5b0493cc9171fdd105e0ab477f51b72e7f3ac0e276
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

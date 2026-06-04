@@ -15,7 +15,7 @@ Summary:        Rust crate "num-derive"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-num/num-derive
 #!RemoteAsset:  sha256:ed3955f1a9c7c0c15e092f9c887db08b1fc683305fdf6eb6684f22555355e202
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

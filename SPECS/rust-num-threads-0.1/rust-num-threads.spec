@@ -15,7 +15,7 @@ Summary:        Rust crate "num_threads"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/jhpratt/num_threads
 #!RemoteAsset:  sha256:5c7398b9c8b70908f6371f47ed36737907c87c52af34c268fed0bf0ceb92ead9
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

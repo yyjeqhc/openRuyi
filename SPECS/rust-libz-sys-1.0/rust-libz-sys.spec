@@ -15,7 +15,7 @@ Summary:        Rust crate "libz-sys"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-lang/libz-sys
 #!RemoteAsset:  sha256:d52f4c29e2a68ac30c9087e1b772dc9f44a2b66ed44edf2266cf2be9b03dafc1
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

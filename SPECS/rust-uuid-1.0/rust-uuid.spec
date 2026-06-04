@@ -15,7 +15,7 @@ Summary:        Rust crate "uuid"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/uuid-rs/uuid
 #!RemoteAsset:  sha256:ddd74a9687298c6858e9b88ec8935ec45d22e8fd5e6394fa1bd4e99a87789c76
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

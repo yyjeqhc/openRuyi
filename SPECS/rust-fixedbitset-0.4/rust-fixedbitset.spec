@@ -15,7 +15,7 @@ Summary:        Rust crate "fixedbitset"
 License:        MIT/Apache-2.0
 URL:            https://github.com/petgraph/fixedbitset
 #!RemoteAsset:  sha256:0ce7134b9999ecaf8bcd65542e436736ef32ddca1b3e06094cb6ec5755203b80
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

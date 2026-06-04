@@ -15,7 +15,7 @@ Summary:        Rust crate "virtio-bindings"
 License:        BSD-3-Clause OR Apache-2.0
 URL:            https://github.com/rust-vmm/vm-virtio
 #!RemoteAsset:  sha256:091f1f09cfbf2a78563b562e7a949465cce1aef63b6065645188d995162f8868
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

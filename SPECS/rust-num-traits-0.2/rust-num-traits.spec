@@ -15,7 +15,7 @@ Summary:        Rust crate "num-traits"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-num/num-traits
 #!RemoteAsset:  sha256:071dfc062690e90b734c0b2273ce72ad0ffa95f0c74596bc250dcfd960262841
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

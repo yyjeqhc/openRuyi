@@ -15,7 +15,7 @@ Summary:        Rust crate "libfuzzer-sys"
 License:        (MIT OR Apache-2.0) AND NCSA
 URL:            https://github.com/rust-fuzz/libfuzzer
 #!RemoteAsset:  sha256:f12a681b7dd8ce12bff52488013ba614b869148d54dd79836ab85aafdd53f08d
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

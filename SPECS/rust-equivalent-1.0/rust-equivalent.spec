@@ -15,7 +15,7 @@ Summary:        Rust crate "equivalent"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/indexmap-rs/equivalent
 #!RemoteAsset:  sha256:877a4ace8713b0bcf2a4e7eec82529c029f1d0619886d18145fea96c3ffe5c0f
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

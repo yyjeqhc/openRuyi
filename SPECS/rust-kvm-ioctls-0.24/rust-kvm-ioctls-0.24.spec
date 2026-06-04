@@ -15,7 +15,7 @@ Summary:        Rust crate "kvm-ioctls"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/rust-vmm/kvm
 #!RemoteAsset:  sha256:333f77a20344a448f3f70664918135fddeb804e938f28a99d685bd92926e0b19
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

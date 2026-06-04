@@ -15,7 +15,7 @@ Summary:        Rust crate "crypto-common"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/RustCrypto/traits
 #!RemoteAsset:  sha256:77727bb15fa921304124b128af125e7e3b968275d1b108b379190264f4423710
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

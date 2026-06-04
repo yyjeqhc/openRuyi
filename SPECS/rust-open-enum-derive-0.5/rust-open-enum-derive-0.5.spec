@@ -15,7 +15,7 @@ Summary:        Rust crate "open-enum-derive"
 License:        Apache-2.0
 URL:            https://github.com/kupiakos/open-enum/tree/main/derive
 #!RemoteAsset:  sha256:8d1296fab5231654a5aec8bf9e87ba4e3938c502fc4c3c0425a00084c78944be
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

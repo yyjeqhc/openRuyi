@@ -15,7 +15,7 @@ Summary:        Rust crate "vhost-user-backend"
 License:        Apache-2.0
 URL:            https://github.com/rust-vmm/vhost
 #!RemoteAsset:  sha256:d5925983d8fb537752ad3e26604c0a17abfa5de77cb6773a096c8a959c9eca0f
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "notify"
 License:        CC0-1.0
 URL:            https://github.com/notify-rs/notify
 #!RemoteAsset:  sha256:4d3d07927151ff8575b7087f245456e549fea62edf0ec4e565a5ee50c8402bc3
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

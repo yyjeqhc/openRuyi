@@ -15,7 +15,7 @@ Summary:        Rust crate "anyhow"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/dtolnay/anyhow
 #!RemoteAsset:  sha256:7f202df86484c868dbad7eaa557ef785d5c66295e41b460ef922eca0723b842c
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
