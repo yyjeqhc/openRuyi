@@ -85,6 +85,17 @@ replace-with = "vendored-sources"
 directory = "vendor"
 EOF
 
+# Disambiguate multi-version crates (have choice errors from %cargo_buildrequires)
+BuildRequires:  rust-anstream-1.0
+BuildRequires:  rust-anstyle-parse-1.0
+BuildRequires:  rust-block-buffer-0.12
+BuildRequires:  rust-const-oid-0.10
+BuildRequires:  rust-crypto-common-0.2
+BuildRequires:  rust-digest-0.11
+BuildRequires:  rust-itertools-0.14
+BuildRequires:  rust-sha2-0.11
+BuildRequires:  rust-signal-hook-0.4
+
 %generate_buildrequires
 %cargo_buildrequires
 
