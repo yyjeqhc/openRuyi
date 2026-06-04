@@ -101,12 +101,15 @@ replace-with = "vendored-sources"
 directory = "vendor"
 EOF
 
+# Update Cargo.lock to match system registry versions
+# (some crates like serde_with may have newer versions in registry)
+cargo update 2>/dev/null || true
+
 %generate_buildrequires
 %cargo_buildrequires
 
 %build
 export OPENSSL_NO_VENDOR=1
-rm -f Cargo.lock
 cargo build --release --target=%{rust_def_target} %{cargo_pkg_feature_opts}
 cargo build --release --target=%{rust_def_target} --package vhost_user_net
 cargo build --release --target=%{rust_def_target} --package vhost_user_block
