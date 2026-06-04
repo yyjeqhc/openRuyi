@@ -27,6 +27,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(libc/default) >= 0.2.66
 Requires:       crate(vmm-sys-util/default) >= 0.15.0
 Provides:       crate(%{pkgname})
+Provides:       crate(%{crate_name}) = %{version}
 Provides:       crate(%{pkgname}/default)
 
 %description

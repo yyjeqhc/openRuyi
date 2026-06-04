@@ -86,7 +86,8 @@ fi
 echo '{"files":{},"package":null}' > deps/micro-http/.cargo-checksum.json
 
 # Patch Cargo.toml to use local path instead of git URL
-sed -i 's|micro_http = { git = "https://github.com/firecracker-microvm/micro-http", branch = "main" }|micro_http = { path = "deps/micro-http" }|' vmm/Cargo.toml
+# Note: vmm/Cargo.toml is in vmm/ subdirectory, so use ../deps/micro-http
+sed -i 's|micro_http = { git = "https://github.com/firecracker-microvm/micro-http", branch = "main" }|micro_http = { path = "../deps/micro-http" }|' vmm/Cargo.toml
 
 # Configure cargo to use system registry
 mkdir -p ~/.cargo
