@@ -18,10 +18,8 @@ License:        Apache-2.0 OR BSD-3-Clause
 #!CreateArchive
 Source0:        %{name}-%{version}.tar.gz
 
-%global micro_http_commit 876f3feccc30e09225f2c77bf95a6b2d46a9259e
-#!RemoteAsset:  git+https://github.com/firecracker-microvm/micro-http.git#%{micro_http_commit}
-#!CreateArchive
-Source1:        micro-http-%{micro_http_commit}.tar.gz
+# Pre-patched Cargo.lock with versions matching system registry
+Source1:        Cargo.lock
 
 BuildSystem:    rust
 
@@ -32,22 +30,6 @@ BuildRequires:  gcc
 BuildRequires:  glibc-devel
 BuildRequires:  binutils
 BuildRequires:  pkgconfig(openssl)
-
-# Disambiguate multi-version crates
-BuildRequires:  crate(anstream-1.0)
-BuildRequires:  crate(anstyle-parse-1.0)
-BuildRequires:  crate(block-buffer-0.12)
-BuildRequires:  crate(const-oid-0.10)
-BuildRequires:  crate(crypto-common-0.2)
-BuildRequires:  crate(digest-0.11)
-BuildRequires:  crate(itertools-0.14)
-BuildRequires:  crate(sha2-0.11)
-BuildRequires:  crate(signal-hook-0.4)
-BuildRequires:  crate(dirs-6.0)
-BuildRequires:  crate(dirs-sys-0.5)
-BuildRequires:  crate(redox-users-0.5)
-BuildRequires:  crate(wasi-0.14)
-BuildRequires:  crate(bitfield-struct-0.13)
 
 Requires:       bash
 Requires:       glibc
@@ -74,37 +56,8 @@ handled by paravirtualised devices (i.e. virtio), no requirement for legacy
 devices and recent CPUs and KVM.
 
 %prep -a
-# Set up micro-http as a local crate dependency (git dep, not on crates.io)
-mkdir -p vendor/micro-http
-tar xf %{SOURCE1} -C vendor/micro-http --strip-components=1
-
-# Create .cargo-checksum.json for git dependency (required by cargo)
-echo '{"files":{},"package":null}' > vendor/micro-http/.cargo-checksum.json
-
-# Create .cargo/config.toml:
-# - crates-io deps use system registry (/usr/share/cargo/registry)
-# - micro-http (git dep) is vendored locally
-mkdir -p .cargo
-cat > .cargo/config.toml << 'EOF'
-[source.crates-io]
-replace-with = "system-registry"
-
-[source.system-registry]
-directory = "/usr/share/cargo/registry"
-
-[source."git+https://github.com/firecracker-microvm/micro-http?branch=main"]
-git = "https://github.com/firecracker-microvm/micro-http"
-branch = "main"
-replace-with = "vendored-sources"
-
-[source.vendored-sources]
-directory = "vendor"
-EOF
-
-# Fix version mismatches between Cargo.lock and system registry
-# cargo update doesn't work with directory source replacement
-sed -i 's/name = "serde_with"\nversion = "3.18.0"/name = "serde_with"\nversion = "3.19.0"/' Cargo.lock
-sed -i '/^name = "serde_with"/,/^$/{s/version = "3.18.0"/version = "3.19.0"/; s/checksum = "dd5414fad8e6907dbdd5bc441a50ae8d6e26151a03b1de04d89a5576de61d01f"/checksum = "f05839ce67618e14a09b286535c0d9c94e85ef25469b0e13cb4f844e5593eb19"/}' Cargo.lock
+# Use pre-patched Cargo.lock with versions matching system registry
+cp %{SOURCE1} Cargo.lock
 
 %generate_buildrequires
 %cargo_buildrequires
