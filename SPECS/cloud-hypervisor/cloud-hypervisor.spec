@@ -18,8 +18,9 @@ License:        Apache-2.0 OR BSD-3-Clause
 #!CreateArchive
 Source0:        %{name}-%{version}.tar.gz
 
-# Pre-patched Cargo.lock with versions matching system registry
-Source1:        Cargo.lock
+#!RemoteAsset:  git+https://github.com/firecracker-microvm/micro-http.git#876f3feccc30e09225f2c77bf95a6b2d46a9259e
+#!CreateArchive
+Source1:        micro-http.tar.gz
 
 BuildSystem:    rust
 
@@ -71,12 +72,29 @@ handled by paravirtualised devices (i.e. virtio), no requirement for legacy
 devices and recent CPUs and KVM.
 
 %prep -a
-# Use pre-patched Cargo.lock with versions matching system registry
-cp %{SOURCE1} Cargo.lock
+# Extract micro-http git dependency to deps/
+mkdir -p deps
+tar -xf %{SOURCE1} -C deps/
+mv deps/micro-http-* deps/micro-http
 
-# Temporarily disabled to see build log for git+ source handling
-# %generate_buildrequires
-# %cargo_buildrequires
+# Create .cargo-checksum.json for git dependency
+echo '{"files":{},"package":null}' > deps/micro-http/.cargo-checksum.json
+
+# Patch Cargo.toml to use local path instead of git URL
+sed -i 's|micro_http = { git = "https://github.com/firecracker-microvm/micro-http", branch = "main" }|micro_http = { path = "deps/micro-http" }|' vmm/Cargo.toml
+
+# Configure cargo to use system registry
+mkdir -p ~/.cargo
+cat > ~/.cargo/config.toml <<EOF
+[source.crates-io]
+replace-with = "system-registry"
+
+[source.system-registry]
+directory = "/usr/share/cargo/registry"
+EOF
+
+%generate_buildrequires
+%cargo_buildrequires
 
 %build
 export OPENSSL_NO_VENDOR=1
