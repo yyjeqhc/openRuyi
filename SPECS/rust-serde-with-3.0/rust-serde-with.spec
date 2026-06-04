@@ -15,7 +15,7 @@ Summary:        Rust crate "serde_with"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/jonasbb/serde_with/
 #!RemoteAsset:  sha256:e72c1c2cb7b223fafb600a619537a871c2818583d619401b785e7c0b746ccde2
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "fdt"
 License:        MPL-2.0
 URL:            https://github.com/repnop/fdt
 #!RemoteAsset:  sha256:c8ccfb5c9d9425b2191070f0435636f4a9cdfedd107e33b15f861622b222726a
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

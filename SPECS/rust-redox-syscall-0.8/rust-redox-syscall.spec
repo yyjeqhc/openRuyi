@@ -15,7 +15,7 @@ Summary:        Rust crate "redox_syscall"
 License:        MIT
 URL:            https://gitlab.redox-os.org/redox-os/syscall
 #!RemoteAsset:  sha256:5b44b894f2a6e36457d665d1e08c3866add6ed5e70050c1b4ba8a8ddedb02ce7
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -15,7 +15,7 @@ Summary:        Rust crate "ipnetwork"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/achanda/ipnetwork
 #!RemoteAsset:  sha256:cf370abdafd54d13e54a620e8c3e1145f28e46cc9d704bc6d94414559df41763
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

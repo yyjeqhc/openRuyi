@@ -15,7 +15,7 @@ Summary:        Rust crate "vm-memory"
 License:        Apache-2.0 OR BSD-3-Clause
 URL:            https://github.com/rust-vmm/vm-memory
 #!RemoteAsset:  sha256:9b55e753c7725603745cb32b2287ef7ef3da05c03c7702cda3fa8abe25ae0465
-Source:         https://static.crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
