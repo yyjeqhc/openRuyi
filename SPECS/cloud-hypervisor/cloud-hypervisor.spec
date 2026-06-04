@@ -46,7 +46,6 @@ BuildRequires:  crate(dirs-6.0)
 BuildRequires:  crate(dirs-sys-0.5)
 BuildRequires:  crate(redox-users-0.5)
 BuildRequires:  crate(wasi-0.14)
-BuildRequires:  crate(fdt-0.2.0-alpha2)
 
 Requires:       bash
 Requires:       glibc
