@@ -1388,7 +1388,7 @@ dependencies = [
 [[package]]
 name = "micro_http"
 version = "0.1.0"
-source = "git+https://github.com/firecracker-microvm/micro-http?branch=main#876f3feccc30e09225f2c77bf95a6b2d46a9259e"
+source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "libc",
  "vmm-sys-util",
