@@ -31,6 +31,21 @@ BuildRequires:  glibc-devel
 BuildRequires:  binutils
 BuildRequires:  pkgconfig(openssl)
 
+# Disambiguate multi-version crates
+BuildRequires:  crate(anstream-1.0)
+BuildRequires:  crate(anstyle-parse-1.0)
+BuildRequires:  crate(block-buffer-0.12)
+BuildRequires:  crate(const-oid-0.10)
+BuildRequires:  crate(crypto-common-0.2)
+BuildRequires:  crate(digest-0.11)
+BuildRequires:  crate(itertools-0.14)
+BuildRequires:  crate(sha2-0.11)
+BuildRequires:  crate(signal-hook-0.4)
+BuildRequires:  crate(dirs-6.0)
+BuildRequires:  crate(dirs-sys-0.5)
+BuildRequires:  crate(redox-users-0.5)
+BuildRequires:  crate(wasi-0.14)
+
 Requires:       bash
 Requires:       glibc
 Requires:       libcap
