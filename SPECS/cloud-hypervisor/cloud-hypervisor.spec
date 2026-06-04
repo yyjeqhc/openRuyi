@@ -75,7 +75,12 @@ devices and recent CPUs and KVM.
 # Extract micro-http git dependency to deps/
 mkdir -p deps
 tar -xf %{SOURCE1} -C deps/
-mv deps/micro-http-* deps/micro-http
+# git+ archives extract to directory named after repo (no version suffix)
+if [ -d deps/micro-http ]; then
+  : # already exists
+elif [ -d deps/micro-http-* ]; then
+  mv deps/micro-http-* deps/micro-http
+fi
 
 # Create .cargo-checksum.json for git dependency
 echo '{"files":{},"package":null}' > deps/micro-http/.cargo-checksum.json
