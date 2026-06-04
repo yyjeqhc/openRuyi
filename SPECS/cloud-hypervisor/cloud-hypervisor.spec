@@ -101,9 +101,10 @@ replace-with = "vendored-sources"
 directory = "vendor"
 EOF
 
-# Update Cargo.lock to match system registry versions
-# (some crates like serde_with may have newer versions in registry)
-cargo update 2>/dev/null || true
+# Fix version mismatches between Cargo.lock and system registry
+# cargo update doesn't work with directory source replacement
+sed -i 's/name = "serde_with"\nversion = "3.18.0"/name = "serde_with"\nversion = "3.19.0"/' Cargo.lock
+sed -i '/^name = "serde_with"/,/^$/{s/version = "3.18.0"/version = "3.19.0"/; s/checksum = "dd5414fad8e6907dbdd5bc441a50ae8d6e26151a03b1de04d89a5576de61d01f"/checksum = "f05839ce67618e14a09b286535c0d9c94e85ef25469b0e13cb4f844e5593eb19"/}' Cargo.lock
 
 %generate_buildrequires
 %cargo_buildrequires
