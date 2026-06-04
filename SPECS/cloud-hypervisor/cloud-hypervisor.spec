@@ -74,8 +74,9 @@ devices and recent CPUs and KVM.
 # Use pre-patched Cargo.lock with versions matching system registry
 cp %{SOURCE1} Cargo.lock
 
-%generate_buildrequires
-%cargo_buildrequires
+# Temporarily disabled to see build log for git+ source handling
+# %generate_buildrequires
+# %cargo_buildrequires
 
 %build
 export OPENSSL_NO_VENDOR=1
