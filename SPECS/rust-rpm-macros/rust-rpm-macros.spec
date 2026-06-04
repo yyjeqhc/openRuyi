@@ -9,9 +9,9 @@ Version:        0.4.1
 Release:        %autorelease
 Summary:        Rust macros for openRuyi packaging
 License:        MIT
-URL:            https://github.com/openRuyi-Project/rust-rpm-macros
+URL:            https://github.com/yyjeqhc/rust-rpm-macros
 #!RemoteAsset:  sha256:3a57fc92361d19303bdaa7de3bf5c81c55d10cf0fd61100e35c5c61528d8be26
-Source0:        https://github.com/openRuyi-Project/rust-rpm-macros/archive/refs/tags/v%{version}.tar.gz
+Source0:        https://github.com/yyjeqhc/rust-rpm-macros/archive/refs/tags/v%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    autotools
 
