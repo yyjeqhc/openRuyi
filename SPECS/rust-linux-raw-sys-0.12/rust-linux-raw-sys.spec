@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name linux-raw-sys
 %global full_version 0.12.1
 %global pkgname linux-raw-sys-0.12
@@ -15,7 +9,7 @@ Summary:        Rust crate "linux-raw-sys"
 License:        Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT
 URL:            https://github.com/sunfishcode/linux-raw-sys
 #!RemoteAsset:  sha256:32a66949e030da00e8c7d4434b251670a91556f4144941d37452769c25d58a53
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

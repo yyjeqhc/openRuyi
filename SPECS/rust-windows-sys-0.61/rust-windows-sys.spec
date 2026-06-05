@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name windows-sys
 %global full_version 0.61.2
 %global pkgname windows-sys-0.61
@@ -15,7 +9,7 @@ Summary:        Rust crate "windows-sys"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/microsoft/windows-rs
 #!RemoteAsset:  sha256:ae137229bcbd6cdf0f7b80a31df61766145077ddf49416a728b02cb3921ff3fc
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

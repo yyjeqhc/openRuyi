@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: purofle <yuguo.or@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name libredox
 %global full_version 0.1.16
 %global pkgname libredox-0.1
@@ -15,13 +9,12 @@ Summary:        Rust crate "libredox"
 License:        MIT
 URL:            https://gitlab.redox-os.org/redox-os/libredox.git
 #!RemoteAsset:  sha256:e02f3bb43d335493c96bf3fd3a321600bf6bd07ed34bc64118e9293bdffea46c
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(libredox) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

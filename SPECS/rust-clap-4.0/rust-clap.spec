@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name clap
 %global full_version 4.6.1
 %global pkgname clap-4.0
@@ -15,14 +9,13 @@ Summary:        Rust crate "clap"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/clap-rs/clap
 #!RemoteAsset:  sha256:1ddb117e43bbf7dacf0a4190fef4d345b9bad68dfc649cb349e7d17d28428e51
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(clap-builder-4.0) >= 4.6.0
-Provides:       crate(clap) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/unstable-derive-ui-tests)
 

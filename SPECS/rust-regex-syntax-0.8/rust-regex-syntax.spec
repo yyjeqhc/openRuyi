@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: Xuhai Chang <xuhai.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name regex-syntax
 %global full_version 0.8.10
 %global pkgname regex-syntax-0.8
@@ -15,7 +9,7 @@ Summary:        Rust crate "regex-syntax"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-lang/regex/tree/master/regex-syntax
 #!RemoteAsset:  sha256:dc897dd8d9e8bd1ed8cdad82b5966c3e0ecae09fb1907d58efaa013543185d0a
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

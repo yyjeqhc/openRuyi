@@ -1,28 +1,22 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: purofle <yuguo.or@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name libz-sys
-%global full_version 1.1.25
+%global full_version 1.1.28
 %global pkgname libz-sys-1.0
 
 Name:           rust-libz-sys-1.0
-Version:        1.1.25
+Version:        1.1.28
 Release:        %autorelease
 Summary:        Rust crate "libz-sys"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-lang/libz-sys
-#!RemoteAsset:  sha256:d52f4c29e2a68ac30c9087e1b772dc9f44a2b66ed44edf2266cf2be9b03dafc1
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+#!RemoteAsset:  sha256:fc3a226e576f50782b3305c5ccf458698f92798987f551c6a02efe8276721e22
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(cc-1.0/default) >= 1.2.58
-Requires:       crate(pkg-config-0.3/default) >= 0.3.32
+Requires:       crate(cc-1.0/default) >= 1.2.61
+Requires:       crate(pkg-config-0.3/default) >= 0.3.33
 Requires:       crate(vcpkg-0.2/default) >= 0.2.15
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/asm)
@@ -54,7 +48,7 @@ This metapackage enables feature "default" for the Rust libz-sys crate, by pulli
 %package     -n %{name}+libc
 Summary:        Low-level bindings to the system libz library (also known as zlib) - feature "libc" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(libc-0.2/default) >= 0.2.184
+Requires:       crate(libc-0.2/default) >= 0.2.186
 Provides:       crate(%{pkgname}/libc)
 Provides:       crate(%{pkgname}/zlib-ng-no-cmake-experimental-community-maintained)
 

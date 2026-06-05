@@ -1,12 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: Xuhai Chang <xuhai.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
-%global debug_package %{nil}
-%global __debug_install_post %{nil}
-
 %global crate_name hermit-abi
 %global full_version 0.5.2
 %global pkgname hermit-abi-0.5
@@ -18,7 +9,7 @@ Summary:        Rust crate "hermit-abi"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/hermit-os/hermit-rs
 #!RemoteAsset:  sha256:fc0fef456e4baa96da950455cd02c081ca953b141298e41db3fc7e36b1da849c
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

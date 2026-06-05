@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name parking_lot
 %global full_version 0.12.5
 %global pkgname parking-lot-0.12
@@ -15,7 +9,7 @@ Summary:        Rust crate "parking_lot"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/Amanieu/parking_lot
 #!RemoteAsset:  sha256:93857453250e3077bd71ff98b6a65ea6621a19bb0f559a85248955ac12c45a1a
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: panglars <panghao.riscv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name spin
 %global full_version 0.9.8
 %global pkgname spin-0.9
@@ -15,13 +9,12 @@ Summary:        Rust crate "spin"
 License:        MIT
 URL:            https://github.com/mvdnes/spin-rs.git
 #!RemoteAsset:  sha256:6980e8d7511241f8acf4aebddbb1ff938df5eebe98691418c4468d0b72a96a67
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(spin) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/barrier)
 Provides:       crate(%{pkgname}/fair-mutex)
@@ -54,7 +47,7 @@ This metapackage enables feature "default" for the Rust spin crate, by pulling i
 %package     -n %{name}+lock-api-crate
 Summary:        Spin-based synchronization primitives - feature "lock_api_crate" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(lock-api-0.4/default) >= 0.4.0
+Requires:       crate(lock-api-0.4/default) >= 0.4.14
 Provides:       crate(%{pkgname}/lock-api)
 Provides:       crate(%{pkgname}/lock-api-crate)
 

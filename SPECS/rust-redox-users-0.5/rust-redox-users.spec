@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: panglars <panghao.riscv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name redox_users
 %global full_version 0.5.2
 %global pkgname redox-users-0.5
@@ -15,18 +9,17 @@ Summary:        Rust crate "redox_users"
 License:        MIT
 URL:            https://gitlab.redox-os.org/redox-os/users
 #!RemoteAsset:  sha256:a4e608c6638b9c18977b00b475ac1f28d14e84b27d8d42f70e0bf1e3dec127ac
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(getrandom-0.2/default) >= 0.2.0
-Requires:       crate(getrandom-0.2/std) >= 0.2.0
-Requires:       crate(libredox-0.1/call) >= 0.1.3
-Requires:       crate(libredox-0.1/std) >= 0.1.3
-Requires:       crate(thiserror-2.0/default) >= 2.0.0
-Provides:       crate(redox-users) = %{version}
+Requires:       crate(getrandom-0.2/default) >= 0.2.17
+Requires:       crate(getrandom-0.2/std) >= 0.2.17
+Requires:       crate(libredox-0.1/call) >= 0.1.16
+Requires:       crate(libredox-0.1/std) >= 0.1.16
+Requires:       crate(thiserror-2.0/default) >= 2.0.18
 Provides:       crate(%{pkgname})
 
 %description

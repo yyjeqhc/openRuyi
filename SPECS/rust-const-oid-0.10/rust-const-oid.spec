@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: panglars <panghao.riscv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name const-oid
 %global full_version 0.10.2
 %global pkgname const-oid-0.10
@@ -15,13 +9,12 @@ Summary:        Rust crate "const-oid"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/RustCrypto/formats/tree/master/const-oid
 #!RemoteAsset:  sha256:a6ef517f0926dd24a1582492c791b6a4818a4d94e789a334894aa15b0d12f55c
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(const-oid) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/db)
 Provides:       crate(%{pkgname}/default)

@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: panglars <panghao.riscv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name sha2
 %global full_version 0.11.0
 %global pkgname sha2-0.11
@@ -15,7 +9,7 @@ Summary:        Rust crate "sha2"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/RustCrypto/hashes
 #!RemoteAsset:  sha256:446ba717509524cb3f22f17ecc096f10f4822d76ab5c0b9822c5f9c284e825f4
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
@@ -24,7 +18,6 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(cfg-if-1.0/default) >= 1.0.4
 Requires:       crate(cpufeatures-0.3/default) >= 0.3.0
 Requires:       crate(digest-0.11/default) >= 0.11.3
-Provides:       crate(sha2) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

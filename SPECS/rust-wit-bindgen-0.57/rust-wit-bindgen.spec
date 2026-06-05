@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: Xuhai Chang <xuhai.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name wit-bindgen
 %global full_version 0.57.1
 %global pkgname wit-bindgen-0.57
@@ -15,7 +9,7 @@ Summary:        Rust crate "wit-bindgen"
 License:        Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT
 URL:            https://github.com/bytecodealliance/wit-bindgen
 #!RemoteAsset:  sha256:1ebf944e87a7c253233ad6766e082e3cd714b5d03812acc24c318f549614536e
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

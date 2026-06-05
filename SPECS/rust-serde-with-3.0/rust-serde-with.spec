@@ -1,28 +1,21 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: panglars <panghao.riscv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name serde_with
-%global full_version 3.19.0
+%global full_version 3.18.0
 %global pkgname serde-with-3.0
 
 Name:           rust-serde-with-3.0
-Version:        3.19.0
+Version:        3.18.0
 Release:        %autorelease
 Summary:        Rust crate "serde_with"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/jonasbb/serde_with/
-#!RemoteAsset:  sha256:f05839ce67618e14a09b286535c0d9c94e85ef25469b0e13cb4f844e5593eb19
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+#!RemoteAsset:  sha256:dd5414fad8e6907dbdd5bc441a50ae8d6e26151a03b1de04d89a5576de61d01f
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(serde-core-1.0/result) >= 1.0.228
-Provides:       crate(serde-with) = %{version}
 Provides:       crate(%{pkgname})
 
 %description
@@ -31,8 +24,14 @@ Source code for takopackized Rust crate "serde_with"
 %package     -n %{name}+alloc
 Summary:        Custom de/serialization functions for Rust's serde - feature "alloc"
 Requires:       crate(%{pkgname})
+Requires:       crate(base64-0.22/alloc) >= 0.22.1
+Requires:       crate(chrono-0.4/alloc) >= 0.4.20
+Requires:       crate(chrono-0.4/serde) >= 0.4.20
+Requires:       crate(hex-0.4/alloc) >= 0.4.3
 Requires:       crate(serde-core-1.0/alloc) >= 1.0.228
 Requires:       crate(serde-core-1.0/result) >= 1.0.228
+Requires:       crate(serde-json-1.0/alloc) >= 1.0.145
+Requires:       crate(time-0.3/alloc) >= 0.3.47
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -51,7 +50,7 @@ This metapackage enables feature "base64" for the Rust serde_with crate, by pull
 %package     -n %{name}+chrono-0-4
 Summary:        Custom de/serialization functions for Rust's serde - feature "chrono_0_4" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(chrono-0.4/serde) >= 0.4.44
+Requires:       crate(chrono-0.4/serde) >= 0.4.20
 Provides:       crate(%{pkgname}/chrono)
 Provides:       crate(%{pkgname}/chrono-0-4)
 
@@ -111,16 +110,6 @@ Provides:       crate(%{pkgname}/hashbrown-0-16)
 %description -n %{name}+hashbrown-0-16
 This metapackage enables feature "hashbrown_0_16" for the Rust serde_with crate, by pulling in any additional dependencies needed by that feature.
 
-%package     -n %{name}+hashbrown-0-17
-Summary:        Custom de/serialization functions for Rust's serde - feature "hashbrown_0_17"
-Requires:       crate(%{pkgname})
-Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(hashbrown-0.17/serde) >= 0.17.0
-Provides:       crate(%{pkgname}/hashbrown-0-17)
-
-%description -n %{name}+hashbrown-0-17
-This metapackage enables feature "hashbrown_0_17" for the Rust serde_with crate, by pulling in any additional dependencies needed by that feature.
-
 %package     -n %{name}+hex
 Summary:        Custom de/serialization functions for Rust's serde - feature "hex"
 Requires:       crate(%{pkgname})
@@ -148,7 +137,7 @@ Additionally, this package also provides the "indexmap" feature.
 Summary:        Custom de/serialization functions for Rust's serde - feature "indexmap_2"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(indexmap-2.14.0/serde) >= 2.14.0
+Requires:       crate(indexmap-2.0/serde) >= 2.0.0
 Provides:       crate(%{pkgname}/indexmap-2)
 
 %description -n %{name}+indexmap-2
@@ -158,7 +147,7 @@ This metapackage enables feature "indexmap_2" for the Rust serde_with crate, by 
 Summary:        Custom de/serialization functions for Rust's serde - feature "json"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(serde-json-1.0) >= 1.0.149
+Requires:       crate(serde-json-1.0) >= 1.0.145
 Provides:       crate(%{pkgname}/json)
 
 %description -n %{name}+json
@@ -167,7 +156,7 @@ This metapackage enables feature "json" for the Rust serde_with crate, by pullin
 %package     -n %{name}+macros
 Summary:        Custom de/serialization functions for Rust's serde - feature "macros"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-with-macros-3.0/default) >= 3.19.0
+Requires:       crate(serde-with-macros-3.0/default) >= 3.18.0
 Provides:       crate(%{pkgname}/macros)
 
 %description -n %{name}+macros
@@ -177,8 +166,8 @@ This metapackage enables feature "macros" for the Rust serde_with crate, by pull
 Summary:        Custom de/serialization functions for Rust's serde - feature "schemars_0_8"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/std)
-Requires:       crate(schemars-1.0) >= 1.2.1
-Requires:       crate(serde-with-macros-3.0/schemars-0-8) >= 3.19.0
+Requires:       crate(schemars-0.8) >= 0.8.16
+Requires:       crate(serde-with-macros-3.0/schemars-0-8) >= 3.18.0
 Provides:       crate(%{pkgname}/schemars-0-8)
 
 %description -n %{name}+schemars-0-8
@@ -188,9 +177,9 @@ This metapackage enables feature "schemars_0_8" for the Rust serde_with crate, b
 Summary:        Custom de/serialization functions for Rust's serde - feature "schemars_0_9"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(schemars-1.0) >= 1.2.1
-Requires:       crate(serde-json-1.0) >= 1.0.149
-Requires:       crate(serde-with-macros-3.0/schemars-0-9) >= 3.19.0
+Requires:       crate(schemars-0.9) >= 0.9.0
+Requires:       crate(serde-json-1.0) >= 1.0.145
+Requires:       crate(serde-with-macros-3.0/schemars-0-9) >= 3.18.0
 Provides:       crate(%{pkgname}/schemars-0-9)
 
 %description -n %{name}+schemars-0-9
@@ -200,9 +189,9 @@ This metapackage enables feature "schemars_0_9" for the Rust serde_with crate, b
 Summary:        Custom de/serialization functions for Rust's serde - feature "schemars_1"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(schemars-1.0) >= 1.2.1
-Requires:       crate(serde-json-1.0) >= 1.0.149
-Requires:       crate(serde-with-macros-3.0/schemars-1) >= 3.19.0
+Requires:       crate(schemars-1.0) >= 1.0.2
+Requires:       crate(serde-json-1.0) >= 1.0.145
+Requires:       crate(serde-with-macros-3.0/schemars-1) >= 3.18.0
 Provides:       crate(%{pkgname}/schemars-1)
 
 %description -n %{name}+schemars-1
@@ -221,8 +210,17 @@ This metapackage enables feature "smallvec_1" for the Rust serde_with crate, by 
 Summary:        Custom de/serialization functions for Rust's serde - feature "std"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
+Requires:       crate(chrono-0.4/clock) >= 0.4.20
+Requires:       crate(chrono-0.4/serde) >= 0.4.20
+Requires:       crate(chrono-0.4/std) >= 0.4.20
+Requires:       crate(indexmap-1.0/serde) >= 1.8.0
+Requires:       crate(indexmap-1.0/serde-1) >= 1.8
+Requires:       crate(indexmap-1.0/std) >= 1.8.0
+Requires:       crate(schemars-1.0/std) >= 1.0.2
 Requires:       crate(serde-core-1.0/result) >= 1.0.228
 Requires:       crate(serde-core-1.0/std) >= 1.0.228
+Requires:       crate(time-0.3/serde-well-known) >= 0.3.47
+Requires:       crate(time-0.3/std) >= 0.3.47
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std

@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: purofle <yuguo.or@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name flate2
 %global full_version 1.1.9
 %global pkgname flate2-1.0
@@ -15,7 +9,7 @@ Summary:        Rust crate "flate2"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-lang/flate2-rs
 #!RemoteAsset:  sha256:843fba2746e448b37e26a819579957415c8cef339bf08564fe8b7ddbd959573c
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
@@ -47,7 +41,7 @@ Summary:        DEFLATE compression and decompression exposed as Read/BufRead/Wr
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/any-c-zlib)
 Requires:       crate(%{pkgname}/cloudflare-zlib-sys)
-Requires:       crate(crc32fast-1.0/default) >= 1.2.0
+Requires:       crate(crc32fast-1.0/default) >= 1.5.0
 Provides:       crate(%{pkgname}/cloudflare-zlib)
 
 %description -n %{name}+cloudflare-zlib
@@ -88,7 +82,7 @@ This metapackage enables feature "libz-sys" for the Rust flate2 crate, by pullin
 Summary:        DEFLATE compression and decompression exposed as Read/BufRead/Write streams - feature "miniz_oxide"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/any-impl)
-Requires:       crate(crc32fast-1.0/default) >= 1.2.0
+Requires:       crate(crc32fast-1.0/default) >= 1.5.0
 Requires:       crate(miniz-oxide-0.8/simd) >= 0.8.9
 Requires:       crate(miniz-oxide-0.8/with-alloc) >= 0.8.9
 Provides:       crate(%{pkgname}/miniz-oxide)
@@ -117,7 +111,7 @@ Summary:        DEFLATE compression and decompression exposed as Read/BufRead/Wr
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/any-c-zlib)
 Requires:       crate(%{pkgname}/libz-sys)
-Requires:       crate(crc32fast-1.0/default) >= 1.2.0
+Requires:       crate(crc32fast-1.0/default) >= 1.5.0
 Provides:       crate(%{pkgname}/zlib)
 
 %description -n %{name}+zlib
@@ -128,7 +122,7 @@ This metapackage enables feature "zlib" for the Rust flate2 crate, by pulling in
 Summary:        DEFLATE compression and decompression exposed as Read/BufRead/Write streams - feature "zlib-default"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/any-c-zlib)
-Requires:       crate(crc32fast-1.0/default) >= 1.2.0
+Requires:       crate(crc32fast-1.0/default) >= 1.5.0
 Requires:       crate(libz-sys-1.0/default) >= 1.1.20
 Provides:       crate(%{pkgname}/zlib-default)
 
@@ -141,7 +135,7 @@ Summary:        DEFLATE compression and decompression exposed as Read/BufRead/Wr
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/any-c-zlib)
 Requires:       crate(%{pkgname}/libz-ng-sys)
-Requires:       crate(crc32fast-1.0/default) >= 1.2.0
+Requires:       crate(crc32fast-1.0/default) >= 1.5.0
 Provides:       crate(%{pkgname}/zlib-ng)
 
 %description -n %{name}+zlib-ng
@@ -152,7 +146,7 @@ This metapackage enables feature "zlib-ng" for the Rust flate2 crate, by pulling
 Summary:        DEFLATE compression and decompression exposed as Read/BufRead/Write streams - feature "zlib-ng-compat"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/zlib)
-Requires:       crate(crc32fast-1.0/default) >= 1.2.0
+Requires:       crate(crc32fast-1.0/default) >= 1.5.0
 Requires:       crate(libz-sys-1.0/zlib-ng) >= 1.1.20
 Provides:       crate(%{pkgname}/zlib-ng-compat)
 
@@ -164,8 +158,8 @@ This metapackage enables feature "zlib-ng-compat" for the Rust flate2 crate, by 
 Summary:        DEFLATE compression and decompression exposed as Read/BufRead/Write streams - feature "zlib-rs"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/any-zlib)
-Requires:       crate(zlib-rs-0.6/rust-allocator) >= 0.6.3
-Requires:       crate(zlib-rs-0.6/std) >= 0.6.3
+Requires:       crate(zlib-rs-0.6/rust-allocator) >= 0.6.0
+Requires:       crate(zlib-rs-0.6/std) >= 0.6.0
 Provides:       crate(%{pkgname}/zlib-rs)
 
 %description -n %{name}+zlib-rs

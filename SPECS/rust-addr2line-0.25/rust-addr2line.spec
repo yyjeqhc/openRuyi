@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: panglars <panghao.riscv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name addr2line
 %global full_version 0.25.1
 %global pkgname addr2line-0.25
@@ -15,14 +9,13 @@ Summary:        Rust crate "addr2line"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/gimli-rs/addr2line
 #!RemoteAsset:  sha256:1b5d307320b3181d6d7954e663bd7c774a838b8220fe0593c86d9fb09f498b4b
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(gimli-0.32/read) >= 0.32.3
-Provides:       crate(addr2line) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/cargo-all)
 

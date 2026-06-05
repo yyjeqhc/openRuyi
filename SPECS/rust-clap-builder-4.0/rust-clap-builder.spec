@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name clap_builder
 %global full_version 4.6.0
 %global pkgname clap-builder-4.0
@@ -15,7 +9,7 @@ Summary:        Rust crate "clap_builder"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/clap-rs/clap
 #!RemoteAsset:  sha256:714a53001bf66416adb0e2ef5ac857140e7dc3a0c48fb28b2f10762fc4b5069f
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
@@ -119,7 +113,7 @@ This metapackage enables feature "unstable-doc" for the Rust clap_builder crate,
 Summary:        Simple to use, efficient, and full-featured Command Line Argument Parser - feature "wrap_help"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/help)
-Requires:       crate(terminal-size-0.4/default) >= 0.4.3
+Requires:       crate(terminal-size-0.4/default) >= 0.4.4
 Provides:       crate(%{pkgname}/wrap-help)
 
 %description -n %{name}+wrap-help

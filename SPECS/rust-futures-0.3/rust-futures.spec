@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: panglars <panghao.riscv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name futures
 %global full_version 0.3.32
 %global pkgname futures-0.3
@@ -15,7 +9,7 @@ Summary:        Rust crate "futures"
 License:        MIT OR Apache-2.0
 URL:            https://rust-lang.github.io/futures-rs
 #!RemoteAsset:  sha256:8b147ee9d1f6d097cef9ce628cd2ee62288d963e16fb287bd9286455b241382d
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
@@ -27,7 +21,6 @@ Requires:       crate(futures-io-0.3) >= 0.3.32
 Requires:       crate(futures-sink-0.3) >= 0.3.32
 Requires:       crate(futures-task-0.3) >= 0.3.32
 Requires:       crate(futures-util-0.3/sink) >= 0.3.32
-Provides:       crate(futures) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/cfg-target-has-atomic)
 

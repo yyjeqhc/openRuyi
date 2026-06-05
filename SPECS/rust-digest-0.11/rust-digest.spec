@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: panglars <panghao.riscv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name digest
 %global full_version 0.11.3
 %global pkgname digest-0.11
@@ -15,14 +9,13 @@ Summary:        Rust crate "digest"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/RustCrypto/traits
 #!RemoteAsset:  sha256:f1dd6dbb5841937940781866fa1281a1ff7bd3bf827091440879f9994983d5c2
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(crypto-common-0.2/default) >= 0.2.1
-Provides:       crate(digest) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/alloc)
 
@@ -66,7 +59,7 @@ This metapackage enables feature "getrandom" for the Rust digest crate, by pulli
 %package     -n %{name}+mac
 Summary:        Traits for cryptographic hash functions and message authentication codes - feature "mac"
 Requires:       crate(%{pkgname})
-Requires:       crate(ctutils-0.4/default) >= 0.4.2
+Requires:       crate(ctutils-0.4/default) >= 0.4.0
 Provides:       crate(%{pkgname}/mac)
 
 %description -n %{name}+mac

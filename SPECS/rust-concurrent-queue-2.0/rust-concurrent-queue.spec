@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: panglars <panghao.riscv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name concurrent-queue
 %global full_version 2.5.0
 %global pkgname concurrent-queue-2.0
@@ -15,14 +9,13 @@ Summary:        Rust crate "concurrent-queue"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/smol-rs/concurrent-queue
 #!RemoteAsset:  sha256:4ca0197aee26d1ae37445ee532fefce43251d24cc7c166799f4d46817f1d3973
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(crossbeam-utils-0.8) >= 0.8.21
-Provides:       crate(concurrent-queue) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)

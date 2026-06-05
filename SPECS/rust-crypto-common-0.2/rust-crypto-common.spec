@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: panglars <panghao.riscv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name crypto-common
 %global full_version 0.2.1
 %global pkgname crypto-common-0.2
@@ -15,14 +9,13 @@ Summary:        Rust crate "crypto-common"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/RustCrypto/traits
 #!RemoteAsset:  sha256:77727bb15fa921304124b128af125e7e3b968275d1b108b379190264f4423710
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(hybrid-array-0.4/default) >= 0.4.11
-Provides:       crate(crypto-common) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 
@@ -33,8 +26,8 @@ Source code for takopackized Rust crate "crypto-common"
 Summary:        Common traits used by cryptographic algorithms - feature "getrandom"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/rand-core)
-Requires:       crate(getrandom-0.4/default) >= 0.4.2
-Requires:       crate(getrandom-0.4/sys-rng) >= 0.4.2
+Requires:       crate(getrandom-0.4/default) >= 0.4.0
+Requires:       crate(getrandom-0.4/sys-rng) >= 0.4.0
 Provides:       crate(%{pkgname}/getrandom)
 
 %description -n %{name}+getrandom
@@ -43,7 +36,7 @@ This metapackage enables feature "getrandom" for the Rust crypto-common crate, b
 %package     -n %{name}+rand-core
 Summary:        Common traits used by cryptographic algorithms - feature "rand_core"
 Requires:       crate(%{pkgname})
-Requires:       crate(rand-core-0.10/default) >= 0.10.1
+Requires:       crate(rand-core-0.10/default) >= 0.10.0
 Provides:       crate(%{pkgname}/rand-core)
 
 %description -n %{name}+rand-core

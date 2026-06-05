@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: purofle <yuguo.or@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name slab
 %global full_version 0.4.12
 %global pkgname slab-0.4
@@ -15,7 +9,7 @@ Summary:        Rust crate "slab"
 License:        MIT
 URL:            https://github.com/tokio-rs/slab
 #!RemoteAsset:  sha256:0c790de23124f9ab44544d7ac05d60440adc586479ce501c1d6d7da3cd8c9cf5
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

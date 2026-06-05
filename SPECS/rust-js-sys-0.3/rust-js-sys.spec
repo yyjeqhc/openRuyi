@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: Xuhai Chang <xuhai.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name js-sys
 %global full_version 0.3.98
 %global pkgname js-sys-0.3
@@ -15,7 +9,7 @@ Summary:        Rust crate "js-sys"
 License:        MIT OR Apache-2.0
 URL:            https://wasm-bindgen.github.io/wasm-bindgen/
 #!RemoteAsset:  sha256:67df7112613f8bfd9150013a0314e196f4800d3201ae742489d999db2f979f08
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
@@ -24,7 +18,6 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(cfg-if-1.0/default) >= 1.0.4
 Requires:       crate(once-cell-1.0) >= 1.21.4
 Requires:       crate(wasm-bindgen-0.2) >= 0.2.121
-Provides:       crate(js-sys) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/unsafe-eval)
 

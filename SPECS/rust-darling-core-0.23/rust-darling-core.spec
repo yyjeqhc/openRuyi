@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: panglars <panghao.riscv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name darling_core
 %global full_version 0.23.0
 %global pkgname darling-core-0.23
@@ -15,7 +9,7 @@ Summary:        Rust crate "darling_core"
 License:        MIT
 URL:            https://github.com/TedDriggs/darling
 #!RemoteAsset:  sha256:9865a50f7c335f53564bb694ef660825eb8610e0a53d3e11bf1b0d3df31e03b0
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
@@ -27,7 +21,6 @@ Requires:       crate(quote-1.0/default) >= 1.0.45
 Requires:       crate(syn-2.0/default) >= 2.0.117
 Requires:       crate(syn-2.0/extra-traits) >= 2.0.117
 Requires:       crate(syn-2.0/full) >= 2.0.117
-Provides:       crate(darling-core) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/diagnostics)

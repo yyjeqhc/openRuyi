@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name wasip2
 %global full_version 1.0.3+wasi-0.2.9
 %global pkgname wasip2-1.0
@@ -15,14 +9,13 @@ Summary:        Rust crate "wasip2"
 License:        Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT
 URL:            https://github.com/bytecodealliance/wasi-rs
 #!RemoteAsset:  sha256:20064672db26d7cdc89c7798c48a0fdfac8213434a1186e5ef29fd560ae223d6
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(wit-bindgen-0.57) >= 0.57.1
-Provides:       crate(wasip2) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/std)
 

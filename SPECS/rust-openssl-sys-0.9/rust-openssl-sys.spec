@@ -1,29 +1,23 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: purofle <yuguo.or@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name openssl-sys
-%global full_version 0.9.112
+%global full_version 0.9.115
 %global pkgname openssl-sys-0.9
 
 Name:           rust-openssl-sys-0.9
-Version:        0.9.112
+Version:        0.9.115
 Release:        %autorelease
 Summary:        Rust crate "openssl-sys"
 License:        MIT
 URL:            https://github.com/rust-openssl/rust-openssl
-#!RemoteAsset:  sha256:57d55af3b3e226502be1526dfdba67ab0e9c96fc293004e79576b2b9edb0dbdb
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+#!RemoteAsset:  sha256:158fe5b292746440aa6e7a7e690e55aeb72d41505e2804c23c6973ad0e9c9781
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(cc-1.0/default) >= 1.2.58
-Requires:       crate(libc-0.2/default) >= 0.2.184
-Requires:       crate(pkg-config-0.3/default) >= 0.3.32
+Requires:       crate(cc-1.0/default) >= 1.2.61
+Requires:       crate(libc-0.2/default) >= 0.2.186
+Requires:       crate(pkg-config-0.3/default) >= 0.3.33
 Requires:       crate(vcpkg-0.2/default) >= 0.2.15
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
@@ -34,8 +28,8 @@ Source code for takopackized Rust crate "openssl-sys"
 %package     -n %{name}+aws-lc
 Summary:        FFI bindings to OpenSSL - feature "aws-lc"
 Requires:       crate(%{pkgname})
-Requires:       crate(aws-lc-sys-0.38/default) >= 0.38.0
-Requires:       crate(aws-lc-sys-0.38/ssl) >= 0.38.0
+Requires:       crate(aws-lc-sys-0.39/default) >= 0.39.0
+Requires:       crate(aws-lc-sys-0.39/ssl) >= 0.39.0
 Provides:       crate(%{pkgname}/aws-lc)
 
 %description -n %{name}+aws-lc
@@ -77,8 +71,8 @@ Additionally, this package also provides the "unstable_boringssl" feature.
 %package     -n %{name}+openssl-src
 Summary:        FFI bindings to OpenSSL - feature "openssl-src" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(openssl-src-300.0/default) >= 300.5.5
-Requires:       crate(openssl-src-300.0/legacy) >= 300.5.5
+Requires:       crate(openssl-src-300.0/default) >= 300.6.0
+Requires:       crate(openssl-src-300.0/legacy) >= 300.6.0
 Provides:       crate(%{pkgname}/openssl-src)
 Provides:       crate(%{pkgname}/vendored)
 

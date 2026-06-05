@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: purofle <yuguo.or@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name tracing-attributes
 %global full_version 0.1.31
 %global pkgname tracing-attributes-0.1
@@ -15,7 +9,7 @@ Summary:        Rust crate "tracing-attributes"
 License:        MIT
 URL:            https://tokio.rs
 #!RemoteAsset:  sha256:7490cfa5ec963746568740651ac6781f701c9c5ea257c58e057f3ba8cf69e8da
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

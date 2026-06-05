@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name wit-parser
 %global full_version 0.244.0
 %global pkgname wit-parser-0.244
@@ -15,7 +9,7 @@ Summary:        Rust crate "wit-parser"
 License:        Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT
 URL:            https://github.com/bytecodealliance/wasm-tools/tree/main/crates/wit-parser
 #!RemoteAsset:  sha256:ecc8ac4bc1dc3381b7f59c34f00b67e18f910c2c0f50015669dde7def656a736
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
@@ -23,9 +17,9 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(anyhow-1.0/default) >= 1.0.102
 Requires:       crate(id-arena-2.0/default) >= 2.3.0
-Requires:       crate(indexmap-2.0/std) >= 2.13.0
+Requires:       crate(indexmap-2.0/std) >= 2.14.0
 Requires:       crate(log-0.4/default) >= 0.4.29
-Requires:       crate(semver-1.0) >= 1.0.27
+Requires:       crate(semver-1.0) >= 1.0.28
 Requires:       crate(unicode-xid-0.2/default) >= 0.2.6
 Provides:       crate(%{pkgname})
 
@@ -59,8 +53,8 @@ This metapackage enables feature "default" for the Rust wit-parser crate, by pul
 Summary:        Tooling for parsing `*.wit` files and working with their contents - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/serde-json)
-Requires:       crate(indexmap-2.0/serde) >= 2.13.0
-Requires:       crate(indexmap-2.0/std) >= 2.13.0
+Requires:       crate(indexmap-2.0/serde) >= 2.14.0
+Requires:       crate(indexmap-2.0/std) >= 2.14.0
 Requires:       crate(serde-1.0/alloc) >= 1.0.228
 Requires:       crate(serde-derive-1.0/default) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
