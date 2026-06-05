@@ -1,10 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
-# SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
-# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 Name:           perl-DateTime
 Version:        1.66
 Release:        %autorelease
@@ -12,12 +5,16 @@ Summary:        Date and time object for Perl
 License:        Artistic-2.0
 URL:            https://metacpan.org/dist/DateTime
 #!RemoteAsset:  sha256:afabd686fb83d3ebf49ee453974f9122f3eec9b25ff8d2ddf4f12de92af1e5e2
-Source0:        http://www.cpan.org/authors/id/D/DR/DROLSKY/DateTime-%{version}.tar.gz
+Source0:        https://www.cpan.org/authors/id/D/DR/DROLSKY/DateTime-%{version}.tar.gz
+BuildSystem:    perlmaker
+
+BuildOption(build):  INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
 
 BuildRequires:  make
 BuildRequires:  perl-rpm-packaging
+BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
-BuildRequires:  perl-devel >= 5.8.4
+BuildRequires:  perl >= 5.8.4
 BuildRequires:  perl(Carp)
 BuildRequires:  perl(CPAN::Meta::Check) >= 0.011
 BuildRequires:  perl(CPAN::Meta::Requirements)
@@ -63,19 +60,6 @@ Requires:       perl(Specio) >= 0.50
 %description
 DateTime is a class for the representation of date/time combinations, and
 is part of the Perl DateTime project.
-
-%prep
-%setup -q -n DateTime-%{version}
-
-%build
-perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
-%{make_build}
-
-%install
-%perl_make_install
-find %{buildroot} -type f -name '*.bs' -size 0 -exec rm -f {} \;
-%perl_process_packlist
-%perl_gen_filelist
 
 %files -f %{name}.files
 %doc azure-pipelines.yml Changes CODE_OF_CONDUCT.md CONTRIBUTING.md CREDITS leaptab.txt perlcriticrc perltidyrc precious.toml README.md TODO

@@ -1,22 +1,19 @@
-# SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
-# SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
-# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 Name:           perl-File-Copy-Recursive
 Version:        0.45
 Release:        %autorelease
 Summary:        Perl extension for recursively copying files and directories
 License:        GPL-1.0-or-later OR Artistic-1.0-Perl
 URL:            https://metacpan.org/dist/File-Copy-Recursive
-#!RemoteAsset
-Source0:        http://www.cpan.org/authors/id/D/DM/DMUEY/File-Copy-Recursive-%{version}.tar.gz
+#!RemoteAsset:  sha256:d3971cf78a8345e38042b208bb7b39cb695080386af629f4a04ffd6549df1157
+Source0:        https://www.cpan.org/authors/id/D/DM/DMUEY/File-Copy-Recursive-%{version}.tar.gz
 BuildArch:      noarch
+BuildSystem:    perlmaker
+
+BuildOption(build):  INSTALLDIRS=vendor
 
 BuildRequires:  make
 BuildRequires:  perl-rpm-packaging
+BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
 BuildRequires:  perl(Cwd)
 BuildRequires:  perl(ExtUtils::MakeMaker)
@@ -36,20 +33,8 @@ This module copies and moves directories recursively (or single files,
 well... singley) to an optional depth and attempts to preserve each file or
 directory's mode.
 
-%prep
-%setup -q -n File-Copy-Recursive-%{version}
-
-%build
-perl Makefile.PL INSTALLDIRS=vendor
-%{make_build}
-
-%install
-%perl_make_install
-%perl_process_packlist
-%perl_gen_filelist
-
 %files -f %{name}.files
 %doc Changes README README.md
 
 %changelog
-%{?autochangelog}
+%autochangelog

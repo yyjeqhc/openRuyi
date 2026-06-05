@@ -1,22 +1,19 @@
-# SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
-# SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
-# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 Name:           perl-Perl-MinimumVersion
 Version:        1.44
 Release:        %autorelease
 Summary:        Find a minimum required version of perl for Perl code
 License:        GPL-1.0-or-later OR Artistic-1.0-Perl
 URL:            https://metacpan.org/dist/Perl-MinimumVersion
-#!RemoteAsset
-Source0:        http://www.cpan.org/authors/id/D/DB/DBOOK/Perl-MinimumVersion-%{version}.tar.gz
+#!RemoteAsset:  sha256:ffa9c8a2f099660a81361eb8bac56a335793b3e160fa5b1d97078b83142ce8cb
+Source0:        https://www.cpan.org/authors/id/D/DB/DBOOK/Perl-MinimumVersion-%{version}.tar.gz
 BuildArch:      noarch
+BuildSystem:    perlmaker
+
+BuildOption(build):  INSTALLDIRS=vendor
 
 BuildRequires:  make
 BuildRequires:  perl-rpm-packaging
+BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
 BuildRequires:  perl >= 5.6.0
 BuildRequires:  perl(Carp)
@@ -50,20 +47,8 @@ Perl::MinimumVersion takes Perl source code and calculates the minimum
 version of perl required to be able to run it. Because it is based on PPI,
 it can do this without having to actually load the code.
 
-%prep
-%setup -q -n Perl-MinimumVersion-%{version}
-
-%build
-perl Makefile.PL INSTALLDIRS=vendor
-%{make_build}
-
-%install
-%perl_make_install
-%perl_process_packlist
-%perl_gen_filelist
-
 %files -f %{name}.files
 %doc Changes README
 
 %changelog
-%{?autochangelog}
+%autochangelog

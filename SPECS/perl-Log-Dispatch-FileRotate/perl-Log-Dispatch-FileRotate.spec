@@ -1,22 +1,19 @@
-# SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
-# SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
-# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 Name:           perl-Log-Dispatch-FileRotate
 Version:        1.38
 Release:        %autorelease
 Summary:        Log to Files that Archive/Rotate Themselves
 License:        GPL-1.0-or-later OR Artistic-1.0-Perl
 URL:            https://metacpan.org/dist/Log-Dispatch-FileRotate
-#!RemoteAsset
-Source0:        http://www.cpan.org/authors/id/M/MS/MSCHOUT/Log-Dispatch-FileRotate-%{version}.tar.gz
+#!RemoteAsset:  sha256:b55d6cede3f0a06426488fbfa554f4561320b014c1023893ced29508e5bce4ec
+Source0:        https://www.cpan.org/authors/id/M/MS/MSCHOUT/Log-Dispatch-FileRotate-%{version}.tar.gz
 BuildArch:      noarch
+BuildSystem:    perlmaker
+
+BuildOption(build):  INSTALLDIRS=vendor
 
 BuildRequires:  make
 BuildRequires:  perl-rpm-packaging
+BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
 BuildRequires:  perl >= 5.8.0
 BuildRequires:  perl(base)
@@ -48,20 +45,8 @@ simple object for logging to files under the Log::Dispatch::* system, and
 automatically rotating them according to different constraints. This is
 basically a Log::Dispatch::File wrapper with additions.
 
-%prep
-%setup -q -n Log-Dispatch-FileRotate-%{version}
-
-%build
-perl Makefile.PL INSTALLDIRS=vendor
-%{make_build}
-
-%install
-%perl_make_install
-%perl_process_packlist
-%perl_gen_filelist
-
 %files -f %{name}.files
 %doc Changes README
 
 %changelog
-%{?autochangelog}
+%autochangelog

@@ -1,22 +1,19 @@
-# SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
-# SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
-# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 Name:           perl-DateTime-Format-Strptime
-Version:        1.79
+Version:        1.80
 Release:        %autorelease
 Summary:        Parse and format strp and strf time patterns
 License:        Artistic-2.0
 URL:            https://metacpan.org/dist/DateTime-Format-Strptime
-#!RemoteAsset
-Source0:        http://www.cpan.org/authors/id/D/DR/DROLSKY/DateTime-Format-Strptime-%{version}.tar.gz
+#!RemoteAsset:  sha256:efe5e2be70425efc123a4e57f4b96b2d23beb03200c8326495b5b433b6b77158
+Source0:        https://www.cpan.org/authors/id/D/DR/DROLSKY/DateTime-Format-Strptime-%{version}.tar.gz
 BuildArch:      noarch
+BuildSystem:    perlmaker
+
+BuildOption(build):  INSTALLDIRS=vendor
 
 BuildRequires:  make
 BuildRequires:  perl-rpm-packaging
+BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
 BuildRequires:  perl(Carp)
 BuildRequires:  perl(constant)
@@ -57,20 +54,8 @@ reverse of strftime(3), for DateTime. While strftime takes a DateTime and a
 pattern and returns a string, strptime takes a string and a pattern and
 returns the DateTime object associated.
 
-%prep
-%setup -q -n DateTime-Format-Strptime-%{version}
-
-%build
-perl Makefile.PL INSTALLDIRS=vendor
-%{make_build}
-
-%install
-%perl_make_install
-%perl_process_packlist
-%perl_gen_filelist
-
 %files -f %{name}.files
-%doc azure-pipelines.yml bench Changes CODE_OF_CONDUCT.md CONTRIBUTING.md perlcriticrc perltidyrc precious.toml README.md
+%doc bench Changes CODE_OF_CONDUCT.md CONTRIBUTING.md git mise.toml perlcriticrc perltidyrc precious.toml README.md
 
 %changelog
-%{?autochangelog}
+%autochangelog

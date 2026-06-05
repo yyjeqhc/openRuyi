@@ -1,21 +1,19 @@
-# SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
-# SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
-# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 Name:           perl-PPIx-Utilities
 Version:        1.001000
 Release:        %autorelease
 Summary:        Extensions to PPI
 License:        GPL-1.0-or-later OR Artistic-1.0-Perl
 URL:            https://metacpan.org/dist/PPIx-Utilities
-#!RemoteAsset
-Source0:        http://www.cpan.org/authors/id/E/EL/ELLIOTJS/PPIx-Utilities-%{version}.tar.gz
+#!RemoteAsset:  sha256:03a483386fd6a2c808f09778d44db06b02c3140fb24ba4bf12f851f46d3bcb9b
+Source0:        https://www.cpan.org/authors/id/E/EL/ELLIOTJS/PPIx-Utilities-%{version}.tar.gz
 BuildArch:      noarch
+BuildSystem:    perlbuild
+
+BuildOption(build):  --installdirs=vendor
+BuildOption(install):  --destdir=%{buildroot} --create_packlist=0
 
 BuildRequires:  perl-rpm-packaging
+BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
 BuildRequires:  perl(base)
 BuildRequires:  perl(Data::Dumper)
@@ -45,20 +43,8 @@ kind of PPI class they relate to, by replacing the "PPI" at the front of
 the module name with "PPIx::Utilities", e.g. functionality related to
 PPI::Nodes is in PPIx::Utilities::Node.
 
-%prep
-%setup -q -n PPIx-Utilities-%{version}
-
-%build
-perl Build.PL --installdirs=vendor
-./Build
-
-%install
-./Build install destdir=%{buildroot} create_packlist=0
-%perl_process_packlist
-%perl_gen_filelist
-
 %files -f %{name}.files
 %doc Changes README xt
 
 %changelog
-%{?autochangelog}
+%autochangelog

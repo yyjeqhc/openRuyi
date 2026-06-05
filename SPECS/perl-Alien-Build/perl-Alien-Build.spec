@@ -1,10 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
-# SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
-# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 Name:           perl-Alien-Build
 Version:        2.84
 Release:        %autorelease
@@ -12,12 +5,16 @@ Summary:        Build external dependencies for use in CPAN
 License:        GPL-1.0-or-later OR Artistic-1.0-Perl
 URL:            https://metacpan.org/dist/Alien-Build
 #!RemoteAsset:  sha256:8e891fd3acbac39dd8fdc01376b9abff931e625be41e0910ca30ad59363b4477
-Source0:        http://www.cpan.org/authors/id/P/PL/PLICEASE/Alien-Build-%{version}.tar.gz
+Source0:        https://www.cpan.org/authors/id/P/PL/PLICEASE/Alien-Build-%{version}.tar.gz
+BuildSystem:    perlmaker
+
+BuildOption(build):  INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
 
 BuildRequires:  make
 BuildRequires:  perl-rpm-packaging
+BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
-BuildRequires:  perl-devel >= 5.8.4
+BuildRequires:  perl >= 5.8.4
 BuildRequires:  perl(Capture::Tiny) >= 0.17
 BuildRequires:  perl(Digest::SHA)
 BuildRequires:  perl(ExtUtils::CBuilder)
@@ -48,19 +45,6 @@ Requires:       perl(Text::ParseWords) >= 3.26
 This module provides tools for building external (non-CPAN) dependencies
 for CPAN. It is mainly designed to be used at install time of a CPAN
 client, and work closely with Alien::Base which is used at runtime.
-
-%prep
-%setup -q -n Alien-Build-%{version}
-
-%build
-perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
-%{make_build}
-
-%install
-%perl_make_install
-find %{buildroot} -type f -name '*.bs' -size 0 -exec rm -f {} \;
-%perl_process_packlist
-%perl_gen_filelist
 
 %files -f %{name}.files
 %doc author.yml Changes Changes.Alien-Base Changes.Alien-Base-Wrapper Changes.Alien-Build-Decode-Mojo Changes.Test-Alien perlcriticrc README spellcheck.ini SUPPORT weaver.ini

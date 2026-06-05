@@ -1,22 +1,19 @@
-# SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
-# SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
-# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 Name:           perl-DBD-CSV
 Version:        0.62
 Release:        %autorelease
 Summary:        DBI driver for CSV files
 License:        GPL-1.0-or-later OR Artistic-1.0-Perl
 URL:            https://metacpan.org/dist/DBD-CSV
-#!RemoteAsset
-Source0:        http://www.cpan.org/authors/id/H/HM/HMBRAND/DBD-CSV-%{version}.tgz
+#!RemoteAsset:  sha256:d3f1150fe2067c0e3d14958765ea8d419583498f963136b0402daa930bc930e3
+Source0:        https://www.cpan.org/authors/id/H/HM/HMBRAND/DBD-CSV-%{version}.tgz
 BuildArch:      noarch
+BuildSystem:    perlmaker
+
+BuildOption(build):  INSTALLDIRS=vendor
 
 BuildRequires:  make
 BuildRequires:  perl-rpm-packaging
+BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
 BuildRequires:  perl >= 5.8.1
 BuildRequires:  perl(charnames)
@@ -45,20 +42,8 @@ and the abstract DBI driver DBD::File and implements access to so-called
 CSV files (Comma Separated Values). Such files are often used for exporting
 MS Access and MS Excel data.
 
-%prep
-%setup -q -n DBD-CSV-%{version}
-
-%build
-perl Makefile.PL INSTALLDIRS=vendor
-%{make_build}
-
-%install
-%perl_make_install
-%perl_process_packlist
-%perl_gen_filelist
-
 %files -f %{name}.files
 %doc ChangeLog CONTRIBUTING.md README SECURITY.md
 
 %changelog
-%{?autochangelog}
+%autochangelog
