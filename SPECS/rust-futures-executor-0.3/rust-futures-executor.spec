@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: panglars <panghao.riscv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name futures-executor
 %global full_version 0.3.32
 %global pkgname futures-executor-0.3
@@ -15,7 +9,7 @@ Summary:        Rust crate "futures-executor"
 License:        MIT OR Apache-2.0
 URL:            https://rust-lang.github.io/futures-rs
 #!RemoteAsset:  sha256:baf29c38818342a3b26b5b923639e7b1f4a61fc5e76102d4b1981c6dc7a7579d
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
@@ -24,7 +18,6 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(futures-core-0.3) >= 0.3.32
 Requires:       crate(futures-task-0.3) >= 0.3.32
 Requires:       crate(futures-util-0.3) >= 0.3.32
-Provides:       crate(futures-executor) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: purofle <yuguo.or@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name getrandom
 %global full_version 0.2.17
 %global pkgname getrandom-0.2
@@ -15,14 +9,14 @@ Summary:        Rust crate "getrandom"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-random/getrandom
 #!RemoteAsset:  sha256:ff2abc00be7fca6ebc474524697ae276ad847ad0a6b3faa4bcb027e9a4614ad0
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(cfg-if-1.0/default) >= 1.0.4
-Requires:       crate(libc-0.2) >= 0.2.184
+Requires:       crate(libc-0.2) >= 0.2.186
 Requires:       crate(wasi-0.11) >= 0.11.1
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/custom)
@@ -77,7 +71,7 @@ Summary:        Small cross-platform library for retrieving random data from sys
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/compiler-builtins)
 Requires:       crate(%{pkgname}/core)
-Requires:       crate(libc-0.2/rustc-dep-of-std) >= 0.2.184
+Requires:       crate(libc-0.2/rustc-dep-of-std) >= 0.2.186
 Requires:       crate(wasi-0.11/rustc-dep-of-std) >= 0.11.1
 Provides:       crate(%{pkgname}/rustc-dep-of-std)
 

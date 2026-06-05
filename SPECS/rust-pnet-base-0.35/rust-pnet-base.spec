@@ -1,0 +1,49 @@
+%global crate_name pnet_base
+%global full_version 0.35.0
+%global pkgname pnet-base-0.35
+
+Name:           rust-pnet-base-0.35
+Version:        0.35.0
+Release:        %autorelease
+Summary:        Rust crate "pnet_base"
+License:        MIT OR Apache-2.0
+URL:            https://github.com/libpnet/libpnet
+#!RemoteAsset:  sha256:ffc190d4067df16af3aba49b3b74c469e611cad6314676eaf1157f31aa0fb2f7
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
+BuildSystem:    rustcrates
+
+BuildRequires:  rust-rpm-macros
+
+Requires:       crate(no-std-net-0.6) >= 0.6.0
+Provides:       crate(%{pkgname})
+
+%description
+Source code for takopackized Rust crate "pnet_base"
+
+%package     -n %{name}+serde
+Summary:        Fundamental base types and code used by pnet - feature "serde"
+Requires:       crate(%{pkgname})
+Requires:       crate(serde-1.0) >= 1.0.171
+Provides:       crate(%{pkgname}/serde)
+
+%description -n %{name}+serde
+This metapackage enables feature "serde" for the Rust pnet_base crate, by pulling in any additional dependencies needed by that feature.
+
+%package     -n %{name}+std
+Summary:        Fundamental base types and code used by pnet - feature "std" and 1 more
+Requires:       crate(%{pkgname})
+Requires:       crate(no-std-net-0.6/std) >= 0.6.0
+Provides:       crate(%{pkgname}/default)
+Provides:       crate(%{pkgname}/std)
+
+%description -n %{name}+std
+This metapackage enables feature "std" for the Rust pnet_base crate, by pulling in any additional dependencies needed by that feature.
+
+Additionally, this package also provides the "default" feature.
+
+%files
+%{_datadir}/cargo/registry/%{crate_name}-%{version}/
+
+%changelog
+%autochangelog

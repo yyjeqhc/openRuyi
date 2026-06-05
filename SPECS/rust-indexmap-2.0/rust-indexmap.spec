@@ -1,28 +1,22 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name indexmap
-%global full_version 2.13.0
+%global full_version 2.14.0
 %global pkgname indexmap-2.0
 
 Name:           rust-indexmap-2.0
-Version:        2.13.0
+Version:        2.14.0
 Release:        %autorelease
 Summary:        Rust crate "indexmap"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/indexmap-rs/indexmap
-#!RemoteAsset:  sha256:7714e70437a7dc3ac8eb7e6f8df75fd8eb422675fc7678aff7364301092b1017
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+#!RemoteAsset:  sha256:d466e9454f08e4a911e14806c24e16fba1b4c121d1ea474396f396069cf949d9
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(equivalent-1.0) >= 1.0.2
-Requires:       crate(hashbrown-0.16) >= 0.16.1
+Requires:       crate(hashbrown-0.17) >= 0.17.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)

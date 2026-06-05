@@ -1,0 +1,33 @@
+%global crate_name bitfield-struct
+%global full_version 0.10.1
+%global pkgname bitfield-struct-0.10
+
+Name:           rust-bitfield-struct-0.10
+Version:        0.10.1
+Release:        %autorelease
+Summary:        Rust crate "bitfield-struct"
+License:        MIT
+URL:            https://github.com/wrenger/bitfield-struct-rs.git
+#!RemoteAsset:  sha256:2be5a46ba01b60005ae2c51a36a29cfe134bcacae2dd5cedcd4615fbaad1494b
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
+BuildSystem:    rustcrates
+
+BuildRequires:  rust-rpm-macros
+
+Requires:       crate(proc-macro2-1.0/default) >= 1.0.106
+Requires:       crate(quote-1.0/default) >= 1.0.45
+Requires:       crate(syn-2.0/default) >= 2.0.117
+Requires:       crate(syn-2.0/extra-traits) >= 2.0.117
+Requires:       crate(syn-2.0/full) >= 2.0.117
+Provides:       crate(%{pkgname})
+Provides:       crate(%{pkgname}/default)
+
+%description
+Source code for takopackized Rust crate "bitfield-struct"
+
+%files
+%{_datadir}/cargo/registry/%{crate_name}-%{version}/
+
+%changelog
+%autochangelog

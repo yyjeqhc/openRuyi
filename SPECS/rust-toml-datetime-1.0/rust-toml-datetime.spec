@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: panglars <panghao.riscv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name toml_datetime
 %global full_version 1.1.1+spec-1.1.0
 %global pkgname toml-datetime-1.0
@@ -15,13 +9,12 @@ Summary:        Rust crate "toml_datetime"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/toml-rs/toml
 #!RemoteAsset:  sha256:3165f65f62e28e0115a00b2ebdd37eb6f3b641855f9d636d3cd4103767159ad7
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(toml-datetime) = %{version}
 Provides:       crate(%{pkgname})
 
 %description

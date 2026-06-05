@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: panglars <panghao.riscv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name signal-hook
 %global full_version 0.4.4
 %global pkgname signal-hook-0.4
@@ -15,7 +9,7 @@ Summary:        Rust crate "signal-hook"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/vorner/signal-hook
 #!RemoteAsset:  sha256:b2a0c28ca5908dbdbcd52e6fdaa00358ab88637f8ab33e1f188dd510eb44b53d
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
@@ -23,7 +17,6 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(libc-0.2/default) >= 0.2.186
 Requires:       crate(signal-hook-registry-1.0/default) >= 1.4.8
-Provides:       crate(signal-hook) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/channel)
 Provides:       crate(%{pkgname}/iterator)

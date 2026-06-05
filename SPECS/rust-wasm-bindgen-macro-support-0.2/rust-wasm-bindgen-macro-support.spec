@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: Xuhai Chang <xuhai.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name wasm-bindgen-macro-support
 %global full_version 0.2.121
 %global pkgname wasm-bindgen-macro-support-0.2
@@ -15,7 +9,7 @@ Summary:        Rust crate "wasm-bindgen-macro-support"
 License:        MIT OR Apache-2.0
 URL:            https://wasm-bindgen.github.io/wasm-bindgen/
 #!RemoteAsset:  sha256:d95a9ec35c64b2a7cb35d3fead40c4238d0940c86d107136999567a4703259f2
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
@@ -30,7 +24,6 @@ Requires:       crate(syn-2.0/full) >= 2.0.117
 Requires:       crate(syn-2.0/visit) >= 2.0.117
 Requires:       crate(syn-2.0/visit-mut) >= 2.0.117
 Requires:       crate(wasm-bindgen-shared-0.2/default) >= 0.2.121
-Provides:       crate(wasm-bindgen-macro-support) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/strict-macro)

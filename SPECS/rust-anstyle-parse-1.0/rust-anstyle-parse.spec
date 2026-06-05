@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name anstyle-parse
 %global full_version 1.0.0
 %global pkgname anstyle-parse-1.0
@@ -15,7 +9,7 @@ Summary:        Rust crate "anstyle-parse"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-cli/anstyle.git
 #!RemoteAsset:  sha256:52ce7f38b242319f7cabaa6813055467063ecdc9d355bbb4ce0c68908cd8130e
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

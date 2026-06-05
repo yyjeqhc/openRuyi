@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name rustix
 %global full_version 1.1.4
 %global pkgname rustix-1.0
@@ -15,15 +9,15 @@ Summary:        Rust crate "rustix"
 License:        Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT
 URL:            https://github.com/bytecodealliance/rustix
 #!RemoteAsset:  sha256:b6fe4565b9518b83ef4f91bb47ce29620ca828bd32cb7e408f0062e9930ba190
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitflags-2.0) >= 2.11.0
+Requires:       crate(bitflags-2.0) >= 2.11.1
 Requires:       crate(errno-0.3) >= 0.3.14
-Requires:       crate(libc-0.2) >= 0.2.183
+Requires:       crate(libc-0.2) >= 0.2.186
 Requires:       crate(linux-raw-sys-0.12/auxvec) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/elf) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/errno) >= 0.12.1
@@ -115,7 +109,7 @@ This metapackage enables feature "io_uring" for the Rust rustix crate, by pullin
 %package     -n %{name}+libc
 Summary:        Safe Rust bindings to POSIX/Unix/Linux/Winsock-like syscalls - feature "libc"
 Requires:       crate(%{pkgname})
-Requires:       crate(libc-0.2) >= 0.2.183
+Requires:       crate(libc-0.2) >= 0.2.186
 Provides:       crate(%{pkgname}/libc)
 
 %description -n %{name}+libc
@@ -172,7 +166,7 @@ Summary:        Safe Rust bindings to POSIX/Unix/Linux/Winsock-like syscalls - f
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/core)
 Requires:       crate(%{pkgname}/rustc-std-workspace-alloc)
-Requires:       crate(bitflags-2.0/rustc-dep-of-std) >= 2.11.0
+Requires:       crate(bitflags-2.0/rustc-dep-of-std) >= 2.11.1
 Requires:       crate(linux-raw-sys-0.12/auxvec) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/elf) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/errno) >= 0.12.1
@@ -198,9 +192,9 @@ This metapackage enables feature "rustc-std-workspace-alloc" for the Rust rustix
 Summary:        Safe Rust bindings to POSIX/Unix/Linux/Winsock-like syscalls - feature "std" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(bitflags-2.0/std) >= 2.11.0
+Requires:       crate(bitflags-2.0/std) >= 2.11.1
 Requires:       crate(errno-0.3/std) >= 0.3.14
-Requires:       crate(libc-0.2/std) >= 0.2.183
+Requires:       crate(libc-0.2/std) >= 0.2.186
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
 

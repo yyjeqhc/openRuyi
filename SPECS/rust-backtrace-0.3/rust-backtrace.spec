@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: panglars <panghao.riscv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name backtrace
 %global full_version 0.3.76
 %global pkgname backtrace-0.3
@@ -15,7 +9,7 @@ Summary:        Rust crate "backtrace"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-lang/backtrace-rs
 #!RemoteAsset:  sha256:bb531853791a215d7c62a30daf0dde835f381ab5de4589cfe7c649d2cbe92bd6
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
@@ -34,7 +28,6 @@ Requires:       crate(object-0.37/unaligned) >= 0.37.3
 Requires:       crate(object-0.37/xcoff) >= 0.37.3
 Requires:       crate(rustc-demangle-0.1/default) >= 0.1.27
 Requires:       crate(windows-link-0.2/default) >= 0.2.1
-Provides:       crate(backtrace) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/coresymbolication)
 Provides:       crate(%{pkgname}/dbghelp)

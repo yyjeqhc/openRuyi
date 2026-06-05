@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: Xuhai Chang <xuhai.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name zerocopy-derive
 %global full_version 0.8.48
 %global pkgname zerocopy-derive-0.8
@@ -15,7 +9,7 @@ Summary:        Rust crate "zerocopy-derive"
 License:        BSD-2-Clause OR Apache-2.0 OR MIT
 URL:            https://github.com/google/zerocopy
 #!RemoteAsset:  sha256:70e3cd084b1788766f53af483dd21f93881ff30d7320490ec3ef7526d203bad4
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

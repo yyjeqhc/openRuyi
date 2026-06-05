@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name serde_core
 %global full_version 1.0.228
 %global pkgname serde-core-1.0
@@ -15,7 +9,7 @@ Summary:        Rust crate "serde_core"
 License:        MIT OR Apache-2.0
 URL:            https://serde.rs
 #!RemoteAsset:  sha256:41d385c7d4ca58e59fc732af25c3983b67ac852c1a25000afe1175de458b67ad
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

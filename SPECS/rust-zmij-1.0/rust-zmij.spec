@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name zmij
 %global full_version 1.0.21
 %global pkgname zmij-1.0
@@ -15,7 +9,7 @@ Summary:        Rust crate "zmij"
 License:        MIT
 URL:            https://github.com/dtolnay/zmij
 #!RemoteAsset:  sha256:b8848ee67ecc8aedbaf3e4122217aff892639231befc6a1b58d29fff4c2cabaa
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

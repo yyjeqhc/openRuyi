@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: panglars <panghao.riscv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name rand
 %global full_version 0.10.1
 %global pkgname rand-0.10
@@ -15,14 +9,13 @@ Summary:        Rust crate "rand"
 License:        MIT OR Apache-2.0
 URL:            https://rust-random.github.io/book
 #!RemoteAsset:  sha256:d2e8e8bcc7961af1fdac401278c6a831614941f6164ee3bf4ce61b7edb162207
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(rand-core-0.10) >= 0.10.1
-Provides:       crate(rand) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/log)

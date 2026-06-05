@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name getrandom
 %global full_version 0.4.2
 %global pkgname getrandom-0.4
@@ -15,16 +9,16 @@ Summary:        Rust crate "getrandom"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-random/getrandom
 #!RemoteAsset:  sha256:0de51e6874e94e7bf76d726fc5d13ba782deca734ff60d5bb2fb2607c7406555
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(cfg-if-1.0/default) >= 1.0.4
-Requires:       crate(libc-0.2) >= 0.2.183
+Requires:       crate(libc-0.2) >= 0.2.186
 Requires:       crate(r-efi-6.0) >= 6.0.0
-Requires:       crate(wasip2-1.0) >= 1.0.2
+Requires:       crate(wasip2-1.0) >= 1.0.3
 Requires:       crate(wasip3-0.4/default) >= 0.4.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
@@ -36,7 +30,7 @@ Source code for takopackized Rust crate "getrandom"
 %package     -n %{name}+sys-rng
 Summary:        Small cross-platform library for retrieving random data from system source - feature "sys_rng"
 Requires:       crate(%{pkgname})
-Requires:       crate(rand-core-0.10/default) >= 0.10.0
+Requires:       crate(rand-core-0.10/default) >= 0.10.1
 Provides:       crate(%{pkgname}/sys-rng)
 
 %description -n %{name}+sys-rng

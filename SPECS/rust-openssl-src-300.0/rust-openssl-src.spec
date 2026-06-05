@@ -1,27 +1,21 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: purofle <yuguo.or@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name openssl-src
-%global full_version 300.5.5+3.5.5
+%global full_version 300.6.0+3.6.2
 %global pkgname openssl-src-300.0
 
 Name:           rust-openssl-src-300.0
-Version:        300.5.5
+Version:        300.6.0
 Release:        %autorelease
 Summary:        Rust crate "openssl-src"
-License:        MIT/Apache-2.0
+License:        MIT OR Apache-2.0
 URL:            https://github.com/alexcrichton/openssl-src-rs
-#!RemoteAsset:  sha256:3f1787d533e03597a7934fd0a765f0d28e94ecc5fb7789f8053b1e699a56f709
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+#!RemoteAsset:  sha256:a8e8cbfd3a4a8c8f089147fd7aaa33cf8c7450c4d09f8f80698a0cf093abeff4
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(cc-1.0/default) >= 1.2.58
+Requires:       crate(cc-1.0/default) >= 1.2.61
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/camellia)
 Provides:       crate(%{pkgname}/default)

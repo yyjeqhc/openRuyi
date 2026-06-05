@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: purofle <yuguo.or@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name object
 %global full_version 0.37.3
 %global pkgname object-0.37
@@ -15,13 +9,13 @@ Summary:        Rust crate "object"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/gimli-rs/object
 #!RemoteAsset:  sha256:ff76201f031d8863c38aa7f905eca4f53abbfa15f609db4277d44cd8938f33fe
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(memchr-2.0) >= 2.4.1
+Requires:       crate(memchr-2.0) >= 2.8.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/archive)
 Provides:       crate(%{pkgname}/cargo-all)
@@ -152,7 +146,7 @@ Summary:        Unified interface for reading and writing object file formats - 
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(%{pkgname}/core)
-Requires:       crate(memchr-2.0/rustc-dep-of-std) >= 2.4.1
+Requires:       crate(memchr-2.0/rustc-dep-of-std) >= 2.8.0
 Provides:       crate(%{pkgname}/rustc-dep-of-std)
 
 %description -n %{name}+rustc-dep-of-std
@@ -161,7 +155,7 @@ This metapackage enables feature "rustc-dep-of-std" for the Rust object crate, b
 %package     -n %{name}+std
 Summary:        Unified interface for reading and writing object file formats - feature "std"
 Requires:       crate(%{pkgname})
-Requires:       crate(memchr-2.0/std) >= 2.4.1
+Requires:       crate(memchr-2.0/std) >= 2.8.0
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std

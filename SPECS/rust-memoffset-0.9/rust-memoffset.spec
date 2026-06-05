@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: Li Guan <guanli.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name memoffset
 %global full_version 0.9.1
 %global pkgname memoffset-0.9
@@ -15,13 +9,13 @@ Summary:        Rust crate "memoffset"
 License:        MIT
 URL:            https://github.com/Gilnaa/memoffset
 #!RemoteAsset:  sha256:488016bfae457b036d996092f6cb448677611ce4449e970ceaf42695203f218a
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(autocfg-1.0/default) >= 1.0.0
+Requires:       crate(autocfg-1.0/default) >= 1.5.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/unstable-const)

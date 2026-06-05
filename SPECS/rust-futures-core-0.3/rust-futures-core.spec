@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: purofle <yuguo.or@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name futures-core
 %global full_version 0.3.32
 %global pkgname futures-core-0.3
@@ -15,7 +9,7 @@ Summary:        Rust crate "futures-core"
 License:        MIT OR Apache-2.0
 URL:            https://rust-lang.github.io/futures-rs
 #!RemoteAsset:  sha256:7e3450815272ef58cec6d564423f6e755e25379b217b0bc688e295ba24df6b1d
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

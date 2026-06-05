@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: Xuhai Chang <xuhai.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name hashbrown
 %global full_version 0.17.0
 %global pkgname hashbrown-0.17
@@ -15,7 +9,7 @@ Summary:        Rust crate "hashbrown"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-lang/hashbrown
 #!RemoteAsset:  sha256:4f467dd6dccf739c208452f8014c75c18bb8301b050ad1cfb27153803edb0f51
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

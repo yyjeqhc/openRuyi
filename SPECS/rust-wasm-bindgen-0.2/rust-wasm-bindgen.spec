@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: Xuhai Chang <xuhai.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name wasm-bindgen
 %global full_version 0.2.121
 %global pkgname wasm-bindgen-0.2
@@ -15,7 +9,7 @@ Summary:        Rust crate "wasm-bindgen"
 License:        MIT OR Apache-2.0
 URL:            https://wasm-bindgen.github.io/wasm-bindgen
 #!RemoteAsset:  sha256:49ace1d07c165b0864824eee619580c4689389afa9dc9ed3a4c75040d82e6790
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
@@ -26,7 +20,6 @@ Requires:       crate(once-cell-1.0) >= 1.21.4
 Requires:       crate(rustversion-1.0/default) >= 1.0.22
 Requires:       crate(wasm-bindgen-macro-0.2/default) >= 0.2.121
 Requires:       crate(wasm-bindgen-shared-0.2/default) >= 0.2.121
-Provides:       crate(wasm-bindgen) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/enable-interning)

@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: panglars <panghao.riscv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name gimli
 %global full_version 0.32.3
 %global pkgname gimli-0.32
@@ -15,13 +9,12 @@ Summary:        Rust crate "gimli"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/gimli-rs/gimli
 #!RemoteAsset:  sha256:e629b9b98ef3dd8afe6ca2bd0f89306cec16d43d907889945bc5d6687f2f13c7
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(gimli) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/read)
 Provides:       crate(%{pkgname}/read-core)

@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: Xuhai Chang <xuhai.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name either
 %global full_version 1.15.0
 %global pkgname either-1.0
@@ -15,7 +9,7 @@ Summary:        Rust crate "either"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rayon-rs/either
 #!RemoteAsset:  sha256:48c757948c5ede0e46177b7add2e67155f70e33c07fea8284df6576da70b3719
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

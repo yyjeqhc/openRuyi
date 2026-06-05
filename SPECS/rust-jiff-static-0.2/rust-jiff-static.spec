@@ -1,21 +1,15 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: purofle <yuguo.or@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name jiff-static
-%global full_version 0.2.23
+%global full_version 0.2.24
 %global pkgname jiff-static-0.2
 
 Name:           rust-jiff-static-0.2
-Version:        0.2.23
+Version:        0.2.24
 Release:        %autorelease
 Summary:        Rust crate "jiff-static"
 License:        Unlicense OR MIT
 URL:            https://github.com/BurntSushi/jiff/tree/master/crates/jiff-static
-#!RemoteAsset:  sha256:2a8c8b344124222efd714b73bb41f8b5120b27a7cc1c75593a6ff768d9d05aa4
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+#!RemoteAsset:  sha256:e000de030ff8022ea1da3f466fbb0f3a809f5e51ed31f6dd931c35181ad8e6d7
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 

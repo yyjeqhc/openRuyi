@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: Xuhai Chang <xuhai.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name uuid
 %global full_version 1.23.1
 %global pkgname uuid-1.0
@@ -15,7 +9,7 @@ Summary:        Rust crate "uuid"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/uuid-rs/uuid
 #!RemoteAsset:  sha256:ddd74a9687298c6858e9b88ec8935ec45d22e8fd5e6394fa1bd4e99a87789c76
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
@@ -74,7 +68,7 @@ This metapackage enables feature "bytemuck" for the Rust uuid crate, by pulling 
 Summary:        Generate and parse UUIDs - feature "fast-rng"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/rng)
-Requires:       crate(rand-0.10/default) >= 0.10.0
+Requires:       crate(rand-0.10/default) >= 0.10.1
 Provides:       crate(%{pkgname}/fast-rng)
 
 %description -n %{name}+fast-rng
@@ -83,8 +77,8 @@ This metapackage enables feature "fast-rng" for the Rust uuid crate, by pulling 
 %package     -n %{name}+js
 Summary:        Generate and parse UUIDs - feature "js"
 Requires:       crate(%{pkgname})
-Requires:       crate(js-sys-0.3) >= 0.3.95
-Requires:       crate(wasm-bindgen-0.2) >= 0.2.118
+Requires:       crate(js-sys-0.3) >= 0.3.98
+Requires:       crate(wasm-bindgen-0.2) >= 0.2.121
 Provides:       crate(%{pkgname}/js)
 
 %description -n %{name}+js
@@ -132,7 +126,7 @@ Summary:        Generate and parse UUIDs - feature "rng-rand"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/rng)
 Requires:       crate(%{pkgname}/uuid-rng-internal-lib)
-Requires:       crate(rand-0.10/default) >= 0.10.0
+Requires:       crate(rand-0.10/default) >= 0.10.1
 Requires:       crate(uuid-rng-internal-1.0/rand) >= 1.23.1
 Provides:       crate(%{pkgname}/rng-rand)
 
@@ -142,7 +136,7 @@ This metapackage enables feature "rng-rand" for the Rust uuid crate, by pulling 
 %package     -n %{name}+serde
 Summary:        Generate and parse UUIDs - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0) >= 1.0.221
+Requires:       crate(serde-core-1.0) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -172,8 +166,8 @@ This metapackage enables feature "slog" for the Rust uuid crate, by pulling in a
 %package     -n %{name}+std
 Summary:        Generate and parse UUIDs - feature "std" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(js-sys-0.3/std) >= 0.3.95
-Requires:       crate(wasm-bindgen-0.2/std) >= 0.2.118
+Requires:       crate(js-sys-0.3/std) >= 0.3.98
+Requires:       crate(wasm-bindgen-0.2/std) >= 0.2.121
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
 

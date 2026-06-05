@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: purofle <yuguo.or@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name tracing-core
 %global full_version 0.1.36
 %global pkgname tracing-core-0.1
@@ -15,7 +9,7 @@ Summary:        Rust crate "tracing-core"
 License:        MIT
 URL:            https://tokio.rs
 #!RemoteAsset:  sha256:db97caf9d906fbde555dd62fa95ddba9eecfd14cb388e4f491a66d74cd5fb79a
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
@@ -30,7 +24,7 @@ Source code for takopackized Rust crate "tracing-core"
 Summary:        Core primitives for application-level tracing - feature "default"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/std)
-Requires:       crate(valuable-0.1/std) >= 0.1.1
+Requires:       crate(valuable-0.1/std) >= 0.1.0
 Provides:       crate(%{pkgname}/default)
 
 %description -n %{name}+default
@@ -51,7 +45,7 @@ Additionally, this package also provides the "std" feature.
 %package     -n %{name}+valuable
 Summary:        Core primitives for application-level tracing - feature "valuable"
 Requires:       crate(%{pkgname})
-Requires:       crate(valuable-0.1) >= 0.1.1
+Requires:       crate(valuable-0.1) >= 0.1.0
 Provides:       crate(%{pkgname}/valuable)
 
 %description -n %{name}+valuable

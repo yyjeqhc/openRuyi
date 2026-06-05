@@ -1,21 +1,15 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name fastrand
-%global full_version 2.3.0
+%global full_version 2.4.1
 %global pkgname fastrand-2.0
 
 Name:           rust-fastrand-2.0
-Version:        2.3.0
+Version:        2.4.1
 Release:        %autorelease
 Summary:        Rust crate "fastrand"
 License:        Apache-2.0 OR MIT
 URL:            https://github.com/smol-rs/fastrand
-#!RemoteAsset:  sha256:37909eebbb50d72f9059c3b6d82c0463f2ff062c9e95845c43a6c9c0355411be
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+#!RemoteAsset:  sha256:9f1f227452a390804cdb637b74a86990f2a7d7ba4b7d5693aac9b4dd6defd8d6
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
@@ -32,8 +26,8 @@ Source code for takopackized Rust crate "fastrand"
 %package     -n %{name}+getrandom
 Summary:        Simple and fast random number generator - feature "getrandom"
 Requires:       crate(%{pkgname})
-Requires:       crate(getrandom-0.2/default) >= 0.2.0
-Requires:       crate(getrandom-0.2/js) >= 0.2.0
+Requires:       crate(getrandom-0.3/default) >= 0.3.4
+Requires:       crate(getrandom-0.3/wasm-js) >= 0.3.4
 Provides:       crate(%{pkgname}/getrandom)
 
 %description -n %{name}+getrandom

@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: panglars <panghao.riscv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name hybrid-array
 %global full_version 0.4.11
 %global pkgname hybrid-array-0.4
@@ -15,7 +9,7 @@ Summary:        Rust crate "hybrid-array"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/RustCrypto/hybrid-array
 #!RemoteAsset:  sha256:08d46837a0ed51fe95bd3b05de33cd64a1ee88fc797477ca48446872504507c5
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
@@ -23,7 +17,6 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(typenum-1.0/const-generics) >= 1.20.0
 Requires:       crate(typenum-1.0/default) >= 1.20.0
-Provides:       crate(hybrid-array) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/default)
@@ -53,7 +46,7 @@ This metapackage enables feature "bytemuck" for the Rust hybrid-array crate, by 
 %package     -n %{name}+ctutils
 Summary:        Hybrid typenum-based and const generic array types designed to provide the flexibility of typenum-based expressions while also allowing interoperability and a transition path to const generics - feature "ctutils"
 Requires:       crate(%{pkgname})
-Requires:       crate(ctutils-0.4/default) >= 0.4.2
+Requires:       crate(ctutils-0.4/default) >= 0.4.0
 Provides:       crate(%{pkgname}/ctutils)
 
 %description -n %{name}+ctutils
@@ -71,7 +64,7 @@ This metapackage enables feature "serde" for the Rust hybrid-array crate, by pul
 %package     -n %{name}+subtle
 Summary:        Hybrid typenum-based and const generic array types designed to provide the flexibility of typenum-based expressions while also allowing interoperability and a transition path to const generics - feature "subtle"
 Requires:       crate(%{pkgname})
-Requires:       crate(subtle-2.0/const-generics) >= 2.6.1
+Requires:       crate(subtle-2.0/const-generics) >= 2.0.0
 Provides:       crate(%{pkgname}/subtle)
 
 %description -n %{name}+subtle
@@ -90,7 +83,7 @@ This metapackage enables feature "zerocopy" for the Rust hybrid-array crate, by 
 %package     -n %{name}+zeroize
 Summary:        Hybrid typenum-based and const generic array types designed to provide the flexibility of typenum-based expressions while also allowing interoperability and a transition path to const generics - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0) >= 1.8.2
+Requires:       crate(zeroize-1.0) >= 1.8
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize
