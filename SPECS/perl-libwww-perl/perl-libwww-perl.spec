@@ -14,9 +14,13 @@ URL:            https://metacpan.org/dist/libwww-perl
 #!RemoteAsset
 Source0:        http://www.cpan.org/authors/id/O/OA/OALDERS/libwww-perl-%{version}.tar.gz
 BuildArch:      noarch
+BuildSystem:    perlmaker
+
+BuildOption(build):  INSTALLDIRS=vendor
 
 BuildRequires:  make
 BuildRequires:  perl-rpm-packaging
+BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
 BuildRequires:  perl >= 5.8.1
 BuildRequires:  perl(Digest::MD5)
@@ -83,20 +87,8 @@ As of libwww-perl v6.02 you need to install the LWP::Protocol::https module
 from its own separate distribution to enable support for https://... URLs
 for LWP::UserAgent.
 
-%prep
-%setup -q -n libwww-perl-%{version}
-
-%build
-perl Makefile.PL INSTALLDIRS=vendor
-%{make_build}
-
-%install
-%perl_make_install
-%perl_process_packlist
-%perl_gen_filelist
-
 %files -f %{name}.files
 %doc Changes codecov.yml CONTRIBUTING.md perlimports.toml README.SSL talk-to-ourself
 
 %changelog
-%{?autochangelog}
+%autochangelog
