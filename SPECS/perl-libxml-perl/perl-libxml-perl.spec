@@ -14,9 +14,13 @@ URL:            https://metacpan.org/dist/libxml-perl
 #!RemoteAsset
 Source0:        http://www.cpan.org/authors/id/K/KM/KMACLEOD/libxml-perl-%{version}.tar.gz
 BuildArch:      noarch
+BuildSystem:    perlmaker
+
+BuildOption(build):  INSTALLDIRS=vendor
 
 BuildRequires:  make
 BuildRequires:  perl-rpm-packaging
+BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
 BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(XML::Parser) >= 2.19
@@ -26,20 +30,8 @@ libxml-perl is a collection of smaller Perl modules, scripts, and documents
 for working with XML in Perl.  libxml-perl software works in combination
 with XML::Parser, PerlSAX, XML::DOM, XML::Grove and others.
 
-%prep
-%setup -q -n libxml-perl-%{version}
-
-%build
-perl Makefile.PL INSTALLDIRS=vendor
-%{make_build}
-
-%install
-%perl_make_install
-%perl_process_packlist
-%perl_gen_filelist
-
 %files -f %{name}.files
 %doc ChangeLog Changes libxml-perl-0.08.spec libxml-perl.spec README
 
 %changelog
-%{?autochangelog}
+%autochangelog
