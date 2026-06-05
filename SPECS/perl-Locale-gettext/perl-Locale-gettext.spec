@@ -5,8 +5,6 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global tarname Locale-gettext
-
 Name:           perl-%{tarname}
 Version:        1.07
 Release:        %autorelease
