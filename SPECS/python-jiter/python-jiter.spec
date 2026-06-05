@@ -20,15 +20,17 @@ BuildOption(install):  %{srcname}
 
 BuildRequires:  cargo
 BuildRequires:  crate(ahash-0.8/default) >= 0.8.0
-BuildRequires:  crate(bitvec-1.0/default) >= 1.0.1
-BuildRequires:  crate(lexical-parse-float-1.0/format) >= 1.0.5
+BuildRequires:  crate(autocfg-1) >= 1.5.0
+BuildRequires:  crate(autocfg-1/default) >= 1.5.0
+BuildRequires:  crate(bitvec-1/default) >= 1.0.1
+BuildRequires:  crate(lexical-parse-float-1/format) >= 1.0.5
 BuildRequires:  crate(num-bigint-0.4/default) >= 0.4.4
 BuildRequires:  crate(num-traits-0.2/default) >= 0.2.16
 BuildRequires:  crate(pyo3-0.28/default) >= 0.28.2
 BuildRequires:  crate(pyo3-0.28/generate-import-lib) >= 0.28.2
 BuildRequires:  crate(pyo3-0.28/num-bigint) >= 0.28.2
 BuildRequires:  crate(pyo3-build-config-0.28/default) >= 0.28.2
-BuildRequires:  crate(smallvec-1.0/default) >= 1.11.0
+BuildRequires:  crate(smallvec-1/default) >= 1.11.0
 BuildRequires:  pkgconfig(python3)
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3dist(maturin)

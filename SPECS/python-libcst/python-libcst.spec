@@ -22,16 +22,16 @@ BuildOption(check):  -e "libcst.tests*" -e "libcst.codemod.tests*"
 
 BuildRequires:  cargo
 BuildRequires:  crate(annotate-snippets-0.11/default) >= 0.11.5
-BuildRequires:  crate(memchr-2.0/default) >= 2.7.4
-BuildRequires:  crate(paste-1.0/default) >= 1.0.15
+BuildRequires:  crate(memchr-2/default) >= 2.7.4
+BuildRequires:  crate(paste-1/default) >= 1.0.15
 BuildRequires:  crate(peg-0.8/default) >= 0.8.5
-BuildRequires:  crate(proc-macro2-1.0/default)
+BuildRequires:  crate(proc-macro2-1/default)
 BuildRequires:  crate(pyo3-0.26/default) >= 0.26.0
 BuildRequires:  crate(pyo3-0.26/extension-module) >= 0.26.0
-BuildRequires:  crate(quote-1.0/default)
-BuildRequires:  crate(regex-1.0/default) >= 1.11.2
-BuildRequires:  crate(syn-2.0/default)
-BuildRequires:  crate(thiserror-2.0/default) >= 2.0.12
+BuildRequires:  crate(quote-1/default)
+BuildRequires:  crate(regex-1/default) >= 1.11.2
+BuildRequires:  crate(syn-2/default)
+BuildRequires:  crate(thiserror-2/default) >= 2.0.12
 BuildRequires:  pkgconfig(python3)
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3dist(pip)
