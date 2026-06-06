@@ -1,8 +1,13 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name anyhow
 %global full_version 1.0.102
-%global pkgname anyhow-1.0
+%global pkgname anyhow-1
 
-Name:           rust-anyhow-1.0
+Name:           rust-anyhow-1
 Version:        1.0.102
 Release:        %autorelease
 Summary:        Rust crate "anyhow"
@@ -15,10 +20,10 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/backtrace)
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/std)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/backtrace) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
 
 %description
 Source code for takopackized Rust crate "anyhow"
