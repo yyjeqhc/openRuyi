@@ -15,109 +15,109 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/kv)
-Provides:       crate(%{pkgname}/max-level-debug)
-Provides:       crate(%{pkgname}/max-level-error)
-Provides:       crate(%{pkgname}/max-level-info)
-Provides:       crate(%{pkgname}/max-level-off)
-Provides:       crate(%{pkgname}/max-level-trace)
-Provides:       crate(%{pkgname}/max-level-warn)
-Provides:       crate(%{pkgname}/release-max-level-debug)
-Provides:       crate(%{pkgname}/release-max-level-error)
-Provides:       crate(%{pkgname}/release-max-level-info)
-Provides:       crate(%{pkgname}/release-max-level-off)
-Provides:       crate(%{pkgname}/release-max-level-trace)
-Provides:       crate(%{pkgname}/release-max-level-warn)
-Provides:       crate(%{pkgname}/std)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/kv) = %{version}
+Provides:       crate(%{pkgname}/max-level-debug) = %{version}
+Provides:       crate(%{pkgname}/max-level-error) = %{version}
+Provides:       crate(%{pkgname}/max-level-info) = %{version}
+Provides:       crate(%{pkgname}/max-level-off) = %{version}
+Provides:       crate(%{pkgname}/max-level-trace) = %{version}
+Provides:       crate(%{pkgname}/max-level-warn) = %{version}
+Provides:       crate(%{pkgname}/release-max-level-debug) = %{version}
+Provides:       crate(%{pkgname}/release-max-level-error) = %{version}
+Provides:       crate(%{pkgname}/release-max-level-info) = %{version}
+Provides:       crate(%{pkgname}/release-max-level-off) = %{version}
+Provides:       crate(%{pkgname}/release-max-level-trace) = %{version}
+Provides:       crate(%{pkgname}/release-max-level-warn) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
 
 %description
 Source code for takopackized Rust crate "log"
 
 %package     -n %{name}+kv-serde
 Summary:        Lightweight logging facade for Rust - feature "kv_serde"
-Requires:       crate(%{pkgname})
-Requires:       crate(%{pkgname}/kv-std)
-Requires:       crate(%{pkgname}/serde)
-Requires:       crate(value-bag-1.0/inline-i128) >= 1.12
-Requires:       crate(value-bag-1.0/serde) >= 1.12
-Provides:       crate(%{pkgname}/kv-serde)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(%{pkgname}/kv-std) = %{version}
+Requires:       crate(%{pkgname}/serde) = %{version}
+Requires:       crate(value-bag-1/inline-i128) >= 1.12.0
+Requires:       crate(value-bag-1/serde) >= 1.12.0
+Provides:       crate(%{pkgname}/kv-serde) = %{version}
 
 %description -n %{name}+kv-serde
 This metapackage enables feature "kv_serde" for the Rust log crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+kv-std
 Summary:        Lightweight logging facade for Rust - feature "kv_std"
-Requires:       crate(%{pkgname})
-Requires:       crate(%{pkgname}/kv)
-Requires:       crate(%{pkgname}/std)
-Requires:       crate(value-bag-1.0/error) >= 1.12
-Requires:       crate(value-bag-1.0/inline-i128) >= 1.12
-Provides:       crate(%{pkgname}/kv-std)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(%{pkgname}/kv) = %{version}
+Requires:       crate(%{pkgname}/std) = %{version}
+Requires:       crate(value-bag-1/error) >= 1.12.0
+Requires:       crate(value-bag-1/inline-i128) >= 1.12.0
+Provides:       crate(%{pkgname}/kv-std) = %{version}
 
 %description -n %{name}+kv-std
 This metapackage enables feature "kv_std" for the Rust log crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+kv-sval
 Summary:        Lightweight logging facade for Rust - feature "kv_sval"
-Requires:       crate(%{pkgname})
-Requires:       crate(%{pkgname}/kv)
-Requires:       crate(%{pkgname}/sval)
-Requires:       crate(%{pkgname}/sval-ref)
-Requires:       crate(value-bag-1.0/inline-i128) >= 1.12
-Requires:       crate(value-bag-1.0/sval) >= 1.12
-Provides:       crate(%{pkgname}/kv-sval)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(%{pkgname}/kv) = %{version}
+Requires:       crate(%{pkgname}/sval) = %{version}
+Requires:       crate(%{pkgname}/sval-ref) = %{version}
+Requires:       crate(value-bag-1/inline-i128) >= 1.12.0
+Requires:       crate(value-bag-1/sval) >= 1.12.0
+Provides:       crate(%{pkgname}/kv-sval) = %{version}
 
 %description -n %{name}+kv-sval
 This metapackage enables feature "kv_sval" for the Rust log crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+kv-unstable
 Summary:        Lightweight logging facade for Rust - feature "kv_unstable"
-Requires:       crate(%{pkgname})
-Requires:       crate(%{pkgname}/kv)
-Requires:       crate(%{pkgname}/value-bag)
-Provides:       crate(%{pkgname}/kv-unstable)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(%{pkgname}/kv) = %{version}
+Requires:       crate(%{pkgname}/value-bag) = %{version}
+Provides:       crate(%{pkgname}/kv-unstable) = %{version}
 
 %description -n %{name}+kv-unstable
 This metapackage enables feature "kv_unstable" for the Rust log crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+kv-unstable-serde
 Summary:        Lightweight logging facade for Rust - feature "kv_unstable_serde"
-Requires:       crate(%{pkgname})
-Requires:       crate(%{pkgname}/kv-serde)
-Requires:       crate(%{pkgname}/kv-unstable-std)
-Provides:       crate(%{pkgname}/kv-unstable-serde)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(%{pkgname}/kv-serde) = %{version}
+Requires:       crate(%{pkgname}/kv-unstable-std) = %{version}
+Provides:       crate(%{pkgname}/kv-unstable-serde) = %{version}
 
 %description -n %{name}+kv-unstable-serde
 This metapackage enables feature "kv_unstable_serde" for the Rust log crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+kv-unstable-std
 Summary:        Lightweight logging facade for Rust - feature "kv_unstable_std"
-Requires:       crate(%{pkgname})
-Requires:       crate(%{pkgname}/kv-std)
-Requires:       crate(%{pkgname}/kv-unstable)
-Provides:       crate(%{pkgname}/kv-unstable-std)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(%{pkgname}/kv-std) = %{version}
+Requires:       crate(%{pkgname}/kv-unstable) = %{version}
+Provides:       crate(%{pkgname}/kv-unstable-std) = %{version}
 
 %description -n %{name}+kv-unstable-std
 This metapackage enables feature "kv_unstable_std" for the Rust log crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+kv-unstable-sval
 Summary:        Lightweight logging facade for Rust - feature "kv_unstable_sval"
-Requires:       crate(%{pkgname})
-Requires:       crate(%{pkgname}/kv-sval)
-Requires:       crate(%{pkgname}/kv-unstable)
-Provides:       crate(%{pkgname}/kv-unstable-sval)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(%{pkgname}/kv-sval) = %{version}
+Requires:       crate(%{pkgname}/kv-unstable) = %{version}
+Provides:       crate(%{pkgname}/kv-unstable-sval) = %{version}
 
 %description -n %{name}+kv-unstable-sval
 This metapackage enables feature "kv_unstable_sval" for the Rust log crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+serde-core
 Summary:        Lightweight logging facade for Rust - feature "serde_core" and 1 more
-Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0) >= 1.0.0
-Provides:       crate(%{pkgname}/serde)
-Provides:       crate(%{pkgname}/serde-core)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(serde-core-1) >= 1.0.0
+Provides:       crate(%{pkgname}/serde) = %{version}
+Provides:       crate(%{pkgname}/serde-core) = %{version}
 
 %description -n %{name}+serde-core
 This metapackage enables feature "serde_core" for the Rust log crate, by pulling in any additional dependencies needed by that feature.
@@ -126,27 +126,27 @@ Additionally, this package also provides the "serde" feature.
 
 %package     -n %{name}+sval
 Summary:        Lightweight logging facade for Rust - feature "sval"
-Requires:       crate(%{pkgname})
-Requires:       crate(sval-2.0) >= 2.16
-Provides:       crate(%{pkgname}/sval)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(sval-2) >= 2.16.0
+Provides:       crate(%{pkgname}/sval) = %{version}
 
 %description -n %{name}+sval
 This metapackage enables feature "sval" for the Rust log crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+sval-ref
 Summary:        Lightweight logging facade for Rust - feature "sval_ref"
-Requires:       crate(%{pkgname})
-Requires:       crate(sval-ref-2.0) >= 2.16
-Provides:       crate(%{pkgname}/sval-ref)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(sval-ref-2) >= 2.16.0
+Provides:       crate(%{pkgname}/sval-ref) = %{version}
 
 %description -n %{name}+sval-ref
 This metapackage enables feature "sval_ref" for the Rust log crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+value-bag
 Summary:        Lightweight logging facade for Rust - feature "value-bag"
-Requires:       crate(%{pkgname})
-Requires:       crate(value-bag-1.0/inline-i128) >= 1.12
-Provides:       crate(%{pkgname}/value-bag)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(value-bag-1/inline-i128) >= 1.12.0
+Provides:       crate(%{pkgname}/value-bag) = %{version}
 
 %description -n %{name}+value-bag
 This metapackage enables feature "value-bag" for the Rust log crate, by pulling in any additional dependencies needed by that feature.

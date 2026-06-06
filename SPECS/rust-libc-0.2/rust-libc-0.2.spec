@@ -1,19 +1,14 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name libc
-%global full_version 0.2.184
+%global full_version 0.2.186
 %global pkgname libc-0.2
 
 Name:           rust-libc-0.2
-Version:        0.2.184
+Version:        0.2.186
 Release:        %autorelease
 Summary:        Rust crate "libc"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-lang/libc
-#!RemoteAsset:  sha256:48f5d2a454e16a5ea0f4ced81bd44e4cfc7bd3a507b61887c99fd3538b28e4af
+#!RemoteAsset:  sha256:68ab91017fe16c622486840e4c83c9a37afeff978bd239b5293d61ece587de66
 Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
