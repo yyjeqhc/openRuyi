@@ -1,8 +1,8 @@
 %global crate_name anstream
 %global full_version 1.0.0
-%global pkgname anstream-1.0
+%global pkgname anstream-1
 
-Name:           rust-anstream-1.0
+Name:           rust-anstream-1
 Version:        1.0.0
 Release:        %autorelease
 Summary:        Rust crate "anstream"
@@ -15,41 +15,41 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(anstyle-1.0/default) >= 1.0.14
-Requires:       crate(anstyle-parse-1.0/default) >= 1.0.0
-Requires:       crate(colorchoice-1.0/default) >= 1.0.5
-Requires:       crate(is-terminal-polyfill-1.0/default) >= 1.70.2
+Requires:       crate(anstyle-1/default) >= 1.0.0
+Requires:       crate(anstyle-parse-1/default) >= 1.0.0
+Requires:       crate(colorchoice-1/default) >= 1.0.0
+Requires:       crate(is-terminal-polyfill-1.0/default) >= 1.48.0
 Requires:       crate(utf8parse-0.2/default) >= 0.2.2
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/test)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/test) = %{version}
 
 %description
 Source code for takopackized Rust crate "anstream"
 
 %package     -n %{name}+auto
 Summary:        IO stream adapters for writing colored text that will gracefully degrade according to your terminal's capabilities - feature "auto"
-Requires:       crate(%{pkgname})
-Requires:       crate(anstyle-query-1.0/default) >= 1.1.5
-Provides:       crate(%{pkgname}/auto)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(anstyle-query-1/default) >= 1.0.0
+Provides:       crate(%{pkgname}/auto) = %{version}
 
 %description -n %{name}+auto
 This metapackage enables feature "auto" for the Rust anstream crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+default
 Summary:        IO stream adapters for writing colored text that will gracefully degrade according to your terminal's capabilities - feature "default"
-Requires:       crate(%{pkgname})
-Requires:       crate(%{pkgname}/auto)
-Requires:       crate(%{pkgname}/wincon)
-Provides:       crate(%{pkgname}/default)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(%{pkgname}/auto) = %{version}
+Requires:       crate(%{pkgname}/wincon) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description -n %{name}+default
 This metapackage enables feature "default" for the Rust anstream crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+wincon
 Summary:        IO stream adapters for writing colored text that will gracefully degrade according to your terminal's capabilities - feature "wincon"
-Requires:       crate(%{pkgname})
-Requires:       crate(anstyle-wincon-3.0/default) >= 3.0.11
-Provides:       crate(%{pkgname}/wincon)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(anstyle-wincon-3/default) >= 3.0.5
+Provides:       crate(%{pkgname}/wincon) = %{version}
 
 %description -n %{name}+wincon
 This metapackage enables feature "wincon" for the Rust anstream crate, by pulling in any additional dependencies needed by that feature.

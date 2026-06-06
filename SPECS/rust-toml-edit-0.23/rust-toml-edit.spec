@@ -35,7 +35,7 @@ Summary:        Yet another format-preserving TOML parser - feature "debug"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/display)
 Requires:       crate(anstream-0.6/default) >= 0.6.20
-Requires:       crate(anstyle-1.0/default) >= 1.0.11
+Requires:       crate(anstyle-1/default) >= 1.0.11
 Requires:       crate(toml-parser-1.1.2/debug) >= 1.1.2
 Provides:       crate(%{pkgname}/debug)
 

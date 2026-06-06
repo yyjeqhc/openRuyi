@@ -36,7 +36,7 @@ Summary:        Byte-oriented, zero-copy, parser combinators library - feature "
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/std)
 Requires:       crate(anstream-0.6/default) >= 0.6.15
-Requires:       crate(anstyle-1.0/default) >= 1.0.8
+Requires:       crate(anstyle-1/default) >= 1.0.8
 Requires:       crate(is-terminal-polyfill-1.0/default) >= 1.48.1
 Requires:       crate(terminal-size-0.4/default) >= 0.4.3
 Provides:       crate(%{pkgname}/debug)

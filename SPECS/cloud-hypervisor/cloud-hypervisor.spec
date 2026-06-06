@@ -33,8 +33,8 @@ BuildRequires:  binutils
 BuildRequires:  pkgconfig(openssl)
 
 # Disambiguate multi-version crates
-BuildRequires:  crate(anstream-1.0)
-BuildRequires:  crate(anstyle-parse-1.0)
+BuildRequires:  crate(anstream-1)
+BuildRequires:  crate(anstyle-parse-1)
 BuildRequires:  crate(block-buffer-0.12)
 BuildRequires:  crate(const-oid-0.10)
 BuildRequires:  crate(crypto-common-0.2)

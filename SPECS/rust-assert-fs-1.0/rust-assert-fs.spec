@@ -20,7 +20,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(anstyle-1.0/default) >= 1.0.14
+Requires:       crate(anstyle-1/default) >= 1.0.14
 Requires:       crate(doc-comment-0.3/default) >= 0.3.3
 Requires:       crate(globwalk-0.9/default) >= 0.9.1
 Requires:       crate(predicates-3.0/diff) >= 3.1.3

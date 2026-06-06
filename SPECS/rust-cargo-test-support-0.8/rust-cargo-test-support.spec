@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(anstream-0.6/default) >= 0.6.21
-Requires:       crate(anstyle-1.0/default) >= 1.0.14
+Requires:       crate(anstyle-1/default) >= 1.0.14
 Requires:       crate(anyhow-1/default) >= 1.0.102
 Requires:       crate(cargo-test-macro-0.4/default) >= 0.4.9
 Requires:       crate(cargo-util-0.2/default) >= 0.2.27

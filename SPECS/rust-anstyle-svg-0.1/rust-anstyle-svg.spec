@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(anstyle-1.0/default) >= 1.0.14
+Requires:       crate(anstyle-1/default) >= 1.0.14
 Requires:       crate(anstyle-lossy-1.0/default) >= 1.1.5
 Requires:       crate(anstyle-parse-0.2/default) >= 0.2.7
 Requires:       crate(html-escape-0.2/default) >= 0.2.13

@@ -151,7 +151,7 @@ This metapackage enables feature "clap" for the Rust rav1e crate, by pulling in 
 %package     -n %{name}+clap-complete
 Summary:        Fastest and safest AV1 encoder - feature "clap_complete"
 Requires:       crate(%{pkgname})
-Requires:       crate(clap-complete-4.0/default) >= 4.5
+Requires:       crate(clap-complete-4/default) >= 4.5
 Provides:       crate(%{pkgname}/clap-complete)
 
 %description -n %{name}+clap-complete

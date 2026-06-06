@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(annotate-snippets-0.11/default) >= 0.11.5
 Requires:       crate(anstream-0.6/default) >= 0.6.19
-Requires:       crate(anstyle-1.0/default) >= 1.0.11
+Requires:       crate(anstyle-1/default) >= 1.0.11
 Requires:       crate(anyhow-1/default) >= 1.0.98
 Requires:       crate(base64-0.22/default) >= 0.22.1
 Requires:       crate(blake3-1.0/default) >= 1.8.2
@@ -36,8 +36,8 @@ Requires:       crate(cargo-util-0.2/default) >= 0.2.22
 Requires:       crate(cargo-util-schemas-0.10/default) >= 0.10.0
 Requires:       crate(clap-4/default) >= 4.5.40
 Requires:       crate(clap-4/wrap-help) >= 4.5.40
-Requires:       crate(clap-complete-4.0/default) >= 4.5.54
-Requires:       crate(clap-complete-4.0/unstable-dynamic) >= 4.5.54
+Requires:       crate(clap-complete-4/default) >= 4.5.54
+Requires:       crate(clap-complete-4/unstable-dynamic) >= 4.5.54
 Requires:       crate(color-print-0.3/default) >= 0.3.7
 Requires:       crate(crates-io-0.40/default) >= 0.40.12
 Requires:       crate(curl-0.4/default) >= 0.4.48

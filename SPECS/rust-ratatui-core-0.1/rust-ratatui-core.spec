@@ -46,7 +46,7 @@ Source code for takopackized Rust crate "ratatui-core"
 %package     -n %{name}+anstyle
 Summary:        Core types and traits for the Ratatui Terminal UI library - feature "anstyle"
 Requires:       crate(%{pkgname})
-Requires:       crate(anstyle-1.0/default) >= 1.0.0
+Requires:       crate(anstyle-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/anstyle)
 
 %description -n %{name}+anstyle

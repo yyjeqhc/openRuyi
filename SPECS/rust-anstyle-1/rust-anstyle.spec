@@ -1,8 +1,8 @@
 %global crate_name anstyle
 %global full_version 1.0.14
-%global pkgname anstyle-1.0
+%global pkgname anstyle-1
 
-Name:           rust-anstyle-1.0
+Name:           rust-anstyle-1
 Version:        1.0.14
 Release:        %autorelease
 Summary:        Rust crate "anstyle"
@@ -15,9 +15,9 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/std)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
 
 %description
 Source code for takopackized Rust crate "anstyle"

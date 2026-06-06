@@ -1,8 +1,8 @@
 %global crate_name anstyle-query
 %global full_version 1.1.5
-%global pkgname anstyle-query-1.0
+%global pkgname anstyle-query-1
 
-Name:           rust-anstyle-query-1.0
+Name:           rust-anstyle-query-1
 Version:        1.1.5
 Release:        %autorelease
 Summary:        Rust crate "anstyle-query"
@@ -15,11 +15,11 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(windows-sys-0.61/default) >= 0.61.2
-Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.2
-Requires:       crate(windows-sys-0.61/win32-system-console) >= 0.61.2
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
+Requires:       crate(windows-sys-0.60/default) >= 0.60.2
+Requires:       crate(windows-sys-0.60/win32-foundation) >= 0.60.2
+Requires:       crate(windows-sys-0.60/win32-system-console) >= 0.60.2
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
 Source code for takopackized Rust crate "anstyle-query"

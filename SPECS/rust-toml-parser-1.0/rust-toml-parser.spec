@@ -29,8 +29,8 @@ Source code for takopackized Rust crate "toml_parser"
 Summary:        Yet another format-preserving TOML parser - feature "debug"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/std)
-Requires:       crate(anstream-1.0/default) >= 1.0.0
-Requires:       crate(anstyle-1.0/default) >= 1.0.14
+Requires:       crate(anstream-1/default) >= 1.0.0
+Requires:       crate(anstyle-1/default) >= 1.0.14
 Provides:       crate(%{pkgname}/debug)
 
 %description -n %{name}+debug

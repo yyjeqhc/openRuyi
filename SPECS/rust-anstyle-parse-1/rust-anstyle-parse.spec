@@ -1,8 +1,8 @@
 %global crate_name anstyle-parse
 %global full_version 1.0.0
-%global pkgname anstyle-parse-1.0
+%global pkgname anstyle-parse-1
 
-Name:           rust-anstyle-parse-1.0
+Name:           rust-anstyle-parse-1
 Version:        1.0.0
 Release:        %autorelease
 Summary:        Rust crate "anstyle-parse"
@@ -15,26 +15,26 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
+Provides:       crate(%{pkgname}) = %{version}
 
 %description
 Source code for takopackized Rust crate "anstyle-parse"
 
 %package     -n %{name}+core
 Summary:        Parse ANSI Style Escapes - feature "core"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(arrayvec-0.7) >= 0.7.6
-Provides:       crate(%{pkgname}/core)
+Provides:       crate(%{pkgname}/core) = %{version}
 
 %description -n %{name}+core
 This metapackage enables feature "core" for the Rust anstyle-parse crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+utf8
 Summary:        Parse ANSI Style Escapes - feature "utf8" and 1 more
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(utf8parse-0.2/default) >= 0.2.2
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/utf8)
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/utf8) = %{version}
 
 %description -n %{name}+utf8
 This metapackage enables feature "utf8" for the Rust anstyle-parse crate, by pulling in any additional dependencies needed by that feature.

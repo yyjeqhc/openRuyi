@@ -1,8 +1,8 @@
 %global crate_name colorchoice
 %global full_version 1.0.5
-%global pkgname colorchoice-1.0
+%global pkgname colorchoice-1
 
-Name:           rust-colorchoice-1.0
+Name:           rust-colorchoice-1
 Version:        1.0.5
 Release:        %autorelease
 Summary:        Rust crate "colorchoice"
@@ -15,8 +15,8 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
 Source code for takopackized Rust crate "colorchoice"

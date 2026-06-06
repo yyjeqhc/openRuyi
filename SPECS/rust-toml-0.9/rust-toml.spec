@@ -35,7 +35,7 @@ Summary:        Native Rust encoder and decoder of TOML-formatted files and stre
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/std)
 Requires:       crate(anstream-0.6/default) >= 0.6.20
-Requires:       crate(anstyle-1.0/default) >= 1.0.11
+Requires:       crate(anstyle-1/default) >= 1.0.11
 Requires:       crate(toml-parser-1.0/alloc) >= 1.0.10
 Requires:       crate(toml-parser-1.0/debug) >= 1.0.10
 Provides:       crate(%{pkgname}/debug)

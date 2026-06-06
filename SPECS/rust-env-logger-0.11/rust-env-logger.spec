@@ -27,8 +27,8 @@ Source code for takopackized Rust crate "env_logger"
 Summary:        Logging implementation for `log` which is configured via an environment variable - feature "auto-color"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/color)
-Requires:       crate(anstream-1.0/auto) >= 1.0.0
-Requires:       crate(anstream-1.0/wincon) >= 1.0.0
+Requires:       crate(anstream-1/auto) >= 1.0.0
+Requires:       crate(anstream-1/wincon) >= 1.0.0
 Provides:       crate(%{pkgname}/auto-color)
 
 %description -n %{name}+auto-color
@@ -37,8 +37,8 @@ This metapackage enables feature "auto-color" for the Rust env_logger crate, by 
 %package     -n %{name}+color
 Summary:        Logging implementation for `log` which is configured via an environment variable - feature "color"
 Requires:       crate(%{pkgname})
-Requires:       crate(anstream-1.0/wincon) >= 1.0.0
-Requires:       crate(anstyle-1.0/default) >= 1.0.14
+Requires:       crate(anstream-1/wincon) >= 1.0.0
+Requires:       crate(anstyle-1/default) >= 1.0.14
 Provides:       crate(%{pkgname}/color)
 
 %description -n %{name}+color

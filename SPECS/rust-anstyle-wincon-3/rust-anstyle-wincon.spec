@@ -1,8 +1,8 @@
 %global crate_name anstyle-wincon
 %global full_version 3.0.11
-%global pkgname anstyle-wincon-3.0
+%global pkgname anstyle-wincon-3
 
-Name:           rust-anstyle-wincon-3.0
+Name:           rust-anstyle-wincon-3
 Version:        3.0.11
 Release:        %autorelease
 Summary:        Rust crate "anstyle-wincon"
@@ -15,13 +15,13 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(anstyle-1.0/default) >= 1.0.14
-Requires:       crate(once-cell-polyfill-1.0/default) >= 1.70.2
-Requires:       crate(windows-sys-0.61/default) >= 0.61.2
-Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.2
-Requires:       crate(windows-sys-0.61/win32-system-console) >= 0.61.2
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
+Requires:       crate(anstyle-1/default) >= 1.0.0
+Requires:       crate(once-cell-polyfill-1.0/default) >= 1.56.1
+Requires:       crate(windows-sys-0.60/default) >= 0.60.2
+Requires:       crate(windows-sys-0.60/win32-foundation) >= 0.60.2
+Requires:       crate(windows-sys-0.60/win32-system-console) >= 0.60.2
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
 Source code for takopackized Rust crate "anstyle-wincon"

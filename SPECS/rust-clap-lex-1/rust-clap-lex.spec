@@ -1,8 +1,8 @@
 %global crate_name clap_lex
 %global full_version 1.1.0
-%global pkgname clap-lex-1.0
+%global pkgname clap-lex-1
 
-Name:           rust-clap-lex-1.0
+Name:           rust-clap-lex-1
 Version:        1.1.0
 Release:        %autorelease
 Summary:        Rust crate "clap_lex"
@@ -15,8 +15,8 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
 Source code for takopackized Rust crate "clap_lex"
