@@ -14,7 +14,7 @@ Summary:        Helper program to build and install c-like libraries
 License:        MIT
 URL:            https://github.com/lu-zero/cargo-c
 #!RemoteAsset:  sha256:17d431789b050b0fcf678455dfd5ceb7e5b45cd806140f8fe03b16b995d6cbff
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildSystem:    rust
 
 BuildRequires:  rust-rpm-macros
