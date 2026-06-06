@@ -38,7 +38,7 @@ Source code for takopackized Rust crate "plist"
 %package     -n %{name}+serde
 Summary:        Rusty plist parser - feature "serde" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.228
+Requires:       crate(serde-1/default) >= 1.0.228
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/serde)
 

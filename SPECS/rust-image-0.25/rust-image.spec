@@ -195,8 +195,8 @@ This metapackage enables feature "rayon" for the Rust image crate, by pulling in
 %package     -n %{name}+serde
 Summary:        Imaging library - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.214
-Requires:       crate(serde-1.0/derive) >= 1.0.214
+Requires:       crate(serde-1/default) >= 1.0.214
+Requires:       crate(serde-1/derive) >= 1.0.214
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

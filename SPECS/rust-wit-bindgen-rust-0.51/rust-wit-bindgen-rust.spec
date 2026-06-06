@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name wit-bindgen-rust
 %global full_version 0.51.0
 %global pkgname wit-bindgen-rust-0.51
@@ -15,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(anyhow-1.0/default) >= 1.0.102
+Requires:       crate(anyhow-1/default) >= 1.0.102
 Requires:       crate(heck-0.5/default) >= 0.5.0
 Requires:       crate(indexmap-2.0/default) >= 2.14.0
 Requires:       crate(prettyplease-0.2/default) >= 0.2.37
@@ -33,8 +39,8 @@ Source code for takopackized Rust crate "wit-bindgen-rust"
 %package     -n %{name}+clap
 Summary:        Rust bindings generator for WIT and the component model, typically used through the `wit-bindgen` crate's `generate!` macro - feature "clap"
 Requires:       crate(%{pkgname})
-Requires:       crate(clap-4.0/default) >= 4.3.19
-Requires:       crate(clap-4.0/derive) >= 4.3.19
+Requires:       crate(clap-4/default) >= 4.3.19
+Requires:       crate(clap-4/derive) >= 4.3.19
 Requires:       crate(wit-bindgen-core-0.51/clap) >= 0.51.0
 Provides:       crate(%{pkgname}/clap)
 
@@ -44,8 +50,8 @@ This metapackage enables feature "clap" for the Rust wit-bindgen-rust crate, by 
 %package     -n %{name}+serde
 Summary:        Rust bindings generator for WIT and the component model, typically used through the `wit-bindgen` crate's `generate!` macro - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.218
-Requires:       crate(serde-1.0/derive) >= 1.0.218
+Requires:       crate(serde-1/default) >= 1.0.218
+Requires:       crate(serde-1/derive) >= 1.0.218
 Requires:       crate(wit-bindgen-core-0.51/serde) >= 0.51.0
 Provides:       crate(%{pkgname}/serde)
 

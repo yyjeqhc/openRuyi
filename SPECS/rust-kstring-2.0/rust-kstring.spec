@@ -54,7 +54,7 @@ This metapackage enables feature "document-features" for the Rust kstring crate,
 %package     -n %{name}+serde
 Summary:        Key String: optimized for map keys - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

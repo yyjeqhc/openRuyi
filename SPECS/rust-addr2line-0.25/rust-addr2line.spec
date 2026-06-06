@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name addr2line
 %global full_version 0.25.1
 %global pkgname addr2line-0.25
@@ -49,8 +55,8 @@ Requires:       crate(%{pkgname}/fallible-iterator)
 Requires:       crate(%{pkgname}/loader)
 Requires:       crate(%{pkgname}/rustc-demangle)
 Requires:       crate(%{pkgname}/smallvec)
-Requires:       crate(clap-4.0/default) >= 4.3.21
-Requires:       crate(clap-4.0/wrap-help) >= 4.3.21
+Requires:       crate(clap-4/default) >= 4.3.21
+Requires:       crate(clap-4/wrap-help) >= 4.3.21
 Provides:       crate(%{pkgname}/bin)
 
 %description -n %{name}+bin

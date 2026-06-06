@@ -143,8 +143,8 @@ Requires:       crate(ratatui-crossterm-0.1/serde) >= 0.1.0
 Requires:       crate(ratatui-termion-0.1/serde) >= 0.1.0
 Requires:       crate(ratatui-termwiz-0.1/serde) >= 0.1.0
 Requires:       crate(ratatui-widgets-0.3/serde) >= 0.3.0
-Requires:       crate(serde-1.0/default) >= 1.0.228
-Requires:       crate(serde-1.0/derive) >= 1.0.228
+Requires:       crate(serde-1/default) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

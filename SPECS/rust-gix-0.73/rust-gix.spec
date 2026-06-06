@@ -476,7 +476,7 @@ This metapackage enables feature "progress-tree" for the Rust gix crate, by pull
 %package     -n %{name}+regex
 Summary:        Interact with git repositories just like git would - feature "regex"
 Requires:       crate(%{pkgname})
-Requires:       crate(regex-1.0/std) >= 1.6.0
+Requires:       crate(regex-1/std) >= 1.6.0
 Provides:       crate(%{pkgname}/regex)
 
 %description -n %{name}+regex
@@ -522,7 +522,7 @@ Requires:       crate(gix-revision-0.35/serde) >= 0.35.0
 Requires:       crate(gix-transport-0.48/serde) >= 0.48.0
 Requires:       crate(gix-url-0.32/serde) >= 0.32.0
 Requires:       crate(gix-worktree-0.42/serde) >= 0.42.0
-Requires:       crate(serde-1.0/derive) >= 1.0.114
+Requires:       crate(serde-1/derive) >= 1.0.114
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

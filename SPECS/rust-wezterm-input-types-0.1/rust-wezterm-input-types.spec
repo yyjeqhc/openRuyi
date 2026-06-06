@@ -34,9 +34,9 @@ Source code for takopackized Rust crate "wezterm-input-types"
 %package     -n %{name}+serde
 Summary:        Config serialization for wezterm via dynamic json-like data values - feature "serde" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.228
-Requires:       crate(serde-1.0/derive) >= 1.0.228
-Requires:       crate(serde-1.0/rc) >= 1.0.228
+Requires:       crate(serde-1/default) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
+Requires:       crate(serde-1/rc) >= 1.0.228
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/serde)
 

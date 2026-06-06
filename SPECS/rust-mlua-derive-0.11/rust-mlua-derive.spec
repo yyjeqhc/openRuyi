@@ -75,7 +75,7 @@ This metapackage enables feature "proc-macro-error2" for the Rust mlua_derive cr
 %package     -n %{name}+regex
 Summary:        Procedural macros for the mlua crate - feature "regex"
 Requires:       crate(%{pkgname})
-Requires:       crate(regex-1.0/default) >= 1.12.3
+Requires:       crate(regex-1/default) >= 1.12.3
 Provides:       crate(%{pkgname}/regex)
 
 %description -n %{name}+regex

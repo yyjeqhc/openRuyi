@@ -65,8 +65,8 @@ This metapackage enables feature "rayon" for the Rust dashmap crate, by pulling 
 %package     -n %{name}+serde
 Summary:        Blazing fast concurrent HashMap for Rust - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.188
-Requires:       crate(serde-1.0/derive) >= 1.0.188
+Requires:       crate(serde-1/default) >= 1.0.188
+Requires:       crate(serde-1/derive) >= 1.0.188
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

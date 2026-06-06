@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(anstream-0.6/default) >= 0.6.21
 Requires:       crate(anstyle-1.0/default) >= 1.0.14
-Requires:       crate(anyhow-1.0/default) >= 1.0.102
+Requires:       crate(anyhow-1/default) >= 1.0.102
 Requires:       crate(cargo-test-macro-0.4/default) >= 0.4.9
 Requires:       crate(cargo-util-0.2/default) >= 0.2.27
 Requires:       crate(crates-io-0.40/default) >= 0.40.17
@@ -37,10 +37,10 @@ Requires:       crate(pasetors-0.7/paserk) >= 0.7.8
 Requires:       crate(pasetors-0.7/serde) >= 0.7.8
 Requires:       crate(pasetors-0.7/std) >= 0.7.8
 Requires:       crate(pasetors-0.7/v3) >= 0.7.8
-Requires:       crate(regex-1.0/default) >= 1.12.3
-Requires:       crate(serde-1.0/default) >= 1.0.228
-Requires:       crate(serde-1.0/derive) >= 1.0.228
-Requires:       crate(serde-json-1.0/default) >= 1.0.149
+Requires:       crate(regex-1/default) >= 1.12.3
+Requires:       crate(serde-1/default) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
+Requires:       crate(serde-json-1/default) >= 1.0.149
 Requires:       crate(snapbox-0.6/default) >= 0.6.24
 Requires:       crate(snapbox-0.6/diff) >= 0.6.24
 Requires:       crate(snapbox-0.6/dir) >= 0.6.24

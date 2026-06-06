@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name libssh2-sys
 %global full_version 0.3.1
 %global pkgname libssh2-sys-0.3
@@ -15,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(cc-1.0/default) >= 1.2.61
+Requires:       crate(cc-1/default) >= 1.2.61
 Requires:       crate(libc-0.2/default) >= 0.2.186
 Requires:       crate(libz-sys-1.0/libc) >= 1.1.28
 Requires:       crate(openssl-sys-0.9/default) >= 0.9.115

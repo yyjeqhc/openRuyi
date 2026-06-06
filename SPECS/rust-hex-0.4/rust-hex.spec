@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name hex
 %global full_version 0.4.3
 %global pkgname hex-0.4
@@ -26,7 +32,7 @@ Source code for takopackized Rust crate "hex"
 %package     -n %{name}+serde
 Summary:        Encoding and decoding data into/from hexadecimal representation - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.0
+Requires:       crate(serde-1) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

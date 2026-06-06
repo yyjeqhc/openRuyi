@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name iced-x86
 %global full_version 1.21.0
 %global pkgname iced-x86-1.0
@@ -82,7 +88,7 @@ This metapackage enables feature "no_std" for the Rust iced-x86 crate, by pullin
 %package     -n %{name}+serde
 Summary:        Blazing fast and correct x86/x64 disassembler, assembler and instruction decoder written in Rust - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.16
+Requires:       crate(serde-1) >= 1.0.16
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

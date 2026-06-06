@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(anyhow-1.0/default) >= 1.0.102
+Requires:       crate(anyhow-1/default) >= 1.0.102
 Requires:       crate(core-foundation-0.10/default) >= 0.10.1
 Requires:       crate(core-foundation-0.10/mac-os-10-7-support) >= 0.10.1
 Requires:       crate(filetime-0.2/default) >= 0.2.27

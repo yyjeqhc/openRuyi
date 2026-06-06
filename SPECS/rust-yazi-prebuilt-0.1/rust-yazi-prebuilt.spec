@@ -31,7 +31,7 @@ Source code for takopackized Rust crate "yazi-prebuilt"
 %package     -n %{name}+anyhow
 Summary:        Used to place the pre-built assets of yazi (https://github.com/sxyazi/yazi) - feature "anyhow"
 Requires:       crate(%{pkgname})
-Requires:       crate(anyhow-1.0/default) >= 1.0.0
+Requires:       crate(anyhow-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/anyhow)
 
 %description -n %{name}+anyhow

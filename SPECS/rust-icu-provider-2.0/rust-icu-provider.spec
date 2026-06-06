@@ -38,8 +38,8 @@ Source code for takopackized Rust crate "icu_provider"
 Summary:        Trait and struct definitions for the ICU data provider - feature "alloc" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(icu-locale-core-2.0/alloc) >= 2.2.0
-Requires:       crate(serde-1.0/alloc) >= 1.0.220
-Requires:       crate(serde-1.0/derive) >= 1.0.220
+Requires:       crate(serde-1/alloc) >= 1.0.220
+Requires:       crate(serde-1/derive) >= 1.0.220
 Requires:       crate(stable-deref-trait-1.0) >= 1.2.0
 Requires:       crate(writeable-0.6) >= 0.6.2
 Requires:       crate(yoke-0.8/alloc) >= 0.8.2
@@ -82,7 +82,7 @@ This metapackage enables feature "deserialize_bincode_1" for the Rust icu_provid
 Summary:        Trait and struct definitions for the ICU data provider - feature "deserialize_json"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/serde)
-Requires:       crate(serde-json-1.0/default) >= 1.0.45
+Requires:       crate(serde-json-1/default) >= 1.0.45
 Provides:       crate(%{pkgname}/deserialize-json)
 
 %description -n %{name}+deserialize-json
@@ -126,7 +126,7 @@ This metapackage enables feature "logging" for the Rust icu_provider crate, by p
 %package     -n %{name}+serde
 Summary:        Trait and struct definitions for the ICU data provider - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/derive) >= 1.0.220
+Requires:       crate(serde-1/derive) >= 1.0.220
 Requires:       crate(yoke-0.8/derive) >= 0.8.2
 Requires:       crate(yoke-0.8/serde) >= 0.8.2
 Provides:       crate(%{pkgname}/serde)

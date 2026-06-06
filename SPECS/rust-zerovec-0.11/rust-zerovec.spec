@@ -32,8 +32,8 @@ Source code for takopackized Rust crate "zerovec"
 %package     -n %{name}+alloc
 Summary:        Zero-copy vector backed by a byte array - feature "alloc"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/alloc) >= 1.0.220
-Requires:       crate(serde-1.0/derive) >= 1.0.220
+Requires:       crate(serde-1/alloc) >= 1.0.220
+Requires:       crate(serde-1/derive) >= 1.0.220
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -80,7 +80,7 @@ This metapackage enables feature "schemars" for the Rust zerovec crate, by pulli
 %package     -n %{name}+serde
 Summary:        Zero-copy vector backed by a byte array - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/derive) >= 1.0.220
+Requires:       crate(serde-1/derive) >= 1.0.220
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

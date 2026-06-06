@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name pnet_datalink
 %global full_version 0.35.0
 %global pkgname pnet-datalink-0.35
@@ -48,7 +54,7 @@ This metapackage enables feature "pcap" for the Rust pnet_datalink crate, by pul
 %package     -n %{name}+serde
 Summary:        Cross-platform, datalink layer networking - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/derive) >= 1.0.171
+Requires:       crate(serde-1/derive) >= 1.0.171
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

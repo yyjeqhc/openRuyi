@@ -29,7 +29,7 @@ Source code for takopackized Rust crate "esaxx-rs"
 %package     -n %{name}+cc
 Summary:        Wrapping around sentencepiece's esaxxx library - feature "cc" and 2 more
 Requires:       crate(%{pkgname})
-Requires:       crate(cc-1.0/default) >= 1.0.0
+Requires:       crate(cc-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/cc)
 Provides:       crate(%{pkgname}/cpp)
 Provides:       crate(%{pkgname}/default)

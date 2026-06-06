@@ -132,8 +132,8 @@ This metapackage enables feature "examples" for the Rust snapbox crate, by pulli
 Summary:        Snapshot testing toolbox - feature "json"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/structured-data)
-Requires:       crate(serde-1.0/default) >= 1.0.228
-Requires:       crate(serde-json-1.0/default) >= 1.0.149
+Requires:       crate(serde-1/default) >= 1.0.228
+Requires:       crate(serde-json-1/default) >= 1.0.149
 Provides:       crate(%{pkgname}/json)
 
 %description -n %{name}+json
@@ -142,7 +142,7 @@ This metapackage enables feature "json" for the Rust snapbox crate, by pulling i
 %package     -n %{name}+regex
 Summary:        Snapshot testing toolbox - feature "regex"
 Requires:       crate(%{pkgname})
-Requires:       crate(regex-1.0/std) >= 1.12.3
+Requires:       crate(regex-1/std) >= 1.12.3
 Provides:       crate(%{pkgname}/regex)
 
 %description -n %{name}+regex
@@ -151,7 +151,7 @@ This metapackage enables feature "regex" for the Rust snapbox crate, by pulling 
 %package     -n %{name}+structured-data
 Summary:        Snapshot testing toolbox - feature "structured-data"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-json-1.0/default) >= 1.0.149
+Requires:       crate(serde-json-1/default) >= 1.0.149
 Provides:       crate(%{pkgname}/structured-data)
 
 %description -n %{name}+structured-data

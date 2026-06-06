@@ -22,8 +22,8 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(arbitrary-1.0/default) >= 1.4.2
-Requires:       crate(cc-1.0/default) >= 1.2.62
-Requires:       crate(cc-1.0/parallel) >= 1.2.62
+Requires:       crate(cc-1/default) >= 1.2.62
+Requires:       crate(cc-1/parallel) >= 1.2.62
 Provides:       crate(libfuzzer-sys) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

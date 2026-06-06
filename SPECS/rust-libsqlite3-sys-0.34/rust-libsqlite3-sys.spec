@@ -84,7 +84,7 @@ This metapackage enables feature "bundled-sqlcipher-vendored-openssl" for the Ru
 %package     -n %{name}+cc
 Summary:        Native bindings to the libsqlite3 library - feature "cc"
 Requires:       crate(%{pkgname})
-Requires:       crate(cc-1.0/default) >= 1.2.58
+Requires:       crate(cc-1/default) >= 1.2.58
 Provides:       crate(%{pkgname}/cc)
 
 %description -n %{name}+cc

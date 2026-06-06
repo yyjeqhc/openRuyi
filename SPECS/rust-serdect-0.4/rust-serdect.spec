@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(base16ct-1.0) >= 1.0.0
-Requires:       crate(serde-1.0) >= 1.0.228
+Requires:       crate(serde-1) >= 1.0.228
 Provides:       crate(serdect) = %{version}
 Provides:       crate(%{pkgname})
 
@@ -34,7 +34,7 @@ Source code for takopackized Rust crate "serdect"
 Summary:        Constant-time serde serializer/deserializer helpers for data that potentially contains secrets (e.g - feature "alloc" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(base16ct-1.0/alloc) >= 1.0.0
-Requires:       crate(serde-1.0/alloc) >= 1.0.228
+Requires:       crate(serde-1/alloc) >= 1.0.228
 Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/default)
 
@@ -47,7 +47,7 @@ Additionally, this package also provides the "default" feature.
 %package     -n %{name}+derive
 Summary:        Constant-time serde serializer/deserializer helpers for data that potentially contains secrets (e.g - feature "derive"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/derive) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
 Provides:       crate(%{pkgname}/derive)
 
 %description -n %{name}+derive

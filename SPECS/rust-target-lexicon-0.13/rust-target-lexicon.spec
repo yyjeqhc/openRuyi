@@ -33,7 +33,7 @@ Source code for takopackized Rust crate "target-lexicon"
 %package     -n %{name}+serde
 Summary:        LLVM target triple types - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

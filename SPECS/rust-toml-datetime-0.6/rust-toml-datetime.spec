@@ -30,7 +30,7 @@ Source code for takopackized Rust crate "toml_datetime"
 %package     -n %{name}+serde
 Summary:        TOML-compatible datetime type - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.145
+Requires:       crate(serde-1/default) >= 1.0.145
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

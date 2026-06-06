@@ -67,7 +67,7 @@ This metapackage enables feature "git2" for the Rust built crate, by pulling in 
 %package     -n %{name}+semver
 Summary:        Provides a crate with information from the time it was built - feature "semver"
 Requires:       crate(%{pkgname})
-Requires:       crate(semver-1.0/default) >= 1.0.0
+Requires:       crate(semver-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/semver)
 
 %description -n %{name}+semver

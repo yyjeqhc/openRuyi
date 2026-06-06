@@ -108,7 +108,7 @@ This metapackage enables feature "rand_core" for the Rust curve25519-dalek crate
 %package     -n %{name}+serde
 Summary:        Pure-Rust implementation of group operations on ristretto255 and Curve25519 - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/derive) >= 1.0.0
+Requires:       crate(serde-1/derive) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

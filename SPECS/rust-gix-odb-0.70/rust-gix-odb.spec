@@ -58,7 +58,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(gix-hash-0.19/serde) >= 0.19.0
 Requires:       crate(gix-object-0.50/serde) >= 0.50.2
 Requires:       crate(gix-pack-0.60/serde) >= 0.60.0
-Requires:       crate(serde-1.0/derive) >= 1.0.114
+Requires:       crate(serde-1/derive) >= 1.0.114
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

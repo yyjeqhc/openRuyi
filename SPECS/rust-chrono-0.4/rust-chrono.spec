@@ -154,7 +154,7 @@ This metapackage enables feature "rkyv-validation" for the Rust chrono crate, by
 %package     -n %{name}+serde
 Summary:        Date and time library for Rust - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.228
+Requires:       crate(serde-1) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

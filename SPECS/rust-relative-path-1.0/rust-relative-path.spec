@@ -30,7 +30,7 @@ Source code for takopackized Rust crate "relative-path"
 %package     -n %{name}+serde
 Summary:        Portable, relative paths for Rust - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.160
+Requires:       crate(serde-1/default) >= 1.0.160
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

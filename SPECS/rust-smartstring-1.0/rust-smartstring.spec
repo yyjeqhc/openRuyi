@@ -34,7 +34,7 @@ Source code for takopackized Rust crate "smartstring"
 %package     -n %{name}+serde
 Summary:        Compact inlined strings - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

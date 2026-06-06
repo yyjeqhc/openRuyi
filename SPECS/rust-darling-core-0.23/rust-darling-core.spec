@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name darling_core
 %global full_version 0.23.0
 %global pkgname darling-core-0.23
@@ -32,7 +38,7 @@ Source code for takopackized Rust crate "darling_core"
 %package     -n %{name}+serde
 Summary:        Helper crate for proc-macro library for reading attributes into structs when implementing custom derives - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.210
+Requires:       crate(serde-1/default) >= 1.0.210
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

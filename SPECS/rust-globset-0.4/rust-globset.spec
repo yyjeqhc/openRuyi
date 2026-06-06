@@ -64,7 +64,7 @@ Additionally, this package also provides the "default" feature.
 %package     -n %{name}+serde
 Summary:        Cross platform single glob and glob set matching - feature "serde" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.188
+Requires:       crate(serde-1/default) >= 1.0.188
 Provides:       crate(%{pkgname}/serde)
 Provides:       crate(%{pkgname}/serde1)
 

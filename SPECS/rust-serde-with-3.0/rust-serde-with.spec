@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name serde_with
 %global full_version 3.18.0
 %global pkgname serde-with-3.0
@@ -30,7 +36,7 @@ Requires:       crate(chrono-0.4/serde) >= 0.4.20
 Requires:       crate(hex-0.4/alloc) >= 0.4.3
 Requires:       crate(serde-core-1.0/alloc) >= 1.0.228
 Requires:       crate(serde-core-1.0/result) >= 1.0.228
-Requires:       crate(serde-json-1.0/alloc) >= 1.0.145
+Requires:       crate(serde-json-1/alloc) >= 1.0.145
 Requires:       crate(time-0.3/alloc) >= 0.3.47
 Provides:       crate(%{pkgname}/alloc)
 
@@ -147,7 +153,7 @@ This metapackage enables feature "indexmap_2" for the Rust serde_with crate, by 
 Summary:        Custom de/serialization functions for Rust's serde - feature "json"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(serde-json-1.0) >= 1.0.145
+Requires:       crate(serde-json-1) >= 1.0.145
 Provides:       crate(%{pkgname}/json)
 
 %description -n %{name}+json
@@ -178,7 +184,7 @@ Summary:        Custom de/serialization functions for Rust's serde - feature "sc
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(schemars-0.9) >= 0.9.0
-Requires:       crate(serde-json-1.0) >= 1.0.145
+Requires:       crate(serde-json-1) >= 1.0.145
 Requires:       crate(serde-with-macros-3.0/schemars-0-9) >= 3.18.0
 Provides:       crate(%{pkgname}/schemars-0-9)
 
@@ -190,7 +196,7 @@ Summary:        Custom de/serialization functions for Rust's serde - feature "sc
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(schemars-1.0) >= 1.0.2
-Requires:       crate(serde-json-1.0) >= 1.0.145
+Requires:       crate(serde-json-1) >= 1.0.145
 Requires:       crate(serde-with-macros-3.0/schemars-1) >= 3.18.0
 Provides:       crate(%{pkgname}/schemars-1)
 

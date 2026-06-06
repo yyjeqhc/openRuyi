@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name zstd-sys
 %global full_version 2.0.16+zstd.1.5.7
 %global pkgname zstd-sys-2.0
@@ -15,8 +21,8 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(cc-1.0/default) >= 1.2.61
-Requires:       crate(cc-1.0/parallel) >= 1.2.61
+Requires:       crate(cc-1/default) >= 1.2.61
+Requires:       crate(cc-1/parallel) >= 1.2.61
 Requires:       crate(pkg-config-0.3/default) >= 0.3.33
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/debug)

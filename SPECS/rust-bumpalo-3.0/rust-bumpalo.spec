@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name bumpalo
 %global full_version 3.20.2
 %global pkgname bumpalo-3.0
@@ -38,7 +44,7 @@ This metapackage enables feature "allocator-api2" for the Rust bumpalo crate, by
 %package     -n %{name}+serde
 Summary:        Fast bump allocation arena for Rust - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.171
+Requires:       crate(serde-1/default) >= 1.0.171
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

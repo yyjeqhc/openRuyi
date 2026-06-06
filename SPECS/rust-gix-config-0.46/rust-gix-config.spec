@@ -59,7 +59,7 @@ Requires:       crate(gix-config-value-0.15/serde) >= 0.15.3
 Requires:       crate(gix-glob-0.21/serde) >= 0.21.0
 Requires:       crate(gix-ref-0.53/serde) >= 0.53.1
 Requires:       crate(gix-sec-0.12/serde) >= 0.12.2
-Requires:       crate(serde-1.0/derive) >= 1.0.114
+Requires:       crate(serde-1/derive) >= 1.0.114
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

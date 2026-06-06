@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name wasmparser
 %global full_version 0.244.0
 %global pkgname wasmparser-0.244
@@ -28,7 +34,7 @@ Source code for takopackized Rust crate "wasmparser"
 %package     -n %{name}+component-model
 Summary:        Simple event-driven library for parsing WebAssembly binary files - feature "component-model"
 Requires:       crate(%{pkgname})
-Requires:       crate(semver-1.0) >= 1.0.28
+Requires:       crate(semver-1) >= 1.0.28
 Provides:       crate(%{pkgname}/component-model)
 
 %description -n %{name}+component-model
@@ -65,7 +71,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(hashbrown-0.15/default-hasher) >= 0.15.5
 Requires:       crate(hashbrown-0.15/serde) >= 0.15.5
 Requires:       crate(indexmap-2.0/serde) >= 2.14.0
-Requires:       crate(serde-1.0/alloc) >= 1.0.166
+Requires:       crate(serde-1/alloc) >= 1.0.166
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

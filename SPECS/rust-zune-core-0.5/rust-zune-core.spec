@@ -41,7 +41,7 @@ This metapackage enables feature "log" for the Rust zune-core crate, by pulling 
 %package     -n %{name}+serde
 Summary:        Core utilities for image processing in the zune family of crates - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

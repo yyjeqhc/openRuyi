@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name miniz_oxide
 %global full_version 0.8.9
 %global pkgname miniz-oxide-0.8
@@ -57,8 +63,8 @@ This metapackage enables feature "rustc-dep-of-std" for the Rust miniz_oxide cra
 %package     -n %{name}+serde
 Summary:        DEFLATE compression and decompression library rewritten in Rust based on miniz - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
-Requires:       crate(serde-1.0/derive) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
+Requires:       crate(serde-1/derive) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(serde-json-1.0/default) >= 1.0.149
+Requires:       crate(serde-json-1/default) >= 1.0.149
 Requires:       crate(tracing-core-0.1/default) >= 0.1.36
 Requires:       crate(tracing-subscriber-0.3/default) >= 0.3.23
 Provides:       crate(%{pkgname})

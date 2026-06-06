@@ -62,7 +62,7 @@ This metapackage enables feature "pkcs8" for the Rust ed25519 crate, by pulling 
 %package     -n %{name}+serde
 Summary:        Edwards Digital Signature Algorithm (EdDSA) over Curve25519 (as specified in RFC 8032) support library providing signature type definitions and PKCS#8 private key decoding/encoding support - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.0
+Requires:       crate(serde-1) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

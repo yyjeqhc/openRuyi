@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name wasm-bindgen
 %global full_version 0.2.121
 %global pkgname wasm-bindgen-0.2
@@ -36,7 +42,7 @@ Source code for takopackized Rust crate "wasm-bindgen"
 %package     -n %{name}+serde
 Summary:        Easy support for interacting between JS and Rust - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -56,7 +62,7 @@ This metapackage enables feature "serde-serialize" for the Rust wasm-bindgen cra
 %package     -n %{name}+serde-json
 Summary:        Easy support for interacting between JS and Rust - feature "serde_json"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-json-1.0/default) >= 1.0.0
+Requires:       crate(serde-json-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/serde-json)
 
 %description -n %{name}+serde-json

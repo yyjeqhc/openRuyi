@@ -23,9 +23,9 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(curl-0.4/default) >= 0.4.49
 Requires:       crate(percent-encoding-2.0/default) >= 2.3.2
-Requires:       crate(serde-1.0/default) >= 1.0.228
-Requires:       crate(serde-1.0/derive) >= 1.0.228
-Requires:       crate(serde-json-1.0/default) >= 1.0.149
+Requires:       crate(serde-1/default) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
+Requires:       crate(serde-json-1/default) >= 1.0.149
 Requires:       crate(thiserror-2.0/default) >= 2.0.18
 Requires:       crate(url-2.0/default) >= 2.5.8
 Provides:       crate(%{pkgname})

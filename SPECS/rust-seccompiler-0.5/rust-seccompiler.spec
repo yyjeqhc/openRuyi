@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name seccompiler
 %global full_version 0.5.0
 %global pkgname seccompiler-0.5
@@ -35,8 +41,8 @@ This metapackage enables feature "json" for the Rust seccompiler crate, by pulli
 %package     -n %{name}+serde
 Summary:        Provides easy-to-use seccomp-bpf jailing - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.27
-Requires:       crate(serde-1.0/derive) >= 1.0.27
+Requires:       crate(serde-1/default) >= 1.0.27
+Requires:       crate(serde-1/derive) >= 1.0.27
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -45,7 +51,7 @@ This metapackage enables feature "serde" for the Rust seccompiler crate, by pull
 %package     -n %{name}+serde-json
 Summary:        Provides easy-to-use seccomp-bpf jailing - feature "serde_json"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-json-1.0/default) >= 1.0.9
+Requires:       crate(serde-json-1/default) >= 1.0.9
 Provides:       crate(%{pkgname}/serde-json)
 
 %description -n %{name}+serde-json

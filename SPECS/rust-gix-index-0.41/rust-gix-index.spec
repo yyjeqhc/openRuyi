@@ -62,7 +62,7 @@ This metapackage enables feature "document-features" for the Rust gix-index crat
 Summary:        Work-in-progress crate of the gitoxide project dedicated implementing the git index file - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(gix-hash-0.19/serde) >= 0.19.0
-Requires:       crate(serde-1.0/derive) >= 1.0.114
+Requires:       crate(serde-1/derive) >= 1.0.114
 Requires:       crate(smallvec-1.0/serde) >= 1.15.1
 Provides:       crate(%{pkgname}/serde)
 

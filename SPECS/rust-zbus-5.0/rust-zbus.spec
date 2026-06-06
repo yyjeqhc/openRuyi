@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name zbus
 %global full_version 5.15.0
 %global pkgname zbus-5.0
@@ -29,8 +35,8 @@ Requires:       crate(ordered-stream-0.2/default) >= 0.2.0
 Requires:       crate(rustix-1.0/net) >= 1.1.4
 Requires:       crate(rustix-1.0/process) >= 1.1.4
 Requires:       crate(rustix-1.0/std) >= 1.1.4
-Requires:       crate(serde-1.0/default) >= 1.0.228
-Requires:       crate(serde-1.0/derive) >= 1.0.228
+Requires:       crate(serde-1/default) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
 Requires:       crate(serde-repr-0.1/default) >= 0.1.20
 Requires:       crate(tracing-0.1/default) >= 0.1.44
 Requires:       crate(uds-windows-1.0/default) >= 1.2.1

@@ -59,7 +59,7 @@ This metapackage enables feature "random" for the Rust twox-hash crate, by pulli
 %package     -n %{name}+serialize
 Summary:        The XXHash and XXH3 algorithms - feature "serialize"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/derive) >= 1.0.0
+Requires:       crate(serde-1/derive) >= 1.0.0
 Provides:       crate(%{pkgname}/serialize)
 
 %description -n %{name}+serialize

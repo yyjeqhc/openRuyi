@@ -100,7 +100,7 @@ This metapackage enables feature "pack-cache-lru-static" for the Rust gix-pack c
 Summary:        Implements git packs and related data structures - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(gix-object-0.50/serde) >= 0.50.2
-Requires:       crate(serde-1.0/derive) >= 1.0.114
+Requires:       crate(serde-1/derive) >= 1.0.114
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

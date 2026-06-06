@@ -120,7 +120,7 @@ This metapackage enables feature "rustc-dep-of-std" for the Rust hashbrown crate
 %package     -n %{name}+serde
 Summary:        Rust port of Google's SwissTable hash map - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.220
+Requires:       crate(serde-1) >= 1.0.220
 Requires:       crate(serde-core-1.0) >= 1.0.221
 Provides:       crate(%{pkgname}/serde)
 

@@ -43,7 +43,7 @@ Source code for takopackized Rust crate "mlua"
 Summary:        High level bindings to Lua 5.5/5.4/5.3/5.2/5.1 (including LuaJIT) and Luau with async/await features and support of writing native Lua modules in Rust - feature "anyhow"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/error-send)
-Requires:       crate(anyhow-1.0/default) >= 1.0.102
+Requires:       crate(anyhow-1/default) >= 1.0.102
 Provides:       crate(%{pkgname}/anyhow)
 
 %description -n %{name}+anyhow
@@ -185,7 +185,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(bstr-1.0/serde) >= 1.12.1
 Requires:       crate(bstr-1.0/std) >= 1.12.1
 Requires:       crate(erased-serde-0.4/default) >= 0.4.10
-Requires:       crate(serde-1.0/default) >= 1.0.228
+Requires:       crate(serde-1/default) >= 1.0.228
 Requires:       crate(serde-value-0.7/default) >= 0.7.0
 Provides:       crate(%{pkgname}/serde)
 Provides:       crate(%{pkgname}/serialize)

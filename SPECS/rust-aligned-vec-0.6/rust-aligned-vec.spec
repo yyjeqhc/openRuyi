@@ -33,7 +33,7 @@ Source code for takopackized Rust crate "aligned-vec"
 %package     -n %{name}+serde
 Summary:        Aligned vector and box containers - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.0
+Requires:       crate(serde-1) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

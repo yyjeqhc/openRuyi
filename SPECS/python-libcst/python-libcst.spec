@@ -29,7 +29,7 @@ BuildRequires:  crate(proc-macro2-1.0/default)
 BuildRequires:  crate(pyo3-0.26/default) >= 0.26.0
 BuildRequires:  crate(pyo3-0.26/extension-module) >= 0.26.0
 BuildRequires:  crate(quote-1.0/default)
-BuildRequires:  crate(regex-1.0/default) >= 1.11.2
+BuildRequires:  crate(regex-1/default) >= 1.11.2
 BuildRequires:  crate(syn-2.0/default)
 BuildRequires:  crate(thiserror-2.0/default) >= 2.0.12
 BuildRequires:  pkgconfig(python3)

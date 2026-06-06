@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(clap-4.0/std) >= 4.6.1
+Requires:       crate(clap-4/std) >= 4.6.1
 Requires:       crate(clap-complete-4.0/default) >= 4.6.3
 Provides:       crate(clap-complete-nushell) = %{version}
 Provides:       crate(%{pkgname})

@@ -40,7 +40,7 @@ This metapackage enables feature "extra-platforms" for the Rust bytes crate, by 
 %package     -n %{name}+serde
 Summary:        Types and traits for working with bytes - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/alloc) >= 1.0.60
+Requires:       crate(serde-1/alloc) >= 1.0.60
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

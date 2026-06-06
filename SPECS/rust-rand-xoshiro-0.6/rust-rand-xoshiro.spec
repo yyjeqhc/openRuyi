@@ -31,8 +31,8 @@ Source code for takopackized Rust crate "rand_xoshiro"
 %package     -n %{name}+serde
 Summary:        Xoshiro, xoroshiro and splitmix64 random number generators - feature "serde" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
-Requires:       crate(serde-1.0/derive) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
+Requires:       crate(serde-1/derive) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 Provides:       crate(%{pkgname}/serde1)
 

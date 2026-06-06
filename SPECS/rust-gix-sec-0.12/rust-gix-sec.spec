@@ -49,8 +49,8 @@ This metapackage enables feature "document-features" for the Rust gix-sec crate,
 Summary:        The gitoxide project providing a shared trust model - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(bitflags-2.0/serde) >= 2.11.0
-Requires:       crate(serde-1.0/derive) >= 1.0.114
-Requires:       crate(serde-1.0/std) >= 1.0.114
+Requires:       crate(serde-1/derive) >= 1.0.114
+Requires:       crate(serde-1/std) >= 1.0.114
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

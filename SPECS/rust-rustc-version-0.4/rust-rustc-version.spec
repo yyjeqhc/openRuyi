@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(semver-1.0/default) >= 1.0.0
+Requires:       crate(semver-1/default) >= 1.0.0
 Provides:       crate(rustc-version) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

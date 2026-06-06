@@ -32,7 +32,7 @@ Source code for takopackized Rust crate "sha1_smol"
 %package     -n %{name}+serde
 Summary:        Minimal dependency-free implementation of SHA1 for Rust - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

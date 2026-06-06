@@ -35,7 +35,7 @@ Source code for takopackized Rust crate "zeroize"
 %package     -n %{name}+serde
 Summary:        Securely clear secrets from memory with a simple trait built on stable Rust primitives which guarantee memory is zeroed using an operation will not be 'optimized away' by the compiler - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.0
+Requires:       crate(serde-1) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

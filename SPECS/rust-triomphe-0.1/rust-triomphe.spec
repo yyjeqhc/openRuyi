@@ -51,7 +51,7 @@ This metapackage enables feature "default" for the Rust triomphe crate, by pulli
 %package     -n %{name}+serde
 Summary:        Fork of std::sync::Arc with some extra functionality and without weak references (originally servo_arc) - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.0
+Requires:       crate(serde-1) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

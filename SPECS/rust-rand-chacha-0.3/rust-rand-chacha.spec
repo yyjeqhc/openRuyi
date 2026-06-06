@@ -33,8 +33,8 @@ Source code for takopackized Rust crate "rand_chacha"
 %package     -n %{name}+serde
 Summary:        ChaCha random number generator - feature "serde" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
-Requires:       crate(serde-1.0/derive) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
+Requires:       crate(serde-1/derive) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 Provides:       crate(%{pkgname}/serde1)
 

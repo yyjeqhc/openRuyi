@@ -46,7 +46,7 @@ Summary:        Borrowed and owned git hash digests used to identify git objects
 Requires:       crate(%{pkgname})
 Requires:       crate(faster-hex-0.10/serde) >= 0.10.0
 Requires:       crate(faster-hex-0.10/std) >= 0.10.0
-Requires:       crate(serde-1.0/derive) >= 1.0.114
+Requires:       crate(serde-1/derive) >= 1.0.114
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

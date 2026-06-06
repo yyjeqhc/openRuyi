@@ -73,7 +73,7 @@ This metapackage enables feature "portable-atomic-unsafe-assume-single-core" for
 %package     -n %{name}+serde
 Summary:        `static` friendly data structures that don't require dynamic memory allocation - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.0
+Requires:       crate(serde-1) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

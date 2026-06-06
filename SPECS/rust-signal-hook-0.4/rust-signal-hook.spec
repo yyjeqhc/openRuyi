@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name signal-hook
 %global full_version 0.4.4
 %global pkgname signal-hook-0.4
@@ -27,7 +33,7 @@ Source code for takopackized Rust crate "signal-hook"
 %package     -n %{name}+cc
 Summary:        Unix signal handling - feature "cc" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(cc-1.0/default) >= 1.0.0
+Requires:       crate(cc-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/cc)
 Provides:       crate(%{pkgname}/extended-siginfo-raw)
 

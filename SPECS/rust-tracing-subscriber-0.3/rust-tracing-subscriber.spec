@@ -157,7 +157,7 @@ This metapackage enables feature "registry" for the Rust tracing-subscriber crat
 %package     -n %{name}+serde
 Summary:        Utilities for implementing and composing `tracing` subscribers - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.140
+Requires:       crate(serde-1/default) >= 1.0.140
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -166,7 +166,7 @@ This metapackage enables feature "serde" for the Rust tracing-subscriber crate, 
 %package     -n %{name}+serde-json
 Summary:        Utilities for implementing and composing `tracing` subscribers - feature "serde_json"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-json-1.0/default) >= 1.0.82
+Requires:       crate(serde-json-1/default) >= 1.0.82
 Provides:       crate(%{pkgname}/serde-json)
 
 %description -n %{name}+serde-json

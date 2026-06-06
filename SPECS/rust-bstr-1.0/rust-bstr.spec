@@ -31,7 +31,7 @@ Source code for takopackized Rust crate "bstr"
 Summary:        String type that is not required to be valid UTF-8 - feature "alloc"
 Requires:       crate(%{pkgname})
 Requires:       crate(memchr-2.0/alloc) >= 2.8.0
-Requires:       crate(serde-1.0/alloc) >= 1.0.228
+Requires:       crate(serde-1/alloc) >= 1.0.228
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -50,7 +50,7 @@ This metapackage enables feature "default" for the Rust bstr crate, by pulling i
 %package     -n %{name}+serde
 Summary:        String type that is not required to be valid UTF-8 - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.228
+Requires:       crate(serde-1) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -61,7 +61,7 @@ Summary:        String type that is not required to be valid UTF-8 - feature "st
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(memchr-2.0/std) >= 2.8.0
-Requires:       crate(serde-1.0/std) >= 1.0.228
+Requires:       crate(serde-1/std) >= 1.0.228
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std

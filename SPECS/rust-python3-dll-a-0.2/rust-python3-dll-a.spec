@@ -20,7 +20,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(cc-1.0/default) >= 1.2.48
+Requires:       crate(cc-1/default) >= 1.2.48
 Provides:       crate(python3-dll-a) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

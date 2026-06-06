@@ -37,8 +37,8 @@ Source code for takopackized Rust crate "icu_collections"
 %package     -n %{name}+alloc
 Summary:        Collection of API for use in ICU libraries - feature "alloc"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/alloc) >= 1.0.220
-Requires:       crate(serde-1.0/derive) >= 1.0.220
+Requires:       crate(serde-1/alloc) >= 1.0.220
+Requires:       crate(serde-1/derive) >= 1.0.220
 Requires:       crate(zerovec-0.11/alloc) >= 0.11.6
 Requires:       crate(zerovec-0.11/derive) >= 0.11.6
 Requires:       crate(zerovec-0.11/yoke) >= 0.11.6
@@ -65,7 +65,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(potential-utf-0.1/serde) >= 0.1.5
 Requires:       crate(potential-utf-0.1/zerovec) >= 0.1.5
-Requires:       crate(serde-1.0/derive) >= 1.0.220
+Requires:       crate(serde-1/derive) >= 1.0.220
 Requires:       crate(zerovec-0.11/derive) >= 0.11.6
 Requires:       crate(zerovec-0.11/serde) >= 0.11.6
 Requires:       crate(zerovec-0.11/yoke) >= 0.11.6

@@ -92,7 +92,7 @@ This metapackage enables feature "refpool" for the Rust im-rc crate, by pulling 
 %package     -n %{name}+serde
 Summary:        Immutable collection datatypes (the fast but not thread safe version) - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

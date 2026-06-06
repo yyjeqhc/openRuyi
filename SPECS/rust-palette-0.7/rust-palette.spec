@@ -112,8 +112,8 @@ Additionally, this package also provides the "random" feature.
 %package     -n %{name}+serde
 Summary:        Convert and manage colors with a focus on correctness, flexibility and ease of use - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
-Requires:       crate(serde-1.0/serde-derive) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
+Requires:       crate(serde-1/serde-derive) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name env_filter
 %global full_version 1.0.1
 %global pkgname env-filter-1.0
@@ -25,8 +31,8 @@ Source code for takopackized Rust crate "env_filter"
 %package     -n %{name}+regex
 Summary:        Filter log events using environment variables - feature "regex" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(regex-1.0/perf) >= 1.12.3
-Requires:       crate(regex-1.0/std) >= 1.12.3
+Requires:       crate(regex-1/perf) >= 1.12.3
+Requires:       crate(regex-1/std) >= 1.12.3
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/regex)
 

@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(arrayref-0.3/default) >= 0.3.9
 Requires:       crate(arrayvec-0.7) >= 0.7.6
-Requires:       crate(cc-1.0/default) >= 1.2.58
+Requires:       crate(cc-1/default) >= 1.2.58
 Requires:       crate(cfg-if-1.0/default) >= 1.0.4
 Requires:       crate(constant-time-eq-0.4) >= 0.4.2
 Requires:       crate(cpufeatures-0.3/default) >= 0.3.0
@@ -76,7 +76,7 @@ This metapackage enables feature "rayon" for the Rust blake3 crate, by pulling i
 %package     -n %{name}+serde
 Summary:        BLAKE3 hash function - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/derive) >= 1.0.0
+Requires:       crate(serde-1/derive) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

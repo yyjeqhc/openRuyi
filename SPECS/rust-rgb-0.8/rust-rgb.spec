@@ -70,7 +70,7 @@ This metapackage enables feature "defmt-03" for the Rust rgb crate, by pulling i
 %package     -n %{name}+serde
 Summary:        `struct RGB/RGBA/etc.` for sharing pixels between crates + convenience methods for color manipulation - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/derive) >= 1.0.200
+Requires:       crate(serde-1/derive) >= 1.0.200
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

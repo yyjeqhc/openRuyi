@@ -33,7 +33,7 @@ Source code for takopackized Rust crate "dary_heap"
 %package     -n %{name}+serde
 Summary:        D-ary heap - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/alloc) >= 1.0.228
+Requires:       crate(serde-1/alloc) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

@@ -71,8 +71,8 @@ This metapackage enables feature "http-crate" for the Rust ureq crate, by pullin
 %package     -n %{name}+json
 Summary:        Simple, safe HTTP client - feature "json"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.228
-Requires:       crate(serde-json-1.0/default) >= 1.0.149
+Requires:       crate(serde-1/default) >= 1.0.228
+Requires:       crate(serde-json-1/default) >= 1.0.149
 Provides:       crate(%{pkgname}/json)
 
 %description -n %{name}+json

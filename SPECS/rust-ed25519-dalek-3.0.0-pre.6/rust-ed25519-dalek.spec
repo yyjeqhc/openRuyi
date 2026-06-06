@@ -38,7 +38,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(curve25519-dalek-5.0.0-pre.6/alloc) >= 5.0.0-pre.6
 Requires:       crate(curve25519-dalek-5.0.0-pre.6/digest) >= 5.0.0-pre.6
 Requires:       crate(ed25519-3.0.0-rc.4/alloc) >= 3.0.0-rc.4
-Requires:       crate(serde-1.0/alloc) >= 1.0.228
+Requires:       crate(serde-1/alloc) >= 1.0.228
 Requires:       crate(signature-3.0/alloc) >= 3.0.0
 Requires:       crate(zeroize-1.0/alloc) >= 1.8.2
 Provides:       crate(%{pkgname}/alloc)
@@ -129,7 +129,7 @@ This metapackage enables feature "rand_core" for the Rust ed25519-dalek crate, b
 Summary:        Fast and efficient ed25519 EdDSA key generations, signing, and verification in pure Rust - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(ed25519-3.0.0-rc.4/serde) >= 3.0.0-rc.4
-Requires:       crate(serde-1.0) >= 1.0.228
+Requires:       crate(serde-1) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

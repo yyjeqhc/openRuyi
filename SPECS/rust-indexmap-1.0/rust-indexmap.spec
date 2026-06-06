@@ -72,7 +72,7 @@ This metapackage enables feature "rustc-rayon" for the Rust indexmap crate, by p
 %package     -n %{name}+serde
 Summary:        Hash table with consistent order and fast iteration - feature "serde" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.228
+Requires:       crate(serde-1) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 Provides:       crate(%{pkgname}/serde-1)
 

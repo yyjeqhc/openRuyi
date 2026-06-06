@@ -240,8 +240,8 @@ This metapackage enables feature "reqwest" for the Rust gix-transport crate, by 
 %package     -n %{name}+serde
 Summary:        The gitoxide project dedicated to implementing the git transport layer - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/derive) >= 1.0.114
-Requires:       crate(serde-1.0/std) >= 1.0.114
+Requires:       crate(serde-1/derive) >= 1.0.114
+Requires:       crate(serde-1/std) >= 1.0.114
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

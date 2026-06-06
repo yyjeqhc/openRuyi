@@ -37,8 +37,8 @@ Source code for takopackized Rust crate "icu_properties"
 Summary:        Definitions for Unicode properties - feature "alloc"
 Requires:       crate(%{pkgname})
 Requires:       crate(icu-collections-2.0/alloc) >= 2.2.0
-Requires:       crate(serde-1.0/alloc) >= 1.0.220
-Requires:       crate(serde-1.0/derive) >= 1.0.220
+Requires:       crate(serde-1/alloc) >= 1.0.220
+Requires:       crate(serde-1/derive) >= 1.0.220
 Requires:       crate(zerovec-0.11/alloc) >= 0.11.6
 Requires:       crate(zerovec-0.11/derive) >= 0.11.6
 Requires:       crate(zerovec-0.11/yoke) >= 0.11.6
@@ -96,7 +96,7 @@ Requires:       crate(icu-collections-2.0/serde) >= 2.2.0
 Requires:       crate(icu-locale-core-2.0/serde) >= 2.2.0
 Requires:       crate(icu-locale-core-2.0/zerovec) >= 2.2.0
 Requires:       crate(icu-provider-2.0/serde) >= 2.2.0
-Requires:       crate(serde-1.0/derive) >= 1.0.220
+Requires:       crate(serde-1/derive) >= 1.0.220
 Requires:       crate(zerotrie-0.2/serde) >= 0.2.4
 Requires:       crate(zerotrie-0.2/yoke) >= 0.2.4
 Requires:       crate(zerotrie-0.2/zerofrom) >= 0.2.4

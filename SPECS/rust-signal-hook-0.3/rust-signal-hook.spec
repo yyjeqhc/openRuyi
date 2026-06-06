@@ -34,7 +34,7 @@ Source code for takopackized Rust crate "signal-hook"
 %package     -n %{name}+cc
 Summary:        Unix signal handling - feature "cc" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(cc-1.0/default) >= 1.0.0
+Requires:       crate(cc-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/cc)
 Provides:       crate(%{pkgname}/extended-siginfo-raw)
 

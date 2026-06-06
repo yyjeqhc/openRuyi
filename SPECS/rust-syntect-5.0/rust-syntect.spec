@@ -22,8 +22,8 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(once-cell-1.0/default) >= 1.21.4
-Requires:       crate(serde-1.0/default) >= 1.0.228
-Requires:       crate(serde-derive-1.0/default) >= 1.0.228
+Requires:       crate(serde-1/default) >= 1.0.228
+Requires:       crate(serde-derive-1/default) >= 1.0.228
 Requires:       crate(thiserror-2.0/default) >= 2.0.18
 Requires:       crate(walkdir-2.0/default) >= 2.5.0
 Provides:       crate(syntect) = %{version}
@@ -137,7 +137,7 @@ Summary:        High quality syntax highlighting and code intelligence using Sub
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/parsing)
 Requires:       crate(%{pkgname}/plist-load)
-Requires:       crate(serde-json-1.0/default) >= 1.0.149
+Requires:       crate(serde-json-1/default) >= 1.0.149
 Provides:       crate(%{pkgname}/metadata)
 
 %description -n %{name}+metadata
@@ -183,7 +183,7 @@ This metapackage enables feature "plist" for the Rust syntect crate, by pulling 
 Summary:        High quality syntax highlighting and code intelligence using Sublime Text's grammars - feature "plist-load"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/plist)
-Requires:       crate(serde-json-1.0/default) >= 1.0.149
+Requires:       crate(serde-json-1/default) >= 1.0.149
 Provides:       crate(%{pkgname}/plist-load)
 
 %description -n %{name}+plist-load

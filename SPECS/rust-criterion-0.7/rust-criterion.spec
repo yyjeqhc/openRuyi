@@ -24,16 +24,16 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(anes-0.1/default) >= 0.1.6
 Requires:       crate(cast-0.3/default) >= 0.3.0
 Requires:       crate(ciborium-0.2/default) >= 0.2.2
-Requires:       crate(clap-4.0/help) >= 4.6.1
-Requires:       crate(clap-4.0/std) >= 4.6.1
+Requires:       crate(clap-4/help) >= 4.6.1
+Requires:       crate(clap-4/std) >= 4.6.1
 Requires:       crate(criterion-plot-0.6/default) >= 0.6.0
 Requires:       crate(itertools-0.13/default) >= 0.13.0
 Requires:       crate(num-traits-0.2/std) >= 0.2.19
 Requires:       crate(oorandom-11.0/default) >= 11.1.5
-Requires:       crate(regex-1.0/std) >= 1.12.3
-Requires:       crate(serde-1.0/default) >= 1.0.228
-Requires:       crate(serde-1.0/derive) >= 1.0.228
-Requires:       crate(serde-json-1.0/default) >= 1.0.149
+Requires:       crate(regex-1/std) >= 1.12.3
+Requires:       crate(serde-1/default) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
+Requires:       crate(serde-json-1/default) >= 1.0.149
 Requires:       crate(tinytemplate-1.0/default) >= 1.2.1
 Requires:       crate(walkdir-2.0/default) >= 2.5.0
 Provides:       crate(%{pkgname})

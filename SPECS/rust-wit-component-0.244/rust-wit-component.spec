@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name wit-component
 %global full_version 0.244.0
 %global pkgname wit-component-0.244
@@ -15,13 +21,13 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(anyhow-1.0/default) >= 1.0.102
+Requires:       crate(anyhow-1/default) >= 1.0.102
 Requires:       crate(bitflags-2.0/default) >= 2.11.1
 Requires:       crate(indexmap-2.0) >= 2.14.0
 Requires:       crate(log-0.4/default) >= 0.4.29
-Requires:       crate(serde-1.0/alloc) >= 1.0.228
-Requires:       crate(serde-derive-1.0/default) >= 1.0.228
-Requires:       crate(serde-json-1.0/default) >= 1.0.149
+Requires:       crate(serde-1/alloc) >= 1.0.228
+Requires:       crate(serde-derive-1/default) >= 1.0.228
+Requires:       crate(serde-json-1/default) >= 1.0.149
 Requires:       crate(wasm-encoder-0.244/std) >= 0.244.0
 Requires:       crate(wasm-encoder-0.244/wasmparser) >= 0.244.0
 Requires:       crate(wasm-metadata-0.244) >= 0.244.0

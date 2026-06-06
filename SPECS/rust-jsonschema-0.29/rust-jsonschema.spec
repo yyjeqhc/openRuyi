@@ -36,9 +36,9 @@ Requires:       crate(once-cell-1.0/default) >= 1.21.3
 Requires:       crate(percent-encoding-2.0/default) >= 2.3.1
 Requires:       crate(referencing-0.29/default) >= 0.29.1
 Requires:       crate(regex-syntax-0.8/default) >= 0.8.5
-Requires:       crate(serde-1.0/default) >= 1.0.219
-Requires:       crate(serde-1.0/derive) >= 1.0.219
-Requires:       crate(serde-json-1.0/default) >= 1.0.140
+Requires:       crate(serde-1/default) >= 1.0.219
+Requires:       crate(serde-1/derive) >= 1.0.219
+Requires:       crate(serde-json-1/default) >= 1.0.140
 Requires:       crate(uuid-simd-0.8/default) >= 0.8.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/resolve-file)

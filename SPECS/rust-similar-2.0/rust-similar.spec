@@ -51,8 +51,8 @@ This metapackage enables feature "bytes" for the Rust similar crate, by pulling 
 %package     -n %{name}+serde
 Summary:        Diff library for Rust - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.130
-Requires:       crate(serde-1.0/derive) >= 1.0.130
+Requires:       crate(serde-1/default) >= 1.0.130
+Requires:       crate(serde-1/derive) >= 1.0.130
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

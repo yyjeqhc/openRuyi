@@ -21,8 +21,8 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(cfg-if-1.0/default) >= 1.0.3
-Requires:       crate(clap-4.0/env) >= 4.6.1
-Requires:       crate(clap-4.0/std) >= 4.6.1
+Requires:       crate(clap-4/env) >= 4.6.1
+Requires:       crate(clap-4/std) >= 4.6.1
 Requires:       crate(codspeed-4.0/default) >= 4.4.1
 Requires:       crate(condtype-1.0/default) >= 1.3.0
 Requires:       crate(divan-macros-0.1/default) >= 0.1.17
@@ -39,9 +39,9 @@ Source code for takopackized Rust crate "codspeed-divan-compat-walltime"
 %package     -n %{name}+help
 Summary:        Temporary compatibility layer for CodSpeed to use Divan's walltime entrypoint - feature "help"
 Requires:       crate(%{pkgname})
-Requires:       crate(clap-4.0/env) >= 4.6.1
-Requires:       crate(clap-4.0/help) >= 4.6.1
-Requires:       crate(clap-4.0/std) >= 4.6.1
+Requires:       crate(clap-4/env) >= 4.6.1
+Requires:       crate(clap-4/help) >= 4.6.1
+Requires:       crate(clap-4/std) >= 4.6.1
 Provides:       crate(%{pkgname}/help)
 
 %description -n %{name}+help
@@ -51,9 +51,9 @@ This metapackage enables feature "help" for the Rust codspeed-divan-compat-wallt
 Summary:        Temporary compatibility layer for CodSpeed to use Divan's walltime entrypoint - feature "wrap_help" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/help)
-Requires:       crate(clap-4.0/env) >= 4.6.1
-Requires:       crate(clap-4.0/std) >= 4.6.1
-Requires:       crate(clap-4.0/wrap-help) >= 4.6.1
+Requires:       crate(clap-4/env) >= 4.6.1
+Requires:       crate(clap-4/std) >= 4.6.1
+Requires:       crate(clap-4/wrap-help) >= 4.6.1
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/wrap-help)
 

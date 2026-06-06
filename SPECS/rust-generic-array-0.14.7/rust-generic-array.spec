@@ -33,7 +33,7 @@ Source code for takopackized Rust crate "generic-array"
 %package     -n %{name}+serde
 Summary:        Generic types implementing functionality of arrays - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.0
+Requires:       crate(serde-1) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

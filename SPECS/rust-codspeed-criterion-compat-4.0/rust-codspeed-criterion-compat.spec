@@ -20,11 +20,11 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(clap-4.0/std) >= 4.6.1
+Requires:       crate(clap-4/std) >= 4.6.1
 Requires:       crate(codspeed-4.0/default) >= 4.4.1
 Requires:       crate(codspeed-criterion-compat-walltime-4.0) >= 4.4.1
 Requires:       crate(colored-2.0/default) >= 2.2.0
-Requires:       crate(regex-1.0/std) >= 1.12.3
+Requires:       crate(regex-1/std) >= 1.12.3
 Provides:       crate(%{pkgname})
 
 %description

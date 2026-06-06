@@ -83,7 +83,7 @@ This metapackage enables feature "rand_core" for the Rust pasetors crate, by pul
 %package     -n %{name}+regex
 Summary:        PASETO: Platform-Agnostic Security Tokens (in Rust) - feature "regex"
 Requires:       crate(%{pkgname})
-Requires:       crate(regex-1.0/default) >= 1.12.3
+Requires:       crate(regex-1/default) >= 1.12.3
 Provides:       crate(%{pkgname}/regex)
 
 %description -n %{name}+regex
@@ -92,8 +92,8 @@ This metapackage enables feature "regex" for the Rust pasetors crate, by pulling
 %package     -n %{name}+serde
 Summary:        PASETO: Platform-Agnostic Security Tokens (in Rust) - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.228
-Requires:       crate(serde-derive-1.0/default) >= 1.0.228
+Requires:       crate(serde-1/default) >= 1.0.228
+Requires:       crate(serde-derive-1/default) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -102,7 +102,7 @@ This metapackage enables feature "serde" for the Rust pasetors crate, by pulling
 %package     -n %{name}+serde-json
 Summary:        PASETO: Platform-Agnostic Security Tokens (in Rust) - feature "serde_json"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-json-1.0/default) >= 1.0.149
+Requires:       crate(serde-json-1/default) >= 1.0.149
 Provides:       crate(%{pkgname}/serde-json)
 
 %description -n %{name}+serde-json

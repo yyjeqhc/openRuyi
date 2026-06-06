@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name pnet_base
 %global full_version 0.35.0
 %global pkgname pnet-base-0.35
@@ -24,7 +30,7 @@ Source code for takopackized Rust crate "pnet_base"
 %package     -n %{name}+serde
 Summary:        Fundamental base types and code used by pnet - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.171
+Requires:       crate(serde-1) >= 1.0.171
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

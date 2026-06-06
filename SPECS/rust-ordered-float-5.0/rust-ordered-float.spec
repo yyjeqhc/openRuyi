@@ -209,7 +209,7 @@ This metapackage enables feature "schemars" for the Rust ordered-float crate, by
 Summary:        Wrappers for total ordering on floats - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(rand-0.8/serde1) >= 0.8.6
-Requires:       crate(serde-1.0) >= 1.0.228
+Requires:       crate(serde-1) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

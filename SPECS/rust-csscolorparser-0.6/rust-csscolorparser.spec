@@ -74,8 +74,8 @@ Additionally, this package also provides the "rust-rgb" feature.
 %package     -n %{name}+serde
 Summary:        CSS color parser library - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.139
-Requires:       crate(serde-1.0/derive) >= 1.0.139
+Requires:       crate(serde-1/default) >= 1.0.139
+Requires:       crate(serde-1/derive) >= 1.0.139
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

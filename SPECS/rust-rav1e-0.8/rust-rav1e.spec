@@ -129,8 +129,8 @@ This metapackage enables feature "byteorder" for the Rust rav1e crate, by pullin
 %package     -n %{name}+cc
 Summary:        Fastest and safest AV1 encoder - feature "cc"
 Requires:       crate(%{pkgname})
-Requires:       crate(cc-1.0/default) >= 1.0.0
-Requires:       crate(cc-1.0/parallel) >= 1.0.0
+Requires:       crate(cc-1/default) >= 1.0.0
+Requires:       crate(cc-1/parallel) >= 1.0.0
 Provides:       crate(%{pkgname}/cc)
 
 %description -n %{name}+cc
@@ -139,10 +139,10 @@ This metapackage enables feature "cc" for the Rust rav1e crate, by pulling in an
 %package     -n %{name}+clap
 Summary:        Fastest and safest AV1 encoder - feature "clap"
 Requires:       crate(%{pkgname})
-Requires:       crate(clap-4.0/color) >= 4.5
-Requires:       crate(clap-4.0/derive) >= 4.5
-Requires:       crate(clap-4.0/std) >= 4.5
-Requires:       crate(clap-4.0/wrap-help) >= 4.5
+Requires:       crate(clap-4/color) >= 4.5
+Requires:       crate(clap-4/derive) >= 4.5
+Requires:       crate(clap-4/std) >= 4.5
+Requires:       crate(clap-4/wrap-help) >= 4.5
 Provides:       crate(%{pkgname}/clap)
 
 %description -n %{name}+clap
@@ -286,8 +286,8 @@ Additionally, this package also provides the "capi" feature.
 %package     -n %{name}+serde
 Summary:        Fastest and safest AV1 encoder - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
-Requires:       crate(serde-1.0/derive) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
+Requires:       crate(serde-1/derive) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

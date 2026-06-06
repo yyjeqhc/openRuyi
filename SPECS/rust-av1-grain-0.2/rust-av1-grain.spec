@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(anyhow-1.0/default) >= 1.0.102
+Requires:       crate(anyhow-1/default) >= 1.0.102
 Requires:       crate(arrayvec-0.7/default) >= 0.7.6
 Requires:       crate(log-0.4/default) >= 0.4.29
 Provides:       crate(av1-grain) = %{version}
@@ -78,8 +78,8 @@ This metapackage enables feature "num-rational" for the Rust av1-grain crate, by
 %package     -n %{name}+serde
 Summary:        Helpers for generating and parsing AV1 film grain data - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.140
-Requires:       crate(serde-1.0/derive) >= 1.0.140
+Requires:       crate(serde-1/default) >= 1.0.140
+Requires:       crate(serde-1/derive) >= 1.0.140
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

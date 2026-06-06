@@ -65,7 +65,7 @@ Additionally, this package also provides the "encoding" feature.
 %package     -n %{name}+serde
 Summary:        High performance xml reader and writer - feature "serde" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.180
+Requires:       crate(serde-1/default) >= 1.0.180
 Provides:       crate(%{pkgname}/serde)
 Provides:       crate(%{pkgname}/serialize)
 
@@ -77,7 +77,7 @@ Additionally, this package also provides the "serialize" feature.
 %package     -n %{name}+serde-types
 Summary:        High performance xml reader and writer - feature "serde-types"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/derive) >= 1.0.180
+Requires:       crate(serde-1/derive) >= 1.0.180
 Provides:       crate(%{pkgname}/serde-types)
 
 %description -n %{name}+serde-types

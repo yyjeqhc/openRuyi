@@ -44,7 +44,7 @@ Additionally, this package also provides the "default" feature.
 %package     -n %{name}+regex
 Summary:        Rust equivalent of Unix command "which" - feature "regex"
 Requires:       crate(%{pkgname})
-Requires:       crate(regex-1.0/default) >= 1.10.2
+Requires:       crate(regex-1/default) >= 1.10.2
 Provides:       crate(%{pkgname}/regex)
 
 %description -n %{name}+regex

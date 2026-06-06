@@ -73,7 +73,7 @@ This metapackage enables feature "safe_api" for the Rust orion crate, by pulling
 Summary:        Usable, easy and safe pure-Rust crypto - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(serde-1.0/alloc) >= 1.0.124
+Requires:       crate(serde-1/alloc) >= 1.0.124
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name zvariant
 %global full_version 5.10.1
 %global pkgname zvariant-5.0
@@ -16,8 +22,8 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(endi-1.0/default) >= 1.1.1
-Requires:       crate(serde-1.0/default) >= 1.0.228
-Requires:       crate(serde-1.0/derive) >= 1.0.228
+Requires:       crate(serde-1/default) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
 Requires:       crate(winnow-1.0/default) >= 1.0.0
 Requires:       crate(zvariant-derive-5.0/default) >= 5.10.1
 Requires:       crate(zvariant-utils-3.0/default) >= 3.3.1

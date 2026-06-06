@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name portable-atomic-util
 %global full_version 0.2.7
 %global pkgname portable-atomic-util-0.2
@@ -27,7 +33,7 @@ Source code for takopackized Rust crate "portable-atomic-util"
 %package     -n %{name}+serde
 Summary:        Synchronization primitives built with portable-atomic - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.60
+Requires:       crate(serde-1) >= 1.0.60
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

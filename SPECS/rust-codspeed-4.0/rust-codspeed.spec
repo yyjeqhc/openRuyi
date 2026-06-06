@@ -20,17 +20,17 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(anyhow-1.0/default) >= 1.0.102
-Requires:       crate(cc-1.0/default) >= 1.2.38
+Requires:       crate(anyhow-1/default) >= 1.0.102
+Requires:       crate(cc-1/default) >= 1.2.38
 Requires:       crate(colored-2.0/default) >= 2.2.0
 Requires:       crate(getrandom-0.2/default) >= 0.2.16
 Requires:       crate(glob-0.3/default) >= 0.3.3
 Requires:       crate(libc-0.2/default) >= 0.2.186
 Requires:       crate(nix-0.31/default) >= 0.31.2
 Requires:       crate(nix-0.31/time) >= 0.31.2
-Requires:       crate(serde-1.0/default) >= 1.0.228
-Requires:       crate(serde-1.0/derive) >= 1.0.228
-Requires:       crate(serde-json-1.0/default) >= 1.0.149
+Requires:       crate(serde-1/default) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
+Requires:       crate(serde-json-1/default) >= 1.0.149
 Requires:       crate(statrs-0.18) >= 0.18.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

@@ -37,8 +37,8 @@ Source code for takopackized Rust crate "gix-fs"
 %package     -n %{name}+serde
 Summary:        Crate providing file system specific utilities to `gitoxide` - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/derive) >= 1.0.114
-Requires:       crate(serde-1.0/std) >= 1.0.114
+Requires:       crate(serde-1/derive) >= 1.0.114
+Requires:       crate(serde-1/std) >= 1.0.114
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

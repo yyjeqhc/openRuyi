@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name slab
 %global full_version 0.4.12
 %global pkgname slab-0.4
@@ -25,7 +31,7 @@ Source code for takopackized Rust crate "slab"
 %package     -n %{name}+serde
 Summary:        Pre-allocated storage for a uniform data type - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/alloc) >= 1.0.95
+Requires:       crate(serde-1/alloc) >= 1.0.95
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

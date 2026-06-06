@@ -63,8 +63,8 @@ This metapackage enables feature "miette-error" for the Rust pest crate, by pull
 %package     -n %{name}+pretty-print
 Summary:        Elegant Parser - feature "pretty-print"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.145
-Requires:       crate(serde-json-1.0/default) >= 1.0.85
+Requires:       crate(serde-1/default) >= 1.0.145
+Requires:       crate(serde-json-1/default) >= 1.0.85
 Provides:       crate(%{pkgname}/pretty-print)
 
 %description -n %{name}+pretty-print

@@ -40,8 +40,8 @@ This metapackage enables feature "getrandom" for the Rust rand_core crate, by pu
 %package     -n %{name}+serde
 Summary:        Core random number generator traits and tools for implementation - feature "serde" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
-Requires:       crate(serde-1.0/derive) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
+Requires:       crate(serde-1/derive) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 Provides:       crate(%{pkgname}/serde1)
 

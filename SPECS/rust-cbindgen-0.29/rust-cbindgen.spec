@@ -26,9 +26,9 @@ Requires:       crate(indexmap-2.0/default) >= 2.1.0
 Requires:       crate(log-0.4/default) >= 0.4.0
 Requires:       crate(proc-macro2-1.0/default) >= 1.0.60
 Requires:       crate(quote-1.0/default) >= 1.0.0
-Requires:       crate(serde-1.0/derive) >= 1.0.103
-Requires:       crate(serde-1.0/std) >= 1.0.103
-Requires:       crate(serde-json-1.0/default) >= 1.0.0
+Requires:       crate(serde-1/derive) >= 1.0.103
+Requires:       crate(serde-1/std) >= 1.0.103
+Requires:       crate(serde-json-1/default) >= 1.0.0
 Requires:       crate(syn-2.0/clone-impls) >= 2.0.85
 Requires:       crate(syn-2.0/extra-traits) >= 2.0.85
 Requires:       crate(syn-2.0/fold) >= 2.0.85
@@ -48,7 +48,7 @@ Source code for takopackized Rust crate "cbindgen"
 %package     -n %{name}+clap
 Summary:        Generating C bindings to Rust code - feature "clap" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(clap-4.0/default) >= 4.3
+Requires:       crate(clap-4/default) >= 4.3
 Provides:       crate(%{pkgname}/clap)
 Provides:       crate(%{pkgname}/default)
 

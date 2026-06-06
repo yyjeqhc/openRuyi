@@ -204,7 +204,7 @@ This metapackage enables feature "rsa-sha1" for the Rust internal-russh-forked-s
 %package     -n %{name}+serde
 Summary:        Pure Rust implementation of SSH key file format decoders/encoders as described in RFC4251/RFC4253 and OpenSSH key formats, as well as "sshsig" signatures and certificates (including certificate validation and certificate authority support), with further support for the `authorized_keys` and `known_hosts` file formats - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.16
+Requires:       crate(serde-1/default) >= 1.0.16
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

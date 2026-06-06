@@ -81,7 +81,7 @@ Additionally, this package also provides the "runtime-rng" feature.
 %package     -n %{name}+serde
 Summary:        Non-cryptographic hash function using AES-NI for high performance - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.117
+Requires:       crate(serde-1/default) >= 1.0.117
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

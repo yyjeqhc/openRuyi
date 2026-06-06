@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name indexmap
 %global full_version 2.14.0
 %global pkgname indexmap-2.0
@@ -64,7 +70,7 @@ This metapackage enables feature "rayon" for the Rust indexmap crate, by pulling
 %package     -n %{name}+serde
 Summary:        Hash table with consistent order and fast iteration - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.228
+Requires:       crate(serde-1) >= 1.0.228
 Requires:       crate(serde-core-1.0) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 

@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(anyhow-1.0/default) >= 1.0.102
+Requires:       crate(anyhow-1/default) >= 1.0.102
 Requires:       crate(derive-builder-0.20/default) >= 0.20.2
 Requires:       crate(rustversion-1.0/default) >= 1.0.22
 Requires:       crate(vergen-lib-9.0/default) >= 9.1.0
@@ -74,7 +74,7 @@ This metapackage enables feature "emit_and_set" for the Rust vergen crate, by pu
 %package     -n %{name}+regex
 Summary:        Generate 'cargo:rustc-env' instructions via 'build.rs' for use in your code via the 'env!' macro - feature "regex"
 Requires:       crate(%{pkgname})
-Requires:       crate(regex-1.0/default) >= 1.12.2
+Requires:       crate(regex-1/default) >= 1.12.2
 Provides:       crate(%{pkgname}/regex)
 
 %description -n %{name}+regex

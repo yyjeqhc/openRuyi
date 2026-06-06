@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(log-0.4/default) >= 0.4.29
 Requires:       crate(pyo3-0.27/default) >= 0.27.2
-Requires:       crate(serde-1.0/default) >= 1.0.228
+Requires:       crate(serde-1/default) >= 1.0.228
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

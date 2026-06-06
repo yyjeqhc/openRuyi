@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name dhat
 %global full_version 0.3.3
 %global pkgname dhat-0.3
@@ -20,9 +26,9 @@ Requires:       crate(lazy-static-1.0/default) >= 1.5.0
 Requires:       crate(mintex-0.1/default) >= 0.1.4
 Requires:       crate(parking-lot-0.12/default) >= 0.12.5
 Requires:       crate(rustc-hash-1.0/default) >= 1.1.0
-Requires:       crate(serde-1.0/default) >= 1.0.228
-Requires:       crate(serde-1.0/derive) >= 1.0.228
-Requires:       crate(serde-json-1.0/default) >= 1.0.149
+Requires:       crate(serde-1/default) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
+Requires:       crate(serde-json-1/default) >= 1.0.149
 Requires:       crate(thousands-0.2/default) >= 0.2.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

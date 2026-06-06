@@ -71,7 +71,7 @@ This metapackage enables feature "lazy_static" for the Rust fraction crate, by p
 %package     -n %{name}+serde
 Summary:        Lossless fractions and decimals; drop-in float replacement - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -80,7 +80,7 @@ This metapackage enables feature "serde" for the Rust fraction crate, by pulling
 %package     -n %{name}+serde-derive
 Summary:        Lossless fractions and decimals; drop-in float replacement - feature "serde_derive"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-derive-1.0/default) >= 1.0.0
+Requires:       crate(serde-derive-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/serde-derive)
 
 %description -n %{name}+serde-derive

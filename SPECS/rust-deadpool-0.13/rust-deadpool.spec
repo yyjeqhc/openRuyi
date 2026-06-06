@@ -73,8 +73,8 @@ This metapackage enables feature "rt_tokio_1" for the Rust deadpool crate, by pu
 %package     -n %{name}+serde
 Summary:        Dead simple async pool - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.103
-Requires:       crate(serde-1.0/derive) >= 1.0.103
+Requires:       crate(serde-1/default) >= 1.0.103
+Requires:       crate(serde-1/derive) >= 1.0.103
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

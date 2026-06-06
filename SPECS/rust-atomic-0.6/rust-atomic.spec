@@ -35,7 +35,7 @@ Source code for takopackized Rust crate "atomic"
 %package     -n %{name}+serde
 Summary:        Generic Atomic<T> wrapper type - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.219
+Requires:       crate(serde-1) >= 1.0.219
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

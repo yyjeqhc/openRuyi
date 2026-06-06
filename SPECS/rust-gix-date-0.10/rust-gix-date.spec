@@ -47,7 +47,7 @@ Summary:        The gitoxide project parsing dates the way git does - feature "s
 Requires:       crate(%{pkgname})
 Requires:       crate(bstr-1.0/serde) >= 1.12.1
 Requires:       crate(bstr-1.0/std) >= 1.12.1
-Requires:       crate(serde-1.0/derive) >= 1.0.114
+Requires:       crate(serde-1/derive) >= 1.0.114
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

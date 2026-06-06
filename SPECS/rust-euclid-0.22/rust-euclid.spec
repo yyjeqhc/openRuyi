@@ -77,7 +77,7 @@ This metapackage enables feature "mint" for the Rust euclid crate, by pulling in
 %package     -n %{name}+serde
 Summary:        Geometry primitives - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/serde-derive) >= 1.0.0
+Requires:       crate(serde-1/serde-derive) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

@@ -23,9 +23,9 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(colored-2.0/default) >= 2.2.0
 Requires:       crate(libc-0.2/default) >= 0.2.185
-Requires:       crate(serde-1.0/default) >= 1.0.228
-Requires:       crate(serde-1.0/derive) >= 1.0.228
-Requires:       crate(serde-json-1.0/default) >= 1.0.149
+Requires:       crate(serde-1/default) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
+Requires:       crate(serde-json-1/default) >= 1.0.149
 Requires:       crate(uuid-1.0/default) >= 1.23.1
 Requires:       crate(uuid-1.0/v4) >= 1.23.1
 Provides:       crate(%{pkgname})

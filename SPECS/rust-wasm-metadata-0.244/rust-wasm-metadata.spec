@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name wasm-metadata
 %global full_version 0.244.0
 %global pkgname wasm-metadata-0.244
@@ -15,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(anyhow-1.0/default) >= 1.0.102
+Requires:       crate(anyhow-1/default) >= 1.0.102
 Requires:       crate(indexmap-2.0/serde) >= 2.14.0
 Requires:       crate(wasm-encoder-0.244/component-model) >= 0.244.0
 Requires:       crate(wasm-encoder-0.244/std) >= 0.244.0
@@ -31,8 +37,8 @@ Source code for takopackized Rust crate "wasm-metadata"
 %package     -n %{name}+clap
 Summary:        Read and manipulate WebAssembly metadata - feature "clap"
 Requires:       crate(%{pkgname})
-Requires:       crate(clap-4.0/default) >= 4.0.0
-Requires:       crate(clap-4.0/derive) >= 4.0.0
+Requires:       crate(clap-4/default) >= 4.0.0
+Requires:       crate(clap-4/derive) >= 4.0.0
 Provides:       crate(%{pkgname}/clap)
 
 %description -n %{name}+clap
@@ -54,7 +60,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/serde)
 Requires:       crate(auditable-serde-0.8/default) >= 0.8.0
 Requires:       crate(flate2-1.0/default) >= 1.1.0
-Requires:       crate(serde-json-1.0/default) >= 1.0.0
+Requires:       crate(serde-json-1/default) >= 1.0.0
 Requires:       crate(spdx-0.10/default) >= 0.10.1
 Requires:       crate(url-2.0/default) >= 2.0.0
 Provides:       crate(%{pkgname}/oci)
@@ -65,8 +71,8 @@ This metapackage enables feature "oci" for the Rust wasm-metadata crate, by pull
 %package     -n %{name}+serde
 Summary:        Read and manipulate WebAssembly metadata - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/alloc) >= 1.0.166
-Requires:       crate(serde-derive-1.0/default) >= 1.0.166
+Requires:       crate(serde-1/alloc) >= 1.0.166
+Requires:       crate(serde-derive-1/default) >= 1.0.166
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

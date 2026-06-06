@@ -92,8 +92,8 @@ Requires:       crate(%{pkgname})
 Requires:       crate(icu-collections-2.0/serde) >= 2.2.0
 Requires:       crate(icu-properties-2.0/serde) >= 2.2.0
 Requires:       crate(icu-provider-2.0/serde) >= 2.2.0
-Requires:       crate(serde-1.0/alloc) >= 1.0.220
-Requires:       crate(serde-1.0/derive) >= 1.0.220
+Requires:       crate(serde-1/alloc) >= 1.0.220
+Requires:       crate(serde-1/derive) >= 1.0.220
 Requires:       crate(zerovec-0.11/serde) >= 0.11.6
 Provides:       crate(%{pkgname}/serde)
 

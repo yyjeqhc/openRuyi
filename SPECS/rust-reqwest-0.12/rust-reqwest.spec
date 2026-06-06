@@ -40,8 +40,8 @@ Requires:       crate(js-sys-0.3/default) >= 0.3.94
 Requires:       crate(log-0.4/default) >= 0.4.29
 Requires:       crate(percent-encoding-2.0/default) >= 2.3.2
 Requires:       crate(pin-project-lite-0.2/default) >= 0.2.17
-Requires:       crate(serde-1.0/default) >= 1.0.228
-Requires:       crate(serde-json-1.0/default) >= 1.0.149
+Requires:       crate(serde-1/default) >= 1.0.228
+Requires:       crate(serde-json-1/default) >= 1.0.149
 Requires:       crate(serde-urlencoded-0.7/default) >= 0.7.1
 Requires:       crate(sync-wrapper-1.0/default) >= 1.0.2
 Requires:       crate(sync-wrapper-1.0/futures) >= 1.0.2
@@ -282,7 +282,7 @@ This metapackage enables feature "http3" for the Rust reqwest crate, by pulling 
 %package     -n %{name}+json
 Summary:        Higher level HTTP client library - feature "json"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-json-1.0/default) >= 1.0.149
+Requires:       crate(serde-json-1/default) >= 1.0.149
 Provides:       crate(%{pkgname}/json)
 
 %description -n %{name}+json

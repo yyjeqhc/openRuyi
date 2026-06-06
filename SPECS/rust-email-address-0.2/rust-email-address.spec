@@ -29,7 +29,7 @@ Source code for takopackized Rust crate "email_address"
 %package     -n %{name}+serde
 Summary:        Rust crate providing an implementation of an RFC-compliant `EmailAddress` newtype - feature "serde" and 2 more
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.219
+Requires:       crate(serde-1/default) >= 1.0.219
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/serde)
 Provides:       crate(%{pkgname}/serde-support)

@@ -32,7 +32,7 @@ Source code for takopackized Rust crate "hashlink"
 %package     -n %{name}+serde
 Summary:        HashMap-like containers that hold their key-value pairs in a user controllable order - feature "serde" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.0
+Requires:       crate(serde-1) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 Provides:       crate(%{pkgname}/serde-impl)
 

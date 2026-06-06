@@ -30,8 +30,8 @@ Source code for takopackized Rust crate "bit-set"
 Summary:        Set of bits - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(bit-vec-0.8/serde) >= 0.8.0
-Requires:       crate(serde-1.0/default) >= 1.0.0
-Requires:       crate(serde-1.0/derive) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
+Requires:       crate(serde-1/derive) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

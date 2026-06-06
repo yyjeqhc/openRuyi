@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(anyhow-1.0/default) >= 1.0.102
+Requires:       crate(anyhow-1/default) >= 1.0.102
 Requires:       crate(base64-0.22/default) >= 0.22.1
 Requires:       crate(bitflags-2.0/default) >= 2.11.1
 Requires:       crate(fancy-regex-0.11/default) >= 0.11.0
@@ -118,9 +118,9 @@ Additionally, this package also provides the "use_image" feature.
 %package     -n %{name}+serde
 Summary:        Terminal Wizardry for Unix and Windows - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.228
-Requires:       crate(serde-1.0/derive) >= 1.0.228
-Requires:       crate(serde-1.0/rc) >= 1.0.228
+Requires:       crate(serde-1/default) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
+Requires:       crate(serde-1/rc) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

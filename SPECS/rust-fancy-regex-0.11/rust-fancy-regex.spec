@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bit-set-0.5/default) >= 0.5.3
-Requires:       crate(regex-1.0/std) >= 1.12.3
+Requires:       crate(regex-1/std) >= 1.12.3
 Provides:       crate(fancy-regex) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/track-caller)
@@ -43,8 +43,8 @@ This metapackage enables feature "default" for the Rust fancy-regex crate, by pu
 %package     -n %{name}+perf
 Summary:        Regexes, supporting a relatively rich set of features, including backreferences and look-around - feature "perf"
 Requires:       crate(%{pkgname})
-Requires:       crate(regex-1.0/perf) >= 1.12.3
-Requires:       crate(regex-1.0/std) >= 1.12.3
+Requires:       crate(regex-1/perf) >= 1.12.3
+Requires:       crate(regex-1/std) >= 1.12.3
 Provides:       crate(%{pkgname}/perf)
 
 %description -n %{name}+perf
@@ -53,8 +53,8 @@ This metapackage enables feature "perf" for the Rust fancy-regex crate, by pulli
 %package     -n %{name}+perf-cache
 Summary:        Regexes, supporting a relatively rich set of features, including backreferences and look-around - feature "perf-cache"
 Requires:       crate(%{pkgname})
-Requires:       crate(regex-1.0/perf-cache) >= 1.12.3
-Requires:       crate(regex-1.0/std) >= 1.12.3
+Requires:       crate(regex-1/perf-cache) >= 1.12.3
+Requires:       crate(regex-1/std) >= 1.12.3
 Provides:       crate(%{pkgname}/perf-cache)
 
 %description -n %{name}+perf-cache
@@ -63,8 +63,8 @@ This metapackage enables feature "perf-cache" for the Rust fancy-regex crate, by
 %package     -n %{name}+perf-dfa
 Summary:        Regexes, supporting a relatively rich set of features, including backreferences and look-around - feature "perf-dfa"
 Requires:       crate(%{pkgname})
-Requires:       crate(regex-1.0/perf-dfa) >= 1.12.3
-Requires:       crate(regex-1.0/std) >= 1.12.3
+Requires:       crate(regex-1/perf-dfa) >= 1.12.3
+Requires:       crate(regex-1/std) >= 1.12.3
 Provides:       crate(%{pkgname}/perf-dfa)
 
 %description -n %{name}+perf-dfa
@@ -73,8 +73,8 @@ This metapackage enables feature "perf-dfa" for the Rust fancy-regex crate, by p
 %package     -n %{name}+perf-inline
 Summary:        Regexes, supporting a relatively rich set of features, including backreferences and look-around - feature "perf-inline"
 Requires:       crate(%{pkgname})
-Requires:       crate(regex-1.0/perf-inline) >= 1.12.3
-Requires:       crate(regex-1.0/std) >= 1.12.3
+Requires:       crate(regex-1/perf-inline) >= 1.12.3
+Requires:       crate(regex-1/std) >= 1.12.3
 Provides:       crate(%{pkgname}/perf-inline)
 
 %description -n %{name}+perf-inline
@@ -83,8 +83,8 @@ This metapackage enables feature "perf-inline" for the Rust fancy-regex crate, b
 %package     -n %{name}+perf-literal
 Summary:        Regexes, supporting a relatively rich set of features, including backreferences and look-around - feature "perf-literal"
 Requires:       crate(%{pkgname})
-Requires:       crate(regex-1.0/perf-literal) >= 1.12.3
-Requires:       crate(regex-1.0/std) >= 1.12.3
+Requires:       crate(regex-1/perf-literal) >= 1.12.3
+Requires:       crate(regex-1/std) >= 1.12.3
 Provides:       crate(%{pkgname}/perf-literal)
 
 %description -n %{name}+perf-literal
@@ -93,8 +93,8 @@ This metapackage enables feature "perf-literal" for the Rust fancy-regex crate, 
 %package     -n %{name}+unicode
 Summary:        Regexes, supporting a relatively rich set of features, including backreferences and look-around - feature "unicode"
 Requires:       crate(%{pkgname})
-Requires:       crate(regex-1.0/std) >= 1.12.3
-Requires:       crate(regex-1.0/unicode) >= 1.12.3
+Requires:       crate(regex-1/std) >= 1.12.3
+Requires:       crate(regex-1/unicode) >= 1.12.3
 Provides:       crate(%{pkgname}/unicode)
 
 %description -n %{name}+unicode

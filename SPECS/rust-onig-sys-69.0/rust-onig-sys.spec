@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(cc-1.0/default) >= 1.2.62
+Requires:       crate(cc-1/default) >= 1.2.62
 Requires:       crate(pkg-config-0.3/default) >= 0.3.33
 Provides:       crate(onig-sys) = %{version}
 Provides:       crate(%{pkgname})

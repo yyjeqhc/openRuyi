@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name portable-atomic
 %global full_version 1.13.1
 %global pkgname portable-atomic-1.0
@@ -42,7 +48,7 @@ This metapackage enables feature "critical-section" for the Rust portable-atomic
 %package     -n %{name}+serde
 Summary:        Portable atomic types including support for 128-bit atomics, atomic float, etc - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.60
+Requires:       crate(serde-1) >= 1.0.60
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

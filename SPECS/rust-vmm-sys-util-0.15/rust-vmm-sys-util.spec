@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name vmm-sys-util
 %global full_version 0.15.0
 %global pkgname vmm-sys-util-0.15
@@ -26,7 +32,7 @@ Source code for takopackized Rust crate "vmm-sys-util"
 %package     -n %{name}+serde
 Summary:        System utility set - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.228
+Requires:       crate(serde-1/default) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -35,7 +41,7 @@ This metapackage enables feature "serde" for the Rust vmm-sys-util crate, by pul
 %package     -n %{name}+serde-derive
 Summary:        System utility set - feature "serde_derive"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-derive-1.0/default) >= 1.0.228
+Requires:       crate(serde-derive-1/default) >= 1.0.228
 Provides:       crate(%{pkgname}/serde-derive)
 
 %description -n %{name}+serde-derive

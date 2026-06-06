@@ -24,8 +24,8 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(ciborium-io-0.2/alloc) >= 0.2.2
 Requires:       crate(ciborium-io-0.2/default) >= 0.2.2
 Requires:       crate(ciborium-ll-0.2/default) >= 0.2.2
-Requires:       crate(serde-1.0/alloc) >= 1.0.228
-Requires:       crate(serde-1.0/derive) >= 1.0.228
+Requires:       crate(serde-1/alloc) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
 Provides:       crate(%{pkgname})
 
 %description
@@ -36,9 +36,9 @@ Summary:        Serde implementation of CBOR using ciborium-basic - feature "std
 Requires:       crate(%{pkgname})
 Requires:       crate(ciborium-io-0.2/alloc) >= 0.2.2
 Requires:       crate(ciborium-io-0.2/std) >= 0.2.2
-Requires:       crate(serde-1.0/alloc) >= 1.0.228
-Requires:       crate(serde-1.0/derive) >= 1.0.228
-Requires:       crate(serde-1.0/std) >= 1.0.228
+Requires:       crate(serde-1/alloc) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
+Requires:       crate(serde-1/std) >= 1.0.228
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
 

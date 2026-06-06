@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(clap-4.0/std) >= 4.6.1
+Requires:       crate(clap-4/std) >= 4.6.1
 Provides:       crate(clap-complete) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
@@ -32,8 +32,8 @@ Source code for takopackized Rust crate "clap_complete"
 %package     -n %{name}+debug
 Summary:        Generate shell completion scripts for your clap::Command - feature "debug"
 Requires:       crate(%{pkgname})
-Requires:       crate(clap-4.0/debug) >= 4.6.1
-Requires:       crate(clap-4.0/std) >= 4.6.1
+Requires:       crate(clap-4/debug) >= 4.6.1
+Requires:       crate(clap-4/std) >= 4.6.1
 Provides:       crate(%{pkgname}/debug)
 
 %description -n %{name}+debug
@@ -42,8 +42,8 @@ This metapackage enables feature "debug" for the Rust clap_complete crate, by pu
 %package     -n %{name}+unstable-dynamic
 Summary:        Generate shell completion scripts for your clap::Command - feature "unstable-dynamic" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(clap-4.0/std) >= 4.6.1
-Requires:       crate(clap-4.0/unstable-ext) >= 4.6.1
+Requires:       crate(clap-4/std) >= 4.6.1
+Requires:       crate(clap-4/unstable-ext) >= 4.6.1
 Requires:       crate(clap-lex-1.0/default) >= 1.0.0
 Requires:       crate(is-executable-1.0/default) >= 1.0.5
 Requires:       crate(shlex-1.0/default) >= 1.3.0

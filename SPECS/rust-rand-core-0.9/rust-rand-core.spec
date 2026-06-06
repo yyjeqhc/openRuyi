@@ -39,8 +39,8 @@ This metapackage enables feature "os_rng" for the Rust rand_core crate, by pulli
 %package     -n %{name}+serde
 Summary:        Core random number generator traits and tools for implementation - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
-Requires:       crate(serde-1.0/derive) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
+Requires:       crate(serde-1/derive) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

@@ -42,7 +42,7 @@ This metapackage enables feature "default" for the Rust faster-hex crate, by pul
 Summary:        Fast hex encoding - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(serde-1.0) >= 1.0.228
+Requires:       crate(serde-1) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -52,7 +52,7 @@ This metapackage enables feature "serde" for the Rust faster-hex crate, by pulli
 Summary:        Fast hex encoding - feature "std"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(serde-1.0/std) >= 1.0.228
+Requires:       crate(serde-1/std) >= 1.0.228
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std

@@ -37,8 +37,8 @@ Source code for takopackized Rust crate "nu-ansi-term"
 %package     -n %{name}+serde
 Summary:        ANSI terminal colors and styles (bold, underline) - feature "serde" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.152
-Requires:       crate(serde-1.0/derive) >= 1.0.152
+Requires:       crate(serde-1/default) >= 1.0.152
+Requires:       crate(serde-1/derive) >= 1.0.152
 Provides:       crate(%{pkgname}/derive-serde-style)
 Provides:       crate(%{pkgname}/serde)
 

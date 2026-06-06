@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(aligned-0.4/default) >= 0.4.3
-Requires:       crate(anyhow-1.0/default) >= 1.0.102
+Requires:       crate(anyhow-1/default) >= 1.0.102
 Requires:       crate(arg-enum-proc-macro-0.3/default) >= 0.3.4
 Requires:       crate(arrayvec-0.7/default) >= 0.7.6
 Requires:       crate(log-0.4/default) >= 0.4.29
@@ -63,8 +63,8 @@ This metapackage enables feature "binary" for the Rust av-scenechange crate, by 
 %package     -n %{name}+cc
 Summary:        Estimates frames in a video where a scenecut would be ideal - feature "cc"
 Requires:       crate(%{pkgname})
-Requires:       crate(cc-1.0/default) >= 1.2.23
-Requires:       crate(cc-1.0/parallel) >= 1.2.23
+Requires:       crate(cc-1/default) >= 1.2.23
+Requires:       crate(cc-1/parallel) >= 1.2.23
 Provides:       crate(%{pkgname}/cc)
 
 %description -n %{name}+cc
@@ -73,8 +73,8 @@ This metapackage enables feature "cc" for the Rust av-scenechange crate, by pull
 %package     -n %{name}+clap
 Summary:        Estimates frames in a video where a scenecut would be ideal - feature "clap"
 Requires:       crate(%{pkgname})
-Requires:       crate(clap-4.0/default) >= 4.0.22
-Requires:       crate(clap-4.0/derive) >= 4.0.22
+Requires:       crate(clap-4/default) >= 4.0.22
+Requires:       crate(clap-4/derive) >= 4.0.22
 Provides:       crate(%{pkgname}/clap)
 
 %description -n %{name}+clap
@@ -153,8 +153,8 @@ This metapackage enables feature "nasm-rs" for the Rust av-scenechange crate, by
 %package     -n %{name}+serde
 Summary:        Estimates frames in a video where a scenecut would be ideal - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.123
-Requires:       crate(serde-1.0/derive) >= 1.0.123
+Requires:       crate(serde-1/default) >= 1.0.123
+Requires:       crate(serde-1/derive) >= 1.0.123
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -163,7 +163,7 @@ This metapackage enables feature "serde" for the Rust av-scenechange crate, by p
 %package     -n %{name}+serde-json
 Summary:        Estimates frames in a video where a scenecut would be ideal - feature "serde_json"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-json-1.0/default) >= 1.0.62
+Requires:       crate(serde-json-1/default) >= 1.0.62
 Provides:       crate(%{pkgname}/serde-json)
 
 %description -n %{name}+serde-json

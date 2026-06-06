@@ -110,8 +110,8 @@ This metapackage enables feature "osc52" for the Rust crossterm crate, by pullin
 Summary:        Crossplatform terminal library for manipulating terminals - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(bitflags-2.0/serde) >= 2.11.1
-Requires:       crate(serde-1.0/default) >= 1.0.228
-Requires:       crate(serde-1.0/derive) >= 1.0.228
+Requires:       crate(serde-1/default) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

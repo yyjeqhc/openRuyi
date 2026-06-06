@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name vfio_user
 %global full_version 0.1.3
 %global pkgname vfio-user-0.1
@@ -18,10 +24,10 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(bitflags-2.0/default) >= 2.11.1
 Requires:       crate(libc-0.2/default) >= 0.2.186
 Requires:       crate(log-0.4/default) >= 0.4.29
-Requires:       crate(serde-1.0/default) >= 1.0.228
-Requires:       crate(serde-1.0/rc) >= 1.0.228
-Requires:       crate(serde-derive-1.0/default) >= 1.0.228
-Requires:       crate(serde-json-1.0/default) >= 1.0.149
+Requires:       crate(serde-1/default) >= 1.0.228
+Requires:       crate(serde-1/rc) >= 1.0.228
+Requires:       crate(serde-derive-1/default) >= 1.0.228
+Requires:       crate(serde-json-1/default) >= 1.0.149
 Requires:       crate(thiserror-2.0/default) >= 2.0.18
 Requires:       crate(vfio-bindings-0.6/default) >= 0.6.2
 Requires:       crate(vfio-bindings-0.6/fam-wrappers) >= 0.6.2

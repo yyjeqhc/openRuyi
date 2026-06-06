@@ -34,8 +34,8 @@ Source code for takopackized Rust crate "notify-types"
 Summary:        Types used by the notify crate - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(bitflags-2.0/serde) >= 2.11.1
-Requires:       crate(serde-1.0/default) >= 1.0.89
-Requires:       crate(serde-1.0/derive) >= 1.0.89
+Requires:       crate(serde-1/default) >= 1.0.89
+Requires:       crate(serde-1/derive) >= 1.0.89
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

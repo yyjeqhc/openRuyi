@@ -43,7 +43,7 @@ This metapackage enables feature "rayon" for the Rust rpds crate, by pulling in 
 %package     -n %{name}+serde
 Summary:        Persistent data structures with structural sharing - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.228
+Requires:       crate(serde-1) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

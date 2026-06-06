@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name lock_api
 %global full_version 0.4.14
 %global pkgname lock-api-0.4
@@ -39,7 +45,7 @@ This metapackage enables feature "owning_ref" for the Rust lock_api crate, by pu
 %package     -n %{name}+serde
 Summary:        Wrappers to create fully-featured Mutex and RwLock types - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.126
+Requires:       crate(serde-1) >= 1.0.126
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

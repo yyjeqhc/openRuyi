@@ -103,7 +103,7 @@ Requires:       crate(%{pkgname}/encoding)
 Requires:       crate(crypto-bigint-0.7.0-rc.28/alloc) >= 0.7.0-rc.28
 Requires:       crate(crypto-bigint-0.7.0-rc.28/serde) >= 0.7.0-rc.28
 Requires:       crate(crypto-bigint-0.7.0-rc.28/zeroize) >= 0.7.0-rc.28
-Requires:       crate(serde-1.0/derive) >= 1.0.184
+Requires:       crate(serde-1/derive) >= 1.0.184
 Requires:       crate(serdect-0.4/default) >= 0.4.0
 Provides:       crate(%{pkgname}/serde)
 

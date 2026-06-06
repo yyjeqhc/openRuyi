@@ -65,7 +65,7 @@ This metapackage enables feature "fast-legacy-encode" for the Rust encoding_rs c
 %package     -n %{name}+serde
 Summary:        Gecko-oriented implementation of the Encoding Standard - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

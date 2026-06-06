@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name rand
 %global full_version 0.10.1
 %global pkgname rand-0.10
@@ -52,8 +58,8 @@ This metapackage enables feature "default" for the Rust rand crate, by pulling i
 %package     -n %{name}+serde
 Summary:        Random number generators and other randomness functionality - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.103
-Requires:       crate(serde-1.0/derive) >= 1.0.103
+Requires:       crate(serde-1/default) >= 1.0.103
+Requires:       crate(serde-1/derive) >= 1.0.103
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

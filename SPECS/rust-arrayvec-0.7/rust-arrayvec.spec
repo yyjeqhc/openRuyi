@@ -42,7 +42,7 @@ This metapackage enables feature "borsh" for the Rust arrayvec crate, by pulling
 %package     -n %{name}+serde
 Summary:        Vector with fixed capacity, backed by an array (it can be stored on the stack too) - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.0
+Requires:       crate(serde-1) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

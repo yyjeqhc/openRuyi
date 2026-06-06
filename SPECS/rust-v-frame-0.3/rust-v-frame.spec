@@ -43,8 +43,8 @@ This metapackage enables feature "profiling" for the Rust v_frame crate, by pull
 %package     -n %{name}+serde
 Summary:        Video Frame data structures, originally part of rav1e - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
-Requires:       crate(serde-1.0/derive) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
+Requires:       crate(serde-1/derive) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

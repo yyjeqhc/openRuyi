@@ -28,7 +28,7 @@ Requires:       crate(fluent-uri-0.3/serde) >= 0.3.2
 Requires:       crate(once-cell-1.0/default) >= 1.21.3
 Requires:       crate(parking-lot-0.12/default) >= 0.12.4
 Requires:       crate(percent-encoding-2.0/default) >= 2.3.1
-Requires:       crate(serde-json-1.0/default) >= 1.0.140
+Requires:       crate(serde-json-1/default) >= 1.0.140
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

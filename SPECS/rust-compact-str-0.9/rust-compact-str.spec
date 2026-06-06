@@ -110,8 +110,8 @@ This metapackage enables feature "rkyv" for the Rust compact_str crate, by pulli
 %package     -n %{name}+serde
 Summary:        Memory efficient string type that transparently stores strings on the stack, when possible - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/alloc) >= 1.0.228
-Requires:       crate(serde-1.0/derive) >= 1.0.228
+Requires:       crate(serde-1/alloc) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

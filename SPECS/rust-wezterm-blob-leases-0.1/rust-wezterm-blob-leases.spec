@@ -38,8 +38,8 @@ Source code for takopackized Rust crate "wezterm-blob-leases"
 %package     -n %{name}+serde
 Summary:        Manage image blob caching/leasing for wezterm - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.228
-Requires:       crate(serde-1.0/derive) >= 1.0.228
+Requires:       crate(serde-1/default) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
 Requires:       crate(uuid-1.0/rng) >= 1.23.1
 Requires:       crate(uuid-1.0/serde) >= 1.23.1
 Requires:       crate(uuid-1.0/v1) >= 1.23.1

@@ -124,7 +124,7 @@ This metapackage enables feature "abi3-py39" for the Rust pyo3 crate, by pulling
 %package     -n %{name}+anyhow
 Summary:        Bindings to Python interpreter - feature "anyhow"
 Requires:       crate(%{pkgname})
-Requires:       crate(anyhow-1.0/default) >= 1.0.1
+Requires:       crate(anyhow-1/default) >= 1.0.1
 Provides:       crate(%{pkgname}/anyhow)
 
 %description -n %{name}+anyhow
@@ -327,7 +327,7 @@ This metapackage enables feature "rust_decimal" for the Rust pyo3 crate, by pull
 %package     -n %{name}+serde
 Summary:        Bindings to Python interpreter - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

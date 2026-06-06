@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name backtrace
 %global full_version 0.3.76
 %global pkgname backtrace-0.3
@@ -63,8 +69,8 @@ This metapackage enables feature "ruzstd" for the Rust backtrace crate, by pulli
 %package     -n %{name}+serde
 Summary:        Acquire a stack trace (backtrace) at runtime in a Rust program - feature "serde" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
-Requires:       crate(serde-1.0/derive) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
+Requires:       crate(serde-1/derive) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 Provides:       crate(%{pkgname}/serialize-serde)
 

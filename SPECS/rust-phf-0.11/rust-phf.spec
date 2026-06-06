@@ -43,7 +43,7 @@ Additionally, this package also provides the "macros" feature.
 %package     -n %{name}+serde
 Summary:        Runtime support for perfect hash function data structures - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

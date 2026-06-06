@@ -35,7 +35,7 @@ Source code for takopackized Rust crate "icu_locale_core"
 Summary:        API for managing Unicode Language and Locale Identifiers - feature "alloc"
 Requires:       crate(%{pkgname})
 Requires:       crate(litemap-0.8/alloc) >= 0.8.2
-Requires:       crate(serde-1.0/alloc) >= 1.0.220
+Requires:       crate(serde-1/alloc) >= 1.0.220
 Requires:       crate(tinystr-0.8/alloc) >= 0.8.3
 Requires:       crate(writeable-0.6/alloc) >= 0.6.2
 Provides:       crate(%{pkgname}/alloc)
@@ -56,7 +56,7 @@ This metapackage enables feature "databake" for the Rust icu_locale_core crate, 
 %package     -n %{name}+serde
 Summary:        API for managing Unicode Language and Locale Identifiers - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.220
+Requires:       crate(serde-1) >= 1.0.220
 Requires:       crate(tinystr-0.8/serde) >= 0.8.3
 Provides:       crate(%{pkgname}/serde)
 

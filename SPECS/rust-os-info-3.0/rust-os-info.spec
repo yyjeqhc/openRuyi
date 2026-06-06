@@ -57,8 +57,8 @@ This metapackage enables feature "schemars" for the Rust os_info crate, by pulli
 %package     -n %{name}+serde
 Summary:        Detect the operating system type and version - feature "serde" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
-Requires:       crate(serde-1.0/derive) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
+Requires:       crate(serde-1/derive) >= 1.0.0
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/serde)
 

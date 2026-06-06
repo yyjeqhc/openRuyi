@@ -53,7 +53,7 @@ This metapackage enables feature "print_bytes" for the Rust normpath crate, by p
 %package     -n %{name}+serde
 Summary:        More reliable path manipulation - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

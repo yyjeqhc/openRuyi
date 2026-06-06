@@ -40,8 +40,8 @@ This metapackage enables feature "os_rng" for the Rust rand_chacha crate, by pul
 %package     -n %{name}+serde
 Summary:        ChaCha random number generator - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
-Requires:       crate(serde-1.0/derive) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
+Requires:       crate(serde-1/derive) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

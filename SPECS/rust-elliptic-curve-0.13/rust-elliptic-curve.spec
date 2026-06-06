@@ -136,7 +136,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(%{pkgname}/serde)
 Requires:       crate(base64ct-1.0/alloc) >= 1.0.0
-Requires:       crate(serde-json-1.0/alloc) >= 1.0.47
+Requires:       crate(serde-json-1/alloc) >= 1.0.47
 Requires:       crate(zeroize-1.0/alloc) >= 1.8.2
 Provides:       crate(%{pkgname}/jwk)
 

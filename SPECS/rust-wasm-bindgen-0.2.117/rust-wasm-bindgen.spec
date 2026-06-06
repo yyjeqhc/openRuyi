@@ -43,7 +43,7 @@ Source code for takopackized Rust crate "wasm-bindgen"
 %package     -n %{name}+serde
 Summary:        Easy support for interacting between JS and Rust - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.0
+Requires:       crate(serde-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -63,7 +63,7 @@ This metapackage enables feature "serde-serialize" for the Rust wasm-bindgen cra
 %package     -n %{name}+serde-json
 Summary:        Easy support for interacting between JS and Rust - feature "serde_json"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-json-1.0/default) >= 1.0.0
+Requires:       crate(serde-json-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/serde-json)
 
 %description -n %{name}+serde-json

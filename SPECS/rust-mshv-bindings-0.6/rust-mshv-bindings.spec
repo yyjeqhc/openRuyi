@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name mshv-bindings
 %global full_version 0.6.9
 %global pkgname mshv-bindings-0.6
@@ -30,7 +36,7 @@ Source code for takopackized Rust crate "mshv-bindings"
 %package     -n %{name}+serde
 Summary:        Rust FFI bindings to MSHV headers generated using Rust bindgen - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.228
+Requires:       crate(serde-1/default) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -39,7 +45,7 @@ This metapackage enables feature "serde" for the Rust mshv-bindings crate, by pu
 %package     -n %{name}+serde-derive
 Summary:        Rust FFI bindings to MSHV headers generated using Rust bindgen - feature "serde_derive"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-derive-1.0/default) >= 1.0.228
+Requires:       crate(serde-derive-1/default) >= 1.0.228
 Provides:       crate(%{pkgname}/serde-derive)
 
 %description -n %{name}+serde-derive

@@ -29,8 +29,8 @@ Source code for takopackized Rust crate "iri-string"
 %package     -n %{name}+alloc
 Summary:        IRI as string types - feature "alloc"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/alloc) >= 1.0.228
-Requires:       crate(serde-1.0/derive) >= 1.0.228
+Requires:       crate(serde-1/alloc) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -48,7 +48,7 @@ This metapackage enables feature "memchr" for the Rust iri-string crate, by pull
 %package     -n %{name}+serde
 Summary:        IRI as string types - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/derive) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -59,8 +59,8 @@ Summary:        IRI as string types - feature "std" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(memchr-2.0/std) >= 2.8.0
-Requires:       crate(serde-1.0/derive) >= 1.0.228
-Requires:       crate(serde-1.0/std) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
+Requires:       crate(serde-1/std) >= 1.0.228
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
 

@@ -24,9 +24,9 @@ BuildRequires:  crate(indexmap-2.0/default) >= 2.1.0
 BuildRequires:  crate(log-0.4/default) >= 0.4.0
 BuildRequires:  crate(proc-macro2-1.0/default) >= 1.0.60
 BuildRequires:  crate(quote-1.0/default) >= 1.0.0
-BuildRequires:  crate(serde-1.0/derive) >= 1.0.103
-BuildRequires:  crate(serde-1.0/std) >= 1.0.103
-BuildRequires:  crate(serde-json-1.0/default) >= 1.0.0
+BuildRequires:  crate(serde-1/derive) >= 1.0.103
+BuildRequires:  crate(serde-1/std) >= 1.0.103
+BuildRequires:  crate(serde-json-1/default) >= 1.0.0
 BuildRequires:  crate(syn-2.0/clone-impls) >= 2.0.85
 BuildRequires:  crate(syn-2.0/extra-traits) >= 2.0.85
 BuildRequires:  crate(syn-2.0/fold) >= 2.0.85
@@ -39,7 +39,7 @@ BuildRequires:  crate(toml-0.9/serde) >= 0.9.0
 BuildRequires:  crate(toml-0.9/std) >= 0.9.0
 BuildRequires:  crate(pretty-assertions-1.0) >= 1.4.0
 BuildRequires:  crate(serial-test-2.0) >= 2.0.0
-BuildRequires:  crate(clap-4.0/default) >= 4.3
+BuildRequires:  crate(clap-4/default) >= 4.3
 
 %description
 binary file of Rust crate "cbindgen".

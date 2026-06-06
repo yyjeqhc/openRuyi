@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name libz-sys
 %global full_version 1.1.28
 %global pkgname libz-sys-1.0
@@ -15,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(cc-1.0/default) >= 1.2.61
+Requires:       crate(cc-1/default) >= 1.2.61
 Requires:       crate(pkg-config-0.3/default) >= 0.3.33
 Requires:       crate(vcpkg-0.2/default) >= 0.2.15
 Provides:       crate(%{pkgname})

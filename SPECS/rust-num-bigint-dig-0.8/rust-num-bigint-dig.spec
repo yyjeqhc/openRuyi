@@ -86,7 +86,7 @@ This metapackage enables feature "rand" for the Rust num-bigint-dig crate, by pu
 %package     -n %{name}+serde
 Summary:        Big integer implementation for Rust - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/alloc) >= 1.0.228
+Requires:       crate(serde-1/alloc) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -100,8 +100,8 @@ Requires:       crate(num-integer-0.1/std) >= 0.1.46
 Requires:       crate(num-traits-0.2/i128) >= 0.2.19
 Requires:       crate(num-traits-0.2/std) >= 0.2.19
 Requires:       crate(rand-0.8/std) >= 0.8.6
-Requires:       crate(serde-1.0/alloc) >= 1.0.228
-Requires:       crate(serde-1.0/std) >= 1.0.228
+Requires:       crate(serde-1/alloc) >= 1.0.228
+Requires:       crate(serde-1/std) >= 1.0.228
 Requires:       crate(smallvec-1.0/write) >= 1.15.1
 Provides:       crate(%{pkgname}/std)
 

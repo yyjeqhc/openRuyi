@@ -32,7 +32,7 @@ Source code for takopackized Rust crate "archery"
 %package     -n %{name}+serde
 Summary:        Abstract over the atomicity of reference-counting pointers - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.228
+Requires:       crate(serde-1) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

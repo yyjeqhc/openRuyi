@@ -87,7 +87,7 @@ This metapackage enables feature "ser_as_str" for the Rust ipnet crate, by pulli
 %package     -n %{name}+serde
 Summary:        Provides types and useful methods for working with IPv4 and IPv6 network addresses, commonly called IP prefixes - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/derive) >= 1.0.0
+Requires:       crate(serde-1/derive) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

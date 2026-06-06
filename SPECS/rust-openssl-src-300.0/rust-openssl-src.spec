@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name openssl-src
 %global full_version 300.6.0+3.6.2
 %global pkgname openssl-src-300.0
@@ -15,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(cc-1.0/default) >= 1.2.61
+Requires:       crate(cc-1/default) >= 1.2.61
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/camellia)
 Provides:       crate(%{pkgname}/default)

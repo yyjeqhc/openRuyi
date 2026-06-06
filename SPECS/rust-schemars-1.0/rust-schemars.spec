@@ -23,8 +23,8 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(dyn-clone-1.0/default) >= 1.0.20
 Requires:       crate(ref-cast-1.0/default) >= 1.0.25
-Requires:       crate(serde-1.0/alloc) >= 1.0.228
-Requires:       crate(serde-json-1.0/alloc) >= 1.0.149
+Requires:       crate(serde-1/alloc) >= 1.0.228
+Requires:       crate(serde-json-1/alloc) >= 1.0.149
 Provides:       crate(schemars) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/ui-test)
@@ -109,8 +109,8 @@ This metapackage enables feature "jiff02" for the Rust schemars crate, by pullin
 %package     -n %{name}+preserve-order
 Summary:        Generate JSON Schemas from Rust code - feature "preserve_order"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-json-1.0/alloc) >= 1.0.149
-Requires:       crate(serde-json-1.0/preserve-order) >= 1.0.149
+Requires:       crate(serde-json-1/alloc) >= 1.0.149
+Requires:       crate(serde-json-1/preserve-order) >= 1.0.149
 Provides:       crate(%{pkgname}/preserve-order)
 
 %description -n %{name}+preserve-order
@@ -119,8 +119,8 @@ This metapackage enables feature "preserve_order" for the Rust schemars crate, b
 %package     -n %{name}+raw-value
 Summary:        Generate JSON Schemas from Rust code - feature "raw_value"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-json-1.0/alloc) >= 1.0.149
-Requires:       crate(serde-json-1.0/raw-value) >= 1.0.149
+Requires:       crate(serde-json-1/alloc) >= 1.0.149
+Requires:       crate(serde-json-1/raw-value) >= 1.0.149
 Provides:       crate(%{pkgname}/raw-value)
 
 %description -n %{name}+raw-value
@@ -150,7 +150,7 @@ Additionally, this package also provides the "derive" feature.
 %package     -n %{name}+semver1
 Summary:        Generate JSON Schemas from Rust code - feature "semver1"
 Requires:       crate(%{pkgname})
-Requires:       crate(semver-1.0) >= 1.0.9
+Requires:       crate(semver-1) >= 1.0.9
 Provides:       crate(%{pkgname}/semver1)
 
 %description -n %{name}+semver1

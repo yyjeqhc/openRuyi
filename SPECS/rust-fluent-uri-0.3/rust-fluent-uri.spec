@@ -34,7 +34,7 @@ Source code for takopackized Rust crate "fluent-uri"
 %package     -n %{name}+serde
 Summary:        Generic URI/IRI handling library compliant with RFC 3986/3987 - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.219
+Requires:       crate(serde-1/default) >= 1.0.219
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

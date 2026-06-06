@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(cc-1.0/default) >= 1.2.62
+Requires:       crate(cc-1/default) >= 1.2.62
 Requires:       crate(which-8.0/default) >= 8.0.2
 Provides:       crate(luajit-src) = %{version}
 Provides:       crate(%{pkgname})

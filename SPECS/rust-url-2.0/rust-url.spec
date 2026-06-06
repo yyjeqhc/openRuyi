@@ -35,8 +35,8 @@ Source code for takopackized Rust crate "url"
 %package     -n %{name}+serde
 Summary:        URL library for Rust, based on the WHATWG URL Standard - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0) >= 1.0.228
-Requires:       crate(serde-derive-1.0) >= 1.0.0
+Requires:       crate(serde-1) >= 1.0.228
+Requires:       crate(serde-derive-1) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -52,7 +52,7 @@ Requires:       crate(idna-1.0/compiled-data) >= 1.1.0
 Requires:       crate(idna-1.0/std) >= 1.1.0
 Requires:       crate(percent-encoding-2.0/alloc) >= 2.3.2
 Requires:       crate(percent-encoding-2.0/std) >= 2.3.2
-Requires:       crate(serde-1.0/std) >= 1.0.228
+Requires:       crate(serde-1/std) >= 1.0.228
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
 

@@ -21,10 +21,10 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(semver-1.0/default) >= 1.0.27
-Requires:       crate(semver-1.0/serde) >= 1.0.27
-Requires:       crate(serde-1.0/default) >= 1.0.228
-Requires:       crate(serde-1.0/derive) >= 1.0.228
+Requires:       crate(semver-1/default) >= 1.0.27
+Requires:       crate(semver-1/serde) >= 1.0.27
+Requires:       crate(serde-1/default) >= 1.0.228
+Requires:       crate(serde-1/derive) >= 1.0.228
 Requires:       crate(serde-untagged-0.1/default) >= 0.1.9
 Requires:       crate(serde-value-0.7/default) >= 0.7.0
 Requires:       crate(thiserror-2.0/default) >= 2.0.18
@@ -43,7 +43,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(schemars-1.0/default) >= 1.0.4
 Requires:       crate(schemars-1.0/preserve-order) >= 1.0.4
 Requires:       crate(schemars-1.0/semver1) >= 1.0.4
-Requires:       crate(serde-json-1.0/default) >= 1.0.145
+Requires:       crate(serde-json-1/default) >= 1.0.145
 Provides:       crate(%{pkgname}/unstable-schema)
 
 %description -n %{name}+unstable-schema

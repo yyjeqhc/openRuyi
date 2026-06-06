@@ -35,8 +35,8 @@ Source code for takopackized Rust crate "gix-shallow"
 Summary:        Handle files specifying the shallow boundary - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(gix-hash-0.19/serde) >= 0.19.0
-Requires:       crate(serde-1.0/derive) >= 1.0.114
-Requires:       crate(serde-1.0/std) >= 1.0.114
+Requires:       crate(serde-1/derive) >= 1.0.114
+Requires:       crate(serde-1/std) >= 1.0.114
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

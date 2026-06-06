@@ -247,7 +247,7 @@ This metapackage enables feature "rusqlite-macros" for the Rust rusqlite crate, 
 %package     -n %{name}+serde-json
 Summary:        Ergonomic wrapper for SQLite - feature "serde_json"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-json-1.0/default) >= 1.0.0
+Requires:       crate(serde-json-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/serde-json)
 
 %description -n %{name}+serde-json

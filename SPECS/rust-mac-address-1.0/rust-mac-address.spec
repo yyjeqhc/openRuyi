@@ -37,8 +37,8 @@ Source code for takopackized Rust crate "mac_address"
 %package     -n %{name}+serde
 Summary:        Cross-platform retrieval of a network interface MAC address - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-1.0/default) >= 1.0.198
-Requires:       crate(serde-1.0/derive) >= 1.0.198
+Requires:       crate(serde-1/default) >= 1.0.198
+Requires:       crate(serde-1/derive) >= 1.0.198
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
