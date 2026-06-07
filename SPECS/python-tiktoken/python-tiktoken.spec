@@ -37,7 +37,7 @@ BuildRequires:  crate(regex-automata-0.4)
 BuildRequires:  crate(serde-1)
 BuildRequires:  crate(indoc-2.0)
 BuildRequires:  crate(unindent-0.2)
-BuildRequires:  crate(aho-corasick-1.0)
+BuildRequires:  crate(aho-corasick-1)
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}

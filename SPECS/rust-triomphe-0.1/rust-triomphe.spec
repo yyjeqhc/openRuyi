@@ -31,7 +31,7 @@ Source code for takopackized Rust crate "triomphe"
 %package     -n %{name}+arc-swap
 Summary:        Fork of std::sync::Arc with some extra functionality and without weak references (originally servo_arc) - feature "arc-swap"
 Requires:       crate(%{pkgname})
-Requires:       crate(arc-swap-1.0/default) >= 1.3.0
+Requires:       crate(arc-swap-1/default) >= 1.3.0
 Provides:       crate(%{pkgname}/arc-swap)
 
 %description -n %{name}+arc-swap

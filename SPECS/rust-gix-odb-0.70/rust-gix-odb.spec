@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(arc-swap-1.0/default) >= 1.9.0
+Requires:       crate(arc-swap-1/default) >= 1.9.0
 Requires:       crate(gix-date-0.10/default) >= 0.10.7
 Requires:       crate(gix-features-0.43/crc32) >= 0.43.1
 Requires:       crate(gix-features-0.43/default) >= 0.43.1

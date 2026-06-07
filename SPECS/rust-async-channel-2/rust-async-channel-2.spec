@@ -1,8 +1,8 @@
 %global crate_name async-channel
 %global full_version 2.5.0
-%global pkgname async-channel-2.0
+%global pkgname async-channel-2
 
-Name:           rust-async-channel-2.0
+Name:           rust-async-channel-2
 Version:        2.5.0
 Release:        %autorelease
 Summary:        Rust crate "async-channel"
@@ -17,32 +17,32 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(concurrent-queue-2.0) >= 2.5.0
 Requires:       crate(event-listener-strategy-0.5) >= 0.5.4
-Requires:       crate(futures-core-0.3) >= 0.3.32
-Requires:       crate(pin-project-lite-0.2/default) >= 0.2.17
-Provides:       crate(%{pkgname})
+Requires:       crate(futures-core-0.3) >= 0.3.5
+Requires:       crate(pin-project-lite-0.2/default) >= 0.2.11
+Provides:       crate(%{pkgname}) = %{version}
 
 %description
 Source code for takopackized Rust crate "async-channel"
 
 %package     -n %{name}+portable-atomic
 Summary:        Async multi-producer multi-consumer channel - feature "portable-atomic"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(concurrent-queue-2.0/portable-atomic) >= 2.5.0
 Requires:       crate(event-listener-strategy-0.5/portable-atomic) >= 0.5.4
 Requires:       crate(portable-atomic-1.0/require-cas) >= 1.0.0
 Requires:       crate(portable-atomic-util-0.2/alloc) >= 0.2.0
-Provides:       crate(%{pkgname}/portable-atomic)
+Provides:       crate(%{pkgname}/portable-atomic) = %{version}
 
 %description -n %{name}+portable-atomic
 This metapackage enables feature "portable-atomic" for the Rust async-channel crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+std
 Summary:        Async multi-producer multi-consumer channel - feature "std" and 1 more
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(concurrent-queue-2.0/std) >= 2.5.0
 Requires:       crate(event-listener-strategy-0.5/std) >= 0.5.4
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/std)
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
 
 %description -n %{name}+std
 This metapackage enables feature "std" for the Rust async-channel crate, by pulling in any additional dependencies needed by that feature.

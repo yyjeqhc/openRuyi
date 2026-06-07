@@ -24,7 +24,7 @@ Source code for takopackized Rust crate "vm-memory"
 %package     -n %{name}+arc-swap
 Summary:        Safe abstractions for accessing the VM physical memory - feature "arc-swap" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(arc-swap-1.0/default) >= 1.9.1
+Requires:       crate(arc-swap-1/default) >= 1.9.1
 Provides:       crate(%{pkgname}/arc-swap)
 Provides:       crate(%{pkgname}/backend-atomic)
 

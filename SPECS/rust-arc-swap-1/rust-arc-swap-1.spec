@@ -1,14 +1,8 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name arc-swap
 %global full_version 1.9.1
-%global pkgname arc-swap-1.0
+%global pkgname arc-swap-1
 
-Name:           rust-arc-swap-1.0
+Name:           rust-arc-swap-1
 Version:        1.9.1
 Release:        %autorelease
 Summary:        Rust crate "arc-swap"
@@ -21,23 +15,23 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(rustversion-1.0/default) >= 1.0.22
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/experimental-strategies)
-Provides:       crate(%{pkgname}/experimental-thread-local)
-Provides:       crate(%{pkgname}/internal-test-strategies)
-Provides:       crate(%{pkgname}/weak)
+Requires:       crate(rustversion-1.0/default) >= 1.0.0
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/experimental-strategies) = %{version}
+Provides:       crate(%{pkgname}/experimental-thread-local) = %{version}
+Provides:       crate(%{pkgname}/internal-test-strategies) = %{version}
+Provides:       crate(%{pkgname}/weak) = %{version}
 
 %description
 Source code for takopackized Rust crate "arc-swap"
 
 %package     -n %{name}+serde
 Summary:        Atomically swappable Arc - feature "serde"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(serde-1/default) >= 1.0.0
 Requires:       crate(serde-1/rc) >= 1.0.0
-Provides:       crate(%{pkgname}/serde)
+Provides:       crate(%{pkgname}/serde) = %{version}
 
 %description -n %{name}+serde
 This metapackage enables feature "serde" for the Rust arc-swap crate, by pulling in any additional dependencies needed by that feature.
