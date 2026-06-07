@@ -1,7 +1,6 @@
-# SPDX-FileCopyrightText: (C) 2025 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2025 openRuyi Project Contributors
-# SPDX-FileContributor: Zheng Junjie <zhengjunjie@iscas.ac.cn>
-# SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -12,11 +11,16 @@ Summary:        Argument type classification
 License:        GPL-1.0-or-later OR Artistic-1.0-Perl
 URL:            https://metacpan.org/dist/Params-Classify
 #!RemoteAsset:  sha256:398ec15cd899fcd8bef3db9ea1748bf631f15f6c32be203e475b67df510a5914
-Source0:        http://www.cpan.org/authors/id/Z/ZE/ZEFRAM/Params-Classify-%{version}.tar.gz
+Source0:        https://www.cpan.org/authors/id/Z/ZE/ZEFRAM/Params-Classify-%{version}.tar.gz
+BuildSystem:    perlbuild
+
+BuildOption(build):  --installdirs=vendor optimize="%{optflags}"
+BuildOption(install):  --destdir=%{buildroot} --create_packlist=0
 
 BuildRequires:  perl-rpm-packaging
+BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
-BuildRequires:  perl-devel >= 5.6.1
+BuildRequires:  perl >= 5.6.1
 BuildRequires:  perl(Devel::CallChecker) >= 0.003
 BuildRequires:  perl(Exporter)
 BuildRequires:  perl(Module::Build)
@@ -36,19 +40,6 @@ for functions that, unlike most Perl code, care what type of data they
 are operating on. For example, some functions wish to behave
 differently depending on the type of their arguments (like overloaded
 functions in C++).
-
-%prep
-%setup -q -n Params-Classify-%{version}
-
-%build
-perl Build.PL --installdirs=vendor optimize="%{optflags}"
-./Build
-
-%install
-./Build install destdir=%{buildroot} create_packlist=0
-find %{buildroot} -type f -name '*.bs' -size 0 -exec rm -f {} \;
-%perl_process_packlist
-%perl_gen_filelist
 
 %files -f %{name}.files
 %doc Changes README
