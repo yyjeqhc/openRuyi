@@ -1,8 +1,8 @@
 %global crate_name once_cell_polyfill
 %global full_version 1.70.2
-%global pkgname once-cell-polyfill-1.0
+%global pkgname once-cell-polyfill-1
 
-Name:           rust-once-cell-polyfill-1.0
+Name:           rust-once-cell-polyfill-1
 Version:        1.70.2
 Release:        %autorelease
 Summary:        Rust crate "once_cell_polyfill"
@@ -15,8 +15,8 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
 Source code for takopackized Rust crate "once_cell_polyfill"

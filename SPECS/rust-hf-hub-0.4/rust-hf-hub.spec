@@ -74,7 +74,7 @@ Summary:        This crates aims ease the interaction with [huggingface](https:/
 Requires:       crate(%{pkgname})
 Requires:       crate(futures-0.3/default) >= 0.3.28
 Requires:       crate(indicatif-0.17/default) >= 0.17.11
-Requires:       crate(num-cpus-1.0/default) >= 1.15.0
+Requires:       crate(num-cpus-1/default) >= 1.15.0
 Requires:       crate(rand-0.8/default) >= 0.8.5
 Requires:       crate(reqwest-0.12/charset) >= 0.12.28
 Requires:       crate(reqwest-0.12/http2) >= 0.12.28

@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(objc2-encode-4.0) >= 4.1.0
+Requires:       crate(objc2-encode-4) >= 4.1.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/disable-encoding-assertions)
 Provides:       crate(%{pkgname}/objc2-proc-macros)
@@ -42,7 +42,7 @@ Source code for takopackized Rust crate "objc2"
 %package     -n %{name}+alloc
 Summary:        Objective-C interface and runtime bindings - feature "alloc"
 Requires:       crate(%{pkgname})
-Requires:       crate(objc2-encode-4.0/alloc) >= 4.1.0
+Requires:       crate(objc2-encode-4/alloc) >= 4.1.0
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -121,7 +121,7 @@ This metapackage enables feature "gnustep-2-1" for the Rust objc2 crate, by pull
 Summary:        Objective-C interface and runtime bindings - feature "std" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(objc2-encode-4.0/std) >= 4.1.0
+Requires:       crate(objc2-encode-4/std) >= 4.1.0
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
 

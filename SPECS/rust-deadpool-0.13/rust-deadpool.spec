@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(deadpool-runtime-0.3/default) >= 0.3.1
-Requires:       crate(num-cpus-1.0/default) >= 1.17.0
+Requires:       crate(num-cpus-1/default) >= 1.17.0
 Requires:       crate(tokio-1.52.3/default) >= 1.52.3
 Requires:       crate(tokio-1.52.3/sync) >= 1.52.3
 Provides:       crate(deadpool) = %{version}

@@ -146,7 +146,7 @@ This metapackage enables feature "metadata" for the Rust syntect crate, by pulli
 %package     -n %{name}+onig
 Summary:        High quality syntax highlighting and code intelligence using Sublime Text's grammars - feature "onig" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(onig-6.0) >= 6.5.3
+Requires:       crate(onig-6) >= 6.5.3
 Provides:       crate(%{pkgname}/onig)
 Provides:       crate(%{pkgname}/regex-onig)
 

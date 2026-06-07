@@ -16,7 +16,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(anstyle-1/default) >= 1.0.0
-Requires:       crate(once-cell-polyfill-1.0/default) >= 1.56.1
+Requires:       crate(once-cell-polyfill-1/default) >= 1.56.1
 Requires:       crate(windows-sys-0.60/default) >= 0.60.2
 Requires:       crate(windows-sys-0.60/win32-foundation) >= 0.60.2
 Requires:       crate(windows-sys-0.60/win32-system-console) >= 0.60.2

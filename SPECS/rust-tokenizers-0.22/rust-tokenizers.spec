@@ -110,7 +110,7 @@ Additionally, this package also provides the "progressbar" feature.
 %package     -n %{name}+onig
 Summary:        Provides an implementation of today's most used tokenizers, with a focus on performances and versatility - feature "onig"
 Requires:       crate(%{pkgname})
-Requires:       crate(onig-6.0) >= 6.5.1
+Requires:       crate(onig-6) >= 6.5.1
 Provides:       crate(%{pkgname}/onig)
 
 %description -n %{name}+onig

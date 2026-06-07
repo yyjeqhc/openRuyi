@@ -77,8 +77,8 @@ Additionally, this package also provides the "unstable_boringssl" feature.
 %package     -n %{name}+openssl-src
 Summary:        FFI bindings to OpenSSL - feature "openssl-src" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(openssl-src-300.0/default) >= 300.6.0
-Requires:       crate(openssl-src-300.0/legacy) >= 300.6.0
+Requires:       crate(openssl-src-300/default) >= 300.6.0
+Requires:       crate(openssl-src-300/legacy) >= 300.6.0
 Provides:       crate(%{pkgname}/openssl-src)
 Provides:       crate(%{pkgname}/vendored)
 
