@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(atomic-waker-1/default) >= 1.1.2
 Requires:       crate(bytes-1/default) >= 1.11.1
-Requires:       crate(fnv-1.0/default) >= 1.0.7
+Requires:       crate(fnv-1/default) >= 1.0.7
 Requires:       crate(futures-core-0.3) >= 0.3.32
 Requires:       crate(futures-sink-0.3) >= 0.3.32
 Requires:       crate(http-1.0/default) >= 1.4.0

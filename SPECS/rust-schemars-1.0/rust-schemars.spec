@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(dyn-clone-1.0/default) >= 1.0.20
+Requires:       crate(dyn-clone-1/default) >= 1.0.20
 Requires:       crate(ref-cast-1.0/default) >= 1.0.25
 Requires:       crate(serde-1/alloc) >= 1.0.228
 Requires:       crate(serde-json-1/alloc) >= 1.0.149
@@ -82,7 +82,7 @@ This metapackage enables feature "default" for the Rust schemars crate, by pulli
 %package     -n %{name}+either1
 Summary:        Generate JSON Schemas from Rust code - feature "either1"
 Requires:       crate(%{pkgname})
-Requires:       crate(either-1.0) >= 1.3
+Requires:       crate(either-1) >= 1.3
 Provides:       crate(%{pkgname}/either1)
 
 %description -n %{name}+either1

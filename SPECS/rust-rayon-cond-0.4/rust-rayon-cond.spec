@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(either-1.0/default) >= 1.15.0
+Requires:       crate(either-1/default) >= 1.15.0
 Requires:       crate(itertools-0.14/default) >= 0.14.0
 Requires:       crate(rayon-1.0/default) >= 1.11.0
 Provides:       crate(%{pkgname})

@@ -81,7 +81,7 @@ This metapackage enables feature "default-hasher" for the Rust hashbrown crate, 
 %package     -n %{name}+equivalent
 Summary:        Rust port of Google's SwissTable hash map - feature "equivalent"
 Requires:       crate(%{pkgname})
-Requires:       crate(equivalent-1.0) >= 1.0.0
+Requires:       crate(equivalent-1) >= 1.0.0
 Provides:       crate(%{pkgname}/equivalent)
 
 %description -n %{name}+equivalent

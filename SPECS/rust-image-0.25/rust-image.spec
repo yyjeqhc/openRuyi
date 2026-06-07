@@ -110,7 +110,7 @@ This metapackage enables feature "default-formats" for the Rust image crate, by 
 %package     -n %{name}+exr
 Summary:        Imaging library - feature "exr"
 Requires:       crate(%{pkgname})
-Requires:       crate(exr-1.0) >= 1.74.0
+Requires:       crate(exr-1) >= 1.74.0
 Provides:       crate(%{pkgname}/exr)
 
 %description -n %{name}+exr
@@ -183,7 +183,7 @@ This metapackage enables feature "qoi" for the Rust image crate, by pulling in a
 %package     -n %{name}+rayon
 Summary:        Imaging library - feature "rayon"
 Requires:       crate(%{pkgname})
-Requires:       crate(exr-1.0/rayon) >= 1.74.0
+Requires:       crate(exr-1/rayon) >= 1.74.0
 Requires:       crate(ravif-0.13/threading) >= 0.13.0
 Requires:       crate(rayon-1.0/default) >= 1.7.0
 Provides:       crate(%{pkgname}/rayon)

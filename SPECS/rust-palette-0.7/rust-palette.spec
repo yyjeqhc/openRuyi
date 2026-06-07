@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(fast-srgb8-1.0/default) >= 1.0.0
+Requires:       crate(fast-srgb8-1/default) >= 1.0.0
 Requires:       crate(palette-derive-0.7/default) >= 0.7.6
 Provides:       crate(palette) = %{version}
 Provides:       crate(%{pkgname})

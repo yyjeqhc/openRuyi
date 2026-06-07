@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(equivalent-1.0) >= 1.0.2
+Requires:       crate(equivalent-1) >= 1.0.2
 Requires:       crate(hashbrown-0.17) >= 0.17.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

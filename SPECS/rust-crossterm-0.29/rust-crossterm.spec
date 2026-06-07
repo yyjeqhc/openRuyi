@@ -49,8 +49,8 @@ This metapackage enables feature "default" for the Rust crossterm crate, by pull
 %package     -n %{name}+derive-more
 Summary:        Crossplatform terminal library for manipulating terminals - feature "derive-more"
 Requires:       crate(%{pkgname})
-Requires:       crate(derive-more-2.0/default) >= 2.1.1
-Requires:       crate(derive-more-2.0/is-variant) >= 2.1.1
+Requires:       crate(derive-more-2/default) >= 2.1.1
+Requires:       crate(derive-more-2/is-variant) >= 2.1.1
 Provides:       crate(%{pkgname}/derive-more)
 
 %description -n %{name}+derive-more

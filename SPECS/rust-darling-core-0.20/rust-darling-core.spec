@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(fnv-1.0/default) >= 1.0.7
+Requires:       crate(fnv-1/default) >= 1.0.7
 Requires:       crate(ident-case-1.0/default) >= 1.0.1
 Requires:       crate(proc-macro2-1.0/default) >= 1.0.106
 Requires:       crate(quote-1.0/default) >= 1.0.45

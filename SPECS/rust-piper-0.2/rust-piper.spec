@@ -16,7 +16,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(atomic-waker-1/default) >= 1.1.2
-Requires:       crate(fastrand-2.0) >= 2.4.1
+Requires:       crate(fastrand-2) >= 2.4.1
 Provides:       crate(%{pkgname})
 
 %description
@@ -65,7 +65,7 @@ This metapackage enables feature "portable_atomic_crate" for the Rust piper crat
 Summary:        Asynchronous single-consumer single-producer pipe for bytes - feature "std" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/futures-io)
-Requires:       crate(fastrand-2.0/std) >= 2.4.1
+Requires:       crate(fastrand-2/std) >= 2.4.1
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
 

@@ -151,7 +151,7 @@ This metapackage enables feature "chrono-tz" for the Rust pyo3 crate, by pulling
 %package     -n %{name}+either
 Summary:        Bindings to Python interpreter - feature "either"
 Requires:       crate(%{pkgname})
-Requires:       crate(either-1.0/default) >= 1.9
+Requires:       crate(either-1/default) >= 1.9
 Provides:       crate(%{pkgname}/either)
 
 %description -n %{name}+either

@@ -36,7 +36,7 @@ This metapackage enables feature "default" for the Rust futures-lite crate, by p
 %package     -n %{name}+fastrand
 Summary:        Futures, streams, and async I/O combinators - feature "fastrand" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(fastrand-2.0) >= 2.4.1
+Requires:       crate(fastrand-2) >= 2.4.1
 Provides:       crate(%{pkgname}/fastrand)
 Provides:       crate(%{pkgname}/race)
 
@@ -78,7 +78,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(%{pkgname}/futures-io)
 Requires:       crate(%{pkgname}/parking)
-Requires:       crate(fastrand-2.0/std) >= 2.4.1
+Requires:       crate(fastrand-2/std) >= 2.4.1
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std

@@ -126,7 +126,7 @@ This metapackage enables feature "flate2" for the Rust syntect crate, by pulling
 %package     -n %{name}+fnv
 Summary:        High quality syntax highlighting and code intelligence using Sublime Text's grammars - feature "fnv"
 Requires:       crate(%{pkgname})
-Requires:       crate(fnv-1.0/default) >= 1.0.7
+Requires:       crate(fnv-1/default) >= 1.0.7
 Provides:       crate(%{pkgname}/fnv)
 
 %description -n %{name}+fnv

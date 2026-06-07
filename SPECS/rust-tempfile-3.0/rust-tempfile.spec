@@ -15,7 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(fastrand-2.0/default) >= 2.4.1
+Requires:       crate(fastrand-2/default) >= 2.4.1
 Requires:       crate(once-cell-1.0/std) >= 1.21.4
 Requires:       crate(rustix-1.0/default) >= 1.1.4
 Requires:       crate(rustix-1.0/fs) >= 1.1.4

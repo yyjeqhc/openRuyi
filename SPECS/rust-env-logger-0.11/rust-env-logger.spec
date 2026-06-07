@@ -15,7 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(env-filter-1.0) >= 1.0.1
+Requires:       crate(env-filter-1) >= 1.0.1
 Requires:       crate(log-0.4/default) >= 0.4.29
 Requires:       crate(log-0.4/std) >= 0.4.29
 Provides:       crate(%{pkgname})
@@ -80,7 +80,7 @@ Additionally, this package also provides the "unstable-kv" feature.
 %package     -n %{name}+regex
 Summary:        Logging implementation for `log` which is configured via an environment variable - feature "regex"
 Requires:       crate(%{pkgname})
-Requires:       crate(env-filter-1.0/regex) >= 1.0.1
+Requires:       crate(env-filter-1/regex) >= 1.0.1
 Provides:       crate(%{pkgname}/regex)
 
 %description -n %{name}+regex

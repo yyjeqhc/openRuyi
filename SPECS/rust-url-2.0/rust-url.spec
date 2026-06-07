@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(form-urlencoded-1.0/alloc) >= 1.2.2
+Requires:       crate(form-urlencoded-1/alloc) >= 1.2.2
 Requires:       crate(idna-1.0/alloc) >= 1.1.0
 Requires:       crate(idna-1.0/compiled-data) >= 1.1.0
 Requires:       crate(percent-encoding-2.0/alloc) >= 2.3.2
@@ -45,8 +45,8 @@ This metapackage enables feature "serde" for the Rust url crate, by pulling in a
 %package     -n %{name}+std
 Summary:        URL library for Rust, based on the WHATWG URL Standard - feature "std" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(form-urlencoded-1.0/alloc) >= 1.2.2
-Requires:       crate(form-urlencoded-1.0/std) >= 1.2.2
+Requires:       crate(form-urlencoded-1/alloc) >= 1.2.2
+Requires:       crate(form-urlencoded-1/std) >= 1.2.2
 Requires:       crate(idna-1.0/alloc) >= 1.1.0
 Requires:       crate(idna-1.0/compiled-data) >= 1.1.0
 Requires:       crate(idna-1.0/std) >= 1.1.0

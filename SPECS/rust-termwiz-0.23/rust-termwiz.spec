@@ -26,7 +26,7 @@ Requires:       crate(base64-0.22/default) >= 0.22.1
 Requires:       crate(bitflags-2/default) >= 2.11.1
 Requires:       crate(fancy-regex-0.11/default) >= 0.11.0
 Requires:       crate(filedescriptor-0.8/default) >= 0.8.3
-Requires:       crate(finl-unicode-1.0/default) >= 1.4.0
+Requires:       crate(finl-unicode-1/default) >= 1.4.0
 Requires:       crate(fixedbitset-0.4/default) >= 0.4.2
 Requires:       crate(hex-0.4/default) >= 0.4.3
 Requires:       crate(lazy-static-1.0/default) >= 1.5.0
@@ -97,7 +97,7 @@ This metapackage enables feature "docs" for the Rust termwiz crate, by pulling i
 %package     -n %{name}+fnv
 Summary:        Terminal Wizardry for Unix and Windows - feature "fnv"
 Requires:       crate(%{pkgname})
-Requires:       crate(fnv-1.0/default) >= 1.0.0
+Requires:       crate(fnv-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/fnv)
 
 %description -n %{name}+fnv

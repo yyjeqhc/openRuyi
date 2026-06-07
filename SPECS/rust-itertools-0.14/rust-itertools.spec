@@ -15,7 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(either-1.0) >= 1.15.0
+Requires:       crate(either-1) >= 1.15.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/use-alloc)
 
@@ -26,7 +26,7 @@ Source code for takopackized Rust crate "itertools"
 Summary:        Extra iterator adaptors, iterator methods, free functions, and macros - feature "use_std" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/use-alloc)
-Requires:       crate(either-1.0/use-std) >= 1.15.0
+Requires:       crate(either-1/use-std) >= 1.15.0
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/use-std)
 

@@ -58,9 +58,9 @@ This metapackage enables feature "eventual-fairness" for the Rust flume crate, b
 %package     -n %{name}+fastrand
 Summary:        Blazingly fast multi-producer channel - feature "fastrand"
 Requires:       crate(%{pkgname})
-Requires:       crate(fastrand-2.0/default) >= 2.4.1
-Requires:       crate(fastrand-2.0/js) >= 2.4.1
-Requires:       crate(fastrand-2.0/std) >= 2.4.1
+Requires:       crate(fastrand-2/default) >= 2.4.1
+Requires:       crate(fastrand-2/js) >= 2.4.1
+Requires:       crate(fastrand-2/std) >= 2.4.1
 Provides:       crate(%{pkgname}/fastrand)
 
 %description -n %{name}+fastrand

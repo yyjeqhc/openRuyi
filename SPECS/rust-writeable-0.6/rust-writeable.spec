@@ -31,7 +31,7 @@ Source code for takopackized Rust crate "writeable"
 %package     -n %{name}+either
 Summary:        More efficient alternative to fmt::Display - feature "either"
 Requires:       crate(%{pkgname})
-Requires:       crate(either-1.0) >= 1.9.0
+Requires:       crate(either-1) >= 1.9.0
 Provides:       crate(%{pkgname}/either)
 
 %description -n %{name}+either

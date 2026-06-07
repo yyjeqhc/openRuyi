@@ -24,8 +24,8 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(cc-1/default) >= 1.2.26
 Requires:       crate(cc-1/parallel) >= 1.2.26
 Requires:       crate(cmake-0.1/default) >= 0.1.54
-Requires:       crate(dunce-1.0/default) >= 1.0.5
-Requires:       crate(fs-extra-1.0/default) >= 1.3.0
+Requires:       crate(dunce-1/default) >= 1.0.5
+Requires:       crate(fs-extra-1/default) >= 1.3.0
 Provides:       crate(aws-lc-sys) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/all-bindings)

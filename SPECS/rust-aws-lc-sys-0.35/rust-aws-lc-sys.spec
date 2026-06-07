@@ -24,8 +24,8 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(cc-1/default) >= 1.2.52
 Requires:       crate(cc-1/parallel) >= 1.2.52
 Requires:       crate(cmake-0.1/default) >= 0.1.57
-Requires:       crate(dunce-1.0/default) >= 1.0.5
-Requires:       crate(fs-extra-1.0/default) >= 1.3.0
+Requires:       crate(dunce-1/default) >= 1.0.5
+Requires:       crate(fs-extra-1/default) >= 1.3.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/all-bindings)
 Provides:       crate(%{pkgname}/asan)
