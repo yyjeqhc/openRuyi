@@ -33,8 +33,8 @@ Source code for takopackized Rust crate "const-oid"
 %package     -n %{name}+arbitrary
 Summary:        Const-friendly implementation of the ISO/IEC Object Identifier (OID) standard as defined in ITU X.660, with support for BER/DER encoding/decoding as well as heapless no_std (i.e - feature "arbitrary"
 Requires:       crate(%{pkgname})
-Requires:       crate(arbitrary-1.0/default) >= 1.2
-Requires:       crate(arbitrary-1.0/derive) >= 1.2
+Requires:       crate(arbitrary-1/default) >= 1.2
+Requires:       crate(arbitrary-1/derive) >= 1.2
 Provides:       crate(%{pkgname}/arbitrary)
 
 %description -n %{name}+arbitrary

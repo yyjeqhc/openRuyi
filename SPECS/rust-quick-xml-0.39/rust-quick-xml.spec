@@ -34,8 +34,8 @@ Source code for takopackized Rust crate "quick-xml"
 %package     -n %{name}+arbitrary
 Summary:        High performance xml reader and writer - feature "arbitrary"
 Requires:       crate(%{pkgname})
-Requires:       crate(arbitrary-1.0/default) >= 1.0.0
-Requires:       crate(arbitrary-1.0/derive) >= 1.0.0
+Requires:       crate(arbitrary-1/default) >= 1.0.0
+Requires:       crate(arbitrary-1/derive) >= 1.0.0
 Provides:       crate(%{pkgname}/arbitrary)
 
 %description -n %{name}+arbitrary

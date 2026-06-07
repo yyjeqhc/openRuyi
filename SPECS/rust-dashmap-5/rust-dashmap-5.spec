@@ -30,7 +30,7 @@ Source code for takopackized Rust crate "dashmap"
 %package     -n %{name}+arbitrary
 Summary:        Blazing fast concurrent HashMap for Rust - feature "arbitrary"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(arbitrary-1.0/default) >= 1.3.0
+Requires:       crate(arbitrary-1/default) >= 1.3.0
 Provides:       crate(%{pkgname}/arbitrary) = %{version}
 
 %description -n %{name}+arbitrary

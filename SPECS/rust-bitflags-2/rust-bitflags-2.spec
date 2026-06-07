@@ -26,7 +26,7 @@ Source code for takopackized Rust crate "bitflags"
 %package     -n %{name}+arbitrary
 Summary:        Macro to generate structures which behave like bitflags - feature "arbitrary"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(arbitrary-1.0/default) >= 1.0.0
+Requires:       crate(arbitrary-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/arbitrary) = %{version}
 
 %description -n %{name}+arbitrary

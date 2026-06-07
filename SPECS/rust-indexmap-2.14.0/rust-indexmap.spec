@@ -34,7 +34,7 @@ Source code for takopackized Rust crate "indexmap"
 %package     -n %{name}+arbitrary
 Summary:        Hash table with consistent order and fast iteration - feature "arbitrary"
 Requires:       crate(%{pkgname})
-Requires:       crate(arbitrary-1.0) >= 1.0.0
+Requires:       crate(arbitrary-1) >= 1.0.0
 Provides:       crate(%{pkgname}/arbitrary)
 
 %description -n %{name}+arbitrary

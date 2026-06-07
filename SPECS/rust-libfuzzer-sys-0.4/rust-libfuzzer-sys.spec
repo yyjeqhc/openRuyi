@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(arbitrary-1.0/default) >= 1.4.2
+Requires:       crate(arbitrary-1/default) >= 1.4.2
 Requires:       crate(cc-1/default) >= 1.2.62
 Requires:       crate(cc-1/parallel) >= 1.2.62
 Provides:       crate(libfuzzer-sys) = %{version}
@@ -35,7 +35,7 @@ Source code for takopackized Rust crate "libfuzzer-sys"
 %package     -n %{name}+arbitrary-derive
 Summary:        Wrapper around LLVM's libFuzzer runtime - feature "arbitrary-derive"
 Requires:       crate(%{pkgname})
-Requires:       crate(arbitrary-1.0/derive) >= 1.4.2
+Requires:       crate(arbitrary-1/derive) >= 1.4.2
 Provides:       crate(%{pkgname}/arbitrary-derive)
 
 %description -n %{name}+arbitrary-derive

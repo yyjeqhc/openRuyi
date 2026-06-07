@@ -40,8 +40,8 @@ Source code for takopackized Rust crate "globset"
 %package     -n %{name}+arbitrary
 Summary:        Cross platform single glob and glob set matching - feature "arbitrary"
 Requires:       crate(%{pkgname})
-Requires:       crate(arbitrary-1.0/default) >= 1.3.2
-Requires:       crate(arbitrary-1.0/derive) >= 1.3.2
+Requires:       crate(arbitrary-1/default) >= 1.3.2
+Requires:       crate(arbitrary-1/derive) >= 1.3.2
 Provides:       crate(%{pkgname}/arbitrary)
 
 %description -n %{name}+arbitrary

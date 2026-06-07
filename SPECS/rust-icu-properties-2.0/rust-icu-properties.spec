@@ -21,8 +21,8 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(icu-collections-2.0) >= 2.2.0
-Requires:       crate(icu-locale-core-2.0/zerovec) >= 2.2.0
+Requires:       crate(icu-collections-2) >= 2.2.0
+Requires:       crate(icu-locale-core-2/zerovec) >= 2.2.0
 Requires:       crate(icu-provider-2.0) >= 2.2.0
 Requires:       crate(zerotrie-0.2/yoke) >= 0.2.4
 Requires:       crate(zerotrie-0.2/zerofrom) >= 0.2.4
@@ -36,7 +36,7 @@ Source code for takopackized Rust crate "icu_properties"
 %package     -n %{name}+alloc
 Summary:        Definitions for Unicode properties - feature "alloc"
 Requires:       crate(%{pkgname})
-Requires:       crate(icu-collections-2.0/alloc) >= 2.2.0
+Requires:       crate(icu-collections-2/alloc) >= 2.2.0
 Requires:       crate(serde-1/alloc) >= 1.0.220
 Requires:       crate(serde-1/derive) >= 1.0.220
 Requires:       crate(zerovec-0.11/alloc) >= 0.11.6
@@ -65,9 +65,9 @@ Summary:        Definitions for Unicode properties - feature "datagen"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/serde)
 Requires:       crate(databake-0.2/derive) >= 0.2.0
-Requires:       crate(icu-collections-2.0/databake) >= 2.2.0
-Requires:       crate(icu-locale-core-2.0/databake) >= 2.2.0
-Requires:       crate(icu-locale-core-2.0/zerovec) >= 2.2.0
+Requires:       crate(icu-collections-2/databake) >= 2.2.0
+Requires:       crate(icu-locale-core-2/databake) >= 2.2.0
+Requires:       crate(icu-locale-core-2/zerovec) >= 2.2.0
 Requires:       crate(icu-provider-2.0/export) >= 2.2.0
 Requires:       crate(zerotrie-0.2/databake) >= 0.2.4
 Requires:       crate(zerotrie-0.2/yoke) >= 0.2.4
@@ -92,9 +92,9 @@ This metapackage enables feature "harfbuzz_traits" for the Rust icu_properties c
 %package     -n %{name}+serde
 Summary:        Definitions for Unicode properties - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(icu-collections-2.0/serde) >= 2.2.0
-Requires:       crate(icu-locale-core-2.0/serde) >= 2.2.0
-Requires:       crate(icu-locale-core-2.0/zerovec) >= 2.2.0
+Requires:       crate(icu-collections-2/serde) >= 2.2.0
+Requires:       crate(icu-locale-core-2/serde) >= 2.2.0
+Requires:       crate(icu-locale-core-2/zerovec) >= 2.2.0
 Requires:       crate(icu-provider-2.0/serde) >= 2.2.0
 Requires:       crate(serde-1/derive) >= 1.0.220
 Requires:       crate(zerotrie-0.2/serde) >= 0.2.4

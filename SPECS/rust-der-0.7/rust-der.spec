@@ -44,8 +44,8 @@ Additionally, this package also provides the "std" feature.
 Summary:        Pure Rust embedded-friendly implementation of the Distinguished Encoding Rules (DER) for Abstract Syntax Notation One (ASN.1) as described in ITU X.690 with full support for heapless no_std targets - feature "arbitrary"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/std)
-Requires:       crate(arbitrary-1.0/default) >= 1.3
-Requires:       crate(arbitrary-1.0/derive) >= 1.3
+Requires:       crate(arbitrary-1/default) >= 1.3
+Requires:       crate(arbitrary-1/derive) >= 1.3
 Requires:       crate(const-oid-0.9/arbitrary) >= 0.9.6
 Provides:       crate(%{pkgname}/arbitrary)
 

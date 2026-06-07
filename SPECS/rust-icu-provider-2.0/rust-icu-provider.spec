@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(displaydoc-0.2) >= 0.2.5
-Requires:       crate(icu-locale-core-2.0) >= 2.2.0
+Requires:       crate(icu-locale-core-2) >= 2.2.0
 Requires:       crate(yoke-0.8/derive) >= 0.8.2
 Requires:       crate(zerofrom-0.1/derive) >= 0.1.7
 Requires:       crate(zerovec-0.11/derive) >= 0.11.6
@@ -37,7 +37,7 @@ Source code for takopackized Rust crate "icu_provider"
 %package     -n %{name}+alloc
 Summary:        Trait and struct definitions for the ICU data provider - feature "alloc" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(icu-locale-core-2.0/alloc) >= 2.2.0
+Requires:       crate(icu-locale-core-2/alloc) >= 2.2.0
 Requires:       crate(serde-1/alloc) >= 1.0.220
 Requires:       crate(serde-1/derive) >= 1.0.220
 Requires:       crate(stable-deref-trait-1) >= 1.2.0

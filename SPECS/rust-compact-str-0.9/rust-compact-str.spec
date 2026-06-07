@@ -38,7 +38,7 @@ Source code for takopackized Rust crate "compact_str"
 %package     -n %{name}+arbitrary
 Summary:        Memory efficient string type that transparently stores strings on the stack, when possible - feature "arbitrary"
 Requires:       crate(%{pkgname})
-Requires:       crate(arbitrary-1.0) >= 1.0.0
+Requires:       crate(arbitrary-1) >= 1.0.0
 Provides:       crate(%{pkgname}/arbitrary)
 
 %description -n %{name}+arbitrary

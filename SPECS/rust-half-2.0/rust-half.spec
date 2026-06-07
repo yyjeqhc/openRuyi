@@ -39,8 +39,8 @@ Source code for takopackized Rust crate "half"
 %package     -n %{name}+arbitrary
 Summary:        Half-precision floating point f16 and bf16 types for Rust implementing the IEEE 754-2008 standard binary16 and bfloat16 types - feature "arbitrary"
 Requires:       crate(%{pkgname})
-Requires:       crate(arbitrary-1.0/default) >= 1.4.1
-Requires:       crate(arbitrary-1.0/derive) >= 1.4.1
+Requires:       crate(arbitrary-1/default) >= 1.4.1
+Requires:       crate(arbitrary-1/derive) >= 1.4.1
 Provides:       crate(%{pkgname}/arbitrary)
 
 %description -n %{name}+arbitrary

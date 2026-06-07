@@ -37,8 +37,8 @@ Source code for takopackized Rust crate "zlib-rs"
 %package     -n %{name}+arbitrary
 Summary:        Memory-safe zlib implementation written in rust - feature "arbitrary" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(arbitrary-1.0/default) >= 1.0.0
-Requires:       crate(arbitrary-1.0/derive) >= 1.0.0
+Requires:       crate(arbitrary-1/default) >= 1.0.0
+Requires:       crate(arbitrary-1/derive) >= 1.0.0
 Provides:       crate(%{pkgname}/internal-fuzz)
 Provides:       crate(%{pkgname}/arbitrary)
 

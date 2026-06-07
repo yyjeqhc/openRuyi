@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(icu-collections-2.0) >= 2.2.0
+Requires:       crate(icu-collections-2) >= 2.2.0
 Requires:       crate(icu-provider-2.0) >= 2.2.0
 Requires:       crate(smallvec-1.0) >= 1.15.1
 Requires:       crate(zerovec-0.11) >= 0.11.6
@@ -48,7 +48,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/icu-properties)
 Requires:       crate(%{pkgname}/serde)
 Requires:       crate(databake-0.2/derive) >= 0.2.0
-Requires:       crate(icu-collections-2.0/databake) >= 2.2.0
+Requires:       crate(icu-collections-2/databake) >= 2.2.0
 Requires:       crate(icu-properties-2.0/datagen) >= 2.2.0
 Requires:       crate(icu-provider-2.0/export) >= 2.2.0
 Requires:       crate(zerovec-0.11/databake) >= 0.11.6
@@ -89,7 +89,7 @@ This metapackage enables feature "icu_properties" for the Rust icu_normalizer cr
 %package     -n %{name}+serde
 Summary:        API for normalizing text into Unicode Normalization Forms - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(icu-collections-2.0/serde) >= 2.2.0
+Requires:       crate(icu-collections-2/serde) >= 2.2.0
 Requires:       crate(icu-properties-2.0/serde) >= 2.2.0
 Requires:       crate(icu-provider-2.0/serde) >= 2.2.0
 Requires:       crate(serde-1/alloc) >= 1.0.220
