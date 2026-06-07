@@ -20,6 +20,7 @@ BuildRequires:  make
 BuildRequires:  perl-rpm-packaging
 BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
+BuildRequires:  pkgconfig(krb5)
 BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(Test::More)
 

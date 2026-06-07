@@ -27,6 +27,7 @@ BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(File::Find::Rule) >= 0.1
 BuildRequires:  perl(Scalar::Util)
 BuildRequires:  perl(Test::More) >= 0.88
+BuildRequires:  perl(Number::Compare)
 
 Requires:       perl(Clone) >= 0.43
 Requires:       perl(File::Find::Rule) >= 0.1

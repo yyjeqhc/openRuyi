@@ -22,10 +22,17 @@ BuildRequires:  perl-rpm-packaging
 BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
 BuildRequires:  perl >= 5.8.4
+BuildRequires:  perl(Clone)
 BuildRequires:  perl(DateTime) >= 1.48
+BuildRequires:  perl(Devel::StackTrace)
+BuildRequires:  perl(Eval::Closure)
+BuildRequires:  perl(Exception::Class)
+BuildRequires:  perl(File::ShareDir)
 BuildRequires:  perl(ExtUtils::MakeMaker)
+BuildRequires:  perl(MRO::Compat)
 BuildRequires:  perl(strict)
 BuildRequires:  perl(Test::More) >= 0.88
+BuildRequires:  perl(Try::Tiny)
 BuildRequires:  perl(vars)
 BuildRequires:  perl(warnings)
 

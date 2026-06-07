@@ -33,6 +33,7 @@ BuildRequires:  perl(strict)
 BuildRequires:  perl(Sub::Exporter::Progressive) >= 0.001006
 BuildRequires:  perl(Test::More) >= 0.88
 BuildRequires:  perl(warnings)
+BuildRequires:  perl(Try::Tiny)
 
 Requires:       perl(Module::Implementation) >= 0.05
 Requires:       perl(Sub::Exporter::Progressive) >= 0.001006

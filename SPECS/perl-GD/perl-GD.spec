@@ -17,6 +17,7 @@ BuildSystem:    perlmaker
 BuildOption(build):  INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
 
 BuildRequires:  make
+BuildRequires:  pkgconfig(gdlib)
 BuildRequires:  perl-rpm-packaging
 BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
@@ -25,6 +26,8 @@ BuildRequires:  perl(Math::Trig)
 BuildRequires:  perl(Test::Fork) >= 0.02
 BuildRequires:  perl(Test::More) >= 0.88
 BuildRequires:  perl(Test::NoWarnings) >= 1.00
+BuildRequires:  perl(File::Which)
+BuildRequires:  perl(ExtUtils::PkgConfig)
 
 %description
 GD.pm is a Perl interface to Thomas Boutell's gd graphics library (version

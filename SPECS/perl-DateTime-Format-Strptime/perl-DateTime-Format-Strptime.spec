@@ -22,17 +22,23 @@ BuildRequires:  perl-rpm-packaging
 BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
 BuildRequires:  perl(Carp)
+BuildRequires:  perl(Clone)
 BuildRequires:  perl(constant)
 BuildRequires:  perl(DateTime) >= 1.00
 BuildRequires:  perl(DateTime::Locale) >= 1.30
 BuildRequires:  perl(DateTime::Locale::Base)
 BuildRequires:  perl(DateTime::Locale::FromData)
 BuildRequires:  perl(DateTime::TimeZone) >= 2.09
+BuildRequires:  perl(Devel::StackTrace)
+BuildRequires:  perl(Eval::Closure)
+BuildRequires:  perl(Exception::Class)
 BuildRequires:  perl(Exporter)
 BuildRequires:  perl(ExtUtils::MakeMaker)
+BuildRequires:  perl(File::ShareDir)
 BuildRequires:  perl(File::Spec)
 BuildRequires:  perl(FindBin)
 BuildRequires:  perl(lib)
+BuildRequires:  perl(MRO::Compat)
 BuildRequires:  perl(Params::ValidationCompiler)
 BuildRequires:  perl(parent)
 BuildRequires:  perl(Specio) >= 0.33

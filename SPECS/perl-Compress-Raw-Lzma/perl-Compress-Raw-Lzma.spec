@@ -21,6 +21,7 @@ BuildRequires:  perl-rpm-packaging
 BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
 BuildRequires:  perl(ExtUtils::MakeMaker)
+BuildRequires:  pkgconfig(liblzma)
 
 %description
 Compress::Raw::Lzma provides an interface to the in-memory

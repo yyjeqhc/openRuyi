@@ -33,6 +33,13 @@ BuildRequires:  perl(Scalar::Util)
 BuildRequires:  perl(strict)
 BuildRequires:  perl(Test::More) >= 0.96
 BuildRequires:  perl(warnings)
+BuildRequires:  perl(Try::Tiny)
+BuildRequires:  perl(Clone)
+BuildRequires:  perl(MRO::Compat)
+BuildRequires:  perl(Eval::Closure)
+BuildRequires:  perl(Devel::StackTrace)
+BuildRequires:  perl(Exception::Class)
+BuildRequires:  perl(File::ShareDir)
 
 Requires:       perl(DateTime) >= 1.00
 Requires:       perl(DateTime::Format::Strptime) >= 1.04

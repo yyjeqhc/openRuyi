@@ -52,6 +52,10 @@ BuildRequires:  perl(Test::More) >= 0.96
 BuildRequires:  perl(Test::Requires)
 BuildRequires:  perl(Try::Tiny)
 BuildRequires:  perl(warnings)
+BuildRequires:  perl(Eval::Closure)
+BuildRequires:  perl(Exception::Class)
+BuildRequires:  perl(MRO::Compat)
+BuildRequires:  perl(Clone)
 
 Requires:       perl(Class::Singleton) >= 1.03
 Requires:       perl(Cwd) >= 3
