@@ -51,6 +51,14 @@ BuildRequires:  perl(Test::File::ShareDir::Dist)
 BuildRequires:  perl(Test::More) >= 1.302015
 BuildRequires:  perl(utf8)
 BuildRequires:  perl(warnings)
+BuildRequires:  perl(Class::Tiny)
+BuildRequires:  perl(Try::Tiny)
+BuildRequires:  perl(Eval::Closure)
+BuildRequires:  perl(MRO::Compat)
+BuildRequires:  perl(Clone)
+BuildRequires:  perl(Exception::Class)
+BuildRequires:  perl(File::Copy::Recursive)
+BuildRequires:  perl(File::ShareDir::Install)
 
 Requires:       perl(Dist::CheckConflicts) >= 0.02
 Requires:       perl(List::Util) >= 1.45

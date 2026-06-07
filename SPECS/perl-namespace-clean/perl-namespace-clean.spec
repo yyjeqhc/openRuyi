@@ -26,6 +26,7 @@ BuildRequires:  perl(B::Hooks::EndOfScope) >= 0.12
 BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(Package::Stash) >= 0.23
 BuildRequires:  perl(Test::More) >= 0.47
+BuildRequires:  perl(Try::Tiny)
 
 Requires:       perl(B::Hooks::EndOfScope) >= 0.12
 Requires:       perl(Package::Stash) >= 0.23
