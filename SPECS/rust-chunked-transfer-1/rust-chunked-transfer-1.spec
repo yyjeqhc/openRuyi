@@ -1,14 +1,8 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: Li Guan <guanli.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name chunked_transfer
 %global full_version 1.0.0
-%global pkgname chunked-transfer-1.0
+%global pkgname chunked-transfer-1
 
-Name:           rust-chunked-transfer-1.0
+Name:           rust-chunked-transfer-1
 Version:        1.0.0
 Release:        %autorelease
 Summary:        Rust crate "chunked_transfer"
@@ -21,9 +15,8 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(chunked-transfer) = %{version}
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
 Source code for takopackized Rust crate "chunked_transfer"

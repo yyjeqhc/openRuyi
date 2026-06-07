@@ -39,7 +39,7 @@ This metapackage enables feature "carapace" for the Rust clap_complete_command c
 %package     -n %{name}+fig
 Summary:        Reduces boilerplate for adding a shell completion command to Clap - feature "fig"
 Requires:       crate(%{pkgname})
-Requires:       crate(clap-complete-fig-4.0/default) >= 4.0.0
+Requires:       crate(clap-complete-fig-4/default) >= 4.0.0
 Provides:       crate(%{pkgname}/fig)
 
 %description -n %{name}+fig
