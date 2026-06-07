@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(aligned-vec-0.6/default) >= 0.6.4
-Requires:       crate(arbitrary-1.0/default) >= 1.4.2
+Requires:       crate(arbitrary-1/default) >= 1.4.2
 Requires:       crate(arg-enum-proc-macro-0.3/default) >= 0.3.4
 Requires:       crate(arrayvec-0.7/default) >= 0.7.6
 Requires:       crate(av-scenechange-0.14) >= 0.14.1

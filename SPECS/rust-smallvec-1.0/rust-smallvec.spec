@@ -39,7 +39,7 @@ Source code for takopackized Rust crate "smallvec"
 %package     -n %{name}+arbitrary
 Summary:        'Small vector' optimization: store up to a small number of items on the stack - feature "arbitrary"
 Requires:       crate(%{pkgname})
-Requires:       crate(arbitrary-1.0/default) >= 1.0.0
+Requires:       crate(arbitrary-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/arbitrary)
 
 %description -n %{name}+arbitrary

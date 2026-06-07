@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name regex-syntax
 %global full_version 0.8.10
 %global pkgname regex-syntax-0.8
@@ -31,8 +37,8 @@ Source code for takopackized Rust crate "regex-syntax"
 %package     -n %{name}+arbitrary
 Summary:        Regular expression parser - feature "arbitrary"
 Requires:       crate(%{pkgname})
-Requires:       crate(arbitrary-1.0/default) >= 1.3.0
-Requires:       crate(arbitrary-1.0/derive) >= 1.3.0
+Requires:       crate(arbitrary-1/default) >= 1.3.0
+Requires:       crate(arbitrary-1/derive) >= 1.3.0
 Provides:       crate(%{pkgname}/arbitrary)
 
 %description -n %{name}+arbitrary

@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name blocking
 %global full_version 1.6.2
 %global pkgname blocking-1.0
@@ -15,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(async-channel-2.0/default) >= 2.5.0
+Requires:       crate(async-channel-2/default) >= 2.5.0
 Requires:       crate(async-task-4.0/default) >= 4.7.1
 Requires:       crate(futures-io-0.3/std) >= 0.3.32
 Requires:       crate(futures-lite-2.0) >= 2.6.1

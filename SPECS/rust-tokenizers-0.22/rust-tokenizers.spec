@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(ahash-0.8/default) >= 0.8.12
 Requires:       crate(ahash-0.8/serde) >= 0.8.12
-Requires:       crate(aho-corasick-1.0/default) >= 1.1.4
+Requires:       crate(aho-corasick-1/default) >= 1.1.4
 Requires:       crate(compact-str-0.9/default) >= 0.9.0
 Requires:       crate(compact-str-0.9/serde) >= 0.9.0
 Requires:       crate(dary-heap-0.3/default) >= 0.3.8

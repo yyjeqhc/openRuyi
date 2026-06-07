@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name vm-memory
 %global full_version 0.17.1
 %global pkgname vm-memory-0.17
@@ -24,7 +30,7 @@ Source code for takopackized Rust crate "vm-memory"
 %package     -n %{name}+arc-swap
 Summary:        Safe abstractions for accessing the VM physical memory - feature "arc-swap" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(arc-swap-1.0/default) >= 1.9.1
+Requires:       crate(arc-swap-1/default) >= 1.9.1
 Provides:       crate(%{pkgname}/arc-swap)
 Provides:       crate(%{pkgname}/backend-atomic)
 

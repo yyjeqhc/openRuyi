@@ -34,7 +34,7 @@ Source code for takopackized Rust crate "hybrid-array"
 %package     -n %{name}+arbitrary
 Summary:        Hybrid typenum-based and const generic array types designed to provide the flexibility of typenum-based expressions while also allowing interoperability and a transition path to const generics - feature "arbitrary"
 Requires:       crate(%{pkgname})
-Requires:       crate(arbitrary-1.0/default) >= 1.0.0
+Requires:       crate(arbitrary-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/arbitrary)
 
 %description -n %{name}+arbitrary

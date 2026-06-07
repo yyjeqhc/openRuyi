@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name bitflags
 %global full_version 2.11.1
 %global pkgname bitflags-2.0
@@ -26,7 +32,7 @@ Source code for takopackized Rust crate "bitflags"
 %package     -n %{name}+arbitrary
 Summary:        Macro to generate structures which behave like bitflags - feature "arbitrary"
 Requires:       crate(%{pkgname})
-Requires:       crate(arbitrary-1.0/default) >= 1.0.0
+Requires:       crate(arbitrary-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/arbitrary)
 
 %description -n %{name}+arbitrary

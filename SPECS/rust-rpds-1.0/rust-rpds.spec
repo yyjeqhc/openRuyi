@@ -20,8 +20,8 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(archery-1.0/default) >= 1.2.2
-Requires:       crate(archery-1.0/triomphe) >= 1.2.2
+Requires:       crate(archery-1/default) >= 1.2.2
+Requires:       crate(archery-1/triomphe) >= 1.2.2
 Provides:       crate(rpds) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

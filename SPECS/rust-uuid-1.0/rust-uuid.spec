@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name uuid
 %global full_version 1.23.1
 %global pkgname uuid-1.0
@@ -25,7 +31,7 @@ Source code for takopackized Rust crate "uuid"
 %package     -n %{name}+arbitrary
 Summary:        Generate and parse UUIDs - feature "arbitrary"
 Requires:       crate(%{pkgname})
-Requires:       crate(arbitrary-1.0/default) >= 1.1.3
+Requires:       crate(arbitrary-1/default) >= 1.1.3
 Provides:       crate(%{pkgname}/arbitrary)
 
 %description -n %{name}+arbitrary

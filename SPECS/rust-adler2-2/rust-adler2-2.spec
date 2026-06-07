@@ -1,8 +1,13 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name adler2
 %global full_version 2.0.1
-%global pkgname adler2-2.0
+%global pkgname adler2-2
 
-Name:           rust-adler2-2.0
+Name:           rust-adler2-2
 Version:        2.0.1
 Release:        %autorelease
 Summary:        Rust crate "adler2"
@@ -15,19 +20,19 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/std)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
 
 %description
 Source code for takopackized Rust crate "adler2"
 
 %package     -n %{name}+core
 Summary:        Simple clean-room implementation of the Adler-32 checksum - feature "core" and 1 more
-Requires:       crate(%{pkgname})
-Requires:       crate(rustc-std-workspace-core-1.0/default) >= 1.0.0
-Provides:       crate(%{pkgname}/core)
-Provides:       crate(%{pkgname}/rustc-dep-of-std)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(rustc-std-workspace-core-1/default) >= 1.0.0
+Provides:       crate(%{pkgname}/core) = %{version}
+Provides:       crate(%{pkgname}/rustc-dep-of-std) = %{version}
 
 %description -n %{name}+core
 This metapackage enables feature "core" for the Rust adler2 crate, by pulling in any additional dependencies needed by that feature.

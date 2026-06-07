@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name regex-automata
 %global full_version 0.4.14
 %global pkgname regex-automata-0.4
@@ -91,7 +97,7 @@ Additionally, this package also provides the "internal-instrument" feature.
 %package     -n %{name}+logging
 Summary:        Automata construction and matching using regular expressions - feature "logging"
 Requires:       crate(%{pkgname})
-Requires:       crate(aho-corasick-1.0/logging) >= 1.1.4
+Requires:       crate(aho-corasick-1/logging) >= 1.1.4
 Requires:       crate(log-0.4/default) >= 0.4.14
 Requires:       crate(memchr-2.0/logging) >= 2.8.0
 Provides:       crate(%{pkgname}/logging)
@@ -143,7 +149,7 @@ This metapackage enables feature "perf-literal" for the Rust regex-automata crat
 %package     -n %{name}+perf-literal-multisubstring
 Summary:        Automata construction and matching using regular expressions - feature "perf-literal-multisubstring"
 Requires:       crate(%{pkgname})
-Requires:       crate(aho-corasick-1.0) >= 1.1.4
+Requires:       crate(aho-corasick-1) >= 1.1.4
 Provides:       crate(%{pkgname}/perf-literal-multisubstring)
 
 %description -n %{name}+perf-literal-multisubstring
@@ -152,7 +158,7 @@ This metapackage enables feature "perf-literal-multisubstring" for the Rust rege
 %package     -n %{name}+perf-literal-substring
 Summary:        Automata construction and matching using regular expressions - feature "perf-literal-substring"
 Requires:       crate(%{pkgname})
-Requires:       crate(aho-corasick-1.0/perf-literal) >= 1.1.4
+Requires:       crate(aho-corasick-1/perf-literal) >= 1.1.4
 Requires:       crate(memchr-2.0) >= 2.8.0
 Provides:       crate(%{pkgname}/perf-literal-substring)
 
@@ -163,7 +169,7 @@ This metapackage enables feature "perf-literal-substring" for the Rust regex-aut
 Summary:        Automata construction and matching using regular expressions - feature "std"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(aho-corasick-1.0/std) >= 1.1.4
+Requires:       crate(aho-corasick-1/std) >= 1.1.4
 Requires:       crate(memchr-2.0/std) >= 2.8.0
 Requires:       crate(regex-syntax-0.8/std) >= 0.8.10
 Provides:       crate(%{pkgname}/std)

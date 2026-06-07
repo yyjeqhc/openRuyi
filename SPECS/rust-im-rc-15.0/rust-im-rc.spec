@@ -37,7 +37,7 @@ Source code for takopackized Rust crate "im-rc"
 %package     -n %{name}+arbitrary
 Summary:        Immutable collection datatypes (the fast but not thread safe version) - feature "arbitrary"
 Requires:       crate(%{pkgname})
-Requires:       crate(arbitrary-1.0/default) >= 1.1
+Requires:       crate(arbitrary-1/default) >= 1.1
 Provides:       crate(%{pkgname}/arbitrary)
 
 %description -n %{name}+arbitrary

@@ -46,8 +46,8 @@ This metapackage enables feature "alloc" for the Rust spki crate, by pulling in 
 Summary:        X.509 Subject Public Key Info (RFC5280) describing public keys as well as their associated AlgorithmIdentifiers (i.e - feature "arbitrary"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/std)
-Requires:       crate(arbitrary-1.0/default) >= 1.2
-Requires:       crate(arbitrary-1.0/derive) >= 1.2
+Requires:       crate(arbitrary-1/default) >= 1.2
+Requires:       crate(arbitrary-1/derive) >= 1.2
 Requires:       crate(der-0.7/arbitrary) >= 0.7.10
 Requires:       crate(der-0.7/oid) >= 0.7.10
 Provides:       crate(%{pkgname}/arbitrary)

@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name const-oid
 %global full_version 0.10.2
 %global pkgname const-oid-0.10
@@ -26,8 +32,8 @@ Source code for takopackized Rust crate "const-oid"
 %package     -n %{name}+arbitrary
 Summary:        Const-friendly implementation of the ISO/IEC Object Identifier (OID) standard as defined in ITU X.660, with support for BER/DER encoding/decoding as well as heapless no_std (i.e - feature "arbitrary"
 Requires:       crate(%{pkgname})
-Requires:       crate(arbitrary-1.0/default) >= 1.4
-Requires:       crate(arbitrary-1.0/derive) >= 1.4
+Requires:       crate(arbitrary-1/default) >= 1.4
+Requires:       crate(arbitrary-1/derive) >= 1.4
 Provides:       crate(%{pkgname}/arbitrary)
 
 %description -n %{name}+arbitrary

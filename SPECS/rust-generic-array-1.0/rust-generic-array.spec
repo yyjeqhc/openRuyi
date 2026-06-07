@@ -36,7 +36,7 @@ Source code for takopackized Rust crate "generic-array"
 %package     -n %{name}+arbitrary
 Summary:        Generic types implementing functionality of arrays - feature "arbitrary"
 Requires:       crate(%{pkgname})
-Requires:       crate(arbitrary-1.0) >= 1.0.0
+Requires:       crate(arbitrary-1) >= 1.0.0
 Provides:       crate(%{pkgname}/arbitrary)
 
 %description -n %{name}+arbitrary

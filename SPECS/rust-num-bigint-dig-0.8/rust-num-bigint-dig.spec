@@ -39,7 +39,7 @@ Source code for takopackized Rust crate "num-bigint-dig"
 %package     -n %{name}+arbitrary
 Summary:        Big integer implementation for Rust - feature "arbitrary"
 Requires:       crate(%{pkgname})
-Requires:       crate(arbitrary-1.0/default) >= 1.1.0
+Requires:       crate(arbitrary-1/default) >= 1.1.0
 Provides:       crate(%{pkgname}/arbitrary)
 
 %description -n %{name}+arbitrary

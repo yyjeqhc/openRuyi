@@ -19,7 +19,7 @@ BuildSystem:    pyproject
 BuildOption(install):  rpds
 
 BuildRequires:  cargo
-BuildRequires:  crate(archery-1.0/default) >= 1.2.2
+BuildRequires:  crate(archery-1/default) >= 1.2.2
 BuildRequires:  crate(pyo3-0.27/default) >= 0.27.2
 BuildRequires:  crate(pyo3-0.27/extension-module) >= 0.27.2
 BuildRequires:  crate(pyo3-0.27/generate-import-lib) >= 0.27.2
