@@ -22,8 +22,8 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(anyhow-1/default) >= 1.0.98
-Requires:       crate(bytemuck-1.0/default) >= 1.23.1
-Requires:       crate(bytemuck-derive-1.0/default) >= 1.9.3
+Requires:       crate(bytemuck-1/default) >= 1.23.1
+Requires:       crate(bytemuck-derive-1/default) >= 1.9.3
 Requires:       crate(hashbrown-0.15) >= 0.15.4
 Requires:       crate(regex-syntax-0.8/default) >= 0.8.5
 Requires:       crate(strum-0.27/default) >= 0.27.1

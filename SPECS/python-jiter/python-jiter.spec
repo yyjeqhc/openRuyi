@@ -20,7 +20,7 @@ BuildOption(install):  %{srcname}
 
 BuildRequires:  cargo
 BuildRequires:  crate(ahash-0.8/default) >= 0.8.0
-BuildRequires:  crate(bitvec-1.0/default) >= 1.0.1
+BuildRequires:  crate(bitvec-1/default) >= 1.0.1
 BuildRequires:  crate(lexical-parse-float-1.0/format) >= 1.0.5
 BuildRequires:  crate(num-bigint-0.4/default) >= 0.4.4
 BuildRequires:  crate(num-traits-0.2/default) >= 0.2.16

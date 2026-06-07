@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bytes-1.0/default) >= 1.11.0
+Requires:       crate(bytes-1/default) >= 1.11.0
 Requires:       crate(getrandom-0.3/wasm-js) >= 0.3.4
 Requires:       crate(lru-slab-0.1/default) >= 0.1.2
 Requires:       crate(rand-0.9/default) >= 0.9.2

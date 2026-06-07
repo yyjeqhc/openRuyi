@@ -21,8 +21,8 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bstr-1.0/std) >= 1.12.1
-Requires:       crate(bstr-1.0/unicode) >= 1.12.1
+Requires:       crate(bstr-1/std) >= 1.12.1
+Requires:       crate(bstr-1/unicode) >= 1.12.1
 Requires:       crate(gix-actor-0.35/default) >= 0.35.6
 Requires:       crate(gix-date-0.10/default) >= 0.10.7
 Requires:       crate(gix-features-0.43/default) >= 0.43.1
@@ -56,9 +56,9 @@ This metapackage enables feature "document-features" for the Rust gix-object cra
 %package     -n %{name}+serde
 Summary:        Immutable and mutable git objects with decoding and encoding support - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(bstr-1.0/serde) >= 1.12.1
-Requires:       crate(bstr-1.0/std) >= 1.12.1
-Requires:       crate(bstr-1.0/unicode) >= 1.12.1
+Requires:       crate(bstr-1/serde) >= 1.12.1
+Requires:       crate(bstr-1/std) >= 1.12.1
+Requires:       crate(bstr-1/unicode) >= 1.12.1
 Requires:       crate(gix-actor-0.35/serde) >= 0.35.6
 Requires:       crate(gix-hash-0.19/serde) >= 0.19.0
 Requires:       crate(serde-1/derive) >= 1.0.114

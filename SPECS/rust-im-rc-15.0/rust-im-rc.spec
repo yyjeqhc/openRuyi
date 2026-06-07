@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitmaps-2.0/default) >= 2.1.0
+Requires:       crate(bitmaps-2/default) >= 2.1.0
 Requires:       crate(rand-core-0.6/default) >= 0.6.4
 Requires:       crate(rand-xoshiro-0.6/default) >= 0.6.0
 Requires:       crate(sized-chunks-0.6/default) >= 0.6.5

@@ -21,8 +21,8 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bstr-1.0/std) >= 1.12.1
-Requires:       crate(bstr-1.0/unicode) >= 1.12.1
+Requires:       crate(bstr-1/std) >= 1.12.1
+Requires:       crate(bstr-1/unicode) >= 1.12.1
 Requires:       crate(gix-date-0.10/default) >= 0.10.7
 Requires:       crate(gix-features-0.43/default) >= 0.43.1
 Requires:       crate(gix-features-0.43/progress) >= 0.43.1
@@ -111,9 +111,9 @@ This metapackage enables feature "handshake" for the Rust gix-protocol crate, by
 %package     -n %{name}+serde
 Summary:        The gitoxide project for implementing git protocols - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(bstr-1.0/serde) >= 1.12.1
-Requires:       crate(bstr-1.0/std) >= 1.12.1
-Requires:       crate(bstr-1.0/unicode) >= 1.12.1
+Requires:       crate(bstr-1/serde) >= 1.12.1
+Requires:       crate(bstr-1/std) >= 1.12.1
+Requires:       crate(bstr-1/unicode) >= 1.12.1
 Requires:       crate(gix-hash-0.19/serde) >= 0.19.0
 Requires:       crate(gix-shallow-0.5/serde) >= 0.5.0
 Requires:       crate(gix-transport-0.48/serde) >= 0.48.0

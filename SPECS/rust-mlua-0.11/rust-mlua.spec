@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bstr-1.0/std) >= 1.12.1
+Requires:       crate(bstr-1/std) >= 1.12.1
 Requires:       crate(either-1.0/default) >= 1.15.0
 Requires:       crate(libc-0.2/default) >= 0.2.186
 Requires:       crate(mlua-sys-0.10/default) >= 0.10.0
@@ -182,8 +182,8 @@ This metapackage enables feature "module" for the Rust mlua crate, by pulling in
 %package     -n %{name}+serde
 Summary:        High level bindings to Lua 5.5/5.4/5.3/5.2/5.1 (including LuaJIT) and Luau with async/await features and support of writing native Lua modules in Rust - feature "serde" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(bstr-1.0/serde) >= 1.12.1
-Requires:       crate(bstr-1.0/std) >= 1.12.1
+Requires:       crate(bstr-1/serde) >= 1.12.1
+Requires:       crate(bstr-1/std) >= 1.12.1
 Requires:       crate(erased-serde-0.4/default) >= 0.4.10
 Requires:       crate(serde-1/default) >= 1.0.228
 Requires:       crate(serde-value-0.7/default) >= 0.7.0

@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bstr-1.0/std) >= 1.12.1
+Requires:       crate(bstr-1/std) >= 1.12.1
 Requires:       crate(gix-command-0.6/default) >= 0.6.5
 Requires:       crate(gix-config-value-0.15/default) >= 0.15.3
 Requires:       crate(gix-date-0.10/default) >= 0.10.7
@@ -49,8 +49,8 @@ This metapackage enables feature "document-features" for the Rust gix-credential
 %package     -n %{name}+serde
 Summary:        The gitoxide project to interact with git credentials helpers - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(bstr-1.0/serde) >= 1.12.1
-Requires:       crate(bstr-1.0/std) >= 1.12.1
+Requires:       crate(bstr-1/serde) >= 1.12.1
+Requires:       crate(bstr-1/std) >= 1.12.1
 Requires:       crate(gix-sec-0.12/serde) >= 0.12.2
 Requires:       crate(serde-1/derive) >= 1.0.114
 Provides:       crate(%{pkgname}/serde)

@@ -32,7 +32,7 @@ Source code for takopackized Rust crate "similar"
 %package     -n %{name}+bstr
 Summary:        Diff library for Rust - feature "bstr"
 Requires:       crate(%{pkgname})
-Requires:       crate(bstr-1.0) >= 1.5.0
+Requires:       crate(bstr-1) >= 1.5.0
 Provides:       crate(%{pkgname}/bstr)
 
 %description -n %{name}+bstr
@@ -63,8 +63,8 @@ Summary:        Diff library for Rust - feature "unicode"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/text)
 Requires:       crate(%{pkgname}/unicode-segmentation)
-Requires:       crate(bstr-1.0/std) >= 1.5.0
-Requires:       crate(bstr-1.0/unicode) >= 1.5.0
+Requires:       crate(bstr-1/std) >= 1.5.0
+Requires:       crate(bstr-1/unicode) >= 1.5.0
 Provides:       crate(%{pkgname}/unicode)
 
 %description -n %{name}+unicode

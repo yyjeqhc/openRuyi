@@ -49,7 +49,7 @@ This metapackage enables feature "borsh" for the Rust ordered-float crate, by pu
 %package     -n %{name}+bytemuck
 Summary:        Wrappers for total ordering on floats - feature "bytemuck"
 Requires:       crate(%{pkgname})
-Requires:       crate(bytemuck-1.0) >= 1.12.2
+Requires:       crate(bytemuck-1) >= 1.12.2
 Provides:       crate(%{pkgname}/bytemuck)
 
 %description -n %{name}+bytemuck

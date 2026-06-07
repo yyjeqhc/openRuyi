@@ -54,7 +54,7 @@ This metapackage enables feature "bigdecimal04" for the Rust schemars crate, by 
 %package     -n %{name}+bytes1
 Summary:        Generate JSON Schemas from Rust code - feature "bytes1"
 Requires:       crate(%{pkgname})
-Requires:       crate(bytes-1.0) >= 1.0.0
+Requires:       crate(bytes-1) >= 1.0.0
 Provides:       crate(%{pkgname}/bytes1)
 
 %description -n %{name}+bytes1

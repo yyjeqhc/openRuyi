@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bstr-1.0/std) >= 1.12.1
+Requires:       crate(bstr-1/std) >= 1.12.1
 Requires:       crate(faster-hex-0.10/std) >= 0.10.0
 Requires:       crate(gix-trace-0.1/default) >= 0.1.18
 Requires:       crate(thiserror-2.0/default) >= 2.0.18
@@ -64,8 +64,8 @@ This metapackage enables feature "futures-lite" for the Rust gix-packetline crat
 %package     -n %{name}+serde
 Summary:        The gitoxide project implementing the pkt-line serialization format - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(bstr-1.0/serde) >= 1.12.1
-Requires:       crate(bstr-1.0/std) >= 1.12.1
+Requires:       crate(bstr-1/serde) >= 1.12.1
+Requires:       crate(bstr-1/std) >= 1.12.1
 Requires:       crate(faster-hex-0.10/serde) >= 0.10.0
 Requires:       crate(faster-hex-0.10/std) >= 0.10.0
 Requires:       crate(serde-1/derive) >= 1.0.114

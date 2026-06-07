@@ -61,7 +61,7 @@ This metapackage enables feature "alloc" for the Rust hashbrown crate, by pullin
 %package     -n %{name}+bumpalo
 Summary:        Rust port of Google's SwissTable hash map - feature "bumpalo"
 Requires:       crate(%{pkgname})
-Requires:       crate(bumpalo-3.0/default) >= 3.5.0
+Requires:       crate(bumpalo-3/default) >= 3.5.0
 Provides:       crate(%{pkgname}/bumpalo)
 
 %description -n %{name}+bumpalo

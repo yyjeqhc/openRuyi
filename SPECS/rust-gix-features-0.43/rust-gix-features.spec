@@ -60,7 +60,7 @@ This metapackage enables feature "fs-read-dir" for the Rust gix-features crate, 
 %package     -n %{name}+io-pipe
 Summary:        Integrate various capabilities using compile-time feature flags - feature "io-pipe"
 Requires:       crate(%{pkgname})
-Requires:       crate(bytes-1.0/default) >= 1.11.1
+Requires:       crate(bytes-1/default) >= 1.11.1
 Provides:       crate(%{pkgname}/io-pipe)
 
 %description -n %{name}+io-pipe

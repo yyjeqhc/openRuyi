@@ -30,7 +30,7 @@ Source code for takopackized Rust crate "num-complex"
 %package     -n %{name}+bytemuck
 Summary:        Complex numbers implementation for Rust - feature "bytemuck"
 Requires:       crate(%{pkgname})
-Requires:       crate(bytemuck-1.0/default) >= 1.0.0
+Requires:       crate(bytemuck-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/bytemuck)
 
 %description -n %{name}+bytemuck

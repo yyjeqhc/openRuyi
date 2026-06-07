@@ -57,8 +57,8 @@ This metapackage enables feature "borsh" for the Rust uuid crate, by pulling in 
 %package     -n %{name}+bytemuck
 Summary:        Generate and parse UUIDs - feature "bytemuck"
 Requires:       crate(%{pkgname})
-Requires:       crate(bytemuck-1.0/default) >= 1.22
-Requires:       crate(bytemuck-1.0/derive) >= 1.22
+Requires:       crate(bytemuck-1/default) >= 1.22
+Requires:       crate(bytemuck-1/derive) >= 1.22
 Provides:       crate(%{pkgname}/bytemuck)
 
 %description -n %{name}+bytemuck

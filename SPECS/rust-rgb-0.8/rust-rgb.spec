@@ -35,7 +35,7 @@ Source code for takopackized Rust crate "rgb"
 %package     -n %{name}+bytemuck
 Summary:        `struct RGB/RGBA/etc.` for sharing pixels between crates + convenience methods for color manipulation - feature "bytemuck" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(bytemuck-1.0/default) >= 1.16
+Requires:       crate(bytemuck-1/default) >= 1.16
 Provides:       crate(%{pkgname}/as-bytes)
 Provides:       crate(%{pkgname}/bytemuck)
 

@@ -31,7 +31,7 @@ Source code for takopackized Rust crate "safe_arch"
 %package     -n %{name}+bytemuck
 Summary:        Crate that exposes `core::arch` safely via `#[cfg()]` - feature "bytemuck"
 Requires:       crate(%{pkgname})
-Requires:       crate(bytemuck-1.0/default) >= 1.25.0
+Requires:       crate(bytemuck-1/default) >= 1.25.0
 Provides:       crate(%{pkgname}/bytemuck)
 
 %description -n %{name}+bytemuck

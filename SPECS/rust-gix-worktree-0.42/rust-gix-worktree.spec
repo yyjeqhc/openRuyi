@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bstr-1.0) >= 1.12.1
+Requires:       crate(bstr-1) >= 1.12.1
 Requires:       crate(gix-features-0.43/default) >= 0.43.1
 Requires:       crate(gix-fs-0.16/default) >= 0.16.1
 Requires:       crate(gix-glob-0.21/default) >= 0.21.0
@@ -60,7 +60,7 @@ This metapackage enables feature "document-features" for the Rust gix-worktree c
 %package     -n %{name}+serde
 Summary:        The gitoxide project for shared worktree related types and utilities - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(bstr-1.0/serde) >= 1.12.1
+Requires:       crate(bstr-1/serde) >= 1.12.1
 Requires:       crate(gix-attributes-0.27/serde) >= 0.27.0
 Requires:       crate(gix-hash-0.19/serde) >= 0.19.0
 Requires:       crate(gix-ignore-0.16/serde) >= 0.16.0

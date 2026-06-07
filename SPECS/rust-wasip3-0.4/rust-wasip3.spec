@@ -25,7 +25,7 @@ Source code for takopackized Rust crate "wasip3"
 %package     -n %{name}+http-compat
 Summary:        WASIp3 API bindings for Rust - feature "http-compat"
 Requires:       crate(%{pkgname})
-Requires:       crate(bytes-1.0/default) >= 1.10.1
+Requires:       crate(bytes-1/default) >= 1.10.1
 Requires:       crate(http-1.0/default) >= 1.3.1
 Requires:       crate(http-body-1.0/default) >= 1.0.1
 Requires:       crate(thiserror-2.0/default) >= 2.0.17

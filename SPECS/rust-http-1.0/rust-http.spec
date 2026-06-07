@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bytes-1.0/default) >= 1.11.1
+Requires:       crate(bytes-1/default) >= 1.11.1
 Requires:       crate(itoa-1.0/default) >= 1.0.18
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

@@ -175,7 +175,7 @@ This metapackage enables feature "bigdecimal" for the Rust pyo3 crate, by pullin
 %package     -n %{name}+bytes
 Summary:        Bindings to Python interpreter - feature "bytes"
 Requires:       crate(%{pkgname})
-Requires:       crate(bytes-1.0/default) >= 1.10
+Requires:       crate(bytes-1/default) >= 1.10
 Provides:       crate(%{pkgname}/bytes)
 
 %description -n %{name}+bytes

@@ -21,11 +21,11 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitvec-1.0/alloc) >= 1.0.1
-Requires:       crate(bytemuck-1.0/default) >= 1.25.0
-Requires:       crate(bytemuck-1.0/derive) >= 1.25.0
-Requires:       crate(bytemuck-1.0/extern-crate-alloc) >= 1.25.0
-Requires:       crate(bytemuck-1.0/min-const-generics) >= 1.25.0
+Requires:       crate(bitvec-1/alloc) >= 1.0.1
+Requires:       crate(bytemuck-1/default) >= 1.25.0
+Requires:       crate(bytemuck-1/derive) >= 1.25.0
+Requires:       crate(bytemuck-1/extern-crate-alloc) >= 1.25.0
+Requires:       crate(bytemuck-1/min-const-generics) >= 1.25.0
 Requires:       crate(libm-0.2) >= 0.2.16
 Requires:       crate(num-traits-0.2/libm) >= 0.2.19
 Requires:       crate(ordered-float-5.0) >= 5.3.0

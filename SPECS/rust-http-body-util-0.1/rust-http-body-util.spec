@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bytes-1.0/default) >= 1.11.1
+Requires:       crate(bytes-1/default) >= 1.11.1
 Requires:       crate(futures-core-0.3) >= 0.3.32
 Requires:       crate(http-1.0/default) >= 1.4.0
 Requires:       crate(http-body-1.0/default) >= 1.0.1

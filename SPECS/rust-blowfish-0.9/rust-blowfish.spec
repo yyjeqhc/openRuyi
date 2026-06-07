@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(byteorder-1.0) >= 1.5.0
+Requires:       crate(byteorder-1) >= 1.5.0
 Requires:       crate(cipher-0.4/default) >= 0.4.4
 Provides:       crate(blowfish) = %{version}
 Provides:       crate(%{pkgname})

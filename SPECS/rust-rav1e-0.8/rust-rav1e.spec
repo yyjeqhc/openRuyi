@@ -27,7 +27,7 @@ Requires:       crate(arg-enum-proc-macro-0.3/default) >= 0.3.4
 Requires:       crate(arrayvec-0.7/default) >= 0.7.6
 Requires:       crate(av-scenechange-0.14) >= 0.14.1
 Requires:       crate(av1-grain-0.2/default) >= 0.2.5
-Requires:       crate(bitstream-io-4.0/default) >= 4.10.0
+Requires:       crate(bitstream-io-4/default) >= 4.10.0
 Requires:       crate(built-0.8/default) >= 0.8.0
 Requires:       crate(cfg-if-1.0/default) >= 1.0.4
 Requires:       crate(interpolate-name-0.2/default) >= 0.2.4
@@ -120,7 +120,7 @@ This metapackage enables feature "binaries" for the Rust rav1e crate, by pulling
 %package     -n %{name}+byteorder
 Summary:        Fastest and safest AV1 encoder - feature "byteorder"
 Requires:       crate(%{pkgname})
-Requires:       crate(byteorder-1.0/default) >= 1.5.0
+Requires:       crate(byteorder-1/default) >= 1.5.0
 Provides:       crate(%{pkgname}/byteorder)
 
 %description -n %{name}+byteorder

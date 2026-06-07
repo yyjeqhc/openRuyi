@@ -118,7 +118,7 @@ This metapackage enables feature "async-task" for the Rust zbus crate, by pullin
 %package     -n %{name}+blocking
 Summary:        API for D-Bus communication - feature "blocking"
 Requires:       crate(%{pkgname})
-Requires:       crate(blocking-1.0/default) >= 1.6.2
+Requires:       crate(blocking-1/default) >= 1.6.2
 Provides:       crate(%{pkgname}/blocking)
 
 %description -n %{name}+blocking

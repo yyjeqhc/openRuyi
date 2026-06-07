@@ -49,7 +49,7 @@ This metapackage enables feature "arbitrary" for the Rust half crate, by pulling
 %package     -n %{name}+bytemuck
 Summary:        Half-precision floating point f16 and bf16 types for Rust implementing the IEEE 754-2008 standard binary16 and bfloat16 types - feature "bytemuck"
 Requires:       crate(%{pkgname})
-Requires:       crate(bytemuck-1.0/derive) >= 1.4.1
+Requires:       crate(bytemuck-1/derive) >= 1.4.1
 Provides:       crate(%{pkgname}/bytemuck)
 
 %description -n %{name}+bytemuck

@@ -21,8 +21,8 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bytemuck-1.0/default) >= 1.25.0
-Requires:       crate(bytemuck-1.0/extern-crate-alloc) >= 1.25.0
+Requires:       crate(bytemuck-1/default) >= 1.25.0
+Requires:       crate(bytemuck-1/extern-crate-alloc) >= 1.25.0
 Requires:       crate(byteorder-lite-0.1/default) >= 0.1.0
 Requires:       crate(moxcms-0.8/default) >= 0.8.1
 Requires:       crate(num-traits-0.2/default) >= 0.2.19

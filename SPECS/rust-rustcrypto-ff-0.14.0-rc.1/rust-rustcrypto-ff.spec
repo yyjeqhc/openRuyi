@@ -44,7 +44,7 @@ This metapackage enables feature "bits" for the Rust rustcrypto-ff crate, by pul
 %package     -n %{name}+bitvec
 Summary:        Building and interfacing with finite fields - feature "bitvec"
 Requires:       crate(%{pkgname})
-Requires:       crate(bitvec-1.0) >= 1.0.0
+Requires:       crate(bitvec-1) >= 1.0.0
 Provides:       crate(%{pkgname}/bitvec)
 
 %description -n %{name}+bitvec
@@ -53,7 +53,7 @@ This metapackage enables feature "bitvec" for the Rust rustcrypto-ff crate, by p
 %package     -n %{name}+byteorder
 Summary:        Building and interfacing with finite fields - feature "byteorder"
 Requires:       crate(%{pkgname})
-Requires:       crate(byteorder-1.0) >= 1.0.0
+Requires:       crate(byteorder-1) >= 1.0.0
 Provides:       crate(%{pkgname}/byteorder)
 
 %description -n %{name}+byteorder

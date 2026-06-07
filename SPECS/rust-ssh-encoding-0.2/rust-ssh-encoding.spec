@@ -51,7 +51,7 @@ This metapackage enables feature "base64" for the Rust ssh-encoding crate, by pu
 Summary:        Pure Rust implementation of SSH data type decoders/encoders as described in RFC4251 - feature "bytes"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(bytes-1.0) >= 1.11.1
+Requires:       crate(bytes-1) >= 1.11.1
 Provides:       crate(%{pkgname}/bytes)
 
 %description -n %{name}+bytes

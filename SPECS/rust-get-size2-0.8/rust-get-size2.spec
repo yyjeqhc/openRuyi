@@ -29,7 +29,7 @@ Source code for takopackized Rust crate "get-size2"
 %package     -n %{name}+bytes
 Summary:        Determine the size in bytes an object occupies inside RAM - feature "bytes"
 Requires:       crate(%{pkgname})
-Requires:       crate(bytes-1.0) >= 1.0.0
+Requires:       crate(bytes-1) >= 1.0.0
 Provides:       crate(%{pkgname}/bytes)
 
 %description -n %{name}+bytes

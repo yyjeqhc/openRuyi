@@ -32,7 +32,7 @@ Source code for takopackized Rust crate "gix-utils"
 %package     -n %{name}+bstr
 Summary:        Crate with `gitoxide` utilities that don't need feature toggles - feature "bstr"
 Requires:       crate(%{pkgname})
-Requires:       crate(bstr-1.0/std) >= 1.12.1
+Requires:       crate(bstr-1/std) >= 1.12.1
 Provides:       crate(%{pkgname}/bstr)
 
 %description -n %{name}+bstr

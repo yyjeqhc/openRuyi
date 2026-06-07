@@ -21,8 +21,8 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bstr-1.0/std) >= 1.12.1
-Requires:       crate(bstr-1.0/unicode) >= 1.12.1
+Requires:       crate(bstr-1/std) >= 1.12.1
+Requires:       crate(bstr-1/unicode) >= 1.12.1
 Requires:       crate(gix-glob-0.21/default) >= 0.21.0
 Requires:       crate(gix-path-0.10/default) >= 0.10.22
 Requires:       crate(gix-trace-0.1/default) >= 0.1.18
@@ -45,9 +45,9 @@ This metapackage enables feature "document-features" for the Rust gix-ignore cra
 %package     -n %{name}+serde
 Summary:        The gitoxide project dealing .gitignore files - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(bstr-1.0/serde) >= 1.12.1
-Requires:       crate(bstr-1.0/std) >= 1.12.1
-Requires:       crate(bstr-1.0/unicode) >= 1.12.1
+Requires:       crate(bstr-1/serde) >= 1.12.1
+Requires:       crate(bstr-1/std) >= 1.12.1
+Requires:       crate(bstr-1/unicode) >= 1.12.1
 Requires:       crate(gix-glob-0.21/serde) >= 0.21.0
 Requires:       crate(serde-1/derive) >= 1.0.114
 Provides:       crate(%{pkgname}/serde)

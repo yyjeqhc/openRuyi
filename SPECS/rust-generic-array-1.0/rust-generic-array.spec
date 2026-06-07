@@ -55,7 +55,7 @@ This metapackage enables feature "as_slice" for the Rust generic-array crate, by
 Summary:        Generic types implementing functionality of arrays - feature "bitvec"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/const-default)
-Requires:       crate(bitvec-1.0) >= 1.0.0
+Requires:       crate(bitvec-1) >= 1.0.0
 Provides:       crate(%{pkgname}/bitvec)
 
 %description -n %{name}+bitvec
@@ -64,7 +64,7 @@ This metapackage enables feature "bitvec" for the Rust generic-array crate, by p
 %package     -n %{name}+bytemuck
 Summary:        Generic types implementing functionality of arrays - feature "bytemuck"
 Requires:       crate(%{pkgname})
-Requires:       crate(bytemuck-1.0) >= 1.0.0
+Requires:       crate(bytemuck-1) >= 1.0.0
 Provides:       crate(%{pkgname}/bytemuck)
 
 %description -n %{name}+bytemuck

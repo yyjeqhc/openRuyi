@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bitflags-2/default) >= 2.11.0
-Requires:       crate(bstr-1.0/std) >= 1.12.1
+Requires:       crate(bstr-1/std) >= 1.12.1
 Requires:       crate(gix-path-0.10/default) >= 0.10.22
 Requires:       crate(libc-0.2/default) >= 0.2.184
 Requires:       crate(thiserror-2.0/default) >= 2.0.18
@@ -44,8 +44,8 @@ This metapackage enables feature "document-features" for the Rust gix-config-val
 %package     -n %{name}+serde
 Summary:        The gitoxide project providing git-config value parsing - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(bstr-1.0/serde) >= 1.12.1
-Requires:       crate(bstr-1.0/std) >= 1.12.1
+Requires:       crate(bstr-1/serde) >= 1.12.1
+Requires:       crate(bstr-1/std) >= 1.12.1
 Requires:       crate(serde-1/derive) >= 1.0.114
 Provides:       crate(%{pkgname}/serde)
 

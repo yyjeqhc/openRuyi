@@ -56,7 +56,7 @@ This metapackage enables feature "borsh" for the Rust compact_str crate, by pull
 %package     -n %{name}+bytes
 Summary:        Memory efficient string type that transparently stores strings on the stack, when possible - feature "bytes"
 Requires:       crate(%{pkgname})
-Requires:       crate(bytes-1.0/default) >= 1.0.0
+Requires:       crate(bytes-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/bytes)
 
 %description -n %{name}+bytes

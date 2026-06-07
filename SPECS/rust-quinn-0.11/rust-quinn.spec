@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bytes-1.0/default) >= 1.11.0
+Requires:       crate(bytes-1/default) >= 1.11.0
 Requires:       crate(cfg-aliases-0.2/default) >= 0.2.1
 Requires:       crate(pin-project-lite-0.2/default) >= 0.2.16
 Requires:       crate(quinn-proto-0.11) >= 0.11.13

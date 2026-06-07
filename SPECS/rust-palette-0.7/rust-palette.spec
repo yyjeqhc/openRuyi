@@ -43,7 +43,7 @@ This metapackage enables feature "approx" for the Rust palette crate, by pulling
 %package     -n %{name}+bytemuck
 Summary:        Convert and manage colors with a focus on correctness, flexibility and ease of use - feature "bytemuck"
 Requires:       crate(%{pkgname})
-Requires:       crate(bytemuck-1.0/default) >= 1.25.0
+Requires:       crate(bytemuck-1/default) >= 1.25.0
 Provides:       crate(%{pkgname}/bytemuck)
 
 %description -n %{name}+bytemuck

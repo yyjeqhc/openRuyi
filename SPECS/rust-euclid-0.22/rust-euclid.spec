@@ -41,7 +41,7 @@ This metapackage enables feature "arbitrary" for the Rust euclid crate, by pulli
 %package     -n %{name}+bytemuck
 Summary:        Geometry primitives - feature "bytemuck"
 Requires:       crate(%{pkgname})
-Requires:       crate(bytemuck-1.0/default) >= 1.9
+Requires:       crate(bytemuck-1/default) >= 1.9
 Provides:       crate(%{pkgname}/bytemuck)
 
 %description -n %{name}+bytemuck

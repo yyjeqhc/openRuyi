@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(byteorder-1.0/default) >= 1.5.0
+Requires:       crate(byteorder-1/default) >= 1.5.0
 Requires:       crate(libc-0.2/default) >= 0.2.180
 Requires:       crate(winapi-0.3/default) >= 0.3.9
 Requires:       crate(winapi-0.3/winsock2) >= 0.3.9

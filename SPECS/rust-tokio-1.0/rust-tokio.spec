@@ -37,7 +37,7 @@ Source code for takopackized Rust crate "tokio"
 %package     -n %{name}+bytes
 Summary:        Event-driven, non-blocking I/O platform for writing asynchronous I/O backed applications - feature "bytes" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(bytes-1.0/default) >= 1.11.1
+Requires:       crate(bytes-1/default) >= 1.11.1
 Provides:       crate(%{pkgname}/bytes)
 Provides:       crate(%{pkgname}/io-util)
 

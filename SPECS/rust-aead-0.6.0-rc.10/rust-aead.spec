@@ -51,7 +51,7 @@ This metapackage enables feature "blobby" for the Rust aead crate, by pulling in
 %package     -n %{name}+bytes
 Summary:        Traits for Authenticated Encryption with Associated Data (AEAD) algorithms, such as AES-GCM as ChaCha20Poly1305, which provide a high-level API - feature "bytes"
 Requires:       crate(%{pkgname})
-Requires:       crate(bytes-1.0) >= 1.0.0
+Requires:       crate(bytes-1) >= 1.0.0
 Provides:       crate(%{pkgname}/bytes)
 
 %description -n %{name}+bytes

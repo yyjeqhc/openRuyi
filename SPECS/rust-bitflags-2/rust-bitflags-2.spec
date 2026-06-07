@@ -35,7 +35,7 @@ This metapackage enables feature "arbitrary" for the Rust bitflags crate, by pul
 %package     -n %{name}+bytemuck
 Summary:        Macro to generate structures which behave like bitflags - feature "bytemuck"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(bytemuck-1.0/default) >= 1.12.0
+Requires:       crate(bytemuck-1/default) >= 1.12.0
 Provides:       crate(%{pkgname}/bytemuck) = %{version}
 
 %description -n %{name}+bytemuck

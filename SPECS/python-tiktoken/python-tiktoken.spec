@@ -28,7 +28,7 @@ BuildRequires:  rust
 BuildRequires:  cargo
 BuildRequires:  crate(pyo3-0.28/extension-module)
 BuildRequires:  crate(pyo3-macros-0.28)
-BuildRequires:  crate(bstr-1.0)
+BuildRequires:  crate(bstr-1)
 BuildRequires:  crate(fancy-regex-0.13)
 BuildRequires:  crate(bit-set-0.5)
 BuildRequires:  crate(regex-1)

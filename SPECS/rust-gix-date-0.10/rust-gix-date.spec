@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bstr-1.0/std) >= 1.12.1
+Requires:       crate(bstr-1/std) >= 1.12.1
 Requires:       crate(itoa-1.0/default) >= 1.0.18
 Requires:       crate(jiff-0.2/default) >= 0.2.23
 Requires:       crate(smallvec-1.0/default) >= 1.15.1
@@ -45,8 +45,8 @@ This metapackage enables feature "document-features" for the Rust gix-date crate
 %package     -n %{name}+serde
 Summary:        The gitoxide project parsing dates the way git does - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(bstr-1.0/serde) >= 1.12.1
-Requires:       crate(bstr-1.0/std) >= 1.12.1
+Requires:       crate(bstr-1/serde) >= 1.12.1
+Requires:       crate(bstr-1/std) >= 1.12.1
 Requires:       crate(serde-1/derive) >= 1.0.114
 Provides:       crate(%{pkgname}/serde)
 

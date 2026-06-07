@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bytemuck-1.0/default) >= 1.25.0
+Requires:       crate(bytemuck-1/default) >= 1.25.0
 Requires:       crate(safe-arch-0.9/bytemuck) >= 0.9.3
 Requires:       crate(safe-arch-0.9/default) >= 0.9.3
 Provides:       crate(wide) = %{version}

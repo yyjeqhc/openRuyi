@@ -33,7 +33,7 @@ Source code for takopackized Rust crate "fraction"
 %package     -n %{name}+byteorder
 Summary:        Lossless fractions and decimals; drop-in float replacement - feature "byteorder"
 Requires:       crate(%{pkgname})
-Requires:       crate(byteorder-1.0/default) >= 1.0.0
+Requires:       crate(byteorder-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/byteorder)
 
 %description -n %{name}+byteorder
@@ -42,7 +42,7 @@ This metapackage enables feature "byteorder" for the Rust fraction crate, by pul
 %package     -n %{name}+bytes
 Summary:        Lossless fractions and decimals; drop-in float replacement - feature "bytes"
 Requires:       crate(%{pkgname})
-Requires:       crate(bytes-1.0/default) >= 1.0.0
+Requires:       crate(bytes-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/bytes)
 
 %description -n %{name}+bytes

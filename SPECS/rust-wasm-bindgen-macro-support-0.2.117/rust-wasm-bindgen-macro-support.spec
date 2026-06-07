@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bumpalo-3.0/default) >= 3.0.0
+Requires:       crate(bumpalo-3/default) >= 3.0.0
 Requires:       crate(proc-macro2-1.0/default) >= 1.0.0
 Requires:       crate(quote-1.0/default) >= 1.0.0
 Requires:       crate(syn-2.0/default) >= 2.0.0

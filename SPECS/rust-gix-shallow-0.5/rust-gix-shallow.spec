@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bstr-1.0) >= 1.12.1
+Requires:       crate(bstr-1) >= 1.12.1
 Requires:       crate(gix-hash-0.19/default) >= 0.19.0
 Requires:       crate(gix-lock-18.0/default) >= 18.0.0
 Requires:       crate(thiserror-2.0/default) >= 2.0.18

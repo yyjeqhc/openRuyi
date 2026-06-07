@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitmaps-2.0/default) >= 2.1.0
+Requires:       crate(bitmaps-2/default) >= 2.1.0
 Requires:       crate(typenum-1.0/default) >= 1.19.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

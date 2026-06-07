@@ -58,7 +58,7 @@ This metapackage enables feature "arbitrary" for the Rust der crate, by pulling 
 Summary:        Pure Rust embedded-friendly implementation of the Distinguished Encoding Rules (DER) for Abstract Syntax Notation One (ASN.1) as described in ITU X.690 with full support for heapless `no_std`/`no_alloc` targets - feature "bytes"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(bytes-1.0) >= 1.0.0
+Requires:       crate(bytes-1) >= 1.0.0
 Provides:       crate(%{pkgname}/bytes)
 
 %description -n %{name}+bytes

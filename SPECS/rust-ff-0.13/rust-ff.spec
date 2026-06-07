@@ -33,7 +33,7 @@ Source code for takopackized Rust crate "ff"
 %package     -n %{name}+bitvec
 Summary:        Building and interfacing with finite fields - feature "bitvec" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(bitvec-1.0) >= 1.0.0
+Requires:       crate(bitvec-1) >= 1.0.0
 Provides:       crate(%{pkgname}/bits)
 Provides:       crate(%{pkgname}/bitvec)
 
@@ -45,7 +45,7 @@ Additionally, this package also provides the "bits" feature.
 %package     -n %{name}+byteorder
 Summary:        Building and interfacing with finite fields - feature "byteorder"
 Requires:       crate(%{pkgname})
-Requires:       crate(byteorder-1.0) >= 1.0.0
+Requires:       crate(byteorder-1) >= 1.0.0
 Provides:       crate(%{pkgname}/byteorder)
 
 %description -n %{name}+byteorder

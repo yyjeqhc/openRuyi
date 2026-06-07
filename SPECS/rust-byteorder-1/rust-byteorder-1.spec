@@ -1,8 +1,8 @@
 %global crate_name byteorder
 %global full_version 1.5.0
-%global pkgname byteorder-1.0
+%global pkgname byteorder-1
 
-Name:           rust-byteorder-1.0
+Name:           rust-byteorder-1
 Version:        1.5.0
 Release:        %autorelease
 Summary:        Rust crate "byteorder"
@@ -15,10 +15,10 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/i128)
-Provides:       crate(%{pkgname}/std)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/i128) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
 
 %description
 Source code for takopackized Rust crate "byteorder"
