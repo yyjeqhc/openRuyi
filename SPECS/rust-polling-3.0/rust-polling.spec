@@ -15,7 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(cfg-if-1.0/default) >= 1.0.4
+Requires:       crate(cfg-if-1/default) >= 1.0.4
 Requires:       crate(concurrent-queue-2.0/default) >= 2.5.0
 Requires:       crate(hermit-abi-0.5/default) >= 0.5.2
 Requires:       crate(pin-project-lite-0.2/default) >= 0.2.17

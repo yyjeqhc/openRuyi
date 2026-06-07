@@ -15,7 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(colored-2.0/default) >= 2.0.0
+Requires:       crate(colored-2/default) >= 2.0.0
 Requires:       crate(libc-0.2/default) >= 0.2.0
 Requires:       crate(serde-1/default) >= 1.0.217
 Requires:       crate(serde-1/derive) >= 1.0.217

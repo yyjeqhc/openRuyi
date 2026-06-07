@@ -45,7 +45,7 @@ Additionally, this package also provides the "date-based" feature.
 %package     -n %{name}+colored
 Summary:        Simple, efficient logging - feature "colored"
 Requires:       crate(%{pkgname})
-Requires:       crate(colored-2.0/default) >= 2.1.0
+Requires:       crate(colored-2/default) >= 2.1.0
 Provides:       crate(%{pkgname}/colored)
 
 %description -n %{name}+colored

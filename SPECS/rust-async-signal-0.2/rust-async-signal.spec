@@ -18,7 +18,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(async-io-2/default) >= 2.6.0
 Requires:       crate(async-lock-3.0/default) >= 3.4.2
 Requires:       crate(atomic-waker-1/default) >= 1.1.2
-Requires:       crate(cfg-if-1.0/default) >= 1.0.4
+Requires:       crate(cfg-if-1/default) >= 1.0.4
 Requires:       crate(futures-core-0.3/default) >= 0.3.32
 Requires:       crate(futures-io-0.3/default) >= 0.3.32
 Requires:       crate(rustix-1.0/process) >= 1.1.4

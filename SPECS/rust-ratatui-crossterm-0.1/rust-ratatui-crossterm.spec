@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(cfg-if-1.0/default) >= 1.0.4
+Requires:       crate(cfg-if-1/default) >= 1.0.4
 Requires:       crate(instability-0.3/default) >= 0.3.12
 Requires:       crate(ratatui-core-0.1/default) >= 0.1.0
 Provides:       crate(ratatui-crossterm) = %{version}

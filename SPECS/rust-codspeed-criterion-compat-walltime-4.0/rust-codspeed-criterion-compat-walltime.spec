@@ -88,7 +88,7 @@ This metapackage enables feature "async_tokio" for the Rust codspeed-criterion-c
 %package     -n %{name}+csv
 Summary:        Statistics-driven micro-benchmarking library - feature "csv" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(csv-1.0/default) >= 1.1
+Requires:       crate(csv-1/default) >= 1.1
 Provides:       crate(%{pkgname}/csv)
 Provides:       crate(%{pkgname}/csv-output)
 

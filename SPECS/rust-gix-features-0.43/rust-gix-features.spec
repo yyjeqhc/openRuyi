@@ -33,7 +33,7 @@ Source code for takopackized Rust crate "gix-features"
 %package     -n %{name}+crc32
 Summary:        Integrate various capabilities using compile-time feature flags - feature "crc32"
 Requires:       crate(%{pkgname})
-Requires:       crate(crc32fast-1.0/default) >= 1.5.0
+Requires:       crate(crc32fast-1/default) >= 1.5.0
 Provides:       crate(%{pkgname}/crc32)
 
 %description -n %{name}+crc32

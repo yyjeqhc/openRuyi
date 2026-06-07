@@ -135,7 +135,7 @@ This metapackage enables feature "column_metadata" for the Rust rusqlite crate, 
 %package     -n %{name}+csv
 Summary:        Ergonomic wrapper for SQLite - feature "csv"
 Requires:       crate(%{pkgname})
-Requires:       crate(csv-1.0/default) >= 1.1
+Requires:       crate(csv-1/default) >= 1.1
 Provides:       crate(%{pkgname}/csv)
 
 %description -n %{name}+csv

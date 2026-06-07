@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(cfg-if-1.0/default) >= 1.0.4
+Requires:       crate(cfg-if-1/default) >= 1.0.4
 Requires:       crate(cipher-0.5/default) >= 0.5.1
 Requires:       crate(cipher-0.5/stream-wrapper) >= 0.5.1
 Provides:       crate(salsa20) = %{version}

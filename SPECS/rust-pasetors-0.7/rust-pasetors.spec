@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(ct-codecs-1.0) >= 1.1.6
+Requires:       crate(ct-codecs-1) >= 1.1.6
 Requires:       crate(getrandom-0.4/default) >= 0.4.2
 Requires:       crate(subtle-2.0) >= 2.6.1
 Requires:       crate(zeroize-1.0) >= 1.8.2

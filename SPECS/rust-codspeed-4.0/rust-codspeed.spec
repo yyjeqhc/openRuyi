@@ -22,7 +22,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(anyhow-1/default) >= 1.0.102
 Requires:       crate(cc-1/default) >= 1.2.38
-Requires:       crate(colored-2.0/default) >= 2.2.0
+Requires:       crate(colored-2/default) >= 2.2.0
 Requires:       crate(getrandom-0.2/default) >= 0.2.16
 Requires:       crate(glob-0.3/default) >= 0.3.3
 Requires:       crate(libc-0.2/default) >= 0.2.186

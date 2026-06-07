@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(cfg-if-1.0/default) >= 1.0.4
+Requires:       crate(cfg-if-1/default) >= 1.0.4
 Requires:       crate(once-cell-1.0) >= 1.21.4
 Requires:       crate(wasm-bindgen-0.2.120) >= 0.2.120
 Provides:       crate(js-sys) = %{version}

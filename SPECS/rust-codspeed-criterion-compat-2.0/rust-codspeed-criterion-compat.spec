@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(codspeed-2/default) >= 2.10.1
 Requires:       crate(codspeed-criterion-compat-walltime-2.0) >= 2.10.1
-Requires:       crate(colored-2.0/default) >= 2.2.0
+Requires:       crate(colored-2/default) >= 2.2.0
 Provides:       crate(%{pkgname})
 
 %description

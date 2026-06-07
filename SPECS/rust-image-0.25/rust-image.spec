@@ -65,7 +65,7 @@ This metapackage enables feature "avif-native" for the Rust image crate, by pull
 %package     -n %{name}+color-quant
 Summary:        Imaging library - feature "color_quant"
 Requires:       crate(%{pkgname})
-Requires:       crate(color-quant-1.0/default) >= 1.1.0
+Requires:       crate(color-quant-1/default) >= 1.1.0
 Provides:       crate(%{pkgname}/color-quant)
 
 %description -n %{name}+color-quant
@@ -120,7 +120,7 @@ This metapackage enables feature "exr" for the Rust image crate, by pulling in a
 %package     -n %{name}+gif
 Summary:        Imaging library - feature "gif"
 Requires:       crate(%{pkgname})
-Requires:       crate(color-quant-1.0/default) >= 1.1.0
+Requires:       crate(color-quant-1/default) >= 1.1.0
 Requires:       crate(gif-0.14/default) >= 0.14.2
 Provides:       crate(%{pkgname}/gif)
 

@@ -88,7 +88,7 @@ This metapackage enables feature "async_tokio" for the Rust criterion crate, by 
 %package     -n %{name}+csv-output
 Summary:        Statistics-driven micro-benchmarking library - feature "csv_output"
 Requires:       crate(%{pkgname})
-Requires:       crate(csv-1.0/default) >= 1.1
+Requires:       crate(csv-1/default) >= 1.1
 Provides:       crate(%{pkgname}/csv-output)
 
 %description -n %{name}+csv-output

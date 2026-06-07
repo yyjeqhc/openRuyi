@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(cfg-if-1.0/default) >= 1.0.4
+Requires:       crate(cfg-if-1/default) >= 1.0.4
 Requires:       crate(cpufeatures-0.3/default) >= 0.3.0
 Provides:       crate(keccak) = %{version}
 Provides:       crate(%{pkgname})

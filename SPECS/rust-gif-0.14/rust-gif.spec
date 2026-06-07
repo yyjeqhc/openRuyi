@@ -33,7 +33,7 @@ Source code for takopackized Rust crate "gif"
 %package     -n %{name}+color-quant
 Summary:        GIF de- and encoder - feature "color_quant"
 Requires:       crate(%{pkgname})
-Requires:       crate(color-quant-1.0/default) >= 1.1.0
+Requires:       crate(color-quant-1/default) >= 1.1.0
 Provides:       crate(%{pkgname}/color-quant)
 
 %description -n %{name}+color-quant

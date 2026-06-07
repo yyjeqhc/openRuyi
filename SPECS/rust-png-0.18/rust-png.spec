@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bitflags-2/default) >= 2.11.1
-Requires:       crate(crc32fast-1.0/default) >= 1.5.0
+Requires:       crate(crc32fast-1/default) >= 1.5.0
 Requires:       crate(fdeflate-0.3/default) >= 0.3.7
 Requires:       crate(flate2-1.0/default) >= 1.1.9
 Requires:       crate(miniz-oxide-0.8/default) >= 0.8.9
@@ -38,7 +38,7 @@ Source code for takopackized Rust crate "png"
 %package     -n %{name}+unstable
 Summary:        PNG decoding and encoding library in pure Rust - feature "unstable"
 Requires:       crate(%{pkgname})
-Requires:       crate(crc32fast-1.0/nightly) >= 1.5.0
+Requires:       crate(crc32fast-1/nightly) >= 1.5.0
 Provides:       crate(%{pkgname}/unstable)
 
 %description -n %{name}+unstable

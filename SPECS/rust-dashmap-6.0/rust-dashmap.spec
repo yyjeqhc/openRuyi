@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(cfg-if-1.0/default) >= 1.0.4
+Requires:       crate(cfg-if-1/default) >= 1.0.4
 Requires:       crate(crossbeam-utils-0.8/default) >= 0.8.21
 Requires:       crate(hashbrown-0.14/raw) >= 0.14.5
 Requires:       crate(lock-api-0.4/default) >= 0.4.14

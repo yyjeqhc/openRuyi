@@ -100,7 +100,7 @@ This metapackage enables feature "write" for the Rust object crate, by pulling i
 %package     -n %{name}+write-core
 Summary:        Unified interface for reading and writing object file formats - feature "write_core"
 Requires:       crate(%{pkgname})
-Requires:       crate(crc32fast-1.0) >= 1.2
+Requires:       crate(crc32fast-1) >= 1.2
 Requires:       crate(hashbrown-0.15/default-hasher) >= 0.15.0
 Requires:       crate(indexmap-2.0) >= 2.0.0
 Provides:       crate(%{pkgname}/write-core)
@@ -113,7 +113,7 @@ Summary:        Unified interface for reading and writing object file formats - 
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/std)
 Requires:       crate(%{pkgname}/write-core)
-Requires:       crate(crc32fast-1.0/std) >= 1.2
+Requires:       crate(crc32fast-1/std) >= 1.2
 Requires:       crate(indexmap-2.0/std) >= 2.0.0
 Provides:       crate(%{pkgname}/write-std)
 

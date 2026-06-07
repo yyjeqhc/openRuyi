@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(addr2line-0.25) >= 0.25.1
-Requires:       crate(cfg-if-1.0/default) >= 1.0.4
+Requires:       crate(cfg-if-1/default) >= 1.0.4
 Requires:       crate(libc-0.2) >= 0.2.186
 Requires:       crate(miniz-oxide-0.8) >= 0.8.9
 Requires:       crate(object-0.37/archive) >= 0.37.3

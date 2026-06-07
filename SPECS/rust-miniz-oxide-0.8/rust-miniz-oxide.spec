@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(adler2-2.0) >= 2.0.1
+Requires:       crate(adler2-2) >= 2.0.1
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/block-boundary)
 Provides:       crate(%{pkgname}/default)
@@ -54,7 +54,7 @@ Summary:        DEFLATE compression and decompression library rewritten in Rust 
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(%{pkgname}/core)
-Requires:       crate(adler2-2.0/rustc-dep-of-std) >= 2.0.1
+Requires:       crate(adler2-2/rustc-dep-of-std) >= 2.0.1
 Provides:       crate(%{pkgname}/rustc-dep-of-std)
 
 %description -n %{name}+rustc-dep-of-std

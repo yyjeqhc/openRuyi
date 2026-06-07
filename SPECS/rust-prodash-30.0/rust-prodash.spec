@@ -59,7 +59,7 @@ This metapackage enables feature "crosstermion" for the Rust prodash crate, by p
 %package     -n %{name}+ctrlc
 Summary:        Dashboard for visualizing progress of asynchronous and possibly blocking tasks - feature "ctrlc"
 Requires:       crate(%{pkgname})
-Requires:       crate(ctrlc-3.0/termination) >= 3.1.4
+Requires:       crate(ctrlc-3/termination) >= 3.1.4
 Provides:       crate(%{pkgname}/ctrlc)
 
 %description -n %{name}+ctrlc

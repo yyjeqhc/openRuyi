@@ -16,7 +16,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bitfield-struct-0.10/default) >= 0.10.1
-Requires:       crate(crc32fast-1.0) >= 1.5.0
+Requires:       crate(crc32fast-1) >= 1.5.0
 Requires:       crate(hex-0.4/alloc) >= 0.4.3
 Requires:       crate(igvm-defs-0.4/default) >= 0.4.0
 Requires:       crate(igvm-defs-0.4/unstable) >= 0.4.0

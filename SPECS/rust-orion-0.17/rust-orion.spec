@@ -33,7 +33,7 @@ Source code for takopackized Rust crate "orion"
 %package     -n %{name}+ct-codecs
 Summary:        Usable, easy and safe pure-Rust crypto - feature "ct-codecs"
 Requires:       crate(%{pkgname})
-Requires:       crate(ct-codecs-1.0/default) >= 1.1.1
+Requires:       crate(ct-codecs-1/default) >= 1.1.1
 Provides:       crate(%{pkgname}/ct-codecs)
 
 %description -n %{name}+ct-codecs

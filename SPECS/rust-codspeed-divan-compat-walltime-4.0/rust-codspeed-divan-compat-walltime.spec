@@ -20,11 +20,11 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(cfg-if-1.0/default) >= 1.0.3
+Requires:       crate(cfg-if-1/default) >= 1.0.3
 Requires:       crate(clap-4/env) >= 4.6.1
 Requires:       crate(clap-4/std) >= 4.6.1
 Requires:       crate(codspeed-4.0/default) >= 4.4.1
-Requires:       crate(condtype-1.0/default) >= 1.3.0
+Requires:       crate(condtype-1/default) >= 1.3.0
 Requires:       crate(divan-macros-0.1/default) >= 0.1.17
 Requires:       crate(libc-0.2/default) >= 0.2.186
 Requires:       crate(regex-lite-0.1/std) >= 0.1.7

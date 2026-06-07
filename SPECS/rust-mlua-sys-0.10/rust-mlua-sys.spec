@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(cc-1/default) >= 1.2.62
-Requires:       crate(cfg-if-1.0/default) >= 1.0.4
+Requires:       crate(cfg-if-1/default) >= 1.0.4
 Requires:       crate(libc-0.2/default) >= 0.2.186
 Requires:       crate(pkg-config-0.3/default) >= 0.3.33
 Provides:       crate(mlua-sys) = %{version}

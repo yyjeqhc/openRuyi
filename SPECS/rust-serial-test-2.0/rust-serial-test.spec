@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(dashmap-5.0/default) >= 5.5.3
+Requires:       crate(dashmap-5/default) >= 5.5.3
 Requires:       crate(lazy-static-1.0/default) >= 1.5.0
 Requires:       crate(parking-lot-0.12/default) >= 0.12.5
 Requires:       crate(serial-test-derive-2.0/default) >= 2.0.0
