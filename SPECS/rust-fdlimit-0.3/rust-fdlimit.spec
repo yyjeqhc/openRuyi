@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(libc-0.2/default) >= 0.2.186
-Requires:       crate(thiserror-1.0/default) >= 1.0.69
+Requires:       crate(thiserror-1/default) >= 1.0.69
 Provides:       crate(fdlimit) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

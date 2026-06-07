@@ -17,7 +17,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(enumflags2-0.7/default) >= 0.7.12
 Requires:       crate(libc-0.2/default) >= 0.2.186
-Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Requires:       crate(thiserror-2/default) >= 2.0.18
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

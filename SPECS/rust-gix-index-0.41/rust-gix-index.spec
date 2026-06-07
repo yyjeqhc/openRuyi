@@ -42,7 +42,7 @@ Requires:       crate(memmap2-0.9/default) >= 0.9.10
 Requires:       crate(rustix-1.0/fs) >= 1.1.4
 Requires:       crate(rustix-1.0/std) >= 1.1.4
 Requires:       crate(smallvec-1.0/default) >= 1.15.1
-Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Requires:       crate(thiserror-2/default) >= 2.0.18
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

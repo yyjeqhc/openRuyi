@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(crossbeam-channel-0.5/default) >= 0.5.15
 Requires:       crate(symlink-0.1/default) >= 0.1.0
-Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Requires:       crate(thiserror-2/default) >= 2.0.18
 Requires:       crate(time-0.3/formatting) >= 0.3.47
 Requires:       crate(time-0.3/parsing) >= 0.3.47
 Requires:       crate(tracing-subscriber-0.3/fmt) >= 0.3.23

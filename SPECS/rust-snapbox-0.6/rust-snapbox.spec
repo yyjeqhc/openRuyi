@@ -100,8 +100,8 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/detect-encoding)
 Requires:       crate(dunce-1/default) >= 1.0.5
 Requires:       crate(filetime-0.2/default) >= 0.2.27
-Requires:       crate(tempfile-3.0/default) >= 3.27.0
-Requires:       crate(walkdir-2.0/default) >= 2.5.0
+Requires:       crate(tempfile-3/default) >= 3.27.0
+Requires:       crate(walkdir-2/default) >= 2.5.0
 Provides:       crate(%{pkgname}/dir)
 Provides:       crate(%{pkgname}/path)
 

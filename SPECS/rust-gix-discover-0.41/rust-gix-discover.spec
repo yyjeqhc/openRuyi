@@ -29,7 +29,7 @@ Requires:       crate(gix-hash-0.19/default) >= 0.19.0
 Requires:       crate(gix-path-0.10/default) >= 0.10.22
 Requires:       crate(gix-ref-0.53/default) >= 0.53.1
 Requires:       crate(gix-sec-0.12/default) >= 0.12.2
-Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Requires:       crate(thiserror-2/default) >= 2.0.18
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

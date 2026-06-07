@@ -20,7 +20,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(tempfile-3.0/default) >= 3.27.0
+Requires:       crate(tempfile-3/default) >= 3.27.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

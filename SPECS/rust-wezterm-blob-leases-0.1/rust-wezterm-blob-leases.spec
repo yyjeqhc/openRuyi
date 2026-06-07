@@ -24,7 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(getrandom-0.3/default) >= 0.3.4
 Requires:       crate(mac-address-1/default) >= 1.1.8
 Requires:       crate(sha2-0.10/default) >= 0.10.9
-Requires:       crate(thiserror-1.0/default) >= 1.0.69
+Requires:       crate(thiserror-1/default) >= 1.0.69
 Requires:       crate(uuid-1.0/default) >= 1.23.1
 Requires:       crate(uuid-1.0/rng) >= 1.23.1
 Requires:       crate(uuid-1.0/v1) >= 1.23.1
@@ -51,7 +51,7 @@ This metapackage enables feature "serde" for the Rust wezterm-blob-leases crate,
 %package     -n %{name}+simple-tempdir
 Summary:        Manage image blob caching/leasing for wezterm - feature "simple_tempdir"
 Requires:       crate(%{pkgname})
-Requires:       crate(tempfile-3.0/default) >= 3.16
+Requires:       crate(tempfile-3/default) >= 3.16
 Provides:       crate(%{pkgname}/simple-tempdir)
 
 %description -n %{name}+simple-tempdir

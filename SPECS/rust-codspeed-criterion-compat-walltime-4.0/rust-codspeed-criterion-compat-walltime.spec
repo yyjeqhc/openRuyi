@@ -35,8 +35,8 @@ Requires:       crate(regex-1/std) >= 1.12.3
 Requires:       crate(serde-1/default) >= 1.0.228
 Requires:       crate(serde-derive-1/default) >= 1.0.228
 Requires:       crate(serde-json-1/default) >= 1.0.149
-Requires:       crate(tinytemplate-1.0/default) >= 1.2.1
-Requires:       crate(walkdir-2.0/default) >= 2.5.0
+Requires:       crate(tinytemplate-1/default) >= 1.2.1
+Requires:       crate(walkdir-2/default) >= 2.5.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/cargo-bench-support)
 Provides:       crate(%{pkgname}/html-reports)
@@ -166,7 +166,7 @@ This metapackage enables feature "stable" for the Rust codspeed-criterion-compat
 %package     -n %{name}+tokio
 Summary:        Statistics-driven micro-benchmarking library - feature "tokio"
 Requires:       crate(%{pkgname})
-Requires:       crate(tokio-1.0/rt) >= 1.0.0
+Requires:       crate(tokio-1/rt) >= 1.0.0
 Provides:       crate(%{pkgname}/tokio)
 
 %description -n %{name}+tokio

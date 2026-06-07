@@ -113,7 +113,7 @@ This metapackage enables feature "utf16_iter" for the Rust icu_normalizer crate,
 %package     -n %{name}+utf8-iter
 Summary:        API for normalizing text into Unicode Normalization Forms - feature "utf8_iter"
 Requires:       crate(%{pkgname})
-Requires:       crate(utf8-iter-1.0) >= 1.0.2
+Requires:       crate(utf8-iter-1) >= 1.0.2
 Provides:       crate(%{pkgname}/utf8-iter)
 
 %description -n %{name}+utf8-iter

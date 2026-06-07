@@ -37,7 +37,7 @@ This metapackage enables feature "serde" for the Rust notify-types crate, by pul
 %package     -n %{name}+web-time
 Summary:        Types used by the notify crate - feature "web-time"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(web-time-1.0/default) >= 1.1.0
+Requires:       crate(web-time-1/default) >= 1.1.0
 Provides:       crate(%{pkgname}/web-time) = %{version}
 
 %description -n %{name}+web-time

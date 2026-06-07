@@ -16,7 +16,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(diff-0.1/default) >= 0.1.12
-Requires:       crate(yansi-1.0/default) >= 1.0.1
+Requires:       crate(yansi-1/default) >= 1.0.1
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/alloc) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}

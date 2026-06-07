@@ -45,14 +45,14 @@ Requires:       crate(serde-json-1/default) >= 1.0.149
 Requires:       crate(serde-urlencoded-0.7/default) >= 0.7.1
 Requires:       crate(sync-wrapper-1/default) >= 1.0.2
 Requires:       crate(sync-wrapper-1/futures) >= 1.0.2
-Requires:       crate(tokio-1.0/net) >= 1.50.0
-Requires:       crate(tokio-1.0/time) >= 1.50.0
+Requires:       crate(tokio-1/net) >= 1.50.0
+Requires:       crate(tokio-1/time) >= 1.50.0
 Requires:       crate(tower-0.5/retry) >= 0.5.3
 Requires:       crate(tower-0.5/timeout) >= 0.5.3
 Requires:       crate(tower-0.5/util) >= 0.5.3
 Requires:       crate(tower-http-0.6/follow-redirect) >= 0.6.8
 Requires:       crate(tower-service-0.3/default) >= 0.3.3
-Requires:       crate(url-2.0/default) >= 2.5.8
+Requires:       crate(url-2/default) >= 2.5.8
 Requires:       crate(wasm-bindgen-0.2/default) >= 0.2.117
 Requires:       crate(wasm-bindgen-futures-0.4/default) >= 0.4.67
 Requires:       crate(web-sys-0.3/abortcontroller) >= 0.3.94
@@ -121,9 +121,9 @@ Summary:        Higher level HTTP client library - feature "__tls"
 Requires:       crate(%{pkgname})
 Requires:       crate(rustls-pki-types-1/default) >= 1.9.0
 Requires:       crate(rustls-pki-types-1/std) >= 1.9.0
-Requires:       crate(tokio-1.0/io-util) >= 1.50.0
-Requires:       crate(tokio-1.0/net) >= 1.50.0
-Requires:       crate(tokio-1.0/time) >= 1.50.0
+Requires:       crate(tokio-1/io-util) >= 1.50.0
+Requires:       crate(tokio-1/net) >= 1.50.0
+Requires:       crate(tokio-1/time) >= 1.50.0
 Provides:       crate(%{pkgname}/tls)
 
 %description -n %{name}+tls
@@ -137,9 +137,9 @@ Requires:       crate(futures-channel-0.3/sink) >= 0.3.32
 Requires:       crate(futures-util-0.3) >= 0.3.32
 Requires:       crate(futures-util-0.3/io) >= 0.3.32
 Requires:       crate(futures-util-0.3/sink) >= 0.3.32
-Requires:       crate(tokio-1.0/net) >= 1.50.0
-Requires:       crate(tokio-1.0/sync) >= 1.50.0
-Requires:       crate(tokio-1.0/time) >= 1.50.0
+Requires:       crate(tokio-1/net) >= 1.50.0
+Requires:       crate(tokio-1/sync) >= 1.50.0
+Requires:       crate(tokio-1/time) >= 1.50.0
 Provides:       crate(%{pkgname}/blocking)
 
 %description -n %{name}+blocking
@@ -271,9 +271,9 @@ Requires:       crate(h3-0.0.8/default) >= 0.0.8
 Requires:       crate(h3-quinn-0.0.10/default) >= 0.0.10
 Requires:       crate(quinn-0.11/runtime-tokio) >= 0.11.1
 Requires:       crate(quinn-0.11/rustls) >= 0.11.1
-Requires:       crate(tokio-1.0/macros) >= 1.50.0
-Requires:       crate(tokio-1.0/net) >= 1.50.0
-Requires:       crate(tokio-1.0/time) >= 1.50.0
+Requires:       crate(tokio-1/macros) >= 1.50.0
+Requires:       crate(tokio-1/net) >= 1.50.0
+Requires:       crate(tokio-1/time) >= 1.50.0
 Provides:       crate(%{pkgname}/http3)
 
 %description -n %{name}+http3
@@ -372,7 +372,7 @@ Requires:       crate(%{pkgname}/rustls)
 Requires:       crate(hyper-rustls-0.27/http1) >= 0.27.7
 Requires:       crate(hyper-rustls-0.27/tls12) >= 0.27.7
 Requires:       crate(hyper-rustls-0.27/webpki-tokio) >= 0.27.7
-Requires:       crate(webpki-roots-1.0/default) >= 1.0.0
+Requires:       crate(webpki-roots-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/rustls-tls-webpki-roots-no-provider)
 
 %description -n %{name}+rustls-tls-webpki-roots-no-provider
@@ -382,9 +382,9 @@ This metapackage enables feature "rustls-tls-webpki-roots-no-provider" for the R
 Summary:        Higher level HTTP client library - feature "stream"
 Requires:       crate(%{pkgname})
 Requires:       crate(futures-util-0.3) >= 0.3.32
-Requires:       crate(tokio-1.0/fs) >= 1.50.0
-Requires:       crate(tokio-1.0/net) >= 1.50.0
-Requires:       crate(tokio-1.0/time) >= 1.50.0
+Requires:       crate(tokio-1/fs) >= 1.50.0
+Requires:       crate(tokio-1/net) >= 1.50.0
+Requires:       crate(tokio-1/time) >= 1.50.0
 Requires:       crate(tokio-util-0.7/io) >= 0.7.9
 Requires:       crate(wasm-streams-0.4/default) >= 0.4.0
 Provides:       crate(%{pkgname}/stream)

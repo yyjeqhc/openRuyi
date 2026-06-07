@@ -45,7 +45,7 @@ Requires:       crate(profiling-1.0/default) >= 1.0.18
 Requires:       crate(rand-0.9/default) >= 0.9.4
 Requires:       crate(rand-chacha-0.9/default) >= 0.9.0
 Requires:       crate(simd-helpers-0.1/default) >= 0.1.0
-Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Requires:       crate(thiserror-2/default) >= 2.0.18
 Requires:       crate(v-frame-0.3/default) >= 0.3.9
 Provides:       crate(rav1e) = %{version}
 Provides:       crate(%{pkgname})

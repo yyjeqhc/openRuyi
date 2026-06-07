@@ -25,7 +25,7 @@ Requires:       crate(faster-hex-0.10/std) >= 0.10.0
 Requires:       crate(gix-features-0.43/default) >= 0.43.1
 Requires:       crate(gix-features-0.43/progress) >= 0.43.1
 Requires:       crate(sha1-checked-0.10) >= 0.10.0
-Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Requires:       crate(thiserror-2/default) >= 2.0.18
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

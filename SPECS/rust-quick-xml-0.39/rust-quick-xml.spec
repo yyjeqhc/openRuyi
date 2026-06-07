@@ -86,7 +86,7 @@ This metapackage enables feature "serde-types" for the Rust quick-xml crate, by 
 %package     -n %{name}+tokio
 Summary:        High performance xml reader and writer - feature "tokio" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(tokio-1.0/io-util) >= 1.10
+Requires:       crate(tokio-1/io-util) >= 1.10
 Provides:       crate(%{pkgname}/async-tokio)
 Provides:       crate(%{pkgname}/tokio)
 

@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(serde-1) >= 1.0.228
 Requires:       crate(serde-core-1) >= 1.0.228
-Requires:       crate(typeid-1.0/default) >= 1.0.3
+Requires:       crate(typeid-1/default) >= 1.0.3
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/unstable-debug)
 

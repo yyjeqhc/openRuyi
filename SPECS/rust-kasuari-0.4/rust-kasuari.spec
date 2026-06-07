@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(hashbrown-0.16/default) >= 0.16.1
-Requires:       crate(thiserror-2.0) >= 2.0.18
+Requires:       crate(thiserror-2) >= 2.0.18
 Provides:       crate(kasuari) = %{version}
 Provides:       crate(%{pkgname})
 
@@ -57,7 +57,7 @@ Summary:        Rust layout solver for GUIs, based on the Cassowary algorithm - 
 Requires:       crate(%{pkgname})
 Requires:       crate(portable-atomic-1.0/require-cas) >= 1.13.1
 Requires:       crate(portable-atomic-1.0/std) >= 1.13.1
-Requires:       crate(thiserror-2.0/std) >= 2.0.18
+Requires:       crate(thiserror-2/std) >= 2.0.18
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
 

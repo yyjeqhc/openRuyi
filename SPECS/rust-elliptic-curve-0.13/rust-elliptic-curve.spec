@@ -56,7 +56,7 @@ Summary:        General purpose Elliptic Curve Cryptography (ECC) support, inclu
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/arithmetic)
 Requires:       crate(ff-0.13/bits) >= 0.13.1
-Requires:       crate(tap-1.0) >= 1.0.1
+Requires:       crate(tap-1) >= 1.0.1
 Provides:       crate(%{pkgname}/bits)
 
 %description -n %{name}+bits

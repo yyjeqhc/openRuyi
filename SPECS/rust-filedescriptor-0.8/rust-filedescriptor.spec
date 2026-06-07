@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(libc-0.2/default) >= 0.2.186
-Requires:       crate(thiserror-1.0/default) >= 1.0.69
+Requires:       crate(thiserror-1/default) >= 1.0.69
 Requires:       crate(winapi-0.3/default) >= 0.3.9
 Requires:       crate(winapi-0.3/fileapi) >= 0.3.9
 Requires:       crate(winapi-0.3/handleapi) >= 0.3.9

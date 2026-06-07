@@ -16,7 +16,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(iommufd-bindings-0.1/default) >= 0.1.0
-Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Requires:       crate(thiserror-2/default) >= 2.0.18
 Requires:       crate(vmm-sys-util-0.15/default) >= 0.15.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

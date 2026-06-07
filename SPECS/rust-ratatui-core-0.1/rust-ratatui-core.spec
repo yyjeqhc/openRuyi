@@ -29,9 +29,9 @@ Requires:       crate(itertools-0.14/use-alloc) >= 0.14.0
 Requires:       crate(kasuari-0.4) >= 0.4.12
 Requires:       crate(lru-0.16/default) >= 0.16.4
 Requires:       crate(strum-0.27/derive) >= 0.27.2
-Requires:       crate(thiserror-2.0) >= 2.0.18
-Requires:       crate(unicode-segmentation-1.0/default) >= 1.13.2
-Requires:       crate(unicode-truncate-2.0) >= 2.0.1
+Requires:       crate(thiserror-2) >= 2.0.18
+Requires:       crate(unicode-segmentation-1/default) >= 1.13.2
+Requires:       crate(unicode-truncate-2) >= 2.0.1
 Requires:       crate(unicode-width-0.2/default) >= 0.2.2
 Provides:       crate(ratatui-core) = %{version}
 Provides:       crate(%{pkgname})
@@ -107,8 +107,8 @@ Requires:       crate(itertools-0.14/use-std) >= 0.14.0
 Requires:       crate(kasuari-0.4/std) >= 0.4.12
 Requires:       crate(strum-0.27/derive) >= 0.27.2
 Requires:       crate(strum-0.27/std) >= 0.27.2
-Requires:       crate(thiserror-2.0/std) >= 2.0.18
-Requires:       crate(unicode-truncate-2.0/std) >= 2.0.1
+Requires:       crate(thiserror-2/std) >= 2.0.18
+Requires:       crate(unicode-truncate-2/std) >= 2.0.1
 Provides:       crate(%{pkgname}/layout-cache)
 Provides:       crate(%{pkgname}/std)
 

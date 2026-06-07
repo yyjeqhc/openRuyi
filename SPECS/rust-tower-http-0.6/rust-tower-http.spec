@@ -251,8 +251,8 @@ Requires:       crate(futures-util-0.3/alloc) >= 0.3.32
 Requires:       crate(http-body-1/default) >= 1.0.1
 Requires:       crate(http-body-util-0.1/default) >= 0.1.0
 Requires:       crate(http-range-header-0.4/default) >= 0.4.0
-Requires:       crate(tokio-1.0/fs) >= 1.6
-Requires:       crate(tokio-1.0/io-util) >= 1.6
+Requires:       crate(tokio-1/fs) >= 1.6
+Requires:       crate(tokio-1/io-util) >= 1.6
 Requires:       crate(tokio-util-0.7/io) >= 0.7.0
 Provides:       crate(%{pkgname}/fs)
 
@@ -340,7 +340,7 @@ This metapackage enables feature "limit" for the Rust tower-http crate, by pulli
 Summary:        Tower middleware and utilities for HTTP clients and servers - feature "metrics" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(http-body-1/default) >= 1.0.1
-Requires:       crate(tokio-1.0/time) >= 1.6
+Requires:       crate(tokio-1/time) >= 1.6
 Provides:       crate(%{pkgname}/metrics)
 Provides:       crate(%{pkgname}/timeout)
 
@@ -382,7 +382,7 @@ This metapackage enables feature "percent-encoding" for the Rust tower-http crat
 %package     -n %{name}+tokio
 Summary:        Tower middleware and utilities for HTTP clients and servers - feature "tokio"
 Requires:       crate(%{pkgname})
-Requires:       crate(tokio-1.0) >= 1.6
+Requires:       crate(tokio-1) >= 1.6
 Provides:       crate(%{pkgname}/tokio)
 
 %description -n %{name}+tokio

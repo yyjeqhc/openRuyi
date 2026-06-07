@@ -24,7 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(serde-1/default) >= 1.0.228
 Requires:       crate(serde-1/derive) >= 1.0.228
 Requires:       crate(serde-json-1/default) >= 1.0.149
-Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Requires:       crate(thiserror-2/default) >= 2.0.18
 Requires:       crate(tracing-0.1/std) >= 0.1.44
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

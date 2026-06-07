@@ -122,7 +122,7 @@ This metapackage enables feature "thin-vec" for the Rust get-size2 crate, by pul
 %package     -n %{name}+url
 Summary:        Determine the size in bytes an object occupies inside RAM - feature "url"
 Requires:       crate(%{pkgname})
-Requires:       crate(url-2.0) >= 2.0.0
+Requires:       crate(url-2) >= 2.0.0
 Provides:       crate(%{pkgname}/url)
 
 %description -n %{name}+url

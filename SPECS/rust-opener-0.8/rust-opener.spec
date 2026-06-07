@@ -35,7 +35,7 @@ Source code for takopackized Rust crate "opener"
 %package     -n %{name}+reveal
 Summary:        Open a file or link using the system default program - feature "reveal"
 Requires:       crate(%{pkgname})
-Requires:       crate(url-2.0/default) >= 2.0.0
+Requires:       crate(url-2/default) >= 2.0.0
 Requires:       crate(windows-sys-0.61/win32-system-com) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-ui-shell) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-ui-shell-common) >= 0.61.2

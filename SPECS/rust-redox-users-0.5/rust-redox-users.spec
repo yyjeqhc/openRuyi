@@ -19,7 +19,7 @@ Requires:       crate(getrandom-0.2/default) >= 0.2.17
 Requires:       crate(getrandom-0.2/std) >= 0.2.17
 Requires:       crate(libredox-0.1/call) >= 0.1.16
 Requires:       crate(libredox-0.1/std) >= 0.1.16
-Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Requires:       crate(thiserror-2/default) >= 2.0.18
 Provides:       crate(%{pkgname})
 
 %description

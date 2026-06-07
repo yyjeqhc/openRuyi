@@ -70,8 +70,8 @@ This metapackage enables feature "rayon" for the Rust indicatif crate, by pullin
 %package     -n %{name}+tokio
 Summary:        Progress bar and cli reporting library for Rust - feature "tokio"
 Requires:       crate(%{pkgname})
-Requires:       crate(tokio-1.0/default) >= 1.0.0
-Requires:       crate(tokio-1.0/io-util) >= 1.0.0
+Requires:       crate(tokio-1/default) >= 1.0.0
+Requires:       crate(tokio-1/io-util) >= 1.0.0
 Provides:       crate(%{pkgname}/tokio)
 
 %description -n %{name}+tokio
@@ -80,7 +80,7 @@ This metapackage enables feature "tokio" for the Rust indicatif crate, by pullin
 %package     -n %{name}+unicode-segmentation
 Summary:        Progress bar and cli reporting library for Rust - feature "unicode-segmentation"
 Requires:       crate(%{pkgname})
-Requires:       crate(unicode-segmentation-1.0/default) >= 1.0.0
+Requires:       crate(unicode-segmentation-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/unicode-segmentation)
 
 %description -n %{name}+unicode-segmentation
@@ -113,7 +113,7 @@ Additionally, this package also provides the "in_memory" feature.
 %package     -n %{name}+wasmbind
 Summary:        Progress bar and cli reporting library for Rust - feature "wasmbind"
 Requires:       crate(%{pkgname})
-Requires:       crate(web-time-1.0/default) >= 1.1.0
+Requires:       crate(web-time-1/default) >= 1.1.0
 Provides:       crate(%{pkgname}/wasmbind)
 
 %description -n %{name}+wasmbind

@@ -139,7 +139,7 @@ Summary:        Integrate various capabilities using compile-time feature flags 
 Requires:       crate(%{pkgname})
 Requires:       crate(gix-path-0.10/default) >= 0.10.22
 Requires:       crate(gix-utils-0.3/default) >= 0.3.1
-Requires:       crate(walkdir-2.0/default) >= 2.5.0
+Requires:       crate(walkdir-2/default) >= 2.5.0
 Provides:       crate(%{pkgname}/walkdir)
 
 %description -n %{name}+walkdir
@@ -149,7 +149,7 @@ This metapackage enables feature "walkdir" for the Rust gix-features crate, by p
 Summary:        Integrate various capabilities using compile-time feature flags - feature "zlib" and 5 more
 Requires:       crate(%{pkgname})
 Requires:       crate(flate2-1.0/zlib-rs) >= 1.1.9
-Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Requires:       crate(thiserror-2/default) >= 2.0.18
 Provides:       crate(%{pkgname}/zlib)
 Provides:       crate(%{pkgname}/zlib-ng)
 Provides:       crate(%{pkgname}/zlib-ng-compat)

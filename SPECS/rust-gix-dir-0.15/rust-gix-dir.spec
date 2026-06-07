@@ -33,7 +33,7 @@ Requires:       crate(gix-trace-0.1/default) >= 0.1.18
 Requires:       crate(gix-utils-0.3/bstr) >= 0.3.1
 Requires:       crate(gix-utils-0.3/default) >= 0.3.1
 Requires:       crate(gix-worktree-0.42) >= 0.42.0
-Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Requires:       crate(thiserror-2/default) >= 2.0.18
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

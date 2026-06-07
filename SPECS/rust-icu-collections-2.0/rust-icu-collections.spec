@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(displaydoc-0.2) >= 0.2.5
 Requires:       crate(potential-utf-0.1/zerovec) >= 0.1.5
-Requires:       crate(utf8-iter-1.0) >= 1.0.4
+Requires:       crate(utf8-iter-1) >= 1.0.4
 Requires:       crate(yoke-0.8/derive) >= 0.8.2
 Requires:       crate(zerofrom-0.1/derive) >= 0.1.7
 Requires:       crate(zerovec-0.11/derive) >= 0.11.6

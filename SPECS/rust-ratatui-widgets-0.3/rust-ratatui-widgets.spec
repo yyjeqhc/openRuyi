@@ -29,7 +29,7 @@ Requires:       crate(itertools-0.14/use-alloc) >= 0.14.0
 Requires:       crate(line-clipping-0.3/default) >= 0.3.7
 Requires:       crate(ratatui-core-0.1/default) >= 0.1.0
 Requires:       crate(strum-0.27/derive) >= 0.27.2
-Requires:       crate(unicode-segmentation-1.0/default) >= 1.13.2
+Requires:       crate(unicode-segmentation-1/default) >= 1.13.2
 Requires:       crate(unicode-width-0.2/default) >= 0.2.2
 Provides:       crate(ratatui-widgets) = %{version}
 Provides:       crate(%{pkgname})

@@ -18,8 +18,8 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(nix-0.31/fs) >= 0.31.1
 Requires:       crate(nix-0.31/term) >= 0.31.1
 Requires:       crate(terminfo-0.9/default) >= 0.9.0
-Requires:       crate(thiserror-2.0/default) >= 2.0.11
-Requires:       crate(which-8.0/default) >= 8.0.0
+Requires:       crate(thiserror-2/default) >= 2.0.11
+Requires:       crate(which-8/default) >= 8.0.0
 Requires:       crate(windows-sys-0.59/win32-foundation) >= 0.59.0
 Requires:       crate(windows-sys-0.59/win32-networkmanagement-netmanagement) >= 0.59.0
 Requires:       crate(windows-sys-0.59/win32-system-console) >= 0.59.0

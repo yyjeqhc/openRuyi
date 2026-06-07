@@ -18,7 +18,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(cfg-if-1/default) >= 1.0.4
 Requires:       crate(libc-0.2) >= 0.2.186
 Requires:       crate(r-efi-6) >= 6.0.0
-Requires:       crate(wasip2-1.0) >= 1.0.3
+Requires:       crate(wasip2-1) >= 1.0.3
 Requires:       crate(wasip3-0.4/default) >= 0.4.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

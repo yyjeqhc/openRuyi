@@ -67,7 +67,7 @@ This metapackage enables feature "unicode" for the Rust similar crate, by pullin
 %package     -n %{name}+unicode-segmentation
 Summary:        Diff library for Rust - feature "unicode-segmentation"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(unicode-segmentation-1.0/default) >= 1.7.1
+Requires:       crate(unicode-segmentation-1/default) >= 1.7.1
 Provides:       crate(%{pkgname}/unicode-segmentation) = %{version}
 
 %description -n %{name}+unicode-segmentation
@@ -76,7 +76,7 @@ This metapackage enables feature "unicode-segmentation" for the Rust similar cra
 %package     -n %{name}+web-time
 Summary:        Diff library for Rust - feature "web-time" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(web-time-1.0/default) >= 1.1.0
+Requires:       crate(web-time-1/default) >= 1.1.0
 Provides:       crate(%{pkgname}/wasm32-web-time) = %{version}
 Provides:       crate(%{pkgname}/web-time) = %{version}
 

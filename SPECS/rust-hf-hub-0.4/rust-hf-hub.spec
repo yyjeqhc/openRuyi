@@ -84,11 +84,11 @@ Requires:       crate(reqwest-0.12/stream) >= 0.12.28
 Requires:       crate(serde-1/default) >= 1.0.228
 Requires:       crate(serde-1/derive) >= 1.0.228
 Requires:       crate(serde-json-1/default) >= 1.0.149
-Requires:       crate(thiserror-2.0/default) >= 2.0.17
-Requires:       crate(tokio-1.0/default) >= 1.29.1
-Requires:       crate(tokio-1.0/fs) >= 1.29.1
-Requires:       crate(tokio-1.0/macros) >= 1.29.1
-Requires:       crate(tokio-1.0/rt-multi-thread) >= 1.29.1
+Requires:       crate(thiserror-2/default) >= 2.0.17
+Requires:       crate(tokio-1/default) >= 1.29.1
+Requires:       crate(tokio-1/fs) >= 1.29.1
+Requires:       crate(tokio-1/macros) >= 1.29.1
+Requires:       crate(tokio-1/rt-multi-thread) >= 1.29.1
 Provides:       crate(%{pkgname}/tokio)
 
 %description -n %{name}+tokio
@@ -103,7 +103,7 @@ Requires:       crate(rand-0.8/default) >= 0.8.5
 Requires:       crate(serde-1/default) >= 1.0.228
 Requires:       crate(serde-1/derive) >= 1.0.228
 Requires:       crate(serde-json-1/default) >= 1.0.149
-Requires:       crate(thiserror-2.0/default) >= 2.0.17
+Requires:       crate(thiserror-2/default) >= 2.0.17
 Requires:       crate(ureq-2.0/default) >= 2.12.1
 Requires:       crate(ureq-2.0/json) >= 2.12.1
 Requires:       crate(ureq-2.0/socks-proxy) >= 2.12.1

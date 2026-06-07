@@ -31,8 +31,8 @@ Requires:       crate(gix-sec-0.12/default) >= 0.12.2
 Requires:       crate(memchr-2/default) >= 2.8.0
 Requires:       crate(once-cell-1.0/default) >= 1.21.4
 Requires:       crate(smallvec-1.0/default) >= 1.15.1
-Requires:       crate(thiserror-2.0/default) >= 2.0.18
-Requires:       crate(unicode-bom-2.0/default) >= 2.0.3
+Requires:       crate(thiserror-2/default) >= 2.0.18
+Requires:       crate(unicode-bom-2/default) >= 2.0.3
 Requires:       crate(winnow-0.7/default) >= 0.7.15
 Requires:       crate(winnow-0.7/simd) >= 0.7.15
 Provides:       crate(%{pkgname})

@@ -24,8 +24,8 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(bytes-1/default) >= 1.11.1
 Requires:       crate(http-1/default) >= 1.4.0
 Requires:       crate(http-body-1/default) >= 1.0.1
-Requires:       crate(tokio-1.0/default) >= 1.50.0
-Requires:       crate(tokio-1.0/sync) >= 1.50.0
+Requires:       crate(tokio-1/default) >= 1.50.0
+Requires:       crate(tokio-1/sync) >= 1.50.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/capi)
 Provides:       crate(%{pkgname}/default)

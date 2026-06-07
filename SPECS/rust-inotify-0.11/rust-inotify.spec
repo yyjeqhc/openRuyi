@@ -55,8 +55,8 @@ Additionally, this package also provides the "default" feature.
 %package     -n %{name}+tokio
 Summary:        Idiomatic wrapper for inotify - feature "tokio"
 Requires:       crate(%{pkgname})
-Requires:       crate(tokio-1.0/default) >= 1.40.0
-Requires:       crate(tokio-1.0/net) >= 1.40.0
+Requires:       crate(tokio-1/default) >= 1.40.0
+Requires:       crate(tokio-1/net) >= 1.40.0
 Provides:       crate(%{pkgname}/tokio)
 
 %description -n %{name}+tokio

@@ -16,7 +16,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(proc-macro2-1) >= 1.0.91
-Requires:       crate(unicode-ident-1.0/default) >= 1.0.0
+Requires:       crate(unicode-ident-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/clone-impls) = %{version}
 Provides:       crate(%{pkgname}/derive) = %{version}

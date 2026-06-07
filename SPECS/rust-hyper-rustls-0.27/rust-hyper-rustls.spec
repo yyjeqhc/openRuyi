@@ -27,7 +27,7 @@ Requires:       crate(hyper-util-0.1/client-legacy) >= 0.1.20
 Requires:       crate(hyper-util-0.1/tokio) >= 0.1.20
 Requires:       crate(rustls-0.23) >= 0.23.37
 Requires:       crate(rustls-pki-types-1/default) >= 1.14.0
-Requires:       crate(tokio-1.0/default) >= 1.50.0
+Requires:       crate(tokio-1/default) >= 1.50.0
 Requires:       crate(tokio-rustls-0.26) >= 0.26.4
 Requires:       crate(tower-service-0.3/default) >= 0.3.3
 Provides:       crate(%{pkgname})
@@ -152,7 +152,7 @@ This metapackage enables feature "tls12" for the Rust hyper-rustls crate, by pul
 %package     -n %{name}+webpki-roots
 Summary:        Rustls+hyper integration for pure rust HTTPS - feature "webpki-roots" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(webpki-roots-1.0/default) >= 1.0.0
+Requires:       crate(webpki-roots-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/webpki-roots)
 Provides:       crate(%{pkgname}/webpki-tokio)
 

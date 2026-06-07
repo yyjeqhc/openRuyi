@@ -27,7 +27,7 @@ Requires:       crate(gix-hash-0.19/default) >= 0.19.0
 Requires:       crate(gix-hashtable-0.9/default) >= 0.9.0
 Requires:       crate(gix-object-0.50/default) >= 0.50.2
 Requires:       crate(smallvec-1.0/default) >= 1.15.1
-Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Requires:       crate(thiserror-2/default) >= 2.0.18
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

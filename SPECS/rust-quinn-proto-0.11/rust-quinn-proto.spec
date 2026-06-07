@@ -31,11 +31,11 @@ Requires:       crate(rustc-hash-2/default) >= 2.1.1
 Requires:       crate(rustls-pki-types-1/default) >= 1.13.2
 Requires:       crate(rustls-pki-types-1/web) >= 1.13.2
 Requires:       crate(slab-0.4/default) >= 0.4.11
-Requires:       crate(thiserror-2.0/default) >= 2.0.17
+Requires:       crate(thiserror-2/default) >= 2.0.17
 Requires:       crate(tinyvec-1.0/alloc) >= 1.10.0
 Requires:       crate(tinyvec-1.0/default) >= 1.10.0
 Requires:       crate(tracing-0.1/std) >= 0.1.44
-Requires:       crate(web-time-1.0/default) >= 1.1.0
+Requires:       crate(web-time-1/default) >= 1.1.0
 Provides:       crate(%{pkgname})
 
 %description

@@ -47,7 +47,7 @@ This metapackage enables feature "unicase" for the Rust phf_macros crate, by pul
 %package     -n %{name}+unicase-
 Summary:        Macros to generate types in the phf crate - feature "unicase_"
 Requires:       crate(%{pkgname})
-Requires:       crate(unicase-2.0/default) >= 2.4.0
+Requires:       crate(unicase-2/default) >= 2.4.0
 Provides:       crate(%{pkgname}/unicase-)
 
 %description -n %{name}+unicase-

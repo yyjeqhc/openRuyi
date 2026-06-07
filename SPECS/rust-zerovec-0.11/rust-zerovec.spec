@@ -61,7 +61,7 @@ This metapackage enables feature "derive" for the Rust zerovec crate, by pulling
 Summary:        Zero-copy vector backed by a byte array - feature "hashmap"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(twox-hash-2.0/xxhash64) >= 2.0.0
+Requires:       crate(twox-hash-2/xxhash64) >= 2.0.0
 Provides:       crate(%{pkgname}/hashmap)
 
 %description -n %{name}+hashmap

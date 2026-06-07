@@ -200,7 +200,7 @@ This metapackage enables feature "test-util" for the Rust tokio crate, by pullin
 %package     -n %{name}+tokio-macros
 Summary:        Event-driven, non-blocking I/O platform for writing asynchronous I/O backed applications - feature "tokio-macros" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(tokio-macros-2.0/default) >= 2.7.0
+Requires:       crate(tokio-macros-2/default) >= 2.7.0
 Provides:       crate(%{pkgname}/macros)
 Provides:       crate(%{pkgname}/tokio-macros)
 

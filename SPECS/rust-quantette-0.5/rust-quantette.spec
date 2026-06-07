@@ -112,7 +112,7 @@ This metapackage enables feature "std" for the Rust quantette crate, by pulling 
 %package     -n %{name}+tap
 Summary:        Fast and high quality image quantization and palette generation - feature "tap"
 Requires:       crate(%{pkgname})
-Requires:       crate(tap-1.0) >= 1.0.1
+Requires:       crate(tap-1) >= 1.0.1
 Provides:       crate(%{pkgname}/tap)
 
 %description -n %{name}+tap

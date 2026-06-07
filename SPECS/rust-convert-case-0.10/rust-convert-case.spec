@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(unicode-segmentation-1.0/default) >= 1.13.2
+Requires:       crate(unicode-segmentation-1/default) >= 1.13.2
 Provides:       crate(convert-case) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

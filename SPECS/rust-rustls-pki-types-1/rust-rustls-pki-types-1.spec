@@ -36,7 +36,7 @@ Additionally, this package also provides the "default", and "std" features.
 %package     -n %{name}+web-time
 Summary:        Shared types for the rustls PKI ecosystem - feature "web-time" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(web-time-1.0/default) >= 1.0.0
+Requires:       crate(web-time-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/web) = %{version}
 Provides:       crate(%{pkgname}/web-time) = %{version}
 

@@ -34,7 +34,7 @@ Requires:       crate(syn-2/full) >= 2.0.104
 Requires:       crate(syn-2/parsing) >= 2.0.104
 Requires:       crate(syn-2/visit) >= 2.0.104
 Requires:       crate(syn-2/visit-mut) >= 2.0.104
-Requires:       crate(unicode-ident-1.0/default) >= 1.0.18
+Requires:       crate(unicode-ident-1/default) >= 1.0.18
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/async-timeout)
 

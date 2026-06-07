@@ -16,7 +16,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(cc-1/default) >= 1.2.0
-Requires:       crate(which-8.0/default) >= 8.0.0
+Requires:       crate(which-8/default) >= 8.0.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 

@@ -26,7 +26,7 @@ Requires:       crate(bstr-1/unicode) >= 1.12.1
 Requires:       crate(gix-date-0.10/default) >= 0.10.7
 Requires:       crate(gix-utils-0.3/default) >= 0.3.1
 Requires:       crate(itoa-1.0/default) >= 1.0.18
-Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Requires:       crate(thiserror-2/default) >= 2.0.18
 Requires:       crate(winnow-0.7/default) >= 0.7.15
 Requires:       crate(winnow-0.7/simd) >= 0.7.15
 Provides:       crate(%{pkgname})

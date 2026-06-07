@@ -28,7 +28,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(bytes-1/default) >= 1.10.1
 Requires:       crate(http-1/default) >= 1.3.1
 Requires:       crate(http-body-1/default) >= 1.0.1
-Requires:       crate(thiserror-2.0/default) >= 2.0.17
+Requires:       crate(thiserror-2/default) >= 2.0.17
 Requires:       crate(wit-bindgen-0.51/async) >= 0.51.0
 Requires:       crate(wit-bindgen-0.51/async-spawn) >= 0.51.0
 Provides:       crate(%{pkgname}/http-compat)

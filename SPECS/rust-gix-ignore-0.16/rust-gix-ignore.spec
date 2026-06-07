@@ -26,7 +26,7 @@ Requires:       crate(bstr-1/unicode) >= 1.12.1
 Requires:       crate(gix-glob-0.21/default) >= 0.21.0
 Requires:       crate(gix-path-0.10/default) >= 0.10.22
 Requires:       crate(gix-trace-0.1/default) >= 0.1.18
-Requires:       crate(unicode-bom-2.0/default) >= 2.0.3
+Requires:       crate(unicode-bom-2/default) >= 2.0.3
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

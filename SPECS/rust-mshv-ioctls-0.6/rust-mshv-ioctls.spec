@@ -18,7 +18,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(libc-0.2/default) >= 0.2.186
 Requires:       crate(mshv-bindings-0.6/default) >= 0.6.9
 Requires:       crate(mshv-bindings-0.6/fam-wrappers) >= 0.6.9
-Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Requires:       crate(thiserror-2/default) >= 2.0.18
 Requires:       crate(vmm-sys-util-0.15/default) >= 0.15.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

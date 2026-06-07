@@ -24,9 +24,9 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(endi-1/default) >= 1.1.1
 Requires:       crate(serde-1/default) >= 1.0.228
 Requires:       crate(serde-1/derive) >= 1.0.228
-Requires:       crate(winnow-1.0/default) >= 1.0.0
-Requires:       crate(zvariant-derive-5.0/default) >= 5.10.1
-Requires:       crate(zvariant-utils-3.0/default) >= 3.3.1
+Requires:       crate(winnow-1/default) >= 1.0.0
+Requires:       crate(zvariant-derive-5/default) >= 5.10.1
+Requires:       crate(zvariant-utils-3/default) >= 3.3.1
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/option-as-array)
@@ -75,8 +75,8 @@ This metapackage enables feature "enumflags2" for the Rust zvariant crate, by pu
 %package     -n %{name}+gvariant
 Summary:        D-Bus & GVariant encoding & decoding - feature "gvariant" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(zvariant-derive-5.0/gvariant) >= 5.10.1
-Requires:       crate(zvariant-utils-3.0/gvariant) >= 3.3.1
+Requires:       crate(zvariant-derive-5/gvariant) >= 5.10.1
+Requires:       crate(zvariant-utils-3/gvariant) >= 3.3.1
 Provides:       crate(%{pkgname}/gvariant)
 Provides:       crate(%{pkgname}/ostree-tests)
 
@@ -117,8 +117,8 @@ This metapackage enables feature "time" for the Rust zvariant crate, by pulling 
 %package     -n %{name}+url
 Summary:        D-Bus & GVariant encoding & decoding - feature "url"
 Requires:       crate(%{pkgname})
-Requires:       crate(url-2.0/default) >= 2.5.0
-Requires:       crate(url-2.0/serde) >= 2.5.0
+Requires:       crate(url-2/default) >= 2.5.0
+Requires:       crate(url-2/serde) >= 2.5.0
 Provides:       crate(%{pkgname}/url)
 
 %description -n %{name}+url

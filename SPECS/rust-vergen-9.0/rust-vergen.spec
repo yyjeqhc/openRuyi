@@ -24,7 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(anyhow-1/default) >= 1.0.102
 Requires:       crate(derive-builder-0.20/default) >= 0.20.2
 Requires:       crate(rustversion-1/default) >= 1.0.22
-Requires:       crate(vergen-lib-9.0/default) >= 9.1.0
+Requires:       crate(vergen-lib-9/default) >= 9.1.0
 Provides:       crate(vergen) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
@@ -36,7 +36,7 @@ Source code for takopackized Rust crate "vergen"
 Summary:        Generate 'cargo:rustc-env' instructions via 'build.rs' for use in your code via the 'env!' macro - feature "build"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/time)
-Requires:       crate(vergen-lib-9.0/build) >= 9.1.0
+Requires:       crate(vergen-lib-9/build) >= 9.1.0
 Provides:       crate(%{pkgname}/build)
 
 %description -n %{name}+build
@@ -47,7 +47,7 @@ Summary:        Generate 'cargo:rustc-env' instructions via 'build.rs' for use i
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/cargo-metadata)
 Requires:       crate(%{pkgname}/regex)
-Requires:       crate(vergen-lib-9.0/cargo) >= 9.1.0
+Requires:       crate(vergen-lib-9/cargo) >= 9.1.0
 Provides:       crate(%{pkgname}/cargo)
 
 %description -n %{name}+cargo
@@ -65,7 +65,7 @@ This metapackage enables feature "cargo_metadata" for the Rust vergen crate, by 
 %package     -n %{name}+emit-and-set
 Summary:        Generate 'cargo:rustc-env' instructions via 'build.rs' for use in your code via the 'env!' macro - feature "emit_and_set"
 Requires:       crate(%{pkgname})
-Requires:       crate(vergen-lib-9.0/emit-and-set) >= 9.1.0
+Requires:       crate(vergen-lib-9/emit-and-set) >= 9.1.0
 Provides:       crate(%{pkgname}/emit-and-set)
 
 %description -n %{name}+emit-and-set
@@ -84,7 +84,7 @@ This metapackage enables feature "regex" for the Rust vergen crate, by pulling i
 Summary:        Generate 'cargo:rustc-env' instructions via 'build.rs' for use in your code via the 'env!' macro - feature "rustc"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/rustc-version)
-Requires:       crate(vergen-lib-9.0/rustc) >= 9.1.0
+Requires:       crate(vergen-lib-9/rustc) >= 9.1.0
 Provides:       crate(%{pkgname}/rustc)
 
 %description -n %{name}+rustc
@@ -103,7 +103,7 @@ This metapackage enables feature "rustc_version" for the Rust vergen crate, by p
 Summary:        Generate 'cargo:rustc-env' instructions via 'build.rs' for use in your code via the 'env!' macro - feature "si"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/sysinfo)
-Requires:       crate(vergen-lib-9.0/si) >= 9.1.0
+Requires:       crate(vergen-lib-9/si) >= 9.1.0
 Provides:       crate(%{pkgname}/si)
 
 %description -n %{name}+si
@@ -133,7 +133,7 @@ This metapackage enables feature "time" for the Rust vergen crate, by pulling in
 %package     -n %{name}+unstable
 Summary:        Generate 'cargo:rustc-env' instructions via 'build.rs' for use in your code via the 'env!' macro - feature "unstable"
 Requires:       crate(%{pkgname})
-Requires:       crate(vergen-lib-9.0/unstable) >= 9.1.0
+Requires:       crate(vergen-lib-9/unstable) >= 9.1.0
 Provides:       crate(%{pkgname}/unstable)
 
 %description -n %{name}+unstable

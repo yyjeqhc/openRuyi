@@ -203,7 +203,7 @@ This metapackage enables feature "std" for the Rust tracing-subscriber crate, by
 %package     -n %{name}+thread-local
 Summary:        Utilities for implementing and composing `tracing` subscribers - feature "thread_local"
 Requires:       crate(%{pkgname})
-Requires:       crate(thread-local-1.0/default) >= 1.1.9
+Requires:       crate(thread-local-1/default) >= 1.1.9
 Provides:       crate(%{pkgname}/thread-local)
 
 %description -n %{name}+thread-local

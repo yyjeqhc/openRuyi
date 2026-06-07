@@ -33,7 +33,7 @@ Requires:       crate(gix-tempfile-18) >= 18.0.0
 Requires:       crate(gix-utils-0.3/default) >= 0.3.1
 Requires:       crate(gix-validate-0.10/default) >= 0.10.1
 Requires:       crate(memmap2-0.9/default) >= 0.9.10
-Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Requires:       crate(thiserror-2/default) >= 2.0.18
 Requires:       crate(winnow-0.7/default) >= 0.7.15
 Requires:       crate(winnow-0.7/simd) >= 0.7.15
 Provides:       crate(%{pkgname})

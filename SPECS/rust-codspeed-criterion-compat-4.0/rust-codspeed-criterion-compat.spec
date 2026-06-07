@@ -161,7 +161,7 @@ This metapackage enables feature "smol" for the Rust codspeed-criterion-compat c
 %package     -n %{name}+tokio
 Summary:        Criterion.rs compatibility layer for CodSpeed - feature "tokio"
 Requires:       crate(%{pkgname})
-Requires:       crate(tokio-1.0/rt) >= 1.39
+Requires:       crate(tokio-1/rt) >= 1.39
 Provides:       crate(%{pkgname}/tokio)
 
 %description -n %{name}+tokio

@@ -54,7 +54,7 @@ Requires:       crate(gix-utils-0.3/default) >= 0.3.1
 Requires:       crate(gix-validate-0.10/default) >= 0.10.1
 Requires:       crate(once-cell-1.0/default) >= 1.21.4
 Requires:       crate(smallvec-1.0/default) >= 1.15.1
-Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Requires:       crate(thiserror-2/default) >= 2.0.18
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/tree-editor)
 

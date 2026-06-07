@@ -18,7 +18,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(idna-adapter-1/default) >= 1.0.0
 Requires:       crate(smallvec-1.0/const-generics) >= 1.13.1
 Requires:       crate(smallvec-1.0/default) >= 1.13.1
-Requires:       crate(utf8-iter-1.0/default) >= 1.0.4
+Requires:       crate(utf8-iter-1/default) >= 1.0.4
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/alloc) = %{version}
 Provides:       crate(%{pkgname}/std) = %{version}

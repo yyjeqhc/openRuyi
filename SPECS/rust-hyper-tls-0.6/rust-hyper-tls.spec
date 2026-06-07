@@ -28,7 +28,7 @@ Requires:       crate(hyper-util-0.1/client-legacy) >= 0.1.14
 Requires:       crate(hyper-util-0.1/default) >= 0.1.14
 Requires:       crate(hyper-util-0.1/tokio) >= 0.1.14
 Requires:       crate(native-tls-0.2/default) >= 0.2.14
-Requires:       crate(tokio-1.0/default) >= 1.46.0
+Requires:       crate(tokio-1/default) >= 1.46.0
 Requires:       crate(tokio-native-tls-0.3/default) >= 0.3.1
 Requires:       crate(tower-service-0.3/default) >= 0.3.3
 Provides:       crate(%{pkgname})

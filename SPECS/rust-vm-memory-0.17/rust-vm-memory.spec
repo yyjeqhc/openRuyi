@@ -15,7 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Requires:       crate(thiserror-2/default) >= 2.0.18
 Provides:       crate(%{pkgname})
 
 %description

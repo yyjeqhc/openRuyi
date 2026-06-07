@@ -26,7 +26,7 @@ Requires:       crate(globwalk-0.9/default) >= 0.9.1
 Requires:       crate(predicates-3.0/diff) >= 3.1.3
 Requires:       crate(predicates-core-1.0/default) >= 1.0.9
 Requires:       crate(predicates-tree-1.0/default) >= 1.0.12
-Requires:       crate(tempfile-3.0/default) >= 3.27.0
+Requires:       crate(tempfile-3/default) >= 3.27.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

@@ -17,7 +17,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(gix-tempfile-18) >= 18.0.0
 Requires:       crate(gix-utils-0.3) >= 0.3.0
-Requires:       crate(thiserror-2.0/default) >= 2.0.0
+Requires:       crate(thiserror-2/default) >= 2.0.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 

@@ -32,7 +32,7 @@ Requires:       crate(gix-shallow-0.5/default) >= 0.5.0
 Requires:       crate(gix-transport-0.48/default) >= 0.48.0
 Requires:       crate(gix-utils-0.3/default) >= 0.3.1
 Requires:       crate(maybe-async-0.2/default) >= 0.2.10
-Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Requires:       crate(thiserror-2/default) >= 2.0.18
 Requires:       crate(winnow-0.7/default) >= 0.7.15
 Requires:       crate(winnow-0.7/simd) >= 0.7.15
 Provides:       crate(%{pkgname})

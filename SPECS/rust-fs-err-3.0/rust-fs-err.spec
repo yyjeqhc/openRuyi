@@ -32,8 +32,8 @@ Source code for takopackized Rust crate "fs-err"
 Summary:        Drop-in replacement for std::fs with more helpful error messages - feature "debug_tokio"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/path-facts)
-Requires:       crate(tokio-1.0/fs) >= 1.21
-Requires:       crate(tokio-1.0/rt-multi-thread) >= 1.21
+Requires:       crate(tokio-1/fs) >= 1.21
+Requires:       crate(tokio-1/rt-multi-thread) >= 1.21
 Provides:       crate(%{pkgname}/debug-tokio)
 
 %description -n %{name}+debug-tokio
@@ -54,7 +54,7 @@ Additionally, this package also provides the "debug" feature.
 %package     -n %{name}+tokio
 Summary:        Drop-in replacement for std::fs with more helpful error messages - feature "tokio"
 Requires:       crate(%{pkgname})
-Requires:       crate(tokio-1.0/fs) >= 1.21
+Requires:       crate(tokio-1/fs) >= 1.21
 Provides:       crate(%{pkgname}/tokio)
 
 %description -n %{name}+tokio

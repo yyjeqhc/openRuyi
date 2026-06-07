@@ -45,10 +45,10 @@ Requires:       crate(serde-1/default) >= 1.0.228
 Requires:       crate(serde-1/derive) >= 1.0.228
 Requires:       crate(serde-json-1/default) >= 1.0.149
 Requires:       crate(spm-precompiled-0.1/default) >= 0.1.4
-Requires:       crate(thiserror-2.0/default) >= 2.0.17
+Requires:       crate(thiserror-2/default) >= 2.0.17
 Requires:       crate(unicode-categories-0.1/default) >= 0.1.1
 Requires:       crate(unicode-normalization-alignments-0.1/default) >= 0.1.12
-Requires:       crate(unicode-segmentation-1.0/default) >= 1.12.0
+Requires:       crate(unicode-segmentation-1/default) >= 1.12.0
 Provides:       crate(%{pkgname})
 
 %description

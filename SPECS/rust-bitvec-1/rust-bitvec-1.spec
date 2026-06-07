@@ -17,7 +17,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(funty-2) >= 2.0.0
 Requires:       crate(radium-0.7/default) >= 0.7.0
-Requires:       crate(tap-1.0/default) >= 1.0.0
+Requires:       crate(tap-1/default) >= 1.0.0
 Requires:       crate(wyz-0.5) >= 0.5.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/alloc) = %{version}

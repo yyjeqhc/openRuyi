@@ -35,8 +35,8 @@ Source code for takopackized Rust crate "http-body-util"
 %package     -n %{name}+channel
 Summary:        Combinators and adapters for HTTP request or response bodies - feature "channel" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(tokio-1.0/default) >= 1.0.0
-Requires:       crate(tokio-1.0/sync) >= 1.0.0
+Requires:       crate(tokio-1/default) >= 1.0.0
+Requires:       crate(tokio-1/sync) >= 1.0.0
 Provides:       crate(%{pkgname}/channel)
 Provides:       crate(%{pkgname}/full)
 

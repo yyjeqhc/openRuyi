@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(instability-0.3/default) >= 0.3.12
 Requires:       crate(ratatui-core-0.1/default) >= 0.1.0
-Requires:       crate(termion-4.0/default) >= 4.0.6
+Requires:       crate(termion-4/default) >= 4.0.6
 Provides:       crate(ratatui-termion) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
@@ -54,7 +54,7 @@ This metapackage enables feature "scrolling-regions" for the Rust ratatui-termio
 %package     -n %{name}+serde
 Summary:        Termion backend for the Ratatui Terminal UI library - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(termion-4.0/serde) >= 4.0.6
+Requires:       crate(termion-4/serde) >= 4.0.6
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

@@ -296,7 +296,7 @@ This metapackage enables feature "unlock_notify" for the Rust rusqlite crate, by
 %package     -n %{name}+url
 Summary:        Ergonomic wrapper for SQLite - feature "url"
 Requires:       crate(%{pkgname})
-Requires:       crate(url-2.0/default) >= 2.1
+Requires:       crate(url-2/default) >= 2.1
 Provides:       crate(%{pkgname}/url)
 
 %description -n %{name}+url

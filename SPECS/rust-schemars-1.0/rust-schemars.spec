@@ -186,7 +186,7 @@ This metapackage enables feature "smol_str03" for the Rust schemars crate, by pu
 %package     -n %{name}+url2
 Summary:        Generate JSON Schemas from Rust code - feature "url2"
 Requires:       crate(%{pkgname})
-Requires:       crate(url-2.0) >= 2.0.0
+Requires:       crate(url-2) >= 2.0.0
 Provides:       crate(%{pkgname}/url2)
 
 %description -n %{name}+url2

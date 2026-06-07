@@ -25,8 +25,8 @@ Requires:       crate(bytes-1/default) >= 1.11.1
 Requires:       crate(futures-core-0.3/default) >= 0.3.32
 Requires:       crate(futures-sink-0.3/default) >= 0.3.32
 Requires:       crate(pin-project-lite-0.2/default) >= 0.2.17
-Requires:       crate(tokio-1.0/default) >= 1.50.0
-Requires:       crate(tokio-1.0/sync) >= 1.50.0
+Requires:       crate(tokio-1/default) >= 1.50.0
+Requires:       crate(tokio-1/sync) >= 1.50.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/codec)
 Provides:       crate(%{pkgname}/default)
@@ -87,9 +87,9 @@ This metapackage enables feature "hashbrown" for the Rust tokio-util crate, by p
 Summary:        Additional utilities for working with Tokio - feature "io-util"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/io)
-Requires:       crate(tokio-1.0/io-util) >= 1.50.0
-Requires:       crate(tokio-1.0/rt) >= 1.50.0
-Requires:       crate(tokio-1.0/sync) >= 1.50.0
+Requires:       crate(tokio-1/io-util) >= 1.50.0
+Requires:       crate(tokio-1/rt) >= 1.50.0
+Requires:       crate(tokio-1/sync) >= 1.50.0
 Provides:       crate(%{pkgname}/io-util)
 
 %description -n %{name}+io-util
@@ -108,8 +108,8 @@ This metapackage enables feature "join-map" for the Rust tokio-util crate, by pu
 %package     -n %{name}+net
 Summary:        Additional utilities for working with Tokio - feature "net"
 Requires:       crate(%{pkgname})
-Requires:       crate(tokio-1.0/net) >= 1.50.0
-Requires:       crate(tokio-1.0/sync) >= 1.50.0
+Requires:       crate(tokio-1/net) >= 1.50.0
+Requires:       crate(tokio-1/sync) >= 1.50.0
 Provides:       crate(%{pkgname}/net)
 
 %description -n %{name}+net
@@ -119,8 +119,8 @@ This metapackage enables feature "net" for the Rust tokio-util crate, by pulling
 Summary:        Additional utilities for working with Tokio - feature "rt"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/futures-util)
-Requires:       crate(tokio-1.0/rt) >= 1.50.0
-Requires:       crate(tokio-1.0/sync) >= 1.50.0
+Requires:       crate(tokio-1/rt) >= 1.50.0
+Requires:       crate(tokio-1/sync) >= 1.50.0
 Provides:       crate(%{pkgname}/rt)
 
 %description -n %{name}+rt
@@ -139,8 +139,8 @@ This metapackage enables feature "slab" for the Rust tokio-util crate, by pullin
 Summary:        Additional utilities for working with Tokio - feature "time"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/slab)
-Requires:       crate(tokio-1.0/sync) >= 1.50.0
-Requires:       crate(tokio-1.0/time) >= 1.50.0
+Requires:       crate(tokio-1/sync) >= 1.50.0
+Requires:       crate(tokio-1/time) >= 1.50.0
 Provides:       crate(%{pkgname}/time)
 
 %description -n %{name}+time

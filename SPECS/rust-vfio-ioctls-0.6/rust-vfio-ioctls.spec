@@ -18,7 +18,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(byteorder-1/default) >= 1.5.0
 Requires:       crate(libc-0.2/default) >= 0.2.186
 Requires:       crate(log-0.4/default) >= 0.4.29
-Requires:       crate(thiserror-2.0/default) >= 2.0.18
+Requires:       crate(thiserror-2/default) >= 2.0.18
 Requires:       crate(vfio-bindings-0.6/default) >= 0.6.2
 Requires:       crate(vm-memory-0.17/backend-mmap) >= 0.17.1
 Requires:       crate(vm-memory-0.17/default) >= 0.17.1

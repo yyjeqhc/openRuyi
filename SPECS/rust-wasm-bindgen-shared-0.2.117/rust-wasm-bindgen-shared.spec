@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(unicode-ident-1.0/default) >= 1.0.5
+Requires:       crate(unicode-ident-1/default) >= 1.0.5
 Provides:       crate(wasm-bindgen-shared) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

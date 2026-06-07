@@ -38,7 +38,7 @@ Summary:        Hyper utilities - feature "client"
 Requires:       crate(%{pkgname})
 Requires:       crate(futures-channel-0.3/default) >= 0.3.32
 Requires:       crate(hyper-1.0/client) >= 1.9.0
-Requires:       crate(tokio-1.0/net) >= 1.50.0
+Requires:       crate(tokio-1/net) >= 1.50.0
 Requires:       crate(tower-service-0.3/default) >= 0.3.3
 Requires:       crate(tracing-0.1/std) >= 0.1.44
 Provides:       crate(%{pkgname}/client)
@@ -54,7 +54,7 @@ Requires:       crate(futures-util-0.3) >= 0.3.32
 Requires:       crate(libc-0.2/default) >= 0.2.184
 Requires:       crate(socket2-0.6/all) >= 0.6.3
 Requires:       crate(socket2-0.6/default) >= 0.6.3
-Requires:       crate(tokio-1.0/sync) >= 1.50.0
+Requires:       crate(tokio-1/sync) >= 1.50.0
 Provides:       crate(%{pkgname}/client-legacy)
 
 %description -n %{name}+client-legacy
@@ -156,7 +156,7 @@ This metapackage enables feature "server-auto" for the Rust hyper-util crate, by
 Summary:        Hyper utilities - feature "server-graceful"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/server)
-Requires:       crate(tokio-1.0/sync) >= 1.50.0
+Requires:       crate(tokio-1/sync) >= 1.50.0
 Provides:       crate(%{pkgname}/server-graceful)
 
 %description -n %{name}+server-graceful
@@ -174,9 +174,9 @@ This metapackage enables feature "service" for the Rust hyper-util crate, by pul
 %package     -n %{name}+tokio
 Summary:        Hyper utilities - feature "tokio"
 Requires:       crate(%{pkgname})
-Requires:       crate(tokio-1.0) >= 1.50.0
-Requires:       crate(tokio-1.0/rt) >= 1.50.0
-Requires:       crate(tokio-1.0/time) >= 1.50.0
+Requires:       crate(tokio-1) >= 1.50.0
+Requires:       crate(tokio-1/rt) >= 1.50.0
+Requires:       crate(tokio-1/time) >= 1.50.0
 Provides:       crate(%{pkgname}/tokio)
 
 %description -n %{name}+tokio

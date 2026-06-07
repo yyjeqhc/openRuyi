@@ -51,8 +51,8 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/pin-project-lite)
 Requires:       crate(%{pkgname}/tokio-util)
 Requires:       crate(%{pkgname}/tracing)
-Requires:       crate(tokio-1.0/rt) >= 1.50.0
-Requires:       crate(tokio-1.0/sync) >= 1.50.0
+Requires:       crate(tokio-1/rt) >= 1.50.0
+Requires:       crate(tokio-1/sync) >= 1.50.0
 Provides:       crate(%{pkgname}/buffer)
 
 %description -n %{name}+buffer
@@ -137,7 +137,7 @@ Requires:       crate(%{pkgname}/futures-util)
 Requires:       crate(%{pkgname}/hdrhistogram)
 Requires:       crate(%{pkgname}/tracing)
 Requires:       crate(%{pkgname}/util)
-Requires:       crate(tokio-1.0/time) >= 1.50.0
+Requires:       crate(tokio-1/time) >= 1.50.0
 Provides:       crate(%{pkgname}/hedge)
 
 %description -n %{name}+hedge
@@ -158,8 +158,8 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/pin-project-lite)
 Requires:       crate(%{pkgname}/tokio-util)
 Requires:       crate(%{pkgname}/tracing)
-Requires:       crate(tokio-1.0/sync) >= 1.50.0
-Requires:       crate(tokio-1.0/time) >= 1.50.0
+Requires:       crate(tokio-1/sync) >= 1.50.0
+Requires:       crate(tokio-1/time) >= 1.50.0
 Provides:       crate(%{pkgname}/limit)
 
 %description -n %{name}+limit
@@ -170,7 +170,7 @@ Summary:        Modular and reusable components for building robust clients and 
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/pin-project-lite)
 Requires:       crate(%{pkgname}/tracing)
-Requires:       crate(tokio-1.0/time) >= 1.50.0
+Requires:       crate(tokio-1/time) >= 1.50.0
 Provides:       crate(%{pkgname}/load)
 
 %description -n %{name}+load
@@ -216,7 +216,7 @@ Requires:       crate(%{pkgname}/futures-util)
 Requires:       crate(%{pkgname}/indexmap)
 Requires:       crate(%{pkgname}/pin-project-lite)
 Requires:       crate(%{pkgname}/tracing)
-Requires:       crate(tokio-1.0/sync) >= 1.50.0
+Requires:       crate(tokio-1/sync) >= 1.50.0
 Provides:       crate(%{pkgname}/ready-cache)
 
 %description -n %{name}+ready-cache
@@ -236,7 +236,7 @@ This metapackage enables feature "reconnect" for the Rust tower crate, by pullin
 Summary:        Modular and reusable components for building robust clients and servers - feature "retry"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/util)
-Requires:       crate(tokio-1.0/time) >= 1.50.0
+Requires:       crate(tokio-1/time) >= 1.50.0
 Provides:       crate(%{pkgname}/retry)
 
 %description -n %{name}+retry
@@ -257,8 +257,8 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/futures-util)
 Requires:       crate(%{pkgname}/tracing)
 Requires:       crate(%{pkgname}/util)
-Requires:       crate(tokio-1.0/rt) >= 1.50.0
-Requires:       crate(tokio-1.0/sync) >= 1.50.0
+Requires:       crate(tokio-1/rt) >= 1.50.0
+Requires:       crate(tokio-1/sync) >= 1.50.0
 Provides:       crate(%{pkgname}/spawn-ready)
 
 %description -n %{name}+spawn-ready
@@ -277,7 +277,7 @@ This metapackage enables feature "sync_wrapper" for the Rust tower crate, by pul
 Summary:        Modular and reusable components for building robust clients and servers - feature "timeout"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/pin-project-lite)
-Requires:       crate(tokio-1.0/time) >= 1.50.0
+Requires:       crate(tokio-1/time) >= 1.50.0
 Provides:       crate(%{pkgname}/timeout)
 
 %description -n %{name}+timeout
@@ -286,7 +286,7 @@ This metapackage enables feature "timeout" for the Rust tower crate, by pulling 
 %package     -n %{name}+tokio
 Summary:        Modular and reusable components for building robust clients and servers - feature "tokio"
 Requires:       crate(%{pkgname})
-Requires:       crate(tokio-1.0/default) >= 1.50.0
+Requires:       crate(tokio-1/default) >= 1.50.0
 Provides:       crate(%{pkgname}/tokio)
 
 %description -n %{name}+tokio

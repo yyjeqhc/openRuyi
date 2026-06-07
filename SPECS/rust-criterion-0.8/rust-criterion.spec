@@ -35,8 +35,8 @@ Requires:       crate(regex-1/std) >= 1.12.3
 Requires:       crate(serde-1/default) >= 1.0.228
 Requires:       crate(serde-1/derive) >= 1.0.228
 Requires:       crate(serde-json-1/default) >= 1.0.149
-Requires:       crate(tinytemplate-1.0/default) >= 1.2.1
-Requires:       crate(walkdir-2.0/default) >= 2.5.0
+Requires:       crate(tinytemplate-1/default) >= 1.2.1
+Requires:       crate(walkdir-2/default) >= 2.5.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/async)
 Provides:       crate(%{pkgname}/cargo-bench-support)
@@ -70,7 +70,7 @@ This metapackage enables feature "async_smol" for the Rust criterion crate, by p
 Summary:        Statistics-driven micro-benchmarking library - feature "async_tokio"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/async)
-Requires:       crate(tokio-1.0/rt) >= 1.0.0
+Requires:       crate(tokio-1/rt) >= 1.0.0
 Provides:       crate(%{pkgname}/async-tokio)
 
 %description -n %{name}+async-tokio

@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(tap-1.0/default) >= 1.0.1
+Requires:       crate(tap-1/default) >= 1.0.1
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/default)

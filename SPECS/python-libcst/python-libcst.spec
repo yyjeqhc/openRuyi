@@ -31,7 +31,7 @@ BuildRequires:  crate(pyo3-0.26/extension-module) >= 0.26.0
 BuildRequires:  crate(quote-1/default)
 BuildRequires:  crate(regex-1/default) >= 1.11.2
 BuildRequires:  crate(syn-2/default)
-BuildRequires:  crate(thiserror-2.0/default) >= 2.0.12
+BuildRequires:  crate(thiserror-2/default) >= 2.0.12
 BuildRequires:  pkgconfig(python3)
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3dist(pip)

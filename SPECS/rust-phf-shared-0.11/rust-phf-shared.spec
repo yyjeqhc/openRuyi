@@ -42,7 +42,7 @@ This metapackage enables feature "uncased" for the Rust phf_shared crate, by pul
 %package     -n %{name}+unicase
 Summary:        Support code shared by PHF libraries - feature "unicase"
 Requires:       crate(%{pkgname})
-Requires:       crate(unicase-2.0/default) >= 2.4.0
+Requires:       crate(unicase-2/default) >= 2.4.0
 Provides:       crate(%{pkgname}/unicase)
 
 %description -n %{name}+unicase

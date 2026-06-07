@@ -24,7 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(console-0.15/ansi-parsing) >= 0.15.11
 Requires:       crate(number-prefix-0.4/default) >= 0.4.0
 Requires:       crate(portable-atomic-1.0/default) >= 1.13.0
-Requires:       crate(web-time-1.0/default) >= 1.1.0
+Requires:       crate(web-time-1/default) >= 1.1.0
 Provides:       crate(%{pkgname})
 
 %description
@@ -74,8 +74,8 @@ This metapackage enables feature "rayon" for the Rust indicatif crate, by pullin
 %package     -n %{name}+tokio
 Summary:        Progress bar and cli reporting library for Rust - feature "tokio"
 Requires:       crate(%{pkgname})
-Requires:       crate(tokio-1.0/default) >= 1.0.0
-Requires:       crate(tokio-1.0/io-util) >= 1.0.0
+Requires:       crate(tokio-1/default) >= 1.0.0
+Requires:       crate(tokio-1/io-util) >= 1.0.0
 Provides:       crate(%{pkgname}/tokio)
 
 %description -n %{name}+tokio
@@ -84,7 +84,7 @@ This metapackage enables feature "tokio" for the Rust indicatif crate, by pullin
 %package     -n %{name}+unicode-segmentation
 Summary:        Progress bar and cli reporting library for Rust - feature "unicode-segmentation"
 Requires:       crate(%{pkgname})
-Requires:       crate(unicode-segmentation-1.0/default) >= 1.0.0
+Requires:       crate(unicode-segmentation-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/unicode-segmentation)
 
 %description -n %{name}+unicode-segmentation

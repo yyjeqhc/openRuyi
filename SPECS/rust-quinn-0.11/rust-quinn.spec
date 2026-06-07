@@ -28,11 +28,11 @@ Requires:       crate(quinn-proto-0.11) >= 0.11.13
 Requires:       crate(quinn-udp-0.5/tracing) >= 0.5.14
 Requires:       crate(rustc-hash-2/default) >= 2.1.1
 Requires:       crate(socket2-0.6/default) >= 0.6.1
-Requires:       crate(thiserror-2.0/default) >= 2.0.17
-Requires:       crate(tokio-1.0/default) >= 1.49.0
-Requires:       crate(tokio-1.0/sync) >= 1.49.0
+Requires:       crate(thiserror-2/default) >= 2.0.17
+Requires:       crate(tokio-1/default) >= 1.49.0
+Requires:       crate(tokio-1/sync) >= 1.49.0
 Requires:       crate(tracing-0.1/std) >= 0.1.44
-Requires:       crate(web-time-1.0/default) >= 1.1.0
+Requires:       crate(web-time-1/default) >= 1.1.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/lock-tracking)
 
@@ -82,10 +82,10 @@ This metapackage enables feature "ring" for the Rust quinn crate, by pulling in 
 %package     -n %{name}+runtime-tokio
 Summary:        Versatile QUIC transport protocol implementation - feature "runtime-tokio"
 Requires:       crate(%{pkgname})
-Requires:       crate(tokio-1.0/net) >= 1.49.0
-Requires:       crate(tokio-1.0/rt) >= 1.49.0
-Requires:       crate(tokio-1.0/sync) >= 1.49.0
-Requires:       crate(tokio-1.0/time) >= 1.49.0
+Requires:       crate(tokio-1/net) >= 1.49.0
+Requires:       crate(tokio-1/rt) >= 1.49.0
+Requires:       crate(tokio-1/sync) >= 1.49.0
+Requires:       crate(tokio-1/time) >= 1.49.0
 Provides:       crate(%{pkgname}/runtime-tokio)
 
 %description -n %{name}+runtime-tokio

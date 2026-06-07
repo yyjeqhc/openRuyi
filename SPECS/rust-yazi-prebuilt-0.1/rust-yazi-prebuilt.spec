@@ -60,7 +60,7 @@ This metapackage enables feature "syntect" for the Rust yazi-prebuilt crate, by 
 %package     -n %{name}+walkdir
 Summary:        Used to place the pre-built assets of yazi (https://github.com/sxyazi/yazi) - feature "walkdir"
 Requires:       crate(%{pkgname})
-Requires:       crate(walkdir-2.0/default) >= 2.0.0
+Requires:       crate(walkdir-2/default) >= 2.0.0
 Provides:       crate(%{pkgname}/walkdir)
 
 %description -n %{name}+walkdir

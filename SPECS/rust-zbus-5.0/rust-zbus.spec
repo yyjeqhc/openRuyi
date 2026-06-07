@@ -39,7 +39,7 @@ Requires:       crate(serde-1/default) >= 1.0.228
 Requires:       crate(serde-1/derive) >= 1.0.228
 Requires:       crate(serde-repr-0.1/default) >= 0.1.20
 Requires:       crate(tracing-0.1/default) >= 0.1.44
-Requires:       crate(uds-windows-1.0/default) >= 1.2.1
+Requires:       crate(uds-windows-1/default) >= 1.2.1
 Requires:       crate(uuid-1.0/default) >= 1.23.1
 Requires:       crate(uuid-1.0/serde) >= 1.23.1
 Requires:       crate(windows-sys-0.61/default) >= 0.61.2
@@ -53,9 +53,9 @@ Requires:       crate(windows-sys-0.61/win32-system-io) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-system-memory) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-system-threading) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-system-windowsprogramming) >= 0.61.2
-Requires:       crate(winnow-1.0/default) >= 1.0.0
-Requires:       crate(zbus-macros-5.0/default) >= 5.15.0
-Requires:       crate(zbus-names-4.0/default) >= 4.3.2
+Requires:       crate(winnow-1/default) >= 1.0.0
+Requires:       crate(zbus-macros-5/default) >= 5.15.0
+Requires:       crate(zbus-names-4/default) >= 4.3.2
 Requires:       crate(zvariant-5.0/default) >= 5.10.1
 Requires:       crate(zvariant-5.0/enumflags2) >= 5.10.1
 Provides:       crate(%{pkgname})
@@ -127,7 +127,7 @@ This metapackage enables feature "blocking" for the Rust zbus crate, by pulling 
 %package     -n %{name}+blocking-api
 Summary:        API for D-Bus communication - feature "blocking-api"
 Requires:       crate(%{pkgname})
-Requires:       crate(zbus-macros-5.0/blocking-api) >= 5.15.0
+Requires:       crate(zbus-macros-5/blocking-api) >= 5.15.0
 Provides:       crate(%{pkgname}/blocking-api)
 
 %description -n %{name}+blocking-api
@@ -219,16 +219,16 @@ This metapackage enables feature "time" for the Rust zbus crate, by pulling in a
 %package     -n %{name}+tokio
 Summary:        API for D-Bus communication - feature "tokio"
 Requires:       crate(%{pkgname})
-Requires:       crate(tokio-1.0/default) >= 1.37.0
-Requires:       crate(tokio-1.0/fs) >= 1.37.0
-Requires:       crate(tokio-1.0/io-util) >= 1.37.0
-Requires:       crate(tokio-1.0/net) >= 1.37.0
-Requires:       crate(tokio-1.0/process) >= 1.37.0
-Requires:       crate(tokio-1.0/rt) >= 1.37.0
-Requires:       crate(tokio-1.0/rt-multi-thread) >= 1.37.0
-Requires:       crate(tokio-1.0/sync) >= 1.37.0
-Requires:       crate(tokio-1.0/time) >= 1.37.0
-Requires:       crate(tokio-1.0/tracing) >= 1.37.0
+Requires:       crate(tokio-1/default) >= 1.37.0
+Requires:       crate(tokio-1/fs) >= 1.37.0
+Requires:       crate(tokio-1/io-util) >= 1.37.0
+Requires:       crate(tokio-1/net) >= 1.37.0
+Requires:       crate(tokio-1/process) >= 1.37.0
+Requires:       crate(tokio-1/rt) >= 1.37.0
+Requires:       crate(tokio-1/rt-multi-thread) >= 1.37.0
+Requires:       crate(tokio-1/sync) >= 1.37.0
+Requires:       crate(tokio-1/time) >= 1.37.0
+Requires:       crate(tokio-1/tracing) >= 1.37.0
 Provides:       crate(%{pkgname}/tokio)
 
 %description -n %{name}+tokio

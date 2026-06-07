@@ -36,8 +36,8 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/std)
 Requires:       crate(anstream-0.6/default) >= 0.6.20
 Requires:       crate(anstyle-1/default) >= 1.0.11
-Requires:       crate(toml-parser-1.0/alloc) >= 1.0.10
-Requires:       crate(toml-parser-1.0/debug) >= 1.0.10
+Requires:       crate(toml-parser-1/alloc) >= 1.0.10
+Requires:       crate(toml-parser-1/debug) >= 1.0.10
 Provides:       crate(%{pkgname}/debug)
 
 %description -n %{name}+debug
@@ -60,7 +60,7 @@ This metapackage enables feature "default" for the Rust toml crate, by pulling i
 %package     -n %{name}+display
 Summary:        Native Rust encoder and decoder of TOML-formatted files and streams - feature "display"
 Requires:       crate(%{pkgname})
-Requires:       crate(toml-writer-1.0/alloc) >= 1.0.7
+Requires:       crate(toml-writer-1/alloc) >= 1.0.7
 Provides:       crate(%{pkgname}/display)
 
 %description -n %{name}+display
@@ -81,7 +81,7 @@ This metapackage enables feature "fast_hash" for the Rust toml crate, by pulling
 %package     -n %{name}+parse
 Summary:        Native Rust encoder and decoder of TOML-formatted files and streams - feature "parse"
 Requires:       crate(%{pkgname})
-Requires:       crate(toml-parser-1.0/alloc) >= 1.0.10
+Requires:       crate(toml-parser-1/alloc) >= 1.0.10
 Requires:       crate(winnow-0.7) >= 0.7.15
 Provides:       crate(%{pkgname}/parse)
 
@@ -124,10 +124,10 @@ Requires:       crate(serde-spanned-1/alloc) >= 1.0.4
 Requires:       crate(serde-spanned-1/std) >= 1.0.4
 Requires:       crate(toml-datetime-0.7/alloc) >= 0.7.5
 Requires:       crate(toml-datetime-0.7/std) >= 0.7.5
-Requires:       crate(toml-parser-1.0/alloc) >= 1.0.10
-Requires:       crate(toml-parser-1.0/std) >= 1.0.10
-Requires:       crate(toml-writer-1.0/alloc) >= 1.0.7
-Requires:       crate(toml-writer-1.0/std) >= 1.0.7
+Requires:       crate(toml-parser-1/alloc) >= 1.0.10
+Requires:       crate(toml-parser-1/std) >= 1.0.10
+Requires:       crate(toml-writer-1/alloc) >= 1.0.7
+Requires:       crate(toml-writer-1/std) >= 1.0.7
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std

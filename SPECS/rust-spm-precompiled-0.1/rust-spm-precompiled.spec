@@ -25,7 +25,7 @@ Requires:       crate(base64-0.13/default) >= 0.13.1
 Requires:       crate(nom-7/default) >= 7.1.3
 Requires:       crate(serde-1/default) >= 1.0.228
 Requires:       crate(serde-1/derive) >= 1.0.228
-Requires:       crate(unicode-segmentation-1.0/default) >= 1.12.0
+Requires:       crate(unicode-segmentation-1/default) >= 1.12.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

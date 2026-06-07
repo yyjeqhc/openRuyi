@@ -54,8 +54,8 @@ Requires:       crate(time-0.3/parsing) >= 0.3.47
 Requires:       crate(time-0.3/serde) >= 0.3.47
 Requires:       crate(toml-0.9/display) >= 0.9.12
 Requires:       crate(toml-0.9/serde) >= 0.9.12
-Requires:       crate(url-2.0/default) >= 2.5.8
-Requires:       crate(walkdir-2.0/default) >= 2.5.0
+Requires:       crate(url-2/default) >= 2.5.8
+Requires:       crate(walkdir-2/default) >= 2.5.0
 Requires:       crate(windows-sys-0.60/default) >= 0.60.2
 Requires:       crate(windows-sys-0.60/win32-storage-filesystem) >= 0.60.2
 Provides:       crate(%{pkgname})

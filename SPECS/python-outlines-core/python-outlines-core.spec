@@ -36,7 +36,7 @@ BuildRequires:  crate(regex-automata-0.4) >= 0.4.9
 BuildRequires:  crate(rustc-hash-2) >= 2.1.0
 BuildRequires:  crate(serde-1) >= 1.0.0
 BuildRequires:  crate(serde-json-1) >= 1.0.0
-BuildRequires:  crate(thiserror-2.0) >= 2.0.0
+BuildRequires:  crate(thiserror-2) >= 2.0.0
 BuildRequires:  crate(pyo3-0.27) >= 0.27.0
 BuildRequires:  crate(js-sys-0.3)
 BuildRequires:  =

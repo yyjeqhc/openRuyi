@@ -235,7 +235,7 @@ This metapackage enables feature "tui-react" for the Rust prodash crate, by pull
 %package     -n %{name}+unicode-segmentation
 Summary:        Dashboard for visualizing progress of asynchronous and possibly blocking tasks - feature "unicode-segmentation"
 Requires:       crate(%{pkgname})
-Requires:       crate(unicode-segmentation-1.0/default) >= 1.6.0
+Requires:       crate(unicode-segmentation-1/default) >= 1.6.0
 Provides:       crate(%{pkgname}/unicode-segmentation)
 
 %description -n %{name}+unicode-segmentation
