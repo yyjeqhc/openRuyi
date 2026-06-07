@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(autocfg-1.0/default) >= 1.5.0
+Requires:       crate(autocfg-1/default) >= 1.5.0
 Requires:       crate(num-integer-0.1/i128) >= 0.1.46
 Requires:       crate(num-traits-0.2/i128) >= 0.2.19
 Provides:       crate(num-iter) = %{version}

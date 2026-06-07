@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitflags-2.0) >= 2.11.1
+Requires:       crate(bitflags-2) >= 2.11.1
 Requires:       crate(libc-0.2/default) >= 0.2.186
 Provides:       crate(kqueue-sys) = %{version}
 Provides:       crate(%{pkgname})

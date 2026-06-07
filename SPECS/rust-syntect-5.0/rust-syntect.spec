@@ -35,7 +35,7 @@ Source code for takopackized Rust crate "syntect"
 %package     -n %{name}+bincode
 Summary:        High quality syntax highlighting and code intelligence using Sublime Text's grammars - feature "bincode"
 Requires:       crate(%{pkgname})
-Requires:       crate(bincode-1.0/default) >= 1.3.3
+Requires:       crate(bincode-1/default) >= 1.3.3
 Provides:       crate(%{pkgname}/bincode)
 
 %description -n %{name}+bincode

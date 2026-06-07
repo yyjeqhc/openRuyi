@@ -177,7 +177,7 @@ This metapackage enables feature "CTTypesetter" for the Rust objc2-core-text cra
 %package     -n %{name}+bitflags
 Summary:        Bindings to the CoreText framework - feature "bitflags" and 2 more
 Requires:       crate(%{pkgname})
-Requires:       crate(bitflags-2.0/std) >= 2.11.0
+Requires:       crate(bitflags-2/std) >= 2.11.0
 Provides:       crate(%{pkgname}/bitflags)
 Provides:       crate(%{pkgname}/ctfonttraits)
 Provides:       crate(%{pkgname}/ctstringattributes)

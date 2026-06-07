@@ -168,7 +168,7 @@ Source code for takopackized Rust crate "objc2-foundation"
 %package     -n %{name}+bitflags
 Summary:        Bindings to the Foundation framework - feature "bitflags" and 37 more
 Requires:       crate(%{pkgname})
-Requires:       crate(bitflags-2.0/std) >= 2.11.0
+Requires:       crate(bitflags-2/std) >= 2.11.0
 Provides:       crate(%{pkgname}/bitflags)
 Provides:       crate(%{pkgname}/nsappleeventdescriptor)
 Provides:       crate(%{pkgname}/nsarray)

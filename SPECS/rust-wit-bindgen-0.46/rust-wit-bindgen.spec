@@ -46,7 +46,7 @@ This metapackage enables feature "async" for the Rust wit-bindgen crate, by pull
 %package     -n %{name}+bitflags
 Summary:        Rust bindings generator and runtime support for WIT and the component model - feature "bitflags"
 Requires:       crate(%{pkgname})
-Requires:       crate(bitflags-2.0/default) >= 2.3.3
+Requires:       crate(bitflags-2/default) >= 2.3.3
 Provides:       crate(%{pkgname}/bitflags)
 
 %description -n %{name}+bitflags

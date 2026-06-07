@@ -2637,7 +2637,7 @@ This metapackage enables feature "UIWritingToolsCoordinatorContext" for the Rust
 %package     -n %{name}+bitflags
 Summary:        Bindings to the UIKit framework - feature "bitflags" and 3 more
 Requires:       crate(%{pkgname})
-Requires:       crate(bitflags-2.0/std) >= 2.11.0
+Requires:       crate(bitflags-2/std) >= 2.11.0
 Provides:       crate(%{pkgname}/bitflags)
 Provides:       crate(%{pkgname}/uidatadetectors)
 Provides:       crate(%{pkgname}/uiorientation)

@@ -23,7 +23,7 @@ Source code for takopackized Rust crate "libredox"
 %package     -n %{name}+bitflags
 Summary:        Redox stable ABI - feature "bitflags"
 Requires:       crate(%{pkgname})
-Requires:       crate(bitflags-2.0/default) >= 2.0.0
+Requires:       crate(bitflags-2/default) >= 2.0.0
 Provides:       crate(%{pkgname}/bitflags)
 
 %description -n %{name}+bitflags

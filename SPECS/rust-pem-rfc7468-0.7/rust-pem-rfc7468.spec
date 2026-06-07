@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(base64ct-1.0/default) >= 1.8.3
+Requires:       crate(base64ct-1/default) >= 1.8.3
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 
@@ -32,7 +32,7 @@ Source code for takopackized Rust crate "pem-rfc7468"
 %package     -n %{name}+alloc
 Summary:        PEM Encoding (RFC 7468) for PKIX, PKCS, and CMS Structures, implementing a strict subset of the original Privacy-Enhanced Mail encoding intended specifically for use with cryptographic keys, certificates, and other messages - feature "alloc"
 Requires:       crate(%{pkgname})
-Requires:       crate(base64ct-1.0/alloc) >= 1.8.3
+Requires:       crate(base64ct-1/alloc) >= 1.8.3
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -43,7 +43,7 @@ This metapackage enables feature "alloc" for the Rust pem-rfc7468 crate, by pull
 Summary:        PEM Encoding (RFC 7468) for PKIX, PKCS, and CMS Structures, implementing a strict subset of the original Privacy-Enhanced Mail encoding intended specifically for use with cryptographic keys, certificates, and other messages - feature "std"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(base64ct-1.0/std) >= 1.8.3
+Requires:       crate(base64ct-1/std) >= 1.8.3
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std

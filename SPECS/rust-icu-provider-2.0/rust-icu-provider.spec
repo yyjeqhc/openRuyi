@@ -72,7 +72,7 @@ Summary:        Trait and struct definitions for the ICU data provider - feature
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/serde)
 Requires:       crate(%{pkgname}/std)
-Requires:       crate(bincode-1.0/default) >= 1.3.1
+Requires:       crate(bincode-1/default) >= 1.3.1
 Provides:       crate(%{pkgname}/deserialize-bincode-1)
 
 %description -n %{name}+deserialize-bincode-1

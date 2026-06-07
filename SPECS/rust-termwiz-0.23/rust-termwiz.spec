@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(anyhow-1/default) >= 1.0.102
 Requires:       crate(base64-0.22/default) >= 0.22.1
-Requires:       crate(bitflags-2.0/default) >= 2.11.1
+Requires:       crate(bitflags-2/default) >= 2.11.1
 Requires:       crate(fancy-regex-0.11/default) >= 0.11.0
 Requires:       crate(filedescriptor-0.8/default) >= 0.8.3
 Requires:       crate(finl-unicode-1.0/default) >= 1.4.0
@@ -130,7 +130,7 @@ This metapackage enables feature "serde" for the Rust termwiz crate, by pulling 
 Summary:        Terminal Wizardry for Unix and Windows - feature "use_serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/serde)
-Requires:       crate(bitflags-2.0/serde) >= 2.11.1
+Requires:       crate(bitflags-2/serde) >= 2.11.1
 Requires:       crate(wezterm-blob-leases-0.1/serde) >= 0.1.1
 Requires:       crate(wezterm-color-types-0.3/use-serde) >= 0.3.0
 Requires:       crate(wezterm-input-types-0.1/serde) >= 0.1.0

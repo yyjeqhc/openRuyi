@@ -20,7 +20,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitflags-2.0/default) >= 2.11.1
+Requires:       crate(bitflags-2/default) >= 2.11.1
 Requires:       crate(ignore-0.4/default) >= 0.4.25
 Requires:       crate(walkdir-2.0/default) >= 2.5.0
 Provides:       crate(%{pkgname})

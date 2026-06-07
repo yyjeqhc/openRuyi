@@ -33,7 +33,7 @@ Source code for takopackized Rust crate "spki"
 %package     -n %{name}+alloc
 Summary:        X.509 Subject Public Key Info (RFC5280) describing public keys as well as their associated AlgorithmIdentifiers (i.e - feature "alloc"
 Requires:       crate(%{pkgname})
-Requires:       crate(base64ct-1.0/alloc) >= 1.8.3
+Requires:       crate(base64ct-1/alloc) >= 1.8.3
 Requires:       crate(der-0.7/alloc) >= 0.7.10
 Requires:       crate(der-0.7/oid) >= 0.7.10
 Provides:       crate(%{pkgname}/alloc)
@@ -59,7 +59,7 @@ This metapackage enables feature "arbitrary" for the Rust spki crate, by pulling
 %package     -n %{name}+base64
 Summary:        X.509 Subject Public Key Info (RFC5280) describing public keys as well as their associated AlgorithmIdentifiers (i.e - feature "base64"
 Requires:       crate(%{pkgname})
-Requires:       crate(base64ct-1.0) >= 1.8.3
+Requires:       crate(base64ct-1) >= 1.8.3
 Provides:       crate(%{pkgname}/base64)
 
 %description -n %{name}+base64

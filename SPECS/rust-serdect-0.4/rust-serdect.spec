@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(base16ct-1.0) >= 1.0.0
+Requires:       crate(base16ct-1) >= 1.0.0
 Requires:       crate(serde-1) >= 1.0.228
 Provides:       crate(serdect) = %{version}
 Provides:       crate(%{pkgname})
@@ -33,7 +33,7 @@ Source code for takopackized Rust crate "serdect"
 %package     -n %{name}+alloc
 Summary:        Constant-time serde serializer/deserializer helpers for data that potentially contains secrets (e.g - feature "alloc" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(base16ct-1.0/alloc) >= 1.0.0
+Requires:       crate(base16ct-1/alloc) >= 1.0.0
 Requires:       crate(serde-1/alloc) >= 1.0.228
 Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/default)

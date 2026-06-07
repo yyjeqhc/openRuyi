@@ -31,7 +31,7 @@ Source code for takopackized Rust crate "ssh-encoding"
 %package     -n %{name}+alloc
 Summary:        Pure Rust implementation of SSH data type decoders/encoders as described in RFC4251 - feature "alloc"
 Requires:       crate(%{pkgname})
-Requires:       crate(base64ct-1.0/alloc) >= 1.8.3
+Requires:       crate(base64ct-1/alloc) >= 1.8.3
 Requires:       crate(pem-rfc7468-0.7/alloc) >= 0.7.0
 Provides:       crate(%{pkgname}/alloc)
 
@@ -41,7 +41,7 @@ This metapackage enables feature "alloc" for the Rust ssh-encoding crate, by pul
 %package     -n %{name}+base64
 Summary:        Pure Rust implementation of SSH data type decoders/encoders as described in RFC4251 - feature "base64"
 Requires:       crate(%{pkgname})
-Requires:       crate(base64ct-1.0/default) >= 1.8.3
+Requires:       crate(base64ct-1/default) >= 1.8.3
 Provides:       crate(%{pkgname}/base64)
 
 %description -n %{name}+base64
@@ -80,7 +80,7 @@ This metapackage enables feature "sha2" for the Rust ssh-encoding crate, by pull
 Summary:        Pure Rust implementation of SSH data type decoders/encoders as described in RFC4251 - feature "std"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(base64ct-1.0/std) >= 1.8.3
+Requires:       crate(base64ct-1/std) >= 1.8.3
 Requires:       crate(pem-rfc7468-0.7/std) >= 0.7.0
 Requires:       crate(sha2-0.10/std) >= 0.10.9
 Provides:       crate(%{pkgname}/std)

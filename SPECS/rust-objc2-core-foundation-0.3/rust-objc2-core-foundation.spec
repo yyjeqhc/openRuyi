@@ -64,7 +64,7 @@ Source code for takopackized Rust crate "objc2-core-foundation"
 %package     -n %{name}+bitflags
 Summary:        Bindings to the CoreFoundation framework - feature "bitflags" and 15 more
 Requires:       crate(%{pkgname})
-Requires:       crate(bitflags-2.0/std) >= 2.11.0
+Requires:       crate(bitflags-2/std) >= 2.11.0
 Provides:       crate(%{pkgname}/bitflags)
 Provides:       crate(%{pkgname}/cfcalendar)
 Provides:       crate(%{pkgname}/cfdata)

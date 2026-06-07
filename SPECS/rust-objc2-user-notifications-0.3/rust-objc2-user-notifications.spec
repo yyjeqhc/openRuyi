@@ -174,7 +174,7 @@ This metapackage enables feature "UNUserNotificationCenter" for the Rust objc2-u
 %package     -n %{name}+bitflags
 Summary:        Bindings to the UserNotifications framework - feature "bitflags"
 Requires:       crate(%{pkgname})
-Requires:       crate(bitflags-2.0/std) >= 2.5.0
+Requires:       crate(bitflags-2/std) >= 2.5.0
 Provides:       crate(%{pkgname}/bitflags)
 
 %description -n %{name}+bitflags

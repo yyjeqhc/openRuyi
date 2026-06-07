@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitflags-2.0/default) >= 2.11.1
+Requires:       crate(bitflags-2/default) >= 2.11.1
 Requires:       crate(compact-str-0.9) >= 0.9.0
 Requires:       crate(hashbrown-0.16/default) >= 0.16.1
 Requires:       crate(indoc-2.0/default) >= 2.0.7
@@ -88,7 +88,7 @@ This metapackage enables feature "portable-atomic" for the Rust ratatui-core cra
 Summary:        Core types and traits for the Ratatui Terminal UI library - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/std)
-Requires:       crate(bitflags-2.0/serde) >= 2.11.1
+Requires:       crate(bitflags-2/serde) >= 2.11.1
 Requires:       crate(compact-str-0.9/serde) >= 0.9.0
 Requires:       crate(serde-1/default) >= 1.0.228
 Requires:       crate(serde-1/derive) >= 1.0.228

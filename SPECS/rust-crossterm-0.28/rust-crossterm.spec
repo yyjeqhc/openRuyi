@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitflags-2.0/default) >= 2.11.1
+Requires:       crate(bitflags-2/default) >= 2.11.1
 Requires:       crate(parking-lot-0.12/default) >= 0.12.5
 Requires:       crate(rustix-0.38/std) >= 0.38.44
 Requires:       crate(rustix-0.38/stdio) >= 0.38.44
@@ -88,7 +88,7 @@ This metapackage enables feature "libc" for the Rust crossterm crate, by pulling
 %package     -n %{name}+serde
 Summary:        Crossplatform terminal library for manipulating terminals - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(bitflags-2.0/serde) >= 2.11.1
+Requires:       crate(bitflags-2/serde) >= 2.11.1
 Requires:       crate(serde-1/default) >= 1.0.228
 Requires:       crate(serde-1/derive) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)

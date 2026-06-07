@@ -29,7 +29,7 @@ Source code for takopackized Rust crate "prodash"
 %package     -n %{name}+async-io
 Summary:        Dashboard for visualizing progress of asynchronous and possibly blocking tasks - feature "async-io"
 Requires:       crate(%{pkgname})
-Requires:       crate(async-io-2.0/default) >= 2.2.1
+Requires:       crate(async-io-2/default) >= 2.2.1
 Provides:       crate(%{pkgname}/async-io)
 
 %description -n %{name}+async-io

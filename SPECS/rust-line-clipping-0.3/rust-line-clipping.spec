@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitflags-2.0/default) >= 2.11.1
+Requires:       crate(bitflags-2/default) >= 2.11.1
 Provides:       crate(line-clipping) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

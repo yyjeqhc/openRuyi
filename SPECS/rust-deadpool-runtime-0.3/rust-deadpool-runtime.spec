@@ -41,7 +41,7 @@ This metapackage enables feature "async-std_1" for the Rust deadpool-runtime cra
 %package     -n %{name}+smol-2
 Summary:        Dead simple async pool utilities for async runtimes - feature "smol_2"
 Requires:       crate(%{pkgname})
-Requires:       crate(async-io-2.0/default) >= 2.0.0
+Requires:       crate(async-io-2/default) >= 2.0.0
 Requires:       crate(blocking-1.0/default) >= 1.6
 Requires:       crate(futures-lite-2.0/default) >= 2.6
 Provides:       crate(%{pkgname}/smol-2)

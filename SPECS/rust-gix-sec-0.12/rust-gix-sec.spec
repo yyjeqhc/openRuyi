@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitflags-2.0/default) >= 2.11.0
+Requires:       crate(bitflags-2/default) >= 2.11.0
 Requires:       crate(gix-path-0.10/default) >= 0.10.22
 Requires:       crate(libc-0.2/default) >= 0.2.184
 Requires:       crate(windows-sys-0.61/default) >= 0.61.2
@@ -48,7 +48,7 @@ This metapackage enables feature "document-features" for the Rust gix-sec crate,
 %package     -n %{name}+serde
 Summary:        The gitoxide project providing a shared trust model - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(bitflags-2.0/serde) >= 2.11.0
+Requires:       crate(bitflags-2/serde) >= 2.11.0
 Requires:       crate(serde-1/derive) >= 1.0.114
 Requires:       crate(serde-1/std) >= 1.0.114
 Provides:       crate(%{pkgname}/serde)

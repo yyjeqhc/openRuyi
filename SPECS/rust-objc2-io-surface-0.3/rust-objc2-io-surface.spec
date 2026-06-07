@@ -35,7 +35,7 @@ Source code for takopackized Rust crate "objc2-io-surface"
 %package     -n %{name}+bitflags
 Summary:        Bindings to the IOSurface framework - feature "bitflags" and 2 more
 Requires:       crate(%{pkgname})
-Requires:       crate(bitflags-2.0/std) >= 2.11.0
+Requires:       crate(bitflags-2/std) >= 2.11.0
 Provides:       crate(%{pkgname}/bitflags)
 Provides:       crate(%{pkgname}/iosurfaceref)
 Provides:       crate(%{pkgname}/iosurfacetypes)

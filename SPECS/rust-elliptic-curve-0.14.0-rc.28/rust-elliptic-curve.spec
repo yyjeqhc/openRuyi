@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(base16ct-1.0/default) >= 1.0.0
+Requires:       crate(base16ct-1/default) >= 1.0.0
 Requires:       crate(crypto-bigint-0.7.0-rc.28/hybrid-array) >= 0.7.0-rc.28
 Requires:       crate(crypto-bigint-0.7.0-rc.28/rand-core) >= 0.7.0-rc.28
 Requires:       crate(crypto-bigint-0.7.0-rc.28/subtle) >= 0.7.0-rc.28
@@ -41,7 +41,7 @@ Source code for takopackized Rust crate "elliptic-curve"
 %package     -n %{name}+alloc
 Summary:        General purpose Elliptic Curve Cryptography (ECC) support, including types and traits for representing various elliptic curve forms, scalars, points, and public/secret keys composed thereof - feature "alloc"
 Requires:       crate(%{pkgname})
-Requires:       crate(base16ct-1.0/alloc) >= 1.0.0
+Requires:       crate(base16ct-1/alloc) >= 1.0.0
 Requires:       crate(hybrid-array-0.4/alloc) >= 0.4.11
 Requires:       crate(hybrid-array-0.4/zeroize) >= 0.4.11
 Requires:       crate(pkcs8-0.11.0-rc.11/alloc) >= 0.11.0-rc.11

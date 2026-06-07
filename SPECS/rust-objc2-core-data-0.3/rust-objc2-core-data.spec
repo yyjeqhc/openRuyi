@@ -640,7 +640,7 @@ This metapackage enables feature "NSStagedMigrationManager" for the Rust objc2-c
 %package     -n %{name}+bitflags
 Summary:        Bindings to the CoreData framework - feature "bitflags"
 Requires:       crate(%{pkgname})
-Requires:       crate(bitflags-2.0/std) >= 2.5.0
+Requires:       crate(bitflags-2/std) >= 2.5.0
 Provides:       crate(%{pkgname}/bitflags)
 
 %description -n %{name}+bitflags

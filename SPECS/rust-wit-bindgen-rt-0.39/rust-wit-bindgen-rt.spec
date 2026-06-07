@@ -40,7 +40,7 @@ This metapackage enables feature "async" for the Rust wit-bindgen-rt crate, by p
 %package     -n %{name}+bitflags
 Summary:        Runtime support for the `wit-bindgen` crate - feature "bitflags"
 Requires:       crate(%{pkgname})
-Requires:       crate(bitflags-2.0/default) >= 2.9.1
+Requires:       crate(bitflags-2/default) >= 2.9.1
 Provides:       crate(%{pkgname}/bitflags)
 
 %description -n %{name}+bitflags

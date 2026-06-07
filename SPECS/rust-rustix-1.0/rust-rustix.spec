@@ -15,7 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitflags-2.0) >= 2.11.1
+Requires:       crate(bitflags-2) >= 2.11.1
 Requires:       crate(errno-0.3) >= 0.3.14
 Requires:       crate(libc-0.2) >= 0.2.186
 Requires:       crate(linux-raw-sys-0.12/auxvec) >= 0.12.1
@@ -166,7 +166,7 @@ Summary:        Safe Rust bindings to POSIX/Unix/Linux/Winsock-like syscalls - f
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/core)
 Requires:       crate(%{pkgname}/rustc-std-workspace-alloc)
-Requires:       crate(bitflags-2.0/rustc-dep-of-std) >= 2.11.1
+Requires:       crate(bitflags-2/rustc-dep-of-std) >= 2.11.1
 Requires:       crate(linux-raw-sys-0.12/auxvec) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/elf) >= 0.12.1
 Requires:       crate(linux-raw-sys-0.12/errno) >= 0.12.1
@@ -192,7 +192,7 @@ This metapackage enables feature "rustc-std-workspace-alloc" for the Rust rustix
 Summary:        Safe Rust bindings to POSIX/Unix/Linux/Winsock-like syscalls - feature "std" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(bitflags-2.0/std) >= 2.11.1
+Requires:       crate(bitflags-2/std) >= 2.11.1
 Requires:       crate(errno-0.3/std) >= 0.3.14
 Requires:       crate(libc-0.2/std) >= 0.2.186
 Provides:       crate(%{pkgname}/default)

@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitflags-2.0/default) >= 2.11.0
+Requires:       crate(bitflags-2/default) >= 2.11.0
 Requires:       crate(fallible-iterator-0.3/default) >= 0.3.0
 Requires:       crate(fallible-streaming-iterator-0.1/default) >= 0.1.9
 Requires:       crate(hashlink-0.10/default) >= 0.10.0

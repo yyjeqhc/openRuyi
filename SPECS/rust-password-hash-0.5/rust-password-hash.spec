@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(base64ct-1.0/default) >= 1.8.3
+Requires:       crate(base64ct-1/default) >= 1.8.3
 Requires:       crate(subtle-2.0) >= 2.6.1
 Provides:       crate(password-hash) = %{version}
 Provides:       crate(%{pkgname})
@@ -33,7 +33,7 @@ Source code for takopackized Rust crate "password-hash"
 %package     -n %{name}+alloc
 Summary:        Traits which describe the functionality of password hashing algorithms, as well as a `no_std`-friendly implementation of the PHC string format (a well-defined subset of the Modular Crypt Format a.k.a - feature "alloc"
 Requires:       crate(%{pkgname})
-Requires:       crate(base64ct-1.0/alloc) >= 1.8.3
+Requires:       crate(base64ct-1/alloc) >= 1.8.3
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -67,7 +67,7 @@ Additionally, this package also provides the "default" feature.
 Summary:        Traits which describe the functionality of password hashing algorithms, as well as a `no_std`-friendly implementation of the PHC string format (a well-defined subset of the Modular Crypt Format a.k.a - feature "std"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(base64ct-1.0/std) >= 1.8.3
+Requires:       crate(base64ct-1/std) >= 1.8.3
 Requires:       crate(rand-core-0.6/std) >= 0.6.4
 Provides:       crate(%{pkgname}/std)
 

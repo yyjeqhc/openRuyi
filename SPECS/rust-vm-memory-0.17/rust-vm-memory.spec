@@ -51,7 +51,7 @@ Additionally, this package also provides the "backend-mmap" feature.
 %package     -n %{name}+bitflags
 Summary:        Safe abstractions for accessing the VM physical memory - feature "bitflags"
 Requires:       crate(%{pkgname})
-Requires:       crate(bitflags-2.0/default) >= 2.4.0
+Requires:       crate(bitflags-2/default) >= 2.4.0
 Provides:       crate(%{pkgname}/bitflags)
 
 %description -n %{name}+bitflags

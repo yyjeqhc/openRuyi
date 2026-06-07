@@ -15,7 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(atomic-waker-1.0/default) >= 1.1.2
+Requires:       crate(atomic-waker-1/default) >= 1.1.2
 Requires:       crate(fastrand-2.0) >= 2.4.1
 Provides:       crate(%{pkgname})
 
@@ -36,7 +36,7 @@ Summary:        Asynchronous single-consumer single-producer pipe for bytes - fe
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/portable-atomic-crate)
 Requires:       crate(%{pkgname}/portable-atomic-util)
-Requires:       crate(atomic-waker-1.0/portable-atomic) >= 1.1.2
+Requires:       crate(atomic-waker-1/portable-atomic) >= 1.1.2
 Provides:       crate(%{pkgname}/portable-atomic)
 
 %description -n %{name}+portable-atomic

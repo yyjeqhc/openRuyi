@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitflags-2.0/default) >= 2.11.0
+Requires:       crate(bitflags-2/default) >= 2.11.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
@@ -43,7 +43,7 @@ This metapackage enables feature "core" for the Rust redox_syscall crate, by pul
 Summary:        Access raw Redox system calls - feature "rustc-dep-of-std"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/core)
-Requires:       crate(bitflags-2.0/rustc-dep-of-std) >= 2.11.0
+Requires:       crate(bitflags-2/rustc-dep-of-std) >= 2.11.0
 Provides:       crate(%{pkgname}/rustc-dep-of-std)
 
 %description -n %{name}+rustc-dep-of-std

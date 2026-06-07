@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitflags-2.0/default) >= 2.11.1
+Requires:       crate(bitflags-2/default) >= 2.11.1
 Provides:       crate(notify-types) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
@@ -33,7 +33,7 @@ Source code for takopackized Rust crate "notify-types"
 %package     -n %{name}+serde
 Summary:        Types used by the notify crate - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(bitflags-2.0/serde) >= 2.11.1
+Requires:       crate(bitflags-2/serde) >= 2.11.1
 Requires:       crate(serde-1/default) >= 1.0.89
 Requires:       crate(serde-1/derive) >= 1.0.89
 Provides:       crate(%{pkgname}/serde)

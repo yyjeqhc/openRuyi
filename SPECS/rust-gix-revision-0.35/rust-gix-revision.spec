@@ -65,7 +65,7 @@ This metapackage enables feature "document-features" for the Rust gix-revision c
 %package     -n %{name}+merge-base
 Summary:        The gitoxide project dealing with finding names for revisions and parsing specifications - feature "merge_base"
 Requires:       crate(%{pkgname})
-Requires:       crate(bitflags-2.0/default) >= 2.11.0
+Requires:       crate(bitflags-2/default) >= 2.11.0
 Requires:       crate(gix-trace-0.1/default) >= 0.1.18
 Provides:       crate(%{pkgname}/merge-base)
 

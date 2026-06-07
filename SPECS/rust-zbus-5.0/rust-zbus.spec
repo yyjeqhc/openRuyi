@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(async-broadcast-0.7/default) >= 0.7.2
-Requires:       crate(async-recursion-1.0/default) >= 1.1.1
+Requires:       crate(async-recursion-1/default) >= 1.1.1
 Requires:       crate(async-trait-0.1/default) >= 0.1.89
 Requires:       crate(enumflags2-0.7/default) >= 0.7.12
 Requires:       crate(enumflags2-0.7/serde) >= 0.7.12
@@ -67,7 +67,7 @@ Source code for takopackized Rust crate "zbus"
 %package     -n %{name}+async-executor
 Summary:        API for D-Bus communication - feature "async-executor"
 Requires:       crate(%{pkgname})
-Requires:       crate(async-executor-1.0/default) >= 1.14.0
+Requires:       crate(async-executor-1/default) >= 1.14.0
 Provides:       crate(%{pkgname}/async-executor)
 
 %description -n %{name}+async-executor
@@ -82,7 +82,7 @@ Requires:       crate(%{pkgname}/async-lock)
 Requires:       crate(%{pkgname}/async-process)
 Requires:       crate(%{pkgname}/async-task)
 Requires:       crate(%{pkgname}/blocking)
-Requires:       crate(async-io-2.0/default) >= 2.6.0
+Requires:       crate(async-io-2/default) >= 2.6.0
 Provides:       crate(%{pkgname}/async-io)
 
 %description -n %{name}+async-io
@@ -100,7 +100,7 @@ This metapackage enables feature "async-lock" for the Rust zbus crate, by pullin
 %package     -n %{name}+async-process
 Summary:        API for D-Bus communication - feature "async-process"
 Requires:       crate(%{pkgname})
-Requires:       crate(async-process-2.0/default) >= 2.5.0
+Requires:       crate(async-process-2/default) >= 2.5.0
 Provides:       crate(%{pkgname}/async-process)
 
 %description -n %{name}+async-process
@@ -109,7 +109,7 @@ This metapackage enables feature "async-process" for the Rust zbus crate, by pul
 %package     -n %{name}+async-task
 Summary:        API for D-Bus communication - feature "async-task"
 Requires:       crate(%{pkgname})
-Requires:       crate(async-task-4.0/default) >= 4.7.1
+Requires:       crate(async-task-4/default) >= 4.7.1
 Provides:       crate(%{pkgname}/async-task)
 
 %description -n %{name}+async-task
@@ -267,7 +267,7 @@ This metapackage enables feature "uuid" for the Rust zbus crate, by pulling in a
 %package     -n %{name}+vsock
 Summary:        API for D-Bus communication - feature "vsock"
 Requires:       crate(%{pkgname})
-Requires:       crate(async-io-2.0/default) >= 2.6.0
+Requires:       crate(async-io-2/default) >= 2.6.0
 Requires:       crate(vsock-0.5/default) >= 0.5.0
 Provides:       crate(%{pkgname}/vsock)
 

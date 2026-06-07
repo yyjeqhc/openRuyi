@@ -16,7 +16,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(async-channel-2/default) >= 2.5.0
-Requires:       crate(async-task-4.0/default) >= 4.7.1
+Requires:       crate(async-task-4/default) >= 4.7.1
 Requires:       crate(futures-io-0.3/std) >= 0.3.32
 Requires:       crate(futures-lite-2.0) >= 2.6.1
 Requires:       crate(piper-0.2/default) >= 0.2.5

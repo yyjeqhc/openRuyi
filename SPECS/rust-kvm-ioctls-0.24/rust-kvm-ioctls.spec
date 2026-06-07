@@ -15,7 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitflags-2.0/default) >= 2.11.1
+Requires:       crate(bitflags-2/default) >= 2.11.1
 Requires:       crate(kvm-bindings-0.14/default) >= 0.14.0
 Requires:       crate(kvm-bindings-0.14/fam-wrappers) >= 0.14.0
 Requires:       crate(libc-0.2/default) >= 0.2.186

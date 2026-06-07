@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(base16ct-1.0/default) >= 1.0.0
+Requires:       crate(base16ct-1/default) >= 1.0.0
 Requires:       crate(elliptic-curve-0.14.0-rc.28/sec1) >= 0.14.0-rc.28
 Provides:       crate(p521) = %{version}
 Provides:       crate(%{pkgname})

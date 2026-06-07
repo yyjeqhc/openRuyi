@@ -72,7 +72,7 @@ This metapackage enables feature "full" for the Rust hyper crate, by pulling in 
 %package     -n %{name}+http1
 Summary:        Protective and efficient HTTP library for all - feature "http1"
 Requires:       crate(%{pkgname})
-Requires:       crate(atomic-waker-1.0/default) >= 1.1.2
+Requires:       crate(atomic-waker-1/default) >= 1.1.2
 Requires:       crate(futures-channel-0.3/default) >= 0.3.32
 Requires:       crate(futures-core-0.3/default) >= 0.3.32
 Requires:       crate(httparse-1.0/default) >= 1.10.1

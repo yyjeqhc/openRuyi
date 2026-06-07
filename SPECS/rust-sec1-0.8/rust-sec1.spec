@@ -82,7 +82,7 @@ This metapackage enables feature "pem" for the Rust sec1 crate, by pulling in an
 %package     -n %{name}+point
 Summary:        Pure Rust implementation of SEC1: Elliptic Curve Cryptography encoding formats including ASN.1 DER encoded private keys as well as the Elliptic-Curve-Point-to-Octet-String encoding - feature "point"
 Requires:       crate(%{pkgname})
-Requires:       crate(base16ct-1.0) >= 1.0.0
+Requires:       crate(base16ct-1) >= 1.0.0
 Requires:       crate(hybrid-array-0.4) >= 0.4.11
 Provides:       crate(%{pkgname}/point)
 

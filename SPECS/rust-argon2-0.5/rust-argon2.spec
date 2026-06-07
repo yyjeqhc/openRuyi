@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(base64ct-1.0/default) >= 1.8.3
+Requires:       crate(base64ct-1/default) >= 1.8.3
 Requires:       crate(blake2-0.10) >= 0.10.6
 Requires:       crate(cpufeatures-0.2/default) >= 0.2.17
 Provides:       crate(argon2) = %{version}

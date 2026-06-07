@@ -207,7 +207,7 @@ This metapackage enables feature "CATransform3D" for the Rust objc2-quartz-core 
 %package     -n %{name}+bitflags
 Summary:        Bindings to the QuartzCore/CoreAnimation framework - feature "bitflags"
 Requires:       crate(%{pkgname})
-Requires:       crate(bitflags-2.0/std) >= 2.11.0
+Requires:       crate(bitflags-2/std) >= 2.11.0
 Provides:       crate(%{pkgname}/bitflags)
 
 %description -n %{name}+bitflags

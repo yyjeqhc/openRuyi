@@ -48,7 +48,7 @@ This metapackage enables feature "arbitrary" for the Rust smallvec crate, by pul
 %package     -n %{name}+bincode
 Summary:        'Small vector' optimization: store up to a small number of items on the stack - feature "bincode"
 Requires:       crate(%{pkgname})
-Requires:       crate(bincode-2.0) >= 2.0.0
+Requires:       crate(bincode-2) >= 2.0.0
 Provides:       crate(%{pkgname}/bincode)
 
 %description -n %{name}+bincode
