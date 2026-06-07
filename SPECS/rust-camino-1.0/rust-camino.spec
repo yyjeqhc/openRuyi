@@ -38,7 +38,7 @@ This metapackage enables feature "proptest1" for the Rust camino crate, by pulli
 %package     -n %{name}+serde1
 Summary:        UTF-8 paths - feature "serde1"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0/default) >= 1.0.228
+Requires:       crate(serde-core-1/default) >= 1.0.228
 Provides:       crate(%{pkgname}/serde1)
 
 %description -n %{name}+serde1

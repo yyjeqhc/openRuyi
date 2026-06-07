@@ -30,7 +30,7 @@ BuildRequires:  python3dist(setuptools-rust)
 BuildRequires:  python3dist(wheel)
 BuildRequires:  crate(pyo3-0.23/extension-module) >= 0.23.5
 BuildRequires:  crate(pyo3-macros-0.23) >= 0.23.5
-BuildRequires:  crate(scopeguard-1.0) >= 1.2.0
+BuildRequires:  crate(scopeguard-1) >= 1.2.0
 BuildRequires:  crate(thread-local-1.0) >= 1.1.9
 BuildRequires:  crate(indoc-2) >= 2.0.7
 BuildRequires:  crate(unindent-0.2) >= 0.2.4

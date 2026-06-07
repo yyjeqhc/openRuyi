@@ -17,15 +17,15 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(divan-macros-0.1/default) >= 0.1.17
 Requires:       crate(itertools-0.14/default) >= 0.14.0
-Requires:       crate(proc-macro-crate-3.0/default) >= 3.2.0
-Requires:       crate(proc-macro2-1.0/default) >= 1.0.0
-Requires:       crate(quote-1.0) >= 1.0.0
-Requires:       crate(syn-2.0/clone-impls) >= 2.0.18
-Requires:       crate(syn-2.0/extra-traits) >= 2.0.18
-Requires:       crate(syn-2.0/full) >= 2.0.18
-Requires:       crate(syn-2.0/parsing) >= 2.0.18
-Requires:       crate(syn-2.0/printing) >= 2.0.18
-Requires:       crate(syn-2.0/proc-macro) >= 2.0.18
+Requires:       crate(proc-macro-crate-3/default) >= 3.2.0
+Requires:       crate(proc-macro2-1/default) >= 1.0.0
+Requires:       crate(quote-1) >= 1.0.0
+Requires:       crate(syn-2/clone-impls) >= 2.0.18
+Requires:       crate(syn-2/extra-traits) >= 2.0.18
+Requires:       crate(syn-2/full) >= 2.0.18
+Requires:       crate(syn-2/parsing) >= 2.0.18
+Requires:       crate(syn-2/printing) >= 2.0.18
+Requires:       crate(syn-2/proc-macro) >= 2.0.18
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 

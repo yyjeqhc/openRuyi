@@ -31,7 +31,7 @@ Source code for takopackized Rust crate "memmap2"
 %package     -n %{name}+stable-deref-trait
 Summary:        Cross-platform Rust API for memory-mapped file IO - feature "stable_deref_trait"
 Requires:       crate(%{pkgname})
-Requires:       crate(stable-deref-trait-1.0/default) >= 1.0.0
+Requires:       crate(stable-deref-trait-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/stable-deref-trait)
 
 %description -n %{name}+stable-deref-trait

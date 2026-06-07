@@ -24,7 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(form-urlencoded-1/alloc) >= 1.2.2
 Requires:       crate(idna-1/alloc) >= 1.1.0
 Requires:       crate(idna-1/compiled-data) >= 1.1.0
-Requires:       crate(percent-encoding-2.0/alloc) >= 2.3.2
+Requires:       crate(percent-encoding-2/alloc) >= 2.3.2
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/debugger-visualizer)
 Provides:       crate(%{pkgname}/expose-internals)
@@ -50,8 +50,8 @@ Requires:       crate(form-urlencoded-1/std) >= 1.2.2
 Requires:       crate(idna-1/alloc) >= 1.1.0
 Requires:       crate(idna-1/compiled-data) >= 1.1.0
 Requires:       crate(idna-1/std) >= 1.1.0
-Requires:       crate(percent-encoding-2.0/alloc) >= 2.3.2
-Requires:       crate(percent-encoding-2.0/std) >= 2.3.2
+Requires:       crate(percent-encoding-2/alloc) >= 2.3.2
+Requires:       crate(percent-encoding-2/std) >= 2.3.2
 Requires:       crate(serde-1/std) >= 1.0.228
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)

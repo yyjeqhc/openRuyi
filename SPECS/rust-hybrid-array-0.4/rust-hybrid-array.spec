@@ -70,7 +70,7 @@ This metapackage enables feature "serde" for the Rust hybrid-array crate, by pul
 %package     -n %{name}+subtle
 Summary:        Hybrid typenum-based and const generic array types designed to provide the flexibility of typenum-based expressions while also allowing interoperability and a transition path to const generics - feature "subtle"
 Requires:       crate(%{pkgname})
-Requires:       crate(subtle-2.0/const-generics) >= 2.0.0
+Requires:       crate(subtle-2/const-generics) >= 2.0.0
 Provides:       crate(%{pkgname}/subtle)
 
 %description -n %{name}+subtle

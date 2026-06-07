@@ -22,9 +22,9 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(derive-builder-core-0.20/default) >= 0.20.2
-Requires:       crate(syn-2.0/default) >= 2.0.117
-Requires:       crate(syn-2.0/extra-traits) >= 2.0.117
-Requires:       crate(syn-2.0/full) >= 2.0.117
+Requires:       crate(syn-2/default) >= 2.0.117
+Requires:       crate(syn-2/extra-traits) >= 2.0.117
+Requires:       crate(syn-2/full) >= 2.0.117
 Provides:       crate(derive-builder-macro) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

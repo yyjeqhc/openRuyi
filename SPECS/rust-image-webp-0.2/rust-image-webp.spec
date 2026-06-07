@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(byteorder-lite-0.1/default) >= 0.1.0
-Requires:       crate(quick-error-2.0/default) >= 2.0.1
+Requires:       crate(quick-error-2/default) >= 2.0.1
 Provides:       crate(image-webp) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/benchmarks)

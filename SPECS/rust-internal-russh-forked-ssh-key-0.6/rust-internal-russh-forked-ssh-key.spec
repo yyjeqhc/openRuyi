@@ -24,13 +24,13 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(crypto-bigint-0.7.0-rc.28/alloc) >= 0.7.0-rc.28
 Requires:       crate(crypto-bigint-0.7.0-rc.28/default) >= 0.7.0-rc.28
 Requires:       crate(sha2-0.11) >= 0.11.0
-Requires:       crate(signature-3.0) >= 3.0.0
+Requires:       crate(signature-3) >= 3.0.0
 Requires:       crate(ssh-cipher-0.2/default) >= 0.2.0
 Requires:       crate(ssh-encoding-0.2/base64) >= 0.2.0
 Requires:       crate(ssh-encoding-0.2/default) >= 0.2.0
 Requires:       crate(ssh-encoding-0.2/pem) >= 0.2.0
 Requires:       crate(ssh-encoding-0.2/sha2) >= 0.2.0
-Requires:       crate(subtle-2.0) >= 2.6.1
+Requires:       crate(subtle-2) >= 2.6.1
 Requires:       crate(zeroize-1.0) >= 1.8.2
 Provides:       crate(internal-russh-forked-ssh-key) = %{version}
 Provides:       crate(%{pkgname})
@@ -43,7 +43,7 @@ Source code for takopackized Rust crate "internal-russh-forked-ssh-key"
 %package     -n %{name}+alloc
 Summary:        Pure Rust implementation of SSH key file format decoders/encoders as described in RFC4251/RFC4253 and OpenSSH key formats, as well as "sshsig" signatures and certificates (including certificate validation and certificate authority support), with further support for the `authorized_keys` and `known_hosts` file formats - feature "alloc"
 Requires:       crate(%{pkgname})
-Requires:       crate(signature-3.0/alloc) >= 3.0.0
+Requires:       crate(signature-3/alloc) >= 3.0.0
 Requires:       crate(ssh-encoding-0.2/alloc) >= 0.2.0
 Requires:       crate(ssh-encoding-0.2/base64) >= 0.2.0
 Requires:       crate(ssh-encoding-0.2/pem) >= 0.2.0
@@ -85,7 +85,7 @@ Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(dsa-0.7.0-rc.13/hazmat) >= 0.7.0-rc.13
 Requires:       crate(num-bigint-dig-0.8/std) >= 0.8.6
 Requires:       crate(sha1-0.11/oid) >= 0.11.0
-Requires:       crate(signature-3.0/rand-core) >= 3.0.0
+Requires:       crate(signature-3/rand-core) >= 3.0.0
 Provides:       crate(%{pkgname}/dsa)
 
 %description -n %{name}+dsa

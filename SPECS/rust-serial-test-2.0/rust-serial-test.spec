@@ -24,7 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(dashmap-5/default) >= 5.5.3
 Requires:       crate(lazy-static-1/default) >= 1.5.0
 Requires:       crate(parking-lot-0.12/default) >= 0.12.5
-Requires:       crate(serial-test-derive-2.0/default) >= 2.0.0
+Requires:       crate(serial-test-derive-2/default) >= 2.0.0
 Provides:       crate(%{pkgname})
 
 %description
@@ -34,7 +34,7 @@ Source code for takopackized Rust crate "serial_test"
 Summary:        Allows for the creation of serialised Rust tests - feature "async"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/futures)
-Requires:       crate(serial-test-derive-2.0/async) >= 2.0.0
+Requires:       crate(serial-test-derive-2/async) >= 2.0.0
 Provides:       crate(%{pkgname}/async)
 
 %description -n %{name}+async

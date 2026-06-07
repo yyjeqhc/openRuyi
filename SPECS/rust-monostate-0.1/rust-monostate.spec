@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(monostate-impl-0.1/default) >= 0.1.18
 Requires:       crate(serde-1) >= 1.0.228
-Requires:       crate(serde-core-1.0) >= 1.0.228
+Requires:       crate(serde-core-1) >= 1.0.228
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

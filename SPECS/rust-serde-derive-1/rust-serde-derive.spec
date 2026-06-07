@@ -20,13 +20,13 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(proc-macro2-1.0/proc-macro) >= 1.0.74
-Requires:       crate(quote-1.0/proc-macro) >= 1.0.35
-Requires:       crate(syn-2.0/clone-impls) >= 2.0.81
-Requires:       crate(syn-2.0/derive) >= 2.0.81
-Requires:       crate(syn-2.0/parsing) >= 2.0.81
-Requires:       crate(syn-2.0/printing) >= 2.0.81
-Requires:       crate(syn-2.0/proc-macro) >= 2.0.81
+Requires:       crate(proc-macro2-1/proc-macro) >= 1.0.74
+Requires:       crate(quote-1/proc-macro) >= 1.0.35
+Requires:       crate(syn-2/clone-impls) >= 2.0.81
+Requires:       crate(syn-2/derive) >= 2.0.81
+Requires:       crate(syn-2/parsing) >= 2.0.81
+Requires:       crate(syn-2/printing) >= 2.0.81
+Requires:       crate(syn-2/proc-macro) >= 2.0.81
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/deserialize-in-place) = %{version}

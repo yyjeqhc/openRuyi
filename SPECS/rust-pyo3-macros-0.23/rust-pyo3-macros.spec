@@ -21,12 +21,12 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(proc-macro2-1.0) >= 1.0.60
+Requires:       crate(proc-macro2-1) >= 1.0.60
 Requires:       crate(pyo3-macros-backend-0.23/default) >= 0.23.5
-Requires:       crate(quote-1.0/default) >= 1.0.0
-Requires:       crate(syn-2.0/default) >= 2.0.0
-Requires:       crate(syn-2.0/extra-traits) >= 2.0.0
-Requires:       crate(syn-2.0/full) >= 2.0.0
+Requires:       crate(quote-1/default) >= 1.0.0
+Requires:       crate(syn-2/default) >= 2.0.0
+Requires:       crate(syn-2/extra-traits) >= 2.0.0
+Requires:       crate(syn-2/full) >= 2.0.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/multiple-pymethods)

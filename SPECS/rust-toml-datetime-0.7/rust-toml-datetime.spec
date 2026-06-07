@@ -29,7 +29,7 @@ Source code for takopackized Rust crate "toml_datetime"
 %package     -n %{name}+alloc
 Summary:        TOML-compatible datetime type - feature "alloc"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0/alloc) >= 1.0.228
+Requires:       crate(serde-core-1/alloc) >= 1.0.228
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -38,7 +38,7 @@ This metapackage enables feature "alloc" for the Rust toml_datetime crate, by pu
 %package     -n %{name}+serde
 Summary:        TOML-compatible datetime type - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0) >= 1.0.228
+Requires:       crate(serde-core-1) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -48,7 +48,7 @@ This metapackage enables feature "serde" for the Rust toml_datetime crate, by pu
 Summary:        TOML-compatible datetime type - feature "std" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(serde-core-1.0/std) >= 1.0.228
+Requires:       crate(serde-core-1/std) >= 1.0.228
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
 

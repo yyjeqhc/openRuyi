@@ -23,17 +23,17 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(cfg-if-1/default) >= 1.0.1
 Requires:       crate(glob-0.3/default) >= 0.3.2
-Requires:       crate(proc-macro2-1.0/default) >= 1.0.95
-Requires:       crate(quote-1.0/default) >= 1.0.40
+Requires:       crate(proc-macro2-1/default) >= 1.0.95
+Requires:       crate(quote-1/default) >= 1.0.40
 Requires:       crate(regex-1/default) >= 1.11.1
-Requires:       crate(relative-path-1.0/default) >= 1.9.3
+Requires:       crate(relative-path-1/default) >= 1.9.3
 Requires:       crate(rustc-version-0.4/default) >= 0.4.1
-Requires:       crate(syn-2.0/default) >= 2.0.104
-Requires:       crate(syn-2.0/extra-traits) >= 2.0.104
-Requires:       crate(syn-2.0/full) >= 2.0.104
-Requires:       crate(syn-2.0/parsing) >= 2.0.104
-Requires:       crate(syn-2.0/visit) >= 2.0.104
-Requires:       crate(syn-2.0/visit-mut) >= 2.0.104
+Requires:       crate(syn-2/default) >= 2.0.104
+Requires:       crate(syn-2/extra-traits) >= 2.0.104
+Requires:       crate(syn-2/full) >= 2.0.104
+Requires:       crate(syn-2/parsing) >= 2.0.104
+Requires:       crate(syn-2/visit) >= 2.0.104
+Requires:       crate(syn-2/visit-mut) >= 2.0.104
 Requires:       crate(unicode-ident-1.0/default) >= 1.0.18
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/async-timeout)
@@ -45,7 +45,7 @@ Source code for takopackized Rust crate "rstest_macros"
 %package     -n %{name}+crate-name
 Summary:        Rust fixture based test framework - feature "crate-name"
 Requires:       crate(%{pkgname})
-Requires:       crate(proc-macro-crate-3.0/default) >= 3.3.0
+Requires:       crate(proc-macro-crate-3/default) >= 3.3.0
 Provides:       crate(%{pkgname}/crate-name)
 
 %description -n %{name}+crate-name

@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(stable-deref-trait-1.0) >= 1.2.1
+Requires:       crate(stable-deref-trait-1) >= 1.2.1
 Provides:       crate(as-slice) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

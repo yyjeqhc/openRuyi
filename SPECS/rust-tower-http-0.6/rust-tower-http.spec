@@ -373,7 +373,7 @@ This metapackage enables feature "mime_guess" for the Rust tower-http crate, by 
 %package     -n %{name}+percent-encoding
 Summary:        Tower middleware and utilities for HTTP clients and servers - feature "percent-encoding"
 Requires:       crate(%{pkgname})
-Requires:       crate(percent-encoding-2.0/default) >= 2.1.0
+Requires:       crate(percent-encoding-2/default) >= 2.1.0
 Provides:       crate(%{pkgname}/percent-encoding)
 
 %description -n %{name}+percent-encoding

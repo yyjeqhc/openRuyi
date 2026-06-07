@@ -27,8 +27,8 @@ Requires:       crate(openssl-0.10/default) >= 0.10.78
 Requires:       crate(openssl-probe-0.1/default) >= 0.1.6
 Requires:       crate(openssl-sys-0.9/default) >= 0.9.114
 Requires:       crate(schannel-0.1/default) >= 0.1.27
-Requires:       crate(security-framework-2.0/default) >= 2.11.1
-Requires:       crate(security-framework-sys-2.0/default) >= 2.14.0
+Requires:       crate(security-framework-2/default) >= 2.11.1
+Requires:       crate(security-framework-sys-2/default) >= 2.14.0
 Requires:       crate(tempfile-3.0/default) >= 3.20.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
@@ -39,7 +39,7 @@ Source code for takopackized Rust crate "native-tls"
 %package     -n %{name}+alpn
 Summary:        Wrapper over a platform's native TLS implementation - feature "alpn"
 Requires:       crate(%{pkgname})
-Requires:       crate(security-framework-2.0/alpn) >= 2.11.1
+Requires:       crate(security-framework-2/alpn) >= 2.11.1
 Provides:       crate(%{pkgname}/alpn)
 
 %description -n %{name}+alpn

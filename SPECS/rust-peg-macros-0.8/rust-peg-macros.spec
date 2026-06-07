@@ -21,8 +21,8 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(peg-runtime-0.8/default) >= 0.8.5
-Requires:       crate(proc-macro2-1.0/default) >= 1.0.24
-Requires:       crate(quote-1.0/default) >= 1.0.0
+Requires:       crate(proc-macro2-1/default) >= 1.0.24
+Requires:       crate(quote-1/default) >= 1.0.0
 Provides:       crate(peg-macros) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

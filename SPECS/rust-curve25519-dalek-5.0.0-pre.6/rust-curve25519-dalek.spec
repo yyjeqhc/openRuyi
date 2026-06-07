@@ -26,7 +26,7 @@ Requires:       crate(cpufeatures-0.2/default) >= 0.2.17
 Requires:       crate(curve25519-dalek-derive-0.1/default) >= 0.1.1
 Requires:       crate(fiat-crypto-0.3) >= 0.3.0
 Requires:       crate(rustc-version-0.4/default) >= 0.4.1
-Requires:       crate(subtle-2.0/const-generics) >= 2.6.1
+Requires:       crate(subtle-2/const-generics) >= 2.6.1
 Provides:       crate(curve25519-dalek) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/legacy-compatibility)

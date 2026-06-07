@@ -87,7 +87,7 @@ This metapackage enables feature "std" for the Rust digest crate, by pulling in 
 %package     -n %{name}+subtle
 Summary:        Traits for cryptographic hash functions and message authentication codes - feature "subtle" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(subtle-2.0) >= 2.6.1
+Requires:       crate(subtle-2) >= 2.6.1
 Provides:       crate(%{pkgname}/mac)
 Provides:       crate(%{pkgname}/subtle)
 

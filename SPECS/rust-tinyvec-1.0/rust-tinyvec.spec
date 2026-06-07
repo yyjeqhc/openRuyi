@@ -76,7 +76,7 @@ This metapackage enables feature "generic-array" for the Rust tinyvec crate, by 
 %package     -n %{name}+serde
 Summary:        `tinyvec` provides 100% safe vec-like data structures - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0) >= 1.0.0
+Requires:       crate(serde-core-1) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

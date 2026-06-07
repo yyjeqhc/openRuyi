@@ -144,7 +144,7 @@ This metapackage enables feature "prettyplease" for the Rust libsqlite3-sys crat
 %package     -n %{name}+quote
 Summary:        Native bindings to the libsqlite3 library - feature "quote"
 Requires:       crate(%{pkgname})
-Requires:       crate(quote-1.0) >= 1.0.36
+Requires:       crate(quote-1) >= 1.0.36
 Provides:       crate(%{pkgname}/quote)
 
 %description -n %{name}+quote
@@ -163,10 +163,10 @@ This metapackage enables feature "session" for the Rust libsqlite3-sys crate, by
 %package     -n %{name}+syn
 Summary:        Native bindings to the libsqlite3 library - feature "syn"
 Requires:       crate(%{pkgname})
-Requires:       crate(syn-2.0/default) >= 2.0.72
-Requires:       crate(syn-2.0/extra-traits) >= 2.0.72
-Requires:       crate(syn-2.0/full) >= 2.0.72
-Requires:       crate(syn-2.0/visit-mut) >= 2.0.72
+Requires:       crate(syn-2/default) >= 2.0.72
+Requires:       crate(syn-2/extra-traits) >= 2.0.72
+Requires:       crate(syn-2/full) >= 2.0.72
+Requires:       crate(syn-2/visit-mut) >= 2.0.72
 Provides:       crate(%{pkgname}/syn)
 
 %description -n %{name}+syn

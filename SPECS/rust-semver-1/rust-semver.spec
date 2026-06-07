@@ -31,7 +31,7 @@ Source code for takopackized Rust crate "semver"
 Summary:        Parser and evaluator for Cargo's flavor of Semantic Versioning - feature "serde"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(serde-1) >= 1.0.220
-Requires:       crate(serde-core-1.0) >= 1.0.220
+Requires:       crate(serde-core-1) >= 1.0.220
 Provides:       crate(%{pkgname}/serde) = %{version}
 
 %description -n %{name}+serde

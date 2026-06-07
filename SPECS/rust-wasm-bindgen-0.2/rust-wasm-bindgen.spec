@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(cfg-if-1/default) >= 1.0.4
 Requires:       crate(once-cell-1.0) >= 1.21.4
-Requires:       crate(rustversion-1.0/default) >= 1.0.22
+Requires:       crate(rustversion-1/default) >= 1.0.22
 Requires:       crate(wasm-bindgen-macro-0.2/default) >= 0.2.121
 Requires:       crate(wasm-bindgen-shared-0.2/default) >= 0.2.121
 Provides:       crate(%{pkgname})

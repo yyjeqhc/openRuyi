@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(crypto-common-0.1/default) >= 0.1.7
-Requires:       crate(subtle-2.0) >= 2.6.1
+Requires:       crate(subtle-2) >= 2.6.1
 Provides:       crate(universal-hash) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

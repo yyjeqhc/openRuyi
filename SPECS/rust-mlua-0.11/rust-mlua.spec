@@ -28,8 +28,8 @@ Requires:       crate(mlua-sys-0.10/default) >= 0.10.0
 Requires:       crate(num-traits-0.2/default) >= 0.2.19
 Requires:       crate(parking-lot-0.12/arc-lock) >= 0.12.5
 Requires:       crate(parking-lot-0.12/default) >= 0.12.5
-Requires:       crate(rustc-hash-2.0/default) >= 2.1.2
-Requires:       crate(rustversion-1.0/default) >= 1.0.22
+Requires:       crate(rustc-hash-2/default) >= 2.1.2
+Requires:       crate(rustversion-1/default) >= 1.0.22
 Provides:       crate(mlua) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

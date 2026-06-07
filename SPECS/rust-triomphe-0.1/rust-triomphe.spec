@@ -60,7 +60,7 @@ This metapackage enables feature "serde" for the Rust triomphe crate, by pulling
 %package     -n %{name}+stable-deref-trait
 Summary:        Fork of std::sync::Arc with some extra functionality and without weak references (originally servo_arc) - feature "stable_deref_trait"
 Requires:       crate(%{pkgname})
-Requires:       crate(stable-deref-trait-1.0) >= 1.1.1
+Requires:       crate(stable-deref-trait-1) >= 1.1.1
 Provides:       crate(%{pkgname}/stable-deref-trait)
 
 %description -n %{name}+stable-deref-trait

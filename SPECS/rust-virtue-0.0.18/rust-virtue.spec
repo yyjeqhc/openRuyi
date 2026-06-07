@@ -30,7 +30,7 @@ Source code for takopackized Rust crate "virtue"
 %package     -n %{name}+proc-macro2
 Summary:        Sinless derive macro helper - feature "proc-macro2"
 Requires:       crate(%{pkgname})
-Requires:       crate(proc-macro2-1.0/default) >= 1.0.0
+Requires:       crate(proc-macro2-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/proc-macro2)
 
 %description -n %{name}+proc-macro2

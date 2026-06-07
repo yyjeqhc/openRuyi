@@ -15,7 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(static-assertions-1.0/default) >= 1.1.0
+Requires:       crate(static-assertions-1/default) >= 1.1.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/arc) = %{version}
 Provides:       crate(%{pkgname}/max-inline) = %{version}

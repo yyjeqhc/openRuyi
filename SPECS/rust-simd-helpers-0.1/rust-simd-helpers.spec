@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(quote-1.0/default) >= 1.0.45
+Requires:       crate(quote-1/default) >= 1.0.45
 Provides:       crate(simd-helpers) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

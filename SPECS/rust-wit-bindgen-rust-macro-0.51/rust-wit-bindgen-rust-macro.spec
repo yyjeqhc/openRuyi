@@ -23,10 +23,10 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(anyhow-1/default) >= 1.0.102
 Requires:       crate(prettyplease-0.2/default) >= 0.2.37
-Requires:       crate(proc-macro2-1.0/default) >= 1.0.106
-Requires:       crate(quote-1.0/default) >= 1.0.45
-Requires:       crate(syn-2.0/default) >= 2.0.117
-Requires:       crate(syn-2.0/printing) >= 2.0.117
+Requires:       crate(proc-macro2-1/default) >= 1.0.106
+Requires:       crate(quote-1/default) >= 1.0.45
+Requires:       crate(syn-2/default) >= 2.0.117
+Requires:       crate(syn-2/printing) >= 2.0.117
 Requires:       crate(wit-bindgen-core-0.51/default) >= 0.51.0
 Requires:       crate(wit-bindgen-rust-0.51/default) >= 0.51.0
 Provides:       crate(%{pkgname})

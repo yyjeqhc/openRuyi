@@ -112,7 +112,7 @@ Summary:        Pure Rust implementation of a big integer library which has been
 Requires:       crate(%{pkgname})
 Requires:       crate(ctutils-0.4/subtle) >= 0.4.2
 Requires:       crate(hybrid-array-0.4/subtle) >= 0.4.11
-Requires:       crate(subtle-2.0) >= 2.6.1
+Requires:       crate(subtle-2) >= 2.6.1
 Provides:       crate(%{pkgname}/subtle)
 
 %description -n %{name}+subtle

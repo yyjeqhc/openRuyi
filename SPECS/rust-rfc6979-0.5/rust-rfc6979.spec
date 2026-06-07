@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(hmac-0.13) >= 0.13.0
-Requires:       crate(subtle-2.0) >= 2.6.1
+Requires:       crate(subtle-2) >= 2.6.1
 Provides:       crate(rfc6979) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(elliptic-curve-0.14.0-rc.28/sec1) >= 0.14.0-rc.28
-Requires:       crate(signature-3.0/rand-core) >= 3.0.0
+Requires:       crate(signature-3/rand-core) >= 3.0.0
 Requires:       crate(zeroize-1.0) >= 1.8.2
 Provides:       crate(ecdsa) = %{version}
 Provides:       crate(%{pkgname})
@@ -49,8 +49,8 @@ Summary:        Pure Rust implementation of the Elliptic Curve Digital Signature
 Requires:       crate(%{pkgname})
 Requires:       crate(elliptic-curve-0.14.0-rc.28/alloc) >= 0.14.0-rc.28
 Requires:       crate(elliptic-curve-0.14.0-rc.28/sec1) >= 0.14.0-rc.28
-Requires:       crate(signature-3.0/alloc) >= 3.0.0
-Requires:       crate(signature-3.0/rand-core) >= 3.0.0
+Requires:       crate(signature-3/alloc) >= 3.0.0
+Requires:       crate(signature-3/rand-core) >= 3.0.0
 Requires:       crate(spki-0.8.0-rc.4/alloc) >= 0.8.0-rc.4
 Provides:       crate(%{pkgname}/alloc)
 
@@ -85,8 +85,8 @@ Requires:       crate(%{pkgname})
 Requires:       crate(digest-0.11/oid) >= 0.11.3
 Requires:       crate(elliptic-curve-0.14.0-rc.28/digest) >= 0.14.0-rc.28
 Requires:       crate(elliptic-curve-0.14.0-rc.28/sec1) >= 0.14.0-rc.28
-Requires:       crate(signature-3.0/digest) >= 3.0.0
-Requires:       crate(signature-3.0/rand-core) >= 3.0.0
+Requires:       crate(signature-3/digest) >= 3.0.0
+Requires:       crate(signature-3/rand-core) >= 3.0.0
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/digest)
 

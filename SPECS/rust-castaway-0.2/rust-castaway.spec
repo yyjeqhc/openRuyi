@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(rustversion-1.0/default) >= 1.0.22
+Requires:       crate(rustversion-1/default) >= 1.0.22
 Provides:       crate(castaway) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/alloc)

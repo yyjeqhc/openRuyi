@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(itoa-1.0/default) >= 1.0.0
 Requires:       crate(memchr-2) >= 2.0.0
 Requires:       crate(serde-1) >= 1.0.220
-Requires:       crate(serde-core-1.0) >= 1.0.220
+Requires:       crate(serde-core-1) >= 1.0.220
 Requires:       crate(zmij-1.0/default) >= 1.0.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/arbitrary-precision) = %{version}
@@ -37,7 +37,7 @@ Source code for takopackized Rust crate "serde_json"
 %package     -n %{name}+alloc
 Summary:        JSON serialization file format - feature "alloc"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(serde-core-1.0/alloc) >= 1.0.220
+Requires:       crate(serde-core-1/alloc) >= 1.0.220
 Provides:       crate(%{pkgname}/alloc) = %{version}
 
 %description -n %{name}+alloc
@@ -66,7 +66,7 @@ This metapackage enables feature "preserve_order" for the Rust serde_json crate,
 Summary:        JSON serialization file format - feature "std" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(memchr-2/std) >= 2.0.0
-Requires:       crate(serde-core-1.0/std) >= 1.0.220
+Requires:       crate(serde-core-1/std) >= 1.0.220
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/std) = %{version}
 

@@ -138,7 +138,7 @@ This metapackage enables feature "std" for the Rust pkcs8 crate, by pulling in a
 %package     -n %{name}+subtle
 Summary:        Pure Rust implementation of Public-Key Cryptography Standards (PKCS) #8: Private-Key Information Syntax Specification (RFC 5208), with additional support for PKCS#8v2 asymmetric key packages (RFC 5958) - feature "subtle"
 Requires:       crate(%{pkgname})
-Requires:       crate(subtle-2.0) >= 2.0.0
+Requires:       crate(subtle-2) >= 2.0.0
 Provides:       crate(%{pkgname}/subtle)
 
 %description -n %{name}+subtle

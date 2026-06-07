@@ -44,7 +44,7 @@ This metapackage enables feature "bytemuck" for the Rust bitflags crate, by pull
 %package     -n %{name}+serde-core
 Summary:        Macro to generate structures which behave like bitflags - feature "serde_core" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(serde-core-1.0) >= 1.0.228
+Requires:       crate(serde-core-1) >= 1.0.228
 Provides:       crate(%{pkgname}/serde) = %{version}
 Provides:       crate(%{pkgname}/serde-core) = %{version}
 

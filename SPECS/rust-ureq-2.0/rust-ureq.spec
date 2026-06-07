@@ -103,7 +103,7 @@ Requires:       crate(rustls-0.23/logging) >= 0.23.36
 Requires:       crate(rustls-0.23/ring) >= 0.23.36
 Requires:       crate(rustls-0.23/std) >= 0.23.36
 Requires:       crate(rustls-0.23/tls12) >= 0.23.36
-Requires:       crate(rustls-pki-types-1.0/default) >= 1.13.2
+Requires:       crate(rustls-pki-types-1/default) >= 1.13.2
 Requires:       crate(webpki-roots-0.26/default) >= 0.26.11
 Provides:       crate(%{pkgname}/tls)
 

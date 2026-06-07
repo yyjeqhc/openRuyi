@@ -21,14 +21,14 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(proc-macro2-1.0) >= 1.0.106
-Requires:       crate(quote-1.0) >= 1.0.45
-Requires:       crate(syn-2.0/clone-impls) >= 2.0.117
-Requires:       crate(syn-2.0/derive) >= 2.0.117
-Requires:       crate(syn-2.0/extra-traits) >= 2.0.117
-Requires:       crate(syn-2.0/parsing) >= 2.0.117
-Requires:       crate(syn-2.0/printing) >= 2.0.117
-Requires:       crate(syn-2.0/visit) >= 2.0.117
+Requires:       crate(proc-macro2-1) >= 1.0.106
+Requires:       crate(quote-1) >= 1.0.45
+Requires:       crate(syn-2/clone-impls) >= 2.0.117
+Requires:       crate(syn-2/derive) >= 2.0.117
+Requires:       crate(syn-2/extra-traits) >= 2.0.117
+Requires:       crate(syn-2/parsing) >= 2.0.117
+Requires:       crate(syn-2/printing) >= 2.0.117
+Requires:       crate(syn-2/visit) >= 2.0.117
 Provides:       crate(%{pkgname})
 
 %description
@@ -37,15 +37,15 @@ Source code for takopackized Rust crate "synstructure"
 %package     -n %{name}+proc-macro
 Summary:        Helper methods and macros for custom derives - feature "proc-macro" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(proc-macro2-1.0/proc-macro) >= 1.0.106
-Requires:       crate(quote-1.0/proc-macro) >= 1.0.45
-Requires:       crate(syn-2.0/clone-impls) >= 2.0.117
-Requires:       crate(syn-2.0/derive) >= 2.0.117
-Requires:       crate(syn-2.0/extra-traits) >= 2.0.117
-Requires:       crate(syn-2.0/parsing) >= 2.0.117
-Requires:       crate(syn-2.0/printing) >= 2.0.117
-Requires:       crate(syn-2.0/proc-macro) >= 2.0.117
-Requires:       crate(syn-2.0/visit) >= 2.0.117
+Requires:       crate(proc-macro2-1/proc-macro) >= 1.0.106
+Requires:       crate(quote-1/proc-macro) >= 1.0.45
+Requires:       crate(syn-2/clone-impls) >= 2.0.117
+Requires:       crate(syn-2/derive) >= 2.0.117
+Requires:       crate(syn-2/extra-traits) >= 2.0.117
+Requires:       crate(syn-2/parsing) >= 2.0.117
+Requires:       crate(syn-2/printing) >= 2.0.117
+Requires:       crate(syn-2/proc-macro) >= 2.0.117
+Requires:       crate(syn-2/visit) >= 2.0.117
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/proc-macro)
 

@@ -29,7 +29,7 @@ Source code for takopackized Rust crate "potential_utf"
 %package     -n %{name}+alloc
 Summary:        Unvalidated string and character types - feature "alloc" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0/alloc) >= 1.0.220
+Requires:       crate(serde-core-1/alloc) >= 1.0.220
 Requires:       crate(writeable-0.6/alloc) >= 0.6.1
 Requires:       crate(zerovec-0.11/alloc) >= 0.11.6
 Provides:       crate(%{pkgname}/alloc)
@@ -52,7 +52,7 @@ This metapackage enables feature "databake" for the Rust potential_utf crate, by
 %package     -n %{name}+serde
 Summary:        Unvalidated string and character types - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0) >= 1.0.220
+Requires:       crate(serde-core-1) >= 1.0.220
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

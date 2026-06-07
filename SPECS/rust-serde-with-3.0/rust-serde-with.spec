@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(serde-core-1.0/result) >= 1.0.228
+Requires:       crate(serde-core-1/result) >= 1.0.228
 Provides:       crate(%{pkgname})
 
 %description
@@ -34,8 +34,8 @@ Requires:       crate(base64-0.22/alloc) >= 0.22.1
 Requires:       crate(chrono-0.4/alloc) >= 0.4.20
 Requires:       crate(chrono-0.4/serde) >= 0.4.20
 Requires:       crate(hex-0.4/alloc) >= 0.4.3
-Requires:       crate(serde-core-1.0/alloc) >= 1.0.228
-Requires:       crate(serde-core-1.0/result) >= 1.0.228
+Requires:       crate(serde-core-1/alloc) >= 1.0.228
+Requires:       crate(serde-core-1/result) >= 1.0.228
 Requires:       crate(serde-json-1/alloc) >= 1.0.145
 Requires:       crate(time-0.3/alloc) >= 0.3.47
 Provides:       crate(%{pkgname}/alloc)
@@ -162,7 +162,7 @@ This metapackage enables feature "json" for the Rust serde_with crate, by pullin
 %package     -n %{name}+macros
 Summary:        Custom de/serialization functions for Rust's serde - feature "macros"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-with-macros-3.0/default) >= 3.18.0
+Requires:       crate(serde-with-macros-3/default) >= 3.18.0
 Provides:       crate(%{pkgname}/macros)
 
 %description -n %{name}+macros
@@ -173,7 +173,7 @@ Summary:        Custom de/serialization functions for Rust's serde - feature "sc
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/std)
 Requires:       crate(schemars-0.8) >= 0.8.16
-Requires:       crate(serde-with-macros-3.0/schemars-0-8) >= 3.18.0
+Requires:       crate(serde-with-macros-3/schemars-0-8) >= 3.18.0
 Provides:       crate(%{pkgname}/schemars-0-8)
 
 %description -n %{name}+schemars-0-8
@@ -185,7 +185,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(schemars-0.9) >= 0.9.0
 Requires:       crate(serde-json-1) >= 1.0.145
-Requires:       crate(serde-with-macros-3.0/schemars-0-9) >= 3.18.0
+Requires:       crate(serde-with-macros-3/schemars-0-9) >= 3.18.0
 Provides:       crate(%{pkgname}/schemars-0-9)
 
 %description -n %{name}+schemars-0-9
@@ -197,7 +197,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(schemars-1.0) >= 1.0.2
 Requires:       crate(serde-json-1) >= 1.0.145
-Requires:       crate(serde-with-macros-3.0/schemars-1) >= 3.18.0
+Requires:       crate(serde-with-macros-3/schemars-1) >= 3.18.0
 Provides:       crate(%{pkgname}/schemars-1)
 
 %description -n %{name}+schemars-1
@@ -223,8 +223,8 @@ Requires:       crate(indexmap-1.0/serde) >= 1.8.0
 Requires:       crate(indexmap-1.0/serde-1) >= 1.8
 Requires:       crate(indexmap-1.0/std) >= 1.8.0
 Requires:       crate(schemars-1.0/std) >= 1.0.2
-Requires:       crate(serde-core-1.0/result) >= 1.0.228
-Requires:       crate(serde-core-1.0/std) >= 1.0.228
+Requires:       crate(serde-core-1/result) >= 1.0.228
+Requires:       crate(serde-core-1/std) >= 1.0.228
 Requires:       crate(time-0.3/serde-well-known) >= 0.3.47
 Requires:       crate(time-0.3/std) >= 0.3.47
 Provides:       crate(%{pkgname}/std)

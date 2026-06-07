@@ -136,7 +136,7 @@ This metapackage enables feature "rng-rand" for the Rust uuid crate, by pulling 
 %package     -n %{name}+serde
 Summary:        Generate and parse UUIDs - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0) >= 1.0.228
+Requires:       crate(serde-core-1) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -145,7 +145,7 @@ This metapackage enables feature "serde" for the Rust uuid crate, by pulling in 
 %package     -n %{name}+sha1
 Summary:        Generate and parse UUIDs - feature "sha1" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(sha1-smol-1.0) >= 1.0.0
+Requires:       crate(sha1-smol-1) >= 1.0.0
 Provides:       crate(%{pkgname}/sha1)
 Provides:       crate(%{pkgname}/v5)
 

@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(base64ct-1/default) >= 1.8.3
-Requires:       crate(subtle-2.0) >= 2.6.1
+Requires:       crate(subtle-2) >= 2.6.1
 Provides:       crate(password-hash) = %{version}
 Provides:       crate(%{pkgname})
 

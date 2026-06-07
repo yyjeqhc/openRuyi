@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(dyn-clone-1/default) >= 1.0.20
-Requires:       crate(ref-cast-1.0/default) >= 1.0.25
+Requires:       crate(ref-cast-1/default) >= 1.0.25
 Requires:       crate(serde-1/alloc) >= 1.0.228
 Requires:       crate(serde-json-1/alloc) >= 1.0.149
 Provides:       crate(schemars) = %{version}

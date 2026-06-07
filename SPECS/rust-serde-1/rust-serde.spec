@@ -20,7 +20,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(serde-core-1.0/result) >= 1.0.228
+Requires:       crate(serde-core-1/result) >= 1.0.228
 Provides:       crate(%{pkgname}) = %{version}
 
 %description
@@ -29,8 +29,8 @@ Source code for takopackized Rust crate "serde"
 %package     -n %{name}+alloc
 Summary:        Generic serialization/deserialization framework - feature "alloc"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(serde-core-1.0/alloc) >= 1.0.228
-Requires:       crate(serde-core-1.0/result) >= 1.0.228
+Requires:       crate(serde-core-1/alloc) >= 1.0.228
+Requires:       crate(serde-core-1/result) >= 1.0.228
 Provides:       crate(%{pkgname}/alloc) = %{version}
 
 %description -n %{name}+alloc
@@ -39,8 +39,8 @@ This metapackage enables feature "alloc" for the Rust serde crate, by pulling in
 %package     -n %{name}+rc
 Summary:        Generic serialization/deserialization framework - feature "rc"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(serde-core-1.0/rc) >= 1.0.228
-Requires:       crate(serde-core-1.0/result) >= 1.0.228
+Requires:       crate(serde-core-1/rc) >= 1.0.228
+Requires:       crate(serde-core-1/result) >= 1.0.228
 Provides:       crate(%{pkgname}/rc) = %{version}
 
 %description -n %{name}+rc
@@ -61,8 +61,8 @@ Additionally, this package also provides the "derive" feature.
 %package     -n %{name}+std
 Summary:        Generic serialization/deserialization framework - feature "std" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(serde-core-1.0/result) >= 1.0.228
-Requires:       crate(serde-core-1.0/std) >= 1.0.228
+Requires:       crate(serde-core-1/result) >= 1.0.228
+Requires:       crate(serde-core-1/std) >= 1.0.228
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/std) = %{version}
 
@@ -74,8 +74,8 @@ Additionally, this package also provides the "default" feature.
 %package     -n %{name}+unstable
 Summary:        Generic serialization/deserialization framework - feature "unstable"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(serde-core-1.0/result) >= 1.0.228
-Requires:       crate(serde-core-1.0/unstable) >= 1.0.228
+Requires:       crate(serde-core-1/result) >= 1.0.228
+Requires:       crate(serde-core-1/unstable) >= 1.0.228
 Provides:       crate(%{pkgname}/unstable) = %{version}
 
 %description -n %{name}+unstable

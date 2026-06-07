@@ -36,7 +36,7 @@ This metapackage enables feature "default" for the Rust gimli crate, by pulling 
 Summary:        Reading and writing the DWARF debugging format - feature "endian-reader"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/read)
-Requires:       crate(stable-deref-trait-1.0) >= 1.1.0
+Requires:       crate(stable-deref-trait-1) >= 1.1.0
 Provides:       crate(%{pkgname}/endian-reader)
 
 %description -n %{name}+endian-reader
@@ -77,7 +77,7 @@ This metapackage enables feature "rustc-dep-of-std" for the Rust gimli crate, by
 Summary:        Reading and writing the DWARF debugging format - feature "std"
 Requires:       crate(%{pkgname})
 Requires:       crate(fallible-iterator-0.3/std) >= 0.3.0
-Requires:       crate(stable-deref-trait-1.0/std) >= 1.1.0
+Requires:       crate(stable-deref-trait-1/std) >= 1.1.0
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std

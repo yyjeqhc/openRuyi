@@ -15,7 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(percent-encoding-2.0) >= 2.3.0
+Requires:       crate(percent-encoding-2) >= 2.3.0
 Provides:       crate(%{pkgname}) = %{version}
 
 %description
@@ -24,7 +24,7 @@ Source code for takopackized Rust crate "form_urlencoded"
 %package     -n %{name}+alloc
 Summary:        Parser and serializer for the application/x-www-form-urlencoded syntax, as used by HTML forms - feature "alloc"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(percent-encoding-2.0/alloc) >= 2.3.0
+Requires:       crate(percent-encoding-2/alloc) >= 2.3.0
 Provides:       crate(%{pkgname}/alloc) = %{version}
 
 %description -n %{name}+alloc
@@ -34,7 +34,7 @@ This metapackage enables feature "alloc" for the Rust form_urlencoded crate, by 
 Summary:        Parser and serializer for the application/x-www-form-urlencoded syntax, as used by HTML forms - feature "std" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/alloc) = %{version}
-Requires:       crate(percent-encoding-2.0/std) >= 2.3.0
+Requires:       crate(percent-encoding-2/std) >= 2.3.0
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/std) = %{version}
 

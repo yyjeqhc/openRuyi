@@ -15,10 +15,10 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(quote-1.0/default) >= 1.0.21
-Requires:       crate(syn-2.0/default) >= 2.0.16
-Requires:       crate(syn-2.0/full) >= 2.0.16
-Requires:       crate(syn-2.0/visit-mut) >= 2.0.16
+Requires:       crate(quote-1/default) >= 1.0.21
+Requires:       crate(syn-2/default) >= 2.0.16
+Requires:       crate(syn-2/full) >= 2.0.16
+Requires:       crate(syn-2/visit-mut) >= 2.0.16
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 

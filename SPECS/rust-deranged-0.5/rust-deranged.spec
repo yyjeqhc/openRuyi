@@ -106,7 +106,7 @@ This metapackage enables feature "rand09" for the Rust deranged crate, by pullin
 %package     -n %{name}+serde
 Summary:        Ranged integers - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0) >= 1.0.228
+Requires:       crate(serde-core-1) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

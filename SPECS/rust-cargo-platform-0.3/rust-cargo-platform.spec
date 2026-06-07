@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(serde-1/default) >= 1.0.228
-Requires:       crate(serde-core-1.0/default) >= 1.0.228
+Requires:       crate(serde-core-1/default) >= 1.0.228
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

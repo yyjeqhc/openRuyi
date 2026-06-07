@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(serde-1) >= 1.0.228
-Requires:       crate(serde-core-1.0) >= 1.0.228
+Requires:       crate(serde-core-1) >= 1.0.228
 Requires:       crate(typeid-1.0/default) >= 1.0.3
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/unstable-debug)
@@ -33,7 +33,7 @@ Source code for takopackized Rust crate "erased-serde"
 %package     -n %{name}+alloc
 Summary:        Type-erased Serialize and Serializer traits - feature "alloc"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0/alloc) >= 1.0.228
+Requires:       crate(serde-core-1/alloc) >= 1.0.228
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -43,7 +43,7 @@ This metapackage enables feature "alloc" for the Rust erased-serde crate, by pul
 Summary:        Type-erased Serialize and Serializer traits - feature "std" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(serde-core-1.0/std) >= 1.0.228
+Requires:       crate(serde-core-1/std) >= 1.0.228
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
 

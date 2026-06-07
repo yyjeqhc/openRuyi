@@ -105,8 +105,8 @@ Summary:        Pure Rust embedded-friendly implementation of the Distinguished 
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(%{pkgname}/zeroize)
-Requires:       crate(pem-rfc7468-1.0/alloc) >= 1.0.0
-Requires:       crate(pem-rfc7468-1.0/default) >= 1.0.0
+Requires:       crate(pem-rfc7468-1/alloc) >= 1.0.0
+Requires:       crate(pem-rfc7468-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/pem)
 
 %description -n %{name}+pem

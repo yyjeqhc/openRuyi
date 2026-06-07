@@ -68,9 +68,9 @@ This metapackage enables feature "parse" for the Rust toml_edit crate, by pullin
 %package     -n %{name}+serde
 Summary:        Yet another format-preserving TOML parser - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0/default) >= 1.0.228
-Requires:       crate(serde-spanned-1.0/default) >= 1.1.1
-Requires:       crate(serde-spanned-1.0/serde) >= 1.1.1
+Requires:       crate(serde-core-1/default) >= 1.0.228
+Requires:       crate(serde-spanned-1/default) >= 1.1.1
+Requires:       crate(serde-spanned-1/serde) >= 1.1.1
 Requires:       crate(toml-datetime-1.0/serde) >= 1.1.1
 Provides:       crate(%{pkgname}/serde)
 

@@ -29,7 +29,7 @@ Source code for takopackized Rust crate "jiff"
 Summary:        Date-time library that encourages you to jump into the pit of success - feature "alloc"
 Requires:       crate(%{pkgname})
 Requires:       crate(portable-atomic-util-0.2/alloc) >= 0.2.7
-Requires:       crate(serde-core-1.0/alloc) >= 1.0.228
+Requires:       crate(serde-core-1/alloc) >= 1.0.228
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -76,7 +76,7 @@ This metapackage enables feature "logging" for the Rust jiff crate, by pulling i
 %package     -n %{name}+serde
 Summary:        Date-time library that encourages you to jump into the pit of success - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0) >= 1.0.228
+Requires:       crate(serde-core-1) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -109,7 +109,7 @@ Summary:        Date-time library that encourages you to jump into the pit of su
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(log-0.4/std) >= 0.4.29
-Requires:       crate(serde-core-1.0/std) >= 1.0.228
+Requires:       crate(serde-core-1/std) >= 1.0.228
 Provides:       crate(%{pkgname}/std)
 Provides:       crate(%{pkgname}/tzdb-concatenated)
 Provides:       crate(%{pkgname}/tzdb-zoneinfo)

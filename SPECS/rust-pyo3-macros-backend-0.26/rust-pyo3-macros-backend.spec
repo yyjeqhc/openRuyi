@@ -21,17 +21,17 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(heck-0.5/default) >= 0.5.0
-Requires:       crate(proc-macro2-1.0) >= 1.0.60
+Requires:       crate(proc-macro2-1) >= 1.0.60
 Requires:       crate(pyo3-build-config-0.26/default) >= 0.26.0
 Requires:       crate(pyo3-build-config-0.26/resolve-config) >= 0.26.0
-Requires:       crate(quote-1.0) >= 1.0.0
-Requires:       crate(syn-2.0/clone-impls) >= 2.0.59
-Requires:       crate(syn-2.0/derive) >= 2.0.59
-Requires:       crate(syn-2.0/extra-traits) >= 2.0.59
-Requires:       crate(syn-2.0/full) >= 2.0.59
-Requires:       crate(syn-2.0/parsing) >= 2.0.59
-Requires:       crate(syn-2.0/printing) >= 2.0.59
-Requires:       crate(syn-2.0/visit-mut) >= 2.0.59
+Requires:       crate(quote-1) >= 1.0.0
+Requires:       crate(syn-2/clone-impls) >= 2.0.59
+Requires:       crate(syn-2/derive) >= 2.0.59
+Requires:       crate(syn-2/extra-traits) >= 2.0.59
+Requires:       crate(syn-2/full) >= 2.0.59
+Requires:       crate(syn-2/parsing) >= 2.0.59
+Requires:       crate(syn-2/printing) >= 2.0.59
+Requires:       crate(syn-2/visit-mut) >= 2.0.59
 Provides:       crate(pyo3-macros-backend) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

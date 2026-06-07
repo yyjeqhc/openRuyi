@@ -77,7 +77,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/client)
 Requires:       crate(base64-0.22/default) >= 0.22.1
 Requires:       crate(ipnet-2.0/default) >= 2.12.0
-Requires:       crate(percent-encoding-2.0/default) >= 2.3.2
+Requires:       crate(percent-encoding-2/default) >= 2.3.2
 Provides:       crate(%{pkgname}/client-proxy)
 
 %description -n %{name}+client-proxy

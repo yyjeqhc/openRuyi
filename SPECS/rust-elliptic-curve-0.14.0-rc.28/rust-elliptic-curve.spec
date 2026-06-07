@@ -30,7 +30,7 @@ Requires:       crate(crypto-common-0.2/default) >= 0.2.1
 Requires:       crate(crypto-common-0.2/rand-core) >= 0.2.1
 Requires:       crate(hybrid-array-0.4/zeroize) >= 0.4.11
 Requires:       crate(rand-core-0.10) >= 0.10.1
-Requires:       crate(subtle-2.0) >= 2.6.1
+Requires:       crate(subtle-2) >= 2.6.1
 Requires:       crate(zeroize-1.0) >= 1.8.2
 Provides:       crate(elliptic-curve) = %{version}
 Provides:       crate(%{pkgname})
@@ -163,8 +163,8 @@ Summary:        General purpose Elliptic Curve Cryptography (ECC) support, inclu
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(%{pkgname}/arithmetic)
-Requires:       crate(pem-rfc7468-1.0/alloc) >= 1.0.0
-Requires:       crate(pem-rfc7468-1.0/default) >= 1.0.0
+Requires:       crate(pem-rfc7468-1/alloc) >= 1.0.0
+Requires:       crate(pem-rfc7468-1/default) >= 1.0.0
 Requires:       crate(pkcs8-0.11.0-rc.11/pem) >= 0.11.0-rc.11
 Requires:       crate(sec1-0.8/ctutils) >= 0.8.1
 Requires:       crate(sec1-0.8/pem) >= 0.8.1

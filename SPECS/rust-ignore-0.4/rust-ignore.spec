@@ -32,7 +32,7 @@ Requires:       crate(regex-automata-0.4/nfa) >= 0.4.14
 Requires:       crate(regex-automata-0.4/perf) >= 0.4.14
 Requires:       crate(regex-automata-0.4/std) >= 0.4.14
 Requires:       crate(regex-automata-0.4/syntax) >= 0.4.14
-Requires:       crate(same-file-1.0/default) >= 1.0.6
+Requires:       crate(same-file-1/default) >= 1.0.6
 Requires:       crate(walkdir-2.0/default) >= 2.5.0
 Requires:       crate(winapi-util-0.1/default) >= 0.1.11
 Provides:       crate(%{pkgname})

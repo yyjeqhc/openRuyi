@@ -173,7 +173,7 @@ Additionally, this package also provides the "html" feature.
 %package     -n %{name}+plist
 Summary:        High quality syntax highlighting and code intelligence using Sublime Text's grammars - feature "plist"
 Requires:       crate(%{pkgname})
-Requires:       crate(plist-1.0/default) >= 1.9.0
+Requires:       crate(plist-1/default) >= 1.9.0
 Provides:       crate(%{pkgname}/plist)
 
 %description -n %{name}+plist

@@ -41,7 +41,7 @@ This metapackage enables feature "optick" for the Rust profiling crate, by pulli
 Summary:        Very thin abstraction over other profiler crates - feature "profile-with-optick"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/optick)
-Requires:       crate(profiling-procmacros-1.0/profile-with-optick) >= 1.0.18
+Requires:       crate(profiling-procmacros-1/profile-with-optick) >= 1.0.18
 Provides:       crate(%{pkgname}/profile-with-optick)
 
 %description -n %{name}+profile-with-optick
@@ -51,7 +51,7 @@ This metapackage enables feature "profile-with-optick" for the Rust profiling cr
 Summary:        Very thin abstraction over other profiler crates - feature "profile-with-puffin"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/puffin)
-Requires:       crate(profiling-procmacros-1.0/profile-with-puffin) >= 1.0.18
+Requires:       crate(profiling-procmacros-1/profile-with-puffin) >= 1.0.18
 Provides:       crate(%{pkgname}/profile-with-puffin)
 
 %description -n %{name}+profile-with-puffin
@@ -61,7 +61,7 @@ This metapackage enables feature "profile-with-puffin" for the Rust profiling cr
 Summary:        Very thin abstraction over other profiler crates - feature "profile-with-superluminal"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/superluminal-perf)
-Requires:       crate(profiling-procmacros-1.0/profile-with-superluminal) >= 1.0.18
+Requires:       crate(profiling-procmacros-1/profile-with-superluminal) >= 1.0.18
 Provides:       crate(%{pkgname}/profile-with-superluminal)
 
 %description -n %{name}+profile-with-superluminal
@@ -71,7 +71,7 @@ This metapackage enables feature "profile-with-superluminal" for the Rust profil
 Summary:        Very thin abstraction over other profiler crates - feature "profile-with-tracing"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/tracing)
-Requires:       crate(profiling-procmacros-1.0/profile-with-tracing) >= 1.0.18
+Requires:       crate(profiling-procmacros-1/profile-with-tracing) >= 1.0.18
 Provides:       crate(%{pkgname}/profile-with-tracing)
 
 %description -n %{name}+profile-with-tracing
@@ -81,7 +81,7 @@ This metapackage enables feature "profile-with-tracing" for the Rust profiling c
 Summary:        Very thin abstraction over other profiler crates - feature "profile-with-tracy"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/tracy-client)
-Requires:       crate(profiling-procmacros-1.0/profile-with-tracy) >= 1.0.18
+Requires:       crate(profiling-procmacros-1/profile-with-tracy) >= 1.0.18
 Provides:       crate(%{pkgname}/profile-with-tracy)
 
 %description -n %{name}+profile-with-tracy
@@ -90,7 +90,7 @@ This metapackage enables feature "profile-with-tracy" for the Rust profiling cra
 %package     -n %{name}+profiling-procmacros
 Summary:        Very thin abstraction over other profiler crates - feature "profiling-procmacros" and 2 more
 Requires:       crate(%{pkgname})
-Requires:       crate(profiling-procmacros-1.0/default) >= 1.0.18
+Requires:       crate(profiling-procmacros-1/default) >= 1.0.18
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/procmacros)
 Provides:       crate(%{pkgname}/profiling-procmacros)

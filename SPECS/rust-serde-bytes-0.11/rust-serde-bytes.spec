@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(serde-1) >= 1.0.220
-Requires:       crate(serde-core-1.0) >= 1.0.220
+Requires:       crate(serde-core-1) >= 1.0.220
 Provides:       crate(%{pkgname})
 
 %description
@@ -31,7 +31,7 @@ Source code for takopackized Rust crate "serde_bytes"
 %package     -n %{name}+alloc
 Summary:        Optimized handling of `&[u8]` and `Vec<u8>` for Serde - feature "alloc"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0/alloc) >= 1.0.220
+Requires:       crate(serde-core-1/alloc) >= 1.0.220
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -40,7 +40,7 @@ This metapackage enables feature "alloc" for the Rust serde_bytes crate.
 %package     -n %{name}+std
 Summary:        Optimized handling of `&[u8]` and `Vec<u8>` for Serde - feature "std" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0/std) >= 1.0.220
+Requires:       crate(serde-core-1/std) >= 1.0.220
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
 

@@ -25,7 +25,7 @@ Source code for takopackized Rust crate "litrs"
 %package     -n %{name}+proc-macro2
 Summary:        Parse and inspect Rust literals (i.e - feature "proc-macro2"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(proc-macro2-1.0/default) >= 1.0.63
+Requires:       crate(proc-macro2-1/default) >= 1.0.63
 Provides:       crate(%{pkgname}/proc-macro2) = %{version}
 
 %description -n %{name}+proc-macro2

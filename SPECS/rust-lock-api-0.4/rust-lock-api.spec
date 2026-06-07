@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(scopeguard-1.0) >= 1.2.0
+Requires:       crate(scopeguard-1) >= 1.2.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/arc-lock)
 Provides:       crate(%{pkgname}/atomic-usize)

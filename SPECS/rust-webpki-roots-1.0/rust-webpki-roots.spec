@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(rustls-pki-types-1.0) >= 1.13.2
+Requires:       crate(rustls-pki-types-1) >= 1.13.2
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

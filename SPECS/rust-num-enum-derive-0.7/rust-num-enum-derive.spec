@@ -15,12 +15,12 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(proc-macro2-1.0/default) >= 1.0.106
-Requires:       crate(quote-1.0/default) >= 1.0.45
-Requires:       crate(syn-2.0/default) >= 2.0.117
-Requires:       crate(syn-2.0/derive) >= 2.0.117
-Requires:       crate(syn-2.0/extra-traits) >= 2.0.117
-Requires:       crate(syn-2.0/parsing) >= 2.0.117
+Requires:       crate(proc-macro2-1/default) >= 1.0.106
+Requires:       crate(quote-1/default) >= 1.0.45
+Requires:       crate(syn-2/default) >= 2.0.117
+Requires:       crate(syn-2/derive) >= 2.0.117
+Requires:       crate(syn-2/extra-traits) >= 2.0.117
+Requires:       crate(syn-2/parsing) >= 2.0.117
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/external-doc)
 
@@ -30,10 +30,10 @@ Source code for takopackized Rust crate "num_enum_derive"
 %package     -n %{name}+complex-expressions
 Summary:        Internal implementation details for ::num_enum (Procedural macros to make inter-operation between primitives and enums easier) - feature "complex-expressions"
 Requires:       crate(%{pkgname})
-Requires:       crate(syn-2.0/derive) >= 2.0.117
-Requires:       crate(syn-2.0/extra-traits) >= 2.0.117
-Requires:       crate(syn-2.0/full) >= 2.0.117
-Requires:       crate(syn-2.0/parsing) >= 2.0.117
+Requires:       crate(syn-2/derive) >= 2.0.117
+Requires:       crate(syn-2/extra-traits) >= 2.0.117
+Requires:       crate(syn-2/full) >= 2.0.117
+Requires:       crate(syn-2/parsing) >= 2.0.117
 Provides:       crate(%{pkgname}/complex-expressions)
 
 %description -n %{name}+complex-expressions
@@ -42,7 +42,7 @@ This metapackage enables feature "complex-expressions" for the Rust num_enum_der
 %package     -n %{name}+proc-macro-crate
 Summary:        Internal implementation details for ::num_enum (Procedural macros to make inter-operation between primitives and enums easier) - feature "proc-macro-crate" and 2 more
 Requires:       crate(%{pkgname})
-Requires:       crate(proc-macro-crate-3.0/default) >= 3.5.0
+Requires:       crate(proc-macro-crate-3/default) >= 3.5.0
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/proc-macro-crate)
 Provides:       crate(%{pkgname}/std)

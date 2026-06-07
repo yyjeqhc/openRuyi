@@ -32,7 +32,7 @@ Requires:       crate(ordered-float-5.0) >= 5.3.0
 Requires:       crate(palette-0.7/alloc) >= 0.7.6
 Requires:       crate(palette-0.7/bytemuck) >= 0.7.6
 Requires:       crate(palette-0.7/libm) >= 0.7.6
-Requires:       crate(ref-cast-1.0/default) >= 1.0.25
+Requires:       crate(ref-cast-1/default) >= 1.0.25
 Requires:       crate(wide-0.8) >= 0.8.3
 Provides:       crate(quantette) = %{version}
 Provides:       crate(%{pkgname})

@@ -87,8 +87,8 @@ This metapackage enables feature "detect-encoding" for the Rust snapbox crate, b
 %package     -n %{name}+diff
 Summary:        Snapshot testing toolbox - feature "diff"
 Requires:       crate(%{pkgname})
-Requires:       crate(similar-2.0/default) >= 2.7.0
-Requires:       crate(similar-2.0/inline) >= 2.7.0
+Requires:       crate(similar-2/default) >= 2.7.0
+Requires:       crate(similar-2/inline) >= 2.7.0
 Provides:       crate(%{pkgname}/diff)
 
 %description -n %{name}+diff

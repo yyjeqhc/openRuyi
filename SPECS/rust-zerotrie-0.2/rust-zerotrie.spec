@@ -75,7 +75,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(litemap-0.8/alloc) >= 0.8.0
 Requires:       crate(litemap-0.8/serde) >= 0.8.0
-Requires:       crate(serde-core-1.0) >= 1.0.220
+Requires:       crate(serde-core-1) >= 1.0.220
 Requires:       crate(zerovec-0.11/serde) >= 0.11.6
 Provides:       crate(%{pkgname}/serde)
 

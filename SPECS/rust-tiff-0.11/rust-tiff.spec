@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(half-2.0/default) >= 2.7.1
-Requires:       crate(quick-error-2.0/default) >= 2.0.1
+Requires:       crate(quick-error-2/default) >= 2.0.1
 Provides:       crate(tiff) = %{version}
 Provides:       crate(%{pkgname})
 

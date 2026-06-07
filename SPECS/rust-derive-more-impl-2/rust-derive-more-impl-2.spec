@@ -15,9 +15,9 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(proc-macro2-1.0/default) >= 1.0.0
-Requires:       crate(quote-1.0/default) >= 1.0.0
-Requires:       crate(syn-2.0/default) >= 2.0.45
+Requires:       crate(proc-macro2-1/default) >= 1.0.0
+Requires:       crate(quote-1/default) >= 1.0.0
+Requires:       crate(syn-2/default) >= 2.0.45
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/constructor) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
@@ -35,8 +35,8 @@ Source code for takopackized Rust crate "derive_more-impl"
 %package     -n %{name}+add
 Summary:        Internal implementation of `derive_more` crate - feature "add" and 5 more
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(syn-2.0/extra-traits) >= 2.0.45
-Requires:       crate(syn-2.0/visit) >= 2.0.45
+Requires:       crate(syn-2/extra-traits) >= 2.0.45
+Requires:       crate(syn-2/visit) >= 2.0.45
 Provides:       crate(%{pkgname}/add) = %{version}
 Provides:       crate(%{pkgname}/add-assign) = %{version}
 Provides:       crate(%{pkgname}/as-ref) = %{version}
@@ -52,7 +52,7 @@ Additionally, this package also provides the "add_assign", "as_ref", "eq", "mul"
 %package     -n %{name}+debug
 Summary:        Internal implementation of `derive_more` crate - feature "debug"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(syn-2.0/extra-traits) >= 2.0.45
+Requires:       crate(syn-2/extra-traits) >= 2.0.45
 Requires:       crate(unicode-xid-0.2/default) >= 0.2.2
 Provides:       crate(%{pkgname}/debug) = %{version}
 
@@ -63,7 +63,7 @@ This metapackage enables feature "debug" for the Rust derive_more-impl crate, by
 Summary:        Internal implementation of `derive_more` crate - feature "display"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(convert-case-0.10/default) >= 0.10.0
-Requires:       crate(syn-2.0/extra-traits) >= 2.0.45
+Requires:       crate(syn-2/extra-traits) >= 2.0.45
 Requires:       crate(unicode-xid-0.2/default) >= 0.2.2
 Provides:       crate(%{pkgname}/display) = %{version}
 
@@ -73,7 +73,7 @@ This metapackage enables feature "display" for the Rust derive_more-impl crate, 
 %package     -n %{name}+error
 Summary:        Internal implementation of `derive_more` crate - feature "error" and 2 more
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(syn-2.0/extra-traits) >= 2.0.45
+Requires:       crate(syn-2/extra-traits) >= 2.0.45
 Provides:       crate(%{pkgname}/error) = %{version}
 Provides:       crate(%{pkgname}/from) = %{version}
 Provides:       crate(%{pkgname}/not) = %{version}
@@ -87,8 +87,8 @@ Additionally, this package also provides the "from", and "not" features.
 Summary:        Internal implementation of `derive_more` crate - feature "from_str"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(convert-case-0.10/default) >= 0.10.0
-Requires:       crate(syn-2.0/full) >= 2.0.45
-Requires:       crate(syn-2.0/visit) >= 2.0.45
+Requires:       crate(syn-2/full) >= 2.0.45
+Requires:       crate(syn-2/visit) >= 2.0.45
 Provides:       crate(%{pkgname}/from-str) = %{version}
 
 %description -n %{name}+from-str
@@ -130,8 +130,8 @@ This metapackage enables feature "full" for the Rust derive_more-impl crate, by 
 %package     -n %{name}+into
 Summary:        Internal implementation of `derive_more` crate - feature "into"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(syn-2.0/extra-traits) >= 2.0.45
-Requires:       crate(syn-2.0/visit-mut) >= 2.0.45
+Requires:       crate(syn-2/extra-traits) >= 2.0.45
+Requires:       crate(syn-2/visit-mut) >= 2.0.45
 Provides:       crate(%{pkgname}/into) = %{version}
 
 %description -n %{name}+into
@@ -153,7 +153,7 @@ Additionally, this package also provides the "try_unwrap", and "unwrap" features
 %package     -n %{name}+testing-helpers
 Summary:        Internal implementation of `derive_more` crate - feature "testing-helpers"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(syn-2.0/full) >= 2.0.45
+Requires:       crate(syn-2/full) >= 2.0.45
 Provides:       crate(%{pkgname}/testing-helpers) = %{version}
 
 %description -n %{name}+testing-helpers
@@ -162,9 +162,9 @@ This metapackage enables feature "testing-helpers" for the Rust derive_more-impl
 %package     -n %{name}+try-into
 Summary:        Internal implementation of `derive_more` crate - feature "try_into"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(syn-2.0/extra-traits) >= 2.0.45
-Requires:       crate(syn-2.0/full) >= 2.0.45
-Requires:       crate(syn-2.0/visit-mut) >= 2.0.45
+Requires:       crate(syn-2/extra-traits) >= 2.0.45
+Requires:       crate(syn-2/full) >= 2.0.45
+Requires:       crate(syn-2/visit-mut) >= 2.0.45
 Provides:       crate(%{pkgname}/try-into) = %{version}
 
 %description -n %{name}+try-into

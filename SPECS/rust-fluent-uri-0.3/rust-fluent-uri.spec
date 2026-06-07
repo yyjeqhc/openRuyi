@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(borrow-or-share-0.2/default) >= 0.2.2
-Requires:       crate(ref-cast-1.0/default) >= 1.0.24
+Requires:       crate(ref-cast-1/default) >= 1.0.24
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/net)

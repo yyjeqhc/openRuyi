@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(rustversion-1.0/default) >= 1.0.22
+Requires:       crate(rustversion-1/default) >= 1.0.22
 Requires:       crate(typenum-1.0/const-generics) >= 1.20.0
 Requires:       crate(typenum-1.0/default) >= 1.20.0
 Provides:       crate(generic-array) = %{version}
@@ -108,7 +108,7 @@ This metapackage enables feature "hybrid-array-0_4" for the Rust generic-array c
 %package     -n %{name}+serde
 Summary:        Generic types implementing functionality of arrays - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0) >= 1.0.0
+Requires:       crate(serde-core-1) >= 1.0.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -117,7 +117,7 @@ This metapackage enables feature "serde" for the Rust generic-array crate, by pu
 %package     -n %{name}+subtle
 Summary:        Generic types implementing functionality of arrays - feature "subtle"
 Requires:       crate(%{pkgname})
-Requires:       crate(subtle-2.0) >= 2.0.0
+Requires:       crate(subtle-2) >= 2.0.0
 Provides:       crate(%{pkgname}/subtle)
 
 %description -n %{name}+subtle

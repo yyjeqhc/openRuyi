@@ -83,7 +83,7 @@ This metapackage enables feature "latest_stable_rust" for the Rust bytemuck crat
 %package     -n %{name}+rustversion
 Summary:        Mucking around with piles of bytes - feature "rustversion" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(rustversion-1.0/default) >= 1.0.22
+Requires:       crate(rustversion-1/default) >= 1.0.22
 Provides:       crate(%{pkgname}/nightly-portable-simd) = %{version}
 Provides:       crate(%{pkgname}/rustversion) = %{version}
 

@@ -61,7 +61,7 @@ Additionally, this package also provides the "logging" feature.
 %package     -n %{name}+rustversion
 Summary:        Modern TLS library written in Rust - feature "rustversion" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(rustversion-1.0/default) >= 1.0.6
+Requires:       crate(rustversion-1/default) >= 1.0.6
 Provides:       crate(%{pkgname}/read-buf)
 Provides:       crate(%{pkgname}/rustversion)
 

@@ -24,7 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(curve25519-dalek-5.0.0-pre.6/digest) >= 5.0.0-pre.6
 Requires:       crate(ed25519-3.0.0-rc.4) >= 3.0.0-rc.4
 Requires:       crate(sha2-0.11) >= 0.11.0
-Requires:       crate(subtle-2.0) >= 2.6.1
+Requires:       crate(subtle-2) >= 2.6.1
 Provides:       crate(ed25519-dalek) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/hazmat)
@@ -39,7 +39,7 @@ Requires:       crate(curve25519-dalek-5.0.0-pre.6/alloc) >= 5.0.0-pre.6
 Requires:       crate(curve25519-dalek-5.0.0-pre.6/digest) >= 5.0.0-pre.6
 Requires:       crate(ed25519-3.0.0-rc.4/alloc) >= 3.0.0-rc.4
 Requires:       crate(serde-1/alloc) >= 1.0.228
-Requires:       crate(signature-3.0/alloc) >= 3.0.0
+Requires:       crate(signature-3/alloc) >= 3.0.0
 Requires:       crate(zeroize-1.0/alloc) >= 1.8.2
 Provides:       crate(%{pkgname}/alloc)
 
@@ -70,7 +70,7 @@ This metapackage enables feature "default" for the Rust ed25519-dalek crate, by 
 %package     -n %{name}+digest
 Summary:        Fast and efficient ed25519 EdDSA key generations, signing, and verification in pure Rust - feature "digest"
 Requires:       crate(%{pkgname})
-Requires:       crate(signature-3.0/digest) >= 3.0.0
+Requires:       crate(signature-3/digest) >= 3.0.0
 Provides:       crate(%{pkgname}/digest)
 
 %description -n %{name}+digest
@@ -138,7 +138,7 @@ This metapackage enables feature "serde" for the Rust ed25519-dalek crate, by pu
 %package     -n %{name}+signature
 Summary:        Fast and efficient ed25519 EdDSA key generations, signing, and verification in pure Rust - feature "signature"
 Requires:       crate(%{pkgname})
-Requires:       crate(signature-3.0) >= 3.0.0
+Requires:       crate(signature-3) >= 3.0.0
 Provides:       crate(%{pkgname}/signature)
 
 %description -n %{name}+signature

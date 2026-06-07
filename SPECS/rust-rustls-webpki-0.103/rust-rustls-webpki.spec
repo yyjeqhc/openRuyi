@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(rustls-pki-types-1.0) >= 1.14.0
+Requires:       crate(rustls-pki-types-1) >= 1.14.0
 Requires:       crate(untrusted-0.9/default) >= 0.9.0
 Provides:       crate(%{pkgname})
 
@@ -32,7 +32,7 @@ Source code for takopackized Rust crate "rustls-webpki"
 Summary:        Web PKI X.509 Certificate Verification - feature "alloc"
 Requires:       crate(%{pkgname})
 Requires:       crate(ring-0.17/alloc) >= 0.17.14
-Requires:       crate(rustls-pki-types-1.0/alloc) >= 1.14.0
+Requires:       crate(rustls-pki-types-1/alloc) >= 1.14.0
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -82,7 +82,7 @@ This metapackage enables feature "ring" for the Rust rustls-webpki crate, by pul
 Summary:        Web PKI X.509 Certificate Verification - feature "std" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(rustls-pki-types-1.0/std) >= 1.14.0
+Requires:       crate(rustls-pki-types-1/std) >= 1.14.0
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
 

@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(siphasher-1.0/default) >= 1.0.3
+Requires:       crate(siphasher-1/default) >= 1.0.3
 Provides:       crate(phf-shared) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

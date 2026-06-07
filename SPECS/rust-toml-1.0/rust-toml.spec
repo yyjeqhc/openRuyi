@@ -104,7 +104,7 @@ This metapackage enables feature "preserve_order" for the Rust toml crate, by pu
 %package     -n %{name}+serde
 Summary:        Native Rust encoder and decoder of TOML-formatted files and streams - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0/alloc) >= 1.0.228
+Requires:       crate(serde-core-1/alloc) >= 1.0.228
 Requires:       crate(serde-spanned-1.1.1/alloc) >= 1.1.1
 Requires:       crate(serde-spanned-1.1.1/serde) >= 1.1.1
 Requires:       crate(toml-datetime-1.0/alloc) >= 1.1.1
@@ -119,8 +119,8 @@ This metapackage enables feature "serde" for the Rust toml crate, by pulling in 
 Summary:        Native Rust encoder and decoder of TOML-formatted files and streams - feature "std"
 Requires:       crate(%{pkgname})
 Requires:       crate(indexmap-2.14.0/std) >= 2.14.0
-Requires:       crate(serde-core-1.0/alloc) >= 1.0.228
-Requires:       crate(serde-core-1.0/std) >= 1.0.228
+Requires:       crate(serde-core-1/alloc) >= 1.0.228
+Requires:       crate(serde-core-1/std) >= 1.0.228
 Requires:       crate(serde-spanned-1.1.1/alloc) >= 1.1.1
 Requires:       crate(serde-spanned-1.1.1/std) >= 1.1.1
 Requires:       crate(toml-datetime-1.0/alloc) >= 1.1.1

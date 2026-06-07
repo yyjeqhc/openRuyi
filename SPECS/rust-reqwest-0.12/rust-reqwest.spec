@@ -38,13 +38,13 @@ Requires:       crate(hyper-util-0.1/http1) >= 0.1.20
 Requires:       crate(hyper-util-0.1/tokio) >= 0.1.20
 Requires:       crate(js-sys-0.3/default) >= 0.3.94
 Requires:       crate(log-0.4/default) >= 0.4.29
-Requires:       crate(percent-encoding-2.0/default) >= 2.3.2
+Requires:       crate(percent-encoding-2/default) >= 2.3.2
 Requires:       crate(pin-project-lite-0.2/default) >= 0.2.17
 Requires:       crate(serde-1/default) >= 1.0.228
 Requires:       crate(serde-json-1/default) >= 1.0.149
 Requires:       crate(serde-urlencoded-0.7/default) >= 0.7.1
-Requires:       crate(sync-wrapper-1.0/default) >= 1.0.2
-Requires:       crate(sync-wrapper-1.0/futures) >= 1.0.2
+Requires:       crate(sync-wrapper-1/default) >= 1.0.2
+Requires:       crate(sync-wrapper-1/futures) >= 1.0.2
 Requires:       crate(tokio-1.0/net) >= 1.50.0
 Requires:       crate(tokio-1.0/time) >= 1.50.0
 Requires:       crate(tower-0.5/retry) >= 0.5.3
@@ -119,8 +119,8 @@ This metapackage enables feature "__rustls-ring" for the Rust reqwest crate, by 
 %package     -n %{name}+tls
 Summary:        Higher level HTTP client library - feature "__tls"
 Requires:       crate(%{pkgname})
-Requires:       crate(rustls-pki-types-1.0/default) >= 1.9.0
-Requires:       crate(rustls-pki-types-1.0/std) >= 1.9.0
+Requires:       crate(rustls-pki-types-1/default) >= 1.9.0
+Requires:       crate(rustls-pki-types-1/std) >= 1.9.0
 Requires:       crate(tokio-1.0/io-util) >= 1.50.0
 Requires:       crate(tokio-1.0/net) >= 1.50.0
 Requires:       crate(tokio-1.0/time) >= 1.50.0

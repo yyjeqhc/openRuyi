@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(signature-3.0) >= 3.0.0
+Requires:       crate(signature-3) >= 3.0.0
 Provides:       crate(ed25519) = %{version}
 Provides:       crate(%{pkgname})
 

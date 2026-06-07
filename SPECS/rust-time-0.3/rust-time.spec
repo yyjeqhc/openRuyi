@@ -35,7 +35,7 @@ Source code for takopackized Rust crate "time"
 %package     -n %{name}+alloc
 Summary:        Date and time library - feature "alloc" and 2 more
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0/alloc) >= 1.0.228
+Requires:       crate(serde-core-1/alloc) >= 1.0.228
 Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
@@ -154,7 +154,7 @@ Summary:        Date and time library - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(deranged-0.5/powerfmt) >= 0.5.8
 Requires:       crate(deranged-0.5/serde) >= 0.5.8
-Requires:       crate(serde-core-1.0) >= 1.0.228
+Requires:       crate(serde-core-1) >= 1.0.228
 Requires:       crate(time-macros-0.2/serde) >= 0.2.27
 Provides:       crate(%{pkgname}/serde)
 

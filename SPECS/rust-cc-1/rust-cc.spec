@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(find-msvc-tools-0.1/default) >= 0.1.9
-Requires:       crate(shlex-1.0/default) >= 1.3.0
+Requires:       crate(shlex-1/default) >= 1.3.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/jobserver) = %{version}

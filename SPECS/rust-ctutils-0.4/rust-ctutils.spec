@@ -34,7 +34,7 @@ Source code for takopackized Rust crate "ctutils"
 %package     -n %{name}+subtle
 Summary:        Constant-time utility library with selection and equality testing support targeting cryptographic applications - feature "subtle"
 Requires:       crate(%{pkgname})
-Requires:       crate(subtle-2.0) >= 2.6.1
+Requires:       crate(subtle-2) >= 2.6.1
 Provides:       crate(%{pkgname}/subtle)
 
 %description -n %{name}+subtle

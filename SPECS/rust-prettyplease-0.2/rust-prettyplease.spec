@@ -15,8 +15,8 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(proc-macro2-1.0) >= 1.0.106
-Requires:       crate(syn-2.0/full) >= 2.0.117
+Requires:       crate(proc-macro2-1) >= 1.0.106
+Requires:       crate(syn-2/full) >= 2.0.117
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 
@@ -26,8 +26,8 @@ Source code for takopackized Rust crate "prettyplease"
 %package     -n %{name}+verbatim
 Summary:        Minimal `syn` syntax tree pretty-printer - feature "verbatim"
 Requires:       crate(%{pkgname})
-Requires:       crate(syn-2.0/full) >= 2.0.117
-Requires:       crate(syn-2.0/parsing) >= 2.0.117
+Requires:       crate(syn-2/full) >= 2.0.117
+Requires:       crate(syn-2/parsing) >= 2.0.117
 Provides:       crate(%{pkgname}/verbatim)
 
 %description -n %{name}+verbatim

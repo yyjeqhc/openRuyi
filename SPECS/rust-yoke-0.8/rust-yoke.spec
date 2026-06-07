@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(stable-deref-trait-1.0) >= 1.2.1
+Requires:       crate(stable-deref-trait-1) >= 1.2.1
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/serde)
 
@@ -31,7 +31,7 @@ Source code for takopackized Rust crate "yoke"
 %package     -n %{name}+alloc
 Summary:        Abstraction allowing borrowed data to be carried along with the backing data it borrows from - feature "alloc"
 Requires:       crate(%{pkgname})
-Requires:       crate(stable-deref-trait-1.0/alloc) >= 1.2.1
+Requires:       crate(stable-deref-trait-1/alloc) >= 1.2.1
 Requires:       crate(zerofrom-0.1/alloc) >= 0.1.7
 Provides:       crate(%{pkgname}/alloc)
 

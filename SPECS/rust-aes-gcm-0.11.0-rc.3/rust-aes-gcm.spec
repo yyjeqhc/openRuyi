@@ -25,7 +25,7 @@ Requires:       crate(aead-0.6.0-rc.10) >= 0.6.0-rc.10
 Requires:       crate(cipher-0.5/default) >= 0.5.1
 Requires:       crate(ctr-0.10/default) >= 0.10.0
 Requires:       crate(ghash-0.6) >= 0.6.0
-Requires:       crate(subtle-2.0) >= 2.6.1
+Requires:       crate(subtle-2) >= 2.6.1
 Provides:       crate(aes-gcm) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/hazmat)

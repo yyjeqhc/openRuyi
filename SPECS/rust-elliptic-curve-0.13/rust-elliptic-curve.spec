@@ -27,7 +27,7 @@ Requires:       crate(crypto-bigint-0.5/rand-core) >= 0.5.5
 Requires:       crate(crypto-bigint-0.5/zeroize) >= 0.5.5
 Requires:       crate(generic-array-0.14/zeroize) >= 0.14.9
 Requires:       crate(rand-core-0.6) >= 0.6.4
-Requires:       crate(subtle-2.0) >= 2.6.1
+Requires:       crate(subtle-2) >= 2.6.1
 Requires:       crate(zeroize-1.0) >= 1.8.2
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/hazmat)

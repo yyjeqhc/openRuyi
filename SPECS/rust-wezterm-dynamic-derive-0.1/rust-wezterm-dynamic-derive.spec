@@ -21,10 +21,10 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(proc-macro2-1.0/default) >= 1.0.106
-Requires:       crate(quote-1.0/default) >= 1.0.45
-Requires:       crate(syn-1.0/default) >= 1.0.109
-Requires:       crate(syn-1.0/extra-traits) >= 1.0.109
+Requires:       crate(proc-macro2-1/default) >= 1.0.106
+Requires:       crate(quote-1/default) >= 1.0.45
+Requires:       crate(syn-1/default) >= 1.0.109
+Requires:       crate(syn-1/extra-traits) >= 1.0.109
 Provides:       crate(wezterm-dynamic-derive) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

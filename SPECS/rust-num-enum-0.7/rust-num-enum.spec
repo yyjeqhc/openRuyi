@@ -16,7 +16,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(num-enum-derive-0.7) >= 0.7.6
-Requires:       crate(rustversion-1.0/default) >= 1.0.22
+Requires:       crate(rustversion-1/default) >= 1.0.22
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/external-doc)
 

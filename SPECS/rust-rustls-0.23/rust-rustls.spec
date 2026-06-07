@@ -23,10 +23,10 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(once-cell-1.0/alloc) >= 1.21.4
 Requires:       crate(once-cell-1.0/race) >= 1.21.4
-Requires:       crate(rustls-pki-types-1.0/alloc) >= 1.14.0
-Requires:       crate(rustls-pki-types-1.0/default) >= 1.14.0
+Requires:       crate(rustls-pki-types-1/alloc) >= 1.14.0
+Requires:       crate(rustls-pki-types-1/default) >= 1.14.0
 Requires:       crate(rustls-webpki-0.103/alloc) >= 0.103.10
-Requires:       crate(subtle-2.0) >= 2.6.1
+Requires:       crate(subtle-2) >= 2.6.1
 Requires:       crate(zeroize-1.0/default) >= 1.8.2
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/custom-provider)
@@ -133,7 +133,7 @@ This metapackage enables feature "ring" for the Rust rustls crate, by pulling in
 %package     -n %{name}+rustversion
 Summary:        Modern TLS library written in Rust - feature "rustversion"
 Requires:       crate(%{pkgname})
-Requires:       crate(rustversion-1.0/default) >= 1.0.6
+Requires:       crate(rustversion-1/default) >= 1.0.6
 Provides:       crate(%{pkgname}/rustversion)
 
 %description -n %{name}+rustversion
@@ -145,8 +145,8 @@ Requires:       crate(%{pkgname})
 Requires:       crate(once-cell-1.0/alloc) >= 1.21.4
 Requires:       crate(once-cell-1.0/race) >= 1.21.4
 Requires:       crate(once-cell-1.0/std) >= 1.21.4
-Requires:       crate(rustls-pki-types-1.0/alloc) >= 1.14.0
-Requires:       crate(rustls-pki-types-1.0/std) >= 1.14.0
+Requires:       crate(rustls-pki-types-1/alloc) >= 1.14.0
+Requires:       crate(rustls-pki-types-1/std) >= 1.14.0
 Requires:       crate(rustls-webpki-0.103/alloc) >= 0.103.10
 Requires:       crate(rustls-webpki-0.103/std) >= 0.103.10
 Provides:       crate(%{pkgname}/std)

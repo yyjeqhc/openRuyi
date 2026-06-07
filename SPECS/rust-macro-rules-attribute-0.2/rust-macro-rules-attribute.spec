@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(macro-rules-attribute-proc-macro-0.2/default) >= 0.2.2
-Requires:       crate(paste-1.0/default) >= 1.0.15
+Requires:       crate(paste-1/default) >= 1.0.15
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/better-docs)
 Provides:       crate(%{pkgname}/default)

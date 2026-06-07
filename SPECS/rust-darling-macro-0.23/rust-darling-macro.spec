@@ -16,8 +16,8 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(darling-core-0.23/default) >= 0.23.0
-Requires:       crate(quote-1.0/default) >= 1.0.45
-Requires:       crate(syn-2.0/default) >= 2.0.117
+Requires:       crate(quote-1/default) >= 1.0.45
+Requires:       crate(syn-2/default) >= 2.0.117
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

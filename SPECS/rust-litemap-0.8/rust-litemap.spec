@@ -42,7 +42,7 @@ This metapackage enables feature "databake" for the Rust litemap crate, by pulli
 Summary:        Key-value Map implementation based on a flat, sorted Vec - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(serde-core-1.0/alloc) >= 1.0.220
+Requires:       crate(serde-core-1/alloc) >= 1.0.220
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

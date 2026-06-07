@@ -267,7 +267,7 @@ This metapackage enables feature "spawn-ready" for the Rust tower crate, by pull
 %package     -n %{name}+sync-wrapper
 Summary:        Modular and reusable components for building robust clients and servers - feature "sync_wrapper"
 Requires:       crate(%{pkgname})
-Requires:       crate(sync-wrapper-1.0/default) >= 1.0.2
+Requires:       crate(sync-wrapper-1/default) >= 1.0.2
 Provides:       crate(%{pkgname}/sync-wrapper)
 
 %description -n %{name}+sync-wrapper

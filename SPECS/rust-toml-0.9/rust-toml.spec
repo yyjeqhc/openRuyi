@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(serde-spanned-1.0/alloc) >= 1.0.4
+Requires:       crate(serde-spanned-1/alloc) >= 1.0.4
 Requires:       crate(toml-datetime-0.7/alloc) >= 0.7.5
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/unbounded)
@@ -103,9 +103,9 @@ This metapackage enables feature "preserve_order" for the Rust toml crate, by pu
 %package     -n %{name}+serde
 Summary:        Native Rust encoder and decoder of TOML-formatted files and streams - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0/alloc) >= 1.0.228
-Requires:       crate(serde-spanned-1.0/alloc) >= 1.0.4
-Requires:       crate(serde-spanned-1.0/serde) >= 1.0.4
+Requires:       crate(serde-core-1/alloc) >= 1.0.228
+Requires:       crate(serde-spanned-1/alloc) >= 1.0.4
+Requires:       crate(serde-spanned-1/serde) >= 1.0.4
 Requires:       crate(toml-datetime-0.7/alloc) >= 0.7.5
 Requires:       crate(toml-datetime-0.7/serde) >= 0.7.5
 Provides:       crate(%{pkgname}/serde)
@@ -118,10 +118,10 @@ This metapackage enables feature "serde" for the Rust toml crate, by pulling in 
 Summary:        Native Rust encoder and decoder of TOML-formatted files and streams - feature "std"
 Requires:       crate(%{pkgname})
 Requires:       crate(indexmap-2.0/std) >= 2.13.0
-Requires:       crate(serde-core-1.0/alloc) >= 1.0.228
-Requires:       crate(serde-core-1.0/std) >= 1.0.228
-Requires:       crate(serde-spanned-1.0/alloc) >= 1.0.4
-Requires:       crate(serde-spanned-1.0/std) >= 1.0.4
+Requires:       crate(serde-core-1/alloc) >= 1.0.228
+Requires:       crate(serde-core-1/std) >= 1.0.228
+Requires:       crate(serde-spanned-1/alloc) >= 1.0.4
+Requires:       crate(serde-spanned-1/std) >= 1.0.4
 Requires:       crate(toml-datetime-0.7/alloc) >= 0.7.5
 Requires:       crate(toml-datetime-0.7/std) >= 0.7.5
 Requires:       crate(toml-parser-1.0/alloc) >= 1.0.10

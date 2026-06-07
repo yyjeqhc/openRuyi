@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(anyhow-1/default) >= 1.0.102
 Requires:       crate(derive-builder-0.20/default) >= 0.20.2
-Requires:       crate(rustversion-1.0/default) >= 1.0.22
+Requires:       crate(rustversion-1/default) >= 1.0.22
 Requires:       crate(vergen-lib-9.0/default) >= 9.1.0
 Provides:       crate(vergen) = %{version}
 Provides:       crate(%{pkgname})

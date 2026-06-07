@@ -40,7 +40,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(icu-locale-core-2.0/alloc) >= 2.2.0
 Requires:       crate(serde-1/alloc) >= 1.0.220
 Requires:       crate(serde-1/derive) >= 1.0.220
-Requires:       crate(stable-deref-trait-1.0) >= 1.2.0
+Requires:       crate(stable-deref-trait-1) >= 1.2.0
 Requires:       crate(writeable-0.6) >= 0.6.2
 Requires:       crate(yoke-0.8/alloc) >= 0.8.2
 Requires:       crate(yoke-0.8/derive) >= 0.8.2

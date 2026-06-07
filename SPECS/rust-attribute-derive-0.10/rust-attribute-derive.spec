@@ -23,9 +23,9 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(attribute-derive-macro-0.10/default) >= 0.10.3
 Requires:       crate(derive-where-1/default) >= 1.6.0
 Requires:       crate(manyhow-0.11/default) >= 0.11.4
-Requires:       crate(proc-macro2-1.0/default) >= 1.0.106
-Requires:       crate(quote-1.0/default) >= 1.0.45
-Requires:       crate(syn-2.0/default) >= 2.0.117
+Requires:       crate(proc-macro2-1/default) >= 1.0.106
+Requires:       crate(quote-1/default) >= 1.0.45
+Requires:       crate(syn-2/default) >= 2.0.117
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 
@@ -35,7 +35,7 @@ Source code for takopackized Rust crate "attribute-derive"
 %package     -n %{name}+syn-full
 Summary:        Clap like parsing for attributes in proc-macros - feature "syn-full"
 Requires:       crate(%{pkgname})
-Requires:       crate(syn-2.0/full) >= 2.0.117
+Requires:       crate(syn-2/full) >= 2.0.117
 Provides:       crate(%{pkgname}/syn-full)
 
 %description -n %{name}+syn-full

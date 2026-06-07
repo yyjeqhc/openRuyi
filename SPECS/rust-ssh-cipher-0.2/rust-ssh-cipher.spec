@@ -70,7 +70,7 @@ Summary:        Pure Rust implementation of SSH symmetric encryption including s
 Requires:       crate(%{pkgname})
 Requires:       crate(chacha20-0.9) >= 0.9.1
 Requires:       crate(poly1305-0.8) >= 0.8.0
-Requires:       crate(subtle-2.0) >= 2.6.1
+Requires:       crate(subtle-2) >= 2.6.1
 Provides:       crate(%{pkgname}/chacha20poly1305)
 
 %description -n %{name}+chacha20poly1305

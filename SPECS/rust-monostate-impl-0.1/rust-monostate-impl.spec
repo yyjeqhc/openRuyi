@@ -21,10 +21,10 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(proc-macro2-1.0/default) >= 1.0.105
-Requires:       crate(quote-1.0/default) >= 1.0.43
-Requires:       crate(syn-2.0/parsing) >= 2.0.114
-Requires:       crate(syn-2.0/proc-macro) >= 2.0.114
+Requires:       crate(proc-macro2-1/default) >= 1.0.105
+Requires:       crate(quote-1/default) >= 1.0.43
+Requires:       crate(syn-2/parsing) >= 2.0.114
+Requires:       crate(syn-2/proc-macro) >= 2.0.114
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

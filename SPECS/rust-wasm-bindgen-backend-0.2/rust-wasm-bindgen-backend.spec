@@ -23,10 +23,10 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bumpalo-3/default) >= 3.19.0
 Requires:       crate(log-0.4/default) >= 0.4.27
-Requires:       crate(proc-macro2-1.0/default) >= 1.0.95
-Requires:       crate(quote-1.0/default) >= 1.0.40
-Requires:       crate(syn-2.0/default) >= 2.0.104
-Requires:       crate(syn-2.0/full) >= 2.0.104
+Requires:       crate(proc-macro2-1/default) >= 1.0.95
+Requires:       crate(quote-1/default) >= 1.0.40
+Requires:       crate(syn-2/default) >= 2.0.104
+Requires:       crate(syn-2/full) >= 2.0.104
 Requires:       crate(wasm-bindgen-shared-0.2/default) >= 0.2.100
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
@@ -37,8 +37,8 @@ Source code for takopackized Rust crate "wasm-bindgen-backend"
 %package     -n %{name}+extra-traits
 Summary:        Backend code generation of the wasm-bindgen tool - feature "extra-traits"
 Requires:       crate(%{pkgname})
-Requires:       crate(syn-2.0/extra-traits) >= 2.0.104
-Requires:       crate(syn-2.0/full) >= 2.0.104
+Requires:       crate(syn-2/extra-traits) >= 2.0.104
+Requires:       crate(syn-2/full) >= 2.0.104
 Provides:       crate(%{pkgname}/extra-traits)
 
 %description -n %{name}+extra-traits

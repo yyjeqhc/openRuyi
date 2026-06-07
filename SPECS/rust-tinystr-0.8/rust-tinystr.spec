@@ -31,7 +31,7 @@ Source code for takopackized Rust crate "tinystr"
 %package     -n %{name}+alloc
 Summary:        Small ASCII-only bounded length string representation - feature "alloc" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0/alloc) >= 1.0.220
+Requires:       crate(serde-core-1/alloc) >= 1.0.220
 Requires:       crate(zerovec-0.11/alloc) >= 0.11.6
 Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/default)
@@ -53,7 +53,7 @@ This metapackage enables feature "databake" for the Rust tinystr crate, by pulli
 %package     -n %{name}+serde
 Summary:        Small ASCII-only bounded length string representation - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(serde-core-1.0) >= 1.0.220
+Requires:       crate(serde-core-1) >= 1.0.220
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

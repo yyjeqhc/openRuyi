@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(rand-core-0.10) >= 0.10.1
-Requires:       crate(subtle-2.0/i128) >= 2.6.1
+Requires:       crate(subtle-2/i128) >= 2.6.1
 Provides:       crate(rustcrypto-ff) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/alloc)

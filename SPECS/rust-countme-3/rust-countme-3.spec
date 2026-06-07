@@ -56,7 +56,7 @@ This metapackage enables feature "once_cell" for the Rust countme crate, by pull
 %package     -n %{name}+rustc-hash
 Summary:        Counts the number of live instances of types - feature "rustc-hash"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(rustc-hash-1.0/default) >= 1.1.0
+Requires:       crate(rustc-hash-1/default) >= 1.1.0
 Provides:       crate(%{pkgname}/rustc-hash) = %{version}
 
 %description -n %{name}+rustc-hash

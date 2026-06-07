@@ -22,13 +22,13 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bumpalo-3/default) >= 3.0.0
-Requires:       crate(proc-macro2-1.0/default) >= 1.0.0
-Requires:       crate(quote-1.0/default) >= 1.0.0
-Requires:       crate(syn-2.0/default) >= 2.0.0
-Requires:       crate(syn-2.0/extra-traits) >= 2.0.0
-Requires:       crate(syn-2.0/full) >= 2.0.0
-Requires:       crate(syn-2.0/visit) >= 2.0.0
-Requires:       crate(syn-2.0/visit-mut) >= 2.0.0
+Requires:       crate(proc-macro2-1/default) >= 1.0.0
+Requires:       crate(quote-1/default) >= 1.0.0
+Requires:       crate(syn-2/default) >= 2.0.0
+Requires:       crate(syn-2/extra-traits) >= 2.0.0
+Requires:       crate(syn-2/full) >= 2.0.0
+Requires:       crate(syn-2/visit) >= 2.0.0
+Requires:       crate(syn-2/visit-mut) >= 2.0.0
 Requires:       crate(wasm-bindgen-shared-0.2/default) >= 0.2.117
 Provides:       crate(wasm-bindgen-macro-support) = %{version}
 Provides:       crate(%{pkgname})
@@ -41,10 +41,10 @@ Source code for takopackized Rust crate "wasm-bindgen-macro-support"
 %package     -n %{name}+extra-traits
 Summary:        Implementation APIs for the `#[wasm_bindgen]` attribute - feature "extra-traits"
 Requires:       crate(%{pkgname})
-Requires:       crate(syn-2.0/extra-traits) >= 2.0.0
-Requires:       crate(syn-2.0/full) >= 2.0.0
-Requires:       crate(syn-2.0/visit) >= 2.0.0
-Requires:       crate(syn-2.0/visit-mut) >= 2.0.0
+Requires:       crate(syn-2/extra-traits) >= 2.0.0
+Requires:       crate(syn-2/full) >= 2.0.0
+Requires:       crate(syn-2/visit) >= 2.0.0
+Requires:       crate(syn-2/visit-mut) >= 2.0.0
 Provides:       crate(%{pkgname}/extra-traits)
 
 %description -n %{name}+extra-traits

@@ -25,7 +25,7 @@ Requires:       crate(aead-0.5) >= 0.5.2
 Requires:       crate(cipher-0.4/default) >= 0.4.4
 Requires:       crate(ctr-0.9/default) >= 0.9.2
 Requires:       crate(ghash-0.5) >= 0.5.1
-Requires:       crate(subtle-2.0) >= 2.6.1
+Requires:       crate(subtle-2) >= 2.6.1
 Provides:       crate(aes-gcm) = %{version}
 Provides:       crate(%{pkgname})
 

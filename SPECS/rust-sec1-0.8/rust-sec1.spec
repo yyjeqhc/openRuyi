@@ -112,7 +112,7 @@ This metapackage enables feature "std" for the Rust sec1 crate, by pulling in an
 %package     -n %{name}+subtle
 Summary:        Pure Rust implementation of SEC1: Elliptic Curve Cryptography encoding formats including ASN.1 DER encoded private keys as well as the Elliptic-Curve-Point-to-Octet-String encoding - feature "subtle"
 Requires:       crate(%{pkgname})
-Requires:       crate(subtle-2.0) >= 2.6.1
+Requires:       crate(subtle-2) >= 2.6.1
 Provides:       crate(%{pkgname}/subtle)
 
 %description -n %{name}+subtle

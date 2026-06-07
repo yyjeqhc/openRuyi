@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(quote-1.0/default) >= 1.0.45
+Requires:       crate(quote-1/default) >= 1.0.45
 Requires:       crate(wasm-bindgen-macro-support-0.2.120/default) >= 0.2.120
 Provides:       crate(wasm-bindgen-macro) = %{version}
 Provides:       crate(%{pkgname})
