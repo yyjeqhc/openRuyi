@@ -32,6 +32,8 @@ BuildRequires:  perl(Pod::Find)
 BuildRequires:  perl(strict)
 BuildRequires:  perl(Test::More) >= 0.96
 BuildRequires:  perl(warnings)
+BuildRequires:  perl(PerlIO::utf8_strict)
+BuildRequires:  perl(Sub::Exporter)
 
 %description
 This is a Pod::Coverage subclass (actually, a subclass of

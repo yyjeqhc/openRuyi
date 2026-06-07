@@ -26,7 +26,9 @@ BuildRequires:  perl(Carp)
 BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(File::Spec)
 BuildRequires:  perl(Mixin::Linewise::Readers) >= 0.102
+BuildRequires:  perl(PerlIO::utf8_strict)
 BuildRequires:  perl(strict)
+BuildRequires:  perl(Sub::Exporter)
 BuildRequires:  perl(Test::Deep)
 BuildRequires:  perl(Test::More) >= 0.96
 BuildRequires:  perl(warnings)

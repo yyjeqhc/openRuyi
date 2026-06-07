@@ -23,6 +23,7 @@ BuildRequires:  perl-macros
 BuildRequires:  perl >= 5.7.3
 BuildRequires:  perl(Encode) >= 1.41
 BuildRequires:  perl(ExtUtils::MakeMaker)
+BuildRequires:  perl(inc::Module::Install)
 
 Requires:       perl(Encode) >= 1.41
 

@@ -28,6 +28,7 @@ BuildRequires:  perl(File::Spec) >= 0.82
 BuildRequires:  perl(Params::Util) >= 0.38
 BuildRequires:  perl(Parse::CPAN::Meta) >= 1.38
 BuildRequires:  perl(Test::More)
+BuildRequires:  perl(Number::Compare)
 
 Requires:       perl(File::Find::Rule) >= 0.20
 Requires:       perl(File::Spec) >= 0.82
@@ -38,6 +39,21 @@ Requires:       perl(Parse::CPAN::Meta) >= 1.38
 I write a lot of things that muck with Perl files. And it always annoyed
 me that finding "perl files" requires a moderately complex
 File::Find::Rule pattern.
+
+%check
+# RPM packaging helpers leave generated file-list artifacts in the build
+# directory, which breaks t/03_no_index.t file list expectations.
+rm -f debug*.list elfbins.list
+
+if [ -f %{name}.files ]; then
+    mv %{name}.files ../%{name}.files.rpmbuild
+fi
+
+%{make_build} test
+
+if [ -f ../%{name}.files.rpmbuild ]; then
+    mv ../%{name}.files.rpmbuild %{name}.files
+fi
 
 %files -f %{name}.files
 %doc Changes

@@ -39,6 +39,7 @@ BuildRequires:  perl(Test::More) >= 0.96
 BuildRequires:  perl(Test::Needs) >= 0.002010
 BuildRequires:  perl(Test::RequiresInternet)
 BuildRequires:  perl(warnings)
+BuildRequires:  perl(Try::Tiny)
 
 Requires:       perl(IO::Socket::SSL) >= 1.970
 Requires:       perl(LWP::UserAgent) >= 6.06

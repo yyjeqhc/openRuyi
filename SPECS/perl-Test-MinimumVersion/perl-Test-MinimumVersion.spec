@@ -36,6 +36,10 @@ BuildRequires:  perl(Test::More) >= 0.96
 BuildRequires:  perl(Test::Tester)
 BuildRequires:  perl(version) >= 0.70
 BuildRequires:  perl(warnings)
+BuildRequires:  perl(Number::Compare)
+BuildRequires:  perl(Safe::Isa)
+BuildRequires:  perl(YAML::PP)
+BuildRequires:  perl(PPIx::Utils)
 
 Requires:       perl(Perl::MinimumVersion) >= 1.32
 Requires:       perl(version) >= 0.70
