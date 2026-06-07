@@ -26,9 +26,9 @@ Requires:       crate(inotify-0.11) >= 0.11.1
 Requires:       crate(kqueue-1/default) >= 1.1.1
 Requires:       crate(libc-0.2/default) >= 0.2.186
 Requires:       crate(log-0.4/default) >= 0.4.29
-Requires:       crate(mio-1.0/default) >= 1.2.0
-Requires:       crate(mio-1.0/os-ext) >= 1.2.0
-Requires:       crate(notify-types-2.0/default) >= 2.1.0
+Requires:       crate(mio-1/default) >= 1.2.0
+Requires:       crate(mio-1/os-ext) >= 1.2.0
+Requires:       crate(notify-types-2/default) >= 2.1.0
 Requires:       crate(walkdir-2.0/default) >= 2.5.0
 Requires:       crate(windows-sys-0.60/default) >= 0.60.2
 Requires:       crate(windows-sys-0.60/win32-foundation) >= 0.60.2
@@ -96,8 +96,8 @@ This metapackage enables feature "macos_kqueue" for the Rust notify crate, by pu
 %package     -n %{name}+mio
 Summary:        Cross-platform filesystem notification library - feature "mio"
 Requires:       crate(%{pkgname})
-Requires:       crate(mio-1.0/default) >= 1.2.0
-Requires:       crate(mio-1.0/os-ext) >= 1.2.0
+Requires:       crate(mio-1/default) >= 1.2.0
+Requires:       crate(mio-1/os-ext) >= 1.2.0
 Provides:       crate(%{pkgname}/mio)
 
 %description -n %{name}+mio
@@ -106,7 +106,7 @@ This metapackage enables feature "mio" for the Rust notify crate, by pulling in 
 %package     -n %{name}+serde
 Summary:        Cross-platform filesystem notification library - feature "serde"
 Requires:       crate(%{pkgname})
-Requires:       crate(notify-types-2.0/serde) >= 2.1.0
+Requires:       crate(notify-types-2/serde) >= 2.1.0
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde
@@ -115,7 +115,7 @@ This metapackage enables feature "serde" for the Rust notify crate, by pulling i
 %package     -n %{name}+serialization-compat-6
 Summary:        Cross-platform filesystem notification library - feature "serialization-compat-6"
 Requires:       crate(%{pkgname})
-Requires:       crate(notify-types-2.0/serialization-compat-6) >= 2.1.0
+Requires:       crate(notify-types-2/serialization-compat-6) >= 2.1.0
 Provides:       crate(%{pkgname}/serialization-compat-6)
 
 %description -n %{name}+serialization-compat-6

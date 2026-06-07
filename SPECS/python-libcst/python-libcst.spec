@@ -22,7 +22,7 @@ BuildOption(check):  -e "libcst.tests*" -e "libcst.codemod.tests*"
 
 BuildRequires:  cargo
 BuildRequires:  crate(annotate-snippets-0.11/default) >= 0.11.5
-BuildRequires:  crate(memchr-2.0/default) >= 2.7.4
+BuildRequires:  crate(memchr-2/default) >= 2.7.4
 BuildRequires:  crate(paste-1.0/default) >= 1.0.15
 BuildRequires:  crate(peg-0.8/default) >= 0.8.5
 BuildRequires:  crate(proc-macro2-1.0/default)

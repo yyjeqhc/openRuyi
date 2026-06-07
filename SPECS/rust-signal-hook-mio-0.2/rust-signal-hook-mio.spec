@@ -33,7 +33,7 @@ Source code for takopackized Rust crate "signal-hook-mio"
 %package     -n %{name}+mio-0-6
 Summary:        MIO support for signal-hook - feature "mio-0_6"
 Requires:       crate(%{pkgname})
-Requires:       crate(mio-1.0/default) >= 1.2.0
+Requires:       crate(mio-1/default) >= 1.2.0
 Provides:       crate(%{pkgname}/mio-0-6)
 
 %description -n %{name}+mio-0-6
@@ -42,9 +42,9 @@ This metapackage enables feature "mio-0_6" for the Rust signal-hook-mio crate, b
 %package     -n %{name}+mio-0-7
 Summary:        MIO support for signal-hook - feature "mio-0_7" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(mio-1.0/default) >= 1.2.0
-Requires:       crate(mio-1.0/os-util) >= 1.2.0
-Requires:       crate(mio-1.0/uds) >= 1.2.0
+Requires:       crate(mio-1/default) >= 1.2.0
+Requires:       crate(mio-1/os-util) >= 1.2.0
+Requires:       crate(mio-1/uds) >= 1.2.0
 Provides:       crate(%{pkgname}/mio-0-7)
 Provides:       crate(%{pkgname}/support-v0-7)
 
@@ -56,9 +56,9 @@ Additionally, this package also provides the "support-v0_7" feature.
 %package     -n %{name}+mio-0-8
 Summary:        MIO support for signal-hook - feature "mio-0_8" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(mio-1.0/default) >= 1.2.0
-Requires:       crate(mio-1.0/net) >= 1.2.0
-Requires:       crate(mio-1.0/os-ext) >= 1.2.0
+Requires:       crate(mio-1/default) >= 1.2.0
+Requires:       crate(mio-1/net) >= 1.2.0
+Requires:       crate(mio-1/os-ext) >= 1.2.0
 Provides:       crate(%{pkgname}/mio-0-8)
 Provides:       crate(%{pkgname}/support-v0-8)
 
@@ -70,9 +70,9 @@ Additionally, this package also provides the "support-v0_8" feature.
 %package     -n %{name}+mio-1-0
 Summary:        MIO support for signal-hook - feature "mio-1_0" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(mio-1.0/default) >= 1.2.0
-Requires:       crate(mio-1.0/net) >= 1.2.0
-Requires:       crate(mio-1.0/os-ext) >= 1.2.0
+Requires:       crate(mio-1/default) >= 1.2.0
+Requires:       crate(mio-1/net) >= 1.2.0
+Requires:       crate(mio-1/os-ext) >= 1.2.0
 Provides:       crate(%{pkgname}/mio-1-0)
 Provides:       crate(%{pkgname}/support-v1-0)
 

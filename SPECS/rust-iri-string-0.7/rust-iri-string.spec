@@ -39,7 +39,7 @@ This metapackage enables feature "alloc" for the Rust iri-string crate, by pulli
 %package     -n %{name}+memchr
 Summary:        IRI as string types - feature "memchr"
 Requires:       crate(%{pkgname})
-Requires:       crate(memchr-2.0) >= 2.8.0
+Requires:       crate(memchr-2) >= 2.8.0
 Provides:       crate(%{pkgname}/memchr)
 
 %description -n %{name}+memchr
@@ -58,7 +58,7 @@ This metapackage enables feature "serde" for the Rust iri-string crate, by pulli
 Summary:        IRI as string types - feature "std" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(memchr-2.0/std) >= 2.8.0
+Requires:       crate(memchr-2/std) >= 2.8.0
 Requires:       crate(serde-1/derive) >= 1.0.228
 Requires:       crate(serde-1/std) >= 1.0.228
 Provides:       crate(%{pkgname}/default)

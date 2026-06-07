@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(itoa-1.0/default) >= 1.0.0
-Requires:       crate(memchr-2.0) >= 2.0.0
+Requires:       crate(memchr-2) >= 2.0.0
 Requires:       crate(serde-1) >= 1.0.220
 Requires:       crate(serde-core-1.0) >= 1.0.220
 Requires:       crate(zmij-1.0/default) >= 1.0.0
@@ -65,7 +65,7 @@ This metapackage enables feature "preserve_order" for the Rust serde_json crate,
 %package     -n %{name}+std
 Summary:        JSON serialization file format - feature "std" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(memchr-2.0/std) >= 2.0.0
+Requires:       crate(memchr-2/std) >= 2.0.0
 Requires:       crate(serde-core-1.0/std) >= 1.0.220
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/std) = %{version}

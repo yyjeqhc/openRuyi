@@ -57,7 +57,7 @@ This metapackage enables feature "futures-io" for the Rust futures-lite crate, b
 %package     -n %{name}+memchr
 Summary:        Futures, streams, and async I/O combinators - feature "memchr"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(memchr-2.0/default) >= 2.3.3
+Requires:       crate(memchr-2/default) >= 2.3.3
 Provides:       crate(%{pkgname}/memchr) = %{version}
 
 %description -n %{name}+memchr

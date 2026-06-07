@@ -42,7 +42,7 @@ This metapackage enables feature "default" for the Rust pest crate, by pulling i
 %package     -n %{name}+memchr
 Summary:        Elegant Parser - feature "memchr"
 Requires:       crate(%{pkgname})
-Requires:       crate(memchr-2.0/default) >= 2.8.0
+Requires:       crate(memchr-2/default) >= 2.8.0
 Provides:       crate(%{pkgname}/memchr)
 
 %description -n %{name}+memchr

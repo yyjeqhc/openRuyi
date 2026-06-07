@@ -1,8 +1,8 @@
 %global crate_name memchr
 %global full_version 2.8.0
-%global pkgname memchr-2.0
+%global pkgname memchr-2
 
-Name:           rust-memchr-2.0
+Name:           rust-memchr-2
 Version:        2.8.0
 Release:        %autorelease
 Summary:        Rust crate "memchr"
@@ -15,33 +15,23 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/alloc)
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/libc)
-Provides:       crate(%{pkgname}/std)
-Provides:       crate(%{pkgname}/use-std)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/alloc) = %{version}
+Provides:       crate(%{pkgname}/core) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/libc) = %{version}
+Provides:       crate(%{pkgname}/rustc-dep-of-std) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
+Provides:       crate(%{pkgname}/use-std) = %{version}
 
 %description
 Source code for takopackized Rust crate "memchr"
 
-%package     -n %{name}+core
-Summary:        Provides extremely fast (uses SIMD on x86_64, aarch64 and wasm32) routines for 1, 2 or 3 byte search and single substring search - feature "core" and 1 more
-Requires:       crate(%{pkgname})
-Requires:       crate(rustc-std-workspace-core-1.0/default) >= 1.0.0
-Provides:       crate(%{pkgname}/core)
-Provides:       crate(%{pkgname}/rustc-dep-of-std)
-
-%description -n %{name}+core
-This metapackage enables feature "core" for the Rust memchr crate, by pulling in any additional dependencies needed by that feature.
-
-Additionally, this package also provides the "rustc-dep-of-std" feature.
-
 %package     -n %{name}+logging
 Summary:        Provides extremely fast (uses SIMD on x86_64, aarch64 and wasm32) routines for 1, 2 or 3 byte search and single substring search - feature "logging"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(log-0.4/default) >= 0.4.20
-Provides:       crate(%{pkgname}/logging)
+Provides:       crate(%{pkgname}/logging) = %{version}
 
 %description -n %{name}+logging
 This metapackage enables feature "logging" for the Rust memchr crate, by pulling in any additional dependencies needed by that feature.

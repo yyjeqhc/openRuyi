@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(nom-7.0/default) >= 7.1.3
+Requires:       crate(nom-7/default) >= 7.1.3
 Requires:       crate(proc-macro2-1.0/default) >= 1.0.106
 Requires:       crate(quote-1.0/default) >= 1.0.45
 Requires:       crate(syn-2.0/default) >= 2.0.117

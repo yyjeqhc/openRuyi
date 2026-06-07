@@ -28,7 +28,7 @@ BuildRequires:  rust-rpm-macros
 BuildRequires:  python3dist(maturin)
 BuildRequires:  python3dist(pip)
 BuildRequires:  crate(ahash-0.8/default) >= 0.8.12
-BuildRequires:  crate(mac-address-1.0/default) >= 1.1.8
+BuildRequires:  crate(mac-address-1/default) >= 1.1.8
 BuildRequires:  crate(memoffset-0.9/default) >= 0.9.1
 BuildRequires:  crate(pyo3-0.28/default) >= 0.28.3
 BuildRequires:  crate(pyo3-0.28/extension-module) >= 0.28.3

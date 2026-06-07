@@ -15,7 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(nom-8.0/default) >= 8.0.0
+Requires:       crate(nom-8/default) >= 8.0.0
 Requires:       crate(ratatui-core-0.1) >= 0.1.0
 Requires:       crate(smallvec-1.0/const-generics) >= 1.0.0
 Requires:       crate(smallvec-1.0/default) >= 1.0.0

@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(memchr-2.0/default) >= 2.8.0
+Requires:       crate(memchr-2/default) >= 2.8.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

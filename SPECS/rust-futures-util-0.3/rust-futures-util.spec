@@ -165,7 +165,7 @@ This metapackage enables feature "libc" for the Rust futures-util crate, by pull
 %package     -n %{name}+memchr
 Summary:        Common utilities and extension traits for the futures-rs library - feature "memchr"
 Requires:       crate(%{pkgname})
-Requires:       crate(memchr-2.0/default) >= 2.8.0
+Requires:       crate(memchr-2/default) >= 2.8.0
 Provides:       crate(%{pkgname}/memchr)
 
 %description -n %{name}+memchr

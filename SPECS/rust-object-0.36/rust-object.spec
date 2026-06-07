@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(memchr-2.0) >= 2.7.5
+Requires:       crate(memchr-2) >= 2.7.5
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/archive)
 Provides:       crate(%{pkgname}/cargo-all)
@@ -77,7 +77,7 @@ This metapackage enables feature "read" for the Rust object crate, by pulling in
 %package     -n %{name}+std
 Summary:        Unified interface for reading and writing object file formats - feature "std"
 Requires:       crate(%{pkgname})
-Requires:       crate(memchr-2.0/std) >= 2.7.5
+Requires:       crate(memchr-2/std) >= 2.7.5
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std

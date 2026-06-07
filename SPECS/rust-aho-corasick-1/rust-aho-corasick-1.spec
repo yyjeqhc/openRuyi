@@ -42,7 +42,7 @@ This metapackage enables feature "logging" for the Rust aho-corasick crate, by p
 %package     -n %{name}+perf-literal
 Summary:        Fast multiple substring searching - feature "perf-literal"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(memchr-2.0) >= 2.4.0
+Requires:       crate(memchr-2) >= 2.4.0
 Provides:       crate(%{pkgname}/perf-literal) = %{version}
 
 %description -n %{name}+perf-literal
@@ -51,7 +51,7 @@ This metapackage enables feature "perf-literal" for the Rust aho-corasick crate,
 %package     -n %{name}+std
 Summary:        Fast multiple substring searching - feature "std"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(memchr-2.0/std) >= 2.4.0
+Requires:       crate(memchr-2/std) >= 2.4.0
 Provides:       crate(%{pkgname}/std) = %{version}
 
 %description -n %{name}+std

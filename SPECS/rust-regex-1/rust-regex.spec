@@ -52,7 +52,7 @@ This metapackage enables feature "default" for the Rust regex crate, by pulling 
 Summary:        Regular expressions for Rust - feature "logging"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(aho-corasick-1/logging) >= 1.0.0
-Requires:       crate(memchr-2.0/logging) >= 2.6.0
+Requires:       crate(memchr-2/logging) >= 2.6.0
 Requires:       crate(regex-automata-0.4/alloc) >= 0.4.12
 Requires:       crate(regex-automata-0.4/logging) >= 0.4.12
 Requires:       crate(regex-automata-0.4/meta) >= 0.4.12
@@ -140,7 +140,7 @@ This metapackage enables feature "perf-inline" for the Rust regex crate, by pull
 Summary:        Regular expressions for Rust - feature "perf-literal"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(aho-corasick-1) >= 1.0.0
-Requires:       crate(memchr-2.0) >= 2.6.0
+Requires:       crate(memchr-2) >= 2.6.0
 Requires:       crate(regex-automata-0.4/alloc) >= 0.4.12
 Requires:       crate(regex-automata-0.4/meta) >= 0.4.12
 Requires:       crate(regex-automata-0.4/nfa-pikevm) >= 0.4.12
@@ -170,7 +170,7 @@ This metapackage enables feature "perf-onepass" for the Rust regex crate, by pul
 Summary:        Regular expressions for Rust - feature "std" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(aho-corasick-1/std) >= 1.0.0
-Requires:       crate(memchr-2.0/std) >= 2.6.0
+Requires:       crate(memchr-2/std) >= 2.6.0
 Requires:       crate(regex-automata-0.4/alloc) >= 0.4.12
 Requires:       crate(regex-automata-0.4/meta) >= 0.4.12
 Requires:       crate(regex-automata-0.4/nfa-pikevm) >= 0.4.12

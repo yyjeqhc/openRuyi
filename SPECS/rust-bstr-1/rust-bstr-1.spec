@@ -15,7 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(memchr-2.0) >= 2.7.1
+Requires:       crate(memchr-2) >= 2.7.1
 Provides:       crate(%{pkgname}) = %{version}
 
 %description
@@ -24,7 +24,7 @@ Source code for takopackized Rust crate "bstr"
 %package     -n %{name}+alloc
 Summary:        String type that is not required to be valid UTF-8 - feature "alloc"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(memchr-2.0/alloc) >= 2.7.1
+Requires:       crate(memchr-2/alloc) >= 2.7.1
 Requires:       crate(serde-1/alloc) >= 1.0.85
 Provides:       crate(%{pkgname}/alloc) = %{version}
 
@@ -54,7 +54,7 @@ This metapackage enables feature "serde" for the Rust bstr crate, by pulling in 
 Summary:        String type that is not required to be valid UTF-8 - feature "std"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/alloc) = %{version}
-Requires:       crate(memchr-2.0/std) >= 2.7.1
+Requires:       crate(memchr-2/std) >= 2.7.1
 Requires:       crate(serde-1/std) >= 1.0.85
 Provides:       crate(%{pkgname}/std) = %{version}
 

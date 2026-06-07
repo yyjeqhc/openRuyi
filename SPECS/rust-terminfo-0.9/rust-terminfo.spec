@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(fnv-1/default) >= 1.0.7
-Requires:       crate(nom-7.0/std) >= 7.1.3
+Requires:       crate(nom-7/std) >= 7.1.3
 Requires:       crate(phf-0.11/default) >= 0.11.3
 Requires:       crate(phf-codegen-0.11/default) >= 0.11.3
 Provides:       crate(terminfo) = %{version}

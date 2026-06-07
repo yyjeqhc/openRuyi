@@ -33,7 +33,7 @@ Source code for takopackized Rust crate "annotate-snippets"
 %package     -n %{name}+memchr
 Summary:        Building code annotations - feature "memchr" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(memchr-2.0/default) >= 2.7.4
+Requires:       crate(memchr-2/default) >= 2.7.4
 Provides:       crate(%{pkgname}/memchr)
 Provides:       crate(%{pkgname}/simd)
 

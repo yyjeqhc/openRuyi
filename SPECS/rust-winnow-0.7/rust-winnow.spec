@@ -44,7 +44,7 @@ This metapackage enables feature "debug" for the Rust winnow crate, by pulling i
 %package     -n %{name}+simd
 Summary:        Byte-oriented, zero-copy, parser combinators library - feature "simd"
 Requires:       crate(%{pkgname})
-Requires:       crate(memchr-2.0) >= 2.7
+Requires:       crate(memchr-2) >= 2.7
 Provides:       crate(%{pkgname}/simd)
 
 %description -n %{name}+simd
@@ -54,7 +54,7 @@ This metapackage enables feature "simd" for the Rust winnow crate, by pulling in
 Summary:        Byte-oriented, zero-copy, parser combinators library - feature "std" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(memchr-2.0/std) >= 2.7
+Requires:       crate(memchr-2/std) >= 2.7
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
 

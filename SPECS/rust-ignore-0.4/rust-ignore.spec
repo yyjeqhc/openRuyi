@@ -24,7 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(crossbeam-deque-0.8/default) >= 0.8.6
 Requires:       crate(globset-0.4/default) >= 0.4.18
 Requires:       crate(log-0.4/default) >= 0.4.29
-Requires:       crate(memchr-2.0/default) >= 2.8.0
+Requires:       crate(memchr-2/default) >= 2.8.0
 Requires:       crate(regex-automata-0.4/dfa-onepass) >= 0.4.14
 Requires:       crate(regex-automata-0.4/hybrid) >= 0.4.14
 Requires:       crate(regex-automata-0.4/meta) >= 0.4.14

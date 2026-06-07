@@ -36,7 +36,7 @@ Requires:       crate(libc-0.2/default) >= 0.2.186
 Requires:       crate(libfuzzer-sys-0.4/default) >= 0.4.12
 Requires:       crate(log-0.4/default) >= 0.4.29
 Requires:       crate(maybe-rayon-0.1) >= 0.1.1
-Requires:       crate(new-debug-unreachable-1.0/default) >= 1.0.6
+Requires:       crate(new-debug-unreachable-1/default) >= 1.0.6
 Requires:       crate(noop-proc-macro-0.3/default) >= 0.3.0
 Requires:       crate(num-derive-0.4/default) >= 0.4.2
 Requires:       crate(num-traits-0.2/default) >= 0.2.19
@@ -265,7 +265,7 @@ This metapackage enables feature "nasm-rs" for the Rust rav1e crate, by pulling 
 %package     -n %{name}+nom
 Summary:        Fastest and safest AV1 encoder - feature "nom"
 Requires:       crate(%{pkgname})
-Requires:       crate(nom-8.0/default) >= 8.0.0
+Requires:       crate(nom-8/default) >= 8.0.0
 Provides:       crate(%{pkgname}/nom)
 
 %description -n %{name}+nom

@@ -93,7 +93,7 @@ Summary:        Automata construction and matching using regular expressions - f
 Requires:       crate(%{pkgname})
 Requires:       crate(aho-corasick-1/logging) >= 1.1.4
 Requires:       crate(log-0.4/default) >= 0.4.14
-Requires:       crate(memchr-2.0/logging) >= 2.8.0
+Requires:       crate(memchr-2/logging) >= 2.8.0
 Provides:       crate(%{pkgname}/logging)
 
 %description -n %{name}+logging
@@ -153,7 +153,7 @@ This metapackage enables feature "perf-literal-multisubstring" for the Rust rege
 Summary:        Automata construction and matching using regular expressions - feature "perf-literal-substring"
 Requires:       crate(%{pkgname})
 Requires:       crate(aho-corasick-1/perf-literal) >= 1.1.4
-Requires:       crate(memchr-2.0) >= 2.8.0
+Requires:       crate(memchr-2) >= 2.8.0
 Provides:       crate(%{pkgname}/perf-literal-substring)
 
 %description -n %{name}+perf-literal-substring
@@ -164,7 +164,7 @@ Summary:        Automata construction and matching using regular expressions - f
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(aho-corasick-1/std) >= 1.1.4
-Requires:       crate(memchr-2.0/std) >= 2.8.0
+Requires:       crate(memchr-2/std) >= 2.8.0
 Requires:       crate(regex-syntax-0.8/std) >= 0.8.10
 Provides:       crate(%{pkgname}/std)
 

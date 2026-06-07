@@ -57,7 +57,7 @@ This metapackage enables feature "diff" for the Rust av1-grain crate, by pulling
 %package     -n %{name}+nom
 Summary:        Helpers for generating and parsing AV1 film grain data - feature "nom" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(nom-8.0/default) >= 8.0.0
+Requires:       crate(nom-8/default) >= 8.0.0
 Provides:       crate(%{pkgname}/nom)
 Provides:       crate(%{pkgname}/parse)
 

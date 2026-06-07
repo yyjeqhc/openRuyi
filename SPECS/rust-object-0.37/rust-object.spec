@@ -15,7 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(memchr-2.0) >= 2.8.0
+Requires:       crate(memchr-2) >= 2.8.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/archive)
 Provides:       crate(%{pkgname}/cargo-all)
@@ -146,7 +146,7 @@ Summary:        Unified interface for reading and writing object file formats - 
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(%{pkgname}/core)
-Requires:       crate(memchr-2.0/rustc-dep-of-std) >= 2.8.0
+Requires:       crate(memchr-2/rustc-dep-of-std) >= 2.8.0
 Provides:       crate(%{pkgname}/rustc-dep-of-std)
 
 %description -n %{name}+rustc-dep-of-std
@@ -155,7 +155,7 @@ This metapackage enables feature "rustc-dep-of-std" for the Rust object crate, b
 %package     -n %{name}+std
 Summary:        Unified interface for reading and writing object file formats - feature "std"
 Requires:       crate(%{pkgname})
-Requires:       crate(memchr-2.0/std) >= 2.8.0
+Requires:       crate(memchr-2/std) >= 2.8.0
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std

@@ -69,8 +69,8 @@ This metapackage enables feature "event-stream" for the Rust crossterm crate, by
 %package     -n %{name}+events
 Summary:        Crossplatform terminal library for manipulating terminals - feature "events"
 Requires:       crate(%{pkgname})
-Requires:       crate(mio-1.0/default) >= 1.2.0
-Requires:       crate(mio-1.0/os-poll) >= 1.2.0
+Requires:       crate(mio-1/default) >= 1.2.0
+Requires:       crate(mio-1/os-poll) >= 1.2.0
 Requires:       crate(signal-hook-0.3/default) >= 0.3.18
 Requires:       crate(signal-hook-mio-0.2/default) >= 0.2.5
 Requires:       crate(signal-hook-mio-0.2/support-v1-0) >= 0.2.5

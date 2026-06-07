@@ -71,8 +71,8 @@ Summary:        Event-driven, non-blocking I/O platform for writing asynchronous
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/libc)
 Requires:       crate(io-uring-0.7) >= 0.7.11
-Requires:       crate(mio-1.0/os-ext) >= 1.2.0
-Requires:       crate(mio-1.0/os-poll) >= 1.2.0
+Requires:       crate(mio-1/os-ext) >= 1.2.0
+Requires:       crate(mio-1/os-poll) >= 1.2.0
 Requires:       crate(slab-0.4/default) >= 0.4.9
 Provides:       crate(%{pkgname}/io-uring)
 
@@ -91,9 +91,9 @@ This metapackage enables feature "libc" for the Rust tokio crate, by pulling in 
 %package     -n %{name}+mio
 Summary:        Event-driven, non-blocking I/O platform for writing asynchronous I/O backed applications - feature "mio"
 Requires:       crate(%{pkgname})
-Requires:       crate(mio-1.0) >= 1.2.0
-Requires:       crate(mio-1.0/os-ext) >= 1.2.0
-Requires:       crate(mio-1.0/os-poll) >= 1.2.0
+Requires:       crate(mio-1) >= 1.2.0
+Requires:       crate(mio-1/os-ext) >= 1.2.0
+Requires:       crate(mio-1/os-poll) >= 1.2.0
 Provides:       crate(%{pkgname}/mio)
 
 %description -n %{name}+mio
@@ -104,9 +104,9 @@ Summary:        Event-driven, non-blocking I/O platform for writing asynchronous
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/libc)
 Requires:       crate(%{pkgname}/socket2)
-Requires:       crate(mio-1.0/net) >= 1.2.0
-Requires:       crate(mio-1.0/os-ext) >= 1.2.0
-Requires:       crate(mio-1.0/os-poll) >= 1.2.0
+Requires:       crate(mio-1/net) >= 1.2.0
+Requires:       crate(mio-1/os-ext) >= 1.2.0
+Requires:       crate(mio-1/os-poll) >= 1.2.0
 Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-security) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-storage-filesystem) >= 0.61.2
@@ -132,9 +132,9 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/bytes)
 Requires:       crate(%{pkgname}/libc)
 Requires:       crate(%{pkgname}/signal-hook-registry)
-Requires:       crate(mio-1.0/net) >= 1.2.0
-Requires:       crate(mio-1.0/os-ext) >= 1.2.0
-Requires:       crate(mio-1.0/os-poll) >= 1.2.0
+Requires:       crate(mio-1/net) >= 1.2.0
+Requires:       crate(mio-1/os-ext) >= 1.2.0
+Requires:       crate(mio-1/os-poll) >= 1.2.0
 Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-system-threading) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-system-windowsprogramming) >= 0.61.2
@@ -148,9 +148,9 @@ Summary:        Event-driven, non-blocking I/O platform for writing asynchronous
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/libc)
 Requires:       crate(%{pkgname}/signal-hook-registry)
-Requires:       crate(mio-1.0/net) >= 1.2.0
-Requires:       crate(mio-1.0/os-ext) >= 1.2.0
-Requires:       crate(mio-1.0/os-poll) >= 1.2.0
+Requires:       crate(mio-1/net) >= 1.2.0
+Requires:       crate(mio-1/os-ext) >= 1.2.0
+Requires:       crate(mio-1/os-poll) >= 1.2.0
 Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-system-console) >= 0.61.2
 Provides:       crate(%{pkgname}/signal)

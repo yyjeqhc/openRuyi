@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(memchr-2.0) >= 2.0.0
+Requires:       crate(memchr-2) >= 2.0.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 
@@ -31,7 +31,7 @@ Source code for takopackized Rust crate "csv-core"
 %package     -n %{name}+libc
 Summary:        Bare bones CSV parsing with no_std support - feature "libc"
 Requires:       crate(%{pkgname})
-Requires:       crate(memchr-2.0/libc) >= 2.0.0
+Requires:       crate(memchr-2/libc) >= 2.0.0
 Provides:       crate(%{pkgname}/libc)
 
 %description -n %{name}+libc

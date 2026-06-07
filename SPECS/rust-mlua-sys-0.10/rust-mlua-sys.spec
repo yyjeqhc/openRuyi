@@ -44,7 +44,7 @@ Source code for takopackized Rust crate "mlua-sys"
 %package     -n %{name}+lua-src
 Summary:        Low level (FFI) bindings to Lua 5.5/5.4/5.3/5.2/5.1 (including LuaJIT) and Luau - feature "lua-src"
 Requires:       crate(%{pkgname})
-Requires:       crate(lua-src-550.0/default) >= 550.0.0
+Requires:       crate(lua-src-550/default) >= 550.0.0
 Provides:       crate(%{pkgname}/lua-src)
 
 %description -n %{name}+lua-src
@@ -53,7 +53,7 @@ This metapackage enables feature "lua-src" for the Rust mlua-sys crate, by pulli
 %package     -n %{name}+luajit-src
 Summary:        Low level (FFI) bindings to Lua 5.5/5.4/5.3/5.2/5.1 (including LuaJIT) and Luau - feature "luajit-src"
 Requires:       crate(%{pkgname})
-Requires:       crate(luajit-src-210.0/default) >= 210.6.6
+Requires:       crate(luajit-src-210/default) >= 210.6.6
 Provides:       crate(%{pkgname}/luajit-src)
 
 %description -n %{name}+luajit-src

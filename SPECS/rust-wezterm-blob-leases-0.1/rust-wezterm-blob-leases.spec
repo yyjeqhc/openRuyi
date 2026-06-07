@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(getrandom-0.3/default) >= 0.3.4
-Requires:       crate(mac-address-1.0/default) >= 1.1.8
+Requires:       crate(mac-address-1/default) >= 1.1.8
 Requires:       crate(sha2-0.10/default) >= 0.10.9
 Requires:       crate(thiserror-1.0/default) >= 1.0.69
 Requires:       crate(uuid-1.0/default) >= 1.23.1
