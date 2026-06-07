@@ -35,7 +35,7 @@ BuildRequires:  crate(regex-1)
 BuildRequires:  crate(rustc-hash-2.0)
 BuildRequires:  crate(regex-automata-0.4)
 BuildRequires:  crate(serde-1)
-BuildRequires:  crate(indoc-2.0)
+BuildRequires:  crate(indoc-2)
 BuildRequires:  crate(unindent-0.2)
 BuildRequires:  crate(aho-corasick-1)
 

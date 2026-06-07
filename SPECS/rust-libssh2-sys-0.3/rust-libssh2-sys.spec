@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(cc-1/default) >= 1.2.61
 Requires:       crate(libc-0.2/default) >= 0.2.186
-Requires:       crate(libz-sys-1.0/libc) >= 1.1.28
+Requires:       crate(libz-sys-1/libc) >= 1.1.28
 Requires:       crate(openssl-sys-0.9/default) >= 0.9.115
 Requires:       crate(pkg-config-0.3/default) >= 0.3.33
 Requires:       crate(vcpkg-0.2/default) >= 0.2.15
@@ -57,8 +57,8 @@ This metapackage enables feature "vendored-openssl" for the Rust libssh2-sys cra
 %package     -n %{name}+zlib-ng-compat
 Summary:        Native bindings to the libssh2 library - feature "zlib-ng-compat"
 Requires:       crate(%{pkgname})
-Requires:       crate(libz-sys-1.0/libc) >= 1.1.28
-Requires:       crate(libz-sys-1.0/zlib-ng) >= 1.1.28
+Requires:       crate(libz-sys-1/libc) >= 1.1.28
+Requires:       crate(libz-sys-1/zlib-ng) >= 1.1.28
 Provides:       crate(%{pkgname}/zlib-ng-compat)
 
 %description -n %{name}+zlib-ng-compat

@@ -62,7 +62,7 @@ This metapackage enables feature "default" for the Rust fraction crate, by pulli
 %package     -n %{name}+lazy-static
 Summary:        Lossless fractions and decimals; drop-in float replacement - feature "lazy_static"
 Requires:       crate(%{pkgname})
-Requires:       crate(lazy-static-1.0/default) >= 1.5.0
+Requires:       crate(lazy-static-1/default) >= 1.5.0
 Provides:       crate(%{pkgname}/lazy-static)
 
 %description -n %{name}+lazy-static

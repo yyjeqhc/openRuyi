@@ -18,7 +18,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(anstyle-1/default) >= 1.0.0
 Requires:       crate(anstyle-parse-1/default) >= 1.0.0
 Requires:       crate(colorchoice-1/default) >= 1.0.0
-Requires:       crate(is-terminal-polyfill-1.0/default) >= 1.48.0
+Requires:       crate(is-terminal-polyfill-1/default) >= 1.48.0
 Requires:       crate(utf8parse-0.2/default) >= 0.2.2
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/test) = %{version}

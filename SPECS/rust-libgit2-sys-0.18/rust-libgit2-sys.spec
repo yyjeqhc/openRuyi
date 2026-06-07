@@ -24,7 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(cc-1/default) >= 1.2.58
 Requires:       crate(cc-1/parallel) >= 1.2.58
 Requires:       crate(libc-0.2/default) >= 0.2.184
-Requires:       crate(libz-sys-1.0/libc) >= 1.1.25
+Requires:       crate(libz-sys-1/libc) >= 1.1.25
 Requires:       crate(pkg-config-0.3/default) >= 0.3.32
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
@@ -70,8 +70,8 @@ This metapackage enables feature "vendored-openssl" for the Rust libgit2-sys cra
 Summary:        Native bindings to the libgit2 library - feature "zlib-ng-compat"
 Requires:       crate(%{pkgname})
 Requires:       crate(libssh2-sys-0.3/zlib-ng-compat) >= 0.3.1
-Requires:       crate(libz-sys-1.0/libc) >= 1.1.25
-Requires:       crate(libz-sys-1.0/zlib-ng) >= 1.1.25
+Requires:       crate(libz-sys-1/libc) >= 1.1.25
+Requires:       crate(libz-sys-1/zlib-ng) >= 1.1.25
 Provides:       crate(%{pkgname}/zlib-ng-compat)
 
 %description -n %{name}+zlib-ng-compat

@@ -25,7 +25,7 @@ Requires:       crate(anyhow-1/default) >= 1.0.98
 Requires:       crate(base64-0.22/default) >= 0.22.1
 Requires:       crate(bstr-1/default) >= 1.12.0
 Requires:       crate(fancy-regex-0.13/default) >= 0.13.0
-Requires:       crate(lazy-static-1.0/default) >= 1.5.0
+Requires:       crate(lazy-static-1/default) >= 1.5.0
 Requires:       crate(regex-1/default) >= 1.11.1
 Requires:       crate(rustc-hash-1.0/default) >= 1.1.0
 Provides:       crate(%{pkgname})

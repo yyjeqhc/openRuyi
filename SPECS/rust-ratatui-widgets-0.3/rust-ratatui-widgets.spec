@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bitflags-2/default) >= 2.11.1
 Requires:       crate(hashbrown-0.16/default) >= 0.16.1
-Requires:       crate(indoc-2.0/default) >= 2.0.7
+Requires:       crate(indoc-2/default) >= 2.0.7
 Requires:       crate(instability-0.3/default) >= 0.3.12
 Requires:       crate(itertools-0.14/use-alloc) >= 0.14.0
 Requires:       crate(line-clipping-0.3/default) >= 0.3.7

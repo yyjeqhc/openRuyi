@@ -1,0 +1,28 @@
+%global crate_name is_executable
+%global full_version 1.0.5
+%global pkgname is-executable-1
+
+Name:           rust-is-executable-1
+Version:        1.0.5
+Release:        %autorelease
+Summary:        Rust crate "is_executable"
+License:        MIT OR Apache-2.0
+URL:            https://github.com/fitzgen/is_executable
+#!RemoteAsset:  sha256:baabb8b4867b26294d818bf3f651a454b6901431711abb96e296245888d6e8c4
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+BuildArch:      noarch
+BuildSystem:    rustcrates
+
+BuildRequires:  rust-rpm-macros
+
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+
+%description
+Source code for takopackized Rust crate "is_executable"
+
+%files
+%{_datadir}/cargo/registry/%{crate_name}-%{version}/
+
+%changelog
+%autochangelog

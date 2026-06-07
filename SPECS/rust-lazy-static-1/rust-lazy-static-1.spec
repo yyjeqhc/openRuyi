@@ -1,8 +1,8 @@
 %global crate_name lazy_static
 %global full_version 1.5.0
-%global pkgname lazy-static-1.0
+%global pkgname lazy-static-1
 
-Name:           rust-lazy-static-1.0
+Name:           rust-lazy-static-1
 Version:        1.5.0
 Release:        %autorelease
 Summary:        Rust crate "lazy_static"
@@ -15,18 +15,18 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
 Source code for takopackized Rust crate "lazy_static"
 
 %package     -n %{name}+spin
 Summary:        Macro for declaring lazily evaluated statics in Rust - feature "spin" and 1 more
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(spin-0.9/once) >= 0.9.8
-Provides:       crate(%{pkgname}/spin)
-Provides:       crate(%{pkgname}/spin-no-std)
+Provides:       crate(%{pkgname}/spin) = %{version}
+Provides:       crate(%{pkgname}/spin-no-std) = %{version}
 
 %description -n %{name}+spin
 This metapackage enables feature "spin" for the Rust lazy_static crate, by pulling in any additional dependencies needed by that feature.

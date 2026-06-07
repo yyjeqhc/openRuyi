@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(lazy-static-1.0/default) >= 1.5.0
+Requires:       crate(lazy-static-1/default) >= 1.5.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

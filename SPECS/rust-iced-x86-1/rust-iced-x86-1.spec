@@ -61,7 +61,7 @@ This metapackage enables feature "default" for the Rust iced-x86 crate, by pulli
 %package     -n %{name}+lazy-static
 Summary:        Blazing fast and correct x86/x64 disassembler, assembler and instruction decoder written in Rust - feature "lazy_static" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(lazy-static-1.0/default) >= 1.4.0
+Requires:       crate(lazy-static-1/default) >= 1.4.0
 Provides:       crate(%{pkgname}/lazy-static) = %{version}
 Provides:       crate(%{pkgname}/std) = %{version}
 
@@ -73,7 +73,7 @@ Additionally, this package also provides the "std" feature.
 %package     -n %{name}+no-std
 Summary:        Blazing fast and correct x86/x64 disassembler, assembler and instruction decoder written in Rust - feature "no_std"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(lazy-static-1.0/spin-no-std) >= 1.4.0
+Requires:       crate(lazy-static-1/spin-no-std) >= 1.4.0
 Provides:       crate(%{pkgname}/no-std) = %{version}
 
 %description -n %{name}+no-std

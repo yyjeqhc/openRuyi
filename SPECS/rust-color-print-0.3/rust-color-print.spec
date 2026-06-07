@@ -31,7 +31,7 @@ Source code for takopackized Rust crate "color-print"
 %package     -n %{name}+lazy-static
 Summary:        Colorize and stylize strings for terminal at compile-time, by using an HTML-like syntax - feature "lazy_static"
 Requires:       crate(%{pkgname})
-Requires:       crate(lazy-static-1.0/default) >= 1.4
+Requires:       crate(lazy-static-1/default) >= 1.4
 Provides:       crate(%{pkgname}/lazy-static)
 
 %description -n %{name}+lazy-static

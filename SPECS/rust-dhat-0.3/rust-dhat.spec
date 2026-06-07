@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(backtrace-0.3/default) >= 0.3.76
-Requires:       crate(lazy-static-1.0/default) >= 1.5.0
+Requires:       crate(lazy-static-1/default) >= 1.5.0
 Requires:       crate(mintex-0.1/default) >= 0.1.4
 Requires:       crate(parking-lot-0.12/default) >= 0.12.5
 Requires:       crate(rustc-hash-1.0/default) >= 1.1.0

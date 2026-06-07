@@ -71,7 +71,7 @@ This metapackage enables feature "libz-ng-sys" for the Rust flate2 crate, by pul
 %package     -n %{name}+libz-sys
 Summary:        DEFLATE compression and decompression exposed as Read/BufRead/Write streams - feature "libz-sys"
 Requires:       crate(%{pkgname})
-Requires:       crate(libz-sys-1.0) >= 1.1.20
+Requires:       crate(libz-sys-1) >= 1.1.20
 Provides:       crate(%{pkgname}/libz-sys)
 
 %description -n %{name}+libz-sys
@@ -123,7 +123,7 @@ Summary:        DEFLATE compression and decompression exposed as Read/BufRead/Wr
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/any-c-zlib)
 Requires:       crate(crc32fast-1/default) >= 1.5.0
-Requires:       crate(libz-sys-1.0/default) >= 1.1.20
+Requires:       crate(libz-sys-1/default) >= 1.1.20
 Provides:       crate(%{pkgname}/zlib-default)
 
 %description -n %{name}+zlib-default
@@ -147,7 +147,7 @@ Summary:        DEFLATE compression and decompression exposed as Read/BufRead/Wr
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/zlib)
 Requires:       crate(crc32fast-1/default) >= 1.5.0
-Requires:       crate(libz-sys-1.0/zlib-ng) >= 1.1.20
+Requires:       crate(libz-sys-1/zlib-ng) >= 1.1.20
 Provides:       crate(%{pkgname}/zlib-ng-compat)
 
 %description -n %{name}+zlib-ng-compat

@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(litrs-1.0/default) >= 1.0.0
+Requires:       crate(litrs-1/default) >= 1.0.0
 Provides:       crate(document-features) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

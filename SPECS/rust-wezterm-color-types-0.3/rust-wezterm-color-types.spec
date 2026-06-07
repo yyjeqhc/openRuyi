@@ -24,7 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(csscolorparser-0.6/default) >= 0.6.2
 Requires:       crate(csscolorparser-0.6/lab) >= 0.6.2
 Requires:       crate(deltae-0.3/default) >= 0.3.2
-Requires:       crate(lazy-static-1.0/default) >= 1.5.0
+Requires:       crate(lazy-static-1/default) >= 1.5.0
 Requires:       crate(wezterm-dynamic-0.2/default) >= 0.2.1
 Provides:       crate(wezterm-color-types) = %{version}
 Provides:       crate(%{pkgname})

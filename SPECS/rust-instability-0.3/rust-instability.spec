@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(darling-0.23/default) >= 0.23.0
-Requires:       crate(indoc-2.0/default) >= 2.0.7
+Requires:       crate(indoc-2/default) >= 2.0.7
 Requires:       crate(proc-macro2-1.0/default) >= 1.0.106
 Requires:       crate(quote-1.0/default) >= 1.0.45
 Requires:       crate(syn-2.0/default) >= 2.0.117

@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(lazy-static-1.0/spin-no-std) >= 1.5.0
+Requires:       crate(lazy-static-1/spin-no-std) >= 1.5.0
 Requires:       crate(libm-0.2/default) >= 0.2.16
 Requires:       crate(num-integer-0.1/i128) >= 0.1.46
 Requires:       crate(num-iter-0.1) >= 0.1.45

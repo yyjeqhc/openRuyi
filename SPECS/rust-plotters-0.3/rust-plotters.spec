@@ -176,7 +176,7 @@ This metapackage enables feature "image" for the Rust plotters crate, by pulling
 %package     -n %{name}+lazy-static
 Summary:        Rust drawing library focus on data plotting for both WASM and native applications - feature "lazy_static"
 Requires:       crate(%{pkgname})
-Requires:       crate(lazy-static-1.0/default) >= 1.4.0
+Requires:       crate(lazy-static-1/default) >= 1.4.0
 Provides:       crate(%{pkgname}/lazy-static)
 
 %description -n %{name}+lazy-static

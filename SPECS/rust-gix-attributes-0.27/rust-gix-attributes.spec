@@ -27,7 +27,7 @@ Requires:       crate(gix-glob-0.21/default) >= 0.21.0
 Requires:       crate(gix-path-0.10/default) >= 0.10.22
 Requires:       crate(gix-quote-0.6/default) >= 0.6.2
 Requires:       crate(gix-trace-0.1/default) >= 0.1.18
-Requires:       crate(kstring-2.0/default) >= 2.0.2
+Requires:       crate(kstring-2/default) >= 2.0.2
 Requires:       crate(smallvec-1.0/default) >= 1.15.1
 Requires:       crate(thiserror-2.0/default) >= 2.0.18
 Requires:       crate(unicode-bom-2.0/default) >= 2.0.3
@@ -53,7 +53,7 @@ Requires:       crate(bstr-1/serde) >= 1.12.1
 Requires:       crate(bstr-1/std) >= 1.12.1
 Requires:       crate(bstr-1/unicode) >= 1.12.1
 Requires:       crate(gix-glob-0.21/serde) >= 0.21.0
-Requires:       crate(kstring-2.0/serde) >= 2.0.2
+Requires:       crate(kstring-2/serde) >= 2.0.2
 Requires:       crate(serde-1/derive) >= 1.0.114
 Provides:       crate(%{pkgname}/serde)
 

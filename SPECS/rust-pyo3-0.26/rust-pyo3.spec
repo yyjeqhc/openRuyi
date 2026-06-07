@@ -322,7 +322,7 @@ This metapackage enables feature "indexmap" for the Rust pyo3 crate, by pulling 
 %package     -n %{name}+indoc
 Summary:        Bindings to Python interpreter - feature "indoc"
 Requires:       crate(%{pkgname})
-Requires:       crate(indoc-2.0/default) >= 2.0.1
+Requires:       crate(indoc-2/default) >= 2.0.1
 Provides:       crate(%{pkgname}/indoc)
 
 %description -n %{name}+indoc

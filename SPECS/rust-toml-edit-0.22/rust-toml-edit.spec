@@ -42,8 +42,8 @@ This metapackage enables feature "parse" for the Rust toml_edit crate, by pullin
 %package     -n %{name}+perf
 Summary:        Yet another format-preserving TOML parser - feature "perf"
 Requires:       crate(%{pkgname})
-Requires:       crate(kstring-2.0/default) >= 2.0.0
-Requires:       crate(kstring-2.0/max-inline) >= 2.0.0
+Requires:       crate(kstring-2/default) >= 2.0.0
+Requires:       crate(kstring-2/max-inline) >= 2.0.0
 Provides:       crate(%{pkgname}/perf)
 
 %description -n %{name}+perf

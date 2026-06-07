@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bitflags-2/default) >= 2.11.1
 Requires:       crate(inotify-0.11) >= 0.11.1
-Requires:       crate(kqueue-1.0/default) >= 1.1.1
+Requires:       crate(kqueue-1/default) >= 1.1.1
 Requires:       crate(libc-0.2/default) >= 0.2.186
 Requires:       crate(log-0.4/default) >= 0.4.29
 Requires:       crate(mio-1.0/default) >= 1.2.0
@@ -77,7 +77,7 @@ Additionally, this package also provides the "default", and "macos_fsevent" feat
 %package     -n %{name}+kqueue
 Summary:        Cross-platform filesystem notification library - feature "kqueue"
 Requires:       crate(%{pkgname})
-Requires:       crate(kqueue-1.0/default) >= 1.1.1
+Requires:       crate(kqueue-1/default) >= 1.1.1
 Provides:       crate(%{pkgname}/kqueue)
 
 %description -n %{name}+kqueue
