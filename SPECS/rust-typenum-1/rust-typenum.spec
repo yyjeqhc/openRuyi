@@ -1,8 +1,8 @@
 %global crate_name typenum
 %global full_version 1.20.0
-%global pkgname typenum-1.0
+%global pkgname typenum-1
 
-Name:           rust-typenum-1.0
+Name:           rust-typenum-1
 Version:        1.20.0
 Release:        %autorelease
 Summary:        Rust crate "typenum"

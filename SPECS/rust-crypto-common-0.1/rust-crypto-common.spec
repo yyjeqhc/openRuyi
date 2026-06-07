@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(generic-array-0.14/default) >= 0.14.9
 Requires:       crate(generic-array-0.14/more-lengths) >= 0.14.9
-Requires:       crate(typenum-1.0/default) >= 1.19.0
+Requires:       crate(typenum-1/default) >= 1.19.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)

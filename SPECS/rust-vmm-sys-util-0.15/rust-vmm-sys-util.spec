@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitflags-1.0/default) >= 1.3.2
+Requires:       crate(bitflags-1/default) >= 1.3.2
 Requires:       crate(libc-0.2/default) >= 0.2.186
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

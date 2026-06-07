@@ -30,7 +30,7 @@ Source code for takopackized Rust crate "anes"
 %package     -n %{name}+bitflags
 Summary:        ANSI Escape Sequences provider & parser - feature "bitflags" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(bitflags-1.0/default) >= 1.2
+Requires:       crate(bitflags-1/default) >= 1.2
 Provides:       crate(%{pkgname}/bitflags)
 Provides:       crate(%{pkgname}/parser)
 

@@ -1,8 +1,8 @@
 %global crate_name bitflags
 %global full_version 1.3.2
-%global pkgname bitflags-1.0
+%global pkgname bitflags-1
 
-Name:           rust-bitflags-1.0
+Name:           rust-bitflags-1
 Version:        1.3.2
 Release:        %autorelease
 Summary:        Rust crate "bitflags"
