@@ -109,7 +109,7 @@ This metapackage enables feature "serde" for the Rust gix-pack crate, by pulling
 %package     -n %{name}+streaming-input
 Summary:        Implements git packs and related data structures - feature "streaming-input"
 Requires:       crate(%{pkgname})
-Requires:       crate(gix-tempfile-18.0) >= 18.0.0
+Requires:       crate(gix-tempfile-18) >= 18.0.0
 Requires:       crate(parking-lot-0.12) >= 0.12.5
 Provides:       crate(%{pkgname}/streaming-input)
 

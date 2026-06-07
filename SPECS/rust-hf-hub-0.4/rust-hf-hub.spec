@@ -97,7 +97,7 @@ This metapackage enables feature "tokio" for the Rust hf-hub crate, by pulling i
 %package     -n %{name}+ureq
 Summary:        This crates aims ease the interaction with [huggingface](https://huggingface.co/)  It aims to be compatible with [huggingface_hub](https://github.com/huggingface/huggingface_hub/) python package, but only implements a smaller subset of functions - feature "ureq"
 Requires:       crate(%{pkgname})
-Requires:       crate(http-1.0/default) >= 1.4.0
+Requires:       crate(http-1/default) >= 1.4.0
 Requires:       crate(indicatif-0.17/default) >= 0.17.11
 Requires:       crate(rand-0.8/default) >= 0.8.5
 Requires:       crate(serde-1/default) >= 1.0.228

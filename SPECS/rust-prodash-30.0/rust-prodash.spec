@@ -89,7 +89,7 @@ This metapackage enables feature "futures-core" for the Rust prodash crate, by p
 %package     -n %{name}+futures-lite
 Summary:        Dashboard for visualizing progress of asynchronous and possibly blocking tasks - feature "futures-lite"
 Requires:       crate(%{pkgname})
-Requires:       crate(futures-lite-2.0/default) >= 2.1.0
+Requires:       crate(futures-lite-2/default) >= 2.1.0
 Provides:       crate(%{pkgname}/futures-lite)
 
 %description -n %{name}+futures-lite

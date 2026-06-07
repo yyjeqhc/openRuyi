@@ -34,7 +34,7 @@ Requires:       crate(gix-fs-0.16/default) >= 0.16.1
 Requires:       crate(gix-glob-0.21/default) >= 0.21.0
 Requires:       crate(gix-hash-0.19/default) >= 0.19.0
 Requires:       crate(gix-hashtable-0.9/default) >= 0.9.0
-Requires:       crate(gix-lock-18.0/default) >= 18.0.0
+Requires:       crate(gix-lock-18/default) >= 18.0.0
 Requires:       crate(gix-object-0.50/default) >= 0.50.2
 Requires:       crate(gix-odb-0.70/default) >= 0.70.0
 Requires:       crate(gix-pack-0.60/object-cache-dynamic) >= 0.60.0
@@ -46,7 +46,7 @@ Requires:       crate(gix-revision-0.35) >= 0.35.0
 Requires:       crate(gix-revwalk-0.21/default) >= 0.21.0
 Requires:       crate(gix-sec-0.12/default) >= 0.12.2
 Requires:       crate(gix-shallow-0.5/default) >= 0.5.0
-Requires:       crate(gix-tempfile-18.0) >= 18.0.0
+Requires:       crate(gix-tempfile-18) >= 18.0.0
 Requires:       crate(gix-trace-0.1/default) >= 0.1.18
 Requires:       crate(gix-traverse-0.47/default) >= 0.47.0
 Requires:       crate(gix-url-0.32/default) >= 0.32.0
@@ -350,7 +350,7 @@ This metapackage enables feature "gix-worktree-stream" for the Rust gix crate, b
 %package     -n %{name}+hp-tempfile-registry
 Summary:        Interact with git repositories just like git would - feature "hp-tempfile-registry"
 Requires:       crate(%{pkgname})
-Requires:       crate(gix-tempfile-18.0/hp-hashmap) >= 18.0.0
+Requires:       crate(gix-tempfile-18/hp-hashmap) >= 18.0.0
 Provides:       crate(%{pkgname}/hp-tempfile-registry)
 
 %description -n %{name}+hp-tempfile-registry
@@ -368,7 +368,7 @@ This metapackage enables feature "index" for the Rust gix crate, by pulling in a
 %package     -n %{name}+interrupt
 Summary:        Interact with git repositories just like git would - feature "interrupt"
 Requires:       crate(%{pkgname})
-Requires:       crate(gix-tempfile-18.0/signals) >= 18.0.0
+Requires:       crate(gix-tempfile-18/signals) >= 18.0.0
 Requires:       crate(parking-lot-0.12/default) >= 0.12.4
 Requires:       crate(signal-hook-0.3) >= 0.3.18
 Provides:       crate(%{pkgname}/interrupt)

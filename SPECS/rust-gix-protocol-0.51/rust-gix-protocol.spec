@@ -79,7 +79,7 @@ This metapackage enables feature "document-features" for the Rust gix-protocol c
 %package     -n %{name}+fetch
 Summary:        The gitoxide project for implementing git protocols - feature "fetch"
 Requires:       crate(%{pkgname})
-Requires:       crate(gix-lock-18.0/default) >= 18.0.0
+Requires:       crate(gix-lock-18/default) >= 18.0.0
 Requires:       crate(gix-negotiate-0.21/default) >= 0.21.0
 Requires:       crate(gix-object-0.50/default) >= 0.50.2
 Requires:       crate(gix-refspec-0.31/default) >= 0.31.0
@@ -93,7 +93,7 @@ This metapackage enables feature "fetch" for the Rust gix-protocol crate, by pul
 %package     -n %{name}+futures-lite
 Summary:        The gitoxide project for implementing git protocols - feature "futures-lite"
 Requires:       crate(%{pkgname})
-Requires:       crate(futures-lite-2.0/default) >= 2.1.0
+Requires:       crate(futures-lite-2/default) >= 2.1.0
 Provides:       crate(%{pkgname}/futures-lite)
 
 %description -n %{name}+futures-lite

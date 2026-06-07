@@ -259,7 +259,7 @@ This metapackage enables feature "std" for the Rust p256 crate, by pulling in an
 %package     -n %{name}+test-vectors
 Summary:        Pure Rust implementation of the NIST P-256 (a.k.a - feature "test-vectors"
 Requires:       crate(%{pkgname})
-Requires:       crate(hex-literal-1.0/default) >= 1.0.0
+Requires:       crate(hex-literal-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/test-vectors)
 
 %description -n %{name}+test-vectors

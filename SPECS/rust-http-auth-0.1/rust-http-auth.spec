@@ -99,7 +99,7 @@ This metapackage enables feature "http" for the Rust http-auth crate, by pulling
 %package     -n %{name}+http10
 Summary:        HTTP authentication: parse challenge lists, respond to Basic and Digest challenges - feature "http10"
 Requires:       crate(%{pkgname})
-Requires:       crate(http-1.0/default) >= 1.0.0
+Requires:       crate(http-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/http10)
 
 %description -n %{name}+http10

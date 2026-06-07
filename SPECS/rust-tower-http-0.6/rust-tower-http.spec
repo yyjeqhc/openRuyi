@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bitflags-2/default) >= 2.11.0
 Requires:       crate(bytes-1/default) >= 1.11.1
-Requires:       crate(http-1.0/default) >= 1.4.0
+Requires:       crate(http-1/default) >= 1.4.0
 Requires:       crate(pin-project-lite-0.2/default) >= 0.2.17
 Requires:       crate(tower-layer-0.3/default) >= 0.3.3
 Requires:       crate(tower-service-0.3/default) >= 0.3.3
@@ -77,7 +77,7 @@ Summary:        Tower middleware and utilities for HTTP clients and servers - fe
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/tracing)
 Requires:       crate(futures-util-0.3/std) >= 0.3.32
-Requires:       crate(http-body-1.0/default) >= 1.0.1
+Requires:       crate(http-body-1/default) >= 1.0.1
 Requires:       crate(http-body-util-0.1/default) >= 0.1.0
 Provides:       crate(%{pkgname}/catch-panic)
 
@@ -92,7 +92,7 @@ Requires:       crate(%{pkgname}/tokio)
 Requires:       crate(%{pkgname}/tokio-util)
 Requires:       crate(async-compression-0.4/brotli) >= 0.4.0
 Requires:       crate(async-compression-0.4/tokio) >= 0.4.0
-Requires:       crate(http-body-1.0/default) >= 1.0.1
+Requires:       crate(http-body-1/default) >= 1.0.1
 Provides:       crate(%{pkgname}/compression-br)
 
 %description -n %{name}+compression-br
@@ -106,7 +106,7 @@ Requires:       crate(%{pkgname}/tokio)
 Requires:       crate(%{pkgname}/tokio-util)
 Requires:       crate(async-compression-0.4/tokio) >= 0.4.0
 Requires:       crate(async-compression-0.4/zlib) >= 0.4.0
-Requires:       crate(http-body-1.0/default) >= 1.0.1
+Requires:       crate(http-body-1/default) >= 1.0.1
 Provides:       crate(%{pkgname}/compression-deflate)
 
 %description -n %{name}+compression-deflate
@@ -132,7 +132,7 @@ Requires:       crate(%{pkgname}/tokio)
 Requires:       crate(%{pkgname}/tokio-util)
 Requires:       crate(async-compression-0.4/gzip) >= 0.4.0
 Requires:       crate(async-compression-0.4/tokio) >= 0.4.0
-Requires:       crate(http-body-1.0/default) >= 1.0.1
+Requires:       crate(http-body-1/default) >= 1.0.1
 Provides:       crate(%{pkgname}/compression-gzip)
 
 %description -n %{name}+compression-gzip
@@ -146,7 +146,7 @@ Requires:       crate(%{pkgname}/tokio)
 Requires:       crate(%{pkgname}/tokio-util)
 Requires:       crate(async-compression-0.4/tokio) >= 0.4.0
 Requires:       crate(async-compression-0.4/zstd) >= 0.4.0
-Requires:       crate(http-body-1.0/default) >= 1.0.1
+Requires:       crate(http-body-1/default) >= 1.0.1
 Provides:       crate(%{pkgname}/compression-zstd)
 
 %description -n %{name}+compression-zstd
@@ -160,7 +160,7 @@ Requires:       crate(%{pkgname}/tokio)
 Requires:       crate(%{pkgname}/tokio-util)
 Requires:       crate(async-compression-0.4/brotli) >= 0.4.0
 Requires:       crate(async-compression-0.4/tokio) >= 0.4.0
-Requires:       crate(http-body-1.0/default) >= 1.0.1
+Requires:       crate(http-body-1/default) >= 1.0.1
 Requires:       crate(http-body-util-0.1/default) >= 0.1.0
 Provides:       crate(%{pkgname}/decompression-br)
 
@@ -175,7 +175,7 @@ Requires:       crate(%{pkgname}/tokio)
 Requires:       crate(%{pkgname}/tokio-util)
 Requires:       crate(async-compression-0.4/tokio) >= 0.4.0
 Requires:       crate(async-compression-0.4/zlib) >= 0.4.0
-Requires:       crate(http-body-1.0/default) >= 1.0.1
+Requires:       crate(http-body-1/default) >= 1.0.1
 Requires:       crate(http-body-util-0.1/default) >= 0.1.0
 Provides:       crate(%{pkgname}/decompression-deflate)
 
@@ -202,7 +202,7 @@ Requires:       crate(%{pkgname}/tokio)
 Requires:       crate(%{pkgname}/tokio-util)
 Requires:       crate(async-compression-0.4/gzip) >= 0.4.0
 Requires:       crate(async-compression-0.4/tokio) >= 0.4.0
-Requires:       crate(http-body-1.0/default) >= 1.0.1
+Requires:       crate(http-body-1/default) >= 1.0.1
 Requires:       crate(http-body-util-0.1/default) >= 0.1.0
 Provides:       crate(%{pkgname}/decompression-gzip)
 
@@ -217,7 +217,7 @@ Requires:       crate(%{pkgname}/tokio)
 Requires:       crate(%{pkgname}/tokio-util)
 Requires:       crate(async-compression-0.4/tokio) >= 0.4.0
 Requires:       crate(async-compression-0.4/zstd) >= 0.4.0
-Requires:       crate(http-body-1.0/default) >= 1.0.1
+Requires:       crate(http-body-1/default) >= 1.0.1
 Requires:       crate(http-body-util-0.1/default) >= 0.1.0
 Provides:       crate(%{pkgname}/decompression-zstd)
 
@@ -229,7 +229,7 @@ Summary:        Tower middleware and utilities for HTTP clients and servers - fe
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/futures-util)
 Requires:       crate(%{pkgname}/iri-string)
-Requires:       crate(http-body-1.0/default) >= 1.0.1
+Requires:       crate(http-body-1/default) >= 1.0.1
 Requires:       crate(tower-0.5/util) >= 0.5.3
 Provides:       crate(%{pkgname}/follow-redirect)
 
@@ -248,7 +248,7 @@ Requires:       crate(%{pkgname}/percent-encoding)
 Requires:       crate(%{pkgname}/set-status)
 Requires:       crate(%{pkgname}/tracing)
 Requires:       crate(futures-util-0.3/alloc) >= 0.3.32
-Requires:       crate(http-body-1.0/default) >= 1.0.1
+Requires:       crate(http-body-1/default) >= 1.0.1
 Requires:       crate(http-body-util-0.1/default) >= 0.1.0
 Requires:       crate(http-range-header-0.4/default) >= 0.4.0
 Requires:       crate(tokio-1.0/fs) >= 1.6
@@ -329,7 +329,7 @@ This metapackage enables feature "iri-string" for the Rust tower-http crate, by 
 %package     -n %{name}+limit
 Summary:        Tower middleware and utilities for HTTP clients and servers - feature "limit"
 Requires:       crate(%{pkgname})
-Requires:       crate(http-body-1.0/default) >= 1.0.1
+Requires:       crate(http-body-1/default) >= 1.0.1
 Requires:       crate(http-body-util-0.1/default) >= 0.1.0
 Provides:       crate(%{pkgname}/limit)
 
@@ -339,7 +339,7 @@ This metapackage enables feature "limit" for the Rust tower-http crate, by pulli
 %package     -n %{name}+metrics
 Summary:        Tower middleware and utilities for HTTP clients and servers - feature "metrics" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(http-body-1.0/default) >= 1.0.1
+Requires:       crate(http-body-1/default) >= 1.0.1
 Requires:       crate(tokio-1.0/time) >= 1.6
 Provides:       crate(%{pkgname}/metrics)
 Provides:       crate(%{pkgname}/timeout)
@@ -413,7 +413,7 @@ Additionally, this package also provides the "util" feature.
 Summary:        Tower middleware and utilities for HTTP clients and servers - feature "trace"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/tracing)
-Requires:       crate(http-body-1.0/default) >= 1.0.1
+Requires:       crate(http-body-1/default) >= 1.0.1
 Provides:       crate(%{pkgname}/trace)
 
 %description -n %{name}+trace

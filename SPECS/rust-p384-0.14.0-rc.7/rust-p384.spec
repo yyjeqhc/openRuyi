@@ -175,7 +175,7 @@ This metapackage enables feature "hash2curve" for the Rust p384 crate, by pullin
 %package     -n %{name}+hex-literal
 Summary:        Pure Rust implementation of the NIST P-384 (a.k.a - feature "hex-literal" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(hex-literal-1.0/default) >= 1.0.0
+Requires:       crate(hex-literal-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/hex-literal)
 Provides:       crate(%{pkgname}/test-vectors)
 

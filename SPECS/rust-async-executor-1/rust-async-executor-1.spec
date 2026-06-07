@@ -18,8 +18,8 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(async-task-4/default) >= 4.4.0
 Requires:       crate(concurrent-queue-2.0/default) >= 2.5.0
 Requires:       crate(fastrand-2/default) >= 2.0.0
-Requires:       crate(futures-lite-2.0) >= 2.0.0
-Requires:       crate(futures-lite-2.0/std) >= 2.0.0
+Requires:       crate(futures-lite-2) >= 2.0.0
+Requires:       crate(futures-lite-2/std) >= 2.0.0
 Requires:       crate(pin-project-lite-0.2/default) >= 0.2.0
 Requires:       crate(slab-0.4/default) >= 0.4.7
 Provides:       crate(%{pkgname}) = %{version}

@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(imgref-1.0/default) >= 1.12.1
+Requires:       crate(imgref-1/default) >= 1.12.1
 Provides:       crate(loop9) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

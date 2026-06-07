@@ -18,7 +18,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(cfg-if-1/default) >= 1.0.0
 Requires:       crate(concurrent-queue-2.0/default) >= 2.2.0
 Requires:       crate(futures-io-0.3/std) >= 0.3.28
-Requires:       crate(futures-lite-2.0) >= 2.0.0
+Requires:       crate(futures-lite-2) >= 2.0.0
 Requires:       crate(parking-2.0/default) >= 2.0.0
 Requires:       crate(polling-3.0/default) >= 3.4.0
 Requires:       crate(rustix-1.0/fs) >= 1.0.7

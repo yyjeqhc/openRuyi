@@ -62,7 +62,7 @@ This metapackage enables feature "gzip" for the Rust ureq crate, by pulling in a
 %package     -n %{name}+http-crate
 Summary:        Simple, safe HTTP client - feature "http-crate"
 Requires:       crate(%{pkgname})
-Requires:       crate(http-1.0/default) >= 1.1
+Requires:       crate(http-1/default) >= 1.1
 Provides:       crate(%{pkgname}/http-crate)
 
 %description -n %{name}+http-crate

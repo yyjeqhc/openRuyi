@@ -22,8 +22,8 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bytes-1/default) >= 1.11.1
-Requires:       crate(http-1.0/default) >= 1.4.0
-Requires:       crate(http-body-1.0/default) >= 1.0.1
+Requires:       crate(http-1/default) >= 1.4.0
+Requires:       crate(http-body-1/default) >= 1.0.1
 Requires:       crate(tokio-1.0/default) >= 1.50.0
 Requires:       crate(tokio-1.0/sync) >= 1.50.0
 Provides:       crate(%{pkgname})
@@ -75,7 +75,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(atomic-waker-1/default) >= 1.1.2
 Requires:       crate(futures-channel-0.3/default) >= 0.3.32
 Requires:       crate(futures-core-0.3/default) >= 0.3.32
-Requires:       crate(httparse-1.0/default) >= 1.10.1
+Requires:       crate(httparse-1/default) >= 1.10.1
 Requires:       crate(itoa-1.0/default) >= 1.0.18
 Provides:       crate(%{pkgname}/http1)
 

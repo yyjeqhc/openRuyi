@@ -34,7 +34,7 @@ Source code for takopackized Rust crate "icu_normalizer"
 %package     -n %{name}+compiled-data
 Summary:        API for normalizing text into Unicode Normalization Forms - feature "compiled_data"
 Requires:       crate(%{pkgname})
-Requires:       crate(icu-normalizer-data-2.0) >= 2.2.0
+Requires:       crate(icu-normalizer-data-2) >= 2.2.0
 Requires:       crate(icu-properties-2.0/compiled-data) >= 2.2.0
 Requires:       crate(icu-provider-2.0/baked) >= 2.2.0
 Provides:       crate(%{pkgname}/compiled-data)

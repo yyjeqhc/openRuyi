@@ -18,7 +18,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(async-channel-2/default) >= 2.0.0
 Requires:       crate(async-task-4/default) >= 4.4.0
 Requires:       crate(futures-io-0.3/std) >= 0.3.28
-Requires:       crate(futures-lite-2.0) >= 2.0.0
+Requires:       crate(futures-lite-2) >= 2.0.0
 Requires:       crate(piper-0.2/default) >= 0.2.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}

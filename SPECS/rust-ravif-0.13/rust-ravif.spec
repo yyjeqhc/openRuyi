@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(avif-serialize-0.8/default) >= 0.8.9
-Requires:       crate(imgref-1.0/default) >= 1.12.1
+Requires:       crate(imgref-1/default) >= 1.12.1
 Requires:       crate(loop9-0.1/default) >= 0.1.5
 Requires:       crate(quick-error-2.0/default) >= 2.0.1
 Requires:       crate(rav1e-0.8) >= 0.8.1

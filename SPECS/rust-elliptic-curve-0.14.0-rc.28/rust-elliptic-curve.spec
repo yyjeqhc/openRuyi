@@ -83,7 +83,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/arithmetic)
 Requires:       crate(%{pkgname}/pem)
 Requires:       crate(%{pkgname}/pkcs8)
-Requires:       crate(hex-literal-1.0/default) >= 1.0.0
+Requires:       crate(hex-literal-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/dev)
 
 %description -n %{name}+dev

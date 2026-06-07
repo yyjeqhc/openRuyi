@@ -64,7 +64,7 @@ This metapackage enables feature "flume" for the Rust notify crate, by pulling i
 %package     -n %{name}+fsevent-sys
 Summary:        Cross-platform filesystem notification library - feature "fsevent-sys" and 2 more
 Requires:       crate(%{pkgname})
-Requires:       crate(fsevent-sys-4.0/default) >= 4.1.0
+Requires:       crate(fsevent-sys-4/default) >= 4.1.0
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/fsevent-sys)
 Provides:       crate(%{pkgname}/macos-fsevent)

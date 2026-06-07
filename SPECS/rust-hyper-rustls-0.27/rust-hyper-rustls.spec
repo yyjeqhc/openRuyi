@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(http-1.0/default) >= 1.4.0
+Requires:       crate(http-1/default) >= 1.4.0
 Requires:       crate(hyper-1.0) >= 1.9.0
 Requires:       crate(hyper-util-0.1/client-legacy) >= 0.1.20
 Requires:       crate(hyper-util-0.1/tokio) >= 0.1.20

@@ -50,7 +50,7 @@ This metapackage enables feature "alloc" for the Rust icu_properties crate, by p
 %package     -n %{name}+compiled-data
 Summary:        Definitions for Unicode properties - feature "compiled_data" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(icu-properties-data-2.0) >= 2.2.0
+Requires:       crate(icu-properties-data-2) >= 2.2.0
 Requires:       crate(icu-provider-2.0/baked) >= 2.2.0
 Provides:       crate(%{pkgname}/compiled-data)
 Provides:       crate(%{pkgname}/default)
