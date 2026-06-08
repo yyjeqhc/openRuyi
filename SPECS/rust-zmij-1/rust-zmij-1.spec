@@ -15,17 +15,17 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
 Source code for takopackized Rust crate "zmij"
 
 %package     -n %{name}+no-panic
 Summary:        Double-to-string conversion algorithm based on Schubfach and yy - feature "no-panic"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(no-panic-0.1/default) >= 0.1.36
-Provides:       crate(%{pkgname}/no-panic)
+Provides:       crate(%{pkgname}/no-panic) = %{version}
 
 %description -n %{name}+no-panic
 This metapackage enables feature "no-panic" for the Rust zmij crate, by pulling in any additional dependencies needed by that feature.
