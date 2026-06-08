@@ -36,11 +36,13 @@ BuildRequires:  perl(PPI) >= 1.252
 BuildRequires:  perl(PPI::Util)
 BuildRequires:  perl(PPIx::Regexp) >= 0.051
 BuildRequires:  perl(PPIx::Utils)
+BuildRequires:  perl(Safe::Isa)
 BuildRequires:  perl(strict)
 BuildRequires:  perl(Test::More) >= 0.47
 BuildRequires:  perl(vars)
 BuildRequires:  perl(version) >= 0.76
 BuildRequires:  perl(warnings)
+BuildRequires:  perl(YAML::PP)
 
 Requires:       perl(List::Util) >= 1.20
 Requires:       perl(Params::Util) >= 0.25

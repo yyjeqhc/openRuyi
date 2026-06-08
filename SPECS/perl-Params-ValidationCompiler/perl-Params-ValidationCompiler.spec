@@ -23,6 +23,7 @@ BuildRequires:  perl-rpm-macros
 BuildRequires:  perl-macros
 BuildRequires:  perl(B)
 BuildRequires:  perl(Carp)
+BuildRequires:  perl(Clone)
 BuildRequires:  perl(Class::XSAccessor) >= 1.17
 BuildRequires:  perl(Eval::Closure)
 BuildRequires:  perl(Exception::Class)
@@ -31,6 +32,8 @@ BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(File::Spec)
 BuildRequires:  perl(Hash::Util)
 BuildRequires:  perl(List::Util) >= 1.29
+BuildRequires:  perl(Module::Implementation)
+BuildRequires:  perl(MRO::Compat)
 BuildRequires:  perl(overload)
 BuildRequires:  perl(Scalar::Util)
 BuildRequires:  perl(Specio) >= 0.14
@@ -41,6 +44,7 @@ BuildRequires:  perl(Test2::Require::Module)
 BuildRequires:  perl(Test2::V0)
 BuildRequires:  perl(Test::More) >= 1.302015
 BuildRequires:  perl(Test::Without::Module)
+BuildRequires:  perl(Try::Tiny)
 BuildRequires:  perl(warnings)
 
 Requires:       perl(Class::XSAccessor) >= 1.17

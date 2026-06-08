@@ -37,6 +37,7 @@ BuildRequires:  perl(Scalar::Util)
 BuildRequires:  perl(strict)
 BuildRequires:  perl(Test::More) >= 0.88
 BuildRequires:  perl(Test::Needs)
+BuildRequires:  perl(Try::Tiny)
 BuildRequires:  perl(warnings)
 
 Requires:       perl(B::Hooks::EndOfScope) >= 0.12

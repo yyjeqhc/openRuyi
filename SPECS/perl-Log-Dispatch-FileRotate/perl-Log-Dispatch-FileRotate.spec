@@ -26,6 +26,7 @@ BuildRequires:  perl(base)
 BuildRequires:  perl(Carp)
 BuildRequires:  perl(Date::Manip)
 BuildRequires:  perl(Encode)
+BuildRequires:  perl(Exception::Class)
 BuildRequires:  perl(Exporter)
 BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(Fcntl)
@@ -34,14 +35,21 @@ BuildRequires:  perl(Log::Dispatch) >= 2.60
 BuildRequires:  perl(Log::Dispatch::File)
 BuildRequires:  perl(Log::Dispatch::Output)
 BuildRequires:  perl(Log::Dispatch::Screen)
+BuildRequires:  perl(Params::ValidationCompiler)
 BuildRequires:  perl(Path::Tiny) >= 0.018
 BuildRequires:  perl(POSIX)
 BuildRequires:  perl(strict)
 BuildRequires:  perl(Test::More) >= 0.88
 BuildRequires:  perl(Test::Warn)
 BuildRequires:  perl(utf8)
+BuildRequires:  perl(Clone)
 BuildRequires:  perl(version)
+BuildRequires:  perl(MRO::Compat)
 BuildRequires:  perl(warnings)
+BuildRequires:  perl(Devel::StackTrace)
+BuildRequires:  perl(Eval::Closure)
+BuildRequires:  perl(namespace::autoclean)
+BuildRequires:  perl(Try::Tiny)
 
 Requires:       perl(Log::Dispatch) >= 2.60
 
