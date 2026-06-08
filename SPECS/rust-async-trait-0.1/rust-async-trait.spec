@@ -23,8 +23,8 @@ Requires:       crate(syn-2/parsing) >= 2.0.117
 Requires:       crate(syn-2/printing) >= 2.0.117
 Requires:       crate(syn-2/proc-macro) >= 2.0.117
 Requires:       crate(syn-2/visit-mut) >= 2.0.117
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
 Source code for takopackized Rust crate "async-trait"
