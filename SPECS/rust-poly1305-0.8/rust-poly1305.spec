@@ -43,7 +43,7 @@ This metapackage enables feature "std" for the Rust poly1305 crate, by pulling i
 %package     -n %{name}+zeroize
 Summary:        Poly1305 universal hash function and message authentication code - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0) >= 1.0.0
+Requires:       crate(zeroize-1) >= 1.0.0
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

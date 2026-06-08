@@ -40,9 +40,9 @@ Source code for takopackized Rust crate "cargo-util-schemas"
 %package     -n %{name}+unstable-schema
 Summary:        Deserialization schemas for Cargo - feature "unstable-schema"
 Requires:       crate(%{pkgname})
-Requires:       crate(schemars-1.0/default) >= 1.0.4
-Requires:       crate(schemars-1.0/preserve-order) >= 1.0.4
-Requires:       crate(schemars-1.0/semver1) >= 1.0.4
+Requires:       crate(schemars-1/default) >= 1.0.4
+Requires:       crate(schemars-1/preserve-order) >= 1.0.4
+Requires:       crate(schemars-1/semver1) >= 1.0.4
 Requires:       crate(serde-json-1/default) >= 1.0.145
 Provides:       crate(%{pkgname}/unstable-schema)
 

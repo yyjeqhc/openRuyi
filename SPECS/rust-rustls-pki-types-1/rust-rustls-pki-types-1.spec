@@ -23,7 +23,7 @@ Source code for takopackized Rust crate "rustls-pki-types"
 %package     -n %{name}+alloc
 Summary:        Shared types for the rustls PKI ecosystem - feature "alloc" and 2 more
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(zeroize-1.0/default) >= 1.0.0
+Requires:       crate(zeroize-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/alloc) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/std) = %{version}

@@ -29,7 +29,7 @@ Summary:        Async multi-producer multi-consumer channel - feature "portable-
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(concurrent-queue-2/portable-atomic) >= 2.5.0
 Requires:       crate(event-listener-strategy-0.5/portable-atomic) >= 0.5.4
-Requires:       crate(portable-atomic-1.0/require-cas) >= 1.0.0
+Requires:       crate(portable-atomic-1/require-cas) >= 1.0.0
 Requires:       crate(portable-atomic-util-0.2/alloc) >= 0.2.0
 Provides:       crate(%{pkgname}/portable-atomic) = %{version}
 

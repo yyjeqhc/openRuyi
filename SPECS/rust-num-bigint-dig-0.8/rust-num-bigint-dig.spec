@@ -111,7 +111,7 @@ This metapackage enables feature "std" for the Rust num-bigint-dig crate, by pul
 %package     -n %{name}+zeroize
 Summary:        Big integer implementation for Rust - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0) >= 1.5
+Requires:       crate(zeroize-1) >= 1.5
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

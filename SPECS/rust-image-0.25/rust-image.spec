@@ -185,7 +185,7 @@ Summary:        Imaging library - feature "rayon"
 Requires:       crate(%{pkgname})
 Requires:       crate(exr-1/rayon) >= 1.74.0
 Requires:       crate(ravif-0.13/threading) >= 0.13.0
-Requires:       crate(rayon-1.0/default) >= 1.7.0
+Requires:       crate(rayon-1/default) >= 1.7.0
 Provides:       crate(%{pkgname}/rayon)
 
 %description -n %{name}+rayon

@@ -24,7 +24,7 @@ Source code for takopackized Rust crate "atomic-waker"
 %package     -n %{name}+portable-atomic
 Summary:        Synchronization primitive for task wakeup - feature "portable-atomic"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(portable-atomic-1.0) >= 1.0.0
+Requires:       crate(portable-atomic-1) >= 1.0.0
 Provides:       crate(%{pkgname}/portable-atomic) = %{version}
 
 %description -n %{name}+portable-atomic

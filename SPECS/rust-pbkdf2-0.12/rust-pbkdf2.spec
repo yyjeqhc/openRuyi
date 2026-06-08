@@ -63,7 +63,7 @@ This metapackage enables feature "password-hash" for the Rust pbkdf2 crate, by p
 %package     -n %{name}+rayon
 Summary:        Generic implementation of PBKDF2 - feature "rayon"
 Requires:       crate(%{pkgname})
-Requires:       crate(rayon-1.0/default) >= 1.7
+Requires:       crate(rayon-1/default) >= 1.7
 Provides:       crate(%{pkgname}/rayon)
 
 %description -n %{name}+rayon

@@ -15,7 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(pest-2.0) >= 2.8.6
+Requires:       crate(pest-2) >= 2.8.6
 Requires:       crate(pest-meta-2/default) >= 2.8.6
 Requires:       crate(proc-macro2-1/default) >= 1.0.0
 Requires:       crate(quote-1/default) >= 1.0.0
@@ -47,7 +47,7 @@ This metapackage enables feature "not-bootstrap-in-src" for the Rust pest_genera
 %package     -n %{name}+std
 Summary:        Pest code generator - feature "std" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(pest-2.0/std) >= 2.8.6
+Requires:       crate(pest-2/std) >= 2.8.6
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/std) = %{version}
 

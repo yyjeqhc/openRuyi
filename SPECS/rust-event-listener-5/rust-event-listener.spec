@@ -36,7 +36,7 @@ Summary:        Notify async tasks or threads - feature "loom"
 Requires:       crate(%{pkgname})
 Requires:       crate(concurrent-queue-2/loom) >= 2.5.0
 Requires:       crate(loom-0.7/default) >= 0.7.0
-Requires:       crate(parking-2.0/loom) >= 2.2.1
+Requires:       crate(parking-2/loom) >= 2.2.1
 Provides:       crate(%{pkgname}/loom)
 
 %description -n %{name}+loom
@@ -45,7 +45,7 @@ This metapackage enables feature "loom" for the Rust event-listener crate, by pu
 %package     -n %{name}+parking
 Summary:        Notify async tasks or threads - feature "parking"
 Requires:       crate(%{pkgname})
-Requires:       crate(parking-2.0/default) >= 2.2.1
+Requires:       crate(parking-2/default) >= 2.2.1
 Provides:       crate(%{pkgname}/parking)
 
 %description -n %{name}+parking
@@ -74,7 +74,7 @@ This metapackage enables feature "portable-atomic-util" for the Rust event-liste
 %package     -n %{name}+portable-atomic-crate
 Summary:        Notify async tasks or threads - feature "portable_atomic_crate"
 Requires:       crate(%{pkgname})
-Requires:       crate(portable-atomic-1.0) >= 1.2.0
+Requires:       crate(portable-atomic-1) >= 1.2.0
 Provides:       crate(%{pkgname}/portable-atomic-crate)
 
 %description -n %{name}+portable-atomic-crate

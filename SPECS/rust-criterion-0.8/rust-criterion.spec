@@ -110,7 +110,7 @@ This metapackage enables feature "plotters" for the Rust criterion crate, by pul
 %package     -n %{name}+rayon
 Summary:        Statistics-driven micro-benchmarking library - feature "rayon"
 Requires:       crate(%{pkgname})
-Requires:       crate(rayon-1.0/default) >= 1.3
+Requires:       crate(rayon-1/default) >= 1.3
 Provides:       crate(%{pkgname}/rayon)
 
 %description -n %{name}+rayon

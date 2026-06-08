@@ -17,12 +17,12 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(cfg-if-1/default) >= 1.0.0
 Requires:       crate(hermit-abi-0.5/default) >= 0.5.0
-Requires:       crate(rustix-1.0/event) >= 1.0.5
-Requires:       crate(rustix-1.0/fs) >= 1.0.5
-Requires:       crate(rustix-1.0/pipe) >= 1.0.5
-Requires:       crate(rustix-1.0/process) >= 1.0.5
-Requires:       crate(rustix-1.0/std) >= 1.0.5
-Requires:       crate(rustix-1.0/time) >= 1.0.5
+Requires:       crate(rustix-1/event) >= 1.0.5
+Requires:       crate(rustix-1/fs) >= 1.0.5
+Requires:       crate(rustix-1/pipe) >= 1.0.5
+Requires:       crate(rustix-1/process) >= 1.0.5
+Requires:       crate(rustix-1/std) >= 1.0.5
+Requires:       crate(rustix-1/time) >= 1.0.5
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 

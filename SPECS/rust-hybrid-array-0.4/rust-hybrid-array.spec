@@ -89,7 +89,7 @@ This metapackage enables feature "zerocopy" for the Rust hybrid-array crate, by 
 %package     -n %{name}+zeroize
 Summary:        Hybrid typenum-based and const generic array types designed to provide the flexibility of typenum-based expressions while also allowing interoperability and a transition path to const generics - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0) >= 1.8
+Requires:       crate(zeroize-1) >= 1.8
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

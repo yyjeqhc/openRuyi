@@ -25,7 +25,7 @@ Source code for takopackized Rust crate "block-buffer"
 %package     -n %{name}+zeroize
 Summary:        Buffer types for block processing of data - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0) >= 1.4
+Requires:       crate(zeroize-1) >= 1.4
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

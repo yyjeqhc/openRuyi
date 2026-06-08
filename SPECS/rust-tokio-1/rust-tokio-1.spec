@@ -146,7 +146,7 @@ This metapackage enables feature "signal" for the Rust tokio crate, by pulling i
 %package     -n %{name}+signal-hook-registry
 Summary:        Event-driven, non-blocking I/O platform for writing asynchronous I/O backed applications - feature "signal-hook-registry"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(signal-hook-registry-1.0/default) >= 1.1.1
+Requires:       crate(signal-hook-registry-1/default) >= 1.1.1
 Provides:       crate(%{pkgname}/signal-hook-registry) = %{version}
 
 %description -n %{name}+signal-hook-registry

@@ -29,7 +29,7 @@ Requires:       crate(crypto-common-0.2/rand-core) >= 0.2.1
 Requires:       crate(rand-core-0.10) >= 0.10.1
 Requires:       crate(rustcrypto-ff-0.14.0-rc.1) >= 0.14.0-rc.1
 Requires:       crate(subtle-2/const-generics) >= 2.6.1
-Requires:       crate(zeroize-1.0) >= 1.8.2
+Requires:       crate(zeroize-1) >= 1.8.2
 Provides:       crate(primefield) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

@@ -31,7 +31,7 @@ Source code for takopackized Rust crate "maybe-rayon"
 %package     -n %{name}+rayon
 Summary:        Either acts as rayon or creates a single-threaded facade - feature "rayon" and 2 more
 Requires:       crate(%{pkgname})
-Requires:       crate(rayon-1.0/default) >= 1.0.0
+Requires:       crate(rayon-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/rayon)
 Provides:       crate(%{pkgname}/threads)

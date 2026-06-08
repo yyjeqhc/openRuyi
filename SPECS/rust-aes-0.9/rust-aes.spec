@@ -36,7 +36,7 @@ Source code for takopackized Rust crate "aes"
 %package     -n %{name}+zeroize
 Summary:        Pure Rust implementation of the Advanced Encryption Standard (a.k.a - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0/aarch64) >= 1.5.6
+Requires:       crate(zeroize-1/aarch64) >= 1.5.6
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

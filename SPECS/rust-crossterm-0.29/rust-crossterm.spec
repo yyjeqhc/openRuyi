@@ -24,9 +24,9 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(bitflags-2/default) >= 2.11.1
 Requires:       crate(document-features-0.2/default) >= 0.2.12
 Requires:       crate(parking-lot-0.12/default) >= 0.12.5
-Requires:       crate(rustix-1.0/std) >= 1.1.4
-Requires:       crate(rustix-1.0/stdio) >= 1.1.4
-Requires:       crate(rustix-1.0/termios) >= 1.1.4
+Requires:       crate(rustix-1/std) >= 1.1.4
+Requires:       crate(rustix-1/stdio) >= 1.1.4
+Requires:       crate(rustix-1/termios) >= 1.1.4
 Provides:       crate(crossterm) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/bracketed-paste)
@@ -121,10 +121,10 @@ This metapackage enables feature "serde" for the Rust crossterm crate, by pullin
 Summary:        Crossplatform terminal library for manipulating terminals - feature "use-dev-tty"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/filedescriptor)
-Requires:       crate(rustix-1.0/process) >= 1.1.4
-Requires:       crate(rustix-1.0/std) >= 1.1.4
-Requires:       crate(rustix-1.0/stdio) >= 1.1.4
-Requires:       crate(rustix-1.0/termios) >= 1.1.4
+Requires:       crate(rustix-1/process) >= 1.1.4
+Requires:       crate(rustix-1/std) >= 1.1.4
+Requires:       crate(rustix-1/stdio) >= 1.1.4
+Requires:       crate(rustix-1/termios) >= 1.1.4
 Provides:       crate(%{pkgname}/use-dev-tty)
 
 %description -n %{name}+use-dev-tty

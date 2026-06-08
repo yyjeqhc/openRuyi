@@ -50,7 +50,7 @@ Additionally, this package also provides the "default" feature.
 Summary:        Tempfile implementation with a global registry to assure cleanup - feature "signals"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(signal-hook-0.3) >= 0.3.18
-Requires:       crate(signal-hook-registry-1.0/default) >= 1.4.5
+Requires:       crate(signal-hook-registry-1/default) >= 1.4.5
 Provides:       crate(%{pkgname}/signals) = %{version}
 
 %description -n %{name}+signals

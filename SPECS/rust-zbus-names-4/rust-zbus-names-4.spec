@@ -18,8 +18,8 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(serde-1/default) >= 1.0.200
 Requires:       crate(serde-1/derive) >= 1.0.200
 Requires:       crate(winnow-1/default) >= 1.0.0
-Requires:       crate(zvariant-5.0/default) >= 5.10.1
-Requires:       crate(zvariant-5.0/enumflags2) >= 5.10.1
+Requires:       crate(zvariant-5/default) >= 5.10.1
+Requires:       crate(zvariant-5/enumflags2) >= 5.10.1
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 

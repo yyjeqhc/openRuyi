@@ -27,7 +27,7 @@ Requires:       crate(rustls-pki-types-1/alloc) >= 1.14.0
 Requires:       crate(rustls-pki-types-1/default) >= 1.14.0
 Requires:       crate(rustls-webpki-0.103/alloc) >= 0.103.10
 Requires:       crate(subtle-2) >= 2.6.1
-Requires:       crate(zeroize-1.0/default) >= 1.8.2
+Requires:       crate(zeroize-1/default) >= 1.8.2
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/custom-provider)
 Provides:       crate(%{pkgname}/tls12)

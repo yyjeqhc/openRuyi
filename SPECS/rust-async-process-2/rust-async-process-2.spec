@@ -24,9 +24,9 @@ Requires:       crate(blocking-1/default) >= 1.0.0
 Requires:       crate(cfg-if-1/default) >= 1.0.0
 Requires:       crate(event-listener-5/default) >= 5.1.0
 Requires:       crate(futures-lite-2/default) >= 2.0.0
-Requires:       crate(rustix-1.0/fs) >= 1.0.0
-Requires:       crate(rustix-1.0/process) >= 1.0.0
-Requires:       crate(rustix-1.0/std) >= 1.0.0
+Requires:       crate(rustix-1/fs) >= 1.0.0
+Requires:       crate(rustix-1/process) >= 1.0.0
+Requires:       crate(rustix-1/std) >= 1.0.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 

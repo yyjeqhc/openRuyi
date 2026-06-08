@@ -32,7 +32,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(der-0.7/alloc) >= 0.7.10
 Requires:       crate(der-0.7/oid) >= 0.7.10
 Requires:       crate(pkcs8-0.10/alloc) >= 0.10.2
-Requires:       crate(zeroize-1.0/alloc) >= 1.8.2
+Requires:       crate(zeroize-1/alloc) >= 1.8.2
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -124,7 +124,7 @@ Summary:        Pure Rust implementation of SEC1: Elliptic Curve Cryptography en
 Requires:       crate(%{pkgname})
 Requires:       crate(der-0.7/oid) >= 0.7.10
 Requires:       crate(der-0.7/zeroize) >= 0.7.10
-Requires:       crate(zeroize-1.0) >= 1.8.2
+Requires:       crate(zeroize-1) >= 1.8.2
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

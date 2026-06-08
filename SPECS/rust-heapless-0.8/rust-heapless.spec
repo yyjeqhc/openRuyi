@@ -42,7 +42,7 @@ This metapackage enables feature "defmt-03" for the Rust heapless crate, by pull
 %package     -n %{name}+portable-atomic
 Summary:        `static` friendly data structures that don't require dynamic memory allocation - feature "portable-atomic"
 Requires:       crate(%{pkgname})
-Requires:       crate(portable-atomic-1.0/default) >= 1.0.0
+Requires:       crate(portable-atomic-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/portable-atomic)
 
 %description -n %{name}+portable-atomic
@@ -52,8 +52,8 @@ This metapackage enables feature "portable-atomic" for the Rust heapless crate, 
 Summary:        `static` friendly data structures that don't require dynamic memory allocation - feature "portable-atomic-critical-section"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/portable-atomic)
-Requires:       crate(portable-atomic-1.0/critical-section) >= 1.0.0
-Requires:       crate(portable-atomic-1.0/default) >= 1.0.0
+Requires:       crate(portable-atomic-1/critical-section) >= 1.0.0
+Requires:       crate(portable-atomic-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/portable-atomic-critical-section)
 
 %description -n %{name}+portable-atomic-critical-section
@@ -63,8 +63,8 @@ This metapackage enables feature "portable-atomic-critical-section" for the Rust
 Summary:        `static` friendly data structures that don't require dynamic memory allocation - feature "portable-atomic-unsafe-assume-single-core"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/portable-atomic)
-Requires:       crate(portable-atomic-1.0/default) >= 1.0.0
-Requires:       crate(portable-atomic-1.0/unsafe-assume-single-core) >= 1.0.0
+Requires:       crate(portable-atomic-1/default) >= 1.0.0
+Requires:       crate(portable-atomic-1/unsafe-assume-single-core) >= 1.0.0
 Provides:       crate(%{pkgname}/portable-atomic-unsafe-assume-single-core)
 
 %description -n %{name}+portable-atomic-unsafe-assume-single-core

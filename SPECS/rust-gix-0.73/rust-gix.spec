@@ -457,8 +457,8 @@ This metapackage enables feature "parallel" for the Rust gix crate, by pulling i
 %package     -n %{name}+prodash
 Summary:        Interact with git repositories just like git would - feature "prodash"
 Requires:       crate(%{pkgname})
-Requires:       crate(prodash-30.0/default) >= 30.0.1
-Requires:       crate(prodash-30.0/progress-tree) >= 30.0.1
+Requires:       crate(prodash-30/default) >= 30.0.1
+Requires:       crate(prodash-30/progress-tree) >= 30.0.1
 Provides:       crate(%{pkgname}/prodash)
 
 %description -n %{name}+prodash
@@ -467,7 +467,7 @@ This metapackage enables feature "prodash" for the Rust gix crate, by pulling in
 %package     -n %{name}+progress-tree
 Summary:        Interact with git repositories just like git would - feature "progress-tree"
 Requires:       crate(%{pkgname})
-Requires:       crate(prodash-30.0/progress-tree) >= 30.0.1
+Requires:       crate(prodash-30/progress-tree) >= 30.0.1
 Provides:       crate(%{pkgname}/progress-tree)
 
 %description -n %{name}+progress-tree

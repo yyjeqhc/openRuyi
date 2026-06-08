@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(serde-1) >= 1.0.219
 Requires:       crate(serde-json-1/default) >= 1.0.140
-Requires:       crate(smartstring-1.0/default) >= 1.0.1
+Requires:       crate(smartstring-1/default) >= 1.0.1
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

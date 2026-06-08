@@ -60,7 +60,7 @@ Additionally, this package also provides the "tests-openssl" feature.
 %package     -n %{name}+rayon
 Summary:        Random prime number generation and primality checking library - feature "rayon" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(rayon-1.0) >= 1.0.0
+Requires:       crate(rayon-1) >= 1.0.0
 Provides:       crate(%{pkgname}/multicore)
 Provides:       crate(%{pkgname}/rayon)
 

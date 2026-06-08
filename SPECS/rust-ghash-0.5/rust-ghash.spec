@@ -42,7 +42,7 @@ This metapackage enables feature "std" for the Rust ghash crate, by pulling in a
 %package     -n %{name}+zeroize
 Summary:        Universal hash over GF(2^128) useful for constructing a Message Authentication Code (MAC), as in the AES-GCM authenticated encryption cipher - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0) >= 1.0.0
+Requires:       crate(zeroize-1) >= 1.0.0
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

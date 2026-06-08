@@ -15,7 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(pest-2.0) >= 2.8.6
+Requires:       crate(pest-2) >= 2.8.6
 Requires:       crate(pest-generator-2) >= 2.8.6
 Provides:       crate(%{pkgname}) = %{version}
 
@@ -43,7 +43,7 @@ This metapackage enables feature "not-bootstrap-in-src" for the Rust pest_derive
 %package     -n %{name}+std
 Summary:        Pest's derive macro - feature "std" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(pest-2.0/std) >= 2.8.6
+Requires:       crate(pest-2/std) >= 2.8.6
 Requires:       crate(pest-generator-2/std) >= 2.8.6
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/std) = %{version}

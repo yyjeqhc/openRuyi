@@ -28,7 +28,7 @@ Source code for takopackized Rust crate "rpds"
 Summary:        Persistent data structures with structural sharing - feature "rayon"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/std) = %{version}
-Requires:       crate(rayon-1.0/default) >= 1.11.0
+Requires:       crate(rayon-1/default) >= 1.11.0
 Provides:       crate(%{pkgname}/rayon) = %{version}
 
 %description -n %{name}+rayon

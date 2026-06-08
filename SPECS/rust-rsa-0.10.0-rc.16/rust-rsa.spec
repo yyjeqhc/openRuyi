@@ -31,8 +31,8 @@ Requires:       crate(rand-core-0.10) >= 0.10.1
 Requires:       crate(signature-3/alloc) >= 3.0.0
 Requires:       crate(signature-3/digest) >= 3.0.0
 Requires:       crate(signature-3/rand-core) >= 3.0.0
-Requires:       crate(zeroize-1.0/alloc) >= 1.8.2
-Requires:       crate(zeroize-1.0/default) >= 1.8.2
+Requires:       crate(zeroize-1/alloc) >= 1.8.2
+Requires:       crate(zeroize-1/default) >= 1.8.2
 Provides:       crate(rsa) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/hazmat)

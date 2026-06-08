@@ -38,7 +38,7 @@ Source code for takopackized Rust crate "curve25519-dalek"
 %package     -n %{name}+alloc
 Summary:        Pure-Rust implementation of group operations on ristretto255 and Curve25519 - feature "alloc"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0/alloc) >= 1.8.2
+Requires:       crate(zeroize-1/alloc) >= 1.8.2
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -117,7 +117,7 @@ This metapackage enables feature "serde" for the Rust curve25519-dalek crate, by
 %package     -n %{name}+zeroize
 Summary:        Pure-Rust implementation of group operations on ristretto255 and Curve25519 - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0) >= 1.8.2
+Requires:       crate(zeroize-1) >= 1.8.2
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

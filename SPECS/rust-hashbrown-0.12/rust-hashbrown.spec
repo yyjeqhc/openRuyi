@@ -98,7 +98,7 @@ This metapackage enables feature "default" for the Rust hashbrown crate, by pull
 %package     -n %{name}+rayon
 Summary:        Rust port of Google's SwissTable hash map - feature "rayon"
 Requires:       crate(%{pkgname})
-Requires:       crate(rayon-1.0/default) >= 1.0.0
+Requires:       crate(rayon-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/rayon)
 
 %description -n %{name}+rayon

@@ -57,7 +57,7 @@ This metapackage enables feature "derive" for the Rust serdect crate, by pulling
 %package     -n %{name}+zeroize
 Summary:        Constant-time serde serializer/deserializer helpers for data that potentially contains secrets (e.g - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0) >= 1.0.0
+Requires:       crate(zeroize-1) >= 1.0.0
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

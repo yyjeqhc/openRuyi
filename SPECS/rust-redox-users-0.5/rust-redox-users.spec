@@ -50,8 +50,8 @@ This metapackage enables feature "rust-argon2" for the Rust redox_users crate, b
 %package     -n %{name}+zeroize
 Summary:        Access Redox users and groups functionality - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0/default) >= 1.4
-Requires:       crate(zeroize-1.0/zeroize-derive) >= 1.4
+Requires:       crate(zeroize-1/default) >= 1.4
+Requires:       crate(zeroize-1/zeroize-derive) >= 1.4
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

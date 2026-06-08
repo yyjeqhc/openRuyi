@@ -40,7 +40,7 @@ Requires:       crate(curve25519-dalek-5.0.0-pre.6/digest) >= 5.0.0-pre.6
 Requires:       crate(ed25519-3.0.0-rc.4/alloc) >= 3.0.0-rc.4
 Requires:       crate(serde-1/alloc) >= 1.0.228
 Requires:       crate(signature-3/alloc) >= 3.0.0
-Requires:       crate(zeroize-1.0/alloc) >= 1.8.2
+Requires:       crate(zeroize-1/alloc) >= 1.8.2
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -149,7 +149,7 @@ Summary:        Fast and efficient ed25519 EdDSA key generations, signing, and v
 Requires:       crate(%{pkgname})
 Requires:       crate(curve25519-dalek-5.0.0-pre.6/digest) >= 5.0.0-pre.6
 Requires:       crate(curve25519-dalek-5.0.0-pre.6/zeroize) >= 5.0.0-pre.6
-Requires:       crate(zeroize-1.0) >= 1.8.2
+Requires:       crate(zeroize-1) >= 1.8.2
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

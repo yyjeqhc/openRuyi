@@ -47,7 +47,7 @@ Summary:        Functionality shared between the `ml-kem` and `ml-dsa` crates, i
 Requires:       crate(%{pkgname})
 Requires:       crate(hybrid-array-0.4/extra-sizes) >= 0.4.11
 Requires:       crate(hybrid-array-0.4/zeroize) >= 0.4.11
-Requires:       crate(zeroize-1.0) >= 1.8.1
+Requires:       crate(zeroize-1) >= 1.8.1
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

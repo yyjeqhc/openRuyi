@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(elliptic-curve-0.14.0-rc.28/sec1) >= 0.14.0-rc.28
 Requires:       crate(signature-3/rand-core) >= 3.0.0
-Requires:       crate(zeroize-1.0) >= 1.8.2
+Requires:       crate(zeroize-1) >= 1.8.2
 Provides:       crate(ecdsa) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/hazmat)

@@ -34,8 +34,8 @@ Source code for takopackized Rust crate "redox_users"
 %package     -n %{name}+zeroize
 Summary:        Access Redox users and groups functionality - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0/default) >= 1.4
-Requires:       crate(zeroize-1.0/zeroize-derive) >= 1.4
+Requires:       crate(zeroize-1/default) >= 1.4
+Requires:       crate(zeroize-1/zeroize-derive) >= 1.4
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

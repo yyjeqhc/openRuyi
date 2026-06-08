@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(form-urlencoded-1/default) >= 1.2.2
 Requires:       crate(itoa-1/default) >= 1.0.18
-Requires:       crate(ryu-1.0/default) >= 1.0.23
+Requires:       crate(ryu-1/default) >= 1.0.23
 Requires:       crate(serde-1/default) >= 1.0.228
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

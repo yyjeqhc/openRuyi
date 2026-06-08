@@ -61,7 +61,7 @@ This metapackage enables feature "quickcheck" for the Rust indexmap crate, by pu
 %package     -n %{name}+rayon
 Summary:        Hash table with consistent order and fast iteration - feature "rayon"
 Requires:       crate(%{pkgname})
-Requires:       crate(rayon-1.0/default) >= 1.9
+Requires:       crate(rayon-1/default) >= 1.9
 Provides:       crate(%{pkgname}/rayon)
 
 %description -n %{name}+rayon

@@ -52,7 +52,7 @@ This metapackage enables feature "serde" for the Rust arrayvec crate, by pulling
 %package     -n %{name}+zeroize
 Summary:        Vector with fixed capacity, backed by an array (it can be stored on the stack too) - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0) >= 1.4
+Requires:       crate(zeroize-1) >= 1.4
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

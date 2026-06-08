@@ -59,7 +59,7 @@ Summary:        Rav1e-based pure Rust library for encoding images in AVIF format
 Requires:       crate(%{pkgname})
 Requires:       crate(rav1e-0.8/threading) >= 0.8.1
 Requires:       crate(rav1e-0.8/wasm) >= 0.8.1
-Requires:       crate(rayon-1.0/default) >= 1.11.0
+Requires:       crate(rayon-1/default) >= 1.11.0
 Provides:       crate(%{pkgname}/threading)
 
 %description -n %{name}+threading

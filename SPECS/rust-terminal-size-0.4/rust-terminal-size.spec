@@ -15,8 +15,8 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(rustix-1.0/default) >= 1.1.4
-Requires:       crate(rustix-1.0/termios) >= 1.1.4
+Requires:       crate(rustix-1/default) >= 1.1.4
+Requires:       crate(rustix-1/termios) >= 1.1.4
 Requires:       crate(windows-sys-0.61/default) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-system-console) >= 0.61.2

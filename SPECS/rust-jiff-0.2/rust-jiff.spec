@@ -16,7 +16,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(jiff-static-0.2/default) >= 0.2.24
-Requires:       crate(portable-atomic-1.0) >= 1.13.1
+Requires:       crate(portable-atomic-1) >= 1.13.1
 Requires:       crate(portable-atomic-util-0.2) >= 0.2.7
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/perf-inline)

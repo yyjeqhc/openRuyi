@@ -28,7 +28,7 @@ Requires:       crate(crypto-bigint-0.5/zeroize) >= 0.5.5
 Requires:       crate(generic-array-0.14/zeroize) >= 0.14.9
 Requires:       crate(rand-core-0.6) >= 0.6.4
 Requires:       crate(subtle-2) >= 2.6.1
-Requires:       crate(zeroize-1.0) >= 1.8.2
+Requires:       crate(zeroize-1) >= 1.8.2
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/hazmat)
 
@@ -45,7 +45,7 @@ Requires:       crate(pkcs8-0.10/alloc) >= 0.10.2
 Requires:       crate(sec1-0.7/alloc) >= 0.7.3
 Requires:       crate(sec1-0.7/subtle) >= 0.7.3
 Requires:       crate(sec1-0.7/zeroize) >= 0.7.3
-Requires:       crate(zeroize-1.0/alloc) >= 1.8.2
+Requires:       crate(zeroize-1/alloc) >= 1.8.2
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc
@@ -137,7 +137,7 @@ Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(%{pkgname}/serde)
 Requires:       crate(base64ct-1/alloc) >= 1.0.0
 Requires:       crate(serde-json-1/alloc) >= 1.0.47
-Requires:       crate(zeroize-1.0/alloc) >= 1.8.2
+Requires:       crate(zeroize-1/alloc) >= 1.8.2
 Provides:       crate(%{pkgname}/jwk)
 
 %description -n %{name}+jwk

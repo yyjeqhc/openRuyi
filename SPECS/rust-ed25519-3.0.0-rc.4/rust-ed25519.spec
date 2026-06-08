@@ -91,7 +91,7 @@ This metapackage enables feature "zerocopy" for the Rust ed25519 crate, by pulli
 %package     -n %{name}+zeroize
 Summary:        Edwards Digital Signature Algorithm (EdDSA) over Curve25519 (as specified in RFC 8032) support library providing signature type definitions and PKCS#8 private key decoding/encoding support - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0) >= 1.0.0
+Requires:       crate(zeroize-1) >= 1.0.0
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

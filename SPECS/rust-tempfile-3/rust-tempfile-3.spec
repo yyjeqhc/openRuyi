@@ -17,8 +17,8 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(fastrand-2/default) >= 2.1.1
 Requires:       crate(once-cell-1/std) >= 1.19.0
-Requires:       crate(rustix-1.0/default) >= 1.1.4
-Requires:       crate(rustix-1.0/fs) >= 1.1.4
+Requires:       crate(rustix-1/default) >= 1.1.4
+Requires:       crate(rustix-1/fs) >= 1.1.4
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/getrandom) = %{version}

@@ -66,7 +66,7 @@ This metapackage enables feature "memchr" for the Rust futures-lite crate, by pu
 %package     -n %{name}+parking
 Summary:        Futures, streams, and async I/O combinators - feature "parking"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(parking-2.0/default) >= 2.2.0
+Requires:       crate(parking-2/default) >= 2.2.0
 Provides:       crate(%{pkgname}/parking) = %{version}
 
 %description -n %{name}+parking

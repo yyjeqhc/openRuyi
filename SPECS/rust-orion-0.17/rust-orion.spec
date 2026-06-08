@@ -63,7 +63,7 @@ Summary:        Usable, easy and safe pure-Rust crypto - feature "safe_api"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/ct-codecs)
 Requires:       crate(%{pkgname}/getrandom)
-Requires:       crate(zeroize-1.0/alloc) >= 1.1.0
+Requires:       crate(zeroize-1/alloc) >= 1.1.0
 Provides:       crate(%{pkgname}/safe-api)
 
 %description -n %{name}+safe-api
@@ -82,7 +82,7 @@ This metapackage enables feature "serde" for the Rust orion crate, by pulling in
 %package     -n %{name}+zeroize
 Summary:        Usable, easy and safe pure-Rust crypto - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0) >= 1.1.0
+Requires:       crate(zeroize-1) >= 1.1.0
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

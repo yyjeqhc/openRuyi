@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(libc-0.2/default) >= 0.2.186
-Requires:       crate(signal-hook-registry-1.0/default) >= 1.4.8
+Requires:       crate(signal-hook-registry-1/default) >= 1.4.8
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/channel)
 Provides:       crate(%{pkgname}/iterator)

@@ -25,7 +25,7 @@ Source code for takopackized Rust crate "async-task"
 %package     -n %{name}+portable-atomic
 Summary:        Task abstraction for building executors - feature "portable-atomic"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(portable-atomic-1.0) >= 1.0.0
+Requires:       crate(portable-atomic-1) >= 1.0.0
 Provides:       crate(%{pkgname}/portable-atomic) = %{version}
 
 %description -n %{name}+portable-atomic

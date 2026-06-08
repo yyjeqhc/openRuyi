@@ -28,7 +28,7 @@ Source code for takopackized Rust crate "futures-core"
 %package     -n %{name}+portable-atomic
 Summary:        Core traits and types in for the `futures` library - feature "portable-atomic"
 Requires:       crate(%{pkgname})
-Requires:       crate(portable-atomic-1.0/require-cas) >= 1.3
+Requires:       crate(portable-atomic-1/require-cas) >= 1.3
 Provides:       crate(%{pkgname}/portable-atomic)
 
 %description -n %{name}+portable-atomic

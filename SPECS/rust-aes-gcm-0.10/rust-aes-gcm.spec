@@ -120,7 +120,7 @@ This metapackage enables feature "stream" for the Rust aes-gcm crate, by pulling
 %package     -n %{name}+zeroize
 Summary:        Pure Rust implementation of the AES-GCM (Galois/Counter Mode) Authenticated Encryption with Associated Data (AEAD) Cipher with optional architecture-specific hardware acceleration - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0) >= 1.0.0
+Requires:       crate(zeroize-1) >= 1.0.0
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

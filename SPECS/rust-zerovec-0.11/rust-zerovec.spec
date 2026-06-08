@@ -71,7 +71,7 @@ This metapackage enables feature "hashmap" for the Rust zerovec crate, by pullin
 Summary:        Zero-copy vector backed by a byte array - feature "schemars"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(schemars-1.0) >= 1.0.4
+Requires:       crate(schemars-1) >= 1.0.4
 Provides:       crate(%{pkgname}/schemars)
 
 %description -n %{name}+schemars

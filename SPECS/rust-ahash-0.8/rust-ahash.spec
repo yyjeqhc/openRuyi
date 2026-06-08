@@ -38,7 +38,7 @@ Summary:        Non-cryptographic hash function using AES-NI for high performanc
 Requires:       crate(%{pkgname})
 Requires:       crate(once-cell-1/alloc) >= 1.18.0
 Requires:       crate(once-cell-1/critical-section) >= 1.18.0
-Requires:       crate(portable-atomic-1.0/default) >= 1.0.0
+Requires:       crate(portable-atomic-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/atomic-polyfill)
 
 %description -n %{name}+atomic-polyfill

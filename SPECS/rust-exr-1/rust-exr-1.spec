@@ -29,7 +29,7 @@ Source code for takopackized Rust crate "exr"
 %package     -n %{name}+rayon
 Summary:        Read and write OpenEXR files without any unsafe code - feature "rayon" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(rayon-core-1.0/default) >= 1.11.0
+Requires:       crate(rayon-core-1/default) >= 1.11.0
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/rayon) = %{version}
 

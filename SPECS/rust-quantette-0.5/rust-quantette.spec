@@ -28,7 +28,7 @@ Requires:       crate(bytemuck-1/extern-crate-alloc) >= 1.25.0
 Requires:       crate(bytemuck-1/min-const-generics) >= 1.25.0
 Requires:       crate(libm-0.2) >= 0.2.16
 Requires:       crate(num-traits-0.2/libm) >= 0.2.19
-Requires:       crate(ordered-float-5.0) >= 5.3.0
+Requires:       crate(ordered-float-5) >= 5.3.0
 Requires:       crate(palette-0.7/alloc) >= 0.7.6
 Requires:       crate(palette-0.7/bytemuck) >= 0.7.6
 Requires:       crate(palette-0.7/libm) >= 0.7.6
@@ -92,7 +92,7 @@ This metapackage enables feature "rand_xoshiro" for the Rust quantette crate, by
 %package     -n %{name}+rayon
 Summary:        Fast and high quality image quantization and palette generation - feature "rayon"
 Requires:       crate(%{pkgname})
-Requires:       crate(rayon-1.0/default) >= 1.10.0
+Requires:       crate(rayon-1/default) >= 1.10.0
 Provides:       crate(%{pkgname}/rayon)
 
 %description -n %{name}+rayon

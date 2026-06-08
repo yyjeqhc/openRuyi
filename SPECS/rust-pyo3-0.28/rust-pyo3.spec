@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(libc-0.2/default) >= 0.2.185
 Requires:       crate(once-cell-1/default) >= 1.21.4
-Requires:       crate(portable-atomic-1.0/default) >= 1.13.1
+Requires:       crate(portable-atomic-1/default) >= 1.13.1
 Requires:       crate(pyo3-build-config-0.28/default) >= 0.28.3
 Requires:       crate(pyo3-build-config-0.28/resolve-config) >= 0.28.3
 Requires:       crate(pyo3-ffi-0.28/default) >= 0.28.3
@@ -386,7 +386,7 @@ This metapackage enables feature "num-rational" for the Rust pyo3 crate, by pull
 %package     -n %{name}+ordered-float
 Summary:        Bindings to Python interpreter - feature "ordered-float"
 Requires:       crate(%{pkgname})
-Requires:       crate(ordered-float-5.0) >= 5.0.0
+Requires:       crate(ordered-float-5) >= 5.0.0
 Provides:       crate(%{pkgname}/ordered-float)
 
 %description -n %{name}+ordered-float

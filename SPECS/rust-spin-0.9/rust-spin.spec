@@ -59,7 +59,7 @@ Additionally, this package also provides the "lock_api" feature.
 %package     -n %{name}+portable-atomic
 Summary:        Spin-based synchronization primitives - feature "portable_atomic"
 Requires:       crate(%{pkgname})
-Requires:       crate(portable-atomic-1.0) >= 1.0.0
+Requires:       crate(portable-atomic-1) >= 1.0.0
 Provides:       crate(%{pkgname}/portable-atomic)
 
 %description -n %{name}+portable-atomic

@@ -42,7 +42,7 @@ This metapackage enables feature "serde" for the Rust generic-array crate, by pu
 %package     -n %{name}+zeroize
 Summary:        Generic types implementing functionality of arrays - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0) >= 1.8.2
+Requires:       crate(zeroize-1) >= 1.8.2
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

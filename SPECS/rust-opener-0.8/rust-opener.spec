@@ -40,8 +40,8 @@ Requires:       crate(windows-sys-0.61/win32-system-com) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-ui-shell) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-ui-shell-common) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-ui-windowsandmessaging) >= 0.61.2
-Requires:       crate(zbus-5.0/default) >= 5.0.0
-Requires:       crate(zbus-5.0/url) >= 5.0.0
+Requires:       crate(zbus-5/default) >= 5.0.0
+Requires:       crate(zbus-5/url) >= 5.0.0
 Provides:       crate(%{pkgname}/reveal)
 
 %description -n %{name}+reveal

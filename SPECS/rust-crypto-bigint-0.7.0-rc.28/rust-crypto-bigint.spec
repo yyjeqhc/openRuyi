@@ -122,7 +122,7 @@ This metapackage enables feature "subtle" for the Rust crypto-bigint crate, by p
 %package     -n %{name}+zeroize
 Summary:        Pure Rust implementation of a big integer library which has been designed from the ground-up for use in cryptographic applications - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0) >= 1.8.2
+Requires:       crate(zeroize-1) >= 1.8.2
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

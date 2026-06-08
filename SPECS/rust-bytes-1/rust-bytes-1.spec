@@ -25,7 +25,7 @@ Source code for takopackized Rust crate "bytes"
 %package     -n %{name}+extra-platforms
 Summary:        Types and traits for working with bytes - feature "extra-platforms"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(portable-atomic-1.0/require-cas) >= 1.3.0
+Requires:       crate(portable-atomic-1/require-cas) >= 1.3.0
 Provides:       crate(%{pkgname}/extra-platforms) = %{version}
 
 %description -n %{name}+extra-platforms

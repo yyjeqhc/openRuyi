@@ -55,7 +55,7 @@ This metapackage enables feature "portable-atomic-util" for the Rust piper crate
 %package     -n %{name}+portable-atomic-crate
 Summary:        Asynchronous single-consumer single-producer pipe for bytes - feature "portable_atomic_crate"
 Requires:       crate(%{pkgname})
-Requires:       crate(portable-atomic-1.0) >= 1.2.0
+Requires:       crate(portable-atomic-1) >= 1.2.0
 Provides:       crate(%{pkgname}/portable-atomic-crate)
 
 %description -n %{name}+portable-atomic-crate

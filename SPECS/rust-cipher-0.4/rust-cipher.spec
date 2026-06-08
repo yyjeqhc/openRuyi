@@ -75,7 +75,7 @@ This metapackage enables feature "std" for the Rust cipher crate, by pulling in 
 %package     -n %{name}+zeroize
 Summary:        Traits for describing block ciphers and stream ciphers - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0) >= 1.5
+Requires:       crate(zeroize-1) >= 1.5
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

@@ -76,7 +76,7 @@ This metapackage enables feature "mcf" for the Rust scrypt crate, by pulling in 
 %package     -n %{name}+parallel
 Summary:        Scrypt password-based key derivation function - feature "parallel"
 Requires:       crate(%{pkgname})
-Requires:       crate(rayon-1.0/default) >= 1.11
+Requires:       crate(rayon-1/default) >= 1.11
 Provides:       crate(%{pkgname}/parallel)
 
 %description -n %{name}+parallel

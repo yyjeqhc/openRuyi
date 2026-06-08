@@ -38,7 +38,7 @@ BuildRequires:  crate(toml-0.9/parse) >= 0.9.0
 BuildRequires:  crate(toml-0.9/serde) >= 0.9.0
 BuildRequires:  crate(toml-0.9/std) >= 0.9.0
 BuildRequires:  crate(pretty-assertions-1) >= 1.4.0
-BuildRequires:  crate(serial-test-2.0) >= 2.0.0
+BuildRequires:  crate(serial-test-2) >= 2.0.0
 BuildRequires:  crate(clap-4/default) >= 4.3
 
 %description

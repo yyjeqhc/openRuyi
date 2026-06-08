@@ -33,7 +33,7 @@ Source code for takopackized Rust crate "der"
 %package     -n %{name}+alloc
 Summary:        Pure Rust embedded-friendly implementation of the Distinguished Encoding Rules (DER) for Abstract Syntax Notation One (ASN.1) as described in ITU X.690 with full support for heapless `no_std`/`no_alloc` targets - feature "alloc" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0/alloc) >= 1.8.2
+Requires:       crate(zeroize-1/alloc) >= 1.8.2
 Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/std)
 
@@ -124,7 +124,7 @@ This metapackage enables feature "time" for the Rust der crate, by pulling in an
 %package     -n %{name}+zeroize
 Summary:        Pure Rust embedded-friendly implementation of the Distinguished Encoding Rules (DER) for Abstract Syntax Notation One (ASN.1) as described in ITU X.690 with full support for heapless `no_std`/`no_alloc` targets - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0) >= 1.8.2
+Requires:       crate(zeroize-1) >= 1.8.2
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

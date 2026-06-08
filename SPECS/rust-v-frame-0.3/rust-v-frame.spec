@@ -34,7 +34,7 @@ Source code for takopackized Rust crate "v_frame"
 %package     -n %{name}+profiling
 Summary:        Video Frame data structures, originally part of rav1e - feature "profiling"
 Requires:       crate(%{pkgname})
-Requires:       crate(profiling-1.0/default) >= 1.0.0
+Requires:       crate(profiling-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/profiling)
 
 %description -n %{name}+profiling
@@ -64,7 +64,7 @@ This metapackage enables feature "serialize" for the Rust v_frame crate, by pull
 Summary:        Video Frame data structures, originally part of rav1e - feature "tracing"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/profiling)
-Requires:       crate(profiling-1.0/profile-with-tracing) >= 1.0.0
+Requires:       crate(profiling-1/profile-with-tracing) >= 1.0.0
 Requires:       crate(tracing-0.1/default) >= 0.1.40
 Provides:       crate(%{pkgname}/tracing)
 

@@ -48,7 +48,7 @@ This metapackage enables feature "inline" for the Rust dashmap crate, by pulling
 %package     -n %{name}+rayon
 Summary:        Blazing fast concurrent HashMap for Rust - feature "rayon"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(rayon-1.0/default) >= 1.7.0
+Requires:       crate(rayon-1/default) >= 1.7.0
 Provides:       crate(%{pkgname}/rayon) = %{version}
 
 %description -n %{name}+rayon

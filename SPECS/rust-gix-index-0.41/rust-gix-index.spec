@@ -39,8 +39,8 @@ Requires:       crate(hashbrown-0.15/default) >= 0.15.5
 Requires:       crate(itoa-1/default) >= 1.0.18
 Requires:       crate(libc-0.2/default) >= 0.2.184
 Requires:       crate(memmap2-0.9/default) >= 0.9.10
-Requires:       crate(rustix-1.0/fs) >= 1.1.4
-Requires:       crate(rustix-1.0/std) >= 1.1.4
+Requires:       crate(rustix-1/fs) >= 1.1.4
+Requires:       crate(rustix-1/std) >= 1.1.4
 Requires:       crate(smallvec-1/default) >= 1.15.1
 Requires:       crate(thiserror-2/default) >= 2.0.18
 Provides:       crate(%{pkgname})

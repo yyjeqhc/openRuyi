@@ -46,9 +46,9 @@ Requires:       crate(native-tls-0.2/default) >= 0.2.12
 Requires:       crate(reqwest-0.12/default) >= 0.12.28
 Requires:       crate(reqwest-0.12/json) >= 0.12.28
 Requires:       crate(reqwest-0.12/stream) >= 0.12.28
-Requires:       crate(ureq-2.0/json) >= 2.12.1
-Requires:       crate(ureq-2.0/native-tls) >= 2.12.1
-Requires:       crate(ureq-2.0/socks-proxy) >= 2.12.1
+Requires:       crate(ureq-2/json) >= 2.12.1
+Requires:       crate(ureq-2/native-tls) >= 2.12.1
+Requires:       crate(ureq-2/socks-proxy) >= 2.12.1
 Provides:       crate(%{pkgname}/default-tls)
 Provides:       crate(%{pkgname}/native-tls)
 
@@ -104,9 +104,9 @@ Requires:       crate(serde-1/default) >= 1.0.228
 Requires:       crate(serde-1/derive) >= 1.0.228
 Requires:       crate(serde-json-1/default) >= 1.0.149
 Requires:       crate(thiserror-2/default) >= 2.0.17
-Requires:       crate(ureq-2.0/default) >= 2.12.1
-Requires:       crate(ureq-2.0/json) >= 2.12.1
-Requires:       crate(ureq-2.0/socks-proxy) >= 2.12.1
+Requires:       crate(ureq-2/default) >= 2.12.1
+Requires:       crate(ureq-2/json) >= 2.12.1
+Requires:       crate(ureq-2/socks-proxy) >= 2.12.1
 Provides:       crate(%{pkgname}/ureq)
 
 %description -n %{name}+ureq

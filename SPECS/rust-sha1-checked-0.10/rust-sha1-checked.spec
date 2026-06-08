@@ -63,7 +63,7 @@ This metapackage enables feature "std" for the Rust sha1-checked crate, by pulli
 %package     -n %{name}+zeroize
 Summary:        SHA-1 hash function with collision detection - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0) >= 1.7
+Requires:       crate(zeroize-1) >= 1.7
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

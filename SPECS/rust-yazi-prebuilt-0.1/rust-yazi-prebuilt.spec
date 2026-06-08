@@ -51,7 +51,7 @@ This metapackage enables feature "build_deps" for the Rust yazi-prebuilt crate, 
 %package     -n %{name}+syntect
 Summary:        Used to place the pre-built assets of yazi (https://github.com/sxyazi/yazi) - feature "syntect"
 Requires:       crate(%{pkgname})
-Requires:       crate(syntect-5.0/default) >= 5.0.0
+Requires:       crate(syntect-5/default) >= 5.0.0
 Provides:       crate(%{pkgname}/syntect)
 
 %description -n %{name}+syntect

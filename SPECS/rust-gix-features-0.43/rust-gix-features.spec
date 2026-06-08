@@ -88,7 +88,7 @@ This metapackage enables feature "parallel" for the Rust gix-features crate, by 
 %package     -n %{name}+prodash
 Summary:        Integrate various capabilities using compile-time feature flags - feature "prodash" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(prodash-30.0/default) >= 30.0.1
+Requires:       crate(prodash-30/default) >= 30.0.1
 Provides:       crate(%{pkgname}/prodash)
 Provides:       crate(%{pkgname}/progress)
 
@@ -101,7 +101,7 @@ Additionally, this package also provides the "progress" feature.
 Summary:        Integrate various capabilities using compile-time feature flags - feature "progress-unit-bytes"
 Requires:       crate(%{pkgname})
 Requires:       crate(bytesize-2.0/default) >= 2.0.1
-Requires:       crate(prodash-30.0/unit-bytes) >= 30.0.1
+Requires:       crate(prodash-30/unit-bytes) >= 30.0.1
 Provides:       crate(%{pkgname}/progress-unit-bytes)
 
 %description -n %{name}+progress-unit-bytes
@@ -110,7 +110,7 @@ This metapackage enables feature "progress-unit-bytes" for the Rust gix-features
 %package     -n %{name}+progress-unit-human-numbers
 Summary:        Integrate various capabilities using compile-time feature flags - feature "progress-unit-human-numbers"
 Requires:       crate(%{pkgname})
-Requires:       crate(prodash-30.0/unit-human) >= 30.0.1
+Requires:       crate(prodash-30/unit-human) >= 30.0.1
 Provides:       crate(%{pkgname}/progress-unit-human-numbers)
 
 %description -n %{name}+progress-unit-human-numbers

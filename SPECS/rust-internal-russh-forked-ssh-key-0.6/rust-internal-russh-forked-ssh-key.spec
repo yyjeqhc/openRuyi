@@ -31,7 +31,7 @@ Requires:       crate(ssh-encoding-0.2/default) >= 0.2.0
 Requires:       crate(ssh-encoding-0.2/pem) >= 0.2.0
 Requires:       crate(ssh-encoding-0.2/sha2) >= 0.2.0
 Requires:       crate(subtle-2) >= 2.6.1
-Requires:       crate(zeroize-1.0) >= 1.8.2
+Requires:       crate(zeroize-1) >= 1.8.2
 Provides:       crate(internal-russh-forked-ssh-key) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/getrandom)
@@ -48,7 +48,7 @@ Requires:       crate(ssh-encoding-0.2/alloc) >= 0.2.0
 Requires:       crate(ssh-encoding-0.2/base64) >= 0.2.0
 Requires:       crate(ssh-encoding-0.2/pem) >= 0.2.0
 Requires:       crate(ssh-encoding-0.2/sha2) >= 0.2.0
-Requires:       crate(zeroize-1.0/alloc) >= 1.8.2
+Requires:       crate(zeroize-1/alloc) >= 1.8.2
 Provides:       crate(%{pkgname}/alloc)
 
 %description -n %{name}+alloc

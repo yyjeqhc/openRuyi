@@ -60,7 +60,7 @@ This metapackage enables feature "mmap" for the Rust blake3 crate, by pulling in
 %package     -n %{name}+rayon
 Summary:        BLAKE3 hash function - feature "rayon"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(rayon-core-1.0/default) >= 1.12.1
+Requires:       crate(rayon-core-1/default) >= 1.12.1
 Provides:       crate(%{pkgname}/rayon) = %{version}
 
 %description -n %{name}+rayon
@@ -91,7 +91,7 @@ Additionally, this package also provides the "default" feature.
 Summary:        BLAKE3 hash function - feature "zeroize"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(arrayvec-0.7/zeroize) >= 0.7.4
-Requires:       crate(zeroize-1.0) >= 1.0.0
+Requires:       crate(zeroize-1) >= 1.0.0
 Provides:       crate(%{pkgname}/zeroize) = %{version}
 
 %description -n %{name}+zeroize

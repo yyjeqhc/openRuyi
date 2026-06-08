@@ -33,7 +33,7 @@ Requires:       crate(gix-object-0.50/default) >= 0.50.2
 Requires:       crate(gix-path-0.10/default) >= 0.10.22
 Requires:       crate(gix-pathspec-0.12/default) >= 0.12.0
 Requires:       crate(gix-worktree-0.42/attributes) >= 0.42.0
-Requires:       crate(portable-atomic-1.0/default) >= 1.13.1
+Requires:       crate(portable-atomic-1/default) >= 1.13.1
 Requires:       crate(thiserror-2/default) >= 2.0.18
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

@@ -35,7 +35,7 @@ This metapackage enables feature "loom" for the Rust concurrent-queue crate, by 
 %package     -n %{name}+portable-atomic
 Summary:        Concurrent multi-producer multi-consumer queue - feature "portable-atomic"
 Requires:       crate(%{pkgname})
-Requires:       crate(portable-atomic-1.0) >= 1.0.0
+Requires:       crate(portable-atomic-1) >= 1.0.0
 Provides:       crate(%{pkgname}/portable-atomic)
 
 %description -n %{name}+portable-atomic

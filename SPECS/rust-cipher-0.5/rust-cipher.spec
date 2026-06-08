@@ -87,7 +87,7 @@ Summary:        Traits for describing block ciphers and stream ciphers - feature
 Requires:       crate(%{pkgname})
 Requires:       crate(block-buffer-0.12/zeroize) >= 0.12.0
 Requires:       crate(crypto-common-0.2/zeroize) >= 0.2.1
-Requires:       crate(zeroize-1.0) >= 1.8
+Requires:       crate(zeroize-1) >= 1.8
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

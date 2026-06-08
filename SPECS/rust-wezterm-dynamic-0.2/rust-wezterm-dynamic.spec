@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(log-0.4/default) >= 0.4.29
-Requires:       crate(ordered-float-4.0/default) >= 4.6.0
+Requires:       crate(ordered-float-4/default) >= 4.6.0
 Requires:       crate(strsim-0.11/default) >= 0.11.1
 Requires:       crate(thiserror-1/default) >= 1.0.69
 Requires:       crate(wezterm-dynamic-derive-0.1/default) >= 0.1.1

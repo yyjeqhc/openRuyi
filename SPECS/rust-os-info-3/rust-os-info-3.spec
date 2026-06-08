@@ -34,7 +34,7 @@ Source code for takopackized Rust crate "os_info"
 %package     -n %{name}+schemars
 Summary:        Detect the operating system type and version - feature "schemars"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(schemars-1.0/default) >= 1.0.3
+Requires:       crate(schemars-1/default) >= 1.0.3
 Provides:       crate(%{pkgname}/schemars) = %{version}
 
 %description -n %{name}+schemars

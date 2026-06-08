@@ -24,8 +24,8 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(gix-command-0.6/default) >= 0.6.5
 Requires:       crate(gix-config-value-0.15/default) >= 0.15.3
 Requires:       crate(parking-lot-0.12/default) >= 0.12.5
-Requires:       crate(rustix-1.0/default) >= 1.1.4
-Requires:       crate(rustix-1.0/termios) >= 1.1.4
+Requires:       crate(rustix-1/default) >= 1.1.4
+Requires:       crate(rustix-1/termios) >= 1.1.4
 Requires:       crate(thiserror-2/default) >= 2.0.18
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

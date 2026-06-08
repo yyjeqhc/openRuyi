@@ -15,7 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(pest-2.0/default) >= 2.8.6
+Requires:       crate(pest-2/default) >= 2.8.6
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/grammar-extras) = %{version}

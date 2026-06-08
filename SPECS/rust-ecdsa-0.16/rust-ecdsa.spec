@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(elliptic-curve-0.13/digest) >= 0.13.8
 Requires:       crate(elliptic-curve-0.13/sec1) >= 0.13.8
-Requires:       crate(signature-2.0/rand-core) >= 2.2.0
+Requires:       crate(signature-2/rand-core) >= 2.2.0
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/hazmat)
 
@@ -36,8 +36,8 @@ Requires:       crate(%{pkgname})
 Requires:       crate(elliptic-curve-0.13/alloc) >= 0.13.8
 Requires:       crate(elliptic-curve-0.13/digest) >= 0.13.8
 Requires:       crate(elliptic-curve-0.13/sec1) >= 0.13.8
-Requires:       crate(signature-2.0/alloc) >= 2.2.0
-Requires:       crate(signature-2.0/rand-core) >= 2.2.0
+Requires:       crate(signature-2/alloc) >= 2.2.0
+Requires:       crate(signature-2/rand-core) >= 2.2.0
 Requires:       crate(spki-0.7/alloc) >= 0.7.3
 Provides:       crate(%{pkgname}/alloc)
 
@@ -82,8 +82,8 @@ This metapackage enables feature "dev" for the Rust ecdsa crate, by pulling in a
 Summary:        Pure Rust implementation of the Elliptic Curve Digital Signature Algorithm (ECDSA) as specified in FIPS 186-4 (Digital Signature Standard), providing RFC6979 deterministic signatures as well as support for added entropy - feature "digest" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(digest-0.10/oid) >= 0.10.7
-Requires:       crate(signature-2.0/digest) >= 2.2.0
-Requires:       crate(signature-2.0/rand-core) >= 2.2.0
+Requires:       crate(signature-2/digest) >= 2.2.0
+Requires:       crate(signature-2/rand-core) >= 2.2.0
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/digest)
 
@@ -184,8 +184,8 @@ Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(elliptic-curve-0.13/digest) >= 0.13.8
 Requires:       crate(elliptic-curve-0.13/sec1) >= 0.13.8
 Requires:       crate(elliptic-curve-0.13/std) >= 0.13.8
-Requires:       crate(signature-2.0/rand-core) >= 2.2.0
-Requires:       crate(signature-2.0/std) >= 2.2.0
+Requires:       crate(signature-2/rand-core) >= 2.2.0
+Requires:       crate(signature-2/std) >= 2.2.0
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std

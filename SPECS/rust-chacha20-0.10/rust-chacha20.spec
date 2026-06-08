@@ -52,7 +52,7 @@ This metapackage enables feature "rng" for the Rust chacha20 crate, by pulling i
 %package     -n %{name}+zeroize
 Summary:        ChaCha20 stream cipher (RFC 8439) implemented in pure Rust using traits from the RustCrypto `cipher` crate, with optional architecture-specific hardware acceleration (AVX2, SSE2) - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0) >= 1.8.1
+Requires:       crate(zeroize-1) >= 1.8.1
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

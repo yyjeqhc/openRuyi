@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(zeroize-1.0/default) >= 1.8.2
+Requires:       crate(zeroize-1/default) >= 1.8.2
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/test-logging)

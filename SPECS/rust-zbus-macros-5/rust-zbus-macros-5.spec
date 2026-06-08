@@ -23,7 +23,7 @@ Requires:       crate(syn-2/extra-traits) >= 2.0.64
 Requires:       crate(syn-2/fold) >= 2.0.64
 Requires:       crate(syn-2/full) >= 2.0.64
 Requires:       crate(zbus-names-4/default) >= 4.3.2
-Requires:       crate(zvariant-5.0/default) >= 5.10.1
+Requires:       crate(zvariant-5/default) >= 5.10.1
 Requires:       crate(zvariant-utils-3/default) >= 3.3.1
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/blocking-api) = %{version}
@@ -35,7 +35,7 @@ Source code for takopackized Rust crate "zbus_macros"
 %package     -n %{name}+gvariant
 Summary:        Proc-macros for zbus - feature "gvariant"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(zvariant-5.0/gvariant) >= 5.10.1
+Requires:       crate(zvariant-5/gvariant) >= 5.10.1
 Requires:       crate(zvariant-utils-3/gvariant) >= 3.3.1
 Provides:       crate(%{pkgname}/gvariant) = %{version}
 

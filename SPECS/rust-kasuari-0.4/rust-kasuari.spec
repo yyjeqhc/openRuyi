@@ -43,7 +43,7 @@ This metapackage enables feature "document-features" for the Rust kasuari crate,
 %package     -n %{name}+portable-atomic
 Summary:        Rust layout solver for GUIs, based on the Cassowary algorithm - feature "portable-atomic"
 Requires:       crate(%{pkgname})
-Requires:       crate(portable-atomic-1.0/require-cas) >= 1.13.1
+Requires:       crate(portable-atomic-1/require-cas) >= 1.13.1
 Requires:       crate(portable-atomic-util-0.2/alloc) >= 0.2.5
 Requires:       crate(portable-atomic-util-0.2/default) >= 0.2.5
 Provides:       crate(%{pkgname}/portable-atomic)
@@ -55,8 +55,8 @@ This metapackage enables feature "portable-atomic" for the Rust kasuari crate, b
 %package     -n %{name}+std
 Summary:        Rust layout solver for GUIs, based on the Cassowary algorithm - feature "std" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(portable-atomic-1.0/require-cas) >= 1.13.1
-Requires:       crate(portable-atomic-1.0/std) >= 1.13.1
+Requires:       crate(portable-atomic-1/require-cas) >= 1.13.1
+Requires:       crate(portable-atomic-1/std) >= 1.13.1
 Requires:       crate(thiserror-2/std) >= 2.0.18
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)

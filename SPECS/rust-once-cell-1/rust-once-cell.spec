@@ -50,7 +50,7 @@ This metapackage enables feature "parking_lot" for the Rust once_cell crate, by 
 %package     -n %{name}+portable-atomic
 Summary:        Single assignment cells and lazy values - feature "portable-atomic"
 Requires:       crate(%{pkgname})
-Requires:       crate(portable-atomic-1.0) >= 1.8
+Requires:       crate(portable-atomic-1) >= 1.8
 Provides:       crate(%{pkgname}/portable-atomic)
 
 %description -n %{name}+portable-atomic

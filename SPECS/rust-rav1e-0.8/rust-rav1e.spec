@@ -41,7 +41,7 @@ Requires:       crate(noop-proc-macro-0.3/default) >= 0.3.0
 Requires:       crate(num-derive-0.4/default) >= 0.4.2
 Requires:       crate(num-traits-0.2/default) >= 0.2.19
 Requires:       crate(paste-1/default) >= 1.0.15
-Requires:       crate(profiling-1.0/default) >= 1.0.18
+Requires:       crate(profiling-1/default) >= 1.0.18
 Requires:       crate(rand-0.9/default) >= 0.9.4
 Requires:       crate(rand-chacha-0.9/default) >= 0.9.0
 Requires:       crate(simd-helpers-0.1/default) >= 0.1.0
@@ -350,7 +350,7 @@ Summary:        Fastest and safest AV1 encoder - feature "tracing"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/tracing-chrome)
 Requires:       crate(%{pkgname}/tracing-subscriber)
-Requires:       crate(profiling-1.0/profile-with-tracing) >= 1.0.18
+Requires:       crate(profiling-1/profile-with-tracing) >= 1.0.18
 Requires:       crate(tracing-0.1/default) >= 0.1.40
 Provides:       crate(%{pkgname}/tracing)
 

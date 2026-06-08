@@ -87,7 +87,7 @@ This metapackage enables feature "rand_core" for the Rust digest crate, by pulli
 Summary:        Traits for cryptographic hash functions and message authentication codes - feature "zeroize"
 Requires:       crate(%{pkgname})
 Requires:       crate(block-buffer-0.12/zeroize) >= 0.12.0
-Requires:       crate(zeroize-1.0) >= 1.7
+Requires:       crate(zeroize-1) >= 1.7
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

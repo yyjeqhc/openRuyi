@@ -22,7 +22,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(console-0.16/ansi-parsing) >= 0.16.1
 Requires:       crate(console-0.16/std) >= 0.16.1
-Requires:       crate(portable-atomic-1.0/default) >= 1.13.1
+Requires:       crate(portable-atomic-1/default) >= 1.13.1
 Requires:       crate(unit-prefix-0.5/default) >= 0.5.1
 Provides:       crate(%{pkgname})
 
@@ -61,7 +61,7 @@ This metapackage enables feature "improved_unicode" for the Rust indicatif crate
 %package     -n %{name}+rayon
 Summary:        Progress bar and cli reporting library for Rust - feature "rayon"
 Requires:       crate(%{pkgname})
-Requires:       crate(rayon-1.0/default) >= 1.1
+Requires:       crate(rayon-1/default) >= 1.1
 Provides:       crate(%{pkgname}/rayon)
 
 %description -n %{name}+rayon

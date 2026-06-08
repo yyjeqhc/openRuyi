@@ -79,7 +79,7 @@ Summary:        Pure Rust implementation of the Module-Lattice-Based Key-Encapsu
 Requires:       crate(%{pkgname})
 Requires:       crate(module-lattice-0.2/ctutils) >= 0.2.2
 Requires:       crate(module-lattice-0.2/zeroize) >= 0.2.2
-Requires:       crate(zeroize-1.0) >= 1.8.1
+Requires:       crate(zeroize-1) >= 1.8.1
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize

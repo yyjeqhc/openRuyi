@@ -46,7 +46,7 @@ This metapackage enables feature "default" for the Rust bcrypt-pbkdf crate, by p
 %package     -n %{name}+zeroize
 Summary:        Bcrypt-pbkdf password-based key derivation function - feature "zeroize"
 Requires:       crate(%{pkgname})
-Requires:       crate(zeroize-1.0) >= 1.0.0
+Requires:       crate(zeroize-1) >= 1.0.0
 Provides:       crate(%{pkgname}/zeroize)
 
 %description -n %{name}+zeroize
