@@ -23,11 +23,15 @@ BuildRequires:  pkgconfig(python3)
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(setuptools-rust)
 BuildRequires:  python3dist(pip)
+BuildRequires:  python-wheel
+BuildRequires:  python-regex
+BuildRequires:  python-requests
 BuildRequires:  rust-rpm-macros
 BuildRequires:  rust
 BuildRequires:  cargo
-BuildRequires:  crate(pyo3-0.28/extension-module)
-BuildRequires:  crate(pyo3-macros-0.28)
+BuildRequires:  crate(pyo3-0.26/extension-module) >= 0.26.0
+BuildRequires:  crate(pyo3-0.26/macros) >= 0.26.0
+BuildRequires:  crate(pyo3-macros-0.26/default) >= 0.26.0
 BuildRequires:  crate(bstr-1)
 BuildRequires:  crate(fancy-regex-0.13)
 BuildRequires:  crate(bit-set-0.5)
@@ -54,6 +58,8 @@ replace-with = "system-registry"
 [source.system-registry]
 directory = "/usr/share/cargo/registry"
 EOF
+
+rm -f Cargo.lock
 
 sed -e '/^[[:space:]]*\(fancy-regex\|regex\|rustc-hash\|bstr\)[[:space:]]*=/ s/= *"/= ">=/' \
   -e '/\bpyo3\b/ s/version *= *"/version = ">=/' \
