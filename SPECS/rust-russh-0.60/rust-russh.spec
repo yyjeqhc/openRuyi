@@ -51,8 +51,8 @@ Requires:       crate(elliptic-curve-0.14.0-rc.28/default) >= 0.14.0-rc.28
 Requires:       crate(elliptic-curve-0.14.0-rc.28/ecdh) >= 0.14.0-rc.28
 Requires:       crate(enum-dispatch-0.3/default) >= 0.3.13
 Requires:       crate(futures-0.3/default) >= 0.3.32
-Requires:       crate(generic-array-1.0/compat-0-14) >= 1.4.1
-Requires:       crate(generic-array-1.0/default) >= 1.4.1
+Requires:       crate(generic-array-1/compat-0-14) >= 1.4.1
+Requires:       crate(generic-array-1/default) >= 1.4.1
 Requires:       crate(getrandom-0.2/default) >= 0.2.17
 Requires:       crate(getrandom-0.2/js) >= 0.2.17
 Requires:       crate(ghash-0.6/default) >= 0.6.0
@@ -152,7 +152,7 @@ This metapackage enables feature "async-trait" for the Rust russh crate, by pull
 %package     -n %{name}+aws-lc-rs
 Summary:        Client and server SSH library - feature "aws-lc-rs"
 Requires:       crate(%{pkgname})
-Requires:       crate(aws-lc-rs-1.0/default) >= 1.16.2
+Requires:       crate(aws-lc-rs-1/default) >= 1.16.2
 Provides:       crate(%{pkgname}/aws-lc-rs)
 
 %description -n %{name}+aws-lc-rs
@@ -197,7 +197,7 @@ This metapackage enables feature "dsa" for the Rust russh crate, by pulling in a
 %package     -n %{name}+flate2
 Summary:        Client and server SSH library - feature "flate2"
 Requires:       crate(%{pkgname})
-Requires:       crate(flate2-1.0/default) >= 1.0.15
+Requires:       crate(flate2-1/default) >= 1.0.15
 Provides:       crate(%{pkgname}/flate2)
 
 %description -n %{name}+flate2

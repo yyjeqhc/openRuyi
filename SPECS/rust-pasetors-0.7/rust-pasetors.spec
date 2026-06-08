@@ -44,7 +44,7 @@ This metapackage enables feature "default" for the Rust pasetors crate, by pulli
 %package     -n %{name}+ed25519-compact
 Summary:        PASETO: Platform-Agnostic Security Tokens (in Rust) - feature "ed25519-compact"
 Requires:       crate(%{pkgname})
-Requires:       crate(ed25519-compact-2.0/random) >= 2.2.0
+Requires:       crate(ed25519-compact-2/random) >= 2.2.0
 Provides:       crate(%{pkgname}/ed25519-compact)
 
 %description -n %{name}+ed25519-compact

@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(ciborium-io-0.2/default) >= 0.2.2
-Requires:       crate(half-2.0) >= 2.7.1
+Requires:       crate(half-2) >= 2.7.1
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/alloc)
 Provides:       crate(%{pkgname}/default)
@@ -34,7 +34,7 @@ Source code for takopackized Rust crate "ciborium-ll"
 Summary:        Low-level CBOR codec primitives - feature "std"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(half-2.0/std) >= 2.7.1
+Requires:       crate(half-2/std) >= 2.7.1
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std

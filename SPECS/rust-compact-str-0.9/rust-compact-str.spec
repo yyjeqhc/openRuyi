@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(castaway-0.2/alloc) >= 0.2.4
 Requires:       crate(cfg-if-1/default) >= 1.0.4
-Requires:       crate(itoa-1.0/default) >= 1.0.18
+Requires:       crate(itoa-1/default) >= 1.0.18
 Requires:       crate(rustversion-1/default) >= 1.0.22
 Requires:       crate(ryu-1.0/default) >= 1.0.23
 Requires:       crate(static-assertions-1/default) >= 1.1.0

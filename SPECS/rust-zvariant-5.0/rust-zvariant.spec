@@ -47,7 +47,7 @@ This metapackage enables feature "arrayvec" for the Rust zvariant crate, by pull
 %package     -n %{name}+camino
 Summary:        D-Bus & GVariant encoding & decoding - feature "camino"
 Requires:       crate(%{pkgname})
-Requires:       crate(camino-1.0/default) >= 1.1.9
+Requires:       crate(camino-1/default) >= 1.1.9
 Provides:       crate(%{pkgname}/camino)
 
 %description -n %{name}+camino

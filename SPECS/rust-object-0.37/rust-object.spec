@@ -79,7 +79,7 @@ This metapackage enables feature "build_core" for the Rust object crate, by pull
 Summary:        Unified interface for reading and writing object file formats - feature "compression"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/std)
-Requires:       crate(flate2-1.0/default) >= 1.0.0
+Requires:       crate(flate2-1/default) >= 1.0.0
 Requires:       crate(ruzstd-0.8/default) >= 0.8.1
 Provides:       crate(%{pkgname}/compression)
 

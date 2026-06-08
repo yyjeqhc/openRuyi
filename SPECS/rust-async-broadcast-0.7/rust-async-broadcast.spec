@@ -15,7 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(event-listener-5.0/default) >= 5.4.1
+Requires:       crate(event-listener-5/default) >= 5.4.1
 Requires:       crate(event-listener-strategy-0.5/default) >= 0.5.4
 Requires:       crate(futures-core-0.3/default) >= 0.3.32
 Requires:       crate(pin-project-lite-0.2/default) >= 0.2.17

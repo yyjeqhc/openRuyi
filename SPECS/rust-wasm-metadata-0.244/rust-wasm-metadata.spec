@@ -59,7 +59,7 @@ Summary:        Read and manipulate WebAssembly metadata - feature "oci"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/serde)
 Requires:       crate(auditable-serde-0.8/default) >= 0.8.0
-Requires:       crate(flate2-1.0/default) >= 1.1.0
+Requires:       crate(flate2-1/default) >= 1.1.0
 Requires:       crate(serde-json-1/default) >= 1.0.0
 Requires:       crate(spdx-0.10/default) >= 0.10.1
 Requires:       crate(url-2/default) >= 2.0.0

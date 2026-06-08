@@ -117,7 +117,7 @@ Additionally, this package also provides the "regex-fancy" feature.
 %package     -n %{name}+flate2
 Summary:        High quality syntax highlighting and code intelligence using Sublime Text's grammars - feature "flate2"
 Requires:       crate(%{pkgname})
-Requires:       crate(flate2-1.0/default) >= 1.1.9
+Requires:       crate(flate2-1/default) >= 1.1.9
 Provides:       crate(%{pkgname}/flate2)
 
 %description -n %{name}+flate2

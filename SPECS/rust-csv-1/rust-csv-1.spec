@@ -16,7 +16,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(csv-core-0.1/default) >= 0.1.11
-Requires:       crate(itoa-1.0/default) >= 1.0.0
+Requires:       crate(itoa-1/default) >= 1.0.0
 Requires:       crate(ryu-1.0/default) >= 1.0.0
 Requires:       crate(serde-core-1/default) >= 1.0.221
 Provides:       crate(%{pkgname}) = %{version}

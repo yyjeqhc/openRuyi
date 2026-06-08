@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bytes-1/default) >= 1.11.1
 Requires:       crate(http-body-util-0.1/default) >= 0.1.3
-Requires:       crate(hyper-1.0/default) >= 1.6.0
+Requires:       crate(hyper-1/default) >= 1.6.0
 Requires:       crate(hyper-util-0.1/client-legacy) >= 0.1.14
 Requires:       crate(hyper-util-0.1/default) >= 0.1.14
 Requires:       crate(hyper-util-0.1/tokio) >= 0.1.14

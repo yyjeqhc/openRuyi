@@ -20,7 +20,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(encode-unicode-1.0/default) >= 1.0.0
+Requires:       crate(encode-unicode-1/default) >= 1.0.0
 Requires:       crate(windows-sys-0.61/default) >= 0.61.0
 Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.0
 Requires:       crate(windows-sys-0.61/win32-storage-filesystem) >= 0.61.0

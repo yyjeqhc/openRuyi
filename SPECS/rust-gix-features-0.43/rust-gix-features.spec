@@ -148,7 +148,7 @@ This metapackage enables feature "walkdir" for the Rust gix-features crate, by p
 %package     -n %{name}+zlib
 Summary:        Integrate various capabilities using compile-time feature flags - feature "zlib" and 5 more
 Requires:       crate(%{pkgname})
-Requires:       crate(flate2-1.0/zlib-rs) >= 1.1.9
+Requires:       crate(flate2-1/zlib-rs) >= 1.1.9
 Requires:       crate(thiserror-2/default) >= 2.0.18
 Provides:       crate(%{pkgname}/zlib)
 Provides:       crate(%{pkgname}/zlib-ng)

@@ -16,7 +16,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bit-field-0.10/default) >= 0.10.1
-Requires:       crate(half-2.0/default) >= 2.1.0
+Requires:       crate(half-2/default) >= 2.1.0
 Requires:       crate(lebe-0.5/default) >= 0.5.2
 Requires:       crate(miniz-oxide-0.8/default) >= 0.8.0
 Requires:       crate(smallvec-1/default) >= 1.7.0

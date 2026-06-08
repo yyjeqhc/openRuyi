@@ -20,7 +20,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(fs-err-3.0/default) >= 3.3.0
+Requires:       crate(fs-err-3/default) >= 3.3.0
 Requires:       crate(os-str-bytes-7.0/default) >= 7.1.1
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

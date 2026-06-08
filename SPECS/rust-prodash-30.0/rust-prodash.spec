@@ -68,7 +68,7 @@ This metapackage enables feature "ctrlc" for the Rust prodash crate, by pulling 
 %package     -n %{name}+dashmap
 Summary:        Dashboard for visualizing progress of asynchronous and possibly blocking tasks - feature "dashmap" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(dashmap-6.0) >= 6.0.1
+Requires:       crate(dashmap-6) >= 6.0.1
 Provides:       crate(%{pkgname}/dashmap)
 Provides:       crate(%{pkgname}/progress-tree-hp-hashmap)
 

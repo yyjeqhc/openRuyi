@@ -24,7 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(bytes-1/default) >= 1.11.1
 Requires:       crate(http-1/default) >= 1.4.0
 Requires:       crate(http-body-1/default) >= 1.0.1
-Requires:       crate(hyper-1.0/default) >= 1.9.0
+Requires:       crate(hyper-1/default) >= 1.9.0
 Requires:       crate(pin-project-lite-0.2/default) >= 0.2.17
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/internal-happy-eyeballs-tests)
@@ -37,7 +37,7 @@ Source code for takopackized Rust crate "hyper-util"
 Summary:        Hyper utilities - feature "client"
 Requires:       crate(%{pkgname})
 Requires:       crate(futures-channel-0.3/default) >= 0.3.32
-Requires:       crate(hyper-1.0/client) >= 1.9.0
+Requires:       crate(hyper-1/client) >= 1.9.0
 Requires:       crate(tokio-1/net) >= 1.50.0
 Requires:       crate(tower-service-0.3/default) >= 0.3.3
 Requires:       crate(tracing-0.1/std) >= 0.1.44
@@ -76,7 +76,7 @@ Summary:        Hyper utilities - feature "client-proxy"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/client)
 Requires:       crate(base64-0.22/default) >= 0.22.1
-Requires:       crate(ipnet-2.0/default) >= 2.12.0
+Requires:       crate(ipnet-2/default) >= 2.12.0
 Requires:       crate(percent-encoding-2/default) >= 2.3.2
 Provides:       crate(%{pkgname}/client-proxy)
 
@@ -117,7 +117,7 @@ This metapackage enables feature "full" for the Rust hyper-util crate, by pullin
 %package     -n %{name}+http1
 Summary:        Hyper utilities - feature "http1"
 Requires:       crate(%{pkgname})
-Requires:       crate(hyper-1.0/http1) >= 1.9.0
+Requires:       crate(hyper-1/http1) >= 1.9.0
 Provides:       crate(%{pkgname}/http1)
 
 %description -n %{name}+http1
@@ -126,7 +126,7 @@ This metapackage enables feature "http1" for the Rust hyper-util crate, by pulli
 %package     -n %{name}+http2
 Summary:        Hyper utilities - feature "http2"
 Requires:       crate(%{pkgname})
-Requires:       crate(hyper-1.0/http2) >= 1.9.0
+Requires:       crate(hyper-1/http2) >= 1.9.0
 Provides:       crate(%{pkgname}/http2)
 
 %description -n %{name}+http2
@@ -135,7 +135,7 @@ This metapackage enables feature "http2" for the Rust hyper-util crate, by pulli
 %package     -n %{name}+server
 Summary:        Hyper utilities - feature "server"
 Requires:       crate(%{pkgname})
-Requires:       crate(hyper-1.0/server) >= 1.9.0
+Requires:       crate(hyper-1/server) >= 1.9.0
 Provides:       crate(%{pkgname}/server)
 
 %description -n %{name}+server

@@ -16,7 +16,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(lexical-parse-integer-1) >= 1.0.6
-Requires:       crate(lexical-util-1.0/parse-floats) >= 1.0.7
+Requires:       crate(lexical-util-1/parse-floats) >= 1.0.7
 Provides:       crate(%{pkgname}) = %{version}
 
 %description
@@ -26,8 +26,8 @@ Source code for takopackized Rust crate "lexical-parse-float"
 Summary:        Efficient parsing of floats from strings - feature "compact"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(lexical-parse-integer-1/compact) >= 1.0.6
-Requires:       crate(lexical-util-1.0/compact) >= 1.0.7
-Requires:       crate(lexical-util-1.0/parse-floats) >= 1.0.7
+Requires:       crate(lexical-util-1/compact) >= 1.0.7
+Requires:       crate(lexical-util-1/parse-floats) >= 1.0.7
 Provides:       crate(%{pkgname}/compact) = %{version}
 
 %description -n %{name}+compact
@@ -36,8 +36,8 @@ This metapackage enables feature "compact" for the Rust lexical-parse-float crat
 %package     -n %{name}+f128
 Summary:        Efficient parsing of floats from strings - feature "f128"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(lexical-util-1.0/f128) >= 1.0.7
-Requires:       crate(lexical-util-1.0/parse-floats) >= 1.0.7
+Requires:       crate(lexical-util-1/f128) >= 1.0.7
+Requires:       crate(lexical-util-1/parse-floats) >= 1.0.7
 Provides:       crate(%{pkgname}/f128) = %{version}
 
 %description -n %{name}+f128
@@ -46,8 +46,8 @@ This metapackage enables feature "f128" for the Rust lexical-parse-float crate, 
 %package     -n %{name}+f16
 Summary:        Efficient parsing of floats from strings - feature "f16"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(lexical-util-1.0/f16) >= 1.0.7
-Requires:       crate(lexical-util-1.0/parse-floats) >= 1.0.7
+Requires:       crate(lexical-util-1/f16) >= 1.0.7
+Requires:       crate(lexical-util-1/parse-floats) >= 1.0.7
 Provides:       crate(%{pkgname}/f16) = %{version}
 
 %description -n %{name}+f16
@@ -57,8 +57,8 @@ This metapackage enables feature "f16" for the Rust lexical-parse-float crate, b
 Summary:        Efficient parsing of floats from strings - feature "format"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(lexical-parse-integer-1/format) >= 1.0.6
-Requires:       crate(lexical-util-1.0/format) >= 1.0.7
-Requires:       crate(lexical-util-1.0/parse-floats) >= 1.0.7
+Requires:       crate(lexical-util-1/format) >= 1.0.7
+Requires:       crate(lexical-util-1/parse-floats) >= 1.0.7
 Provides:       crate(%{pkgname}/format) = %{version}
 
 %description -n %{name}+format
@@ -68,8 +68,8 @@ This metapackage enables feature "format" for the Rust lexical-parse-float crate
 Summary:        Efficient parsing of floats from strings - feature "lint"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(lexical-parse-integer-1/lint) >= 1.0.6
-Requires:       crate(lexical-util-1.0/lint) >= 1.0.7
-Requires:       crate(lexical-util-1.0/parse-floats) >= 1.0.7
+Requires:       crate(lexical-util-1/lint) >= 1.0.7
+Requires:       crate(lexical-util-1/parse-floats) >= 1.0.7
 Provides:       crate(%{pkgname}/lint) = %{version}
 
 %description -n %{name}+lint
@@ -79,8 +79,8 @@ This metapackage enables feature "lint" for the Rust lexical-parse-float crate, 
 Summary:        Efficient parsing of floats from strings - feature "power-of-two"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(lexical-parse-integer-1/power-of-two) >= 1.0.6
-Requires:       crate(lexical-util-1.0/parse-floats) >= 1.0.7
-Requires:       crate(lexical-util-1.0/power-of-two) >= 1.0.7
+Requires:       crate(lexical-util-1/parse-floats) >= 1.0.7
+Requires:       crate(lexical-util-1/power-of-two) >= 1.0.7
 Provides:       crate(%{pkgname}/power-of-two) = %{version}
 
 %description -n %{name}+power-of-two
@@ -91,8 +91,8 @@ Summary:        Efficient parsing of floats from strings - feature "radix"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/power-of-two) = %{version}
 Requires:       crate(lexical-parse-integer-1/radix) >= 1.0.6
-Requires:       crate(lexical-util-1.0/parse-floats) >= 1.0.7
-Requires:       crate(lexical-util-1.0/radix) >= 1.0.7
+Requires:       crate(lexical-util-1/parse-floats) >= 1.0.7
+Requires:       crate(lexical-util-1/radix) >= 1.0.7
 Provides:       crate(%{pkgname}/radix) = %{version}
 
 %description -n %{name}+radix
@@ -102,8 +102,8 @@ This metapackage enables feature "radix" for the Rust lexical-parse-float crate,
 Summary:        Efficient parsing of floats from strings - feature "std" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(lexical-parse-integer-1/std) >= 1.0.6
-Requires:       crate(lexical-util-1.0/parse-floats) >= 1.0.7
-Requires:       crate(lexical-util-1.0/std) >= 1.0.7
+Requires:       crate(lexical-util-1/parse-floats) >= 1.0.7
+Requires:       crate(lexical-util-1/std) >= 1.0.7
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/std) = %{version}
 

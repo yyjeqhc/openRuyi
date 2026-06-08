@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bstr-1/std) >= 1.12.1
-Requires:       crate(itoa-1.0/default) >= 1.0.18
+Requires:       crate(itoa-1/default) >= 1.0.18
 Requires:       crate(jiff-0.2/default) >= 0.2.23
 Requires:       crate(smallvec-1/default) >= 1.15.1
 Requires:       crate(smallvec-1/write) >= 1.15.1

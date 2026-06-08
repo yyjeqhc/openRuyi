@@ -20,7 +20,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(itoa-1.0/default) >= 1.0.0
+Requires:       crate(itoa-1/default) >= 1.0.0
 Requires:       crate(memchr-2) >= 2.0.0
 Requires:       crate(serde-1) >= 1.0.220
 Requires:       crate(serde-core-1) >= 1.0.220

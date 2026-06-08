@@ -20,7 +20,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(camino-1.0/default) >= 1.2.2
+Requires:       crate(camino-1/default) >= 1.2.2
 Requires:       crate(fancy-regex-0.14/default) >= 0.14.0
 Requires:       crate(libtest-mimic-0.8/default) >= 0.8.1
 Requires:       crate(walkdir-2/default) >= 2.5.0

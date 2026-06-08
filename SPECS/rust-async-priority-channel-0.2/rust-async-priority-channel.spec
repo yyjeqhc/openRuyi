@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(event-listener-4.0/default) >= 4.0.3
+Requires:       crate(event-listener-4/default) >= 4.0.3
 Provides:       crate(async-priority-channel) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

@@ -26,7 +26,7 @@ Requires:       crate(async-recursion-1/default) >= 1.1.1
 Requires:       crate(async-trait-0.1/default) >= 0.1.89
 Requires:       crate(enumflags2-0.7/default) >= 0.7.12
 Requires:       crate(enumflags2-0.7/serde) >= 0.7.12
-Requires:       crate(event-listener-5.0/default) >= 5.4.1
+Requires:       crate(event-listener-5/default) >= 5.4.1
 Requires:       crate(futures-core-0.3/default) >= 0.3.32
 Requires:       crate(futures-lite-2/std) >= 2.6.1
 Requires:       crate(hex-0.4/default) >= 0.4.3
@@ -91,7 +91,7 @@ This metapackage enables feature "async-io" for the Rust zbus crate, by pulling 
 %package     -n %{name}+async-lock
 Summary:        API for D-Bus communication - feature "async-lock"
 Requires:       crate(%{pkgname})
-Requires:       crate(async-lock-3.0/default) >= 3.4.2
+Requires:       crate(async-lock-3/default) >= 3.4.2
 Provides:       crate(%{pkgname}/async-lock)
 
 %description -n %{name}+async-lock

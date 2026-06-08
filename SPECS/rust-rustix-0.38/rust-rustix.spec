@@ -133,7 +133,7 @@ This metapackage enables feature "io_uring" for the Rust rustix crate, by pullin
 %package     -n %{name}+itoa
 Summary:        Safe Rust bindings to POSIX/Unix/Linux/Winsock-like syscalls - feature "itoa"
 Requires:       crate(%{pkgname})
-Requires:       crate(itoa-1.0) >= 1.0.13
+Requires:       crate(itoa-1) >= 1.0.13
 Provides:       crate(%{pkgname}/itoa)
 
 %description -n %{name}+itoa

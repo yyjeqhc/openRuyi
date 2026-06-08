@@ -37,7 +37,7 @@ This metapackage enables feature "document-features" for the Rust gix-tempfile c
 %package     -n %{name}+hp-hashmap
 Summary:        Tempfile implementation with a global registry to assure cleanup - feature "hp-hashmap" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(dashmap-6.0/default) >= 6.0.1
+Requires:       crate(dashmap-6/default) >= 6.0.1
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/hp-hashmap) = %{version}
 

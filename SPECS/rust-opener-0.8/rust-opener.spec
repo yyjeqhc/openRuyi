@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bstr-1/default) >= 1.12.1
-Requires:       crate(normpath-1.0/default) >= 1.5.0
+Requires:       crate(normpath-1/default) >= 1.5.0
 Requires:       crate(windows-sys-0.61/default) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-ui-shell) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-ui-windowsandmessaging) >= 0.61.2

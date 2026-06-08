@@ -53,7 +53,7 @@ This metapackage enables feature "default" for the Rust ureq crate, by pulling i
 %package     -n %{name}+gzip
 Summary:        Simple, safe HTTP client - feature "gzip"
 Requires:       crate(%{pkgname})
-Requires:       crate(flate2-1.0/default) >= 1.1.5
+Requires:       crate(flate2-1/default) >= 1.1.5
 Provides:       crate(%{pkgname}/gzip)
 
 %description -n %{name}+gzip

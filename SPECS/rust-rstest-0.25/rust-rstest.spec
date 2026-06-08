@@ -32,7 +32,7 @@ Source code for takopackized Rust crate "rstest"
 %package     -n %{name}+async-timeout
 Summary:        Rust fixture based test framework - feature "async-timeout"
 Requires:       crate(%{pkgname})
-Requires:       crate(futures-timer-3.0/default) >= 3.0.3
+Requires:       crate(futures-timer-3/default) >= 3.0.3
 Requires:       crate(futures-util-0.3/default) >= 0.3.31
 Requires:       crate(rstest-macros-0.25/async-timeout) >= 0.25.0
 Provides:       crate(%{pkgname}/async-timeout)

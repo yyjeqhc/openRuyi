@@ -24,7 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(bitflags-2/default) >= 2.11.1
 Requires:       crate(crc32fast-1/default) >= 1.5.0
 Requires:       crate(fdeflate-0.3/default) >= 0.3.7
-Requires:       crate(flate2-1.0/default) >= 1.1.9
+Requires:       crate(flate2-1/default) >= 1.1.9
 Requires:       crate(miniz-oxide-0.8/default) >= 0.8.9
 Requires:       crate(miniz-oxide-0.8/simd) >= 0.8.9
 Provides:       crate(png) = %{version}
@@ -47,7 +47,7 @@ This metapackage enables feature "unstable" for the Rust png crate, by pulling i
 %package     -n %{name}+zlib-rs
 Summary:        PNG decoding and encoding library in pure Rust - feature "zlib-rs"
 Requires:       crate(%{pkgname})
-Requires:       crate(flate2-1.0/zlib-rs) >= 1.1.9
+Requires:       crate(flate2-1/zlib-rs) >= 1.1.9
 Provides:       crate(%{pkgname}/zlib-rs)
 
 %description -n %{name}+zlib-rs

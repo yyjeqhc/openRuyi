@@ -15,8 +15,8 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(icu-normalizer-2.0) >= 2.0.0
-Requires:       crate(icu-properties-2.0) >= 2.0.0
+Requires:       crate(icu-normalizer-2) >= 2.0.0
+Requires:       crate(icu-properties-2) >= 2.0.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 
@@ -26,8 +26,8 @@ Source code for takopackized Rust crate "idna_adapter"
 %package     -n %{name}+compiled-data
 Summary:        Back end adapter for idna - feature "compiled_data"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(icu-normalizer-2.0/compiled-data) >= 2.0.0
-Requires:       crate(icu-properties-2.0/compiled-data) >= 2.0.0
+Requires:       crate(icu-normalizer-2/compiled-data) >= 2.0.0
+Requires:       crate(icu-properties-2/compiled-data) >= 2.0.0
 Provides:       crate(%{pkgname}/compiled-data) = %{version}
 
 %description -n %{name}+compiled-data

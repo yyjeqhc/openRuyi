@@ -48,7 +48,7 @@ This metapackage enables feature "fig" for the Rust clap_complete_command crate,
 %package     -n %{name}+nushell
 Summary:        Reduces boilerplate for adding a shell completion command to Clap - feature "nushell" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(clap-complete-nushell-4.0/default) >= 4.5.8
+Requires:       crate(clap-complete-nushell-4/default) >= 4.5.8
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/nushell)
 

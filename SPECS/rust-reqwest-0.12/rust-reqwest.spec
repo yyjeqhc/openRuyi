@@ -27,9 +27,9 @@ Requires:       crate(futures-core-0.3) >= 0.3.32
 Requires:       crate(http-1/default) >= 1.4.0
 Requires:       crate(http-body-1/default) >= 1.0.1
 Requires:       crate(http-body-util-0.1/default) >= 0.1.3
-Requires:       crate(hyper-1.0/client) >= 1.9.0
-Requires:       crate(hyper-1.0/default) >= 1.9.0
-Requires:       crate(hyper-1.0/http1) >= 1.9.0
+Requires:       crate(hyper-1/client) >= 1.9.0
+Requires:       crate(hyper-1/default) >= 1.9.0
+Requires:       crate(hyper-1/http1) >= 1.9.0
 Requires:       crate(hyper-util-0.1/client) >= 0.1.20
 Requires:       crate(hyper-util-0.1/client-legacy) >= 0.1.20
 Requires:       crate(hyper-util-0.1/client-proxy) >= 0.1.20
@@ -246,9 +246,9 @@ This metapackage enables feature "hickory-dns" for the Rust reqwest crate, by pu
 Summary:        Higher level HTTP client library - feature "http2"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/h2)
-Requires:       crate(hyper-1.0/client) >= 1.9.0
-Requires:       crate(hyper-1.0/http1) >= 1.9.0
-Requires:       crate(hyper-1.0/http2) >= 1.9.0
+Requires:       crate(hyper-1/client) >= 1.9.0
+Requires:       crate(hyper-1/http1) >= 1.9.0
+Requires:       crate(hyper-1/http2) >= 1.9.0
 Requires:       crate(hyper-rustls-0.27/http1) >= 0.27.7
 Requires:       crate(hyper-rustls-0.27/http2) >= 0.27.7
 Requires:       crate(hyper-rustls-0.27/tls12) >= 0.27.7

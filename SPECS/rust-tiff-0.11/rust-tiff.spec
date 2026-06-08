@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(half-2.0/default) >= 2.7.1
+Requires:       crate(half-2/default) >= 2.7.1
 Requires:       crate(quick-error-2/default) >= 2.0.1
 Provides:       crate(tiff) = %{version}
 Provides:       crate(%{pkgname})
@@ -44,7 +44,7 @@ This metapackage enables feature "default" for the Rust tiff crate, by pulling i
 %package     -n %{name}+deflate
 Summary:        TIFF decoding and encoding library in pure Rust - feature "deflate"
 Requires:       crate(%{pkgname})
-Requires:       crate(flate2-1.0/default) >= 1.1.9
+Requires:       crate(flate2-1/default) >= 1.1.9
 Provides:       crate(%{pkgname}/deflate)
 
 %description -n %{name}+deflate

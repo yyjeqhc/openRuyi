@@ -30,7 +30,7 @@ Source code for takopackized Rust crate "pathdiff"
 %package     -n %{name}+camino
 Summary:        Diffing paths to obtain relative paths - feature "camino"
 Requires:       crate(%{pkgname})
-Requires:       crate(camino-1.0/default) >= 1.0.5
+Requires:       crate(camino-1/default) >= 1.0.5
 Provides:       crate(%{pkgname}/camino)
 
 %description -n %{name}+camino

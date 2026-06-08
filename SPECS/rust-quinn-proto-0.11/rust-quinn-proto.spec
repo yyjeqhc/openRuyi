@@ -44,9 +44,9 @@ Source code for takopackized Rust crate "quinn-proto"
 %package     -n %{name}+aws-lc-rs
 Summary:        State machine for the QUIC transport protocol - feature "aws-lc-rs"
 Requires:       crate(%{pkgname})
-Requires:       crate(aws-lc-rs-1.0) >= 1.9
-Requires:       crate(aws-lc-rs-1.0/aws-lc-sys) >= 1.9
-Requires:       crate(aws-lc-rs-1.0/prebuilt-nasm) >= 1.9
+Requires:       crate(aws-lc-rs-1) >= 1.9
+Requires:       crate(aws-lc-rs-1/aws-lc-sys) >= 1.9
+Requires:       crate(aws-lc-rs-1/prebuilt-nasm) >= 1.9
 Provides:       crate(%{pkgname}/aws-lc-rs)
 
 %description -n %{name}+aws-lc-rs

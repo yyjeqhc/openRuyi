@@ -41,9 +41,9 @@ This metapackage enables feature "alloc" for the Rust rustls-webpki crate, by pu
 %package     -n %{name}+aws-lc-rs
 Summary:        Web PKI X.509 Certificate Verification - feature "aws-lc-rs"
 Requires:       crate(%{pkgname})
-Requires:       crate(aws-lc-rs-1.0) >= 1.14
-Requires:       crate(aws-lc-rs-1.0/aws-lc-sys) >= 1.14
-Requires:       crate(aws-lc-rs-1.0/prebuilt-nasm) >= 1.14
+Requires:       crate(aws-lc-rs-1) >= 1.14
+Requires:       crate(aws-lc-rs-1/aws-lc-sys) >= 1.14
+Requires:       crate(aws-lc-rs-1/prebuilt-nasm) >= 1.14
 Provides:       crate(%{pkgname}/aws-lc-rs)
 
 %description -n %{name}+aws-lc-rs
@@ -52,8 +52,8 @@ This metapackage enables feature "aws-lc-rs" for the Rust rustls-webpki crate, b
 %package     -n %{name}+aws-lc-rs-fips
 Summary:        Web PKI X.509 Certificate Verification - feature "aws-lc-rs-fips"
 Requires:       crate(%{pkgname})
-Requires:       crate(aws-lc-rs-1.0) >= 1.14
-Requires:       crate(aws-lc-rs-1.0/fips) >= 1.14
+Requires:       crate(aws-lc-rs-1) >= 1.14
+Requires:       crate(aws-lc-rs-1/fips) >= 1.14
 Provides:       crate(%{pkgname}/aws-lc-rs-fips)
 
 %description -n %{name}+aws-lc-rs-fips
@@ -63,7 +63,7 @@ This metapackage enables feature "aws-lc-rs-fips" for the Rust rustls-webpki cra
 Summary:        Web PKI X.509 Certificate Verification - feature "aws-lc-rs-unstable"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/aws-lc-rs)
-Requires:       crate(aws-lc-rs-1.0/unstable) >= 1.14
+Requires:       crate(aws-lc-rs-1/unstable) >= 1.14
 Provides:       crate(%{pkgname}/aws-lc-rs-unstable)
 
 %description -n %{name}+aws-lc-rs-unstable

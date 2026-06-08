@@ -15,7 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(event-listener-5.0) >= 5.4.1
+Requires:       crate(event-listener-5) >= 5.4.1
 Requires:       crate(pin-project-lite-0.2/default) >= 0.2.17
 Provides:       crate(%{pkgname})
 
@@ -25,7 +25,7 @@ Source code for takopackized Rust crate "event-listener-strategy"
 %package     -n %{name}+loom
 Summary:        Block or poll on event_listener easily - feature "loom"
 Requires:       crate(%{pkgname})
-Requires:       crate(event-listener-5.0/loom) >= 5.4.1
+Requires:       crate(event-listener-5/loom) >= 5.4.1
 Provides:       crate(%{pkgname}/loom)
 
 %description -n %{name}+loom
@@ -34,7 +34,7 @@ This metapackage enables feature "loom" for the Rust event-listener-strategy cra
 %package     -n %{name}+portable-atomic
 Summary:        Block or poll on event_listener easily - feature "portable-atomic"
 Requires:       crate(%{pkgname})
-Requires:       crate(event-listener-5.0/portable-atomic) >= 5.4.1
+Requires:       crate(event-listener-5/portable-atomic) >= 5.4.1
 Provides:       crate(%{pkgname}/portable-atomic)
 
 %description -n %{name}+portable-atomic
@@ -43,7 +43,7 @@ This metapackage enables feature "portable-atomic" for the Rust event-listener-s
 %package     -n %{name}+std
 Summary:        Block or poll on event_listener easily - feature "std" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(event-listener-5.0/std) >= 5.4.1
+Requires:       crate(event-listener-5/std) >= 5.4.1
 Provides:       crate(%{pkgname}/default)
 Provides:       crate(%{pkgname}/std)
 

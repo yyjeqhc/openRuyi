@@ -130,7 +130,7 @@ This metapackage enables feature "hex" for the Rust serde_with crate, by pulling
 Summary:        Custom de/serialization functions for Rust's serde - feature "indexmap_1" and 1 more
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(indexmap-1.0/serde-1) >= 1.8
+Requires:       crate(indexmap-1/serde-1) >= 1.8
 Provides:       crate(%{pkgname}/indexmap)
 Provides:       crate(%{pkgname}/indexmap-1)
 
@@ -219,9 +219,9 @@ Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(chrono-0.4/clock) >= 0.4.20
 Requires:       crate(chrono-0.4/serde) >= 0.4.20
 Requires:       crate(chrono-0.4/std) >= 0.4.20
-Requires:       crate(indexmap-1.0/serde) >= 1.8.0
-Requires:       crate(indexmap-1.0/serde-1) >= 1.8
-Requires:       crate(indexmap-1.0/std) >= 1.8.0
+Requires:       crate(indexmap-1/serde) >= 1.8.0
+Requires:       crate(indexmap-1/serde-1) >= 1.8
+Requires:       crate(indexmap-1/std) >= 1.8.0
 Requires:       crate(schemars-1.0/std) >= 1.0.2
 Requires:       crate(serde-core-1/result) >= 1.0.228
 Requires:       crate(serde-core-1/std) >= 1.0.228

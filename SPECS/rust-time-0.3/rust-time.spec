@@ -50,7 +50,7 @@ Additionally, this package also provides the "default", and "std" features.
 Summary:        Date and time library - feature "formatting"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/std)
-Requires:       crate(itoa-1.0/default) >= 1.0.18
+Requires:       crate(itoa-1/default) >= 1.0.18
 Requires:       crate(time-macros-0.2/formatting) >= 0.2.27
 Provides:       crate(%{pkgname}/formatting)
 

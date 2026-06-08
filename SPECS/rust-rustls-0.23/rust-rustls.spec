@@ -38,9 +38,9 @@ Source code for takopackized Rust crate "rustls"
 %package     -n %{name}+aws-lc-rs
 Summary:        Modern TLS library written in Rust - feature "aws_lc_rs" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(aws-lc-rs-1.0) >= 1.14
-Requires:       crate(aws-lc-rs-1.0/aws-lc-sys) >= 1.14
-Requires:       crate(aws-lc-rs-1.0/prebuilt-nasm) >= 1.14
+Requires:       crate(aws-lc-rs-1) >= 1.14
+Requires:       crate(aws-lc-rs-1/aws-lc-sys) >= 1.14
+Requires:       crate(aws-lc-rs-1/prebuilt-nasm) >= 1.14
 Requires:       crate(rustls-webpki-0.103/alloc) >= 0.103.10
 Requires:       crate(rustls-webpki-0.103/aws-lc-rs) >= 0.103.10
 Provides:       crate(%{pkgname}/aws-lc-rs)
@@ -79,7 +79,7 @@ This metapackage enables feature "default" for the Rust rustls crate, by pulling
 Summary:        Modern TLS library written in Rust - feature "fips"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/aws-lc-rs)
-Requires:       crate(aws-lc-rs-1.0/fips) >= 1.14
+Requires:       crate(aws-lc-rs-1/fips) >= 1.14
 Requires:       crate(rustls-webpki-0.103/alloc) >= 0.103.10
 Requires:       crate(rustls-webpki-0.103/aws-lc-rs-fips) >= 0.103.10
 Provides:       crate(%{pkgname}/fips)
