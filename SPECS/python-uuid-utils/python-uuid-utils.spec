@@ -43,6 +43,11 @@ BuildRequires:  crate(uuid-1/v5) >= 1.23.1
 BuildRequires:  crate(uuid-1/v6) >= 1.23.1
 BuildRequires:  crate(uuid-1/v7) >= 1.23.1
 BuildRequires:  crate(uuid-1/v8) >= 1.23.1
+BuildRequires:  crate(winapi-0.3) >= 0.3.9
+BuildRequires:  crate(winapi-0.3/default) >= 0.3.9
+BuildRequires:  crate(winapi-0.3/winerror) >= 0.3.9
+BuildRequires:  crate(winapi-0.3/ws2def) >= 0.3.9
+BuildRequires:  crate(winapi-0.3/iphlpapi) >= 0.3.9
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 Provides:       python3-%{srcname}%{?_isa} = %{version}-%{release}
