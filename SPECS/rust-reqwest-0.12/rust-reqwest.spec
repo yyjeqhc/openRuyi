@@ -15,7 +15,7 @@ Summary:        Rust crate "reqwest"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/seanmonstar/reqwest
 #!RemoteAsset:  sha256:eddd3ca559203180a307f12d114c268abf583f59b03cb906fd0b3ff8646c1147
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
@@ -292,7 +292,7 @@ This metapackage enables feature "json" for the Rust reqwest crate, by pulling i
 Summary:        Higher level HTTP client library - feature "multipart"
 Requires:       crate(%{pkgname})
 Requires:       crate(futures-util-0.3) >= 0.3.32
-Requires:       crate(mime-guess-2.0) >= 2.0.0
+Requires:       crate(mime-guess-2) >= 2.0.0
 Provides:       crate(%{pkgname}/multipart)
 
 %description -n %{name}+multipart

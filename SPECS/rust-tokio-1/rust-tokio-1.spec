@@ -1,14 +1,14 @@
 %global crate_name tokio
-%global full_version 1.50.0
+%global full_version 1.52.3
 %global pkgname tokio-1
 
 Name:           rust-tokio-1
-Version:        1.50.0
+Version:        1.52.3
 Release:        %autorelease
 Summary:        Rust crate "tokio"
 License:        MIT
 URL:            https://tokio.rs
-#!RemoteAsset:  sha256:27ad5e34374e03cfffefc301becb44e9dc3c17584f414349ebe29ed26661822d
+#!RemoteAsset:  sha256:8fc7f01b389ac15039e4dc9531aa973a135d7a4135281b12d7c1bc79fd57fffe
 Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -66,8 +66,8 @@ Summary:        Event-driven, non-blocking I/O platform for writing asynchronous
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/libc) = %{version}
 Requires:       crate(io-uring-0.7) >= 0.7.11
-Requires:       crate(mio-1/os-ext) >= 1.0.1
-Requires:       crate(mio-1/os-poll) >= 1.0.1
+Requires:       crate(mio-1/os-ext) >= 1.2.0
+Requires:       crate(mio-1/os-poll) >= 1.2.0
 Requires:       crate(slab-0.4/default) >= 0.4.9
 Provides:       crate(%{pkgname}/io-uring) = %{version}
 
@@ -86,9 +86,9 @@ This metapackage enables feature "libc" for the Rust tokio crate, by pulling in 
 %package     -n %{name}+mio
 Summary:        Event-driven, non-blocking I/O platform for writing asynchronous I/O backed applications - feature "mio"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(mio-1) >= 1.0.1
-Requires:       crate(mio-1/os-ext) >= 1.0.1
-Requires:       crate(mio-1/os-poll) >= 1.0.1
+Requires:       crate(mio-1) >= 1.2.0
+Requires:       crate(mio-1/os-ext) >= 1.2.0
+Requires:       crate(mio-1/os-poll) >= 1.2.0
 Provides:       crate(%{pkgname}/mio) = %{version}
 
 %description -n %{name}+mio
@@ -99,9 +99,9 @@ Summary:        Event-driven, non-blocking I/O platform for writing asynchronous
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/libc) = %{version}
 Requires:       crate(%{pkgname}/socket2) = %{version}
-Requires:       crate(mio-1/net) >= 1.0.1
-Requires:       crate(mio-1/os-ext) >= 1.0.1
-Requires:       crate(mio-1/os-poll) >= 1.0.1
+Requires:       crate(mio-1/net) >= 1.2.0
+Requires:       crate(mio-1/os-ext) >= 1.2.0
+Requires:       crate(mio-1/os-poll) >= 1.2.0
 Provides:       crate(%{pkgname}/net) = %{version}
 
 %description -n %{name}+net
@@ -122,9 +122,9 @@ Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/bytes) = %{version}
 Requires:       crate(%{pkgname}/libc) = %{version}
 Requires:       crate(%{pkgname}/signal-hook-registry) = %{version}
-Requires:       crate(mio-1/net) >= 1.0.1
-Requires:       crate(mio-1/os-ext) >= 1.0.1
-Requires:       crate(mio-1/os-poll) >= 1.0.1
+Requires:       crate(mio-1/net) >= 1.2.0
+Requires:       crate(mio-1/os-ext) >= 1.2.0
+Requires:       crate(mio-1/os-poll) >= 1.2.0
 Provides:       crate(%{pkgname}/process) = %{version}
 
 %description -n %{name}+process
@@ -135,9 +135,9 @@ Summary:        Event-driven, non-blocking I/O platform for writing asynchronous
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/libc) = %{version}
 Requires:       crate(%{pkgname}/signal-hook-registry) = %{version}
-Requires:       crate(mio-1/net) >= 1.0.1
-Requires:       crate(mio-1/os-ext) >= 1.0.1
-Requires:       crate(mio-1/os-poll) >= 1.0.1
+Requires:       crate(mio-1/net) >= 1.2.0
+Requires:       crate(mio-1/os-ext) >= 1.2.0
+Requires:       crate(mio-1/os-poll) >= 1.2.0
 Provides:       crate(%{pkgname}/signal) = %{version}
 
 %description -n %{name}+signal
@@ -155,8 +155,8 @@ This metapackage enables feature "signal-hook-registry" for the Rust tokio crate
 %package     -n %{name}+socket2
 Summary:        Event-driven, non-blocking I/O platform for writing asynchronous I/O backed applications - feature "socket2"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(socket2-0.6/all) >= 0.6.0
-Requires:       crate(socket2-0.6/default) >= 0.6.0
+Requires:       crate(socket2-0.6/all) >= 0.6.3
+Requires:       crate(socket2-0.6/default) >= 0.6.3
 Provides:       crate(%{pkgname}/socket2) = %{version}
 
 %description -n %{name}+socket2
@@ -185,7 +185,7 @@ This metapackage enables feature "test-util" for the Rust tokio crate, by pullin
 %package     -n %{name}+tokio-macros
 Summary:        Event-driven, non-blocking I/O platform for writing asynchronous I/O backed applications - feature "tokio-macros" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(tokio-macros-2/default) >= 2.6.0
+Requires:       crate(tokio-macros-2/default) >= 2.7.0
 Provides:       crate(%{pkgname}/macros) = %{version}
 Provides:       crate(%{pkgname}/tokio-macros) = %{version}
 
