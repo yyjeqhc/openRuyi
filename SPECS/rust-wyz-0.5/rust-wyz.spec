@@ -43,7 +43,7 @@ This metapackage enables feature "garbage" for the Rust wyz crate, by pulling in
 %package     -n %{name}+once-cell
 Summary:        Myrrlyn’s utility collection - feature "once_cell"
 Requires:       crate(%{pkgname})
-Requires:       crate(once-cell-1.0/default) >= 1.0.0
+Requires:       crate(once-cell-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/once-cell)
 
 %description -n %{name}+once-cell

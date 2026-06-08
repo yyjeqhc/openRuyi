@@ -38,9 +38,9 @@ Source code for takopackized Rust crate "hyper"
 Summary:        Protective and efficient HTTP library for all - feature "client"
 Requires:       crate(%{pkgname})
 Requires:       crate(pin-project-lite-0.2/default) >= 0.2.17
-Requires:       crate(smallvec-1.0/const-generics) >= 1.15.1
-Requires:       crate(smallvec-1.0/const-new) >= 1.15.1
-Requires:       crate(smallvec-1.0/default) >= 1.15.1
+Requires:       crate(smallvec-1/const-generics) >= 1.15.1
+Requires:       crate(smallvec-1/const-new) >= 1.15.1
+Requires:       crate(smallvec-1/default) >= 1.15.1
 Requires:       crate(want-0.3/default) >= 0.3.1
 Provides:       crate(%{pkgname}/client)
 
@@ -98,9 +98,9 @@ Summary:        Protective and efficient HTTP library for all - feature "server"
 Requires:       crate(%{pkgname})
 Requires:       crate(httpdate-1.0/default) >= 1.0.0
 Requires:       crate(pin-project-lite-0.2/default) >= 0.2.17
-Requires:       crate(smallvec-1.0/const-generics) >= 1.15.1
-Requires:       crate(smallvec-1.0/const-new) >= 1.15.1
-Requires:       crate(smallvec-1.0/default) >= 1.15.1
+Requires:       crate(smallvec-1/const-generics) >= 1.15.1
+Requires:       crate(smallvec-1/const-new) >= 1.15.1
+Requires:       crate(smallvec-1/default) >= 1.15.1
 Provides:       crate(%{pkgname}/server)
 
 %description -n %{name}+server

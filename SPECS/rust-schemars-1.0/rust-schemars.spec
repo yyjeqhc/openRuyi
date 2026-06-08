@@ -91,7 +91,7 @@ This metapackage enables feature "either1" for the Rust schemars crate, by pulli
 %package     -n %{name}+indexmap2
 Summary:        Generate JSON Schemas from Rust code - feature "indexmap2"
 Requires:       crate(%{pkgname})
-Requires:       crate(indexmap-2.0) >= 2.2.3
+Requires:       crate(indexmap-2) >= 2.2.3
 Provides:       crate(%{pkgname}/indexmap2)
 
 %description -n %{name}+indexmap2
@@ -159,7 +159,7 @@ This metapackage enables feature "semver1" for the Rust schemars crate, by pulli
 %package     -n %{name}+smallvec1
 Summary:        Generate JSON Schemas from Rust code - feature "smallvec1"
 Requires:       crate(%{pkgname})
-Requires:       crate(smallvec-1.0) >= 1.0.0
+Requires:       crate(smallvec-1) >= 1.0.0
 Provides:       crate(%{pkgname}/smallvec1)
 
 %description -n %{name}+smallvec1
@@ -195,7 +195,7 @@ This metapackage enables feature "url2" for the Rust schemars crate, by pulling 
 %package     -n %{name}+uuid1
 Summary:        Generate JSON Schemas from Rust code - feature "uuid1"
 Requires:       crate(%{pkgname})
-Requires:       crate(uuid-1.0) >= 1.0.0
+Requires:       crate(uuid-1) >= 1.0.0
 Provides:       crate(%{pkgname}/uuid1)
 
 %description -n %{name}+uuid1

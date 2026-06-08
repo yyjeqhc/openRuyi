@@ -146,7 +146,7 @@ This metapackage enables feature "hedge" for the Rust tower crate, by pulling in
 %package     -n %{name}+indexmap
 Summary:        Modular and reusable components for building robust clients and servers - feature "indexmap"
 Requires:       crate(%{pkgname})
-Requires:       crate(indexmap-2.0/default) >= 2.0.2
+Requires:       crate(indexmap-2/default) >= 2.0.2
 Provides:       crate(%{pkgname}/indexmap)
 
 %description -n %{name}+indexmap

@@ -31,7 +31,7 @@ Source code for takopackized Rust crate "wit-bindgen-rt"
 Summary:        Runtime support for the `wit-bindgen` crate - feature "async"
 Requires:       crate(%{pkgname})
 Requires:       crate(futures-0.3/default) >= 0.3.30
-Requires:       crate(once-cell-1.0/default) >= 1.19.0
+Requires:       crate(once-cell-1/default) >= 1.19.0
 Provides:       crate(%{pkgname}/async)
 
 %description -n %{name}+async

@@ -21,8 +21,8 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(once-cell-1.0/alloc) >= 1.21.4
-Requires:       crate(once-cell-1.0/race) >= 1.21.4
+Requires:       crate(once-cell-1/alloc) >= 1.21.4
+Requires:       crate(once-cell-1/race) >= 1.21.4
 Requires:       crate(rustls-pki-types-1/alloc) >= 1.14.0
 Requires:       crate(rustls-pki-types-1/default) >= 1.14.0
 Requires:       crate(rustls-webpki-0.103/alloc) >= 0.103.10
@@ -142,9 +142,9 @@ This metapackage enables feature "rustversion" for the Rust rustls crate, by pul
 %package     -n %{name}+std
 Summary:        Modern TLS library written in Rust - feature "std"
 Requires:       crate(%{pkgname})
-Requires:       crate(once-cell-1.0/alloc) >= 1.21.4
-Requires:       crate(once-cell-1.0/race) >= 1.21.4
-Requires:       crate(once-cell-1.0/std) >= 1.21.4
+Requires:       crate(once-cell-1/alloc) >= 1.21.4
+Requires:       crate(once-cell-1/race) >= 1.21.4
+Requires:       crate(once-cell-1/std) >= 1.21.4
 Requires:       crate(rustls-pki-types-1/alloc) >= 1.14.0
 Requires:       crate(rustls-pki-types-1/std) >= 1.14.0
 Requires:       crate(rustls-webpki-0.103/alloc) >= 0.103.10

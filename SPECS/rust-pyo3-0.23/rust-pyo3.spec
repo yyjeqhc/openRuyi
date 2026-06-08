@@ -24,7 +24,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(cfg-if-1/default) >= 1.0.0
 Requires:       crate(libc-0.2/default) >= 0.2.62
 Requires:       crate(memoffset-0.9/default) >= 0.9.0
-Requires:       crate(once-cell-1.0/default) >= 1.13
+Requires:       crate(once-cell-1/default) >= 1.13
 Requires:       crate(portable-atomic-1.0/default) >= 1.0.0
 Requires:       crate(pyo3-build-config-0.23/default) >= 0.23.5
 Requires:       crate(pyo3-build-config-0.23/resolve-config) >= 0.23.5
@@ -231,7 +231,7 @@ This metapackage enables feature "hashbrown" for the Rust pyo3 crate, by pulling
 %package     -n %{name}+indexmap
 Summary:        Bindings to Python interpreter - feature "indexmap"
 Requires:       crate(%{pkgname})
-Requires:       crate(indexmap-2.0/default) >= 2.5.0
+Requires:       crate(indexmap-2/default) >= 2.5.0
 Provides:       crate(%{pkgname}/indexmap)
 
 %description -n %{name}+indexmap
@@ -336,7 +336,7 @@ This metapackage enables feature "serde" for the Rust pyo3 crate, by pulling in 
 %package     -n %{name}+smallvec
 Summary:        Bindings to Python interpreter - feature "smallvec"
 Requires:       crate(%{pkgname})
-Requires:       crate(smallvec-1.0/default) >= 1.0.0
+Requires:       crate(smallvec-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/smallvec)
 
 %description -n %{name}+smallvec

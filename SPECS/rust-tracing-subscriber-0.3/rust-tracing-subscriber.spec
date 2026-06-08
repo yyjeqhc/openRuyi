@@ -128,7 +128,7 @@ This metapackage enables feature "nu-ansi-term" for the Rust tracing-subscriber 
 %package     -n %{name}+once-cell
 Summary:        Utilities for implementing and composing `tracing` subscribers - feature "once_cell"
 Requires:       crate(%{pkgname})
-Requires:       crate(once-cell-1.0/default) >= 1.21.4
+Requires:       crate(once-cell-1/default) >= 1.21.4
 Provides:       crate(%{pkgname}/once-cell)
 
 %description -n %{name}+once-cell
@@ -184,7 +184,7 @@ This metapackage enables feature "sharded-slab" for the Rust tracing-subscriber 
 %package     -n %{name}+smallvec
 Summary:        Utilities for implementing and composing `tracing` subscribers - feature "smallvec"
 Requires:       crate(%{pkgname})
-Requires:       crate(smallvec-1.0/default) >= 1.15.1
+Requires:       crate(smallvec-1/default) >= 1.15.1
 Provides:       crate(%{pkgname}/smallvec)
 
 %description -n %{name}+smallvec

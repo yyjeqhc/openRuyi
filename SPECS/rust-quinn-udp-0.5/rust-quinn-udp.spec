@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(cfg-aliases-0.2/default) >= 0.2.1
 Requires:       crate(libc-0.2/default) >= 0.2.180
-Requires:       crate(once-cell-1.0/default) >= 1.21.3
+Requires:       crate(once-cell-1/default) >= 1.21.3
 Requires:       crate(socket2-0.6/default) >= 0.6.1
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/fast-apple-datapath)

@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(anyhow-1/default) >= 1.0.102
 Requires:       crate(id-arena-2/default) >= 2.3.0
-Requires:       crate(indexmap-2.0/std) >= 2.14.0
+Requires:       crate(indexmap-2/std) >= 2.14.0
 Requires:       crate(log-0.4/default) >= 0.4.29
 Requires:       crate(semver-1) >= 1.0.28
 Requires:       crate(unicode-xid-0.2/default) >= 0.2.6
@@ -59,8 +59,8 @@ This metapackage enables feature "default" for the Rust wit-parser crate, by pul
 Summary:        Tooling for parsing `*.wit` files and working with their contents - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/serde-json)
-Requires:       crate(indexmap-2.0/serde) >= 2.14.0
-Requires:       crate(indexmap-2.0/std) >= 2.14.0
+Requires:       crate(indexmap-2/serde) >= 2.14.0
+Requires:       crate(indexmap-2/std) >= 2.14.0
 Requires:       crate(serde-1/alloc) >= 1.0.228
 Requires:       crate(serde-derive-1/default) >= 1.0.228
 Provides:       crate(%{pkgname}/serde)

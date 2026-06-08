@@ -59,7 +59,7 @@ This metapackage enables feature "default" for the Rust wasmparser crate, by pul
 Summary:        Simple event-driven library for parsing WebAssembly binary files - feature "hash-collections"
 Requires:       crate(%{pkgname})
 Requires:       crate(hashbrown-0.15/default-hasher) >= 0.15.5
-Requires:       crate(indexmap-2.0) >= 2.14.0
+Requires:       crate(indexmap-2) >= 2.14.0
 Provides:       crate(%{pkgname}/hash-collections)
 
 %description -n %{name}+hash-collections
@@ -70,7 +70,7 @@ Summary:        Simple event-driven library for parsing WebAssembly binary files
 Requires:       crate(%{pkgname})
 Requires:       crate(hashbrown-0.15/default-hasher) >= 0.15.5
 Requires:       crate(hashbrown-0.15/serde) >= 0.15.5
-Requires:       crate(indexmap-2.0/serde) >= 2.14.0
+Requires:       crate(indexmap-2/serde) >= 2.14.0
 Requires:       crate(serde-1/alloc) >= 1.0.166
 Provides:       crate(%{pkgname}/serde)
 
@@ -80,7 +80,7 @@ This metapackage enables feature "serde" for the Rust wasmparser crate, by pulli
 %package     -n %{name}+std
 Summary:        Simple event-driven library for parsing WebAssembly binary files - feature "std"
 Requires:       crate(%{pkgname})
-Requires:       crate(indexmap-2.0/std) >= 2.14.0
+Requires:       crate(indexmap-2/std) >= 2.14.0
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std

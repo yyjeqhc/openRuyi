@@ -6,9 +6,9 @@
 
 %global crate_name smallvec
 %global full_version 1.15.1
-%global pkgname smallvec-1.0
+%global pkgname smallvec-1
 
-Name:           rust-smallvec-1.0
+Name:           rust-smallvec-1
 Version:        1.15.1
 Release:        %autorelease
 Summary:        Rust crate "smallvec"

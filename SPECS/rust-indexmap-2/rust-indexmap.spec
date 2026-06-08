@@ -6,9 +6,9 @@
 
 %global crate_name indexmap
 %global full_version 2.14.0
-%global pkgname indexmap-2.0
+%global pkgname indexmap-2
 
-Name:           rust-indexmap-2.0
+Name:           rust-indexmap-2
 Version:        2.14.0
 Release:        %autorelease
 Summary:        Rust crate "indexmap"

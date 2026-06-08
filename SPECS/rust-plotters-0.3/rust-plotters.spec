@@ -185,7 +185,7 @@ This metapackage enables feature "lazy_static" for the Rust plotters crate, by p
 %package     -n %{name}+once-cell
 Summary:        Rust drawing library focus on data plotting for both WASM and native applications - feature "once_cell"
 Requires:       crate(%{pkgname})
-Requires:       crate(once-cell-1.0/default) >= 1.8.0
+Requires:       crate(once-cell-1/default) >= 1.8.0
 Provides:       crate(%{pkgname}/once-cell)
 
 %description -n %{name}+once-cell

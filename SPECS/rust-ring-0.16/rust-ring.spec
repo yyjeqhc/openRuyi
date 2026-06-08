@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(cc-1) >= 1.0.62
 Requires:       crate(libc-0.2) >= 0.2.69
-Requires:       crate(once-cell-1.0/std) >= 1.5.2
+Requires:       crate(once-cell-1/std) >= 1.5.2
 Requires:       crate(spin-0.5) >= 0.5.2
 Requires:       crate(untrusted-0.7/default) >= 0.7.1
 Requires:       crate(web-sys-0.3/crypto) >= 0.3.37
@@ -55,7 +55,7 @@ This metapackage enables feature "default" for the Rust ring crate, by pulling i
 %package     -n %{name}+once-cell
 Summary:        Safe, fast, small crypto using Rust - feature "once_cell" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(once-cell-1.0/std) >= 1.5.2
+Requires:       crate(once-cell-1/std) >= 1.5.2
 Provides:       crate(%{pkgname}/dev-urandom-fallback)
 Provides:       crate(%{pkgname}/once-cell)
 

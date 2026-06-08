@@ -79,7 +79,7 @@ This metapackage enables feature "unstable" for the Rust uuid-simd crate, by pul
 %package     -n %{name}+uuid
 Summary:        SIMD-accelerated UUID operations - feature "uuid"
 Requires:       crate(%{pkgname})
-Requires:       crate(uuid-1.0/default) >= 1.17.0
+Requires:       crate(uuid-1/default) >= 1.17.0
 Provides:       crate(%{pkgname}/uuid)
 
 %description -n %{name}+uuid

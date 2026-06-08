@@ -431,8 +431,8 @@ This metapackage enables feature "tracing" for the Rust tower-http crate, by pul
 %package     -n %{name}+uuid
 Summary:        Tower middleware and utilities for HTTP clients and servers - feature "uuid" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(uuid-1.0/default) >= 1.0.0
-Requires:       crate(uuid-1.0/v4) >= 1.0.0
+Requires:       crate(uuid-1/default) >= 1.0.0
+Requires:       crate(uuid-1/v4) >= 1.0.0
 Provides:       crate(%{pkgname}/request-id)
 Provides:       crate(%{pkgname}/uuid)
 

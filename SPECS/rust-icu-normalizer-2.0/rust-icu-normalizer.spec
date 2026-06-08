@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(icu-collections-2) >= 2.2.0
 Requires:       crate(icu-provider-2.0) >= 2.2.0
-Requires:       crate(smallvec-1.0) >= 1.15.1
+Requires:       crate(smallvec-1) >= 1.15.1
 Requires:       crate(zerovec-0.11) >= 0.11.6
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/write16)

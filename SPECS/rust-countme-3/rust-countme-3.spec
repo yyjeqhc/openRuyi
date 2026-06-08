@@ -47,7 +47,7 @@ Additionally, this package also provides the "print_at_exit" feature.
 %package     -n %{name}+once-cell
 Summary:        Counts the number of live instances of types - feature "once_cell"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(once-cell-1.0/default) >= 1.5.0
+Requires:       crate(once-cell-1/default) >= 1.5.0
 Provides:       crate(%{pkgname}/once-cell) = %{version}
 
 %description -n %{name}+once-cell

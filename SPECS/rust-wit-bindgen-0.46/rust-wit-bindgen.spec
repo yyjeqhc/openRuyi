@@ -35,7 +35,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/macros)
 Requires:       crate(%{pkgname}/std)
 Requires:       crate(futures-0.3/default) >= 0.3.30
-Requires:       crate(once-cell-1.0/default) >= 1.19.0
+Requires:       crate(once-cell-1/default) >= 1.19.0
 Requires:       crate(wit-bindgen-rust-macro-0.46/async) >= 0.46.0
 Provides:       crate(%{pkgname}/async)
 

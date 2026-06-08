@@ -26,7 +26,7 @@ Requires:       crate(libm-0.2/default) >= 0.2.16
 Requires:       crate(num-integer-0.1/i128) >= 0.1.46
 Requires:       crate(num-iter-0.1) >= 0.1.45
 Requires:       crate(num-traits-0.2/i128) >= 0.2.19
-Requires:       crate(smallvec-1.0) >= 1.15.1
+Requires:       crate(smallvec-1) >= 1.15.1
 Provides:       crate(num-bigint-dig) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/i128)
@@ -59,7 +59,7 @@ This metapackage enables feature "default" for the Rust num-bigint-dig crate, by
 Summary:        Big integer implementation for Rust - feature "fuzz"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/arbitrary)
-Requires:       crate(smallvec-1.0/arbitrary) >= 1.15.1
+Requires:       crate(smallvec-1/arbitrary) >= 1.15.1
 Provides:       crate(%{pkgname}/fuzz)
 
 %description -n %{name}+fuzz
@@ -102,7 +102,7 @@ Requires:       crate(num-traits-0.2/std) >= 0.2.19
 Requires:       crate(rand-0.8/std) >= 0.8.6
 Requires:       crate(serde-1/alloc) >= 1.0.228
 Requires:       crate(serde-1/std) >= 1.0.228
-Requires:       crate(smallvec-1.0/write) >= 1.15.1
+Requires:       crate(smallvec-1/write) >= 1.15.1
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std

@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(cfg-if-1/default) >= 1.0.0
-Requires:       crate(once-cell-1.0/alloc) >= 1.18.0
+Requires:       crate(once-cell-1/alloc) >= 1.18.0
 Requires:       crate(version-check-0.9/default) >= 0.9.4
 Requires:       crate(zerocopy-0.8/simd) >= 0.8.24
 Provides:       crate(%{pkgname})
@@ -36,8 +36,8 @@ Source code for takopackized Rust crate "ahash"
 %package     -n %{name}+atomic-polyfill
 Summary:        Non-cryptographic hash function using AES-NI for high performance - feature "atomic-polyfill"
 Requires:       crate(%{pkgname})
-Requires:       crate(once-cell-1.0/alloc) >= 1.18.0
-Requires:       crate(once-cell-1.0/critical-section) >= 1.18.0
+Requires:       crate(once-cell-1/alloc) >= 1.18.0
+Requires:       crate(once-cell-1/critical-section) >= 1.18.0
 Requires:       crate(portable-atomic-1.0/default) >= 1.0.0
 Provides:       crate(%{pkgname}/atomic-polyfill)
 

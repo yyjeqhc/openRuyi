@@ -1,8 +1,8 @@
 %global crate_name uuid
 %global full_version 1.23.1
-%global pkgname uuid-1.0
+%global pkgname uuid-1
 
-Name:           rust-uuid-1.0
+Name:           rust-uuid-1
 Version:        1.23.1
 Release:        %autorelease
 Summary:        Rust crate "uuid"

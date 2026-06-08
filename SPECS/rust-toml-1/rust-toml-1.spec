@@ -87,7 +87,7 @@ This metapackage enables feature "parse" for the Rust toml crate, by pulling in 
 Summary:        Native Rust encoder and decoder of TOML-formatted files and streams - feature "preserve_order"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/std) = %{version}
-Requires:       crate(indexmap-2.0) >= 2.13.0
+Requires:       crate(indexmap-2) >= 2.13.0
 Provides:       crate(%{pkgname}/preserve-order) = %{version}
 
 %description -n %{name}+preserve-order
@@ -111,7 +111,7 @@ This metapackage enables feature "serde" for the Rust toml crate, by pulling in 
 %package     -n %{name}+std
 Summary:        Native Rust encoder and decoder of TOML-formatted files and streams - feature "std"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(indexmap-2.0/std) >= 2.13.0
+Requires:       crate(indexmap-2/std) >= 2.13.0
 Requires:       crate(serde-core-1/alloc) >= 1.0.228
 Requires:       crate(serde-core-1/std) >= 1.0.228
 Requires:       crate(serde-spanned-1/alloc) >= 1.1.1

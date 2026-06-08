@@ -16,7 +16,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(base64-0.22/default) >= 0.22.0
-Requires:       crate(indexmap-2.0/default) >= 2.1.0
+Requires:       crate(indexmap-2/default) >= 2.1.0
 Requires:       crate(quick-xml-0.39/default) >= 0.39.2
 Requires:       crate(time-0.3/default) >= 0.3.47
 Requires:       crate(time-0.3/formatting) >= 0.3.47

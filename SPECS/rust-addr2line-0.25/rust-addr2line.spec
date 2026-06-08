@@ -139,7 +139,7 @@ This metapackage enables feature "rustc-dep-of-std" for the Rust addr2line crate
 %package     -n %{name}+smallvec
 Summary:        Cross-platform symbolication library written in Rust, using `gimli` - feature "smallvec"
 Requires:       crate(%{pkgname})
-Requires:       crate(smallvec-1.0) >= 1.0.0
+Requires:       crate(smallvec-1) >= 1.0.0
 Provides:       crate(%{pkgname}/smallvec)
 
 %description -n %{name}+smallvec

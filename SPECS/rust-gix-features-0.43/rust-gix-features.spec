@@ -69,7 +69,7 @@ This metapackage enables feature "io-pipe" for the Rust gix-features crate, by p
 %package     -n %{name}+once-cell
 Summary:        Integrate various capabilities using compile-time feature flags - feature "once_cell"
 Requires:       crate(%{pkgname})
-Requires:       crate(once-cell-1.0/default) >= 1.21.4
+Requires:       crate(once-cell-1/default) >= 1.21.4
 Provides:       crate(%{pkgname}/once-cell)
 
 %description -n %{name}+once-cell

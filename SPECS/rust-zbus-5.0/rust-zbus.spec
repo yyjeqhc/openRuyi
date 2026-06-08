@@ -40,8 +40,8 @@ Requires:       crate(serde-1/derive) >= 1.0.228
 Requires:       crate(serde-repr-0.1/default) >= 0.1.20
 Requires:       crate(tracing-0.1/default) >= 0.1.44
 Requires:       crate(uds-windows-1/default) >= 1.2.1
-Requires:       crate(uuid-1.0/default) >= 1.23.1
-Requires:       crate(uuid-1.0/serde) >= 1.23.1
+Requires:       crate(uuid-1/default) >= 1.23.1
+Requires:       crate(uuid-1/serde) >= 1.23.1
 Requires:       crate(windows-sys-0.61/default) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.2
 Requires:       crate(windows-sys-0.61/win32-networking) >= 0.61.2
@@ -186,8 +186,8 @@ This metapackage enables feature "option-as-array" for the Rust zbus crate, by p
 %package     -n %{name}+p2p
 Summary:        API for D-Bus communication - feature "p2p" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(uuid-1.0/serde) >= 1.23.1
-Requires:       crate(uuid-1.0/v4) >= 1.23.1
+Requires:       crate(uuid-1/serde) >= 1.23.1
+Requires:       crate(uuid-1/v4) >= 1.23.1
 Provides:       crate(%{pkgname}/bus-impl)
 Provides:       crate(%{pkgname}/p2p)
 

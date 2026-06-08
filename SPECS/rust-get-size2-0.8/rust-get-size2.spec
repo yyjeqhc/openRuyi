@@ -86,7 +86,7 @@ This metapackage enables feature "hashbrown" for the Rust get-size2 crate, by pu
 %package     -n %{name}+indexmap
 Summary:        Determine the size in bytes an object occupies inside RAM - feature "indexmap"
 Requires:       crate(%{pkgname})
-Requires:       crate(indexmap-2.0) >= 2.14.0
+Requires:       crate(indexmap-2) >= 2.14.0
 Provides:       crate(%{pkgname}/indexmap)
 
 %description -n %{name}+indexmap
@@ -104,7 +104,7 @@ This metapackage enables feature "ordermap" for the Rust get-size2 crate, by pul
 %package     -n %{name}+smallvec
 Summary:        Determine the size in bytes an object occupies inside RAM - feature "smallvec"
 Requires:       crate(%{pkgname})
-Requires:       crate(smallvec-1.0) >= 1.15.1
+Requires:       crate(smallvec-1) >= 1.15.1
 Provides:       crate(%{pkgname}/smallvec)
 
 %description -n %{name}+smallvec

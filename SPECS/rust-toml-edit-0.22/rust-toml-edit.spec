@@ -21,8 +21,8 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(indexmap-2.0/default) >= 2.10.0
-Requires:       crate(indexmap-2.0/std) >= 2.10.0
+Requires:       crate(indexmap-2/default) >= 2.10.0
+Requires:       crate(indexmap-2/std) >= 2.10.0
 Requires:       crate(toml-datetime-0.6/default) >= 0.6.11
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/unbounded)

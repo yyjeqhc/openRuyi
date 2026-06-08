@@ -28,7 +28,7 @@ BuildRequires:  crate(pyo3-0.28/default) >= 0.28.2
 BuildRequires:  crate(pyo3-0.28/generate-import-lib) >= 0.28.2
 BuildRequires:  crate(pyo3-0.28/num-bigint) >= 0.28.2
 BuildRequires:  crate(pyo3-build-config-0.28/default) >= 0.28.2
-BuildRequires:  crate(smallvec-1.0/default) >= 1.11.0
+BuildRequires:  crate(smallvec-1/default) >= 1.11.0
 BuildRequires:  pkgconfig(python3)
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3dist(maturin)

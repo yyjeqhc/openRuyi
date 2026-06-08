@@ -33,8 +33,8 @@ Requires:       crate(gix-path-0.10/default) >= 0.10.22
 Requires:       crate(gix-utils-0.3/default) >= 0.3.1
 Requires:       crate(gix-validate-0.10/default) >= 0.10.1
 Requires:       crate(itoa-1.0/default) >= 1.0.18
-Requires:       crate(smallvec-1.0/default) >= 1.15.1
-Requires:       crate(smallvec-1.0/write) >= 1.15.1
+Requires:       crate(smallvec-1/default) >= 1.15.1
+Requires:       crate(smallvec-1/write) >= 1.15.1
 Requires:       crate(thiserror-2/default) >= 2.0.18
 Requires:       crate(winnow-0.7/default) >= 0.7.15
 Requires:       crate(winnow-0.7/simd) >= 0.7.15
@@ -62,8 +62,8 @@ Requires:       crate(bstr-1/unicode) >= 1.12.1
 Requires:       crate(gix-actor-0.35/serde) >= 0.35.6
 Requires:       crate(gix-hash-0.19/serde) >= 0.19.0
 Requires:       crate(serde-1/derive) >= 1.0.114
-Requires:       crate(smallvec-1.0/serde) >= 1.15.1
-Requires:       crate(smallvec-1.0/write) >= 1.15.1
+Requires:       crate(smallvec-1/serde) >= 1.15.1
+Requires:       crate(smallvec-1/write) >= 1.15.1
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

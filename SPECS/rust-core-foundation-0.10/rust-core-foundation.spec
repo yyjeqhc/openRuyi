@@ -61,7 +61,7 @@ This metapackage enables feature "mac_os_10_8_features" for the Rust core-founda
 %package     -n %{name}+with-uuid
 Summary:        Bindings to Core Foundation for macOS - feature "with-uuid"
 Requires:       crate(%{pkgname})
-Requires:       crate(uuid-1.0/default) >= 1.0.0
+Requires:       crate(uuid-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/with-uuid)
 
 %description -n %{name}+with-uuid

@@ -25,7 +25,7 @@ Requires:       crate(bstr-1/std) >= 1.12.1
 Requires:       crate(gix-hash-0.19/default) >= 0.19.0
 Requires:       crate(gix-revision-0.35) >= 0.35.0
 Requires:       crate(gix-validate-0.10/default) >= 0.10.1
-Requires:       crate(smallvec-1.0/default) >= 1.15.1
+Requires:       crate(smallvec-1/default) >= 1.15.1
 Requires:       crate(thiserror-2/default) >= 2.0.18
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)

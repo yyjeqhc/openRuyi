@@ -19,7 +19,7 @@ Requires:       crate(bit-field-0.10/default) >= 0.10.1
 Requires:       crate(half-2.0/default) >= 2.1.0
 Requires:       crate(lebe-0.5/default) >= 0.5.2
 Requires:       crate(miniz-oxide-0.8/default) >= 0.8.0
-Requires:       crate(smallvec-1.0/default) >= 1.7.0
+Requires:       crate(smallvec-1/default) >= 1.7.0
 Requires:       crate(zune-inflate-0.2/zlib) >= 0.2.3
 Provides:       crate(%{pkgname}) = %{version}
 

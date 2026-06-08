@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(anyhow-1/default) >= 1.0.102
 Requires:       crate(heck-0.5/default) >= 0.5.0
-Requires:       crate(indexmap-2.0/default) >= 2.14.0
+Requires:       crate(indexmap-2/default) >= 2.14.0
 Requires:       crate(prettyplease-0.2/default) >= 0.2.37
 Requires:       crate(syn-2/default) >= 2.0.117
 Requires:       crate(syn-2/printing) >= 2.0.117

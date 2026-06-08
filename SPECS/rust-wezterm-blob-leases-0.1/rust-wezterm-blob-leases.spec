@@ -25,9 +25,9 @@ Requires:       crate(getrandom-0.3/default) >= 0.3.4
 Requires:       crate(mac-address-1/default) >= 1.1.8
 Requires:       crate(sha2-0.10/default) >= 0.10.9
 Requires:       crate(thiserror-1/default) >= 1.0.69
-Requires:       crate(uuid-1.0/default) >= 1.23.1
-Requires:       crate(uuid-1.0/rng) >= 1.23.1
-Requires:       crate(uuid-1.0/v1) >= 1.23.1
+Requires:       crate(uuid-1/default) >= 1.23.1
+Requires:       crate(uuid-1/rng) >= 1.23.1
+Requires:       crate(uuid-1/v1) >= 1.23.1
 Provides:       crate(wezterm-blob-leases) = %{version}
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
@@ -40,9 +40,9 @@ Summary:        Manage image blob caching/leasing for wezterm - feature "serde"
 Requires:       crate(%{pkgname})
 Requires:       crate(serde-1/default) >= 1.0.228
 Requires:       crate(serde-1/derive) >= 1.0.228
-Requires:       crate(uuid-1.0/rng) >= 1.23.1
-Requires:       crate(uuid-1.0/serde) >= 1.23.1
-Requires:       crate(uuid-1.0/v1) >= 1.23.1
+Requires:       crate(uuid-1/rng) >= 1.23.1
+Requires:       crate(uuid-1/serde) >= 1.23.1
+Requires:       crate(uuid-1/v1) >= 1.23.1
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

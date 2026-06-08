@@ -236,7 +236,7 @@ Summary:        Higher level HTTP client library - feature "hickory-dns"
 Requires:       crate(%{pkgname})
 Requires:       crate(hickory-resolver-0.25/default) >= 0.25.0
 Requires:       crate(hickory-resolver-0.25/tokio) >= 0.25.0
-Requires:       crate(once-cell-1.0/default) >= 1.18
+Requires:       crate(once-cell-1/default) >= 1.18
 Provides:       crate(%{pkgname}/hickory-dns)
 
 %description -n %{name}+hickory-dns

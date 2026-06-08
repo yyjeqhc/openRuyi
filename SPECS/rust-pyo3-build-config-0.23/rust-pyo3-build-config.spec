@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(once-cell-1.0/default) >= 1.0.0
+Requires:       crate(once-cell-1/default) >= 1.0.0
 Requires:       crate(target-lexicon-0.12/default) >= 0.12.14
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/abi3)

@@ -17,9 +17,9 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bitflags-2/default) >= 2.11.1
 Requires:       crate(libc-0.2/default) >= 0.2.186
-Requires:       crate(uuid-1.0/default) >= 1.23.1
-Requires:       crate(uuid-1.0/fast-rng) >= 1.23.1
-Requires:       crate(uuid-1.0/v4) >= 1.23.1
+Requires:       crate(uuid-1/default) >= 1.23.1
+Requires:       crate(uuid-1/fast-rng) >= 1.23.1
+Requires:       crate(uuid-1/v4) >= 1.23.1
 Requires:       crate(vm-memory-0.17/backend-mmap) >= 0.17.1
 Requires:       crate(vm-memory-0.17/default) >= 0.17.1
 Requires:       crate(vmm-sys-util-0.15/default) >= 0.15.0

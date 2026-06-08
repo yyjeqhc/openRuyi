@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(anyhow-1/default) >= 1.0.102
-Requires:       crate(indexmap-2.0/serde) >= 2.14.0
+Requires:       crate(indexmap-2/serde) >= 2.14.0
 Requires:       crate(wasm-encoder-0.244/component-model) >= 0.244.0
 Requires:       crate(wasm-encoder-0.244/std) >= 0.244.0
 Requires:       crate(wasmparser-0.244/component-model) >= 0.244.0

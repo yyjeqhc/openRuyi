@@ -50,7 +50,7 @@ Summary:        Terminal and console abstraction for Rust - feature "std"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
 Requires:       crate(libc-0.2/default) >= 0.2.186
-Requires:       crate(once-cell-1.0/default) >= 1.21.3
+Requires:       crate(once-cell-1/default) >= 1.21.3
 Provides:       crate(%{pkgname}/std)
 
 %description -n %{name}+std

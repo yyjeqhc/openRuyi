@@ -30,7 +30,7 @@ BuildRequires:  rust
 BuildRequires:  cargo
 BuildRequires:  crate(bincode-2) >= 2.0.1
 BuildRequires:  crate(bincode-derive-2) >= 2.0.1
-BuildRequires:  crate(once-cell-1.0) >= 1.20
+BuildRequires:  crate(once-cell-1) >= 1.20
 BuildRequires:  crate(regex-1) >= 1.10.6
 BuildRequires:  crate(regex-automata-0.4) >= 0.4.9
 BuildRequires:  crate(rustc-hash-2) >= 2.1.0

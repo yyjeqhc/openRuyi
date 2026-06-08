@@ -46,7 +46,7 @@ This metapackage enables feature "alloc" for the Rust serde_json crate, by pulli
 %package     -n %{name}+indexmap
 Summary:        JSON serialization file format - feature "indexmap"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(indexmap-2.0/default) >= 2.2.3
+Requires:       crate(indexmap-2/default) >= 2.2.3
 Provides:       crate(%{pkgname}/indexmap) = %{version}
 
 %description -n %{name}+indexmap

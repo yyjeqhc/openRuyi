@@ -20,7 +20,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 BuildRequires:  rust
 BuildRequires:  crate(heck-0.5/default) >= 0.5.0
-BuildRequires:  crate(indexmap-2.0/default) >= 2.1.0
+BuildRequires:  crate(indexmap-2/default) >= 2.1.0
 BuildRequires:  crate(log-0.4/default) >= 0.4.0
 BuildRequires:  crate(proc-macro2-1/default) >= 1.0.60
 BuildRequires:  crate(quote-1/default) >= 1.0.0

@@ -41,7 +41,7 @@ Requires:       crate(libc-0.2/default) >= 0.2.184
 Requires:       crate(memmap2-0.9/default) >= 0.9.10
 Requires:       crate(rustix-1.0/fs) >= 1.1.4
 Requires:       crate(rustix-1.0/std) >= 1.1.4
-Requires:       crate(smallvec-1.0/default) >= 1.15.1
+Requires:       crate(smallvec-1/default) >= 1.15.1
 Requires:       crate(thiserror-2/default) >= 2.0.18
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
@@ -63,7 +63,7 @@ Summary:        Work-in-progress crate of the gitoxide project dedicated impleme
 Requires:       crate(%{pkgname})
 Requires:       crate(gix-hash-0.19/serde) >= 0.19.0
 Requires:       crate(serde-1/derive) >= 1.0.114
-Requires:       crate(smallvec-1.0/serde) >= 1.15.1
+Requires:       crate(smallvec-1/serde) >= 1.15.1
 Provides:       crate(%{pkgname}/serde)
 
 %description -n %{name}+serde

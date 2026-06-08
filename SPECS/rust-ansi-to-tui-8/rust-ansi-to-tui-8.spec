@@ -17,8 +17,8 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(nom-8/default) >= 8.0.0
 Requires:       crate(ratatui-core-0.1) >= 0.1.0
-Requires:       crate(smallvec-1.0/const-generics) >= 1.0.0
-Requires:       crate(smallvec-1.0/default) >= 1.0.0
+Requires:       crate(smallvec-1/const-generics) >= 1.0.0
+Requires:       crate(smallvec-1/default) >= 1.0.0
 Requires:       crate(thiserror-2/default) >= 2.0.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/zero-copy) = %{version}

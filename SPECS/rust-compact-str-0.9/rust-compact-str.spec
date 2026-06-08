@@ -120,8 +120,8 @@ This metapackage enables feature "serde" for the Rust compact_str crate, by pull
 %package     -n %{name}+smallvec
 Summary:        Memory efficient string type that transparently stores strings on the stack, when possible - feature "smallvec"
 Requires:       crate(%{pkgname})
-Requires:       crate(smallvec-1.0/default) >= 1.0.0
-Requires:       crate(smallvec-1.0/union) >= 1.0.0
+Requires:       crate(smallvec-1/default) >= 1.0.0
+Requires:       crate(smallvec-1/union) >= 1.0.0
 Provides:       crate(%{pkgname}/smallvec)
 
 %description -n %{name}+smallvec

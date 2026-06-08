@@ -102,7 +102,7 @@ Summary:        Unified interface for reading and writing object file formats - 
 Requires:       crate(%{pkgname})
 Requires:       crate(crc32fast-1) >= 1.2
 Requires:       crate(hashbrown-0.15/default-hasher) >= 0.15.0
-Requires:       crate(indexmap-2.0) >= 2.0.0
+Requires:       crate(indexmap-2) >= 2.0.0
 Provides:       crate(%{pkgname}/write-core)
 
 %description -n %{name}+write-core
@@ -114,7 +114,7 @@ Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/std)
 Requires:       crate(%{pkgname}/write-core)
 Requires:       crate(crc32fast-1/std) >= 1.2
-Requires:       crate(indexmap-2.0/std) >= 2.0.0
+Requires:       crate(indexmap-2/std) >= 2.0.0
 Provides:       crate(%{pkgname}/write-std)
 
 %description -n %{name}+write-std

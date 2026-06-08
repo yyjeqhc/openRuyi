@@ -127,8 +127,8 @@ This metapackage enables feature "url" for the Rust zvariant crate, by pulling i
 %package     -n %{name}+uuid
 Summary:        D-Bus & GVariant encoding & decoding - feature "uuid"
 Requires:       crate(%{pkgname})
-Requires:       crate(uuid-1.0/default) >= 1.8.0
-Requires:       crate(uuid-1.0/serde) >= 1.8.0
+Requires:       crate(uuid-1/default) >= 1.8.0
+Requires:       crate(uuid-1/serde) >= 1.8.0
 Provides:       crate(%{pkgname}/uuid)
 
 %description -n %{name}+uuid

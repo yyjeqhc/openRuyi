@@ -6,9 +6,9 @@
 
 %global crate_name tinyvec
 %global full_version 1.11.0
-%global pkgname tinyvec-1.0
+%global pkgname tinyvec-1
 
-Name:           rust-tinyvec-1.0
+Name:           rust-tinyvec-1
 Version:        1.11.0
 Release:        %autorelease
 Summary:        Rust crate "tinyvec"

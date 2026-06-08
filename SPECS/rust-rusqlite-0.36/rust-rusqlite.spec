@@ -26,7 +26,7 @@ Requires:       crate(fallible-iterator-0.3/default) >= 0.3.0
 Requires:       crate(fallible-streaming-iterator-0.1/default) >= 0.1.9
 Requires:       crate(hashlink-0.10/default) >= 0.10.0
 Requires:       crate(libsqlite3-sys-0.34/default) >= 0.34.0
-Requires:       crate(smallvec-1.0/default) >= 1.15.1
+Requires:       crate(smallvec-1/default) >= 1.15.1
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/backup)
 Provides:       crate(%{pkgname}/blob)
@@ -305,7 +305,7 @@ This metapackage enables feature "url" for the Rust rusqlite crate, by pulling i
 %package     -n %{name}+uuid
 Summary:        Ergonomic wrapper for SQLite - feature "uuid"
 Requires:       crate(%{pkgname})
-Requires:       crate(uuid-1.0/default) >= 1.0.0
+Requires:       crate(uuid-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/uuid)
 
 %description -n %{name}+uuid

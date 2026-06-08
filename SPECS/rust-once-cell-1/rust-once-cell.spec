@@ -1,8 +1,8 @@
 %global crate_name once_cell
 %global full_version 1.21.4
-%global pkgname once-cell-1.0
+%global pkgname once-cell-1
 
-Name:           rust-once-cell-1.0
+Name:           rust-once-cell-1
 Version:        1.21.4
 Release:        %autorelease
 Summary:        Rust crate "once_cell"

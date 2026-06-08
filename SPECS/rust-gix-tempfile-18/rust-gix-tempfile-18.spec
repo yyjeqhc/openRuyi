@@ -16,8 +16,8 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(gix-fs-0.16/default) >= 0.16.0
-Requires:       crate(once-cell-1.0/race) >= 1.21.3
-Requires:       crate(once-cell-1.0/std) >= 1.21.3
+Requires:       crate(once-cell-1/race) >= 1.21.3
+Requires:       crate(once-cell-1/std) >= 1.21.3
 Requires:       crate(parking-lot-0.12/default) >= 0.12.4
 Requires:       crate(tempfile-3/default) >= 3.20.0
 Provides:       crate(%{pkgname}) = %{version}

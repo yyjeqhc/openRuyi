@@ -22,7 +22,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(log-0.4/default) >= 0.4.29
-Requires:       crate(once-cell-1.0/default) >= 1.21.4
+Requires:       crate(once-cell-1/default) >= 1.21.4
 Requires:       crate(tracing-core-0.1/default) >= 0.1.36
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/log-tracer)

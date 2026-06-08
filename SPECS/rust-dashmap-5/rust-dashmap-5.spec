@@ -18,7 +18,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(cfg-if-1/default) >= 1.0.0
 Requires:       crate(hashbrown-0.14) >= 0.14.0
 Requires:       crate(lock-api-0.4/default) >= 0.4.10
-Requires:       crate(once-cell-1.0/default) >= 1.18.0
+Requires:       crate(once-cell-1/default) >= 1.18.0
 Requires:       crate(parking-lot-core-0.9/default) >= 0.9.8
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}

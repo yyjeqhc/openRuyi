@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(once-cell-1.0/default) >= 1.21.4
+Requires:       crate(once-cell-1/default) >= 1.21.4
 Requires:       crate(serde-1/default) >= 1.0.228
 Requires:       crate(serde-derive-1/default) >= 1.0.228
 Requires:       crate(thiserror-2/default) >= 2.0.18

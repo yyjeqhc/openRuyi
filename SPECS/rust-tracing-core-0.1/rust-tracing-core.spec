@@ -33,7 +33,7 @@ This metapackage enables feature "default" for the Rust tracing-core crate, by p
 %package     -n %{name}+once-cell
 Summary:        Core primitives for application-level tracing - feature "once_cell" and 1 more
 Requires:       crate(%{pkgname})
-Requires:       crate(once-cell-1.0/default) >= 1.21.4
+Requires:       crate(once-cell-1/default) >= 1.21.4
 Provides:       crate(%{pkgname}/once-cell)
 Provides:       crate(%{pkgname}/std)
 

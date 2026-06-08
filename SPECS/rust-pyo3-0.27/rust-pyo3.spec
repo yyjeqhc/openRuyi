@@ -22,7 +22,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(libc-0.2/default) >= 0.2.177
 Requires:       crate(memoffset-0.9/default) >= 0.9.1
-Requires:       crate(once-cell-1.0/default) >= 1.21.3
+Requires:       crate(once-cell-1/default) >= 1.21.3
 Requires:       crate(portable-atomic-1.0/default) >= 1.11.1
 Requires:       crate(pyo3-build-config-0.27/default) >= 0.27.2
 Requires:       crate(pyo3-build-config-0.27/resolve-config) >= 0.27.2
@@ -313,7 +313,7 @@ This metapackage enables feature "hashbrown" for the Rust pyo3 crate, by pulling
 %package     -n %{name}+indexmap
 Summary:        Bindings to Python interpreter - feature "indexmap"
 Requires:       crate(%{pkgname})
-Requires:       crate(indexmap-2.0/default) >= 2.5.0
+Requires:       crate(indexmap-2/default) >= 2.5.0
 Provides:       crate(%{pkgname}/indexmap)
 
 %description -n %{name}+indexmap
@@ -456,7 +456,7 @@ This metapackage enables feature "serde" for the Rust pyo3 crate, by pulling in 
 %package     -n %{name}+smallvec
 Summary:        Bindings to Python interpreter - feature "smallvec"
 Requires:       crate(%{pkgname})
-Requires:       crate(smallvec-1.0/default) >= 1.0.0
+Requires:       crate(smallvec-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/smallvec)
 
 %description -n %{name}+smallvec
@@ -483,7 +483,7 @@ This metapackage enables feature "unindent" for the Rust pyo3 crate, by pulling 
 %package     -n %{name}+uuid
 Summary:        Bindings to Python interpreter - feature "uuid"
 Requires:       crate(%{pkgname})
-Requires:       crate(uuid-1.0/default) >= 1.11.0
+Requires:       crate(uuid-1/default) >= 1.11.0
 Provides:       crate(%{pkgname}/uuid)
 
 %description -n %{name}+uuid

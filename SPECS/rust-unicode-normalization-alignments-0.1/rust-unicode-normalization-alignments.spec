@@ -21,7 +21,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(smallvec-1.0/default) >= 1.15.1
+Requires:       crate(smallvec-1/default) >= 1.15.1
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/default)
 

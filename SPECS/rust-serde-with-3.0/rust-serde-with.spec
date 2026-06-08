@@ -143,7 +143,7 @@ Additionally, this package also provides the "indexmap" feature.
 Summary:        Custom de/serialization functions for Rust's serde - feature "indexmap_2"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(indexmap-2.0/serde) >= 2.0.0
+Requires:       crate(indexmap-2/serde) >= 2.0.0
 Provides:       crate(%{pkgname}/indexmap-2)
 
 %description -n %{name}+indexmap-2
@@ -206,7 +206,7 @@ This metapackage enables feature "schemars_1" for the Rust serde_with crate, by 
 %package     -n %{name}+smallvec-1
 Summary:        Custom de/serialization functions for Rust's serde - feature "smallvec_1"
 Requires:       crate(%{pkgname})
-Requires:       crate(smallvec-1.0) >= 1.0.0
+Requires:       crate(smallvec-1) >= 1.0.0
 Provides:       crate(%{pkgname}/smallvec-1)
 
 %description -n %{name}+smallvec-1

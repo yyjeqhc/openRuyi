@@ -23,7 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(base64-0.22/default) >= 0.22.1
 Requires:       crate(log-0.4/default) >= 0.4.29
-Requires:       crate(once-cell-1.0/default) >= 1.21.3
+Requires:       crate(once-cell-1/default) >= 1.21.3
 Requires:       crate(url-2/default) >= 2.5.8
 Provides:       crate(%{pkgname})
 Provides:       crate(%{pkgname}/proxy-from-env)

@@ -41,9 +41,9 @@ BuildRequires:  crate(serde-bytes-0.11) >= 0.11.19
 BuildRequires:  crate(serde-bytes-0.11/std) >= 0.11.19
 BuildRequires:  crate(simdutf8-0.1) >= 0.1.5
 BuildRequires:  crate(simdutf8-0.1/std) >= 0.1.5
-BuildRequires:  crate(smallvec-1.0) >= 1.15.0
-BuildRequires:  crate(smallvec-1.0/union) >= 1.15.0
-BuildRequires:  crate(smallvec-1.0/write) >= 1.15.0
+BuildRequires:  crate(smallvec-1) >= 1.15.0
+BuildRequires:  crate(smallvec-1/union) >= 1.15.0
+BuildRequires:  crate(smallvec-1/write) >= 1.15.0
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 Provides:       python3-%{srcname}%{?_isa} = %{version}-%{release}

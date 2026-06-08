@@ -20,8 +20,8 @@ Requires:       crate(libc-0.2/default) >= 0.2.0
 Requires:       crate(serde-1/default) >= 1.0.217
 Requires:       crate(serde-1/derive) >= 1.0.217
 Requires:       crate(serde-json-1/default) >= 1.0.138
-Requires:       crate(uuid-1.0/default) >= 1.12.1
-Requires:       crate(uuid-1.0/v4) >= 1.12.1
+Requires:       crate(uuid-1/default) >= 1.12.1
+Requires:       crate(uuid-1/v4) >= 1.12.1
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 

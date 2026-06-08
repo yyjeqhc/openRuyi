@@ -82,7 +82,7 @@ This metapackage enables feature "std" for the Rust gimli crate, by pulling in a
 %package     -n %{name}+write
 Summary:        Reading and writing the DWARF debugging format - feature "write"
 Requires:       crate(%{pkgname})
-Requires:       crate(indexmap-2.0/default) >= 2.0.0
+Requires:       crate(indexmap-2/default) >= 2.0.0
 Provides:       crate(%{pkgname}/write)
 
 %description -n %{name}+write

@@ -71,7 +71,7 @@ This metapackage enables feature "bits" for the Rust elliptic-curve crate, by pu
 Summary:        General purpose Elliptic Curve Cryptography (ECC) support, including types and traits for representing various elliptic curve forms, scalars, points, and public/secret keys composed thereof - feature "critical-section"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/basepoint-table)
-Requires:       crate(once-cell-1.0/critical-section) >= 1.21.4
+Requires:       crate(once-cell-1/critical-section) >= 1.21.4
 Provides:       crate(%{pkgname}/critical-section)
 
 %description -n %{name}+critical-section
@@ -152,7 +152,7 @@ Additionally, this package also provides the "arithmetic", "basepoint-table", an
 %package     -n %{name}+once-cell
 Summary:        General purpose Elliptic Curve Cryptography (ECC) support, including types and traits for representing various elliptic curve forms, scalars, points, and public/secret keys composed thereof - feature "once_cell"
 Requires:       crate(%{pkgname})
-Requires:       crate(once-cell-1.0) >= 1.21.4
+Requires:       crate(once-cell-1) >= 1.21.4
 Provides:       crate(%{pkgname}/once-cell)
 
 %description -n %{name}+once-cell
@@ -216,7 +216,7 @@ This metapackage enables feature "serde" for the Rust elliptic-curve crate, by p
 Summary:        General purpose Elliptic Curve Cryptography (ECC) support, including types and traits for representing various elliptic curve forms, scalars, points, and public/secret keys composed thereof - feature "std"
 Requires:       crate(%{pkgname})
 Requires:       crate(%{pkgname}/alloc)
-Requires:       crate(once-cell-1.0/std) >= 1.21.4
+Requires:       crate(once-cell-1/std) >= 1.21.4
 Requires:       crate(pkcs8-0.11.0-rc.11/std) >= 0.11.0-rc.11
 Requires:       crate(sec1-0.8/ctutils) >= 0.8.1
 Requires:       crate(sec1-0.8/std) >= 0.8.1
