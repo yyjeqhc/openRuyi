@@ -1,14 +1,14 @@
 %global crate_name serde_with_macros
-%global full_version 3.18.0
+%global full_version 3.20.0
 %global pkgname serde-with-macros-3
 
 Name:           rust-serde-with-macros-3
-Version:        3.18.0
+Version:        3.20.0
 Release:        %autorelease
 Summary:        Rust crate "serde_with_macros"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/jonasbb/serde_with/
-#!RemoteAsset:  sha256:d3db8978e608f1fe7357e211969fd9abdcae80bac1ba7a3369bb7eb6b404eb65
+#!RemoteAsset:  sha256:b90c488738ecb4fb0262f41f43bc40efc5868d9fb744319ddf5f5317f417bfac
 Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
