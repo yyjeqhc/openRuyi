@@ -15,20 +15,19 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(autocfg-1/default) >= 1.5.0
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/i128)
-Provides:       crate(%{pkgname}/std)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/i128) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
 
 %description
 Source code for takopackized Rust crate "num-traits"
 
 %package     -n %{name}+libm
 Summary:        Numeric traits for generic mathematics - feature "libm"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(libm-0.2/default) >= 0.2.0
-Provides:       crate(%{pkgname}/libm)
+Provides:       crate(%{pkgname}/libm) = %{version}
 
 %description -n %{name}+libm
 This metapackage enables feature "libm" for the Rust num-traits crate, by pulling in any additional dependencies needed by that feature.

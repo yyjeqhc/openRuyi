@@ -15,10 +15,10 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(gdbstub-0.7) >= 0.7.10
-Requires:       crate(num-traits-0.2) >= 0.2.19
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
+Requires:       crate(gdbstub-0.7) >= 0.7.0
+Requires:       crate(num-traits-0.2) >= 0.2.0
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
 Source code for takopackized Rust crate "gdbstub_arch"

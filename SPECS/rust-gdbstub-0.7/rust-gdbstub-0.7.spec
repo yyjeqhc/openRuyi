@@ -15,27 +15,27 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitflags-2/default) >= 2.11.1
-Requires:       crate(cfg-if-1/default) >= 1.0.4
-Requires:       crate(log-0.4/default) >= 0.4.29
+Requires:       crate(bitflags-2/default) >= 2.3.1
+Requires:       crate(cfg-if-1/default) >= 1.0.0
+Requires:       crate(log-0.4/default) >= 0.4.0
 Requires:       crate(managed-0.8) >= 0.8.0
-Requires:       crate(num-traits-0.2) >= 0.2.19
-Requires:       crate(pastey-0.2/default) >= 0.2.2
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/dead-code-marker)
-Provides:       crate(%{pkgname}/core-error)
-Provides:       crate(%{pkgname}/paranoid-unsafe)
+Requires:       crate(num-traits-0.2) >= 0.2.0
+Requires:       crate(pastey-0.2/default) >= 0.2.1
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/core-error) = %{version}
+Provides:       crate(%{pkgname}/dead-code-marker) = %{version}
+Provides:       crate(%{pkgname}/paranoid-unsafe) = %{version}
 
 %description
 Source code for takopackized Rust crate "gdbstub"
 
 %package     -n %{name}+alloc
 Summary:        The GDB Remote Serial Protocol in Rust - feature "alloc" and 2 more
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(managed-0.8/alloc) >= 0.8.0
-Provides:       crate(%{pkgname}/alloc)
-Provides:       crate(%{pkgname}/std)
-Provides:       crate(%{pkgname}/trace-pkt)
+Provides:       crate(%{pkgname}/alloc) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
+Provides:       crate(%{pkgname}/trace-pkt) = %{version}
 
 %description -n %{name}+alloc
 This metapackage enables feature "alloc" for the Rust gdbstub crate, by pulling in any additional dependencies needed by that feature.
@@ -44,10 +44,10 @@ Additionally, this package also provides the "std", and "trace-pkt" features.
 
 %package     -n %{name}+default
 Summary:        The GDB Remote Serial Protocol in Rust - feature "default"
-Requires:       crate(%{pkgname})
-Requires:       crate(%{pkgname}/std)
-Requires:       crate(%{pkgname}/trace-pkt)
-Provides:       crate(%{pkgname}/default)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(%{pkgname}/std) = %{version}
+Requires:       crate(%{pkgname}/trace-pkt) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description -n %{name}+default
 This metapackage enables feature "default" for the Rust gdbstub crate, by pulling in any additional dependencies needed by that feature.

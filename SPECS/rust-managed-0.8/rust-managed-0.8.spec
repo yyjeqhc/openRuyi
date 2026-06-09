@@ -15,11 +15,11 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/alloc)
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/map)
-Provides:       crate(%{pkgname}/std)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/alloc) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/map) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
 
 %description
 Source code for takopackized Rust crate "managed"
