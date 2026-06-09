@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name libssh2-sys
 %global full_version 0.3.1
 %global pkgname libssh2-sys-0.3
@@ -21,24 +15,21 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(cc-1/default) >= 1.2.61
-Requires:       crate(libc-0.2/default) >= 0.2.186
-Requires:       crate(libz-sys-1/libc) >= 1.1.28
-Requires:       crate(openssl-sys-0.9/default) >= 0.9.115
-Requires:       crate(pkg-config-0.3/default) >= 0.3.33
-Requires:       crate(vcpkg-0.2/default) >= 0.2.15
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
+Requires:       crate(libc-0.2/default) >= 0.2.0
+Requires:       crate(libz-sys-1/libc) >= 1.1.0
+Requires:       crate(openssl-sys-0.9/default) >= 0.9.35
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
 Source code for takopackized Rust crate "libssh2-sys"
 
 %package     -n %{name}+openssl-sys
 Summary:        Native bindings to the libssh2 library - feature "openssl-sys" and 1 more
-Requires:       crate(%{pkgname})
-Requires:       crate(openssl-sys-0.9/default) >= 0.9.115
-Provides:       crate(%{pkgname}/openssl-on-win32)
-Provides:       crate(%{pkgname}/openssl-sys)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(openssl-sys-0.9/default) >= 0.9.35
+Provides:       crate(%{pkgname}/openssl-on-win32) = %{version}
+Provides:       crate(%{pkgname}/openssl-sys) = %{version}
 
 %description -n %{name}+openssl-sys
 This metapackage enables feature "openssl-sys" for the Rust libssh2-sys crate, by pulling in any additional dependencies needed by that feature.
@@ -47,19 +38,19 @@ Additionally, this package also provides the "openssl-on-win32" feature.
 
 %package     -n %{name}+vendored-openssl
 Summary:        Native bindings to the libssh2 library - feature "vendored-openssl"
-Requires:       crate(%{pkgname})
-Requires:       crate(openssl-sys-0.9/vendored) >= 0.9.115
-Provides:       crate(%{pkgname}/vendored-openssl)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(openssl-sys-0.9/vendored) >= 0.9.35
+Provides:       crate(%{pkgname}/vendored-openssl) = %{version}
 
 %description -n %{name}+vendored-openssl
 This metapackage enables feature "vendored-openssl" for the Rust libssh2-sys crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+zlib-ng-compat
 Summary:        Native bindings to the libssh2 library - feature "zlib-ng-compat"
-Requires:       crate(%{pkgname})
-Requires:       crate(libz-sys-1/libc) >= 1.1.28
-Requires:       crate(libz-sys-1/zlib-ng) >= 1.1.28
-Provides:       crate(%{pkgname}/zlib-ng-compat)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(libz-sys-1/libc) >= 1.1.0
+Requires:       crate(libz-sys-1/zlib-ng) >= 1.1.0
+Provides:       crate(%{pkgname}/zlib-ng-compat) = %{version}
 
 %description -n %{name}+zlib-ng-compat
 This metapackage enables feature "zlib-ng-compat" for the Rust libssh2-sys crate, by pulling in any additional dependencies needed by that feature.

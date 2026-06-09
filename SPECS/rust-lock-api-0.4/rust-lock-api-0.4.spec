@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name lock_api
 %global full_version 0.4.14
 %global pkgname lock-api-0.4
@@ -21,12 +15,12 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(scopeguard-1) >= 1.2.0
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/arc-lock)
-Provides:       crate(%{pkgname}/atomic-usize)
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/nightly)
+Requires:       crate(scopeguard-1) >= 1.1.0
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/arc-lock) = %{version}
+Provides:       crate(%{pkgname}/atomic-usize) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/nightly) = %{version}
 
 %description
 Compatible with no_std.
@@ -34,9 +28,9 @@ Source code for takopackized Rust crate "lock_api"
 
 %package     -n %{name}+owning-ref
 Summary:        Wrappers to create fully-featured Mutex and RwLock types - feature "owning_ref"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(owning-ref-0.4/default) >= 0.4.1
-Provides:       crate(%{pkgname}/owning-ref)
+Provides:       crate(%{pkgname}/owning-ref) = %{version}
 
 %description -n %{name}+owning-ref
 Compatible with no_std.
@@ -44,9 +38,9 @@ This metapackage enables feature "owning_ref" for the Rust lock_api crate, by pu
 
 %package     -n %{name}+serde
 Summary:        Wrappers to create fully-featured Mutex and RwLock types - feature "serde"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(serde-1) >= 1.0.126
-Provides:       crate(%{pkgname}/serde)
+Provides:       crate(%{pkgname}/serde) = %{version}
 
 %description -n %{name}+serde
 Compatible with no_std.

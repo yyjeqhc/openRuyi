@@ -15,30 +15,30 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitflags-2/default) >= 2.11.1
-Requires:       crate(libc-0.2/default) >= 0.2.186
+Requires:       crate(bitflags-2/default) >= 2.0.0
+Requires:       crate(libc-0.2/default) >= 0.2.0
 Requires:       crate(libssh2-sys-0.3/default) >= 0.3.1
-Requires:       crate(parking-lot-0.12/default) >= 0.12.5
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
+Requires:       crate(parking-lot-0.12/default) >= 0.12.0
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
 Source code for takopackized Rust crate "ssh2"
 
 %package     -n %{name}+openssl-on-win32
 Summary:        Bindings to libssh2 for interacting with SSH servers and executing remote commands, forwarding local ports, etc - feature "openssl-on-win32"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(libssh2-sys-0.3/openssl-on-win32) >= 0.3.1
-Provides:       crate(%{pkgname}/openssl-on-win32)
+Provides:       crate(%{pkgname}/openssl-on-win32) = %{version}
 
 %description -n %{name}+openssl-on-win32
 This metapackage enables feature "openssl-on-win32" for the Rust ssh2 crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+vendored-openssl
 Summary:        Bindings to libssh2 for interacting with SSH servers and executing remote commands, forwarding local ports, etc - feature "vendored-openssl"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(libssh2-sys-0.3/vendored-openssl) >= 0.3.1
-Provides:       crate(%{pkgname}/vendored-openssl)
+Provides:       crate(%{pkgname}/vendored-openssl) = %{version}
 
 %description -n %{name}+vendored-openssl
 This metapackage enables feature "vendored-openssl" for the Rust ssh2 crate, by pulling in any additional dependencies needed by that feature.

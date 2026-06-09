@@ -15,42 +15,41 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(cfg-if-1/default) >= 1.0.4
-Requires:       crate(libc-0.2/default) >= 0.2.186
-Requires:       crate(redox-syscall-0.5/default) >= 0.5.18
-Requires:       crate(smallvec-1/default) >= 1.15.1
-Requires:       crate(windows-link-0.2/default) >= 0.2.1
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/nightly)
+Requires:       crate(cfg-if-1/default) >= 1.0.0
+Requires:       crate(libc-0.2/default) >= 0.2.95
+Requires:       crate(redox-syscall-0.5/default) >= 0.5.0
+Requires:       crate(smallvec-1/default) >= 1.6.1
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/nightly) = %{version}
 
 %description
 Source code for takopackized Rust crate "parking_lot_core"
 
 %package     -n %{name}+backtrace
 Summary:        Advanced API for creating custom synchronization primitives - feature "backtrace"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(backtrace-0.3/default) >= 0.3.60
-Provides:       crate(%{pkgname}/backtrace)
+Provides:       crate(%{pkgname}/backtrace) = %{version}
 
 %description -n %{name}+backtrace
 This metapackage enables feature "backtrace" for the Rust parking_lot_core crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+deadlock-detection
 Summary:        Advanced API for creating custom synchronization primitives - feature "deadlock_detection"
-Requires:       crate(%{pkgname})
-Requires:       crate(%{pkgname}/backtrace)
-Requires:       crate(%{pkgname}/petgraph)
-Provides:       crate(%{pkgname}/deadlock-detection)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(%{pkgname}/backtrace) = %{version}
+Requires:       crate(%{pkgname}/petgraph) = %{version}
+Provides:       crate(%{pkgname}/deadlock-detection) = %{version}
 
 %description -n %{name}+deadlock-detection
 This metapackage enables feature "deadlock_detection" for the Rust parking_lot_core crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+petgraph
 Summary:        Advanced API for creating custom synchronization primitives - feature "petgraph"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(petgraph-0.6/default) >= 0.6.0
-Provides:       crate(%{pkgname}/petgraph)
+Provides:       crate(%{pkgname}/petgraph) = %{version}
 
 %description -n %{name}+petgraph
 This metapackage enables feature "petgraph" for the Rust parking_lot_core crate, by pulling in any additional dependencies needed by that feature.
