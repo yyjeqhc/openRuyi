@@ -15,19 +15,19 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/nightly)
-Provides:       crate(%{pkgname}/std)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/nightly) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
 
 %description
 Source code for takopackized Rust crate "crossbeam-utils"
 
 %package     -n %{name}+loom
 Summary:        Utilities for concurrent programming - feature "loom"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(loom-0.7/default) >= 0.7.1
-Provides:       crate(%{pkgname}/loom)
+Provides:       crate(%{pkgname}/loom) = %{version}
 
 %description -n %{name}+loom
 This metapackage enables feature "loom" for the Rust crossbeam-utils crate, by pulling in any additional dependencies needed by that feature.

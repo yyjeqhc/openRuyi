@@ -15,18 +15,18 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(proc-macro2-1/default) >= 1.0.106
-Requires:       crate(quote-1/default) >= 1.0.45
-Requires:       crate(syn-2/clone-impls) >= 2.0.117
-Requires:       crate(syn-2/extra-traits) >= 2.0.117
-Requires:       crate(syn-2/full) >= 2.0.117
-Requires:       crate(syn-2/parsing) >= 2.0.117
-Requires:       crate(syn-2/printing) >= 2.0.117
-Requires:       crate(syn-2/proc-macro) >= 2.0.117
-Requires:       crate(syn-2/visit-mut) >= 2.0.117
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/async-await)
-Provides:       crate(%{pkgname}/default)
+Requires:       crate(proc-macro2-1/default) >= 1.0.60
+Requires:       crate(quote-1/default) >= 1.0.20
+Requires:       crate(syn-2/clone-impls) >= 2.0.0
+Requires:       crate(syn-2/extra-traits) >= 2.0.0
+Requires:       crate(syn-2/full) >= 2.0.0
+Requires:       crate(syn-2/parsing) >= 2.0.0
+Requires:       crate(syn-2/printing) >= 2.0.0
+Requires:       crate(syn-2/proc-macro) >= 2.0.0
+Requires:       crate(syn-2/visit-mut) >= 2.0.0
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/async-await) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
 Source code for takopackized Rust crate "tracing-attributes"

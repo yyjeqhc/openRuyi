@@ -15,28 +15,28 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(crossbeam-utils-0.8) >= 0.8.21
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/std)
+Requires:       crate(crossbeam-utils-0.8) >= 0.8.11
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
 
 %description
 Source code for takopackized Rust crate "concurrent-queue"
 
 %package     -n %{name}+loom
 Summary:        Concurrent multi-producer multi-consumer queue - feature "loom"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(loom-0.7/default) >= 0.7.0
-Provides:       crate(%{pkgname}/loom)
+Provides:       crate(%{pkgname}/loom) = %{version}
 
 %description -n %{name}+loom
 This metapackage enables feature "loom" for the Rust concurrent-queue crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+portable-atomic
 Summary:        Concurrent multi-producer multi-consumer queue - feature "portable-atomic"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(portable-atomic-1) >= 1.0.0
-Provides:       crate(%{pkgname}/portable-atomic)
+Provides:       crate(%{pkgname}/portable-atomic) = %{version}
 
 %description -n %{name}+portable-atomic
 This metapackage enables feature "portable-atomic" for the Rust concurrent-queue crate, by pulling in any additional dependencies needed by that feature.

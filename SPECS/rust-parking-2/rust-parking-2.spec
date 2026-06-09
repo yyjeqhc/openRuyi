@@ -15,17 +15,17 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
 Source code for takopackized Rust crate "parking"
 
 %package     -n %{name}+loom
 Summary:        Thread parking and unparking - feature "loom"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(loom-0.7/default) >= 0.7.0
-Provides:       crate(%{pkgname}/loom)
+Provides:       crate(%{pkgname}/loom) = %{version}
 
 %description -n %{name}+loom
 This metapackage enables feature "loom" for the Rust parking crate, by pulling in any additional dependencies needed by that feature.

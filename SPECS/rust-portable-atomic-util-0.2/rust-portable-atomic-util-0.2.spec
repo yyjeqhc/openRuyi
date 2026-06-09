@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name portable-atomic-util
 %global full_version 0.2.7
 %global pkgname portable-atomic-util-0.2
@@ -21,20 +15,20 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(portable-atomic-1/require-cas) >= 1.13.1
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/alloc)
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/std)
+Requires:       crate(portable-atomic-1/require-cas) >= 1.5.1
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/alloc) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
 
 %description
 Source code for takopackized Rust crate "portable-atomic-util"
 
 %package     -n %{name}+serde
 Summary:        Synchronization primitives built with portable-atomic - feature "serde"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(serde-1) >= 1.0.60
-Provides:       crate(%{pkgname}/serde)
+Provides:       crate(%{pkgname}/serde) = %{version}
 
 %description -n %{name}+serde
 This metapackage enables feature "serde" for the Rust portable-atomic-util crate, by pulling in any additional dependencies needed by that feature.

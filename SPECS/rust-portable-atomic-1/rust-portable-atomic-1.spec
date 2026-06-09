@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name portable-atomic
 %global full_version 1.13.1
 %global pkgname portable-atomic-1
@@ -21,35 +15,35 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/disable-fiq)
-Provides:       crate(%{pkgname}/fallback)
-Provides:       crate(%{pkgname}/float)
-Provides:       crate(%{pkgname}/force-amo)
-Provides:       crate(%{pkgname}/require-cas)
-Provides:       crate(%{pkgname}/s-mode)
-Provides:       crate(%{pkgname}/std)
-Provides:       crate(%{pkgname}/unsafe-assume-privileged)
-Provides:       crate(%{pkgname}/unsafe-assume-single-core)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/disable-fiq) = %{version}
+Provides:       crate(%{pkgname}/fallback) = %{version}
+Provides:       crate(%{pkgname}/float) = %{version}
+Provides:       crate(%{pkgname}/force-amo) = %{version}
+Provides:       crate(%{pkgname}/require-cas) = %{version}
+Provides:       crate(%{pkgname}/s-mode) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
+Provides:       crate(%{pkgname}/unsafe-assume-privileged) = %{version}
+Provides:       crate(%{pkgname}/unsafe-assume-single-core) = %{version}
 
 %description
 Source code for takopackized Rust crate "portable-atomic"
 
 %package     -n %{name}+critical-section
 Summary:        Portable atomic types including support for 128-bit atomics, atomic float, etc - feature "critical-section"
-Requires:       crate(%{pkgname})
-Requires:       crate(critical-section-1.0/default) >= 1.0.0
-Provides:       crate(%{pkgname}/critical-section)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(critical-section-1/default) >= 1.0.0
+Provides:       crate(%{pkgname}/critical-section) = %{version}
 
 %description -n %{name}+critical-section
 This metapackage enables feature "critical-section" for the Rust portable-atomic crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+serde
 Summary:        Portable atomic types including support for 128-bit atomics, atomic float, etc - feature "serde"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(serde-1) >= 1.0.60
-Provides:       crate(%{pkgname}/serde)
+Provides:       crate(%{pkgname}/serde) = %{version}
 
 %description -n %{name}+serde
 This metapackage enables feature "serde" for the Rust portable-atomic crate, by pulling in any additional dependencies needed by that feature.
