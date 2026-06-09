@@ -15,33 +15,33 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname}) = %{full_version}
-Provides:       crate(%{pkgname}/bindgen) = %{full_version}
-Provides:       crate(%{pkgname}/debug) = %{full_version}
-Provides:       crate(%{pkgname}/experimental) = %{full_version}
-Provides:       crate(%{pkgname}/fat-lto) = %{full_version}
-Provides:       crate(%{pkgname}/legacy) = %{full_version}
-Provides:       crate(%{pkgname}/no-asm) = %{full_version}
-Provides:       crate(%{pkgname}/no-wasm-shim) = %{full_version}
-Provides:       crate(%{pkgname}/non-cargo) = %{full_version}
-Provides:       crate(%{pkgname}/pkg-config) = %{full_version}
-Provides:       crate(%{pkgname}/seekable) = %{full_version}
-Provides:       crate(%{pkgname}/std) = %{full_version}
-Provides:       crate(%{pkgname}/thin) = %{full_version}
-Provides:       crate(%{pkgname}/thin-lto) = %{full_version}
-Provides:       crate(%{pkgname}/zdict-builder) = %{full_version}
-Provides:       crate(%{pkgname}/zstdmt) = %{full_version}
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/bindgen) = %{version}
+Provides:       crate(%{pkgname}/debug) = %{version}
+Provides:       crate(%{pkgname}/experimental) = %{version}
+Provides:       crate(%{pkgname}/fat-lto) = %{version}
+Provides:       crate(%{pkgname}/legacy) = %{version}
+Provides:       crate(%{pkgname}/no-asm) = %{version}
+Provides:       crate(%{pkgname}/no-wasm-shim) = %{version}
+Provides:       crate(%{pkgname}/non-cargo) = %{version}
+Provides:       crate(%{pkgname}/pkg-config) = %{version}
+Provides:       crate(%{pkgname}/seekable) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
+Provides:       crate(%{pkgname}/thin) = %{version}
+Provides:       crate(%{pkgname}/thin-lto) = %{version}
+Provides:       crate(%{pkgname}/zdict-builder) = %{version}
+Provides:       crate(%{pkgname}/zstdmt) = %{version}
 
 %description
 Source code for takopackized Rust crate "zstd-sys"
 
 %package     -n %{name}+default
 Summary:        Low-level bindings for the zstd compression library - feature "default"
-Requires:       crate(%{pkgname}) = %{full_version}
-Requires:       crate(%{pkgname}/bindgen) = %{full_version}
-Requires:       crate(%{pkgname}/legacy) = %{full_version}
-Requires:       crate(%{pkgname}/zdict-builder) = %{full_version}
-Provides:       crate(%{pkgname}/default) = %{full_version}
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(%{pkgname}/bindgen) = %{version}
+Requires:       crate(%{pkgname}/legacy) = %{version}
+Requires:       crate(%{pkgname}/zdict-builder) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description -n %{name}+default
 This metapackage enables feature "default" for the Rust zstd-sys crate, by pulling in any additional dependencies needed by that feature.
