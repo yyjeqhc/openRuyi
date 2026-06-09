@@ -18,13 +18,8 @@ License:        Apache-2.0 OR BSD-3-Clause
 %global ch_commit 829676e6403ff3fa711c9e901f90f05737c08b88
 %global micro_http_commit 876f3feccc30e09225f2c77bf95a6b2d46a9259e
 
-#!RemoteAsset:  git+https://github.com/cloud-hypervisor/cloud-hypervisor.git#%{ch_commit}
-#!CreateArchive
-Source0:        %{name}-%{ch_commit}.tar.gz
-
-#!RemoteAsset:  git+https://github.com/firecracker-microvm/micro-http.git#%{micro_http_commit}
-#!CreateArchive
-Source1:        micro-http-%{micro_http_commit}.tar.gz
+Source0:        https://github.com/cloud-hypervisor/cloud-hypervisor/archive/%{ch_commit}/%{name}-%{ch_commit}.tar.gz
+Source1:        https://github.com/firecracker-microvm/micro-http/archive/%{micro_http_commit}/micro-http-%{micro_http_commit}.tar.gz
 
 BuildSystem:    rust
 
@@ -528,10 +523,10 @@ BuildRequires:  crate(zstd-safe-7/arrays) >= 7.2.4
 BuildRequires:  crate(zstd-safe-7/legacy) >= 7.2.4
 BuildRequires:  crate(zstd-safe-7/std) >= 7.2.4
 BuildRequires:  crate(zstd-safe-7/zdict-builder) >= 7.2.4
-BuildRequires:  crate(zstd-sys-2) >= 2.0.16+zstd.1.5.7
-BuildRequires:  crate(zstd-sys-2/legacy) >= 2.0.16+zstd.1.5.7
-BuildRequires:  crate(zstd-sys-2/std) >= 2.0.16+zstd.1.5.7
-BuildRequires:  crate(zstd-sys-2/zdict-builder) >= 2.0.16+zstd.1.5.7
+BuildRequires:  crate(zstd-sys-2) >= 2.0.16
+BuildRequires:  crate(zstd-sys-2/legacy) >= 2.0.16
+BuildRequires:  crate(zstd-sys-2/std) >= 2.0.16
+BuildRequires:  crate(zstd-sys-2/zdict-builder) >= 2.0.16
 
 Requires:       bash
 Requires:       glibc
