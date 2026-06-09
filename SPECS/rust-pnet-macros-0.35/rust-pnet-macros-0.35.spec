@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name pnet_macros
 %global full_version 0.35.0
 %global pkgname pnet-macros-0.35
@@ -21,14 +15,14 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(proc-macro2-1/default) >= 1.0.106
-Requires:       crate(quote-1/default) >= 1.0.45
-Requires:       crate(regex-1/default) >= 1.12.3
-Requires:       crate(syn-2/default) >= 2.0.117
-Requires:       crate(syn-2/full) >= 2.0.117
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/travis)
+Requires:       crate(proc-macro2-1/default) >= 1.0.66
+Requires:       crate(quote-1/default) >= 1.0.31
+Requires:       crate(regex-1/default) >= 1.9.1
+Requires:       crate(syn-2/default) >= 2.0.26
+Requires:       crate(syn-2/full) >= 2.0.26
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/travis) = %{version}
 
 %description
 Source code for takopackized Rust crate "pnet_macros"

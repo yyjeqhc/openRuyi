@@ -15,21 +15,20 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(glob-0.3/default) >= 0.3.3
 Requires:       crate(pnet-base-0.35) >= 0.35.0
 Requires:       crate(pnet-macros-0.35/default) >= 0.35.0
 Requires:       crate(pnet-macros-support-0.35/default) >= 0.35.0
-Provides:       crate(%{pkgname})
+Provides:       crate(%{pkgname}) = %{version}
 
 %description
 Source code for takopackized Rust crate "pnet_packet"
 
 %package     -n %{name}+std
 Summary:        Cross-platform, binary packet parsing and manipulation - feature "std" and 1 more
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(pnet-base-0.35/std) >= 0.35.0
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/std)
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
 
 %description -n %{name}+std
 This metapackage enables feature "std" for the Rust pnet_packet crate, by pulling in any additional dependencies needed by that feature.

@@ -15,21 +15,21 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(libc-0.2/default) >= 0.2.186
+Requires:       crate(libc-0.2/default) >= 0.2.147
 Requires:       crate(pnet-base-0.35) >= 0.35.0
 Requires:       crate(pnet-packet-0.35/default) >= 0.35.0
 Requires:       crate(pnet-sys-0.35/default) >= 0.35.0
-Provides:       crate(%{pkgname})
+Provides:       crate(%{pkgname}) = %{version}
 
 %description
 Source code for takopackized Rust crate "pnet_transport"
 
 %package     -n %{name}+std
 Summary:        Cross-platform, transport layer networking - feature "std" and 1 more
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(pnet-base-0.35/std) >= 0.35.0
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/std)
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
 
 %description -n %{name}+std
 This metapackage enables feature "std" for the Rust pnet_transport crate, by pulling in any additional dependencies needed by that feature.
