@@ -15,14 +15,14 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(proc-macro2-1/default) >= 1.0.106
-Requires:       crate(quote-1/default) >= 1.0.45
-Requires:       crate(syn-2/derive) >= 2.0.117
-Requires:       crate(syn-2/parsing) >= 2.0.117
-Requires:       crate(syn-2/printing) >= 2.0.117
-Requires:       crate(syn-2/proc-macro) >= 2.0.117
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
+Requires:       crate(proc-macro2-1/default) >= 1.0.0
+Requires:       crate(quote-1/default) >= 1.0.0
+Requires:       crate(syn-2/derive) >= 2.0.0
+Requires:       crate(syn-2/parsing) >= 2.0.0
+Requires:       crate(syn-2/printing) >= 2.0.0
+Requires:       crate(syn-2/proc-macro) >= 2.0.0
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
 This allows for better compatibility across versions.

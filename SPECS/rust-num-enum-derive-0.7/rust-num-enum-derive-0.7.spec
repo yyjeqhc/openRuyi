@@ -15,37 +15,37 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(proc-macro2-1/default) >= 1.0.106
-Requires:       crate(quote-1/default) >= 1.0.45
-Requires:       crate(syn-2/default) >= 2.0.117
-Requires:       crate(syn-2/derive) >= 2.0.117
-Requires:       crate(syn-2/extra-traits) >= 2.0.117
-Requires:       crate(syn-2/parsing) >= 2.0.117
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/external-doc)
+Requires:       crate(proc-macro2-1/default) >= 1.0.60
+Requires:       crate(quote-1/default) >= 1.0.0
+Requires:       crate(syn-2/default) >= 2.0.0
+Requires:       crate(syn-2/derive) >= 2.0.0
+Requires:       crate(syn-2/extra-traits) >= 2.0.0
+Requires:       crate(syn-2/parsing) >= 2.0.0
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/external-doc) = %{version}
 
 %description
 Source code for takopackized Rust crate "num_enum_derive"
 
 %package     -n %{name}+complex-expressions
 Summary:        Internal implementation details for ::num_enum (Procedural macros to make inter-operation between primitives and enums easier) - feature "complex-expressions"
-Requires:       crate(%{pkgname})
-Requires:       crate(syn-2/derive) >= 2.0.117
-Requires:       crate(syn-2/extra-traits) >= 2.0.117
-Requires:       crate(syn-2/full) >= 2.0.117
-Requires:       crate(syn-2/parsing) >= 2.0.117
-Provides:       crate(%{pkgname}/complex-expressions)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(syn-2/derive) >= 2.0.0
+Requires:       crate(syn-2/extra-traits) >= 2.0.0
+Requires:       crate(syn-2/full) >= 2.0.0
+Requires:       crate(syn-2/parsing) >= 2.0.0
+Provides:       crate(%{pkgname}/complex-expressions) = %{version}
 
 %description -n %{name}+complex-expressions
 This metapackage enables feature "complex-expressions" for the Rust num_enum_derive crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+proc-macro-crate
 Summary:        Internal implementation details for ::num_enum (Procedural macros to make inter-operation between primitives and enums easier) - feature "proc-macro-crate" and 2 more
-Requires:       crate(%{pkgname})
-Requires:       crate(proc-macro-crate-3/default) >= 3.5.0
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/proc-macro-crate)
-Provides:       crate(%{pkgname}/std)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(proc-macro-crate-1/default) >= 1.0.0
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/proc-macro-crate) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
 
 %description -n %{name}+proc-macro-crate
 This metapackage enables feature "proc-macro-crate" for the Rust num_enum_derive crate, by pulling in any additional dependencies needed by that feature.
