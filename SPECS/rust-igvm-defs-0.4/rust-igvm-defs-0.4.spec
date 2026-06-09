@@ -15,14 +15,14 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitfield-struct-0.10/default) >= 0.10.1
+Requires:       crate(bitfield-struct-0.10/default) >= 0.10.0
 Requires:       crate(open-enum-0.5/default) >= 0.5.2
 Requires:       crate(static-assertions-1/default) >= 1.1.0
-Requires:       crate(zerocopy-0.8/default) >= 0.8.48
-Requires:       crate(zerocopy-0.8/derive) >= 0.8.48
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/unstable)
+Requires:       crate(zerocopy-0.8/default) >= 0.8.14
+Requires:       crate(zerocopy-0.8/derive) >= 0.8.14
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/unstable) = %{version}
 
 %description
 Source code for takopackized Rust crate "igvm_defs"

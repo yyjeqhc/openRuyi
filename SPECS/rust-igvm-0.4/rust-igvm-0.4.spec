@@ -15,22 +15,22 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(bitfield-struct-0.10/default) >= 0.10.1
-Requires:       crate(crc32fast-1) >= 1.5.0
-Requires:       crate(hex-0.4/alloc) >= 0.4.3
+Requires:       crate(bitfield-struct-0.10/default) >= 0.10.0
+Requires:       crate(crc32fast-1) >= 1.3.2
+Requires:       crate(hex-0.4/alloc) >= 0.4.0
 Requires:       crate(igvm-defs-0.4/default) >= 0.4.0
 Requires:       crate(igvm-defs-0.4/unstable) >= 0.4.0
 Requires:       crate(open-enum-0.5/default) >= 0.5.2
 Requires:       crate(range-map-vec-0.2/default) >= 0.2.0
 Requires:       crate(static-assertions-1/default) >= 1.1.0
-Requires:       crate(thiserror-2/default) >= 2.0.18
-Requires:       crate(tracing-0.1/default) >= 0.1.44
-Requires:       crate(zerocopy-0.8/alloc) >= 0.8.48
-Requires:       crate(zerocopy-0.8/default) >= 0.8.48
-Requires:       crate(zerocopy-0.8/derive) >= 0.8.48
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/igvm-c)
+Requires:       crate(thiserror-2/default) >= 2.0.0
+Requires:       crate(tracing-0.1/default) >= 0.1.0
+Requires:       crate(zerocopy-0.8/alloc) >= 0.8.14
+Requires:       crate(zerocopy-0.8/default) >= 0.8.14
+Requires:       crate(zerocopy-0.8/derive) >= 0.8.14
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/igvm-c) = %{version}
 
 %description
 Source code for takopackized Rust crate "igvm"
