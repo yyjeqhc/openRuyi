@@ -15,12 +15,12 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(event-listener-5/default) >= 5.4.1
-Requires:       crate(event-listener-strategy-0.5/default) >= 0.5.4
-Requires:       crate(futures-core-0.3/default) >= 0.3.32
-Requires:       crate(pin-project-lite-0.2/default) >= 0.2.17
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
+Requires:       crate(event-listener-5/default) >= 5.0.0
+Requires:       crate(event-listener-strategy-0.5/default) >= 0.5.0
+Requires:       crate(futures-core-0.3/default) >= 0.3.21
+Requires:       crate(pin-project-lite-0.2/default) >= 0.2.13
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
 Source code for takopackized Rust crate "async-broadcast"

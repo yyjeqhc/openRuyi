@@ -15,11 +15,11 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(proc-macro2-1/default) >= 1.0.106
-Requires:       crate(quote-1/default) >= 1.0.45
-Requires:       crate(syn-2/default) >= 2.0.117
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
+Requires:       crate(proc-macro2-1/default) >= 1.0.74
+Requires:       crate(quote-1/default) >= 1.0.35
+Requires:       crate(syn-2/default) >= 2.0.46
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
 Source code for takopackized Rust crate "serde_repr"
