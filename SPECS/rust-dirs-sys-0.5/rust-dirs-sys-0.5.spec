@@ -15,16 +15,11 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(libc-0.2/default) >= 0.2.186
+Requires:       crate(libc-0.2/default) >= 0.2.0
 Requires:       crate(option-ext-0.2/default) >= 0.2.0
-Requires:       crate(redox-users-0.5) >= 0.5.2
-Requires:       crate(windows-sys-0.61/default) >= 0.61.2
-Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.2
-Requires:       crate(windows-sys-0.61/win32-globalization) >= 0.61.2
-Requires:       crate(windows-sys-0.61/win32-system-com) >= 0.61.2
-Requires:       crate(windows-sys-0.61/win32-ui-shell) >= 0.61.2
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
+Requires:       crate(redox-users-0.5) >= 0.5.0
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
 Source code for takopackized Rust crate "dirs-sys"
