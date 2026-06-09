@@ -1,19 +1,14 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name cc
-%global full_version 1.2.61
+%global full_version 1.2.63
 %global pkgname cc-1
 
 Name:           rust-cc-1
-Version:        1.2.61
+Version:        1.2.63
 Release:        %autorelease
 Summary:        Rust crate "cc"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-lang/cc-rs
-#!RemoteAsset:  sha256:d16d90359e986641506914ba71350897565610e87ce0ad9e6f28569db3dd5c6d
+#!RemoteAsset:  sha256:556e016178bb5662a08681bbe0f00f8e17631781a4dfc8c45e466e4b185ec27f
 Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -21,7 +16,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(find-msvc-tools-0.1/default) >= 0.1.9
-Requires:       crate(shlex-1/default) >= 1.3.0
+Requires:       crate(shlex-2/default) >= 2.0.1
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/jobserver) = %{version}

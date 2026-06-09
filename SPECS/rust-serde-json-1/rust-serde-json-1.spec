@@ -1,19 +1,14 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name serde_json
-%global full_version 1.0.149
+%global full_version 1.0.150
 %global pkgname serde-json-1
 
 Name:           rust-serde-json-1
-Version:        1.0.149
+Version:        1.0.150
 Release:        %autorelease
 Summary:        Rust crate "serde_json"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/serde-rs/json
-#!RemoteAsset:  sha256:83fc039473c5595ace860d8c4fafa220ff474b3fc6bfdb4293327f1a37e94d86
+#!RemoteAsset:  sha256:e8014e44b4736ed0538adeecded0fce2a272f22dc9578a7eb6b2d9993c74cfb9
 Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates

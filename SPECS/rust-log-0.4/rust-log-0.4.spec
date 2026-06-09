@@ -1,14 +1,14 @@
 %global crate_name log
-%global full_version 0.4.29
+%global full_version 0.4.30
 %global pkgname log-0.4
 
 Name:           rust-log-0.4
-Version:        0.4.29
+Version:        0.4.30
 Release:        %autorelease
 Summary:        Rust crate "log"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/rust-lang/log
-#!RemoteAsset:  sha256:5e5032e24019045c762d3c0f28f5b6b8bbf38563a65908389bf7978758920897
+#!RemoteAsset:  sha256:616ec5685824bcc94416c6d4a7a446eea774a31efd7062c8480ba6fd06d7a6e5
 Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates

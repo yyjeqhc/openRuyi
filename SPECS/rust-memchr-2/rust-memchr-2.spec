@@ -1,14 +1,14 @@
 %global crate_name memchr
-%global full_version 2.8.0
+%global full_version 2.8.1
 %global pkgname memchr-2
 
 Name:           rust-memchr-2
-Version:        2.8.0
+Version:        2.8.1
 Release:        %autorelease
 Summary:        Rust crate "memchr"
 License:        Unlicense OR MIT
 URL:            https://github.com/BurntSushi/memchr
-#!RemoteAsset:  sha256:f8ca58f447f06ed17d5fc4043ce1b10dd205e060fb3ce5b979b8ed8e59ff3f79
+#!RemoteAsset:  sha256:6b947ae49db0d222b1dbc6b113ce7248a3fc3a6ca21b696717bfc000ba4484d8
 Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
