@@ -15,36 +15,36 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname}) = %{full_version}
+Provides:       crate(%{pkgname}) = %{version}
 
 %description
 Source code for takopackized Rust crate "toml_datetime"
 
 %package     -n %{name}+alloc
 Summary:        TOML-compatible datetime type - feature "alloc"
-Requires:       crate(%{pkgname}) = %{full_version}
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(serde-core-1/alloc) >= 1.0.228
-Provides:       crate(%{pkgname}/alloc) = %{full_version}
+Provides:       crate(%{pkgname}/alloc) = %{version}
 
 %description -n %{name}+alloc
 This metapackage enables feature "alloc" for the Rust toml_datetime crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+serde
 Summary:        TOML-compatible datetime type - feature "serde"
-Requires:       crate(%{pkgname}) = %{full_version}
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(serde-core-1) >= 1.0.228
-Provides:       crate(%{pkgname}/serde) = %{full_version}
+Provides:       crate(%{pkgname}/serde) = %{version}
 
 %description -n %{name}+serde
 This metapackage enables feature "serde" for the Rust toml_datetime crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+std
 Summary:        TOML-compatible datetime type - feature "std" and 1 more
-Requires:       crate(%{pkgname}) = %{full_version}
-Requires:       crate(%{pkgname}/alloc) = %{full_version}
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(%{pkgname}/alloc) = %{version}
 Requires:       crate(serde-core-1/std) >= 1.0.228
-Provides:       crate(%{pkgname}/default) = %{full_version}
-Provides:       crate(%{pkgname}/std) = %{full_version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
 
 %description -n %{name}+std
 This metapackage enables feature "std" for the Rust toml_datetime crate, by pulling in any additional dependencies needed by that feature.

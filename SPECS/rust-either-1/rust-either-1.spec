@@ -15,20 +15,20 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname}) = %{full_version}
-Provides:       crate(%{pkgname}/default) = %{full_version}
-Provides:       crate(%{pkgname}/std) = %{full_version}
-Provides:       crate(%{pkgname}/use-std) = %{full_version}
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
+Provides:       crate(%{pkgname}/use-std) = %{version}
 
 %description
 Source code for takopackized Rust crate "either"
 
 %package     -n %{name}+serde
 Summary:        Enum `Either` with variants `Left` and `Right` is a general purpose sum type with two cases - feature "serde"
-Requires:       crate(%{pkgname}) = %{full_version}
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(serde-1/alloc) >= 1.0.95
 Requires:       crate(serde-1/derive) >= 1.0.95
-Provides:       crate(%{pkgname}/serde) = %{full_version}
+Provides:       crate(%{pkgname}/serde) = %{version}
 
 %description -n %{name}+serde
 This metapackage enables feature "serde" for the Rust either crate, by pulling in any additional dependencies needed by that feature.
