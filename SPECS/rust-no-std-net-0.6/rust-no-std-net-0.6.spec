@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name no-std-net
 %global full_version 0.6.0
 %global pkgname no-std-net-0.6
@@ -21,11 +15,11 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/i128)
-Provides:       crate(%{pkgname}/std)
-Provides:       crate(%{pkgname}/unstable-ip)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/i128) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
+Provides:       crate(%{pkgname}/unstable-ip) = %{version}
 
 %description
 without the 'std'.
@@ -33,9 +27,9 @@ Source code for takopackized Rust crate "no-std-net"
 
 %package     -n %{name}+serde
 Summary:        Rust's std::net - feature "serde"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(serde-1) >= 1.0.0
-Provides:       crate(%{pkgname}/serde)
+Provides:       crate(%{pkgname}/serde) = %{version}
 
 %description -n %{name}+serde
 without the 'std'.

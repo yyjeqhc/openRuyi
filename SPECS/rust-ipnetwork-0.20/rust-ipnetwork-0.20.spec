@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name ipnetwork
 %global full_version 0.20.0
 %global pkgname ipnetwork-0.20
@@ -21,26 +15,26 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
+Provides:       crate(%{pkgname}) = %{version}
 
 %description
 Source code for takopackized Rust crate "ipnetwork"
 
 %package     -n %{name}+schemars
 Summary:        Work with IP CIDRs in Rust - feature "schemars"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(schemars-0.8/default) >= 0.8.10
-Provides:       crate(%{pkgname}/schemars)
+Provides:       crate(%{pkgname}/schemars) = %{version}
 
 %description -n %{name}+schemars
 This metapackage enables feature "schemars" for the Rust ipnetwork crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+serde
 Summary:        Work with IP CIDRs in Rust - feature "serde" and 1 more
-Requires:       crate(%{pkgname})
-Requires:       crate(serde-1/default) >= 1.0.228
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/serde)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(serde-1/default) >= 1.0.0
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/serde) = %{version}
 
 %description -n %{name}+serde
 This metapackage enables feature "serde" for the Rust ipnetwork crate, by pulling in any additional dependencies needed by that feature.
