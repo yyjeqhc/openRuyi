@@ -15,10 +15,10 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/std)
-Provides:       crate(%{pkgname}/unstable)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
+Provides:       crate(%{pkgname}/unstable) = %{version}
 
 %description
 Source code for takopackized Rust crate "futures-io"

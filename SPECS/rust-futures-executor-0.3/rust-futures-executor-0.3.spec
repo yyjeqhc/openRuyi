@@ -18,20 +18,20 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(futures-core-0.3) >= 0.3.32
 Requires:       crate(futures-task-0.3) >= 0.3.32
 Requires:       crate(futures-util-0.3) >= 0.3.32
-Provides:       crate(%{pkgname})
+Provides:       crate(%{pkgname}) = %{version}
 
 %description
 Source code for takopackized Rust crate "futures-executor"
 
 %package     -n %{name}+std
 Summary:        Executors for asynchronous tasks based on the futures-rs library - feature "std" and 2 more
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(futures-core-0.3/std) >= 0.3.32
 Requires:       crate(futures-task-0.3/std) >= 0.3.32
 Requires:       crate(futures-util-0.3/std) >= 0.3.32
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/std)
-Provides:       crate(%{pkgname}/thread-pool)
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
+Provides:       crate(%{pkgname}/thread-pool) = %{version}
 
 %description -n %{name}+std
 This metapackage enables feature "std" for the Rust futures-executor crate, by pulling in any additional dependencies needed by that feature.

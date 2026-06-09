@@ -15,21 +15,21 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/alloc)
-Provides:       crate(%{pkgname}/cfg-target-has-atomic)
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/std)
-Provides:       crate(%{pkgname}/unstable)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/alloc) = %{version}
+Provides:       crate(%{pkgname}/cfg-target-has-atomic) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
+Provides:       crate(%{pkgname}/unstable) = %{version}
 
 %description
 Source code for takopackized Rust crate "futures-core"
 
 %package     -n %{name}+portable-atomic
 Summary:        Core traits and types in for the `futures` library - feature "portable-atomic"
-Requires:       crate(%{pkgname})
-Requires:       crate(portable-atomic-1/require-cas) >= 1.3
-Provides:       crate(%{pkgname}/portable-atomic)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(portable-atomic-1/require-cas) >= 1.3.0
+Provides:       crate(%{pkgname}/portable-atomic) = %{version}
 
 %description -n %{name}+portable-atomic
 This metapackage enables feature "portable-atomic" for the Rust futures-core crate, by pulling in any additional dependencies needed by that feature.
