@@ -1,25 +1,25 @@
 %global crate_name landlock
-%global full_version 0.4.4
+%global full_version 0.4.5
 %global pkgname landlock-0.4
 
 Name:           rust-landlock-0.4
-Version:        0.4.4
+Version:        0.4.5
 Release:        %autorelease
 Summary:        Rust crate "landlock"
 License:        MIT OR Apache-2.0
 URL:            https://landlock.io
-#!RemoteAsset:  sha256:49fefd6652c57d68aaa32544a4c0e642929725bdc1fd929367cdeb673ab81088
+#!RemoteAsset:  sha256:635839550ae8b90d9fd2571460a6645dc0aec070225956ca7a2831ed31d2795d
 Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(enumflags2-0.7/default) >= 0.7.12
+Requires:       crate(enumflags2-0.7/default) >= 0.7.0
 Requires:       crate(libc-0.2/default) >= 0.2.186
-Requires:       crate(thiserror-2/default) >= 2.0.18
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
+Requires:       crate(thiserror-2/default) >= 2.0.0
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
 Source code for takopackized Rust crate "landlock"
