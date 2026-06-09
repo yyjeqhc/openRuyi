@@ -15,20 +15,20 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/long-running-test)
-Provides:       crate(%{pkgname}/std)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/long-running-test) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
 
 %description
 Source code for takopackized Rust crate "vm-fdt"
 
 %package     -n %{name}+hashbrown
 Summary:        Writing Flattened Devicetree blobs - feature "hashbrown" and 1 more
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(hashbrown-0.14/default) >= 0.14.0
-Provides:       crate(%{pkgname}/alloc)
-Provides:       crate(%{pkgname}/hashbrown)
+Provides:       crate(%{pkgname}/alloc) = %{version}
+Provides:       crate(%{pkgname}/hashbrown) = %{version}
 
 %description -n %{name}+hashbrown
 This metapackage enables feature "hashbrown" for the Rust vm-fdt crate, by pulling in any additional dependencies needed by that feature.
