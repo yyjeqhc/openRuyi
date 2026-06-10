@@ -69,17 +69,16 @@ Provides:       crate(%{pkgname}/socks) = %{version}
 %description
 Source code for takopackized Rust crate "reqwest"
 
-%package     -n %{name}+native-tls
+%package     -n %{name}+native-tls-no-alpn
 Summary:        Higher level HTTP client library - feature "__native-tls" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/tls) = %{version}
 Requires:       crate(hyper-tls-0.6/default) >= 0.6.0
 Requires:       crate(native-tls-0.2/default) >= 0.2.10
 Requires:       crate(tokio-native-tls-0.3/default) >= 0.3.0
-Provides:       crate(%{pkgname}/native-tls) = %{version}
 Provides:       crate(%{pkgname}/native-tls-no-alpn) = %{version}
 
-%description -n %{name}+native-tls
+%description -n %{name}+native-tls-no-alpn
 This metapackage enables feature "__native-tls" for the Rust reqwest crate, by pulling in any additional dependencies needed by that feature.
 
 Additionally, this package also provides the "native-tls-no-alpn" feature.
@@ -94,19 +93,22 @@ Provides:       crate(%{pkgname}/native-tls-alpn) = %{version}
 %description -n %{name}+native-tls-alpn
 This metapackage enables feature "__native-tls-alpn" for the Rust reqwest crate, by pulling in any additional dependencies needed by that feature.
 
-%package     -n %{name}+rustls
-Summary:        Higher level HTTP client library - feature "__rustls"
+%package     -n %{name}+rustls-no-provider
+Summary:        Higher level HTTP client library - feature "__rustls" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/tls) = %{version}
 Requires:       crate(hyper-rustls-0.27/http1) >= 0.27.0
 Requires:       crate(hyper-rustls-0.27/tls12) >= 0.27.0
 Requires:       crate(rustls-0.23/std) >= 0.23.4
 Requires:       crate(rustls-0.23/tls12) >= 0.23.4
+Requires:       crate(rustls-platform-verifier-0.6/default) >= 0.6.0
 Requires:       crate(tokio-rustls-0.26/tls12) >= 0.26.0
-Provides:       crate(%{pkgname}/rustls) = %{version}
+Provides:       crate(%{pkgname}/rustls-no-provider) = %{version}
 
-%description -n %{name}+rustls
+%description -n %{name}+rustls-no-provider
 This metapackage enables feature "__rustls" for the Rust reqwest crate, by pulling in any additional dependencies needed by that feature.
+
+Additionally, this package also provides the "rustls-no-provider" feature.
 
 %package     -n %{name}+rustls-aws-lc-rs
 Summary:        Higher level HTTP client library - feature "__rustls-aws-lc-rs"
@@ -300,8 +302,8 @@ This metapackage enables feature "multipart" for the Rust reqwest crate, by pull
 %package     -n %{name}+native-tls
 Summary:        Higher level HTTP client library - feature "native-tls"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(%{pkgname}/native-tls) = %{version}
 Requires:       crate(%{pkgname}/native-tls-alpn) = %{version}
+Requires:       crate(%{pkgname}/native-tls-no-alpn) = %{version}
 Provides:       crate(%{pkgname}/native-tls) = %{version}
 
 %description -n %{name}+native-tls
@@ -331,8 +333,8 @@ This metapackage enables feature "native-tls-vendored-no-alpn" for the Rust reqw
 %package     -n %{name}+rustls
 Summary:        Higher level HTTP client library - feature "rustls" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(%{pkgname}/rustls) = %{version}
 Requires:       crate(%{pkgname}/rustls-aws-lc-rs) = %{version}
+Requires:       crate(%{pkgname}/rustls-no-provider) = %{version}
 Requires:       crate(rustls-platform-verifier-0.6/default) >= 0.6.0
 Provides:       crate(%{pkgname}/default-tls) = %{version}
 Provides:       crate(%{pkgname}/rustls) = %{version}
@@ -341,16 +343,6 @@ Provides:       crate(%{pkgname}/rustls) = %{version}
 This metapackage enables feature "rustls" for the Rust reqwest crate, by pulling in any additional dependencies needed by that feature.
 
 Additionally, this package also provides the "default-tls" feature.
-
-%package     -n %{name}+rustls-no-provider
-Summary:        Higher level HTTP client library - feature "rustls-no-provider"
-Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(%{pkgname}/rustls) = %{version}
-Requires:       crate(rustls-platform-verifier-0.6/default) >= 0.6.0
-Provides:       crate(%{pkgname}/rustls-no-provider) = %{version}
-
-%description -n %{name}+rustls-no-provider
-This metapackage enables feature "rustls-no-provider" for the Rust reqwest crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+stream
 Summary:        Higher level HTTP client library - feature "stream"
