@@ -62,6 +62,10 @@ BuildRequires:  crate(tokenizers-0.22) >= 0.22.2
 BuildRequires:  crate(tokenizers-0.22/http) >= 0.22.2
 BuildRequires:  crate(tokenizers-0.22/onig) >= 0.22.2
 BuildRequires:  crate(tokenizers-0.22/rustls-tls) >= 0.22.2
+BuildRequires:  crate(winapi-i686-pc-windows-gnu-0.4) >= 0.4.0
+BuildRequires:  crate(winapi-i686-pc-windows-gnu-0.4/default) >= 0.4.0
+BuildRequires:  crate(winapi-x86-64-pc-windows-gnu-0.4) >= 0.4.0
+BuildRequires:  crate(winapi-x86-64-pc-windows-gnu-0.4/default) >= 0.4.0
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 Provides:       python3-%{srcname}%{?_isa} = %{version}-%{release}
