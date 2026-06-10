@@ -14,24 +14,50 @@ License:        Apache-2.0
 URL:            https://github.com/huggingface/safetensors
 #!RemoteAsset:  sha256:07663963b67e8bd9f0b8ad15bb9163606cd27cc5a1b96235a50d8369803b96b0
 Source0:        https://files.pythonhosted.org/packages/source/s/%{srcname}/%{srcname}-%{version}.tar.gz
-# TODO: use system crates in the future
-#!RemoteAsset:  sha256:710d5402bab8653296ad7bd1fe1c4fdb9cb69f85c2449ceb5209981c999276cb
-Source1:        https://github.com/software-vendor/python-%{srcname}-vendor/releases/download/vendor-%{version}/safetensors-%{version}-vendor.tar.bz2
 BuildSystem:    pyproject
 
-BuildOption(prep):  -a1
 BuildOption(install):  -l %{srcname}
 # Needs additional dependencies
 BuildOption(check):  -e "safetensors.torch" -e "safetensors.tensorflow" -e "safetensors.paddle" -e "safetensors.flax" -e "safetensors.mlx"
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
+BuildRequires:  cargo
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(pip)
 BuildRequires:  python3dist(wheel)
 BuildRequires:  python3dist(maturin)
 BuildRequires:  python3dist(numpy)
 BuildRequires:  rust
+BuildRequires:  rust-rpm-macros
+BuildRequires:  crate(hashbrown-0.16) >= 0.16
+BuildRequires:  crate(hashbrown-0.16/default) >= 0.16
+BuildRequires:  crate(hashbrown-0.16/serde) >= 0.16
+BuildRequires:  crate(memmap2-0.9) >= 0.9
+BuildRequires:  crate(memmap2-0.9/default) >= 0.9
+BuildRequires:  crate(pyo3-0.25) >= 0.25
+BuildRequires:  crate(pyo3-0.25/abi3) >= 0.25.1
+BuildRequires:  crate(pyo3-0.25/abi3-py38) >= 0.25.1
+BuildRequires:  crate(pyo3-0.25/default) >= 0.25.1
+BuildRequires:  crate(pyo3-0.25/extension-module) >= 0.25.1
+BuildRequires:  crate(pyo3-build-config-0.25/abi3) >= 0.25.1
+BuildRequires:  crate(pyo3-build-config-0.25/abi3-py38) >= 0.25.1
+BuildRequires:  crate(pyo3-build-config-0.25/default) >= 0.25.1
+BuildRequires:  crate(pyo3-build-config-0.25/extension-module) >= 0.25.1
+BuildRequires:  crate(pyo3-build-config-0.25/resolve-config) >= 0.25.1
+BuildRequires:  crate(pyo3-ffi-0.25/abi3) >= 0.25.1
+BuildRequires:  crate(pyo3-ffi-0.25/abi3-py38) >= 0.25.1
+BuildRequires:  crate(pyo3-ffi-0.25/default) >= 0.25.1
+BuildRequires:  crate(pyo3-ffi-0.25/extension-module) >= 0.25.1
+BuildRequires:  crate(pyo3-macros-0.25/default) >= 0.25.1
+BuildRequires:  crate(pyo3-macros-backend-0.25/default) >= 0.25.1
+BuildRequires:  crate(rustversion-1/default) >= 1.0.22
+BuildRequires:  crate(serde-1) >= 1.0
+BuildRequires:  crate(serde-1/alloc) >= 1.0
+BuildRequires:  crate(serde-1/derive) >= 1.0
+BuildRequires:  crate(serde-json-1) >= 1.0
+BuildRequires:  crate(serde-json-1/alloc) >= 1.0
+BuildRequires:  crate(serde-json-1/default) >= 1.0
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 Provides:       python3-%{srcname}%{?_isa} = %{version}-%{release}
@@ -42,14 +68,16 @@ This repository implements a new simple format for storing
 tensors safely (as opposed to pickle) and that is still fast (zero-copy).
 
 %prep -a
-mkdir -p .cargo
+rm -f bindings/python/Cargo.lock
+mkdir -p .cargo ~/.cargo
 cat > .cargo/config.toml <<'EOF'
 [source.crates-io]
-replace-with = "vendored-sources"
+replace-with = "system-registry"
 
-[source.vendored-sources]
-directory = "vendor"
+[source.system-registry]
+directory = "/usr/share/cargo/registry"
 EOF
+cp .cargo/config.toml ~/.cargo/config.toml
 
 %generate_buildrequires
 %pyproject_buildrequires
