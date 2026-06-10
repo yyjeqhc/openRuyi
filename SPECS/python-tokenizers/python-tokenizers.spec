@@ -80,6 +80,7 @@ BuildRequires:  crate(pyo3-0.26/py-clone)
 BuildRequires:  crate(pyo3-async-runtimes-0.26) >= 0.26
 BuildRequires:  crate(pyo3-async-runtimes-0.26/default)
 BuildRequires:  crate(pyo3-async-runtimes-0.26/tokio-runtime)
+BuildRequires:  crate(pkg-config-0.3/default) >= 0.3.33
 BuildRequires:  crate(rand-0.9) >= 0.9
 BuildRequires:  crate(rand-0.9/default)
 BuildRequires:  crate(rayon-1) >= 1.10
