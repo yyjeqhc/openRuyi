@@ -15,23 +15,23 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/alloc)
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/race)
-Provides:       crate(%{pkgname}/std)
-Provides:       crate(%{pkgname}/unstable)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/alloc) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/race) = %{version}
+Provides:       crate(%{pkgname}/std) = %{version}
+Provides:       crate(%{pkgname}/unstable) = %{version}
 
 %description
 Source code for takopackized Rust crate "once_cell"
 
 %package     -n %{name}+critical-section
 Summary:        Single assignment cells and lazy values - feature "critical-section" and 1 more
-Requires:       crate(%{pkgname})
-Requires:       crate(%{pkgname}/portable-atomic)
-Requires:       crate(critical-section-1.0/default) >= 1.1.3
-Provides:       crate(%{pkgname}/atomic-polyfill)
-Provides:       crate(%{pkgname}/critical-section)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(%{pkgname}/portable-atomic) = %{version}
+Requires:       crate(critical-section-1/default) >= 1.1.3
+Provides:       crate(%{pkgname}/atomic-polyfill) = %{version}
+Provides:       crate(%{pkgname}/critical-section) = %{version}
 
 %description -n %{name}+critical-section
 This metapackage enables feature "critical-section" for the Rust once_cell crate, by pulling in any additional dependencies needed by that feature.
@@ -40,18 +40,18 @@ Additionally, this package also provides the "atomic-polyfill" feature.
 
 %package     -n %{name}+parking-lot
 Summary:        Single assignment cells and lazy values - feature "parking_lot"
-Requires:       crate(%{pkgname})
+Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(parking-lot-core-0.9) >= 0.9.10
-Provides:       crate(%{pkgname}/parking-lot)
+Provides:       crate(%{pkgname}/parking-lot) = %{version}
 
 %description -n %{name}+parking-lot
 This metapackage enables feature "parking_lot" for the Rust once_cell crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+portable-atomic
 Summary:        Single assignment cells and lazy values - feature "portable-atomic"
-Requires:       crate(%{pkgname})
-Requires:       crate(portable-atomic-1) >= 1.8
-Provides:       crate(%{pkgname}/portable-atomic)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(portable-atomic-1) >= 1.8.0
+Provides:       crate(%{pkgname}/portable-atomic) = %{version}
 
 %description -n %{name}+portable-atomic
 This metapackage enables feature "portable-atomic" for the Rust once_cell crate, by pulling in any additional dependencies needed by that feature.
