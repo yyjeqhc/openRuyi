@@ -48,6 +48,10 @@ BuildRequires:  crate(winapi-0.3/default) >= 0.3.9
 BuildRequires:  crate(winapi-0.3/winerror) >= 0.3.9
 BuildRequires:  crate(winapi-0.3/ws2def) >= 0.3.9
 BuildRequires:  crate(winapi-0.3/iphlpapi) >= 0.3.9
+BuildRequires:  crate(winapi-i686-pc-windows-gnu-0.4) >= 0.4.0
+BuildRequires:  crate(winapi-i686-pc-windows-gnu-0.4/default) >= 0.4.0
+BuildRequires:  crate(winapi-x86-64-pc-windows-gnu-0.4) >= 0.4.0
+BuildRequires:  crate(winapi-x86-64-pc-windows-gnu-0.4/default) >= 0.4.0
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 Provides:       python3-%{srcname}%{?_isa} = %{version}-%{release}
