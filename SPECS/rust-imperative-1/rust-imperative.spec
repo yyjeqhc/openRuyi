@@ -5,25 +5,25 @@
 
 %global crate_name imperative
 %global full_version 1.0.7
-%global pkgname imperative-1.0
+%global pkgname imperative-1
 
-Name:           rust-imperative-1.0
+Name:           rust-imperative-1
 Version:        1.0.7
 Release:        %autorelease
 Summary:        Rust crate "imperative"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/crate-ci/imperative
 #!RemoteAsset:  sha256:35e1d0bd9c575c52e59aad8e122a11786e852a154678d0c86e9e243d55273970
-Source:         https://crates.io/api/v1/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(phf-0.13/default) >= 0.13.1
-Requires:       crate(rust-stemmers-1.0/default) >= 1.2.0
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/default)
+Requires:       crate(phf-0.13/default) >= 0.13.0
+Requires:       crate(rust-stemmers-1/default) >= 1.2.0
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
 Source code for takopackized Rust crate "imperative"
