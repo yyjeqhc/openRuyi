@@ -4,34 +4,39 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%global crate_name codspeed-divan-compat
+%global crate_name codspeed
 %global full_version 4.4.1
-%global pkgname codspeed-divan-compat-4
+%global pkgname codspeed-4
 
-Name:           rust-codspeed-divan-compat-4
+Name:           rust-codspeed-4
 Version:        4.4.1
 Release:        %autorelease
-Summary:        Rust crate "codspeed-divan-compat"
+Summary:        Rust crate "codspeed"
 License:        MIT OR Apache-2.0
 URL:            https://codspeed.io
-#!RemoteAsset:  sha256:89e4bf8c7793c170fd0fcf3be97b9032b2ae39c2b9e8818aba3cc10ca0f0c6c0
+#!RemoteAsset:  sha256:b684e94583e85a5ca7e1a6454a89d76a5121240f2fb67eb564129d9bafdb9db0
 Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(clap-4/env) >= 4.0.0
-Requires:       crate(clap-4/std) >= 4.0.0
-Requires:       crate(codspeed-4/default) >= 4.4.1
-Requires:       crate(codspeed-divan-compat-macros-4/default) >= 4.4.1
-Requires:       crate(codspeed-divan-compat-walltime-4/default) >= 4.4.1
-Requires:       crate(regex-1/default) >= 1.11.3
+Requires:       crate(anyhow-1/default) >= 1.0.97
+Requires:       crate(colored-2/default) >= 2.0.0
+Requires:       crate(getrandom-0.2/default) >= 0.2.0
+Requires:       crate(glob-0.3/default) >= 0.3.2
+Requires:       crate(libc-0.2/default) >= 0.2.0
+Requires:       crate(nix-0.31/default) >= 0.31.1
+Requires:       crate(nix-0.31/time) >= 0.31.1
+Requires:       crate(serde-1/default) >= 1.0.217
+Requires:       crate(serde-1/derive) >= 1.0.217
+Requires:       crate(serde-json-1/default) >= 1.0.138
+Requires:       crate(statrs-0.18) >= 0.18.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
-Source code for takopackized Rust crate "codspeed-divan-compat"
+Source code for takopackized Rust crate "codspeed"
 
 %files
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
