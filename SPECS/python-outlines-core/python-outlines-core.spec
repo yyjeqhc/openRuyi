@@ -90,6 +90,9 @@ directory = "/usr/share/cargo/registry"
 EOF
 cp .cargo/config.toml ~/.cargo/config.toml
 
+%build -p
+export AWS_LC_SYS_NO_JITTER_ENTROPY=1
+
 %generate_buildrequires
 %pyproject_buildrequires
 
