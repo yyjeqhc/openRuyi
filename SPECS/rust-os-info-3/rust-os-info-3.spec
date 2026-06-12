@@ -26,6 +26,14 @@ Requires:       crate(objc2-foundation-0.3/nsenumerator) >= 0.3.0
 Requires:       crate(objc2-foundation-0.3/nserror) >= 0.3.0
 Requires:       crate(objc2-foundation-0.3/nsstring) >= 0.3.0
 Requires:       crate(objc2-ui-kit-0.3/default) >= 0.3.0
+Requires:       crate(windows-sys-0.61/default) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-libraryloader) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-registry) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-systeminformation) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-systemservices) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-threading) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-ui-windowsandmessaging) >= 0.61.0
 Provides:       crate(%{pkgname}) = %{version}
 
 %description

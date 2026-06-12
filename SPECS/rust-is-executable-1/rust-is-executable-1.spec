@@ -15,6 +15,8 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Requires:       crate(windows-sys-0.60/default) >= 0.60.0
+Requires:       crate(windows-sys-0.60/win32-storage-filesystem) >= 0.60.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 

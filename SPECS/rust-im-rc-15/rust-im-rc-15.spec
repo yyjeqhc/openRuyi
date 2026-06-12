@@ -20,6 +20,7 @@ Requires:       crate(rand-core-0.6/default) >= 0.6.0
 Requires:       crate(rand-xoshiro-0.6/default) >= 0.6.0
 Requires:       crate(sized-chunks-0.6/default) >= 0.6.4
 Requires:       crate(typenum-1/default) >= 1.12.0
+Requires:       crate(version-check-0.9) >= 0.9.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/debug) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}

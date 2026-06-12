@@ -17,6 +17,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(arrayref-0.3/default) >= 0.3.5
 Requires:       crate(arrayvec-0.7) >= 0.7.4
+Requires:       crate(cc-1) >= 1.1.12
 Requires:       crate(cfg-if-1/default) >= 1.0.0
 Requires:       crate(constant-time-eq-0.4) >= 0.4.2
 Requires:       crate(cpufeatures-0.3/default) >= 0.3.0
