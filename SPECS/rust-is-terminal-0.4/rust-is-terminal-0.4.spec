@@ -21,7 +21,12 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Requires:       crate(hermit-abi-0.5/default) >= 0.5.0
 Requires:       crate(libc-0.2/default) >= 0.2.0
+Requires:       crate(windows-sys-0.52/default) >= 0.52.0
+Requires:       crate(windows-sys-0.52/win32-foundation) >= 0.52.0
+Requires:       crate(windows-sys-0.52/win32-storage-filesystem) >= 0.52.0
+Requires:       crate(windows-sys-0.52/win32-system-console) >= 0.52.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 

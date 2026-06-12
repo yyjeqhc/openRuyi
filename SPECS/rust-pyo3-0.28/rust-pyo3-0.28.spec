@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name pyo3
 %global full_version 0.28.3
 %global pkgname pyo3-0.28
@@ -17,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(libc-0.2/default) >= 0.2.62
 Requires:       crate(once-cell-1/default) >= 1.21.0
+Requires:       crate(portable-atomic-1/default) >= 1.0.0
 Requires:       crate(pyo3-build-config-0.28) >= 0.28.3
 Requires:       crate(pyo3-build-config-0.28/resolve-config) >= 0.28.3
 Requires:       crate(pyo3-ffi-0.28/default) >= 0.28.3

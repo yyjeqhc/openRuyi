@@ -21,6 +21,13 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Requires:       crate(android-system-properties-0.1/default) >= 0.1.5
+Requires:       crate(core-foundation-sys-0.8/default) >= 0.8.6
+Requires:       crate(iana-time-zone-haiku-0.1/default) >= 0.1.1
+Requires:       crate(js-sys-0.3/default) >= 0.3.66
+Requires:       crate(log-0.4/default) >= 0.4.14
+Requires:       crate(wasm-bindgen-0.2/default) >= 0.2.89
+Requires:       crate(windows-core-0.56/default) >= 0.56.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/fallback) = %{version}

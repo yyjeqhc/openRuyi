@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name filetime
 %global full_version 0.2.27
 %global pkgname filetime-0.2
@@ -17,6 +23,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(cfg-if-1/default) >= 1.0.0
 Requires:       crate(libc-0.2/default) >= 0.2.27
+Requires:       crate(libredox-0.1/default) >= 0.1.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 
