@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name shell-escape
 %global full_version 0.1.5
 %global pkgname shell-escape-0.1

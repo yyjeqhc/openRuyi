@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name toml
 %global full_version 0.9.12+spec-1.1.0
 %global pkgname toml-0.9
