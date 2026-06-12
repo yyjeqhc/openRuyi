@@ -1,0 +1,19 @@
+[package]
+name = "implib"
+version = "0.4.0"
+description = "Generate Windows import library from module definition file"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/messense/implib-rs"
+readme = "README.md"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+memoffset = "0.9.0"
+object = { version = "0.37.1", default-features = false, features = ["pe"] }
+
+[features]
+default = ["msvc", "gnu"]
+msvc = []
+gnu = ["object/write_std"]
