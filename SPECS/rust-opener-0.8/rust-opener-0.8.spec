@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
 # SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
@@ -21,6 +22,10 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bstr-1/default) >= 1.0.0
+Requires:       crate(normpath-1/default) >= 1.0.0
+Requires:       crate(windows-sys-0.61/default) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-ui-shell) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-ui-windowsandmessaging) >= 0.61.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 
@@ -31,6 +36,10 @@ Source code for takopackized Rust crate "opener"
 Summary:        Open a file or link using the system default program - feature "reveal"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(url-2/default) >= 2.0.0
+Requires:       crate(windows-sys-0.61/win32-system-com) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-ui-shell) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-ui-shell-common) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-ui-windowsandmessaging) >= 0.61.0
 Requires:       crate(zbus-5/default) >= 5.0.0
 Requires:       crate(zbus-5/url) >= 5.0.0
 Provides:       crate(%{pkgname}/reveal) = %{version}
