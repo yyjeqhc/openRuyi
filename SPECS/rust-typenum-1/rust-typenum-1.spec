@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
+# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
+#
+# SPDX-License-Identifier: MulanPSL-2.0
+
 %global crate_name typenum
 %global full_version 1.20.0
 %global pkgname typenum-1
@@ -15,11 +20,11 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Provides:       crate(%{pkgname})
-Provides:       crate(%{pkgname}/const-generics)
-Provides:       crate(%{pkgname}/default)
-Provides:       crate(%{pkgname}/i128)
-Provides:       crate(%{pkgname}/strict)
+Provides:       crate(%{pkgname}) = %{version}
+Provides:       crate(%{pkgname}/const-generics) = %{version}
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/i128) = %{version}
+Provides:       crate(%{pkgname}/strict) = %{version}
 
 %description
 It currently supports bits, unsigned integers, and signed     integers. It also provides a type-level array of type-level numbers, but its     implementation is incomplete.
@@ -27,10 +32,10 @@ Source code for takopackized Rust crate "typenum"
 
 %package     -n %{name}+scale-info
 Summary:        Type-level numbers evaluated at     compile time - feature "scale_info"
-Requires:       crate(%{pkgname})
-Requires:       crate(scale-info-1.0) >= 1.0.0
-Requires:       crate(scale-info-1.0/derive) >= 1.0.0
-Provides:       crate(%{pkgname}/scale-info)
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(scale-info-1) >= 1.0.0
+Requires:       crate(scale-info-1/derive) >= 1.0.0
+Provides:       crate(%{pkgname}/scale-info) = %{version}
 
 %description -n %{name}+scale-info
 It currently supports bits, unsigned integers, and signed     integers. It also provides a type-level array of type-level numbers, but its     implementation is incomplete.
