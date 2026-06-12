@@ -20,7 +20,9 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(errno-0.2/default) >= 0.2.0
+# manual change to 0.3. see the cargo.toml,maybe we can change cargo.toml to regenerate it.
+# for now, we just change the spec directly.
+Requires:       crate(errno-0.3/default) >= 0.3.0
 Requires:       crate(libc-0.2/default) >= 0.2.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
