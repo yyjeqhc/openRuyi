@@ -24,7 +24,6 @@ Provides:       crate(%{pkgname}/rt) = %{version}
 Provides:       crate(%{pkgname}/rt-multi-thread) = %{version}
 Provides:       crate(%{pkgname}/sync) = %{version}
 Provides:       crate(%{pkgname}/time) = %{version}
-Provides:       crate(%{pkgname}/windows-sys) = %{version}
 
 %description
 Source code for takopackized Rust crate "tokio"
@@ -102,6 +101,11 @@ Requires:       crate(%{pkgname}/socket2) = %{version}
 Requires:       crate(mio-1/net) >= 1.2.0
 Requires:       crate(mio-1/os-ext) >= 1.2.0
 Requires:       crate(mio-1/os-poll) >= 1.2.0
+Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-security) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-storage-filesystem) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-pipes) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-systemservices) >= 0.61.0
 Provides:       crate(%{pkgname}/net) = %{version}
 
 %description -n %{name}+net
@@ -125,6 +129,9 @@ Requires:       crate(%{pkgname}/signal-hook-registry) = %{version}
 Requires:       crate(mio-1/net) >= 1.2.0
 Requires:       crate(mio-1/os-ext) >= 1.2.0
 Requires:       crate(mio-1/os-poll) >= 1.2.0
+Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-threading) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-windowsprogramming) >= 0.61.0
 Provides:       crate(%{pkgname}/process) = %{version}
 
 %description -n %{name}+process
@@ -138,6 +145,8 @@ Requires:       crate(%{pkgname}/signal-hook-registry) = %{version}
 Requires:       crate(mio-1/net) >= 1.2.0
 Requires:       crate(mio-1/os-ext) >= 1.2.0
 Requires:       crate(mio-1/os-poll) >= 1.2.0
+Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-console) >= 0.61.0
 Provides:       crate(%{pkgname}/signal) = %{version}
 
 %description -n %{name}+signal
@@ -202,6 +211,15 @@ Provides:       crate(%{pkgname}/tracing) = %{version}
 
 %description -n %{name}+tracing
 This metapackage enables feature "tracing" for the Rust tokio crate, by pulling in any additional dependencies needed by that feature.
+
+%package     -n %{name}+windows-sys
+Summary:        Event-driven, non-blocking I/O platform for writing asynchronous I/O backed applications - feature "windows-sys"
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(windows-sys-0.61/default) >= 0.61.0
+Provides:       crate(%{pkgname}/windows-sys) = %{version}
+
+%description -n %{name}+windows-sys
+This metapackage enables feature "windows-sys" for the Rust tokio crate, by pulling in any additional dependencies needed by that feature.
 
 %files
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
