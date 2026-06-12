@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name codspeed
 %global full_version 4.4.1
 %global pkgname codspeed-4
@@ -22,6 +16,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(anyhow-1/default) >= 1.0.97
+Requires:       crate(cc-1) >= 1.0.0
 Requires:       crate(colored-2/default) >= 2.0.0
 Requires:       crate(getrandom-0.2/default) >= 0.2.0
 Requires:       crate(glob-0.3/default) >= 0.3.2

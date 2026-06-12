@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name codspeed-divan-compat-walltime
 %global full_version 4.4.1
 %global pkgname codspeed-divan-compat-walltime-4
