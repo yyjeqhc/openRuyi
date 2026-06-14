@@ -23,7 +23,10 @@ Provides:       crate(%{pkgname}/io-std) = %{version}
 Provides:       crate(%{pkgname}/rt) = %{version}
 Provides:       crate(%{pkgname}/rt-multi-thread) = %{version}
 Provides:       crate(%{pkgname}/sync) = %{version}
+Provides:       crate(%{pkgname}/taskdump) = %{version}
 Provides:       crate(%{pkgname}/time) = %{version}
+Provides:       crate(%{pkgname}/tracing) = %{version}
+Provides:       crate(%{pkgname}/windows-sys) = %{version}
 
 %description
 Source code for takopackized Rust crate "tokio"
@@ -64,10 +67,8 @@ This metapackage enables feature "full" for the Rust tokio crate, by pulling in 
 Summary:        Event-driven, non-blocking I/O platform for writing asynchronous I/O backed applications - feature "io-uring"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/libc) = %{version}
-Requires:       crate(io-uring-0.7) >= 0.7.11
 Requires:       crate(mio-1/os-ext) >= 1.2.0
 Requires:       crate(mio-1/os-poll) >= 1.2.0
-Requires:       crate(slab-0.4/default) >= 0.4.9
 Provides:       crate(%{pkgname}/io-uring) = %{version}
 
 %description -n %{name}+io-uring
@@ -86,8 +87,6 @@ This metapackage enables feature "libc" for the Rust tokio crate, by pulling in 
 Summary:        Event-driven, non-blocking I/O platform for writing asynchronous I/O backed applications - feature "mio"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(mio-1) >= 1.2.0
-Requires:       crate(mio-1/os-ext) >= 1.2.0
-Requires:       crate(mio-1/os-poll) >= 1.2.0
 Provides:       crate(%{pkgname}/mio) = %{version}
 
 %description -n %{name}+mio
@@ -101,11 +100,6 @@ Requires:       crate(%{pkgname}/socket2) = %{version}
 Requires:       crate(mio-1/net) >= 1.2.0
 Requires:       crate(mio-1/os-ext) >= 1.2.0
 Requires:       crate(mio-1/os-poll) >= 1.2.0
-Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.0
-Requires:       crate(windows-sys-0.61/win32-security) >= 0.61.0
-Requires:       crate(windows-sys-0.61/win32-storage-filesystem) >= 0.61.0
-Requires:       crate(windows-sys-0.61/win32-system-pipes) >= 0.61.0
-Requires:       crate(windows-sys-0.61/win32-system-systemservices) >= 0.61.0
 Provides:       crate(%{pkgname}/net) = %{version}
 
 %description -n %{name}+net
@@ -129,9 +123,6 @@ Requires:       crate(%{pkgname}/signal-hook-registry) = %{version}
 Requires:       crate(mio-1/net) >= 1.2.0
 Requires:       crate(mio-1/os-ext) >= 1.2.0
 Requires:       crate(mio-1/os-poll) >= 1.2.0
-Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.0
-Requires:       crate(windows-sys-0.61/win32-system-threading) >= 0.61.0
-Requires:       crate(windows-sys-0.61/win32-system-windowsprogramming) >= 0.61.0
 Provides:       crate(%{pkgname}/process) = %{version}
 
 %description -n %{name}+process
@@ -145,8 +136,6 @@ Requires:       crate(%{pkgname}/signal-hook-registry) = %{version}
 Requires:       crate(mio-1/net) >= 1.2.0
 Requires:       crate(mio-1/os-ext) >= 1.2.0
 Requires:       crate(mio-1/os-poll) >= 1.2.0
-Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.0
-Requires:       crate(windows-sys-0.61/win32-system-console) >= 0.61.0
 Provides:       crate(%{pkgname}/signal) = %{version}
 
 %description -n %{name}+signal
@@ -171,15 +160,6 @@ Provides:       crate(%{pkgname}/socket2) = %{version}
 %description -n %{name}+socket2
 This metapackage enables feature "socket2" for the Rust tokio crate, by pulling in any additional dependencies needed by that feature.
 
-%package     -n %{name}+taskdump
-Summary:        Event-driven, non-blocking I/O platform for writing asynchronous I/O backed applications - feature "taskdump"
-Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(backtrace-0.3/default) >= 0.3.58
-Provides:       crate(%{pkgname}/taskdump) = %{version}
-
-%description -n %{name}+taskdump
-This metapackage enables feature "taskdump" for the Rust tokio crate, by pulling in any additional dependencies needed by that feature.
-
 %package     -n %{name}+test-util
 Summary:        Event-driven, non-blocking I/O platform for writing asynchronous I/O backed applications - feature "test-util"
 Requires:       crate(%{pkgname}) = %{version}
@@ -203,26 +183,9 @@ This metapackage enables feature "tokio-macros" for the Rust tokio crate, by pul
 
 Additionally, this package also provides the "macros" feature.
 
-%package     -n %{name}+tracing
-Summary:        Event-driven, non-blocking I/O platform for writing asynchronous I/O backed applications - feature "tracing"
-Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(tracing-0.1/std) >= 0.1.29
-Provides:       crate(%{pkgname}/tracing) = %{version}
-
-%description -n %{name}+tracing
-This metapackage enables feature "tracing" for the Rust tokio crate, by pulling in any additional dependencies needed by that feature.
-
-%package     -n %{name}+windows-sys
-Summary:        Event-driven, non-blocking I/O platform for writing asynchronous I/O backed applications - feature "windows-sys"
-Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(windows-sys-0.61/default) >= 0.61.0
-Provides:       crate(%{pkgname}/windows-sys) = %{version}
-
-%description -n %{name}+windows-sys
-This metapackage enables feature "windows-sys" for the Rust tokio crate, by pulling in any additional dependencies needed by that feature.
-
 %files
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
 %changelog
 %autochangelog
+
