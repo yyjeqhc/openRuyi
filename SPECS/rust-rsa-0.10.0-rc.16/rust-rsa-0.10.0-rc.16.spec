@@ -13,15 +13,14 @@ Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/do
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
-#Source code for takopackized Rust crate "rsa"
 Patch0:         0001-fix-dependency-constraints.patch
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(const-oid-0.10) >= 0.10.0
-Requires:       crate(crypto-bigint-0.7.0-rc.28/alloc) >= 0.7.0-rc.28
-Requires:       crate(crypto-bigint-0.7.0-rc.28/zeroize) >= 0.7.0-rc.28
-Requires:       crate(crypto-primes-0.7.0-pre.9) >= 0.7.0-pre.9
+Requires:       crate(crypto-bigint-0.7/alloc) >= 0.7.0
+Requires:       crate(crypto-bigint-0.7/zeroize) >= 0.7.0
+Requires:       crate(crypto-primes-0.7) >= 0.7.0
 Requires:       crate(digest-0.11/alloc) >= 0.11.0
 Requires:       crate(digest-0.11/oid) >= 0.11.0
 Requires:       crate(rand-core-0.10) >= 0.10.0
@@ -38,8 +37,8 @@ Provides:       crate(%{pkgname}/hazmat) = %{version}
 %package     -n %{name}+crypto-common
 Summary:        Pure Rust RSA implementation - feature "crypto-common"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(crypto-common-0.2.0-rc.15/default) >= 0.2.0-rc.15
-Requires:       crate(crypto-common-0.2.0-rc.15/getrandom) >= 0.2.0-rc.15
+Requires:       crate(crypto-common-0.2/default) >= 0.2.0
+Requires:       crate(crypto-common-0.2/getrandom) >= 0.2.0
 Provides:       crate(%{pkgname}/crypto-common) = %{version}
 
 %description -n %{name}+crypto-common
@@ -60,9 +59,9 @@ Summary:        Pure Rust RSA implementation - feature "encoding"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(pkcs1-0.8.0-rc.4/alloc) >= 0.8.0-rc.4
 Requires:       crate(pkcs1-0.8.0-rc.4/pem) >= 0.8.0-rc.4
-Requires:       crate(pkcs8-0.11.0-rc.10/alloc) >= 0.11.0-rc.10
-Requires:       crate(pkcs8-0.11.0-rc.10/pem) >= 0.11.0-rc.10
-Requires:       crate(spki-0.8.0-rc.4/alloc) >= 0.8.0-rc.4
+Requires:       crate(pkcs8-0.11/alloc) >= 0.11.0
+Requires:       crate(pkcs8-0.11/pem) >= 0.11.0
+Requires:       crate(spki-0.8/alloc) >= 0.8.0
 Provides:       crate(%{pkgname}/encoding) = %{version}
 
 %description -n %{name}+encoding
@@ -72,9 +71,9 @@ This metapackage enables feature "encoding" for the Rust rsa crate, by pulling i
 Summary:        Pure Rust RSA implementation - feature "getrandom"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/crypto-common) = %{version}
-Requires:       crate(crypto-bigint-0.7.0-rc.28/alloc) >= 0.7.0-rc.28
-Requires:       crate(crypto-bigint-0.7.0-rc.28/getrandom) >= 0.7.0-rc.28
-Requires:       crate(crypto-bigint-0.7.0-rc.28/zeroize) >= 0.7.0-rc.28
+Requires:       crate(crypto-bigint-0.7/alloc) >= 0.7.0
+Requires:       crate(crypto-bigint-0.7/getrandom) >= 0.7.0
+Requires:       crate(crypto-bigint-0.7/zeroize) >= 0.7.0
 Provides:       crate(%{pkgname}/getrandom) = %{version}
 
 %description -n %{name}+getrandom
@@ -83,9 +82,9 @@ This metapackage enables feature "getrandom" for the Rust rsa crate, by pulling 
 %package     -n %{name}+pkcs5
 Summary:        Pure Rust RSA implementation - feature "pkcs5"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(pkcs8-0.11.0-rc.10/alloc) >= 0.11.0-rc.10
-Requires:       crate(pkcs8-0.11.0-rc.10/encryption) >= 0.11.0-rc.10
-Requires:       crate(pkcs8-0.11.0-rc.10/pem) >= 0.11.0-rc.10
+Requires:       crate(pkcs8-0.11/alloc) >= 0.11.0
+Requires:       crate(pkcs8-0.11/encryption) >= 0.11.0
+Requires:       crate(pkcs8-0.11/pem) >= 0.11.0
 Provides:       crate(%{pkgname}/pkcs5) = %{version}
 
 %description -n %{name}+pkcs5
@@ -95,9 +94,9 @@ This metapackage enables feature "pkcs5" for the Rust rsa crate, by pulling in a
 Summary:        Pure Rust RSA implementation - feature "serde"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/encoding) = %{version}
-Requires:       crate(crypto-bigint-0.7.0-rc.28/alloc) >= 0.7.0-rc.28
-Requires:       crate(crypto-bigint-0.7.0-rc.28/serde) >= 0.7.0-rc.28
-Requires:       crate(crypto-bigint-0.7.0-rc.28/zeroize) >= 0.7.0-rc.28
+Requires:       crate(crypto-bigint-0.7/alloc) >= 0.7.0
+Requires:       crate(crypto-bigint-0.7/serde) >= 0.7.0
+Requires:       crate(crypto-bigint-0.7/zeroize) >= 0.7.0
 Requires:       crate(serde-1/derive) >= 1.0.184
 Requires:       crate(serdect-0.4/default) >= 0.4.0
 Provides:       crate(%{pkgname}/serde) = %{version}
@@ -129,9 +128,9 @@ Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(pkcs1-0.8.0-rc.4/alloc) >= 0.8.0-rc.4
 Requires:       crate(pkcs1-0.8.0-rc.4/pem) >= 0.8.0-rc.4
 Requires:       crate(pkcs1-0.8.0-rc.4/std) >= 0.8.0-rc.4
-Requires:       crate(pkcs8-0.11.0-rc.10/alloc) >= 0.11.0-rc.10
-Requires:       crate(pkcs8-0.11.0-rc.10/pem) >= 0.11.0-rc.10
-Requires:       crate(pkcs8-0.11.0-rc.10/std) >= 0.11.0-rc.10
+Requires:       crate(pkcs8-0.11/alloc) >= 0.11.0
+Requires:       crate(pkcs8-0.11/pem) >= 0.11.0
+Requires:       crate(pkcs8-0.11/std) >= 0.11.0
 Provides:       crate(%{pkgname}/std) = %{version}
 
 %description -n %{name}+std

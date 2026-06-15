@@ -10,8 +10,11 @@ License:        Apache-2.0 OR MIT
 URL:            https://github.com/RustCrypto/elliptic-curves/tree/master/p384
 #!RemoteAsset:  sha256:8c91df688211f5957dbe2ab599dcbcaade8d6d3cdc15c5b350d350d7d07ce423
 Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source code for takopackized Rust crate "p384"
 BuildArch:      noarch
 BuildSystem:    rustcrates
+
+Patch0:         0001-fix-dependency-constraints.patch
 
 BuildRequires:  rust-rpm-macros
 
@@ -21,7 +24,6 @@ Provides:       crate(%{pkgname}) = %{version}
 
 %description
 secp384r1) elliptic curve as defined in SP 800-186 with support for ECDH, ECDSA signing/verification, and general purpose curve arithmetic support.
-Source code for takopackized Rust crate "p384"
 
 %package     -n %{name}+alloc
 Summary:        Pure Rust implementation of the NIST P-384 (a.k.a - feature "alloc"
@@ -233,7 +235,7 @@ This metapackage enables feature "serdect" for the Rust p384 crate, by pulling i
 %package     -n %{name}+sha2
 Summary:        Pure Rust implementation of the NIST P-384 (a.k.a - feature "sha2"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(sha2-0.11.0-rc.5) >= 0.11.0-rc.5
+Requires:       crate(sha2-0.11) >= 0.11.0
 Provides:       crate(%{pkgname}/sha2) = %{version}
 
 %description -n %{name}+sha2

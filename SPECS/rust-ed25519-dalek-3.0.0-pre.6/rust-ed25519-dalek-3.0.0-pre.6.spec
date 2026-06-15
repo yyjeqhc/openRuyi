@@ -13,13 +13,12 @@ Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/do
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
-# Source code for takopackized Rust crate "ed25519-dalek"
 Patch0:         0001-fix-dependency-constraints.patch
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(curve25519-dalek-5.0.0-pre.6/digest) >= 5.0.0-pre.6
-Requires:       crate(ed25519-3.0.0-rc.4) >= 3.0.0-rc.4
+Requires:       crate(ed25519-3) >= 3.0.0
 Requires:       crate(sha2-0.11) >= 0.11.0
 Requires:       crate(subtle-2) >= 2.3.0
 Provides:       crate(%{pkgname}) = %{version}
@@ -32,7 +31,7 @@ Summary:        Fast and efficient ed25519 EdDSA key generations, signing, and v
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(curve25519-dalek-5.0.0-pre.6/alloc) >= 5.0.0-pre.6
 Requires:       crate(curve25519-dalek-5.0.0-pre.6/digest) >= 5.0.0-pre.6
-Requires:       crate(ed25519-3.0.0-rc.4/alloc) >= 3.0.0-rc.4
+Requires:       crate(ed25519-3/alloc) >= 3.0.0
 Requires:       crate(serde-1/alloc) >= 1.0.0
 Requires:       crate(signature-3/alloc) >= 3.0.0
 Requires:       crate(zeroize-1/alloc) >= 1.5.0
@@ -46,7 +45,7 @@ Summary:        Fast and efficient ed25519 EdDSA key generations, signing, and v
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/alloc) = %{version}
 Requires:       crate(%{pkgname}/rand-core) = %{version}
-Requires:       crate(keccak-0.2.0-rc.1) >= 0.2.0-rc.1
+Requires:       crate(keccak-0.2) >= 0.2.0
 Provides:       crate(%{pkgname}/batch) = %{version}
 
 %description -n %{name}+batch
@@ -96,7 +95,7 @@ Summary:        Fast and efficient ed25519 EdDSA key generations, signing, and v
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/alloc) = %{version}
 Requires:       crate(%{pkgname}/pkcs8) = %{version}
-Requires:       crate(ed25519-3.0.0-rc.4/pem) >= 3.0.0-rc.4
+Requires:       crate(ed25519-3/pem) >= 3.0.0
 Provides:       crate(%{pkgname}/pem) = %{version}
 
 %description -n %{name}+pem
@@ -105,7 +104,7 @@ This metapackage enables feature "pem" for the Rust ed25519-dalek crate, by pull
 %package     -n %{name}+pkcs8
 Summary:        Fast and efficient ed25519 EdDSA key generations, signing, and verification in pure Rust - feature "pkcs8"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(ed25519-3.0.0-rc.4/pkcs8) >= 3.0.0-rc.4
+Requires:       crate(ed25519-3/pkcs8) >= 3.0.0
 Provides:       crate(%{pkgname}/pkcs8) = %{version}
 
 %description -n %{name}+pkcs8
@@ -123,7 +122,7 @@ This metapackage enables feature "rand_core" for the Rust ed25519-dalek crate, b
 %package     -n %{name}+serde
 Summary:        Fast and efficient ed25519 EdDSA key generations, signing, and verification in pure Rust - feature "serde"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(ed25519-3.0.0-rc.4/serde) >= 3.0.0-rc.4
+Requires:       crate(ed25519-3/serde) >= 3.0.0
 Requires:       crate(serde-1) >= 1.0.0
 Provides:       crate(%{pkgname}/serde) = %{version}
 

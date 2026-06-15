@@ -109,7 +109,7 @@ version = "0.10"
 default-features = false
 
 [dependencies.crypto-bigint]
-version = "0.7.0-rc.28"
+version = "0.7.0"
 features = [
     "zeroize",
     "alloc",
@@ -117,12 +117,12 @@ features = [
 default-features = false
 
 [dependencies.crypto-common]
-version = "0.2.0-rc.15"
+version = "0.2.0"
 features = ["getrandom"]
 optional = true
 
 [dependencies.crypto-primes]
-version = "0.7.0-pre.9"
+version = "0.7.0"
 default-features = false
 
 [dependencies.digest]
@@ -143,7 +143,7 @@ optional = true
 default-features = false
 
 [dependencies.pkcs8]
-version = "0.11.0-rc.10"
+version = "0.11.0"
 features = [
     "alloc",
     "pem",
@@ -187,7 +187,7 @@ features = [
 default-features = false
 
 [dependencies.spki]
-version = "0.8.0-rc.4"
+version = "0.8.0"
 features = ["alloc"]
 optional = true
 default-features = false

@@ -13,7 +13,6 @@ Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/do
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
-#Source code for takopackized Rust crate "ecdsa"
 Patch0:         0001-fix-dependency-constraints.patch
 
 BuildRequires:  rust-rpm-macros
@@ -33,7 +32,7 @@ Requires:       crate(%{pkgname}/digest) = %{version}
 Requires:       crate(%{pkgname}/hazmat) = %{version}
 Requires:       crate(elliptic-curve-0.14.0-rc.34/arithmetic) >= 0.14.0-rc.34
 Requires:       crate(elliptic-curve-0.14.0-rc.34/sec1) >= 0.14.0-rc.34
-Requires:       crate(rfc6979-0.5.0-rc.5/default) >= 0.5.0-rc.5
+Requires:       crate(rfc6979-0.5/default) >= 0.5.0
 Provides:       crate(%{pkgname}/algorithm) = %{version}
 
 %description -n %{name}+algorithm
@@ -55,7 +54,7 @@ This metapackage enables feature "alloc" for the Rust ecdsa crate, by pulling in
 %package     -n %{name}+der
 Summary:        Pure Rust implementation of the Elliptic Curve Digital Signature Algorithm (ECDSA) as specified in FIPS 186-4 (Digital Signature Standard), providing RFC6979 deterministic signatures as well as support for added entropy - feature "der"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(der-0.8.0-rc.10/default) >= 0.8.0-rc.10
+Requires:       crate(der-0.8/default) >= 0.8.0
 Provides:       crate(%{pkgname}/der) = %{version}
 
 %description -n %{name}+der
