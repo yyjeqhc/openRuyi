@@ -13,18 +13,20 @@ Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/do
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
+#Source code for takopackized Rust crate "aes-gcm"
+Patch0:         0001-fix-dependency-constraints.patch
+
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(aead-0.6.0-rc.10) >= 0.6.0-rc.10
-Requires:       crate(cipher-0.5.0-rc.8/default) >= 0.5.0-rc.8
-Requires:       crate(ctr-0.10.0-rc.3/default) >= 0.10.0-rc.3
-Requires:       crate(ghash-0.6.0-rc.5) >= 0.6.0-rc.5
+Requires:       crate(aead-0.6) >= 0.6.0
+Requires:       crate(cipher-0.5/default) >= 0.5.0
+Requires:       crate(ctr-0.10/default) >= 0.10.0
+Requires:       crate(ghash-0.6) >= 0.6.0
 Requires:       crate(subtle-2) >= 2.0.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/hazmat) = %{version}
 
 %description
-Source code for takopackized Rust crate "aes-gcm"
 
 %package     -n %{name}+aes
 Summary:        Pure Rust implementation of the AES-GCM (Galois/Counter Mode) Authenticated Encryption with Associated Data (AEAD) Cipher with optional architecture-specific hardware acceleration - feature "aes"
@@ -38,7 +40,7 @@ This metapackage enables feature "aes" for the Rust aes-gcm crate, by pulling in
 %package     -n %{name}+alloc
 Summary:        Pure Rust implementation of the AES-GCM (Galois/Counter Mode) Authenticated Encryption with Associated Data (AEAD) Cipher with optional architecture-specific hardware acceleration - feature "alloc"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(aead-0.6.0-rc.10/alloc) >= 0.6.0-rc.10
+Requires:       crate(aead-0.6/alloc) >= 0.6.0
 Provides:       crate(%{pkgname}/alloc) = %{version}
 
 %description -n %{name}+alloc
@@ -47,7 +49,7 @@ This metapackage enables feature "alloc" for the Rust aes-gcm crate, by pulling 
 %package     -n %{name}+arrayvec
 Summary:        Pure Rust implementation of the AES-GCM (Galois/Counter Mode) Authenticated Encryption with Associated Data (AEAD) Cipher with optional architecture-specific hardware acceleration - feature "arrayvec"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(aead-0.6.0-rc.10/arrayvec) >= 0.6.0-rc.10
+Requires:       crate(aead-0.6/arrayvec) >= 0.6.0
 Provides:       crate(%{pkgname}/arrayvec) = %{version}
 
 %description -n %{name}+arrayvec
@@ -56,7 +58,7 @@ This metapackage enables feature "arrayvec" for the Rust aes-gcm crate, by pulli
 %package     -n %{name}+bytes
 Summary:        Pure Rust implementation of the AES-GCM (Galois/Counter Mode) Authenticated Encryption with Associated Data (AEAD) Cipher with optional architecture-specific hardware acceleration - feature "bytes"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(aead-0.6.0-rc.10/bytes) >= 0.6.0-rc.10
+Requires:       crate(aead-0.6/bytes) >= 0.6.0
 Provides:       crate(%{pkgname}/bytes) = %{version}
 
 %description -n %{name}+bytes
@@ -76,7 +78,7 @@ This metapackage enables feature "default" for the Rust aes-gcm crate, by pullin
 %package     -n %{name}+getrandom
 Summary:        Pure Rust implementation of the AES-GCM (Galois/Counter Mode) Authenticated Encryption with Associated Data (AEAD) Cipher with optional architecture-specific hardware acceleration - feature "getrandom"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(aead-0.6.0-rc.10/getrandom) >= 0.6.0-rc.10
+Requires:       crate(aead-0.6/getrandom) >= 0.6.0
 Provides:       crate(%{pkgname}/getrandom) = %{version}
 
 %description -n %{name}+getrandom
@@ -85,7 +87,7 @@ This metapackage enables feature "getrandom" for the Rust aes-gcm crate, by pull
 %package     -n %{name}+rand-core
 Summary:        Pure Rust implementation of the AES-GCM (Galois/Counter Mode) Authenticated Encryption with Associated Data (AEAD) Cipher with optional architecture-specific hardware acceleration - feature "rand_core"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(aead-0.6.0-rc.10/rand-core) >= 0.6.0-rc.10
+Requires:       crate(aead-0.6/rand-core) >= 0.6.0
 Provides:       crate(%{pkgname}/rand-core) = %{version}
 
 %description -n %{name}+rand-core

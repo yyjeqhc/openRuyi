@@ -109,7 +109,7 @@ version = "0.4"
 optional = true
 
 [dependencies.der]
-version = "0.8.0-rc.12"
+version = "0.8.0"
 features = ["oid"]
 
 [dependencies.getrandom]

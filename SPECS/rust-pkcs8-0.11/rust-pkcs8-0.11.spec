@@ -13,16 +13,18 @@ Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/do
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
+#Source code for takopackized Rust crate "pkcs8"
+Patch0:         0001-fix-dependency-constraints.patch
+
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(der-0.8.0-rc.12/default) >= 0.8.0-rc.12
-Requires:       crate(der-0.8.0-rc.12/oid) >= 0.8.0-rc.12
+Requires:       crate(der-0.8/default) >= 0.8.0
+Requires:       crate(der-0.8/oid) >= 0.8.0
 Requires:       crate(spki-0.8/default) >= 0.8.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
-Source code for takopackized Rust crate "pkcs8"
 
 %package     -n %{name}+3des
 Summary:        Pure Rust implementation of Public-Key Cryptography Standards (PKCS) #8: Private-Key Information Syntax Specification (RFC 5208), with additional support for PKCS#8v2 asymmetric key packages (RFC 5958) - feature "3des"
@@ -38,9 +40,9 @@ This metapackage enables feature "3des" for the Rust pkcs8 crate, by pulling in 
 %package     -n %{name}+alloc
 Summary:        Pure Rust implementation of Public-Key Cryptography Standards (PKCS) #8: Private-Key Information Syntax Specification (RFC 5208), with additional support for PKCS#8v2 asymmetric key packages (RFC 5958) - feature "alloc"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(der-0.8.0-rc.12/alloc) >= 0.8.0-rc.12
-Requires:       crate(der-0.8.0-rc.12/oid) >= 0.8.0-rc.12
-Requires:       crate(der-0.8.0-rc.12/zeroize) >= 0.8.0-rc.12
+Requires:       crate(der-0.8/alloc) >= 0.8.0
+Requires:       crate(der-0.8/oid) >= 0.8.0
+Requires:       crate(der-0.8/zeroize) >= 0.8.0
 Requires:       crate(spki-0.8/alloc) >= 0.8.0
 Provides:       crate(%{pkgname}/alloc) = %{version}
 
@@ -97,8 +99,8 @@ This metapackage enables feature "getrandom" for the Rust pkcs8 crate, by pullin
 Summary:        Pure Rust implementation of Public-Key Cryptography Standards (PKCS) #8: Private-Key Information Syntax Specification (RFC 5208), with additional support for PKCS#8v2 asymmetric key packages (RFC 5958) - feature "pem"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/alloc) = %{version}
-Requires:       crate(der-0.8.0-rc.12/oid) >= 0.8.0-rc.12
-Requires:       crate(der-0.8.0-rc.12/pem) >= 0.8.0-rc.12
+Requires:       crate(der-0.8/oid) >= 0.8.0
+Requires:       crate(der-0.8/pem) >= 0.8.0
 Requires:       crate(spki-0.8/pem) >= 0.8.0
 Provides:       crate(%{pkgname}/pem) = %{version}
 
@@ -130,8 +132,8 @@ This metapackage enables feature "sha1-insecure" for the Rust pkcs8 crate, by pu
 Summary:        Pure Rust implementation of Public-Key Cryptography Standards (PKCS) #8: Private-Key Information Syntax Specification (RFC 5208), with additional support for PKCS#8v2 asymmetric key packages (RFC 5958) - feature "std"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/alloc) = %{version}
-Requires:       crate(der-0.8.0-rc.12/oid) >= 0.8.0-rc.12
-Requires:       crate(der-0.8.0-rc.12/std) >= 0.8.0-rc.12
+Requires:       crate(der-0.8/oid) >= 0.8.0
+Requires:       crate(der-0.8/std) >= 0.8.0
 Requires:       crate(spki-0.8/std) >= 0.8.0
 Provides:       crate(%{pkgname}/std) = %{version}
 

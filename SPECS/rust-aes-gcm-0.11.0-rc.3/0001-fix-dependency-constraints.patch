@@ -1,0 +1,37 @@
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -79,7 +79,7 @@
+ path = "tests/other_ivlen.rs"
+ 
+ [dependencies.aead]
+-version = "0.6.0-rc.10"
++version = "0.6.0"
+ default-features = false
+ 
+ [dependencies.aes]
+@@ -87,13 +87,13 @@
+ optional = true
+ 
+ [dependencies.cipher]
+-version = "0.5.0-rc.8"
++version = "0.5.0"
+ 
+ [dependencies.ctr]
+-version = "0.10.0-rc.3"
++version = "0.10.0"
+ 
+ [dependencies.ghash]
+-version = "0.6.0-rc.5"
++version = "0.6.0"
+ default-features = false
+ 
+ [dependencies.subtle]
+@@ -106,7 +106,7 @@
+ default-features = false
+ 
+ [dev-dependencies.aead]
+-version = "0.6.0-rc.10"
++version = "0.6.0"
+ features = [
+     "alloc",
+     "dev",

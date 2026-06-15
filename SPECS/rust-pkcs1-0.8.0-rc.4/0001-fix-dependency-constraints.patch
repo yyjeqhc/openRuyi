@@ -1,0 +1,11 @@
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -88,7 +88,7 @@
+ path = "tests/traits.rs"
+ 
+ [dependencies.der]
+-version = "0.8.0-rc.9"
++version = "0.8.0"
+ features = ["oid"]
+ 
+ [dependencies.spki]
