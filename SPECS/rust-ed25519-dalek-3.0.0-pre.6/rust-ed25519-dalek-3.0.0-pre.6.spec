@@ -13,17 +13,19 @@ Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/do
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
+# Source code for takopackized Rust crate "ed25519-dalek"
+Patch0:         0001-fix-dependency-constraints.patch
+
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(curve25519-dalek-5.0.0-pre.6/digest) >= 5.0.0-pre.6
 Requires:       crate(ed25519-3.0.0-rc.4) >= 3.0.0-rc.4
-Requires:       crate(sha2-0.11.0-rc.5) >= 0.11.0-rc.5
+Requires:       crate(sha2-0.11) >= 0.11.0
 Requires:       crate(subtle-2) >= 2.3.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/hazmat) = %{version}
 
 %description
-Source code for takopackized Rust crate "ed25519-dalek"
 
 %package     -n %{name}+alloc
 Summary:        Fast and efficient ed25519 EdDSA key generations, signing, and verification in pure Rust - feature "alloc"
@@ -32,7 +34,7 @@ Requires:       crate(curve25519-dalek-5.0.0-pre.6/alloc) >= 5.0.0-pre.6
 Requires:       crate(curve25519-dalek-5.0.0-pre.6/digest) >= 5.0.0-pre.6
 Requires:       crate(ed25519-3.0.0-rc.4/alloc) >= 3.0.0-rc.4
 Requires:       crate(serde-1/alloc) >= 1.0.0
-Requires:       crate(signature-3.0.0-rc.10/alloc) >= 3.0.0-rc.10
+Requires:       crate(signature-3/alloc) >= 3.0.0
 Requires:       crate(zeroize-1/alloc) >= 1.5.0
 Provides:       crate(%{pkgname}/alloc) = %{version}
 
@@ -63,7 +65,7 @@ This metapackage enables feature "default" for the Rust ed25519-dalek crate, by 
 %package     -n %{name}+digest
 Summary:        Fast and efficient ed25519 EdDSA key generations, signing, and verification in pure Rust - feature "digest"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(signature-3.0.0-rc.10/digest) >= 3.0.0-rc.10
+Requires:       crate(signature-3/digest) >= 3.0.0
 Provides:       crate(%{pkgname}/digest) = %{version}
 
 %description -n %{name}+digest
@@ -131,7 +133,7 @@ This metapackage enables feature "serde" for the Rust ed25519-dalek crate, by pu
 %package     -n %{name}+signature
 Summary:        Fast and efficient ed25519 EdDSA key generations, signing, and verification in pure Rust - feature "signature"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(signature-3.0.0-rc.10) >= 3.0.0-rc.10
+Requires:       crate(signature-3) >= 3.0.0
 Provides:       crate(%{pkgname}/signature) = %{version}
 
 %description -n %{name}+signature

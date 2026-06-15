@@ -13,25 +13,27 @@ Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/do
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
+#Source code for takopackized Rust crate "rsa"
+Patch0:         0001-fix-dependency-constraints.patch
+
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(const-oid-0.10) >= 0.10.0
 Requires:       crate(crypto-bigint-0.7.0-rc.28/alloc) >= 0.7.0-rc.28
 Requires:       crate(crypto-bigint-0.7.0-rc.28/zeroize) >= 0.7.0-rc.28
 Requires:       crate(crypto-primes-0.7.0-pre.9) >= 0.7.0-pre.9
-Requires:       crate(digest-0.11.0-rc.11/alloc) >= 0.11.0-rc.11
-Requires:       crate(digest-0.11.0-rc.11/oid) >= 0.11.0-rc.11
+Requires:       crate(digest-0.11/alloc) >= 0.11.0
+Requires:       crate(digest-0.11/oid) >= 0.11.0
 Requires:       crate(rand-core-0.10) >= 0.10.0
-Requires:       crate(signature-3.0.0-rc.10/alloc) >= 3.0.0-rc.10
-Requires:       crate(signature-3.0.0-rc.10/digest) >= 3.0.0-rc.10
-Requires:       crate(signature-3.0.0-rc.10/rand-core) >= 3.0.0-rc.10
+Requires:       crate(signature-3/alloc) >= 3.0.0
+Requires:       crate(signature-3/digest) >= 3.0.0
+Requires:       crate(signature-3/rand-core) >= 3.0.0
 Requires:       crate(zeroize-1/alloc) >= 1.8.0
 Requires:       crate(zeroize-1/default) >= 1.8.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/hazmat) = %{version}
 
 %description
-Source code for takopackized Rust crate "rsa"
 
 %package     -n %{name}+crypto-common
 Summary:        Pure Rust RSA implementation - feature "crypto-common"
@@ -106,7 +108,7 @@ This metapackage enables feature "serde" for the Rust rsa crate, by pulling in a
 %package     -n %{name}+sha1
 Summary:        Pure Rust RSA implementation - feature "sha1"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(sha1-0.11.0-rc.5/oid) >= 0.11.0-rc.5
+Requires:       crate(sha1-0.11/oid) >= 0.11.0
 Provides:       crate(%{pkgname}/sha1) = %{version}
 
 %description -n %{name}+sha1
@@ -115,7 +117,7 @@ This metapackage enables feature "sha1" for the Rust rsa crate, by pulling in an
 %package     -n %{name}+sha2
 Summary:        Pure Rust RSA implementation - feature "sha2"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(sha2-0.11.0-rc.5/oid) >= 0.11.0-rc.5
+Requires:       crate(sha2-0.11/oid) >= 0.11.0
 Provides:       crate(%{pkgname}/sha2) = %{version}
 
 %description -n %{name}+sha2

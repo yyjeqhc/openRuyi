@@ -13,23 +13,25 @@ Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/do
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
+#Source code for takopackized Rust crate "pkcs1"
+Patch0:         0001-fix-dependency-constraints.patch
+
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(der-0.8.0-rc.9/default) >= 0.8.0-rc.9
-Requires:       crate(der-0.8.0-rc.9/oid) >= 0.8.0-rc.9
+Requires:       crate(der-0.8/default) >= 0.8.0
+Requires:       crate(der-0.8/oid) >= 0.8.0
 Requires:       crate(spki-0.8.0-rc.4/default) >= 0.8.0-rc.4
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 
 %description
-Source code for takopackized Rust crate "pkcs1"
 
 %package     -n %{name}+alloc
 Summary:        Pure Rust implementation of Public-Key Cryptography Standards (PKCS) #1: RSA Cryptography Specifications Version 2.2 (RFC 8017) - feature "alloc"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/zeroize) = %{version}
-Requires:       crate(der-0.8.0-rc.9/alloc) >= 0.8.0-rc.9
-Requires:       crate(der-0.8.0-rc.9/oid) >= 0.8.0-rc.9
+Requires:       crate(der-0.8/alloc) >= 0.8.0
+Requires:       crate(der-0.8/oid) >= 0.8.0
 Provides:       crate(%{pkgname}/alloc) = %{version}
 
 %description -n %{name}+alloc
@@ -39,8 +41,8 @@ This metapackage enables feature "alloc" for the Rust pkcs1 crate, by pulling in
 Summary:        Pure Rust implementation of Public-Key Cryptography Standards (PKCS) #1: RSA Cryptography Specifications Version 2.2 (RFC 8017) - feature "pem"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/alloc) = %{version}
-Requires:       crate(der-0.8.0-rc.9/oid) >= 0.8.0-rc.9
-Requires:       crate(der-0.8.0-rc.9/pem) >= 0.8.0-rc.9
+Requires:       crate(der-0.8/oid) >= 0.8.0
+Requires:       crate(der-0.8/pem) >= 0.8.0
 Provides:       crate(%{pkgname}/pem) = %{version}
 
 %description -n %{name}+pem
@@ -50,8 +52,8 @@ This metapackage enables feature "pem" for the Rust pkcs1 crate, by pulling in a
 Summary:        Pure Rust implementation of Public-Key Cryptography Standards (PKCS) #1: RSA Cryptography Specifications Version 2.2 (RFC 8017) - feature "std"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/alloc) = %{version}
-Requires:       crate(der-0.8.0-rc.9/oid) >= 0.8.0-rc.9
-Requires:       crate(der-0.8.0-rc.9/std) >= 0.8.0-rc.9
+Requires:       crate(der-0.8/oid) >= 0.8.0
+Requires:       crate(der-0.8/std) >= 0.8.0
 Provides:       crate(%{pkgname}/std) = %{version}
 
 %description -n %{name}+std
@@ -60,8 +62,8 @@ This metapackage enables feature "std" for the Rust pkcs1 crate, by pulling in a
 %package     -n %{name}+zeroize
 Summary:        Pure Rust implementation of Public-Key Cryptography Standards (PKCS) #1: RSA Cryptography Specifications Version 2.2 (RFC 8017) - feature "zeroize"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(der-0.8.0-rc.9/oid) >= 0.8.0-rc.9
-Requires:       crate(der-0.8.0-rc.9/zeroize) >= 0.8.0-rc.9
+Requires:       crate(der-0.8/oid) >= 0.8.0
+Requires:       crate(der-0.8/zeroize) >= 0.8.0
 Provides:       crate(%{pkgname}/zeroize) = %{version}
 
 %description -n %{name}+zeroize
