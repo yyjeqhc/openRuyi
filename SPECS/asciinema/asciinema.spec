@@ -7,7 +7,7 @@
 %global full_version 3.2.0
 %global pkgname asciinema-3
 
-Name:           rust-asciinema-3
+Name:           asciinema
 Version:        3.2.0
 Release:        %autorelease
 Summary:        Terminal session recorder, streamer, and player
@@ -20,6 +20,7 @@ BuildSystem:    rust
 BuildRequires:  rust-rpm-macros
 BuildRequires:  rust
 BuildRequires:  cargo
+BuildRequires:  python3
 BuildRequires:  rust-hyper-1+server >= 1.9.0
 BuildRequires:  crate(hyper-1/server) >= 1.9.0
 BuildRequires:  crate(anyhow-1/default) >= 1.0.0

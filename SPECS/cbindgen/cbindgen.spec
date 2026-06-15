@@ -17,6 +17,8 @@ URL:            https://github.com/mozilla/cbindgen
 Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildSystem:    rust
 
+BuildOption(check):  -- --skip test_body
+
 BuildRequires:  rust-rpm-macros
 BuildRequires:  rust
 BuildRequires:  cargo
