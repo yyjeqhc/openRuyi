@@ -22,6 +22,7 @@ BuildOption(check):  -- --skip test_body
 BuildRequires:  rust-rpm-macros
 BuildRequires:  rust
 BuildRequires:  cargo
+BuildRequires:  python3dist(cython)
 BuildRequires:  crate(clap-4) >= 4.3.0
 BuildRequires:  crate(clap-4/default) >= 4.3.0
 BuildRequires:  crate(heck-0.5) >= 0.5.0
