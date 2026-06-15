@@ -10,11 +10,10 @@ License:        Apache-2.0 OR MIT
 URL:            https://github.com/Eugeny/RustCrypto-SSH/
 #!RemoteAsset:  sha256:25f8a978272e3cbdf4768f7363eb1c8e1e6ba63c52a3ed05e29e222da4aec7cb
 Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Patch0:         0001-fix-dependency-constraints.patch
+
 BuildArch:      noarch
 BuildSystem:    rustcrates
-
-#Source code for takopackized Rust crate "internal-russh-forked-ssh-key"
-Patch0:         0001-fix-dependency-constraints.patch
 
 BuildRequires:  rust-rpm-macros
 
@@ -157,7 +156,7 @@ Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/alloc) = %{version}
 Requires:       crate(argon2-0.5/alloc) >= 0.5.0
 Requires:       crate(hex-0.4/default) >= 0.4.0
-Requires:       crate(hmac-0.13.0-rc.5/default) >= 0.13.0-rc.5
+Requires:       crate(hmac-0.13/default) >= 0.13.0
 Requires:       crate(sha1-0.11/oid) >= 0.11.0
 Requires:       crate(ssh-cipher-0.2/aes-cbc) >= 0.2.0
 Provides:       crate(%{pkgname}/ppk) = %{version}

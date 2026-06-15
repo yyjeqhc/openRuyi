@@ -9,6 +9,15 @@
  features = ["alloc"]
  
  [dependencies.dsa]
+@@ -238,7 +238,7 @@
+ optional = true
+ 
+ [dependencies.hmac]
+-version = "0.13.0-rc.5"
++version = "0.13.0"
+ optional = true
+ 
+ [dependencies.p256]
 @@ -271,7 +271,7 @@
  default-features = false
  
