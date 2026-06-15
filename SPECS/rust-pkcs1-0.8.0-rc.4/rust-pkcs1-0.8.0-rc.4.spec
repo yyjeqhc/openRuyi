@@ -13,14 +13,13 @@ Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/do
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
-#Source code for takopackized Rust crate "pkcs1"
 Patch0:         0001-fix-dependency-constraints.patch
 
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(der-0.8/default) >= 0.8.0
 Requires:       crate(der-0.8/oid) >= 0.8.0
-Requires:       crate(spki-0.8.0-rc.4/default) >= 0.8.0-rc.4
+Requires:       crate(spki-0.8/default) >= 0.8.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 

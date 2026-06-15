@@ -13,7 +13,6 @@ Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/do
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
-#Source code for takopackized Rust crate "aes-gcm"
 Patch0:         0001-fix-dependency-constraints.patch
 
 BuildRequires:  rust-rpm-macros
@@ -31,7 +30,7 @@ Provides:       crate(%{pkgname}/hazmat) = %{version}
 %package     -n %{name}+aes
 Summary:        Pure Rust implementation of the AES-GCM (Galois/Counter Mode) Authenticated Encryption with Associated Data (AEAD) Cipher with optional architecture-specific hardware acceleration - feature "aes"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(aes-0.9.0-rc.4/default) >= 0.9.0-rc.4
+Requires:       crate(aes-0.9/default) >= 0.9.0
 Provides:       crate(%{pkgname}/aes) = %{version}
 
 %description -n %{name}+aes

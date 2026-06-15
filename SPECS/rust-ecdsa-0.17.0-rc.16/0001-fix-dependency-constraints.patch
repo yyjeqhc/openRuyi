@@ -1,6 +1,11 @@
 --- a/Cargo.toml
 +++ b/Cargo.toml
-@@ -108,13 +108,13 @@
+@@ -104,22 +104,22 @@
+ path = "tests/lib.rs"
+ 
+ [dependencies.der]
+-version = "0.8.0-rc.10"
++version = "0.8.0"
  optional = true
  
  [dependencies.digest]
@@ -16,6 +21,12 @@
  features = ["sec1"]
  default-features = false
  
+ [dependencies.rfc6979]
+-version = "0.5.0-rc.5"
++version = "0.5.0"
+ optional = true
+ 
+ [dependencies.serdect]
 @@ -129,18 +129,18 @@
  default-features = false
  
