@@ -13,9 +13,11 @@ Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/do
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
+Patch0:         0001-fix-version.patch
+
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(errno-0.2/default) >= 0.2.0
+Requires:       crate(errno-0.3/default) >= 0.3.0
 Requires:       crate(libc-0.2/default) >= 0.2.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
