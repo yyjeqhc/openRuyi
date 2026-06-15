@@ -11,11 +11,11 @@ Release:        %autorelease
 License:        Apache-2.0 AND BSD-3-Clause AND MIT
 Summary:        OCI network stack
 URL:            https://github.com/containers/netavark
-#!RemoteAsset
+#!RemoteAsset:  sha256:00009bfad079a03862825b2f9db8b71b82fc80aad5552a9c76ea912edc9b0000
 Source0:        %{url}/archive/v%{version}.tar.gz
-Patch0:         netavark-cargo-requirements.patch
-
 BuildSystem:    rust
+
+Patch0:         0001-fix-version.patch
 
 BuildRequires:  cargo
 BuildRequires:  rust
@@ -185,4 +185,4 @@ install -Dm0755 target/%{rust_def_target}/release/netavark bin/netavark
 %{_unitdir}/netavark-nftables-reload.service
 
 %changelog
-%{?autochangelog}
+%autochangelog

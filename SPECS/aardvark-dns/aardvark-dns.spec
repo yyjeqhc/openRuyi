@@ -13,9 +13,9 @@ Summary:        Authoritative DNS server for A/AAAA container records
 URL:            https://github.com/containers/aardvark-dns
 #!RemoteAsset:  sha256:25b39bfad079a03862825b2f9db8b71b82fc80aad5552a9c76ea912edc9b889e
 Source0:        %{url}/archive/v%{version}.tar.gz
-Patch0:         aardvark-dns-cargo-requirements.patch
-
 BuildSystem:    rust
+
+Patch0:         0001-fix-version.patch
 
 BuildRequires:  cargo
 BuildRequires:  rust
@@ -97,7 +97,7 @@ install -Dm0755 target/%{rust_def_target}/release/aardvark-dns %{buildroot}%{_li
 %doc README.md
 %license LICENSE
 %dir %{_libexecdir}/podman
-%{_libexecdir}/podman/%{name}
+%{_libexecdir}/podman/aardvark-dns
 
 %changelog
 %autochangelog

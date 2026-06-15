@@ -69,7 +69,7 @@ path = "examples/stderr-plugin.rs"
 version = "1.0.93"
 
 [dependencies.clap]
-version = "~4.5.51"
+version = "4.5.51"
 features = [
     "derive",
     "env",
