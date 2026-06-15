@@ -18,6 +18,7 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(openssl-probe-0.1/default) >= 0.1.2
 Requires:       crate(rustls-pki-types-1/default) >= 1.10.0
 Requires:       crate(rustls-pki-types-1/std) >= 1.10.0
+Requires:       crate(schannel-0.1/default) >= 0.1.0
 Requires:       crate(security-framework-3/default) >= 3.0.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}

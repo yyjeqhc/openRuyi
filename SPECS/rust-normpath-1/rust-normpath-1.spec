@@ -15,12 +15,24 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Requires:       crate(windows-sys-0.61/default) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-storage-filesystem) >= 0.61.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
-Provides:       crate(%{pkgname}/localization) = %{version}
 
 %description
 Source code for takopackized Rust crate "normpath"
+
+%package     -n %{name}+localization
+Summary:        More reliable path manipulation - feature "localization"
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(windows-sys-0.61/win32-storage-filesystem) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-ui-shell) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-ui-windowsandmessaging) >= 0.61.0
+Provides:       crate(%{pkgname}/localization) = %{version}
+
+%description -n %{name}+localization
+This metapackage enables feature "localization" for the Rust normpath crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+print-bytes
 Summary:        More reliable path manipulation - feature "print_bytes"

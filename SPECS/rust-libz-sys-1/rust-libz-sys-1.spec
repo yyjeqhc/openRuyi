@@ -15,14 +15,25 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Requires:       crate(cc-1) >= 1.0.98
+Requires:       crate(pkg-config-0.3) >= 0.3.9
+Requires:       crate(vcpkg-0.2) >= 0.2.11
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/asm) = %{version}
-Provides:       crate(%{pkgname}/cmake) = %{version}
 Provides:       crate(%{pkgname}/static) = %{version}
 Provides:       crate(%{pkgname}/stock-zlib) = %{version}
 
 %description
 Source code for takopackized Rust crate "libz-sys"
+
+%package     -n %{name}+cmake
+Summary:        Low-level bindings to the system libz library (also known as zlib) - feature "cmake"
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(cmake-0.1/default) >= 0.1.50
+Provides:       crate(%{pkgname}/cmake) = %{version}
+
+%description -n %{name}+cmake
+This metapackage enables feature "cmake" for the Rust libz-sys crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+default
 Summary:        Low-level bindings to the system libz library (also known as zlib) - feature "default"

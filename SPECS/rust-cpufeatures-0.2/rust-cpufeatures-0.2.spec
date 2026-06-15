@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name cpufeatures
 %global full_version 0.2.17
 %global pkgname cpufeatures-0.2
@@ -20,6 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Requires:       crate(libc-0.2) >= 0.2.155
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 

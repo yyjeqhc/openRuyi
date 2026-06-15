@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name socket2
 %global full_version 0.6.3
 %global pkgname socket2-0.6
@@ -22,6 +16,12 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(libc-0.2/default) >= 0.2.172
+Requires:       crate(windows-sys-0.60/default) >= 0.60.0
+Requires:       crate(windows-sys-0.60/win32-foundation) >= 0.60.0
+Requires:       crate(windows-sys-0.60/win32-networking-winsock) >= 0.60.0
+Requires:       crate(windows-sys-0.60/win32-system-io) >= 0.60.0
+Requires:       crate(windows-sys-0.60/win32-system-threading) >= 0.60.0
+Requires:       crate(windows-sys-0.60/win32-system-windowsprogramming) >= 0.60.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/all) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}

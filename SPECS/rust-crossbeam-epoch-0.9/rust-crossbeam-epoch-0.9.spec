@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name crossbeam-epoch
 %global full_version 0.9.18
 %global pkgname crossbeam-epoch-0.9
@@ -23,7 +18,6 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(crossbeam-utils-0.8) >= 0.8.18
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/alloc) = %{version}
-Provides:       crate(%{pkgname}/loom-crate) = %{version}
 
 %description
 Source code for takopackized Rust crate "crossbeam-epoch"
@@ -37,6 +31,15 @@ Provides:       crate(%{pkgname}/loom) = %{version}
 
 %description -n %{name}+loom
 This metapackage enables feature "loom" for the Rust crossbeam-epoch crate, by pulling in any additional dependencies needed by that feature.
+
+%package     -n %{name}+loom-crate
+Summary:        Epoch-based garbage collection - feature "loom-crate"
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(loom-0.7/default) >= 0.7.1
+Provides:       crate(%{pkgname}/loom-crate) = %{version}
+
+%description -n %{name}+loom-crate
+This metapackage enables feature "loom-crate" for the Rust crossbeam-epoch crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+nightly
 Summary:        Epoch-based garbage collection - feature "nightly"

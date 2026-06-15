@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name objc2-quartz-core
 %global full_version 0.3.2
 %global pkgname objc2-quartz-core-0.3
@@ -35,7 +30,6 @@ Provides:       crate(%{pkgname}/gnustep-1-8) = %{version}
 Provides:       crate(%{pkgname}/gnustep-1-9) = %{version}
 Provides:       crate(%{pkgname}/gnustep-2-0) = %{version}
 Provides:       crate(%{pkgname}/gnustep-2-1) = %{version}
-Provides:       crate(%{pkgname}/objc2-open-gl) = %{version}
 Provides:       crate(%{pkgname}/std) = %{version}
 Provides:       crate(%{pkgname}/unstable-darwin-objc) = %{version}
 
@@ -324,6 +318,15 @@ Provides:       crate(%{pkgname}/objc2-metal) = %{version}
 
 %description -n %{name}+objc2-metal
 This metapackage enables feature "objc2-metal" for the Rust objc2-quartz-core crate, by pulling in any additional dependencies needed by that feature.
+
+%package     -n %{name}+objc2-open-gl
+Summary:        Bindings to the QuartzCore/CoreAnimation framework - feature "objc2-open-gl"
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(objc2-open-gl-0.3/cgltypes) >= 0.3.2
+Provides:       crate(%{pkgname}/objc2-open-gl) = %{version}
+
+%description -n %{name}+objc2-open-gl
+This metapackage enables feature "objc2-open-gl" for the Rust objc2-quartz-core crate, by pulling in any additional dependencies needed by that feature.
 
 %files
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/

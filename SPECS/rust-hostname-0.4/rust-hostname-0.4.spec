@@ -17,6 +17,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(cfg-if-1/default) >= 1.0.0
 Requires:       crate(libc-0.2/default) >= 0.2.0
+Requires:       crate(windows-link-0.1/default) >= 0.1.1
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/set) = %{version}

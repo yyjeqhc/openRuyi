@@ -17,9 +17,18 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(libc-0.2/default) >= 0.2.183
 Requires:       crate(wasi-0.11/default) >= 0.11.0
+Requires:       crate(windows-sys-0.61/default) >= 0.61.0
+Requires:       crate(windows-sys-0.61/wdk-foundation) >= 0.61.0
+Requires:       crate(windows-sys-0.61/wdk-storage-filesystem) >= 0.61.0
+Requires:       crate(windows-sys-0.61/wdk-system-io) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-networking-winsock) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-security) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-storage-filesystem) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-io) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-windowsprogramming) >= 0.61.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/net) = %{version}
-Provides:       crate(%{pkgname}/os-ext) = %{version}
 Provides:       crate(%{pkgname}/os-poll) = %{version}
 
 %description
@@ -36,6 +45,25 @@ Provides:       crate(%{pkgname}/log) = %{version}
 This metapackage enables feature "log" for the Rust mio crate, by pulling in any additional dependencies needed by that feature.
 
 Additionally, this package also provides the "default" feature.
+
+%package     -n %{name}+os-ext
+Summary:        Lightweight non-blocking I/O - feature "os-ext"
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(%{pkgname}/os-poll) = %{version}
+Requires:       crate(windows-sys-0.61/wdk-foundation) >= 0.61.0
+Requires:       crate(windows-sys-0.61/wdk-storage-filesystem) >= 0.61.0
+Requires:       crate(windows-sys-0.61/wdk-system-io) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-networking-winsock) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-security) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-storage-filesystem) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-io) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-pipes) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-windowsprogramming) >= 0.61.0
+Provides:       crate(%{pkgname}/os-ext) = %{version}
+
+%description -n %{name}+os-ext
+This metapackage enables feature "os-ext" for the Rust mio crate, by pulling in any additional dependencies needed by that feature.
 
 %files
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/

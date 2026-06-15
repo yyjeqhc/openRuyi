@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name gix-status
 %global full_version 0.20.0
 %global pkgname gix-status-0.20
@@ -32,6 +27,7 @@ Requires:       crate(gix-object-0.50/default) >= 0.50.0
 Requires:       crate(gix-path-0.10/default) >= 0.10.19
 Requires:       crate(gix-pathspec-0.12/default) >= 0.12.0
 Requires:       crate(gix-worktree-0.42/attributes) >= 0.42.0
+Requires:       crate(portable-atomic-1/default) >= 1.0.0
 Requires:       crate(thiserror-2/default) >= 2.0.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}

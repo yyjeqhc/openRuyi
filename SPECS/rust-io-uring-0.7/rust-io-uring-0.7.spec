@@ -19,13 +19,23 @@ Requires:       crate(bitflags-2/default) >= 2.0.0
 Requires:       crate(cfg-if-1/default) >= 1.0.0
 Requires:       crate(libc-0.2) >= 0.2.98
 Provides:       crate(%{pkgname}) = %{version}
-Provides:       crate(%{pkgname}/bindgen) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/io-safety) = %{version}
-Provides:       crate(%{pkgname}/overwrite) = %{version}
 
 %description
 Source code for takopackized Rust crate "io-uring"
+
+%package     -n %{name}+bindgen
+Summary:        Low-level `io_uring` userspace interface for Rust - feature "bindgen" and 1 more
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(bindgen-0.69/default) >= 0.69.0
+Provides:       crate(%{pkgname}/bindgen) = %{version}
+Provides:       crate(%{pkgname}/overwrite) = %{version}
+
+%description -n %{name}+bindgen
+This metapackage enables feature "bindgen" for the Rust io-uring crate, by pulling in any additional dependencies needed by that feature.
+
+Additionally, this package also provides the "overwrite" feature.
 
 %package     -n %{name}+sc
 Summary:        Low-level `io_uring` userspace interface for Rust - feature "sc" and 1 more

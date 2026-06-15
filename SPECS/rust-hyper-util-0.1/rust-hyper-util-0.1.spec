@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name hyper-util
 %global full_version 0.1.20
 %global pkgname hyper-util-0.1
@@ -27,7 +21,6 @@ Requires:       crate(http-body-1/default) >= 1.0.0
 Requires:       crate(hyper-1/default) >= 1.8.0
 Requires:       crate(pin-project-lite-0.2/default) >= 0.2.4
 Provides:       crate(%{pkgname}) = %{version}
-Provides:       crate(%{pkgname}/client-proxy-system) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/internal-happy-eyeballs-tests) = %{version}
 
@@ -83,6 +76,16 @@ Provides:       crate(%{pkgname}/client-proxy) = %{version}
 
 %description -n %{name}+client-proxy
 This metapackage enables feature "client-proxy" for the Rust hyper-util crate, by pulling in any additional dependencies needed by that feature.
+
+%package     -n %{name}+client-proxy-system
+Summary:        Hyper utilities - feature "client-proxy-system"
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(system-configuration-0.7/default) >= 0.7.0
+Requires:       crate(windows-registry-0.3/default) >= 0.3.0
+Provides:       crate(%{pkgname}/client-proxy-system) = %{version}
+
+%description -n %{name}+client-proxy-system
+This metapackage enables feature "client-proxy-system" for the Rust hyper-util crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+full
 Summary:        Hyper utilities - feature "full"

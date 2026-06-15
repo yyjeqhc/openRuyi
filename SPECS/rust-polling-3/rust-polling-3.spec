@@ -16,13 +16,26 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(cfg-if-1/default) >= 1.0.0
+Requires:       crate(concurrent-queue-2/default) >= 2.2.0
 Requires:       crate(hermit-abi-0.5/default) >= 0.5.0
+Requires:       crate(pin-project-lite-0.2/default) >= 0.2.9
 Requires:       crate(rustix-1/event) >= 1.0.5
 Requires:       crate(rustix-1/fs) >= 1.0.5
 Requires:       crate(rustix-1/pipe) >= 1.0.5
 Requires:       crate(rustix-1/process) >= 1.0.5
 Requires:       crate(rustix-1/std) >= 1.0.5
 Requires:       crate(rustix-1/time) >= 1.0.5
+Requires:       crate(windows-sys-0.61/default) >= 0.61.0
+Requires:       crate(windows-sys-0.61/wdk-foundation) >= 0.61.0
+Requires:       crate(windows-sys-0.61/wdk-storage-filesystem) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-networking-winsock) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-security) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-storage-filesystem) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-io) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-libraryloader) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-threading) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-windowsprogramming) >= 0.61.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 

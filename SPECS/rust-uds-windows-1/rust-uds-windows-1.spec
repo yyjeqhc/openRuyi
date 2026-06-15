@@ -16,6 +16,12 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(memoffset-0.9/default) >= 0.9.0
+Requires:       crate(tempfile-3/default) >= 3.0.0
+Requires:       crate(windows-sys-0.60/default) >= 0.60.0
+Requires:       crate(windows-sys-0.60/win32-foundation) >= 0.60.0
+Requires:       crate(windows-sys-0.60/win32-networking-winsock) >= 0.60.0
+Requires:       crate(windows-sys-0.60/win32-system-io) >= 0.60.0
+Requires:       crate(windows-sys-0.60/win32-system-threading) >= 0.60.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 

@@ -24,6 +24,13 @@ Requires:       crate(mio-1/default) >= 1.0.0
 Requires:       crate(mio-1/os-ext) >= 1.0.0
 Requires:       crate(notify-types-2/default) >= 2.0.0
 Requires:       crate(walkdir-2/default) >= 2.4.0
+Requires:       crate(windows-sys-0.60/default) >= 0.60.1
+Requires:       crate(windows-sys-0.60/win32-foundation) >= 0.60.1
+Requires:       crate(windows-sys-0.60/win32-security) >= 0.60.1
+Requires:       crate(windows-sys-0.60/win32-storage-filesystem) >= 0.60.1
+Requires:       crate(windows-sys-0.60/win32-system-io) >= 0.60.1
+Requires:       crate(windows-sys-0.60/win32-system-threading) >= 0.60.1
+Requires:       crate(windows-sys-0.60/win32-system-windowsprogramming) >= 0.60.1
 Provides:       crate(%{pkgname}) = %{version}
 
 %description

@@ -19,6 +19,7 @@ Requires:       crate(ipnetwork-0.20/default) >= 0.20.0
 Requires:       crate(libc-0.2/default) >= 0.2.147
 Requires:       crate(pnet-base-0.35) >= 0.35.0
 Requires:       crate(pnet-sys-0.35/default) >= 0.35.0
+Requires:       crate(winapi-0.3/default) >= 0.3.9
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/netmap) = %{version}
 

@@ -18,6 +18,11 @@ BuildRequires:  rust-rpm-macros
 Requires:       crate(libc-0.2/default) >= 0.2.0
 Requires:       crate(option-ext-0.2/default) >= 0.2.0
 Requires:       crate(redox-users-0.5) >= 0.5.0
+Requires:       crate(windows-sys-0.59/default) >= 0.59.0
+Requires:       crate(windows-sys-0.59/win32-foundation) >= 0.59.0
+Requires:       crate(windows-sys-0.59/win32-globalization) >= 0.59.0
+Requires:       crate(windows-sys-0.59/win32-system-com) >= 0.59.0
+Requires:       crate(windows-sys-0.59/win32-ui-shell) >= 0.59.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 

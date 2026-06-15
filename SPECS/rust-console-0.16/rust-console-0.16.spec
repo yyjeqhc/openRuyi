@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name console
 %global full_version 0.16.1
 %global pkgname console-0.16
@@ -20,6 +15,12 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Requires:       crate(encode-unicode-1/default) >= 1.0.0
+Requires:       crate(windows-sys-0.61/default) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-storage-filesystem) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-console) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-ui-input-keyboardandmouse) >= 0.61.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/alloc) = %{version}
 Provides:       crate(%{pkgname}/ansi-parsing) = %{version}

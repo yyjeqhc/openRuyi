@@ -34,18 +34,19 @@ This metapackage enables feature "arc-swap" for the Rust vm-memory crate, by pul
 Additionally, this package also provides the "backend-atomic" feature.
 
 %package     -n %{name}+backend-bitmap
-Summary:        Safe abstractions for accessing the VM physical memory - feature "backend-bitmap" and 3 more
+Summary:        Safe abstractions for accessing the VM physical memory - feature "backend-bitmap" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(libc-0.2/default) >= 0.2.39
+Requires:       crate(winapi-0.3/default) >= 0.3.0
+Requires:       crate(winapi-0.3/errhandlingapi) >= 0.3.0
+Requires:       crate(winapi-0.3/sysinfoapi) >= 0.3.0
 Provides:       crate(%{pkgname}/backend-bitmap) = %{version}
 Provides:       crate(%{pkgname}/backend-mmap) = %{version}
-Provides:       crate(%{pkgname}/default) = %{version}
-Provides:       crate(%{pkgname}/rawfd) = %{version}
 
 %description -n %{name}+backend-bitmap
 This metapackage enables feature "backend-bitmap" for the Rust vm-memory crate, by pulling in any additional dependencies needed by that feature.
 
-Additionally, this package also provides the "backend-mmap", "default", and "rawfd" features.
+Additionally, this package also provides the "backend-mmap" feature.
 
 %package     -n %{name}+bitflags
 Summary:        Safe abstractions for accessing the VM physical memory - feature "bitflags"
@@ -55,6 +56,18 @@ Provides:       crate(%{pkgname}/bitflags) = %{version}
 
 %description -n %{name}+bitflags
 This metapackage enables feature "bitflags" for the Rust vm-memory crate, by pulling in any additional dependencies needed by that feature.
+
+%package     -n %{name}+rawfd
+Summary:        Safe abstractions for accessing the VM physical memory - feature "rawfd" and 1 more
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(libc-0.2/default) >= 0.2.39
+Provides:       crate(%{pkgname}/default) = %{version}
+Provides:       crate(%{pkgname}/rawfd) = %{version}
+
+%description -n %{name}+rawfd
+This metapackage enables feature "rawfd" for the Rust vm-memory crate, by pulling in any additional dependencies needed by that feature.
+
+Additionally, this package also provides the "default" feature.
 
 %package     -n %{name}+vmm-sys-util
 Summary:        Safe abstractions for accessing the VM physical memory - feature "vmm-sys-util"

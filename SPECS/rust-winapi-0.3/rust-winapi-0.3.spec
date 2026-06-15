@@ -15,6 +15,8 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Requires:       crate(winapi-i686-pc-windows-gnu-0.4/default) >= 0.4.0
+Requires:       crate(winapi-x86-64-pc-windows-gnu-0.4/default) >= 0.4.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/accctrl) = %{version}
 Provides:       crate(%{pkgname}/aclapi) = %{version}

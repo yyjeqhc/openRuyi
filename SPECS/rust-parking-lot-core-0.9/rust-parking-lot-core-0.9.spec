@@ -19,6 +19,7 @@ Requires:       crate(cfg-if-1/default) >= 1.0.0
 Requires:       crate(libc-0.2/default) >= 0.2.95
 Requires:       crate(redox-syscall-0.5/default) >= 0.5.0
 Requires:       crate(smallvec-1/default) >= 1.6.1
+Requires:       crate(windows-link-0.2/default) >= 0.2.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/nightly) = %{version}

@@ -16,6 +16,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(once-cell-1/default) >= 1.0.0
+Requires:       crate(target-lexicon-0.13) >= 0.13.0
 Requires:       crate(target-lexicon-0.13/default) >= 0.13.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/abi3) = %{version}

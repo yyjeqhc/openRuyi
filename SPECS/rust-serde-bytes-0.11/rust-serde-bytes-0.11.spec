@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name serde_bytes
 %global full_version 0.11.19
 %global pkgname serde-bytes-0.11
@@ -20,6 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Requires:       crate(serde-1) >= 1.0.220
 Requires:       crate(serde-core-1) >= 1.0.220
 Provides:       crate(%{pkgname}) = %{version}
 

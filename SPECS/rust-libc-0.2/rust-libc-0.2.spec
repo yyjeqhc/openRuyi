@@ -20,6 +20,7 @@ Provides:       crate(%{pkgname}/align) = %{version}
 Provides:       crate(%{pkgname}/const-extern-fn) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/extra-traits) = %{version}
+Provides:       crate(%{pkgname}/rustc-std-workspace-core) = %{version}
 Provides:       crate(%{pkgname}/std) = %{version}
 Provides:       crate(%{pkgname}/use-std) = %{version}
 
@@ -35,15 +36,6 @@ Provides:       crate(%{pkgname}/rustc-dep-of-std) = %{version}
 
 %description -n %{name}+rustc-dep-of-std
 This metapackage enables feature "rustc-dep-of-std" for the Rust libc crate, by pulling in any additional dependencies needed by that feature.
-
-%package     -n %{name}+rustc-std-workspace-core
-Summary:        Raw FFI bindings to platform libraries like libc - feature "rustc-std-workspace-core"
-Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(rustc-std-workspace-core-1/default) >= 1.0.1
-Provides:       crate(%{pkgname}/rustc-std-workspace-core) = %{version}
-
-%description -n %{name}+rustc-std-workspace-core
-This metapackage enables feature "rustc-std-workspace-core" for the Rust libc crate, by pulling in any additional dependencies needed by that feature.
 
 %files
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/

@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name time
 %global full_version 0.3.47
 %global pkgname time-0.3
@@ -26,7 +21,6 @@ Requires:       crate(num-conv-0.2/default) >= 0.2.0
 Requires:       crate(powerfmt-0.2) >= 0.2.0
 Requires:       crate(time-core-0.1/default) >= 0.1.8
 Provides:       crate(%{pkgname}) = %{version}
-Provides:       crate(%{pkgname}/wasm-bindgen) = %{version}
 
 %description
 Fully interoperable with the standard library. Mostly compatible with #![no_std].
@@ -176,6 +170,16 @@ Fully interoperable with the standard library. Mostly compatible with #![no_std]
 This metapackage enables feature "serde-human-readable" for the Rust time crate, by pulling in any additional dependencies needed by that feature.
 
 Additionally, this package also provides the "serde-well-known" feature.
+
+%package     -n %{name}+wasm-bindgen
+Summary:        Date and time library - feature "wasm-bindgen"
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(js-sys-0.3/default) >= 0.3.58
+Provides:       crate(%{pkgname}/wasm-bindgen) = %{version}
+
+%description -n %{name}+wasm-bindgen
+Fully interoperable with the standard library. Mostly compatible with #![no_std].
+This metapackage enables feature "wasm-bindgen" for the Rust time crate, by pulling in any additional dependencies needed by that feature.
 
 %files
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/

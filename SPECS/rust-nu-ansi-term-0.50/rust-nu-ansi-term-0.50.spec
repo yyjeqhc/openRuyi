@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name nu-ansi-term
 %global full_version 0.50.3
 %global pkgname nu-ansi-term-0.50
@@ -20,6 +15,11 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Requires:       crate(windows-sys-0.59/default) >= 0.59.0
+Requires:       crate(windows-sys-0.59/win32-foundation) >= 0.59.0
+Requires:       crate(windows-sys-0.59/win32-security) >= 0.59.0
+Requires:       crate(windows-sys-0.59/win32-storage-filesystem) >= 0.59.0
+Requires:       crate(windows-sys-0.59/win32-system-console) >= 0.59.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/gnu-legacy) = %{version}

@@ -16,12 +16,17 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(async-io-2/default) >= 2.0.0
+Requires:       crate(async-lock-3/default) >= 3.3.0
+Requires:       crate(atomic-waker-1/default) >= 1.1.1
 Requires:       crate(cfg-if-1/default) >= 1.0.0
 Requires:       crate(futures-core-0.3/default) >= 0.3.26
 Requires:       crate(futures-io-0.3/default) >= 0.3.26
 Requires:       crate(rustix-1/process) >= 1.0.7
 Requires:       crate(rustix-1/std) >= 1.0.7
 Requires:       crate(signal-hook-registry-1/default) >= 1.4.0
+Requires:       crate(slab-0.4/default) >= 0.4.8
+Requires:       crate(windows-sys-0.61/win32-foundation) >= 0.61.0
+Requires:       crate(windows-sys-0.61/win32-system-console) >= 0.61.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 

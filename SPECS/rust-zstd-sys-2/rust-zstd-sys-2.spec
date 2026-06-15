@@ -15,8 +15,10 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Requires:       crate(cc-1) >= 1.0.45
+Requires:       crate(cc-1/parallel) >= 1.0.45
+Requires:       crate(pkg-config-0.3) >= 0.3.28
 Provides:       crate(%{pkgname}) = %{version}
-Provides:       crate(%{pkgname}/bindgen) = %{version}
 Provides:       crate(%{pkgname}/debug) = %{version}
 Provides:       crate(%{pkgname}/experimental) = %{version}
 Provides:       crate(%{pkgname}/fat-lto) = %{version}
@@ -34,6 +36,15 @@ Provides:       crate(%{pkgname}/zstdmt) = %{version}
 
 %description
 Source code for takopackized Rust crate "zstd-sys"
+
+%package     -n %{name}+bindgen
+Summary:        Low-level bindings for the zstd compression library - feature "bindgen"
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(bindgen-0.72/runtime) >= 0.72.0
+Provides:       crate(%{pkgname}/bindgen) = %{version}
+
+%description -n %{name}+bindgen
+This metapackage enables feature "bindgen" for the Rust zstd-sys crate, by pulling in any additional dependencies needed by that feature.
 
 %package     -n %{name}+default
 Summary:        Low-level bindings for the zstd compression library - feature "default"

@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name tracing-subscriber
 %global full_version 0.3.23
 %global pkgname tracing-subscriber-0.3
@@ -24,8 +19,6 @@ Requires:       crate(tracing-core-0.1) >= 0.1.35
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/alloc) = %{version}
 Provides:       crate(%{pkgname}/regex) = %{version}
-Provides:       crate(%{pkgname}/valuable-crate) = %{version}
-Provides:       crate(%{pkgname}/valuable-serde) = %{version}
 
 %description
 Source code for takopackized Rust crate "tracing-subscriber"
@@ -259,6 +252,24 @@ Provides:       crate(%{pkgname}/valuable) = %{version}
 
 %description -n %{name}+valuable
 This metapackage enables feature "valuable" for the Rust tracing-subscriber crate, by pulling in any additional dependencies needed by that feature.
+
+%package     -n %{name}+valuable-serde
+Summary:        Utilities for implementing and composing `tracing` subscribers - feature "valuable-serde"
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(valuable-serde-0.1) >= 0.1.0
+Provides:       crate(%{pkgname}/valuable-serde) = %{version}
+
+%description -n %{name}+valuable-serde
+This metapackage enables feature "valuable-serde" for the Rust tracing-subscriber crate, by pulling in any additional dependencies needed by that feature.
+
+%package     -n %{name}+valuable-crate
+Summary:        Utilities for implementing and composing `tracing` subscribers - feature "valuable_crate"
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(valuable-0.1) >= 0.1.0
+Provides:       crate(%{pkgname}/valuable-crate) = %{version}
+
+%description -n %{name}+valuable-crate
+This metapackage enables feature "valuable_crate" for the Rust tracing-subscriber crate, by pulling in any additional dependencies needed by that feature.
 
 %files
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/

@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-# SPDX-FileContributor: yyjeqhc <jialin.oerv@isrc.iscas.ac.cn>
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name ignore
 %global full_version 0.4.25
 %global pkgname ignore-0.4
@@ -34,6 +28,7 @@ Requires:       crate(regex-automata-0.4/std) >= 0.4.0
 Requires:       crate(regex-automata-0.4/syntax) >= 0.4.0
 Requires:       crate(same-file-1/default) >= 1.0.6
 Requires:       crate(walkdir-2/default) >= 2.4.0
+Requires:       crate(winapi-util-0.1/default) >= 0.1.2
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/simd-accel) = %{version}

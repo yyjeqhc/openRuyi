@@ -15,6 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Requires:       crate(glob-0.3) >= 0.3.0
 Requires:       crate(glob-0.3/default) >= 0.3.0
 Requires:       crate(libc-0.2) >= 0.2.39
 Provides:       crate(%{pkgname}) = %{version}

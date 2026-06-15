@@ -43,6 +43,7 @@ Additionally, this package also provides the "default" feature.
 Summary:        Fast Iterable JSON parser - feature "python"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(pyo3-0.26/default) >= 0.26.0
+Requires:       crate(pyo3-build-config-0.26/default) >= 0.26.0
 Provides:       crate(%{pkgname}/python) = %{version}
 
 %description -n %{name}+python

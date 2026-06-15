@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name indicatif
 %global full_version 0.18.4
 %global pkgname indicatif-0.18
@@ -25,7 +20,6 @@ Requires:       crate(console-0.16/std) >= 0.16.0
 Requires:       crate(portable-atomic-1/default) >= 1.12.0
 Requires:       crate(unit-prefix-0.5/default) >= 0.5.1
 Provides:       crate(%{pkgname}) = %{version}
-Provides:       crate(%{pkgname}/wasmbind) = %{version}
 
 %description
 Source code for takopackized Rust crate "indicatif"
@@ -110,6 +104,15 @@ Provides:       crate(%{pkgname}/vt100) = %{version}
 This metapackage enables feature "vt100" for the Rust indicatif crate, by pulling in any additional dependencies needed by that feature.
 
 Additionally, this package also provides the "in_memory" feature.
+
+%package     -n %{name}+wasmbind
+Summary:        Progress bar and cli reporting library for Rust - feature "wasmbind"
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(web-time-1/default) >= 1.1.0
+Provides:       crate(%{pkgname}/wasmbind) = %{version}
+
+%description -n %{name}+wasmbind
+This metapackage enables feature "wasmbind" for the Rust indicatif crate, by pulling in any additional dependencies needed by that feature.
 
 %files
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/

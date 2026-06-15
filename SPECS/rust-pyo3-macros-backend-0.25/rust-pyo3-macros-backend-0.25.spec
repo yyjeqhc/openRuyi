@@ -17,6 +17,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(heck-0.5/default) >= 0.5.0
 Requires:       crate(proc-macro2-1) >= 1.0.60
+Requires:       crate(pyo3-build-config-0.25) >= 0.25.1
 Requires:       crate(pyo3-build-config-0.25/default) >= 0.25.1
 Requires:       crate(pyo3-build-config-0.25/resolve-config) >= 0.25.1
 Requires:       crate(quote-1) >= 1.0.0

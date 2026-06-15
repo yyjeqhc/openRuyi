@@ -17,6 +17,7 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bitflags-2/default) >= 2.6.0
 Requires:       crate(cfg-if-1/default) >= 1.0.0
+Requires:       crate(clipboard-win-5/default) >= 5.0.0
 Requires:       crate(libc-0.2/default) >= 0.2.172
 Requires:       crate(log-0.4/default) >= 0.4.22
 Requires:       crate(memchr-2/default) >= 2.7.0
@@ -28,6 +29,12 @@ Requires:       crate(nix-0.30/term) >= 0.30.0
 Requires:       crate(unicode-segmentation-1/default) >= 1.0.0
 Requires:       crate(unicode-width-0.2/default) >= 0.2.0
 Requires:       crate(utf8parse-0.2/default) >= 0.2.0
+Requires:       crate(windows-sys-0.60/default) >= 0.60.2
+Requires:       crate(windows-sys-0.60/win32-foundation) >= 0.60.2
+Requires:       crate(windows-sys-0.60/win32-security) >= 0.60.2
+Requires:       crate(windows-sys-0.60/win32-system-console) >= 0.60.2
+Requires:       crate(windows-sys-0.60/win32-system-threading) >= 0.60.2
+Requires:       crate(windows-sys-0.60/win32-ui-input-keyboardandmouse) >= 0.60.2
 Provides:       crate(%{pkgname}) = %{version}
 
 %description

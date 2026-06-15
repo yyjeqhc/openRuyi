@@ -15,6 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Requires:       crate(glob-0.3) >= 0.3.1
 Requires:       crate(pnet-base-0.35) >= 0.35.0
 Requires:       crate(pnet-macros-0.35/default) >= 0.35.0
 Requires:       crate(pnet-macros-support-0.35/default) >= 0.35.0

@@ -16,6 +16,9 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(libc-0.2/default) >= 0.2.147
+Requires:       crate(winapi-0.3/default) >= 0.3.9
+Requires:       crate(winapi-0.3/winsock2) >= 0.3.9
+Requires:       crate(winapi-0.3/ws2ipdef) >= 0.3.9
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 

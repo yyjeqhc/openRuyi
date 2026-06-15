@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name anstream
 %global full_version 0.6.21
 %global pkgname anstream-0.6
@@ -27,7 +22,6 @@ Requires:       crate(is-terminal-polyfill-1/default) >= 1.48.0
 Requires:       crate(utf8parse-0.2/default) >= 0.2.2
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/test) = %{version}
-Provides:       crate(%{pkgname}/wincon) = %{version}
 
 %description
 Source code for takopackized Rust crate "anstream"
@@ -50,6 +44,15 @@ Provides:       crate(%{pkgname}/default) = %{version}
 
 %description -n %{name}+default
 This metapackage enables feature "default" for the Rust anstream crate, by pulling in any additional dependencies needed by that feature.
+
+%package     -n %{name}+wincon
+Summary:        IO stream adapters for writing colored text that will gracefully degrade according to your terminal's capabilities - feature "wincon"
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(anstyle-wincon-3/default) >= 3.0.5
+Provides:       crate(%{pkgname}/wincon) = %{version}
+
+%description -n %{name}+wincon
+This metapackage enables feature "wincon" for the Rust anstream crate, by pulling in any additional dependencies needed by that feature.
 
 %files
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/

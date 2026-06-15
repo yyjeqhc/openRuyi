@@ -16,6 +16,7 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(mime-0.3/default) >= 0.3.0
+Requires:       crate(unicase-2) >= 2.4.0
 Requires:       crate(unicase-2/default) >= 2.4.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}

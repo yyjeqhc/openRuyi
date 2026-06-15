@@ -17,6 +17,9 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(libc-0.2/default) >= 0.2.39
 Requires:       crate(thiserror-1/default) >= 1.0.40
+Requires:       crate(winapi-0.3/default) >= 0.3.0
+Requires:       crate(winapi-0.3/errhandlingapi) >= 0.3.0
+Requires:       crate(winapi-0.3/sysinfoapi) >= 0.3.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/backend-bitmap) = %{version}
 Provides:       crate(%{pkgname}/backend-mmap) = %{version}

@@ -16,6 +16,13 @@ BuildSystem:    rustcrates
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(libc-0.2/default) >= 0.2.30
+Requires:       crate(winapi-0.3/default) >= 0.3.0
+Requires:       crate(winapi-0.3/fileapi) >= 0.3.0
+Requires:       crate(winapi-0.3/handleapi) >= 0.3.0
+Requires:       crate(winapi-0.3/processthreadsapi) >= 0.3.0
+Requires:       crate(winapi-0.3/std) >= 0.3.0
+Requires:       crate(winapi-0.3/winbase) >= 0.3.0
+Requires:       crate(winapi-0.3/winerror) >= 0.3.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 

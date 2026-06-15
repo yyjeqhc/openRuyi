@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name objc2-core-image
 %global full_version 0.3.2
 %global pkgname objc2-core-image-0.3
@@ -28,7 +23,6 @@ Provides:       crate(%{pkgname}/ciimageaccumulator) = %{version}
 Provides:       crate(%{pkgname}/cikernelmetallib) = %{version}
 Provides:       crate(%{pkgname}/ciplugininterface) = %{version}
 Provides:       crate(%{pkgname}/coreimagedefines) = %{version}
-Provides:       crate(%{pkgname}/objc2-open-gl) = %{version}
 Provides:       crate(%{pkgname}/std) = %{version}
 Provides:       crate(%{pkgname}/unstable-darwin-objc) = %{version}
 
@@ -467,6 +461,15 @@ Provides:       crate(%{pkgname}/objc2-metal) = %{version}
 
 %description -n %{name}+objc2-metal
 This metapackage enables feature "objc2-metal" for the Rust objc2-core-image crate, by pulling in any additional dependencies needed by that feature.
+
+%package     -n %{name}+objc2-open-gl
+Summary:        Bindings to the CoreImage framework - feature "objc2-open-gl"
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(objc2-open-gl-0.3/cgltypes) >= 0.3.2
+Provides:       crate(%{pkgname}/objc2-open-gl) = %{version}
+
+%description -n %{name}+objc2-open-gl
+This metapackage enables feature "objc2-open-gl" for the Rust objc2-core-image crate, by pulling in any additional dependencies needed by that feature.
 
 %files
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/

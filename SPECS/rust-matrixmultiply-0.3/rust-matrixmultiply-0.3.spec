@@ -15,6 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Requires:       crate(autocfg-1) >= 1.0.0
 Requires:       crate(rawpointer-0.2/default) >= 0.2.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/cgemm) = %{version}

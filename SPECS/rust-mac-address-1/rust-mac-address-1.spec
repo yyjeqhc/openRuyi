@@ -17,6 +17,10 @@ BuildRequires:  rust-rpm-macros
 
 Requires:       crate(nix-0.29/default) >= 0.29.0
 Requires:       crate(nix-0.29/net) >= 0.29.0
+Requires:       crate(winapi-0.3/default) >= 0.3.0
+Requires:       crate(winapi-0.3/iphlpapi) >= 0.3.0
+Requires:       crate(winapi-0.3/winerror) >= 0.3.0
+Requires:       crate(winapi-0.3/ws2def) >= 0.3.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 

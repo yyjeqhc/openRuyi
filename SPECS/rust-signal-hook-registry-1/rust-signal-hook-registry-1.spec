@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
-# SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
-#
-# SPDX-License-Identifier: MulanPSL-2.0
-
 %global crate_name signal-hook-registry
 %global full_version 1.4.8
 %global pkgname signal-hook-registry-1
@@ -20,9 +15,7 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
-# manual change to 0.3. see the cargo.toml,maybe we can change cargo.toml to regenerate it.
-# for now, we just change the spec directly.
-Requires:       crate(errno-0.3/default) >= 0.3.0
+Requires:       crate(errno-0.2/default) >= 0.2.0
 Requires:       crate(libc-0.2/default) >= 0.2.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}

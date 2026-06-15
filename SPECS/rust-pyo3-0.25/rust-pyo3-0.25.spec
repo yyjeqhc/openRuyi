@@ -19,6 +19,8 @@ Requires:       crate(libc-0.2/default) >= 0.2.62
 Requires:       crate(memoffset-0.9/default) >= 0.9.0
 Requires:       crate(once-cell-1/default) >= 1.13.0
 Requires:       crate(portable-atomic-1/default) >= 1.0.0
+Requires:       crate(pyo3-build-config-0.25) >= 0.25.1
+Requires:       crate(pyo3-build-config-0.25/resolve-config) >= 0.25.1
 Requires:       crate(pyo3-ffi-0.25/default) >= 0.25.1
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/auto-initialize) = %{version}
@@ -31,6 +33,9 @@ Source code for takopackized Rust crate "pyo3"
 %package     -n %{name}+abi3
 Summary:        Bindings to Python interpreter - feature "abi3"
 Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(pyo3-build-config-0.25) >= 0.25.1
+Requires:       crate(pyo3-build-config-0.25/abi3) >= 0.25.1
+Requires:       crate(pyo3-build-config-0.25/resolve-config) >= 0.25.1
 Requires:       crate(pyo3-ffi-0.25/abi3) >= 0.25.1
 Provides:       crate(%{pkgname}/abi3) = %{version}
 
@@ -41,6 +46,9 @@ This metapackage enables feature "abi3" for the Rust pyo3 crate, by pulling in a
 Summary:        Bindings to Python interpreter - feature "abi3-py310"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/abi3-py311) = %{version}
+Requires:       crate(pyo3-build-config-0.25) >= 0.25.1
+Requires:       crate(pyo3-build-config-0.25/abi3-py310) >= 0.25.1
+Requires:       crate(pyo3-build-config-0.25/resolve-config) >= 0.25.1
 Requires:       crate(pyo3-ffi-0.25/abi3-py310) >= 0.25.1
 Provides:       crate(%{pkgname}/abi3-py310) = %{version}
 
@@ -51,6 +59,9 @@ This metapackage enables feature "abi3-py310" for the Rust pyo3 crate, by pullin
 Summary:        Bindings to Python interpreter - feature "abi3-py311"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/abi3-py312) = %{version}
+Requires:       crate(pyo3-build-config-0.25) >= 0.25.1
+Requires:       crate(pyo3-build-config-0.25/abi3-py311) >= 0.25.1
+Requires:       crate(pyo3-build-config-0.25/resolve-config) >= 0.25.1
 Requires:       crate(pyo3-ffi-0.25/abi3-py311) >= 0.25.1
 Provides:       crate(%{pkgname}/abi3-py311) = %{version}
 
@@ -61,6 +72,9 @@ This metapackage enables feature "abi3-py311" for the Rust pyo3 crate, by pullin
 Summary:        Bindings to Python interpreter - feature "abi3-py312"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/abi3-py313) = %{version}
+Requires:       crate(pyo3-build-config-0.25) >= 0.25.1
+Requires:       crate(pyo3-build-config-0.25/abi3-py312) >= 0.25.1
+Requires:       crate(pyo3-build-config-0.25/resolve-config) >= 0.25.1
 Requires:       crate(pyo3-ffi-0.25/abi3-py312) >= 0.25.1
 Provides:       crate(%{pkgname}/abi3-py312) = %{version}
 
@@ -71,6 +85,9 @@ This metapackage enables feature "abi3-py312" for the Rust pyo3 crate, by pullin
 Summary:        Bindings to Python interpreter - feature "abi3-py313"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/abi3-py314) = %{version}
+Requires:       crate(pyo3-build-config-0.25) >= 0.25.1
+Requires:       crate(pyo3-build-config-0.25/abi3-py313) >= 0.25.1
+Requires:       crate(pyo3-build-config-0.25/resolve-config) >= 0.25.1
 Requires:       crate(pyo3-ffi-0.25/abi3-py313) >= 0.25.1
 Provides:       crate(%{pkgname}/abi3-py313) = %{version}
 
@@ -81,6 +98,9 @@ This metapackage enables feature "abi3-py313" for the Rust pyo3 crate, by pullin
 Summary:        Bindings to Python interpreter - feature "abi3-py314"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/abi3) = %{version}
+Requires:       crate(pyo3-build-config-0.25) >= 0.25.1
+Requires:       crate(pyo3-build-config-0.25/abi3-py314) >= 0.25.1
+Requires:       crate(pyo3-build-config-0.25/resolve-config) >= 0.25.1
 Requires:       crate(pyo3-ffi-0.25/abi3-py314) >= 0.25.1
 Provides:       crate(%{pkgname}/abi3-py314) = %{version}
 
@@ -91,6 +111,9 @@ This metapackage enables feature "abi3-py314" for the Rust pyo3 crate, by pullin
 Summary:        Bindings to Python interpreter - feature "abi3-py37"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/abi3-py38) = %{version}
+Requires:       crate(pyo3-build-config-0.25) >= 0.25.1
+Requires:       crate(pyo3-build-config-0.25/abi3-py37) >= 0.25.1
+Requires:       crate(pyo3-build-config-0.25/resolve-config) >= 0.25.1
 Requires:       crate(pyo3-ffi-0.25/abi3-py37) >= 0.25.1
 Provides:       crate(%{pkgname}/abi3-py37) = %{version}
 
@@ -101,6 +124,9 @@ This metapackage enables feature "abi3-py37" for the Rust pyo3 crate, by pulling
 Summary:        Bindings to Python interpreter - feature "abi3-py38"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/abi3-py39) = %{version}
+Requires:       crate(pyo3-build-config-0.25) >= 0.25.1
+Requires:       crate(pyo3-build-config-0.25/abi3-py38) >= 0.25.1
+Requires:       crate(pyo3-build-config-0.25/resolve-config) >= 0.25.1
 Requires:       crate(pyo3-ffi-0.25/abi3-py38) >= 0.25.1
 Provides:       crate(%{pkgname}/abi3-py38) = %{version}
 
@@ -111,6 +137,9 @@ This metapackage enables feature "abi3-py38" for the Rust pyo3 crate, by pulling
 Summary:        Bindings to Python interpreter - feature "abi3-py39"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/abi3-py310) = %{version}
+Requires:       crate(pyo3-build-config-0.25) >= 0.25.1
+Requires:       crate(pyo3-build-config-0.25/abi3-py39) >= 0.25.1
+Requires:       crate(pyo3-build-config-0.25/resolve-config) >= 0.25.1
 Requires:       crate(pyo3-ffi-0.25/abi3-py39) >= 0.25.1
 Provides:       crate(%{pkgname}/abi3-py39) = %{version}
 

@@ -15,14 +15,33 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Requires:       crate(error-code-3/default) >= 3.0.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
-Provides:       crate(%{pkgname}/monitor) = %{version}
-Provides:       crate(%{pkgname}/std) = %{version}
-Provides:       crate(%{pkgname}/windows-win) = %{version}
 
 %description
 Source code for takopackized Rust crate "clipboard-win"
+
+%package     -n %{name}+std
+Summary:        Provides simple way to interact with Windows clipboard - feature "std"
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(error-code-3/std) >= 3.0.0
+Provides:       crate(%{pkgname}/std) = %{version}
+
+%description -n %{name}+std
+This metapackage enables feature "std" for the Rust clipboard-win crate, by pulling in any additional dependencies needed by that feature.
+
+%package     -n %{name}+windows-win
+Summary:        Provides simple way to interact with Windows clipboard - feature "windows-win" and 1 more
+Requires:       crate(%{pkgname}) = %{version}
+Requires:       crate(windows-win-3/default) >= 3.0.0
+Provides:       crate(%{pkgname}/monitor) = %{version}
+Provides:       crate(%{pkgname}/windows-win) = %{version}
+
+%description -n %{name}+windows-win
+This metapackage enables feature "windows-win" for the Rust clipboard-win crate, by pulling in any additional dependencies needed by that feature.
+
+Additionally, this package also provides the "monitor" feature.
 
 %files
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/

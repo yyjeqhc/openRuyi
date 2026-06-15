@@ -15,9 +15,11 @@ BuildSystem:    rustcrates
 
 BuildRequires:  rust-rpm-macros
 
+Requires:       crate(cc-1) >= 1.0.25
 Requires:       crate(libc-0.2/default) >= 0.2.0
 Requires:       crate(libz-sys-1/libc) >= 1.1.0
 Requires:       crate(openssl-sys-0.9/default) >= 0.9.35
+Requires:       crate(pkg-config-0.3) >= 0.3.11
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 
