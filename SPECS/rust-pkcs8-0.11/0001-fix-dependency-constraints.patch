@@ -1,0 +1,11 @@
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -109,7 +109,7 @@
+ optional = true
+ 
+ [dependencies.der]
+-version = "0.8.0-rc.12"
++version = "0.8.0"
+ features = ["oid"]
+ 
+ [dependencies.getrandom]

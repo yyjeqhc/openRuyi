@@ -126,7 +126,7 @@ version = "0.7.0-pre.9"
 default-features = false
 
 [dependencies.digest]
-version = "0.11.0-rc.11"
+version = "0.11.0"
 features = [
     "alloc",
     "oid",
@@ -166,19 +166,19 @@ version = "0.4"
 optional = true
 
 [dependencies.sha1]
-version = "0.11.0-rc.5"
+version = "0.11.0"
 features = ["oid"]
 optional = true
 default-features = false
 
 [dependencies.sha2]
-version = "0.11.0-rc.5"
+version = "0.11.0"
 features = ["oid"]
 optional = true
 default-features = false
 
 [dependencies.signature]
-version = "3.0.0-rc.10"
+version = "3.0.0"
 features = [
     "alloc",
     "digest",
@@ -232,12 +232,12 @@ version = "1.0.138"
 version = "1.0.89"
 
 [dev-dependencies.sha1]
-version = "0.11.0-rc.5"
+version = "0.11.0"
 features = ["oid"]
 default-features = false
 
 [dev-dependencies.sha2]
-version = "0.11.0-rc.5"
+version = "0.11.0"
 features = ["oid"]
 default-features = false
 
