@@ -1,14 +1,14 @@
 %global crate_name serde_spanned
-%global full_version 1.0.4
+%global full_version 1.1.1
 %global pkgname serde-spanned-1
 
 Name:           rust-serde-spanned-1
-Version:        1.0.4
+Version:        1.1.1
 Release:        %autorelease
 Summary:        Rust crate "serde_spanned"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/toml-rs/toml
-#!RemoteAsset:  sha256:f8bbf91e5a4d6315eee45e704372590b30e260ee83af6639d64557f51b067776
+#!RemoteAsset:  sha256:6662b5879511e06e8999a8a235d848113e942c9124f211511b16466ee2995f26
 Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
@@ -23,7 +23,7 @@ Source code for takopackized Rust crate "serde_spanned"
 %package     -n %{name}+alloc
 Summary:        Serde-compatible spanned Value - feature "alloc"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(serde-core-1/alloc) >= 1.0.225
+Requires:       crate(serde-core-1/alloc) >= 1.0.228
 Provides:       crate(%{pkgname}/alloc) = %{version}
 
 %description -n %{name}+alloc
@@ -42,7 +42,7 @@ This metapackage enables feature "default" for the Rust serde_spanned crate, by 
 %package     -n %{name}+serde
 Summary:        Serde-compatible spanned Value - feature "serde"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(serde-core-1) >= 1.0.225
+Requires:       crate(serde-core-1) >= 1.0.228
 Provides:       crate(%{pkgname}/serde) = %{version}
 
 %description -n %{name}+serde
@@ -52,7 +52,7 @@ This metapackage enables feature "serde" for the Rust serde_spanned crate, by pu
 Summary:        Serde-compatible spanned Value - feature "std"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/alloc) = %{version}
-Requires:       crate(serde-core-1/std) >= 1.0.225
+Requires:       crate(serde-core-1/std) >= 1.0.228
 Provides:       crate(%{pkgname}/std) = %{version}
 
 %description -n %{name}+std

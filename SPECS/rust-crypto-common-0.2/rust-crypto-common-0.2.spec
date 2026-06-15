@@ -1,14 +1,14 @@
 %global crate_name crypto-common
-%global full_version 0.2.1
+%global full_version 0.2.2
 %global pkgname crypto-common-0.2
 
 Name:           rust-crypto-common-0.2
-Version:        0.2.1
+Version:        0.2.2
 Release:        %autorelease
 Summary:        Rust crate "crypto-common"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/RustCrypto/traits
-#!RemoteAsset:  sha256:77727bb15fa921304124b128af125e7e3b968275d1b108b379190264f4423710
+#!RemoteAsset:  sha256:ce6e4c961d6cd6c9a86db418387425e8bdeaf05b3c8bc1411e6dca4c252f1453
 Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
