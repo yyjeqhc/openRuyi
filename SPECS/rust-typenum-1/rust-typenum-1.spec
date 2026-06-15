@@ -1,14 +1,14 @@
 %global crate_name typenum
-%global full_version 1.20.0
+%global full_version 1.20.1
 %global pkgname typenum-1
 
 Name:           rust-typenum-1
-Version:        1.20.0
+Version:        1.20.1
 Release:        %autorelease
 Summary:        Rust crate "typenum"
 License:        MIT OR Apache-2.0
 URL:            https://github.com/paholg/typenum
-#!RemoteAsset:  sha256:40ce102ab67701b8526c123c1bab5cbe42d7040ccfd0f64af1a385808d2f43de
+#!RemoteAsset:  sha256:b6f5e870be6c3b371b77fe0ee0bafb859fa4964b4404c27de1d380043c4dda20
 Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
