@@ -48,7 +48,7 @@ path = "benches/bench.rs"
 harness = false
 
 [dependencies.aligned-vec]
-version = ">=0.5.0, <0.7"
+version = "0.6.0"
 
 [dependencies.num-traits]
 version = "0.2"
