@@ -13,6 +13,8 @@ Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/do
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
+Patch0:         0001-fix-dependency-constraints.patch
+
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(cfg-if-1/default) >= 1.0.0
@@ -26,7 +28,6 @@ Provides:       crate(%{pkgname}/legacy-compatibility) = %{version}
 Provides:       crate(%{pkgname}/precomputed-tables) = %{version}
 
 %description
-Source code for takopackized Rust crate "curve25519-dalek"
 
 %package     -n %{name}+alloc
 Summary:        Pure-Rust implementation of group operations on ristretto255 and Curve25519 - feature "alloc"
@@ -51,7 +52,7 @@ This metapackage enables feature "default" for the Rust curve25519-dalek crate, 
 %package     -n %{name}+digest
 Summary:        Pure-Rust implementation of group operations on ristretto255 and Curve25519 - feature "digest" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(digest-0.11.0-rc.11/block-api) >= 0.11.0-rc.11
+Requires:       crate(digest-0.11/block-api) >= 0.11.0
 Provides:       crate(%{pkgname}/digest) = %{version}
 Provides:       crate(%{pkgname}/lizard) = %{version}
 
