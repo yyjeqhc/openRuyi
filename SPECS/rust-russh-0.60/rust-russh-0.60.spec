@@ -8,10 +8,12 @@ Release:        %autorelease
 Summary:        Rust crate "russh"
 License:        Apache-2.0
 URL:            https://github.com/warp-tech/russh
-#!RemoteAsset:  sha256:
+#!RemoteAsset:  sha256:324b92f459d3e42da294e14e8eb150d2215fcfb7c966838bc1127cd68bc05a0d
 Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
+
+Patch0:         0001-fix-cargo-requirements.patch
 
 BuildRequires:  rust-rpm-macros
 
