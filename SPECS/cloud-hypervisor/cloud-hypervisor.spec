@@ -584,6 +584,10 @@ install -d %{buildroot}%{_libdir}/cloud-hypervisor
 install -D -m755 target/release/vhost_user_block %{buildroot}%{_libdir}/cloud-hypervisor
 install -D -m755 target/release/vhost_user_net %{buildroot}%{_libdir}/cloud-hypervisor
 
+%check
+# Upstream VMM tests require a supported hypervisor such as KVM/MSHV,
+# which is not available in the OBS build environment.
+
 %files
 %{_bindir}/ch-remote
 %caps(cap_net_admin=ep) %{_bindir}/cloud-hypervisor
