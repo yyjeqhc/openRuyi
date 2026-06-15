@@ -13,9 +13,11 @@ Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/do
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
+Patch0:          0001-fix-cargo-requirements.patch
+
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(aligned-vec-0.5/default) >= 0.5.0
+Requires:       crate(aligned-vec-0.6/default) >= 0.6.0
 Requires:       crate(num-traits-0.2/default) >= 0.2.0
 Requires:       crate(wasm-bindgen-0.2/default) >= 0.2.0
 Provides:       crate(%{pkgname}) = %{version}
@@ -47,7 +49,7 @@ This metapackage enables feature "serde" for the Rust v_frame crate, by pulling 
 Summary:        Video Frame data structures, originally part of rav1e - feature "serialize"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/serde) = %{version}
-Requires:       crate(aligned-vec-0.5/serde) >= 0.5.0
+Requires:       crate(aligned-vec-0.6/serde) >= 0.6.0
 Provides:       crate(%{pkgname}/serialize) = %{version}
 
 %description -n %{name}+serialize
