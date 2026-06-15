@@ -10,8 +10,11 @@ License:        Apache-2.0 OR MIT
 URL:            https://github.com/RustCrypto/elliptic-curves/tree/master/p256
 #!RemoteAsset:  sha256:018bfbb86e05fd70a83e985921241035ee09fcd369c4a2c3680b389a01d2ad28
 Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source code for takopackized Rust crate "p256"
 BuildArch:      noarch
 BuildSystem:    rustcrates
+
+Patch0:         0001-fix-dependency-constraints.patch
 
 BuildRequires:  rust-rpm-macros
 
@@ -20,7 +23,6 @@ Provides:       crate(%{pkgname}) = %{version}
 
 %description
 secp256r1, prime256v1) elliptic curve as defined in SP 800-186, with support for ECDH, ECDSA signing/verification, and general purpose curve arithmetic
-Source code for takopackized Rust crate "p256"
 
 %package     -n %{name}+alloc
 Summary:        Pure Rust implementation of the NIST P-256 (a.k.a - feature "alloc"
@@ -216,7 +218,7 @@ This metapackage enables feature "serdect" for the Rust p256 crate, by pulling i
 %package     -n %{name}+sha2
 Summary:        Pure Rust implementation of the NIST P-256 (a.k.a - feature "sha2"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(sha2-0.11.0-rc.5) >= 0.11.0-rc.5
+Requires:       crate(sha2-0.11) >= 0.11.0
 Provides:       crate(%{pkgname}/sha2) = %{version}
 
 %description -n %{name}+sha2

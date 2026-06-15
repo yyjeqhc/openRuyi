@@ -10,8 +10,11 @@ License:        Apache-2.0 OR MIT
 URL:            https://github.com/RustCrypto/elliptic-curves/tree/master/p521
 #!RemoteAsset:  sha256:de6cd9451de522549d36cc78a1b45a699a3d55a872e8ea0c8f0318e502d99e2c
 Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
+Source code for takopackized Rust crate "p521"
 BuildArch:      noarch
 BuildSystem:    rustcrates
+
+Patch0:         0001-fix-dependency-constraints.patch
 
 BuildRequires:  rust-rpm-macros
 
@@ -21,7 +24,6 @@ Provides:       crate(%{pkgname}) = %{version}
 
 %description
 secp521r1) elliptic curve as defined in SP 800-186
-Source code for takopackized Rust crate "p521"
 
 %package     -n %{name}+alloc
 Summary:        Pure Rust implementation of the NIST P-521 (a.k.a - feature "alloc"
@@ -140,7 +142,7 @@ This metapackage enables feature "getrandom" for the Rust p521 crate, by pulling
 Summary:        Pure Rust implementation of the NIST P-521 (a.k.a - feature "group-digest" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/hash2curve) = %{version}
-Requires:       crate(sha2-0.11.0-rc.5) >= 0.11.0-rc.5
+Requires:       crate(sha2-0.11) >= 0.11.0
 Provides:       crate(%{pkgname}/group-digest) = %{version}
 Provides:       crate(%{pkgname}/oprf) = %{version}
 
@@ -226,7 +228,7 @@ This metapackage enables feature "serdect" for the Rust p521 crate, by pulling i
 Summary:        Pure Rust implementation of the NIST P-521 (a.k.a - feature "sha512"
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/digest) = %{version}
-Requires:       crate(sha2-0.11.0-rc.5) >= 0.11.0-rc.5
+Requires:       crate(sha2-0.11) >= 0.11.0
 Provides:       crate(%{pkgname}/sha512) = %{version}
 
 %description -n %{name}+sha512
