@@ -7,20 +7,19 @@
 
 %global gitver 52.0
 
+%global ch_commit 829676e6403ff3fa711c9e901f90f05737c08b88
+%global micro_http_commit 876f3feccc30e09225f2c77bf95a6b2d46a9259e
+
 Name:           cloud-hypervisor
 Url:            https://github.com/cloud-hypervisor/cloud-hypervisor
 Summary:        Cloud Hypervisor is a Virtual Machine Monitor (VMM) that runs on top of KVM
 Version:        %{gitver}
 Release:        %autorelease
 License:        Apache-2.0 OR BSD-3-Clause
-
-
-%global ch_commit 829676e6403ff3fa711c9e901f90f05737c08b88
-%global micro_http_commit 876f3feccc30e09225f2c77bf95a6b2d46a9259e
-
+#!RemoteAsset:  sha256:
 Source0:        https://github.com/cloud-hypervisor/cloud-hypervisor/archive/%{ch_commit}/%{name}-%{ch_commit}.tar.gz
+#!RemoteAsset:  sha256:
 Source1:        https://github.com/firecracker-microvm/micro-http/archive/%{micro_http_commit}/micro-http-%{micro_http_commit}.tar.gz
-
 BuildSystem:    rust
 
 BuildRequires:  rust-rpm-macros
