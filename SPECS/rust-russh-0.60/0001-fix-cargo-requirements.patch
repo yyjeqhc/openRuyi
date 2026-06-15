@@ -1,0 +1,66 @@
+diff --git b/Cargo.toml a/Cargo.toml
+index b35e1076b..3ff4485e0 100644
+--- b/Cargo.toml
++++ a/Cargo.toml
+@@ -124,7 +124,7 @@ path = "benches/ciphers.rs"
+ harness = false
+ 
+ [dependencies.aead_0_6]
+-version = "=0.6.0-rc.10"
++version = "=0.6.0"
+ package = "aead"
+ 
+ [dependencies.aes]
+@@ -175,7 +175,7 @@ features = ["html_reports"]
+ optional = true
+ 
+ [dependencies.crypto-bigint]
+-version = "=0.7.0-rc.28"
++version = "=0.7.3"
+ features = ["alloc"]
+ 
+ [dependencies.ctr]
+@@ -216,7 +216,7 @@ features = [
+ ]
+ 
+ [dependencies.elliptic-curve]
+-version = "=0.14.0-rc.28"
++version = "=0.14.0-rc.34"
+ features = ["ecdh"]
+ 
+ [dependencies.enum_dispatch]
+@@ -267,7 +267,7 @@ version = "0.4.11"
+ version = "0.7"
+ 
+ [dependencies.ml-kem]
+-version = "=0.3.0-rc.1"
++version = "=0.3.0"
+ 
+ [dependencies.module-lattice]
+ version = "0.2"
+@@ -305,10 +305,10 @@ version = "=0.8.0-rc.4"
+ optional = true
+ 
+ [dependencies.pkcs5]
+-version = "=0.8.0-rc.13"
++version = "=0.8.0"
+ 
+ [dependencies.pkcs8]
+-version = "=0.11.0-rc.11"
++version = "=0.11.0"
+ features = [
+     "encryption",
+     "std",
+@@ -369,10 +369,10 @@ package = "sha2"
+ version = "0.11.0"
+ 
+ [dependencies.signature]
+-version = "3.0.0-rc.10"
++version = "3.0.0"
+ 
+ [dependencies.spki]
+-version = "=0.8.0-rc.4"
++version = "=0.8.0"
+ 
+ [dependencies.ssh-encoding]
+ version = "0.2"
