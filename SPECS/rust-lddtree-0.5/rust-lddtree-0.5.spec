@@ -25,6 +25,12 @@ Provides:       crate(%{pkgname}/default) = %{version}
 %description
 Source code for takopackized Rust crate "lddtree"
 
+%install -p
+# Remove prebuilt binary test fixtures from the noarch crate provider.
+rm -f tests/*.elf
+rm -f tests/*.macho
+rm -f tests/*.pe
+
 %files
 %{_datadir}/cargo/registry/%{crate_name}-%{version}/
 
