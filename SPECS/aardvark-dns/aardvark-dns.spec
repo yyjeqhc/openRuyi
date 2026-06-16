@@ -70,6 +70,12 @@ BuildRequires:  crate(windows-link-0.1/default)
 Forwards other requests to configured resolvers.
 Read more about configuration in `src/backend/mod.rs`.
 
+%build -p
+%ifarch riscv64
+export RUST_MIN_STACK=16777216
+export CARGO_PROFILE_RELEASE_OPT_LEVEL=2
+%endif
+
 %install
 install -Dm0755 target/release/aardvark-dns %{buildroot}%{_libexecdir}/podman/aardvark-dns
 
