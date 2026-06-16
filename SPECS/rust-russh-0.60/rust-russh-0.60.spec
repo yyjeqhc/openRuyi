@@ -123,8 +123,7 @@ Requires:       crate(zeroize-1/default) >= 1.7.0
 Provides:       crate(%{pkgname}) = %{version}
 
 %description
-Source code for takopackized Rust crate "russh"
-Patch0:         0001-fix-crypto-dependency-constraints.patch
+nothing
 
 %package     -n %{name}+bench
 Summary:        Client and server SSH library - feature "_bench"
