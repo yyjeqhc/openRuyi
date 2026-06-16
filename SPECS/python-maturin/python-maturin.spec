@@ -50,6 +50,17 @@ replace-with = "vendored-sources"
 directory = "vendor"
 EOF
 
+%build -p
+%ifarch riscv64
+# Work around rustc/LLVM SIGSEGV on rva23/pico_itx while compiling
+# large Rust crates such as regex-automata in release mode.
+export RUST_MIN_STACK=16777216
+export CARGO_PROFILE_RELEASE_OPT_LEVEL=1
+export CARGO_PROFILE_RELEASE_CODEGEN_UNITS=256
+%endif
+
+%pyproject_wheel
+
 %generate_buildrequires
 %pyproject_buildrequires
 
