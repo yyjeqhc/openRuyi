@@ -31,4 +31,4 @@ name = "malloc_buf"
 path = "src/lib.rs"
 
 [dependencies.libc]
-version = ">= 0.1, < 0.3"
+version = "0.2.186"

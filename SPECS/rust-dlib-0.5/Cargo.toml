@@ -40,4 +40,4 @@ name = "dlib"
 path = "src/lib.rs"
 
 [dependencies.libloading]
-version = ">=0.7, <0.9"
+version = "0.8.9"

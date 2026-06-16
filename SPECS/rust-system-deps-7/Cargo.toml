@@ -42,7 +42,7 @@ name = "system_deps"
 path = "src/lib.rs"
 
 [dependencies.cfg-expr]
-version = ">= 0.17, < 0.21"
+version = "0.20.8"
 features = ["targets"]
 
 [dependencies.heck]

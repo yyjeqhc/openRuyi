@@ -22,7 +22,7 @@ keywords = ["objective-c", "osx", "ios", "cocoa", "uikit"]
 license = "MIT"
 repository = "http://github.com/SSheldon/rust-objc"
 [dependencies.malloc_buf]
-version = "0.0"
+version = "0.0.6"
 
 [dependencies.objc_exception]
 version = "0.1"
