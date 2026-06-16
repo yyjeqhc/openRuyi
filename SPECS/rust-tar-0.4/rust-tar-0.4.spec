@@ -1,14 +1,14 @@
 %global crate_name tar
-%global full_version 0.4.45
+%global full_version 0.4.46
 %global pkgname tar-0.4
 
 Name:           rust-tar-0.4
-Version:        0.4.45
+Version:        0.4.46
 Release:        %autorelease
 Summary:        Rust crate "tar"
 License:        MIT OR Apache-2.0
-URL:            https://github.com/alexcrichton/tar-rs
-#!RemoteAsset:  sha256:22692a6476a21fa75fdfc11d452fda482af402c008cdbaf3476414e122040973
+URL:            https://github.com/composefs/tar-rs
+#!RemoteAsset:  sha256:3f6221d9a6003c78398e3b239969f352578258df48c8eb051caadae0015bc840
 Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/download#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    rustcrates
