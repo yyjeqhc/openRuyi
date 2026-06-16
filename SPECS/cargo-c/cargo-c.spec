@@ -54,6 +54,13 @@ Cargo applet to build and install C-ABI compatible dynamic and static libraries.
 It produces and installs a correct pkg-config file, a static library and a dynamic
 library, and a C header to be used by any C (and C-compatible) software.
 
+%build -p
+%ifarch riscv64
+export RUST_MIN_STACK=16777216
+export CARGO_PROFILE_RELEASE_OPT_LEVEL=1
+export CARGO_PROFILE_RELEASE_CODEGEN_UNITS=256
+%endif
+
 %install -a
 install -Dm0755 target/release/cargo-capi %{buildroot}%{_bindir}/cargo-capi
 install -Dm0755 target/release/cargo-cbuild %{buildroot}%{_bindir}/cargo-cbuild
