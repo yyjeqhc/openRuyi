@@ -92,6 +92,16 @@ directory = "/usr/share/cargo/registry"
 EOF
 rm -f Cargo.lock
 
+%build -p
+%ifarch riscv64
+# Work around rustc ICE on rva23 while optimizing pyo3 0.28.x
+# in release mode. The failure happens in rustc MIR optimization with
+# -C opt-level=3, before package-specific code is relevant.
+export RUST_MIN_STACK=16777216
+export CARGO_PROFILE_RELEASE_OPT_LEVEL=2
+export CARGO_PROFILE_RELEASE_CODEGEN_UNITS=256
+%endif
+
 %generate_buildrequires
 %pyproject_buildrequires
 
