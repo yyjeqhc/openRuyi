@@ -12,15 +12,16 @@ License:        Apache-2.0 AND MIT AND Zlib
 Summary:        Authoritative DNS server for A/AAAA container records
 URL:            https://github.com/containers/aardvark-dns
 #!RemoteAsset:  sha256:25b39bfad079a03862825b2f9db8b71b82fc80aad5552a9c76ea912edc9b889e
-Source0:        %{url}/archive/v%{version}.tar.gz
+Source0:        https://github.com/containers/aardvark-dns/archive/v%{version}.tar.gz
 BuildSystem:    rust
 
 Patch0:         0001-fix-version.patch
 
+BuildOption(build):  -- --bin aardvark-dns
+
 BuildRequires:  cargo
 BuildRequires:  rust
 BuildRequires:  rust-rpm-macros
-
 # Static Rust crate closure for aardvark-dns.
 BuildRequires:  crate(arc-swap-1) >= 1.7.1
 BuildRequires:  crate(arc-swap-1/default)
@@ -63,31 +64,14 @@ BuildRequires:  crate(tokio-1/signal)
 BuildRequires:  crate(windows-link-0.1) >= 0.1.3
 BuildRequires:  crate(windows-link-0.1/default)
 
-%ifarch x86_64
-%define rust_def_target x86_64-unknown-linux-gnu
-%endif
-
-%ifarch riscv64
-%define rust_def_target riscv64gc-unknown-linux-gnu
-%endif
-
 %description
 %{summary}
 
 Forwards other requests to configured resolvers.
 Read more about configuration in `src/backend/mod.rs`.
 
-%prep
-%setup -q
-patch -p1 < %{PATCH0}
-%rust_setup_registry
-
-%build
-rm -f Cargo.lock
-cargo build --offline --release --target=%{rust_def_target} --bin aardvark-dns
-
 %install
-install -Dm0755 target/%{rust_def_target}/release/aardvark-dns %{buildroot}%{_libexecdir}/podman/aardvark-dns
+install -Dm0755 target/release/aardvark-dns %{buildroot}%{_libexecdir}/podman/aardvark-dns
 
 %check
 # Upstream's integration tests require network namespace setup, bats, and a
