@@ -12,10 +12,12 @@ License:        Apache-2.0 AND BSD-3-Clause AND MIT
 Summary:        OCI network stack
 URL:            https://github.com/containers/netavark
 #!RemoteAsset:  sha256:00009bfad079a03862825b2f9db8b71b82fc80aad5552a9c76ea912edc9b0000
-Source0:        %{url}/archive/v%{version}.tar.gz
+Source0:        https://github.com/containers/netavark/archive/v%{version}.tar.gz
 BuildSystem:    rust
 
 Patch0:         0001-fix-version.patch
+
+BuildOption(build):  -- --bin netavark --bin netavark-dhcp-proxy-client --bin netavark-connection-tester
 
 BuildRequires:  cargo
 BuildRequires:  rust
@@ -116,14 +118,6 @@ BuildRequires:  crate(zbus-5/default)
 Requires:       nftables
 Requires:       aardvark-dns
 
-%ifarch x86_64
-%define rust_def_target x86_64-unknown-linux-gnu
-%endif
-
-%ifarch riscv64
-%define rust_def_target riscv64gc-unknown-linux-gnu
-%endif
-
 %description
 %{summary}
 
@@ -143,22 +137,16 @@ Its features include:
 * Support for IPv4 and IPv6
 * Support for container DNS resolution via aardvark-dns.
 
-%prep
-%setup -q
-patch -p1 < %{PATCH0}
-%rust_setup_registry
-
-%build
-rm -f Cargo.lock
+%build -p
 export NETAVARK_DEFAULT_FW=nftables
-cargo build --offline --release --target=%{rust_def_target} \
-  --bin netavark \
-  --bin netavark-dhcp-proxy-client \
-  --bin netavark-connection-tester
 %__make -C docs
 
 %install
-install -Dm0755 target/%{rust_def_target}/release/netavark bin/netavark
+mkdir -p bin
+install -Dm0755 target/release/netavark bin/netavark
+install -Dm0755 target/release/netavark-dhcp-proxy-client bin/netavark-dhcp-proxy-client
+install -Dm0755 target/release/netavark-connection-tester bin/netavark-connection-tester
+
 %__make DESTDIR=%{buildroot} PREFIX=%{_prefix} LIBEXECDIR=%{_libexecdir} \
   LIBEXECPODMAN=%{_libexecdir}/podman SYSTEMDDIR=%{_unitdir} install
 
