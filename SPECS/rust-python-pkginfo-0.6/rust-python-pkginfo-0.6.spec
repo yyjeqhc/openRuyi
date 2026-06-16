@@ -13,6 +13,8 @@ Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/do
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
+Patch0:         0001-fix-dependency-ranges.patch
+
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(flate2-1/default) >= 1.0.33
@@ -21,7 +23,7 @@ Requires:       crate(mailparse-0.16/default) >= 0.16.0
 Requires:       crate(rfc2047-decoder-1/default) >= 1.0.6
 Requires:       crate(tar-0.4/default) >= 0.4.41
 Requires:       crate(thiserror-2/default) >= 2.0.3
-Requires:       crate(zip-0.6/deflate) >= 0.6.0
+Requires:       crate(zip-8/deflate) >= 8.6.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 
@@ -42,8 +44,8 @@ Summary:        Parse Python package metadata from sdist and bdists and etc - fe
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/bzip2) = %{version}
 Requires:       crate(%{pkgname}/xz) = %{version}
-Requires:       crate(zip-0.6/bzip2) >= 0.6.0
-Requires:       crate(zip-0.6/deflate) >= 0.6.0
+Requires:       crate(zip-8/bzip2) >= 8.6.0
+Requires:       crate(zip-8/deflate) >= 8.6.0
 Provides:       crate(%{pkgname}/deprecated-formats) = %{version}
 
 %description -n %{name}+deprecated-formats
