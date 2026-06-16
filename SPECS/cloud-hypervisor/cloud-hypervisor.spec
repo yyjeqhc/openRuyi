@@ -571,9 +571,10 @@ sed -i 's|micro_http = { git = "https://github.com/firecracker-microvm/micro-htt
 %build
 rm -rf Cargo.lock
 export OPENSSL_NO_VENDOR=1
-cargo build --release %{cargo_pkg_feature_opts} %{cargo_offline}
-cargo build --release --package vhost_user_net %{cargo_offline}
-cargo build --release --package vhost_user_block %{cargo_offline}
+
+%buildsystem_rust_build -- %{cargo_pkg_feature_opts}
+%buildsystem_rust_build -- --package vhost_user_net
+%buildsystem_rust_build -- --package vhost_user_block
 
 %install
 install -d %{buildroot}%{_bindir}
