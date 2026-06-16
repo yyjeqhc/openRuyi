@@ -138,6 +138,10 @@ Its features include:
 * Support for container DNS resolution via aardvark-dns.
 
 %build -p
+%ifarch riscv64
+export RUST_MIN_STACK=16777216
+export CARGO_PROFILE_RELEASE_OPT_LEVEL=2
+%endif
 export NETAVARK_DEFAULT_FW=nftables
 %__make -C docs
 
