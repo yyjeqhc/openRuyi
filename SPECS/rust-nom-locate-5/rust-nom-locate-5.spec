@@ -13,10 +13,12 @@ Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/do
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
+Patch0:         0001-fix-range-dependencies.patch
+
 BuildRequires:  rust-rpm-macros
 
 Requires:       crate(bytecount-0.6/default) >= 0.6.0
-Requires:       crate(memchr-1) >= 1.0.1
+Requires:       crate(memchr-2) >= 2.8.1
 Requires:       crate(nom-8) >= 8.0.0
 Provides:       crate(%{pkgname}) = %{version}
 
@@ -63,7 +65,7 @@ This metapackage enables feature "stable_deref_trait" for the Rust nom_locate cr
 Summary:        Special input type for nom to locate tokens - feature "std" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
 Requires:       crate(%{pkgname}/alloc) = %{version}
-Requires:       crate(memchr-1/use-std) >= 1.0.1
+Requires:       crate(memchr-2/use-std) >= 2.8.1
 Requires:       crate(nom-8/std) >= 8.0.0
 Provides:       crate(%{pkgname}/default) = %{version}
 Provides:       crate(%{pkgname}/std) = %{version}
