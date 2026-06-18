@@ -13,6 +13,8 @@ Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/do
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
+Patch0:         0001-fix-range-dependencies.patch
+
 BuildRequires:  rust-rpm-macros
 
 Provides:       crate(%{pkgname}) = %{version}
@@ -24,7 +26,7 @@ Source code for takopackized Rust crate "shellexpand"
 %package     -n %{name}+bstr
 Summary:        Shell-like expansions in strings - feature "bstr"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(bstr-1.0.0-pre.2/default) >= 1.0.0-pre.2
+Requires:       crate(bstr-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}/bstr) = %{version}
 
 %description -n %{name}+bstr
@@ -46,7 +48,7 @@ Additionally, this package also provides the "full-msrv-1-31" feature.
 %package     -n %{name}+dirs
 Summary:        Shell-like expansions in strings - feature "dirs" and 1 more
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(dirs-4/default) >= 4.0.0
+Requires:       crate(dirs-6/default) >= 6.0.0
 Provides:       crate(%{pkgname}/dirs) = %{version}
 Provides:       crate(%{pkgname}/tilde) = %{version}
 
@@ -71,7 +73,7 @@ Additionally, this package also provides the "full" feature.
 %package     -n %{name}+os-str-bytes
 Summary:        Shell-like expansions in strings - feature "os_str_bytes"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(os-str-bytes-5/default) >= 5.0.0
+Requires:       crate(os-str-bytes-6/default) >= 6.0.0
 Provides:       crate(%{pkgname}/os-str-bytes) = %{version}
 
 %description -n %{name}+os-str-bytes

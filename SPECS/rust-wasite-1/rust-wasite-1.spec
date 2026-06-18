@@ -13,9 +13,11 @@ Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/do
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
+Patch0:         0001-fix-range-dependencies.patch
+
 BuildRequires:  rust-rpm-macros
 
-Requires:       crate(wasi-0.13) >= 0.13.0
+Requires:       crate(wasi-0.14) >= 0.14.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/default) = %{version}
 

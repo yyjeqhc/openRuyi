@@ -13,6 +13,8 @@ Source:         https://static.crates.io/crates/%{crate_name}/%{full_version}/do
 BuildArch:      noarch
 BuildSystem:    rustcrates
 
+Patch0:         0001-fix-range-dependencies.patch
+
 BuildRequires:  rust-rpm-macros
 
 Provides:       crate(%{pkgname}) = %{version}
@@ -220,7 +222,7 @@ This metapackage enables feature "pin-project-lite" for the Rust async-std crate
 %package     -n %{name}+pin-utils
 Summary:        Deprecated in favor of `smol` - Async version of the Rust standard library - feature "pin-utils"
 Requires:       crate(%{pkgname}) = %{version}
-Requires:       crate(pin-utils-0.1.0-alpha.4/default) >= 0.1.0-alpha.4
+Requires:       crate(pin-utils-0.1/default) >= 0.1.0
 Provides:       crate(%{pkgname}/pin-utils) = %{version}
 
 %description -n %{name}+pin-utils
