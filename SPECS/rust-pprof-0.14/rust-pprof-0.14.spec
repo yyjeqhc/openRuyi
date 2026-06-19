@@ -31,7 +31,8 @@ Requires:       crate(tempfile-3/default) >= 3.1.0
 Requires:       crate(thiserror-1/default) >= 1.0.0
 Provides:       crate(%{pkgname}) = %{version}
 Provides:       crate(%{pkgname}/frame-pointer) = %{version}
-Provides:       crate(%{pkgname}/protobuf) = %{version}
+# Fix it. Main package should not provides feature which subpackage provides.
+# Provides:       crate(%{pkgname}/protobuf) = %{version}
 
 %description
 Source code for takopackized Rust crate "pprof"
