@@ -1,0 +1,25 @@
+diff --git a/src/3rdparty/chromium/base/strings/to_string.h b/src/3rdparty/chromium/base/strings/to_string.h
+index 96e61da..4c27c1d 100644
+--- a/src/3rdparty/chromium/base/strings/to_string.h
++++ b/src/3rdparty/chromium/base/strings/to_string.h
+@@ -9,6 +9,7 @@
+ #include <iomanip>
+ #include <ios>
+ #include <memory>
++#include <cstdint>
+ #include <sstream>
+ #include <string>
+ #include <tuple>
+diff --git a/src/3rdparty/chromium/sandbox/linux/system_headers/linux_seccomp.h b/src/3rdparty/chromium/sandbox/linux/system_headers/linux_seccomp.h
+index 8690a96..e88895e 100644
+--- a/src/3rdparty/chromium/sandbox/linux/system_headers/linux_seccomp.h
++++ b/src/3rdparty/chromium/sandbox/linux/system_headers/linux_seccomp.h
+@@ -214,6 +214,8 @@ struct seccomp_notif_addfd {
+ #define SECCOMP_RET_INVALID 0x00010000U  // Illegal return value
+ #endif
+ 
++#include <signal.h>
++
+ #ifndef SYS_SECCOMP
+ #define SYS_SECCOMP                   1
+ #endif
