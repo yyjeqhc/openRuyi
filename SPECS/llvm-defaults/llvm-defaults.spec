@@ -10,27 +10,13 @@
 
 Name:           llvm-defaults
 Version:        %{maj_ver}
-Release:        %{autorelease}
+Release:        13%{?dist}
 Summary:        Default symlinks for LLVM %{maj_ver} tools
 License:        Apache-2.0 WITH LLVM-exception OR NCSA
 URL:            http://llvm.org
 Source0:        macros.clang
 
-BuildRequires:  llvm%{maj_ver}
 BuildRequires:  llvm%{maj_ver}-devel
-BuildRequires:  clang%{maj_ver}
-BuildRequires:  clang%{maj_ver}-devel
-BuildRequires:  clang%{maj_ver}-tools-extra
-BuildRequires:  clang%{maj_ver}-analyzer
-BuildRequires:  clang%{maj_ver}-static
-BuildRequires:  llvm%{maj_ver}-static
-BuildRequires:  compiler-rt%{maj_ver}
-BuildRequires:  libomp%{maj_ver}
-BuildRequires:  libomp%{maj_ver}-devel
-BuildRequires:  llvm-bolt%{maj_ver}
-BuildRequires:  lld%{maj_ver}
-BuildRequires:  lldb%{maj_ver}
-# Generate virtual cmake(xx) provides
 BuildRequires:  cmake
 
 %description
@@ -80,6 +66,7 @@ creating symlinks like /usr/bin/clang -> clang-22, /usr/bin/clang++ -> clang++-2
 Summary:        Default symlinks for clang development tools
 Requires:       clang%{?_isa} = %{version}-%{release}
 Requires:       clang%{maj_ver}-devel > %{maj_ver}
+Requires:       clang-static(major) = %{maj_ver}
 Requires:       llvm-devel = %{version}-%{release}
 Provides:       cmake(Clang) = %{maj_ver}
 
@@ -128,6 +115,7 @@ Requires:       clang%{maj_ver}-static > %{maj_ver}
 # ============================================================================
 # clang-static subpackage
 # ============================================================================
+
 %description -n clang-static
 This package depends on the default Clang %{maj_ver} static libraries.
 
