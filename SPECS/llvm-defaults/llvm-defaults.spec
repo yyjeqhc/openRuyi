@@ -10,7 +10,7 @@
 
 Name:           llvm-defaults
 Version:        %{maj_ver}
-Release:        %{autorelease}
+Release:        %autorelease
 Summary:        Default symlinks for LLVM %{maj_ver} tools
 License:        Apache-2.0 WITH LLVM-exception OR NCSA
 URL:            http://llvm.org
@@ -80,6 +80,7 @@ creating symlinks like /usr/bin/clang -> clang-22, /usr/bin/clang++ -> clang++-2
 Summary:        Default symlinks for clang development tools
 Requires:       clang%{?_isa} = %{version}-%{release}
 Requires:       clang%{maj_ver}-devel > %{maj_ver}
+Requires:       clang-static(major) = %{maj_ver}
 Requires:       llvm-devel = %{version}-%{release}
 Provides:       cmake(Clang) = %{maj_ver}
 
@@ -128,6 +129,7 @@ Requires:       clang%{maj_ver}-static > %{maj_ver}
 # ============================================================================
 # clang-static subpackage
 # ============================================================================
+
 %description -n clang-static
 This package depends on the default Clang %{maj_ver} static libraries.
 
